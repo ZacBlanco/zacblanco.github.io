@@ -1,0 +1,52 @@
+.navBar{
+	margin:0 auto;
+	float:left;
+	background-color:#DEDEDE;
+}
+.navBar > ul{
+
+	padding:0;
+	list-style-type:none;
+}
+
+.navBar > ul > li > a{
+	color:black;
+}
+
+.navBar > ul > li{
+	margin:10px;
+	text-align:center;
+	border-color:white;
+	border-width:3px;
+	border-style:solid;
+	border-color:white;
+}
+
+.content{
+	height:100%;
+	margin: 5 auto;
+	background-color:#F2F2F2;
+
+}
+
+.content h2{
+	text-align:center;
+}
+
+.content > ul{
+
+	list-style-type:none;
+}
+
+.text{
+	text-align:center;
+	vertical-align:center;
+}
+
+
+#contentContainer{
+	max-width:600px;
+	height:100%;
+	float:center;
+	background-color:#F2F2F2;
+}
