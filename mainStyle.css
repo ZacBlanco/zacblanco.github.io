@@ -1,52 +1,92 @@
-.navBar{
-	margin:0 auto;
-	float:left;
-	background-color:#DEDEDE;
-}
-.navBar > ul{
-
-	padding:0;
-	list-style-type:none;
+body {
+	background-color: #EEE;
+	font-family: verdana;
 }
 
-.navBar > ul > li > a{
-	color:black;
+html, body {
+	height: 100%;
+	margin: 0px;
+	padding: 0px;
 }
 
-.navBar > ul > li{
-	margin:10px;
-	text-align:center;
-	border-color:white;
-	border-width:3px;
-	border-style:solid;
-	border-color:white;
+#header {
+	text-align: center;
+	text-decoration: underline;
+	background-color: #EEE;
+	color: black;
 }
-
-.content{
-	height:100%;
-	margin: 5 auto;
-	background-color:#F2F2F2;
-
-}
-
-.content h2{
-	text-align:center;
-}
-
-.content > ul{
-
-	list-style-type:none;
-}
-
-.text{
-	text-align:center;
-	vertical-align:center;
-}
-
 
 #contentContainer{
-	max-width:600px;
-	height:100%;
-	float:center;
-	background-color:#F2F2F2;
+	width: 800px;
+	height: 100%;
+	background-color: #212121;
+	margin-left: auto;
+	margin-right: auto;
+	color:white;
+	margin-bottom: 0px;
+}
+
+.post {
+	width: 70%;
+	float:right;
+	padding-left: auto;
+	padding-right: auto;
+}
+
+.post a {
+	color: white;
+}
+
+.post a:hover {
+	color:black;
+	background-color: white;
+}
+
+#content{
+	float:right;
+}
+
+#navbar{
+	float:left;
+	padding: 10px;
+	background-color: #868567;
+	height: 100%;
+}
+
+#navbar a {
+	font-size: 1.2em;
+	text-decoration: none;
+	color: white;
+	display: block;
+	width: 100%
+}
+
+#navbar a:hover{
+	background-color: #F2F2F2;
+	color: #212121;
+}
+
+#navbar > ul {
+	list-style-type: none;
+	margin: 10px;
+	padding: 5px;
+}
+#navbar > ul > li {
+	background-color: #212121;
+	color:white;
+	text-align: center;
+	padding: 5px 0px 5px 0px;
+}
+
+#footer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	bottom: 0;
+	left: 0;
+	height: 30px;
+	text-align: center;
+	background-color: #BBB;
+	color: #333;
+	font-size: 10px;
 }
