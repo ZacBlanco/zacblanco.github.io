@@ -16,6 +16,11 @@ html, body {
 	color: black;
 }
 
+#homelink {
+	text-decoration: none;
+	color: black;
+}
+
 #contentContainer{
 	width: 800px;
 	height: 100%;
@@ -49,14 +54,16 @@ html, body {
 #navbar{
 	float:left;
 	padding: 10px;
-	background-color: #868567;
+
 	height: 100%;
+	margin-left: 20px;
 }
 
 #navbar a {
 	font-size: 1.2em;
 	text-decoration: none;
 	color: white;
+	background-color: #868567;
 	display: block;
 	width: 100%
 }
@@ -70,12 +77,15 @@ html, body {
 	list-style-type: none;
 	margin: 10px;
 	padding: 5px;
+	background-color:
 }
-#navbar > ul > li {
-	background-color: #212121;
+#navbar > ul > li {	
+	background-color: #868567;
 	color:white;
 	text-align: center;
-	padding: 5px 0px 5px 0px;
+	padding-left: 5px;
+	padding-right: 5px;
+	height:40px;
 }
 
 #footer {
