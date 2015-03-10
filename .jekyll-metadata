@@ -1,47 +1,43 @@
 ---
 "/Users/zblanco/Documents/Projects/zacblanco.github.io/_posts/2015-03-10-welcome-to-jekyll.markdown":
-  mtime: 2015-03-10 00:16:14.000000000 -04:00
+  mtime: 2015-03-10 00:38:08.000000000 -04:00
   deps:
-  - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_layouts/post.html"
-  - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/head.html"
-  - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/header.html"
-  - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/footer.html"
-  - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_layouts/default.html"
   - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/JB/setup"
   - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/themes/bootstrap-3/post.html"
   - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/JB/categories_list"
   - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/JB/comments"
   - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/JB/comments-providers/disqus"
+  - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_layouts/post.html"
   - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/themes/bootstrap-3/default.html"
   - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/JB/pages_list"
   - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/JB/analytics"
-"/Users/zblanco/Documents/Projects/zacblanco.github.io/about.md":
-  mtime: 2015-03-10 00:00:12.000000000 -04:00
-  deps:
-  - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_layouts/page.html"
-  - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/head.html"
-  - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/header.html"
-  - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/footer.html"
   - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_layouts/default.html"
+  - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/themes/twitter/post.html"
+  - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/themes/twitter/default.html"
+"/Users/zblanco/Documents/Projects/zacblanco.github.io/about.md":
+  mtime: 2015-03-10 00:38:08.000000000 -04:00
+  deps:
   - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/JB/setup"
   - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/themes/bootstrap-3/page.html"
+  - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_layouts/page.html"
   - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/themes/bootstrap-3/default.html"
   - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/JB/pages_list"
   - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/JB/analytics"
+  - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_layouts/default.html"
+  - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/themes/twitter/page.html"
+  - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/themes/twitter/default.html"
 "/Users/zblanco/Documents/Projects/zacblanco.github.io/feed.xml":
   mtime: 2015-03-10 00:38:08.000000000 -04:00
   deps: []
 "/Users/zblanco/Documents/Projects/zacblanco.github.io/index.html":
-  mtime: 2015-03-10 00:00:12.000000000 -04:00
+  mtime: 2015-03-10 00:39:39.000000000 -04:00
   deps:
-  - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/head.html"
-  - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/header.html"
-  - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/footer.html"
-  - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_layouts/default.html"
   - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/JB/setup"
   - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/themes/bootstrap-3/default.html"
   - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/JB/pages_list"
   - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/JB/analytics"
+  - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_layouts/default.html"
+  - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/themes/twitter/default.html"
 "/Users/zblanco/Documents/Projects/zacblanco.github.io/s-old/flexstyle.css":
   mtime: 2015-03-09 01:03:22.000000000 -04:00
   deps: []
@@ -52,123 +48,117 @@
   mtime: 2015-03-09 01:03:22.000000000 -04:00
   deps: []
 "/Users/zblanco/Documents/Projects/zacblanco.github.io/_layouts/post.html":
-  mtime: 2015-02-28 12:28:26.000000000 -05:00
+  mtime: 2015-03-10 14:24:17.000000000 -04:00
   deps: []
 "/Users/zblanco/Documents/Projects/zacblanco.github.io/_layouts/page.html":
-  mtime: 2015-02-28 12:28:26.000000000 -05:00
+  mtime: 2015-03-10 14:24:17.000000000 -04:00
   deps: []
 "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/head.html":
   mtime: 2015-03-10 00:59:30.000000000 -04:00
   deps: []
 "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/header.html":
-  mtime: 2015-03-10 00:00:12.000000000 -04:00
+  mtime: 2015-03-10 00:59:37.000000000 -04:00
   deps: []
 "/Users/zblanco/Documents/Projects/zacblanco.github.io/_posts/2015-02-20-creation.html":
-  mtime: 2015-03-10 00:30:26.000000000 -04:00
+  mtime: 2015-03-10 00:38:08.000000000 -04:00
   deps:
-  - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_layouts/post.html"
-  - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/head.html"
-  - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/header.html"
-  - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/footer.html"
-  - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_layouts/default.html"
   - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/JB/setup"
   - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/themes/bootstrap-3/post.html"
   - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/JB/categories_list"
   - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/JB/comments"
   - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/JB/comments-providers/disqus"
+  - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_layouts/post.html"
   - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/themes/bootstrap-3/default.html"
   - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/JB/pages_list"
   - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/JB/analytics"
+  - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_layouts/default.html"
+  - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/themes/twitter/post.html"
+  - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/themes/twitter/default.html"
 "/Users/zblanco/Documents/Projects/zacblanco.github.io/_posts/2015-02-21-datascience.html":
-  mtime: 2015-03-10 00:27:00.000000000 -04:00
+  mtime: 2015-03-10 00:38:08.000000000 -04:00
   deps:
-  - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_layouts/post.html"
-  - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/head.html"
-  - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/header.html"
-  - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/footer.html"
-  - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_layouts/default.html"
   - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/JB/setup"
   - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/themes/bootstrap-3/post.html"
   - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/JB/categories_list"
   - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/JB/comments"
   - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/JB/comments-providers/disqus"
+  - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_layouts/post.html"
   - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/themes/bootstrap-3/default.html"
   - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/JB/pages_list"
   - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/JB/analytics"
+  - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_layouts/default.html"
+  - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/themes/twitter/post.html"
+  - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/themes/twitter/default.html"
 "/Users/zblanco/Documents/Projects/zacblanco.github.io/_posts/2015-03-05-projects-and-more-interesting-updates.html":
-  mtime: 2015-03-10 00:27:00.000000000 -04:00
+  mtime: 2015-03-10 00:38:08.000000000 -04:00
   deps:
-  - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_layouts/post.html"
-  - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/head.html"
-  - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/header.html"
-  - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/footer.html"
-  - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_layouts/default.html"
   - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/JB/setup"
   - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/themes/bootstrap-3/post.html"
   - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/JB/comments"
   - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/JB/comments-providers/disqus"
+  - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_layouts/post.html"
   - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/themes/bootstrap-3/default.html"
   - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/JB/pages_list"
   - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/JB/analytics"
+  - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_layouts/default.html"
+  - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/themes/twitter/post.html"
+  - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/themes/twitter/default.html"
 "/Users/zblanco/Documents/Projects/zacblanco.github.io/_posts/2015-03-05-internship.html":
-  mtime: 2015-03-10 00:27:00.000000000 -04:00
+  mtime: 2015-03-10 00:38:08.000000000 -04:00
   deps:
-  - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_layouts/post.html"
-  - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/head.html"
-  - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/header.html"
-  - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/footer.html"
-  - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_layouts/default.html"
   - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/JB/setup"
   - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/themes/bootstrap-3/post.html"
   - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/JB/comments"
   - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/JB/comments-providers/disqus"
+  - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_layouts/post.html"
   - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/themes/bootstrap-3/default.html"
   - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/JB/pages_list"
   - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/JB/analytics"
+  - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_layouts/default.html"
+  - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/themes/twitter/post.html"
+  - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/themes/twitter/default.html"
 "/Users/zblanco/Documents/Projects/zacblanco.github.io/_posts/2015-03-09-updated-site.html":
-  mtime: 2015-03-10 00:27:00.000000000 -04:00
+  mtime: 2015-03-10 00:38:08.000000000 -04:00
   deps:
-  - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_layouts/post.html"
-  - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/head.html"
-  - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/header.html"
-  - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/footer.html"
-  - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_layouts/default.html"
   - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/JB/setup"
   - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/themes/bootstrap-3/post.html"
   - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/JB/comments"
   - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/JB/comments-providers/disqus"
+  - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_layouts/post.html"
   - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/themes/bootstrap-3/default.html"
   - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/JB/pages_list"
   - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/JB/analytics"
+  - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_layouts/default.html"
+  - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/themes/twitter/post.html"
+  - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/themes/twitter/default.html"
 "/Users/zblanco/Documents/Projects/zacblanco.github.io/_posts/2015-03-09-blog-transfer.html":
-  mtime: 2015-03-10 00:27:00.000000000 -04:00
+  mtime: 2015-03-10 00:38:08.000000000 -04:00
   deps:
-  - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_layouts/post.html"
-  - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/head.html"
-  - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/header.html"
-  - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/footer.html"
-  - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_layouts/default.html"
   - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/JB/setup"
   - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/themes/bootstrap-3/post.html"
   - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/JB/comments"
   - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/JB/comments-providers/disqus"
+  - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_layouts/post.html"
   - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/themes/bootstrap-3/default.html"
   - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/JB/pages_list"
   - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/JB/analytics"
+  - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_layouts/default.html"
+  - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/themes/twitter/post.html"
+  - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/themes/twitter/default.html"
 "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/footer.html":
-  mtime: 2015-03-10 00:00:12.000000000 -04:00
+  mtime: 2015-03-10 00:59:14.000000000 -04:00
   deps: []
 "/Users/zblanco/Documents/Projects/zacblanco.github.io/s-old/blog-03-09-2015.xml":
   mtime: 2015-03-10 00:25:06.000000000 -04:00
   deps: []
 "/Users/zblanco/Documents/Projects/zacblanco.github.io/_layouts/default.html":
-  mtime: 2015-03-10 00:00:12.000000000 -04:00
+  mtime: 2015-03-10 14:24:17.000000000 -04:00
   deps: []
 "/Users/zblanco/Documents/Projects/zacblanco.github.io/jekyll-bootstrap-master.zip":
   mtime: 2015-03-10 00:52:46.000000000 -04:00
   deps: []
 "/Users/zblanco/Documents/Projects/zacblanco.github.io/404.html":
-  mtime: 2015-02-28 12:28:26.000000000 -05:00
+  mtime: 2015-03-10 13:58:55.000000000 -04:00
   deps: []
 "/Users/zblanco/Documents/Projects/zacblanco.github.io/History.markdown":
   mtime: 2015-02-28 12:28:26.000000000 -05:00
@@ -180,7 +170,7 @@
   mtime: 2015-03-10 00:53:51.000000000 -04:00
   deps: []
 "/Users/zblanco/Documents/Projects/zacblanco.github.io/archive.html":
-  mtime: 2015-03-10 00:53:51.000000000 -04:00
+  mtime: 2015-02-28 12:28:26.000000000 -05:00
   deps:
   - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/JB/setup"
   - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/JB/posts_collate"
@@ -190,11 +180,13 @@
   - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/JB/pages_list"
   - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/JB/analytics"
   - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_layouts/default.html"
+  - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/themes/twitter/page.html"
+  - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/themes/twitter/default.html"
 "/Users/zblanco/Documents/Projects/zacblanco.github.io/atom.xml":
   mtime: 2015-02-28 12:28:26.000000000 -05:00
   deps: []
 "/Users/zblanco/Documents/Projects/zacblanco.github.io/categories.html":
-  mtime: 2015-03-10 00:53:51.000000000 -04:00
+  mtime: 2015-02-28 12:28:26.000000000 -05:00
   deps:
   - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/JB/setup"
   - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/JB/categories_list"
@@ -204,21 +196,23 @@
   - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/themes/bootstrap-3/default.html"
   - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/JB/analytics"
   - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_layouts/default.html"
+  - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/themes/twitter/page.html"
+  - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/themes/twitter/default.html"
 "/Users/zblanco/Documents/Projects/zacblanco.github.io/changelog.md":
   mtime: 2015-03-10 00:53:51.000000000 -04:00
   deps: []
 "/Users/zblanco/Documents/Projects/zacblanco.github.io/index.md":
-  mtime: 2015-03-10 00:53:51.000000000 -04:00
+  mtime: 2015-03-10 14:33:40.000000000 -04:00
   deps:
   - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/JB/setup"
-  - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/themes/bootstrap-3/page.html"
+  - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/themes/twitter/page.html"
   - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_layouts/page.html"
-  - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/themes/bootstrap-3/default.html"
+  - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/themes/twitter/default.html"
   - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/JB/pages_list"
   - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/JB/analytics"
   - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_layouts/default.html"
 "/Users/zblanco/Documents/Projects/zacblanco.github.io/pages.html":
-  mtime: 2015-03-10 00:53:51.000000000 -04:00
+  mtime: 2015-02-28 12:28:26.000000000 -05:00
   deps:
   - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/JB/setup"
   - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/JB/pages_list"
@@ -227,6 +221,8 @@
   - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/themes/bootstrap-3/default.html"
   - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/JB/analytics"
   - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_layouts/default.html"
+  - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/themes/twitter/page.html"
+  - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/themes/twitter/default.html"
 "/Users/zblanco/Documents/Projects/zacblanco.github.io/rss.xml":
   mtime: 2015-02-28 12:28:26.000000000 -05:00
   deps: []
@@ -234,16 +230,18 @@
   mtime: 2015-02-28 12:28:26.000000000 -05:00
   deps: []
 "/Users/zblanco/Documents/Projects/zacblanco.github.io/tags.html":
-  mtime: 2015-03-10 00:53:51.000000000 -04:00
+  mtime: 2015-02-28 12:28:26.000000000 -05:00
   deps:
   - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/JB/setup"
   - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/JB/tags_list"
-  - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/JB/pages_list"
   - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/themes/bootstrap-3/page.html"
   - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_layouts/page.html"
   - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/themes/bootstrap-3/default.html"
+  - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/JB/pages_list"
   - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/JB/analytics"
   - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_layouts/default.html"
+  - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/themes/twitter/page.html"
+  - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/themes/twitter/default.html"
 "/Users/zblanco/Documents/Projects/zacblanco.github.io/2015-02-20-creation.html":
   mtime: 2015-03-10 00:38:08.000000000 -04:00
   deps:
@@ -480,6 +478,8 @@
   - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/JB/analytics"
   - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_layouts/default.html"
   - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/JB/comments-providers/disqus"
+  - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/themes/twitter/post.html"
+  - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/themes/twitter/default.html"
 "/Users/zblanco/Documents/Projects/zacblanco.github.io/assets/s-old/2015-02-21-datascience.html":
   mtime: 2015-03-10 00:38:08.000000000 -04:00
   deps:
@@ -494,6 +494,8 @@
   - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/JB/analytics"
   - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_layouts/default.html"
   - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/JB/comments-providers/disqus"
+  - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/themes/twitter/post.html"
+  - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/themes/twitter/default.html"
 "/Users/zblanco/Documents/Projects/zacblanco.github.io/assets/s-old/2015-03-05-internship.html":
   mtime: 2015-03-10 00:38:08.000000000 -04:00
   deps:
@@ -508,6 +510,8 @@
   - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/JB/analytics"
   - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_layouts/default.html"
   - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/JB/comments-providers/disqus"
+  - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/themes/twitter/post.html"
+  - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/themes/twitter/default.html"
 "/Users/zblanco/Documents/Projects/zacblanco.github.io/assets/s-old/2015-03-05-projects-and-more-interesting-updates.html":
   mtime: 2015-03-10 00:38:08.000000000 -04:00
   deps:
@@ -522,6 +526,8 @@
   - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/JB/analytics"
   - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_layouts/default.html"
   - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/JB/comments-providers/disqus"
+  - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/themes/twitter/post.html"
+  - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/themes/twitter/default.html"
 "/Users/zblanco/Documents/Projects/zacblanco.github.io/assets/s-old/2015-03-09-blog-transfer.html":
   mtime: 2015-03-10 00:38:08.000000000 -04:00
   deps:
@@ -536,6 +542,8 @@
   - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/JB/analytics"
   - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_layouts/default.html"
   - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/JB/comments-providers/disqus"
+  - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/themes/twitter/post.html"
+  - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/themes/twitter/default.html"
 "/Users/zblanco/Documents/Projects/zacblanco.github.io/assets/s-old/2015-03-09-updated-site.html":
   mtime: 2015-03-10 00:38:08.000000000 -04:00
   deps:
@@ -550,6 +558,8 @@
   - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/JB/analytics"
   - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_layouts/default.html"
   - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/JB/comments-providers/disqus"
+  - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/themes/twitter/post.html"
+  - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/themes/twitter/default.html"
 "/Users/zblanco/Documents/Projects/zacblanco.github.io/assets/s-old/2015-03-10-welcome-to-jekyll.markdown":
   mtime: 2015-03-10 00:38:08.000000000 -04:00
   deps:
@@ -564,6 +574,8 @@
   - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/JB/analytics"
   - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_layouts/default.html"
   - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/JB/comments-providers/disqus"
+  - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/themes/twitter/post.html"
+  - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/themes/twitter/default.html"
 "/Users/zblanco/Documents/Projects/zacblanco.github.io/assets/s-old/blog-03-09-2015.xml":
   mtime: 2015-03-10 00:38:08.000000000 -04:00
   deps: []
@@ -577,5 +589,44 @@
   mtime: 2015-03-10 00:38:08.000000000 -04:00
   deps: []
 "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/JB/setup":
+  mtime: 2015-02-28 12:28:26.000000000 -05:00
+  deps: []
+"/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/themes/bootstrap-3/post.html":
+  mtime: 2015-02-28 12:28:26.000000000 -05:00
+  deps: []
+"/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/JB/posts_collate":
+  mtime: 2015-02-28 12:28:26.000000000 -05:00
+  deps: []
+"/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/JB/categories_list":
+  mtime: 2015-02-28 12:28:26.000000000 -05:00
+  deps: []
+"/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/themes/bootstrap-3/page.html":
+  mtime: 2015-02-28 12:28:26.000000000 -05:00
+  deps: []
+"/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/JB/pages_list":
+  mtime: 2015-02-28 12:28:26.000000000 -05:00
+  deps: []
+"/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/JB/tags_list":
+  mtime: 2015-02-28 12:28:26.000000000 -05:00
+  deps: []
+"/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/JB/comments":
+  mtime: 2015-02-28 12:28:26.000000000 -05:00
+  deps: []
+"/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/themes/bootstrap-3/default.html":
+  mtime: 2015-02-28 12:28:26.000000000 -05:00
+  deps: []
+"/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/JB/analytics":
+  mtime: 2015-02-28 12:28:26.000000000 -05:00
+  deps: []
+"/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/JB/comments-providers/disqus":
+  mtime: 2015-02-28 12:28:26.000000000 -05:00
+  deps: []
+"/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/themes/twitter/post.html":
+  mtime: 2015-02-28 12:28:26.000000000 -05:00
+  deps: []
+"/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/themes/twitter/page.html":
+  mtime: 2015-02-28 12:28:26.000000000 -05:00
+  deps: []
+"/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/themes/twitter/default.html":
   mtime: 2015-02-28 12:28:26.000000000 -05:00
   deps: []
