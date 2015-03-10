@@ -2,13 +2,37 @@
 title: zacblanco.github.io
 email: zacblanco@live.com
 description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+ A simple tech blog to keepp you updated on my projects and for interesting 
+ tips tricks and hacks.
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://zacblanco.github.io" # the base hostname & protocol for your site
 twitter_username: ZacBlanco
 github_username:  ZacBlanco
+
+pages_list:       
+  About: '/about'
+  Archive: '/archive'
+  Feed: '/atom.xml'
+
+# Permalinks
+permalink:        none
+relative_permalinks: true
+
+# Setup
+paginate:         1
+baseurl:          /
+author:
+  name:           Zac Blanco
+  url:            "http://zacblanco.github.io"
+  email:          zacblanco@live.com
+
+# Custom vars
+#version:          1.0.0
+#github:
+#  repo:           https://github.com/poole/poole
+
+
+
 
 # Build settings
 markdown: kramdown
