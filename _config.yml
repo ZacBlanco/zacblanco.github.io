@@ -1,0 +1,14 @@
+# Site settings
+title: zacblanco.github.io
+email: zacblanco@live.com
+description: > # this means to ignore newlines until "baseurl:"
+  A blog about techy things, interesting tips, tricks and hacks
+  that I think are useful. I'd like to make a world a better place by sharing
+  my knowledge with everyone.
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://zacblanco.github.io" # the base hostname & protocol for your site
+twitter_username: ZacBlanco
+github_username:  ZacBlanco
+
+# Build settings
+markdown: kramdown

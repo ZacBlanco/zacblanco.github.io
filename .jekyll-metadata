@@ -1,0 +1,48 @@
+---
+"/Users/zblanco/Documents/Projects/zacblanco.github.io/_posts/2015-03-10-welcome-to-jekyll.markdown":
+  mtime: 2015-03-10 00:00:12.000000000 -04:00
+  deps:
+  - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_layouts/post.html"
+  - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/head.html"
+  - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/header.html"
+  - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/footer.html"
+  - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_layouts/default.html"
+"/Users/zblanco/Documents/Projects/zacblanco.github.io/about.md":
+  mtime: 2015-03-10 00:00:12.000000000 -04:00
+  deps:
+  - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_layouts/page.html"
+  - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/head.html"
+  - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/header.html"
+  - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/footer.html"
+  - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_layouts/default.html"
+"/Users/zblanco/Documents/Projects/zacblanco.github.io/feed.xml":
+  mtime: 2015-03-10 00:00:12.000000000 -04:00
+  deps: []
+"/Users/zblanco/Documents/Projects/zacblanco.github.io/index.html":
+  mtime: 2015-03-10 00:00:12.000000000 -04:00
+  deps:
+  - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/head.html"
+  - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/header.html"
+  - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/footer.html"
+  - "/Users/zblanco/Documents/Projects/zacblanco.github.io/_layouts/default.html"
+"/Users/zblanco/Documents/Projects/zacblanco.github.io/s-old/flexstyle.css":
+  mtime: 2015-03-09 01:03:22.000000000 -04:00
+  deps: []
+"/Users/zblanco/Documents/Projects/zacblanco.github.io/s-old/ge.js":
+  mtime: 2015-03-09 01:03:22.000000000 -04:00
+  deps: []
+"/Users/zblanco/Documents/Projects/zacblanco.github.io/s-old/index.html":
+  mtime: 2015-03-09 01:03:22.000000000 -04:00
+  deps: []
+"/Users/zblanco/Documents/Projects/zacblanco.github.io/_layouts/post.html":
+  mtime: 2015-03-10 00:00:12.000000000 -04:00
+  deps: []
+"/Users/zblanco/Documents/Projects/zacblanco.github.io/_layouts/page.html":
+  mtime: 2015-03-10 00:00:12.000000000 -04:00
+  deps: []
+"/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/head.html":
+  mtime: 2015-03-10 00:00:12.000000000 -04:00
+  deps: []
+"/Users/zblanco/Documents/Projects/zacblanco.github.io/_includes/header.html":
+  mtime: 2015-03-10 00:00:12.000000000 -04:00
+  deps: []
