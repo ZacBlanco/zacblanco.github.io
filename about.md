@@ -4,8 +4,14 @@ title: About
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](http://jekyllrb.com/)
+#####*Hey! You've found the About Me page!*
 
-You can find the source code for the Jekyll new theme at: [github.com/jglovier/jekyll-new](https://github.com/jglovier/jekyll-new)
+My name is Zac. I'm an aspiring software engineer. I love computers and I love learning. I'm currently a student studying electrical and computer engineering at Rutgers University, New Brunswick, expected graduation 2018.
 
-You can find the source code for Jekyll at [github.com/jekyll/jekyll](https://github.com/jekyll/jekyll)
+I work mainly with Java, python, C#, html, css, and javascript, but I try to branch into new languages when I can. Check out my projects page 
+
+I try to make posts as often as I can, time permitting.
+
+If you'd like to check out my projects, please head over to my projects page and find one you might like. Everything is open source!
+
+Take a look around! Enjoy.
