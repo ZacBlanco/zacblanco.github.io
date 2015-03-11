@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Open-Sauce Projects
+title: Open-Source Projects
 permalink: /projects/
 ---
 
