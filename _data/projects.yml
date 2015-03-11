@@ -1,13 +1,17 @@
 ---
 -
- name: "2048"
- url: 'http://zacblanco.github.io/ML2048/'
- description: 'An attempt to clone the game 2048, plus an AI feature.'
+ name: This Blog
+ url: https://github.com/ZacBlanco/zacblanco.github.io
+ description: Source for this site.
+-
+ name: 2048
+ url: http://zacblanco.github.io/ML2048/
+ description: An attempt to clone the game 2048, plus an AI feature.
 
 - 
  name: Countdown
  url: http://zacblanco.github.io/countdown/
- description: An extremely simple countdown page that uses countdown.js
+ description: An extremely simple countdown timer/html page that utilizes countdown.js
 
 -
  name: Dstat

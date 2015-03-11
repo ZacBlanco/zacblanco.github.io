@@ -6,9 +6,24 @@
 </description>
     <link>http://zacblanco.github.io//</link>
     <atom:link href="http://zacblanco.github.io//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 10 Mar 2015 20:28:00 -0400</pubDate>
-    <lastBuildDate>Tue, 10 Mar 2015 20:28:00 -0400</lastBuildDate>
+    <pubDate>Tue, 10 Mar 2015 21:09:09 -0400</pubDate>
+    <lastBuildDate>Tue, 10 Mar 2015 21:09:09 -0400</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Creating a Site Using Jekyll</title>
+        <description>&lt;p&gt;So I when I first started trying to make a blog I didn’t realize how difficult it would actually be to find something that worked. No other free platform contained the features that I wanted.&lt;/p&gt;
+
+&lt;p&gt;Now Jekyll is no perfect solution, but it does provide a host of features and is much more open than any other option, which is why I opted to switch&lt;/p&gt;
+
+&lt;p&gt;Posts are written in &lt;a href=&quot;http://en.wikipedia.org/wiki/Markdown&quot;&gt;Markdown&lt;/a&gt; which is a really handy markup language. Great for writing posts, but it does have a bit of a learning curve and takes some time to get used to.&lt;/p&gt;
+</description>
+        <pubDate>Tue, 10 Mar 2015 21:09:07 -0400</pubDate>
+        <link>http://zacblanco.github.io//none</link>
+        <guid isPermaLink="true">http://zacblanco.github.io//none</guid>
+        
+        
+      </item>
     
       <item>
         <title>Blog transfer</title>
