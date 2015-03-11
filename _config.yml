@@ -10,10 +10,11 @@ twitter_username: ZacBlanco
 github_username:  ZacBlanco
 
 pages_list:       
-  About: '/about'
-  Archive: '/archive'
-  Feed: '/atom.xml'
   Projects: '/projects'
+  Archive: '/archive'
+  About: '/about'
+  Feed: '/atom.xml'
+
 
 # Permalinks
 permalink:        none

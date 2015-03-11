@@ -1,0 +1,15 @@
+---
+-
+ name: "2048"
+ url: 'http://zacblanco.github.io/ML2048/'
+ description: 'An attempt to clone the game 2048, plus an AI feature.'
+
+- 
+ name: Countdown
+ url: http://zacblanco.github.io/countdown/
+ description: An extremely simple countdown page that uses countdown.js
+
+-
+ name: Dstat
+ url: https://github.com/ZacBlanco/DStat
+ description: A java library that can report statistics on a distribution of numbers.
