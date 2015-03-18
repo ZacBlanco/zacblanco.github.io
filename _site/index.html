@@ -65,139 +65,84 @@
   
   <article class="post">
     <h1 class="post-title">
-      <a href="/none">
-        Building a Site with Jekyll
+      <a href="/hosting-with-github-pages.html">
+        Hosting your Jekyll site with GitHub Pages
       </a>
     </h1>
 
-    <time datetime="2015-03-11T00:00:00-04:00" class="post-date">11 Mar 2015</time>
+    <time datetime="2015-03-18T00:00:00-04:00" class="post-date">18 Mar 2015</time>
 
-    <p>So I when I first started trying to make a blog I didn’t realize how difficult it would actually be to find something that worked. No other free platform contained the features that I wanted. And as a college student we should know that, free = good.</p>
+    <p>As a continuation to the series of the last few posts I will be explaining how to host your jekyll site for <strong>free</strong> using <a href="https://github.com">GitHub</a>. GitHub provides completely free website hosting using your own GitHub account. For more information I suggest reading up on <a href="https://pages.github.com/">GitHub Pages</a>.</p>
 
-<p><a href="http://jekyllrb.com/">Jekyll</a> is no perfect solution, but it does provide a host of features and is much more open than any other option I could find, which is why I opted to switch.</p>
+<p>First off, you’re going to need to <a href="https://github.com/join">create an account on GitHub</a> if you haven’t already. GitHub is a fantastic site that can host private and public git repositories for your personal projects.</p>
 
-<p>For a quick intro, Jekyll straight out of the box really isn’t anything special. Basically it takes some text that you write up for your posts and converts them into some static html files that can be served to a user.</p>
+<p>Here’s a list of a few advantages to using GitHub Pages:</p>
 
-<p>Posts are written in <a href="http://en.wikipedia.org/wiki/Markdown">Markdown</a> which is a really handy markup language. Great for writing posts, but it does have a bit of a learning curve and takes some time to get used to.</p>
+<ul>
+  <li>Completely Free</li>
+  <li>A site for every project</li>
+  <li>Use your own domain name</li>
+  <li>Completely integrated with Git</li>
+</ul>
 
-<p>Another great thing about using Jekyll is that there’s quite a bit of resources, and its open source! It’s very flexible, you can use plugins, create new themes, and add commenting features. This list just goes on!</p>
+<p>And of course some disadvantages:</p>
 
-<p>Creating a site from scratch with Jekyll is definitely not for the faint-hearted. If you’re willing to put the time and effort in you can come out with a blog customized to your very liking including only the features you would like. It’s a very hands-on get-dirty-with-the-code project, but it’s a lot of fun and you might learn a few things along the way.</p>
+<ul>
+  <li>No server side scripting</li>
+  <li>No control over how the site is served</li>
+  <li>No secure connections with <code>https</code></li>
+</ul>
 
-<p>The rest of this post I’ll be showing you how exactly to install and run Jekyll to <em>quickly</em> create your own static website.</p>
+<p>Now this really isn’t a complete list, but these are some of the things I thought would stand out to most people.</p>
 
-<h1 id="prerequisites">Prerequisites</h1>
+<p>Now for the fun part! Let’s get started.</p>
 
-<h5 id="please-download-ruby-first-then-rubygems"><strong>Please download ruby first, then RubyGems</strong></h5>
+<h3 id="create-a-repository-for-your-site">Create a Repository for Your Site</h3>
 
-<p>You’re going to need <strong>ruby</strong> installed on your machine. If you dont have ruby installed <a href="https://www.ruby-lang.org/en/downloads/">you can get it here</a></p>
+<p>First make sure that you’re logged in to GitHub. Then, head over to your GitHub profile located at <code>https://github.com/username</code>.</p>
 
-<p>You’re also going to have to install <a href="https://rubygems.org/pages/download">RubyGems</a>. It’s package manager for ruby.</p>
+<p>At the top of the screen click the <strong><code>+</code></strong> button at the top of the page and create a new repository. You <strong>MUST</strong> name the repository in the following way: <code>username.github.io</code>. Your site will not be created if it is not named correctly.</p>
 
-<p>Now I’m going to assume you know how to install these or already have them on your system. Follow the documentation provided online or do a quick google search if you’re having any trouble.</p>
+<p>Now that we’ve got your site’s repository set up we can finally add your Jekyll files to that repository.</p>
 
-<p>Once you’ve got them both installed, open up a command terminal and try this command</p>
+<p>Now let’s head back to the desktop and open a new terminal window. Using the terminal navigate to the desired folder where you would like your project to be contained.</p>
 
-<pre><code>~ user$ ruby --version
-~ user$ gem --version
+<p>Then, assuming you’ve got git installed we’re going to use the following command:</p>
+
+<pre><code>    ~ $ git clone https://github.com/username/username.github.io
 </code></pre>
 
-<p>If everything works correctly you should get some type of outputs similar to this:</p>
+<p>Now check using <code>ls</code> or by opening up a new finder window, navigate to the same folder you just had by using the terminal and you should find a new folder by the name of <code>username.github.io</code>. Open up this folder. This is the place where we will copy your Jekyll files to be pushed to GitHub’s servers.</p>
 
-<pre><code>ruby 2.0.0p481 (2014-05-08 revision 45883) [universal.x86_64-darwin14]
-2.0.14
+<p>Now assuming you’ve already built a Jekyll site, copy the files from your site into this folder. Go back to your terminal window and <code>cd</code> into <code>username.github.io</code> folder. Then type the following commands</p>
+
+<pre><code>    ~ $ git add --all
+    ~ $ git commit -m "Init Commit"
+    ~ $ git push -u origin master
 </code></pre>
 
-<p>Great! now we have the two essentials installed.</p>
+<p>Once you’ve done that, congratulations! You’ve made your first GitHub pages site! Open up a web browser and head over to <code>http://username.github.io</code>.</p>
 
-<h1 id="getting-jekyll">Getting Jekyll</h1>
+<p>The site should be live within a few minutes. New changes after this should be live within seconds of pushing to the server.</p>
 
-<p>With a valid internet connection and a command terminal, use the following commands to install Jekyll on your machine.</p>
+<h4 id="an-alternative-method">An Alternative Method</h4>
 
-<pre><code>~ user$ sudo gem install jekyll
-</code></pre>
+<p>If you do not have git installed on your computer, or you are unfamiliar with the command line, <em>and</em> you’re running Microsoft Windows or Mac OS X, there’s another method you can use to get your site running.</p>
 
-<p>Check now that you have the latest version of Jekyll installed by using</p>
+<p>Download <a href="https://windows.github.com/">GitHub for Windows</a> if you’re running Windows, or <a href="https://mac.github.com/">GitHub for Mac</a> if you’re running OS X. Once you install GitHub’s software, login to the git client. You should see a list of your repositories within the software. Clone the repository that we just created on GitHub. There should be a menu to do this.</p>
 
-<pre><code>~ user$ jekyll --version
-</code></pre>
+<p>If you open a file browser, look for a folder in the location <code>~/username/documents/GitHub/username.github.io</code>. This is the location where your repository is located. You can copy your files from the Jekyll site into that folder. Once you’ve done that, head over to the GitHub software and name your commit, add a message if you’d like. Then <code>commit</code> and <code>sync</code>.</p>
 
-<h1 id="creating-your-first-site">Creating your first site</h1>
+<p>Once you’ve synced your repository, you can open a web browser and navigate to <code>http://username.github.io</code> where your site should be live in a matter of seconds.</p>
 
-<p>Here’s where things start getting fun.</p>
+<p>If your site is not appearing, then you may have named your repository wrong, or you might have to wait a few minutes for the servers to create your site. Wait at least 10 minutes to see if your site is up.</p>
 
-<p>Using your terminal, navigate to the chosen directory on your filesystem where you would like to keep your code, site, and any other files <em>(Preferably a location where you might keep some repositories)</em></p>
+<p>If you’re having trouble refer to the github pages documentation</p>
 
-<p>Assuming you’ve already navigated there perform the following</p>
+<p>Another great thing about GitHub pages is that on top of having a site for yourself, you are allowed a site for each project you have located at <code>http://username.github.io/project-name</code>. This is a great way to host many pages and to allow people to access and learn more about your open source project.</p>
 
-<pre><code>~/location/ user$ jekyll new &lt;site-name&gt;
-</code></pre>
+<p>Hopefully this brief guide was enough for you to get your site set up on GitHub Pages. Good luck!</p>
 
-<p>Or if you’d like to have jekyll generate the files in the folder you’re currently located in</p>
-
-<pre><code>~/site-name/ user$ jekyll new .
-</code></pre>
-
-<p>Now if you use ls command or view that directory you just created inside a file manager you should see something similar to the following</p>
-
-<pre><code>_config.yml	_layouts    _sass	css		index.html
-_includes	_posts		about.md	feed.xml
-</code></pre>
-
-<h5 id="configyml">_config.yml</h5>
-
-<p>This file is where we store some sitewide variables, like author name, baseurl, twitter and GitHub handles, etc. Edit the variables in here as you like.</p>
-
-<h5 id="posts">_posts</h5>
-
-<p>This is where you’re going to write posts in the Markdown syntax. I suggest an editor than can support previews of Markdown. Personally I use <a href="http://brackets.io">Adobe Brackets</a> with the Markdown plugin to preview. More on all of this later</p>
-
-<h5 id="aboutmd">about.md</h5>
-
-<p>This is a markdown file you can edit to change the “About” page on your site.</p>
-
-<h5 id="includes-layouts-sass-css">_includes, _layouts, _sass, css</h5>
-
-<p>These are all other places where you can change configurations and views of your site. The layout and css can all be found under these places. We’re not really going to edit those right now.</p>
-
-<h1 id="making-your-first-post">Making your first post</h1>
-
-<p>Lets navigate to our folder and create a new post. Create a new file and name is something following the scheme: <code>YYYY-MM-DD-your-title.md</code>. Open this new file in a text editor.</p>
-
-<p>Inside we’re going to put:</p>
-
-<pre><code>---
-layout: post
-title: Hello World!
----
-
-# Howdy there partner
-Congratulations! You've made it to[site](site.url)
-
-We're ust getting started here.
-</code></pre>
-
-<p>Now save your document and return to the terminal that has navigated inside of your site’s directory.</p>
-
-<h1 id="building-the-site">Building the Site</h1>
-
-<p>Run the following command</p>
-
-<pre><code>~/location/ user$ jekyll build
-~/location/ user$ jekyll serve
-</code></pre>
-
-<p>Leave the terminal open. Open up a new tab in your browser of choice and navigate to <code>http://localhost:4000</code></p>
-
-<p>You should see a home page with a link to Jekyll’s default page for new sites, and your own post we just wrote!</p>
-
-<p>Click on the post to make sure it works there. If it does, congratulations! you’ve made your first blog post using Jekyll</p>
-
-<p>There’s tons more you can do with themes, pages, and other sweet customizations for your shiny new blog, but I’ll go into those at a later date.</p>
-
-<p>For now, play around with Jekyll and get a feel for the software. It’s something interesting that I’ve never encountered before and is definitely worth a try.</p>
-
-<p>Happy blogging!</p>
 
   </article>
   
@@ -216,7 +161,7 @@ We're ust getting started here.
 
       <footer class="footer">
         <small>
-          &copy; <time datetime="2015-03-11T01:58:25-04:00">2015</time>. All rights reserved.
+          &copy; <time datetime="2015-03-18T11:57:34-04:00">2015</time>. All rights reserved.
         </small>
       </footer>
     </div>
