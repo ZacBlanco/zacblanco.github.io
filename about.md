@@ -8,7 +8,7 @@ permalink: /about/
 
 My name is Zac. I'm an aspiring software engineer. I'm currently a student studying electrical and computer engineering at Rutgers University, New Brunswick. I expect to graduate around May of 2018.
 
-I work mainly with Java, python, C#, html, css, and javascript, but I try to branch into new languages when I can.
+The languages I've worked with in the past are Java, python, C#, html, css, and javascript, but I'm always trying to learn new ones
 
 If you'd like to check out my projects, please head over to my projects page and find one you might like. Everything is open source!
 

@@ -32,8 +32,5 @@ author:
 #github:
 #  repo:           https://github.com/poole/poole
 
-
-
-
 # Build settings
 markdown: kramdown

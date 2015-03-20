@@ -2,11 +2,17 @@
 layout: default
 ---
 
+<script type="text/javascript"
+    src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
 <article class="post">
   <h1 class="post-title">{{ page.title }}</h1>
   <time datetime="{{ page.date | date_to_xmlschema }}" class="page-date">{{ page.date | date_to_string }}</time>
   {{ content }}
 </article>
+
+{% include disqus.html  %}
 
 <aside class="related">
   <h2>Related Posts</h2>
