@@ -70,99 +70,83 @@
   
   <article class="post">
     <h1 class="post-title">
-      <a href="/nerual-networks-and-backpropagation.html">
-        Neural Networks and the Backpropagation Algorithm
+      <a href="/hosting-with-github-pages.html">
+        Hosting your Jekyll site with GitHub Pages
       </a>
     </h1>
 
-    <time datetime="2015-03-20T15:45:08-04:00" class="post-date">20 Mar 2015</time>
+    <time datetime="2015-03-18T00:00:00-04:00" class="post-date">18 Mar 2015</time>
 
-    <p>The other day I had been looking up information on <a href="http://en.wikipedia.org/wiki/Machine_learning">machine learning</a>. I’m new to some of the topics in this field but I have been introduced to some before. I’ve always wanted to learn more. The idea of teaching a computer how to “learn” just seems intriguing.</p>
+    <p>As a continuation to the series of the last few posts I will be explaining how to host your jekyll site for <strong>free</strong> using <a href="https://github.com">GitHub</a>. GitHub provides completely free website hosting using your own GitHub account. For more information I suggest reading up on <a href="https://pages.github.com/">GitHub Pages</a>.</p>
 
-<p>Specifically I had been researching <a href="http://en.wikipedia.org/wiki/Artificial_neural_network">neural networks</a>. They are useful because they can help uncover hidden patterns in a plethora of data, or be taught to perform certain tasks such as handwriting or facial recognition.</p>
+<p>First off, you’re going to need to <a href="https://github.com/join">create an account on GitHub</a> if you haven’t already. GitHub is a fantastic site that can host private and public git repositories for your personal projects.</p>
 
-<p>I had watched an <a href="https://www.youtube.com/watch?v=q0pm3BrIUFo">MIT Open CourseWare Lecture</a> which gave a rough introduction to neural networks which I found to be quite captivating. I found it so fantastic actually that I wanted to share the basic concepts here. For the purpose of this post, I’m going to assume that we’re teaching this neural net via supervised learning.</p>
-
-<p>Or, in other words, we are going to make this neural network learn by giving it a set of “correct” input and output values, which it will use to calibrate, or change its own structure to make sure that it also outputs the correct values. Now let’s dive in!</p>
-
-<p>To explain briefly, neural networks are modeled after the same neurons that exist in our brain.</p>
-
-<p><img src="http://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Neuron.svg/500px-Neuron.svg.png" alt="Image of Neuron" /></p>
-
-<p>For our purpose we focus on only a few of the main features of a neuron which are critical to our model for a neural network.</p>
-
-<p>The main parts of the neuron we want to focus on are:</p>
+<p>Here’s a list of a few advantages to using GitHub Pages:</p>
 
 <ul>
-  <li>Dendrites</li>
-  <li>The Axon</li>
-  <li>The Axon Terminals</li>
+  <li>Completely Free</li>
+  <li>A site for every project</li>
+  <li>Use your own domain name</li>
+  <li>Completely integrated with Git</li>
 </ul>
 
-<p><strong>The dendrites</strong> are small tree-like structures that are stimulated when enough neurotransmitters are dumped into the synapse between a neuron and the end of the dendrite. Some of these dendrites might be easier to stimulate than other based on various factors</p>
+<p>And of course some disadvantages:</p>
 
-<p><strong>The axon</strong> is the lengthy part of the neuron which simply propagates a “spike” of energy to the axon terminals, which originates from the dendrites.</p>
+<ul>
+  <li>No server side scripting</li>
+  <li>No control over how the site is served</li>
+  <li>No secure connections with <code>https</code></li>
+</ul>
 
-<p><strong>The axon terminals</strong> dump neurotransmitters into the synapse to help stimulate the dendrites of the next neuron.</p>
+<p>Now this really isn’t a complete list, but these are some of the things I thought would stand out to most people.</p>
 
-<p>If there are enough neurotransmitters dumped into the synapse, It will stimulate the next neuron’s dendrites, sending a spike of “excitement” or “energy” to the next neuron, and so forth. At each end of the axom terminals there is another neuron’s dendrites separated by a space called the <strong>synapse</strong>. If a neuron is stimulated, it will dump neurotransmitters into the synapse.</p>
+<p>Now for the fun part! Let’s get started.</p>
 
-<p>This is a gross simplification of a neuron, but for the model of a neural network and the backpropagation algorithm, we don’t need to understand more than this.</p>
+<h3 id="create-a-repository-for-your-site">Create a Repository for Your Site</h3>
 
-<h4 id="modeling-the-neuron">Modeling the Neuron</h4>
-<hr />
+<p>First make sure that you’re logged in to GitHub. Then, head over to your GitHub profile located at <code>https://github.com/username</code>.</p>
 
-<p><img src="../assets/images/neural-nets/net-model.jpg" alt="Image of Model" /></p>
+<p>At the top of the screen click the <strong><code>+</code></strong> button at the top of the page and create a new repository. You <strong>MUST</strong> name the repository in the following way: <code>username.github.io</code>. Your site will not be created if it is not named correctly.</p>
 
-<p>First, notice the inputs. Each input from <script type="math/tex">x_1</script> to <script type="math/tex">x_n</script> is given as an input to the neuron. Each of the inputs is multiplied by a weight <script type="math/tex">w</script> corresponding to an input before being summed into the function.</p>
+<p>Now that we’ve got your site’s repository set up we can finally add your Jekyll files to that repository.</p>
 
-<p>The neuron also has a bias, labeled  <script type="math/tex">b</script> in the diagram, which I like to call <script type="math/tex">w_0</script>. We can think of this bias as a given input to each neuron that always has a value of -1. The weight of the bias input <script type="math/tex">w_0</script> can be adjusted accordingly.</p>
+<p>Now let’s head back to the desktop and open a new terminal window. Using the terminal navigate to the desired folder where you would like your project to be contained.</p>
 
-<p>Think of this part as the neurotransmitters being the inputs multiplied by the weights which stimulate the dendrites of the neuron.</p>
+<p>Then, assuming you’ve got git installed we’re going to use the following command:</p>
 
-<p>From here we can represent the total stimulus as the sum of each input multiplied by a corresponding weight.</p>
+<pre><code>    ~ $ git clone https://github.com/username/username.github.io
+</code></pre>
 
-<script type="math/tex; mode=display">-w_0 + \sum_{i=1}^{n}x_iw_i</script>
+<p>Now check using <code>ls</code> or by opening up a new finder window, navigate to the same folder you just had by using the terminal and you should find a new folder by the name of <code>username.github.io</code>. Open up this folder. This is the place where we will copy your Jekyll files to be pushed to GitHub’s servers.</p>
 
-<p>The value of this will be then be passed onto the activation, or <em>threshold</em> function. The threshold function might be best viewed as a single-step function, where say once the input <script type="math/tex">\alpha</script> reaches a certain value, it will output a certain value. We’re going to keep this to ones and zeros.</p>
+<p>Now assuming you’ve already built a Jekyll site, copy the files from your site into this folder. Go back to your terminal window and <code>cd</code> into <code>username.github.io</code> folder. Then type the following commands</p>
 
-<p><img src="../assets/images/neural-nets/threshold-med.png" alt="Threshold Example" /></p>
+<pre><code>    ~ $ git add --all
+    ~ $ git commit -m "Init Commit"
+    ~ $ git push -u origin master
+</code></pre>
 
-<p>Next, once the threshold is activated or not, we will get an output from this neuron. Once we run this neural network through for the first time, we are going to need to find out how good (or bad) the neural network did at predicting our answer.</p>
+<p>Once you’ve done that, congratulations! You’ve made your first GitHub pages site! Open up a web browser and head over to <code>http://username.github.io</code>.</p>
 
-<p>Remember how I said that the neural network is given a set of “correct” inputs and outputs to learn from? Well here’s where that comes into play.</p>
+<p>The site should be live within a few minutes. New changes after this should be live within seconds of pushing to the server.</p>
 
-<p>Let’s say that our output of the neural net is <script type="math/tex">y</script> and our desired or <em>correct</em> output is going to be assigned to <script type="math/tex">d</script>. We are going to need a function to test our performance of the neural network.</p>
+<h4 id="an-alternative-method">An Alternative Method</h4>
 
-<p>Let’s call this function <script type="math/tex">P</script>. Also, for simplicity’s sake, and because this is <em>mathematically convenient</em> we’re going to make the performance function the following:</p>
+<p>If you do not have git installed on your computer, or you are unfamiliar with the command line, <em>and</em> you’re running Microsoft Windows or Mac OS X, there’s another method you can use to get your site running.</p>
 
-<script type="math/tex; mode=display">P(d, y) = -\frac{1}{2}(d-y)^2</script>
+<p>Download <a href="https://windows.github.com/">GitHub for Windows</a> if you’re running Windows, or <a href="https://mac.github.com/">GitHub for Mac</a> if you’re running OS X. Once you install GitHub’s software, login to the git client. You should see a list of your repositories within the software. Clone the repository that we just created on GitHub. There should be a menu to do this.</p>
 
-<p>(<em>You’ll see what I mean by mathematically convenient later</em>)</p>
+<p>If you open a file browser, look for a folder in the location <code>~/username/documents/GitHub/username.github.io</code>. This is the location where your repository is located. You can copy your files from the Jekyll site into that folder. Once you’ve done that, head over to the GitHub software and name your commit, add a message if you’d like. Then <code>commit</code> and <code>sync</code>.</p>
 
-<h4 id="adjusting-the-model">Adjusting the Model</h4>
-<hr />
+<p>Once you’ve synced your repository, you can open a web browser and navigate to <code>http://username.github.io</code> where your site should be live in a matter of seconds.</p>
 
-<p>So now we’ve got this model. We have a function to test whether our output is close to what we want it to be. We have a way to add our inputs together. What comes next?</p>
+<p>If your site is not appearing, then you may have named your repository wrong, or you might have to wait a few minutes for the servers to create your site. Wait at least 10 minutes to see if your site is up.</p>
 
-<p>Well, we need to have some way of adjusting the neuron to make sure we get closer to our desired output. But how do we know what to adjust? and by how much?</p>
+<p>If you’re having trouble refer to the github pages documentation</p>
 
-<p>We’re going to use a method called <strong>gradient descent</strong> (or <em>ascent</em> depending on direction). We’re going to use some math here.</p>
+<p>Another great thing about GitHub pages is that on top of having a site for yourself, you are allowed a site for each project you have located at <code>http://username.github.io/project-name</code>. This is a great way to host many pages and to allow people to access and learn more about your open source project.</p>
 
-<p>So we know that our desired outputs <script type="math/tex">d</script> can be given by <script type="math/tex">\overline{d} = g(\overline{x})</script>; where <script type="math/tex">\overline{d}</script> and <script type="math/tex">\overline{x}</script> are our vectors of inputs and desired outputs that our neural network is going to learn from.</p>
-
-<p>The problem is that we don’t know what function <script type="math/tex">g</script> is, which is why we’re using the neural network to represent it. With the neural networks, we can represent our inputs and outputs by a multivaraite function <script type="math/tex">f</script>. This function can be represented by <script type="math/tex">\overline{y} = f(\overline{x}, \overline{w})</script>.</p>
-
-<p>Given these functions, we can see our performance function is now</p>
-
-<script type="math/tex; mode=display">P(d, f(\overline{x}, \overline{w})) = -\frac{1}{2}(d-f(\overline{x}, \overline{w}))^2</script>
-
-<hr />
-<p>Random junk</p>
-
-<script type="math/tex; mode=display">\sum_{i=0}^{N} = 1</script>
-
-<p><img src="http://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Colored_neural_network.svg/300px-Colored_neural_network.svg.png" alt="Model of Neural Net" /></p>
+<p>Hopefully this brief guide was enough for you to get your site set up on GitHub Pages. Good luck!</p>
 
 
   </article>
@@ -182,7 +166,7 @@
 
       <footer class="footer">
         <small>
-          &copy; <time datetime="2015-03-20T15:45:09-04:00">2015</time>. All rights reserved.
+          &copy; <time datetime="2015-03-23T11:02:31-04:00">2015</time>. All rights reserved.
         </small>
       </footer>
     </div>

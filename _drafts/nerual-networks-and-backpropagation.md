@@ -5,11 +5,11 @@ tags: [neural networks, machine learning, AI, artificial intelligence, MIT]
 Author: Zac
 ---
 
-The other day I had been looking up information on [machine learning](http://en.wikipedia.org/wiki/Machine_learning). I'm new to some of the topics in this field but I have been introduced to some before. I've always wanted to learn more. The idea of teaching a computer how to "learn" just seems intriguing.
+The other day I had been looking up information on [machine learning](http://en.wikipedia.org/wiki/Machine_learning). I'm new to some of the topics in this field but I have been introduced to some before. I've always wanted to learn more. The idea of teaching a computer how to "learn" just seems intriguing to me.
 
 Specifically I had been researching [neural networks](http://en.wikipedia.org/wiki/Artificial_neural_network). They are useful because they can help uncover hidden patterns in a plethora of data, or be taught to perform certain tasks such as handwriting or facial recognition. 
 
-I had watched an [MIT Open CourseWare Lecture](https://www.youtube.com/watch?v=q0pm3BrIUFo) which gave a rough introduction to neural networks which I found to be quite captivating. I found it so fantastic actually that I wanted to share the basic concepts here. For the purpose of this post, I'm going to assume that we're teaching this neural net via supervised learning. 
+I had watched an [MIT OpenCourseWare Lecture](https://www.youtube.com/watch?v=q0pm3BrIUFo) which gave a rough introduction to neural networks which I found to be quite captivating. I found it so fantastic actually that I wanted to share the basic concepts here. For the purpose of this post, I'm going to assume that we're teaching this neural net via supervised learning. 
 
 Or, in other words, we are going to make this neural network learn by giving it a set of "correct" input and output values, which it will use to calibrate, or change its own structure to make sure that it also outputs the correct values. Now let's dive in!
 
@@ -63,13 +63,13 @@ Remember how I said that the neural network is given a set of "correct" inputs a
 
 Let's say that our output of the neural net is $$ y $$ and our desired or *correct* output is going to be assigned to $$ d $$. We are going to need a function to test our performance of the neural network. 
 
-Let's call this function $$ P $$. Also, for simplicity's sake, and because this is *mathematically convenient* we're going to make the performance function the following:
+Let's call this function $$ P $$. Also, for simplicity's sake, and because this is *convenient* we're going to make the performance function the following:
 
 $$
 P(d, y) = -\frac{1}{2}(d-y)^2
 $$
 
-(*You'll see what I mean by mathematically convenient later*)
+(*You'll see what I mean by convenient later*)
 
 #### Adjusting the Model
 ------------------------------------------------
@@ -88,8 +88,97 @@ The problem is that we don't know what function $$ g $$ is, which is why we're u
 Given these functions, we can see our performance function is now
 
 $$
-P(d, f(\overline{x}, \overline{w})) = -\frac{1}{2}(d-f(\overline{x}, \overline{w}))^2
+P(g(\overline{x}), f(\overline{x}, \overline{w})) = -\frac{1}{2}(g(\overline{x})-f(\overline{x}, \overline{w}))^2
 $$
+
+We can see from here the performance function is really just a function of the inputs, $$ x $$ and the weights $$ w $$.
+
+Now imagine that we add some complexity to our neural network. We are going make two neural layers *chained* together. That is, we have an input $$ x $$ passed to $$ w_1 $$ passed to a threshold function, who's output is then the input to the next neuron. This is multiplied by another weight $$ w_n $$ which is then passed to the next neuron's threshold. The output of this 2nd threshold will be the output of the neural network.
+
+Just imagine the above diagram of the neural network laid end to end and on top of each other. A general overview can be seen below, where each circle represents a neuron:
+
+
+![Model of Neural Net](http://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Colored_neural_network.svg/300px-Colored_neural_network.svg.png)
+
+
+This is where things start to become more interesting. Using the algorithm of gradient descent, we can alter the weights $$ \overline{w} $$ by taking the gradient of our performance function with respect to each weight. We can also multiply this gradient by a rate constant, let's say $$ \delta $$, that will determine how much we alter the weights over each iteration.
+
+So let's look at our formula
+
+$$
+\triangle w = \delta\nabla_w P = \delta\langle \frac{\partial P}{\partial w_0}, \frac{\partial P}{\partial w_1}, \cdot\cdot\cdot, \frac{\partial P}{\partial w_n} \rangle
+$$
+
+This is now telling us that the change in our $$ w $$ over each iteration is going to be equal to $$ \delta $$ multiplied by the partial derivative of $$ P $$ with respect to each weight.
+
+But wait! We have a problem here. We can't just simply take the partial derivative of $$ w $$ with respect to $$ P $$ because $$ w $$ lies within our other function $$ f $$. This means that we are going to need the chain rule.
+
+So this brings up another problem: because we are going to need to take all these derivatives all of the functions in our neural network *must* be differentiable.
+
+So the problem of differentiability lies within our step function. Because a step function is not differentiable we need another function to replace this. Fortunately there is one similar to it that *is* differentiable!
+
+It's called a sigmoid function. You might have seen it before. It has the form
+
+$$
+S(\alpha) = \frac{1}{1 + e^{-\alpha}}
+$$
+
+The graph of the sigmoid has the following shape:
+
+![Sigmoid function](../assets/images/neural-nets/sigmoid.png).
+
+Great! So where do we go from here?
+
+Well, I suggest you watch the [video I linked earlier](https://www.youtube.com/watch?v=q0pm3BrIUFo) if you want a really good understanding of how this works. I will do my best to explain it, but I won't go into explicit detail of how this all works together. The video will explain things more thoroughly.
+
+So if we keep taking our partial derivatives with the chain rule, it turns out that we will need to take the derivative of this sigmoid function.
+
+Turns out this function is actually pretty neat. Let's call the sigmoid function $$ \beta $$. It just so happens, that if you take the derivative of this function *and* we manipulate it a bit, that the derivative of the function turns out to be expressed in terms of the original function itself. I'll let the math do the talking here.
+
+$$
+\beta = \frac{1}{1 + e^{-\alpha}}
+$$
+
+
+$$
+\frac{d}{d\alpha}(\beta) = (1 + e^{-\alpha})^2 e^{-\alpha}
+$$
+
+Then we rearrange our derivative a little bit:
+
+$$
+\frac{d}{d\alpha}(\beta) = \beta(1-\beta)
+$$
+
+Voila! The derivative of the sigmoid function turns out to be given in terms of the original! I find that to be quite astounding. If you don't believe me you'll just have to take my word for it. I promise you it works. (This is also why I called this function *convenient*).
+
+So now if we do the calculation for each of the partial derivative we get something like. Also, pretend like the value $$ y_n $$ is the respective output for each neuron in the neural network and $$ z $$ is the final output  of the neural net.
+
+The change in weight is then given by
+
+$$
+\frac{\partial P}{\partial w_n} = \delta (w_{n+1})(d - z) (\beta(y_n)(1 - \beta(y_n)) (\beta(y_{n-1})(1 - \beta(y_{n-1}))...
+$$
+
+
+#### Wrapping Up
+----------------------------
+
+So what does all of this mean?
+
+What this means is that when we are calculating exactly how to adjust the weights in our neural network, the change in each weight depends on a few things.
+
+- The input to the neuron
+- The output of the neuron
+- The weight of the next neuron.
+
+This helps explain why it's called the backpropagation algorithm. You need to calculate the change in weights at the end of your neural network before you can calculate the change in the beginning. So you work your way back in a wave-like manner, hence the name *backpropagation*.
+
+The other great thing about this algorithm is that the change in weight depends on things you've already calculated, *or* things you're going to have to calculate anyways. It's extremely effecient. There are few, if any, wasted computations.
+
+And that's simply it. The most basic of neural networks and the backpropagation 
+
+
 
 
 
@@ -97,15 +186,6 @@ $$
 
 
 -------------------------------------------------
-Random junk
-
-$$
-\sum_{i=0}^{N} = 1
-$$
-
-![Model of Neural Net](http://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Colored_neural_network.svg/300px-Colored_neural_network.svg.png)
-
-
 
 
 
