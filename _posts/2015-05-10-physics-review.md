@@ -331,46 +331,87 @@ For a diatomic gas (two atoms per molecule) the heat capacity is $$ \frac{5}{2} 
 
 > $$ C_V = 3R $$
 
+For a solid that has molecules of only 1 atom, the heat capacity at constant volume is only $$ 3R $$.
+
 > $$ E_T = 3nRT $$
+
+The total Energy of a solid is equal to $$ 3nRT $$.
 
 
 ## The First Law of Thermodynamics
 
 > $$ W = \int_{V_1}^{V_2}pdV $$
 
+The amount of work done by a gas at pressure, p, is equal to the integral from one volume to another of $$ p $$.  This is the general equation.
+
 > $$ W = p(V_2 - V_1) $$
+
+At constant pressure, the work done is simply the pressure (in pascals), multipled by the difference of the two states of volume.
 
 > $$ W = nRT\cdot ln(\frac{V_2}{V_1}) = nRT\cdot ln(\frac{p_1}{P_2}) $$
 
+To derive this, from the ideal gas law, $$ P = \frac{NRT}{V} $$. If we replace P with this value in our integral, we find that $$ W = nRT \int_{V_1}^{V_2} \frac{dV}{V} $$. This is how we find the equation. All units are in SI.
+
+#### _The First Law of Thermodynamics_
+
 > $$ U_2 - U_1 = \Delta U = Q - W $$
+
+This is considered _The First Law of Thermodynamics_. It is essential to understand this. Basically this equation related the amount of heat added to (or lost) by a gas, and the amount of work done on/by the gas. We can find the change in internal energy between any two states by this equation. $$ \Delta U $$ is the change in internal energy between two states. $$ Q $$ is the amount of heat added or lost by a gas. $$ W $$ is the amount of work. It is important to note the sign convention. Adding heat to a gas denotes $$ +Q $$. Taking heat away is $$ -Q $$. Work done _by the gas_ denotes $$ +W $$. If the work is done _on the gas_, then we have $$ -W $$.
 
 > $$ \Delta U = Q - p\Delta V $$
 
+If gas is at a constant pressure and volume is changing, we know that the $$ W = p\Delta V $$ so that gives us this equation.
+
 > $$ \Delta U = nC_V\Delta T $$
 
-###### Adiabatic
+For a gas at constant volume and a changing temperature (isobaric), we can relate a small change in the internal energy $$ \Delta U $$ to the Molar heat capacity at constant volume
+
+###### Adiabatic Process
 
 > $$ \Delta U = -W $$
 
-##### Isochoric
+In n adiabatic process, heat is not lost or gained, therefore the change in internal energy is simply the work done by the system.
+
+##### Isochoric Process
 
 > $$ \Delta U = Q $$
 
-##### Isobaric
+An isochoric process means that there is no change in volume. If there is no change in volume, then the system can't be doing any work, which means $$ W = 0 $$. Therefore our change in internal energy must only be the heat added to the system.
+
+##### Isobaric Process
 
 > $$ W = p\Delta V $$
 
-##### Isothermal
+In an isobaric process, the pressure is constant, which means we can relate the amount of work done by a gas to be $$ p\Delta V $$.
+
+##### Isothermal Process
 
 > $$ \Delta U = 0 \therefore Q = W $$
 
+In an isothermal process there is no change in the temperature of the system. Therefore is there isn't a change in the temperature, then the change in internal energy $$ \Delta U = 0 $$.
+
+##### Heat capcity at a constant pressure
+
 > $$ C_p = C_V + R $$
+
+We find the molar heat capacity for a gas at constant pressure (not volume) is simply equal to its molar heat capacity at constant volume plus the gas constant, $$ R $$.
+
+##### Ratio of Heat Capacities
 
 > $$ \gamma = \frac{C_p}{C_V} $$
 
+$$ \gamma $$ is the ratio of heat capacities which is simply the molar heat capacity at constant pressure over the molar heat capacity at constant volume.
+
+#### Work Done in Adiabatic Processes
+
 > $$ W = nC_V(T_1 - T_2) $$
 
+In an adiabatic process we can find the work done by a gas to be equal to the number of moles of the gas, multipled by the molar heat capacity at constant volume multiplied byh the change in temperature from two states, $$ \Delta T $$. Note that temperature should be in Kelvin.
+
+
 > $$ W = \frac{C_V}{R}(p_1V_1 - p_2V_2) $$
+
+Again in an adiabatic process we rearrange what we have above we can find that the work done over two states is equal to the $$ C_V $$ multiplied by the pressures and volumes at each state of the gas.
 
 ## The Second Law Of Thermodynamics
 

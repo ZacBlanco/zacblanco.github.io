@@ -6,8 +6,8 @@
 </description>
     <link>http://zacblanco.github.io//</link>
     <atom:link href="http://zacblanco.github.io//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 10 May 2015 12:26:35 -0400</pubDate>
-    <lastBuildDate>Sun, 10 May 2015 12:26:35 -0400</lastBuildDate>
+    <pubDate>Sun, 10 May 2015 13:05:46 -0400</pubDate>
+    <lastBuildDate>Sun, 10 May 2015 13:05:46 -0400</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -501,9 +501,13 @@
   &lt;script type=&quot;math/tex; mode=display&quot;&gt;C_V = 3R&lt;/script&gt;
 &lt;/blockquote&gt;
 
+&lt;p&gt;For a solid that has molecules of only 1 atom, the heat capacity at constant volume is only &lt;script type=&quot;math/tex&quot;&gt;3R&lt;/script&gt;.&lt;/p&gt;
+
 &lt;blockquote&gt;
   &lt;script type=&quot;math/tex; mode=display&quot;&gt;E_T = 3nRT&lt;/script&gt;
 &lt;/blockquote&gt;
+
+&lt;p&gt;The total Energy of a solid is equal to &lt;script type=&quot;math/tex&quot;&gt;3nRT&lt;/script&gt;.&lt;/p&gt;
 
 &lt;h2 id=&quot;the-first-law-of-thermodynamics&quot;&gt;The First Law of Thermodynamics&lt;/h2&gt;
 
@@ -511,65 +515,101 @@
   &lt;script type=&quot;math/tex; mode=display&quot;&gt;W = \int_{V_1}^{V_2}pdV&lt;/script&gt;
 &lt;/blockquote&gt;
 
+&lt;p&gt;The amount of work done by a gas at pressure, p, is equal to the integral from one volume to another of &lt;script type=&quot;math/tex&quot;&gt;p&lt;/script&gt;.  This is the general equation.&lt;/p&gt;
+
 &lt;blockquote&gt;
   &lt;script type=&quot;math/tex; mode=display&quot;&gt;W = p(V_2 - V_1)&lt;/script&gt;
 &lt;/blockquote&gt;
+
+&lt;p&gt;At constant pressure, the work done is simply the pressure (in pascals), multipled by the difference of the two states of volume.&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;script type=&quot;math/tex; mode=display&quot;&gt;W = nRT\cdot ln(\frac{V_2}{V_1}) = nRT\cdot ln(\frac{p_1}{P_2})&lt;/script&gt;
 &lt;/blockquote&gt;
 
+&lt;p&gt;To derive this, from the ideal gas law, &lt;script type=&quot;math/tex&quot;&gt;P = \frac{NRT}{V}&lt;/script&gt;. If we replace P with this value in our integral, we find that &lt;script type=&quot;math/tex&quot;&gt;W = nRT \int_{V_1}^{V_2} \frac{dV}{V}&lt;/script&gt;. This is how we find the equation. All units are in SI.&lt;/p&gt;
+
+&lt;h4 id=&quot;the-first-law-of-thermodynamics-1&quot;&gt;&lt;em&gt;The First Law of Thermodynamics&lt;/em&gt;&lt;/h4&gt;
+
 &lt;blockquote&gt;
   &lt;script type=&quot;math/tex; mode=display&quot;&gt;U_2 - U_1 = \Delta U = Q - W&lt;/script&gt;
 &lt;/blockquote&gt;
+
+&lt;p&gt;This is considered &lt;em&gt;The First Law of Thermodynamics&lt;/em&gt;. It is essential to understand this. Basically this equation related the amount of heat added to (or lost) by a gas, and the amount of work done on/by the gas. We can find the change in internal energy between any two states by this equation. &lt;script type=&quot;math/tex&quot;&gt;\Delta U&lt;/script&gt; is the change in internal energy between two states. &lt;script type=&quot;math/tex&quot;&gt;Q&lt;/script&gt; is the amount of heat added or lost by a gas. &lt;script type=&quot;math/tex&quot;&gt;W&lt;/script&gt; is the amount of work. It is important to note the sign convention. Adding heat to a gas denotes &lt;script type=&quot;math/tex&quot;&gt;+Q&lt;/script&gt;. Taking heat away is &lt;script type=&quot;math/tex&quot;&gt;-Q&lt;/script&gt;. Work done &lt;em&gt;by the gas&lt;/em&gt; denotes &lt;script type=&quot;math/tex&quot;&gt;+W&lt;/script&gt;. If the work is done &lt;em&gt;on the gas&lt;/em&gt;, then we have &lt;script type=&quot;math/tex&quot;&gt;-W&lt;/script&gt;.&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;script type=&quot;math/tex; mode=display&quot;&gt;\Delta U = Q - p\Delta V&lt;/script&gt;
 &lt;/blockquote&gt;
 
+&lt;p&gt;If gas is at a constant pressure and volume is changing, we know that the &lt;script type=&quot;math/tex&quot;&gt;W = p\Delta V&lt;/script&gt; so that gives us this equation.&lt;/p&gt;
+
 &lt;blockquote&gt;
   &lt;script type=&quot;math/tex; mode=display&quot;&gt;\Delta U = nC_V\Delta T&lt;/script&gt;
 &lt;/blockquote&gt;
 
-&lt;h6 id=&quot;adiabatic&quot;&gt;Adiabatic&lt;/h6&gt;
+&lt;p&gt;For a gas at constant volume and a changing temperature (isobaric), we can relate a small change in the internal energy &lt;script type=&quot;math/tex&quot;&gt;\Delta U&lt;/script&gt; to the Molar heat capacity at constant volume&lt;/p&gt;
+
+&lt;h6 id=&quot;adiabatic-process&quot;&gt;Adiabatic Process&lt;/h6&gt;
 
 &lt;blockquote&gt;
   &lt;script type=&quot;math/tex; mode=display&quot;&gt;\Delta U = -W&lt;/script&gt;
 &lt;/blockquote&gt;
 
-&lt;h5 id=&quot;isochoric&quot;&gt;Isochoric&lt;/h5&gt;
+&lt;p&gt;In n adiabatic process, heat is not lost or gained, therefore the change in internal energy is simply the work done by the system.&lt;/p&gt;
+
+&lt;h5 id=&quot;isochoric-process&quot;&gt;Isochoric Process&lt;/h5&gt;
 
 &lt;blockquote&gt;
   &lt;script type=&quot;math/tex; mode=display&quot;&gt;\Delta U = Q&lt;/script&gt;
 &lt;/blockquote&gt;
 
-&lt;h5 id=&quot;isobaric&quot;&gt;Isobaric&lt;/h5&gt;
+&lt;p&gt;An isochoric process means that there is no change in volume. If there is no change in volume, then the system can’t be doing any work, which means &lt;script type=&quot;math/tex&quot;&gt;W = 0&lt;/script&gt;. Therefore our change in internal energy must only be the heat added to the system.&lt;/p&gt;
+
+&lt;h5 id=&quot;isobaric-process&quot;&gt;Isobaric Process&lt;/h5&gt;
 
 &lt;blockquote&gt;
   &lt;script type=&quot;math/tex; mode=display&quot;&gt;W = p\Delta V&lt;/script&gt;
 &lt;/blockquote&gt;
 
-&lt;h5 id=&quot;isothermal&quot;&gt;Isothermal&lt;/h5&gt;
+&lt;p&gt;In an isobaric process, the pressure is constant, which means we can relate the amount of work done by a gas to be &lt;script type=&quot;math/tex&quot;&gt;p\Delta V&lt;/script&gt;.&lt;/p&gt;
+
+&lt;h5 id=&quot;isothermal-process&quot;&gt;Isothermal Process&lt;/h5&gt;
 
 &lt;blockquote&gt;
   &lt;script type=&quot;math/tex; mode=display&quot;&gt;\Delta U = 0 \therefore Q = W&lt;/script&gt;
 &lt;/blockquote&gt;
 
+&lt;p&gt;In an isothermal process there is no change in the temperature of the system. Therefore is there isn’t a change in the temperature, then the change in internal energy &lt;script type=&quot;math/tex&quot;&gt;\Delta U = 0&lt;/script&gt;.&lt;/p&gt;
+
+&lt;h5 id=&quot;heat-capcity-at-a-constant-pressure&quot;&gt;Heat capcity at a constant pressure&lt;/h5&gt;
+
 &lt;blockquote&gt;
   &lt;script type=&quot;math/tex; mode=display&quot;&gt;C_p = C_V + R&lt;/script&gt;
 &lt;/blockquote&gt;
+
+&lt;p&gt;We find the molar heat capacity for a gas at constant pressure (not volume) is simply equal to its molar heat capacity at constant volume plus the gas constant, &lt;script type=&quot;math/tex&quot;&gt;R&lt;/script&gt;.&lt;/p&gt;
+
+&lt;h5 id=&quot;ratio-of-heat-capacities&quot;&gt;Ratio of Heat Capacities&lt;/h5&gt;
 
 &lt;blockquote&gt;
   &lt;script type=&quot;math/tex; mode=display&quot;&gt;\gamma = \frac{C_p}{C_V}&lt;/script&gt;
 &lt;/blockquote&gt;
 
+&lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;\gamma&lt;/script&gt; is the ratio of heat capacities which is simply the molar heat capacity at constant pressure over the molar heat capacity at constant volume.&lt;/p&gt;
+
+&lt;h4 id=&quot;work-done-in-adiabatic-processes&quot;&gt;Work Done in Adiabatic Processes&lt;/h4&gt;
+
 &lt;blockquote&gt;
   &lt;script type=&quot;math/tex; mode=display&quot;&gt;W = nC_V(T_1 - T_2)&lt;/script&gt;
 &lt;/blockquote&gt;
 
+&lt;p&gt;In an adiabatic process we can find the work done by a gas to be equal to the number of moles of the gas, multipled by the molar heat capacity at constant volume multiplied byh the change in temperature from two states, &lt;script type=&quot;math/tex&quot;&gt;\Delta T&lt;/script&gt;. Note that temperature should be in Kelvin.&lt;/p&gt;
+
 &lt;blockquote&gt;
   &lt;script type=&quot;math/tex; mode=display&quot;&gt;W = \frac{C_V}{R}(p_1V_1 - p_2V_2)&lt;/script&gt;
 &lt;/blockquote&gt;
+
+&lt;p&gt;Again in an adiabatic process we rearrange what we have above we can find that the work done over two states is equal to the &lt;script type=&quot;math/tex&quot;&gt;C_V&lt;/script&gt; multiplied by the pressures and volumes at each state of the gas.&lt;/p&gt;
 
 &lt;h2 id=&quot;the-second-law-of-thermodynamics&quot;&gt;The Second Law Of Thermodynamics&lt;/h2&gt;
 
