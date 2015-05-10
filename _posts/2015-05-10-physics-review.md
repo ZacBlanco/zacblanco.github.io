@@ -74,38 +74,57 @@ If there is _NO_ net toque applied to an object, the angular momentum in conserv
 
 > $$ G = 6.67 \cdot 10^{-11} $$
 
+This is Newton's constant of gravitation. Used in the equations to follow.
+
 ##### Graviational Force of Two Bodies
 
 > $$ F = \frac{GMm}{r^2} $$ 
+
+This equation tells us that two bodies exert the same force on each other based on one objects mass, $$ m $$, the other objects mass, $$ M $$, and the distance between the two objects centers of gravity.
 
 ##### Potential Energy of Gravitation
 
 > $$ U = \frac{GMm}{r} $$ 
 
+The potential energy of one body with respect to another.
+
 ##### Finding $$ g $$ on Earth and Other Planets
 
 > $$ g = \frac{GM_E}{R_E^2} $$ 
+
+We can find the value for the gravitational acceleration at the surface (or distance from that planet for that matter) so long as we know the planet's mass, $$ M $$, and the distance between the object and the center of the planet, $$ R $$.
 
 ##### Circular Orbit Velocity
 
 > $$ v_{orbit} = \sqrt{\frac{GM_E}{R}} $$ 
 
+We can derive this value by setting the values for centripetal force ($$ \frac{mv^2}{r}) $$ equal to $$ \frac{GMm}{r^2} $$. Solving for v, we find that the velocity in a circular orbit depends only on the mass of the planet and the orbit distance from the _center of the planet_ (not the surface). 
+
 ##### Period of Orbit
 
 > $$ T = \frac{2\pi r}{v} = \frac{2\pi r^{\frac{3}{2}}}{\sqrt{GM_E}} $$ 
 
+Simply the time it takes to make one revolution given velocity v. Second equation is derived from Kepler's law (see below).
+
 ##### Kepler's Law of Equal Areas
 
-> $$ \frac{dA}{dt} = rv\cdot sin\phi $$ 
+> $$ \frac{dA}{dt} = rv\cdot sin\phi $$ s
+
+![Kepler's Law of Equal Areas](../assets/images/physics-review/kepler-areas.png)
+
+Kepler's Law of Equal Areas. In equal units of time, the area a planet sweeps out in a triangle along its orbit path will always be equal to each other.
 
 ##### Kepler's Law of Orbits
 
 > $$ T^2 = \frac{4\pi^2a^3}{GM} $$ 
 
+This eqation relates the period is takes for a planet to orbit with the semi-major axis, $$ a $$ (or $$ r $$ if orbit is circular), and the mass of the object, $$ M $$ that a planet or body is orbiting.
+
 ##### Total Energy of a Body in Orbit
 
 > $$ E_T = -\frac{GMm}{2R} $$ 
 
+The total energy for a body in orbit ($$ KE + U $$) is equal to the above equation.
 
 ## Oscillation and Periodic Motion
 
