@@ -15,12 +15,12 @@
   </title>
 
   <!-- CSS -->
-  <link rel="stylesheet" href="/public/css/poole.css">
-  <link rel="stylesheet" href="/public/css/syntax.css">
+  <link rel="stylesheet" href="public/css/poole.css">
+  <link rel="stylesheet" href="public/css/syntax.css">
 
   <!-- Icons -->
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-precomposed.png">
-  <link rel="shortcut icon" href="/public/favicon.ico">
+  <link rel="shortcut icon" href="public/favicon.ico">
 
   <!-- RSS -->
   <link rel="alternate" type="application/atom+xml" title="zacblanco.github.io" href="/atom.xml">
@@ -32,7 +32,7 @@
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  })(window,document,'script','http://www.google-analytics.com/analytics.js','ga');
 
   ga('create', 'UA-58703489-1', 'auto');
   ga('send', 'pageview');
@@ -70,83 +70,503 @@
   
   <article class="post">
     <h1 class="post-title">
-      <a href="/hosting-with-github-pages.html">
-        Hosting your Jekyll site with GitHub Pages
+      <a href="/2015-05-10-physics-review.html">
+        A (Somewhat) Comprehensive Guide to Physics IB at Rutgers University
       </a>
     </h1>
 
-    <time datetime="2015-03-18T00:00:00-04:00" class="post-date">18 Mar 2015</time>
+    <time datetime="2015-05-10T02:28:42-04:00" class="post-date">10 May 2015</time>
 
-    <p>As a continuation to the series of the last few posts I will be explaining how to host your jekyll site for <strong>free</strong> using <a href="https://github.com">GitHub</a>. GitHub provides completely free website hosting using your own GitHub account. For more information I suggest reading up on <a href="https://pages.github.com/">GitHub Pages</a>.</p>
-
-<p>First off, you’re going to need to <a href="https://github.com/join">create an account on GitHub</a> if you haven’t already. GitHub is a fantastic site that can host private and public git repositories for your personal projects.</p>
-
-<p>Here’s a list of a few advantages to using GitHub Pages:</p>
+    <p>The topics covered in this course are:</p>
 
 <ul>
-  <li>Completely Free</li>
-  <li>A site for every project</li>
-  <li>Use your own domain name</li>
-  <li>Completely integrated with Git</li>
+  <li>Rotational Dynamics</li>
+  <li>Gravitation</li>
+  <li>Oscillation and Periodic Motion</li>
+  <li>Mechanical Waves</li>
+  <li>Sound</li>
+  <li>Fluid Mechanics</li>
+  <li>Temperature and Heat</li>
+  <li>Thermal Properties of Matter</li>
+  <li>The First Law of Thermodynamics</li>
+  <li>The Second Law Of Thermodynamics</li>
 </ul>
 
-<p>And of course some disadvantages:</p>
+<p>The format of this post will be the following: For each equation I will explain each variables used in the equation, the typical units used, any constant values (if they haven’t been defined already). If there are concepts that don’t reside within equations, they will be explained nearest to the equations I feel are most related to that concept.</p>
 
-<ul>
-  <li>No server side scripting</li>
-  <li>No control over how the site is served</li>
-  <li>No secure connections with <code>https</code></li>
-</ul>
+<h2 id="rotational-dynamics">Rotational Dynamics</h2>
 
-<p>Now this really isn’t a complete list, but these are some of the things I thought would stand out to most people.</p>
+<blockquote>
+  <script type="math/tex; mode=display">\tau = Fl</script>
+</blockquote>
 
-<p>Now for the fun part! Let’s get started.</p>
+<blockquote>
+  <script type="math/tex; mode=display">KE = \frac{1}{2}mv_{cm}^2 + \frac{1}{2}I\omega^2</script>
+</blockquote>
 
-<h3 id="create-a-repository-for-your-site">Create a Repository for Your Site</h3>
+<blockquote>
+  <script type="math/tex; mode=display">v_{cm} = R\omega</script>
+</blockquote>
 
-<p>First make sure that you’re logged in to GitHub. Then, head over to your GitHub profile located at <code>https://github.com/username</code>.</p>
+<blockquote>
+  <script type="math/tex; mode=display">W = \tau\Delta\theta</script>
+</blockquote>
 
-<p>At the top of the screen click the <strong><code>+</code></strong> button at the top of the page and create a new repository. You <strong>MUST</strong> name the repository in the following way: <code>username.github.io</code>. Your site will not be created if it is not named correctly.</p>
+<blockquote>
+  <script type="math/tex; mode=display">P = \tau\omega</script>
+</blockquote>
 
-<p>Now that we’ve got your site’s repository set up we can finally add your Jekyll files to that repository.</p>
+<blockquote>
+  <script type="math/tex; mode=display">L = I\omega</script>
+</blockquote>
 
-<p>Now let’s head back to the desktop and open a new terminal window. Using the terminal navigate to the desired folder where you would like your project to be contained.</p>
+<blockquote>
+  <script type="math/tex; mode=display">I_1\omega_1 = I_2\omega_2</script>
+</blockquote>
 
-<p>Then, assuming you’ve got git installed we’re going to use the following command:</p>
+<h2 id="gravitation">Gravitation</h2>
 
-<pre><code>    ~ $ git clone https://github.com/username/username.github.io
-</code></pre>
+<blockquote>
+  <script type="math/tex; mode=display">F = \frac{GMm}{r^2}</script>
+</blockquote>
 
-<p>Now check using <code>ls</code> or by opening up a new finder window, navigate to the same folder you just had by using the terminal and you should find a new folder by the name of <code>username.github.io</code>. Open up this folder. This is the place where we will copy your Jekyll files to be pushed to GitHub’s servers.</p>
+<blockquote>
+  <script type="math/tex; mode=display">U = \frac{GMm}{r}</script>
+</blockquote>
 
-<p>Now assuming you’ve already built a Jekyll site, copy the files from your site into this folder. Go back to your terminal window and <code>cd</code> into <code>username.github.io</code> folder. Then type the following commands</p>
+<blockquote>
+  <script type="math/tex; mode=display">g = \frac{GM_E}{R_E^2}</script>
+</blockquote>
 
-<pre><code>    ~ $ git add --all
-    ~ $ git commit -m "Init Commit"
-    ~ $ git push -u origin master
-</code></pre>
+<blockquote>
+  <script type="math/tex; mode=display">v_{orbit} = \sqrt{\frac{GM_E}{R}}</script>
+</blockquote>
 
-<p>Once you’ve done that, congratulations! You’ve made your first GitHub pages site! Open up a web browser and head over to <code>http://username.github.io</code>.</p>
+<blockquote>
+  <script type="math/tex; mode=display">T = \frac{2\pi r}{v} = \frac{2\pi r^{\frac{3}{2}}}{\sqrt{GM_E}}</script>
+</blockquote>
 
-<p>The site should be live within a few minutes. New changes after this should be live within seconds of pushing to the server.</p>
+<blockquote>
+  <script type="math/tex; mode=display">\frac{dA}{dt} = rv\cdot sin\phi</script>
+</blockquote>
 
-<h4 id="an-alternative-method">An Alternative Method</h4>
+<blockquote>
+  <script type="math/tex; mode=display">T^2 = \frac{4\pi^2a^3}{GM}</script>
+</blockquote>
 
-<p>If you do not have git installed on your computer, or you are unfamiliar with the command line, <em>and</em> you’re running Microsoft Windows or Mac OS X, there’s another method you can use to get your site running.</p>
+<blockquote>
+  <script type="math/tex; mode=display">E_T = -\frac{GMm}{2R}</script>
+</blockquote>
 
-<p>Download <a href="https://windows.github.com/">GitHub for Windows</a> if you’re running Windows, or <a href="https://mac.github.com/">GitHub for Mac</a> if you’re running OS X. Once you install GitHub’s software, login to the git client. You should see a list of your repositories within the software. Clone the repository that we just created on GitHub. There should be a menu to do this.</p>
+<h2 id="oscillation-and-periodic-motion">Oscillation and Periodic Motion</h2>
 
-<p>If you open a file browser, look for a folder in the location <code>~/username/documents/GitHub/username.github.io</code>. This is the location where your repository is located. You can copy your files from the Jekyll site into that folder. Once you’ve done that, head over to the GitHub software and name your commit, add a message if you’d like. Then <code>commit</code> and <code>sync</code>.</p>
+<blockquote>
+  <script type="math/tex; mode=display">f = \frac{1}{T}</script>
+</blockquote>
 
-<p>Once you’ve synced your repository, you can open a web browser and navigate to <code>http://username.github.io</code> where your site should be live in a matter of seconds.</p>
+<blockquote>
+  <script type="math/tex; mode=display">T = \frac{1}{f}</script>
+</blockquote>
 
-<p>If your site is not appearing, then you may have named your repository wrong, or you might have to wait a few minutes for the servers to create your site. Wait at least 10 minutes to see if your site is up.</p>
+<blockquote>
+  <script type="math/tex; mode=display">\omega = 2\pi f</script>
+</blockquote>
 
-<p>If you’re having trouble refer to the github pages documentation</p>
+<blockquote>
+  <script type="math/tex; mode=display">F = -kx</script>
+</blockquote>
 
-<p>Another great thing about GitHub pages is that on top of having a site for yourself, you are allowed a site for each project you have located at <code>http://username.github.io/project-name</code>. This is a great way to host many pages and to allow people to access and learn more about your open source project.</p>
+<blockquote>
+  <script type="math/tex; mode=display">\omega = \sqrt{\frac{k}{m}}</script>
+</blockquote>
 
-<p>Hopefully this brief guide was enough for you to get your site set up on GitHub Pages. Good luck!</p>
+<blockquote>
+  <script type="math/tex; mode=display">T = 2\pi\sqrt{\frac{m}{k}}</script>
+</blockquote>
+
+<blockquote>
+  <script type="math/tex; mode=display">E_T = \frac{1}{2}mv^2 + \frac{1}{2}kx^2 = \frac{1}{2}kA^2</script>
+</blockquote>
+
+<blockquote>
+  <script type="math/tex; mode=display">v_{max} = \omega A</script>
+</blockquote>
+
+<blockquote>
+  <script type="math/tex; mode=display">a_{max} = \omega^2A</script>
+</blockquote>
+
+<blockquote>
+  <script type="math/tex; mode=display">x = A\cdot cos(\omega t + \phi)</script>
+</blockquote>
+
+<blockquote>
+  <script type="math/tex; mode=display">v = -\omega A\cdot sin(\omega t + \phi)</script>
+</blockquote>
+
+<blockquote>
+  <script type="math/tex; mode=display">a = -\omega^2A\cdot cos(\omega t + \phi)</script>
+</blockquote>
+
+<blockquote>
+  <script type="math/tex; mode=display">\omega = \sqrt{\frac{g}{L}}</script>
+</blockquote>
+
+<blockquote>
+  <script type="math/tex; mode=display">T = 2\pi\sqrt{\frac{L}{g}}</script>
+</blockquote>
+
+<blockquote>
+  <script type="math/tex; mode=display">\omega = \sqrt{\frac{mgd}{I}}</script>
+</blockquote>
+
+<blockquote>
+  <script type="math/tex; mode=display">T = 2\pi\sqrt{\frac{I}{mgd}}</script>
+</blockquote>
+
+<h2 id="mechanical-waves">Mechanical Waves</h2>
+
+<blockquote>
+  <script type="math/tex; mode=display">v = \lambda f</script>
+</blockquote>
+
+<blockquote>
+  <script type="math/tex; mode=display">v =  \sqrt{\frac{F}{\mu}}</script>
+</blockquote>
+
+<blockquote>
+  <script type="math/tex; mode=display">k = \frac{2\pi}{\lambda}</script>
+</blockquote>
+
+<blockquote>
+  <script type="math/tex; mode=display">y(x, t) = A\cdot cos(kx - \omega t)</script>
+</blockquote>
+
+<blockquote>
+  <script type="math/tex; mode=display">y(x, t) = 2A\cdot sin(kx)sin(\omega t)</script>
+</blockquote>
+
+<blockquote>
+  <script type="math/tex; mode=display">P_{ave} = \frac{1}{2}\sqrt{F\mu}\omega^2A^2</script>
+</blockquote>
+
+<blockquote>
+  <script type="math/tex; mode=display">f_n = \frac{nv}{2L}</script>
+</blockquote>
+
+<h2 id="sound">Sound</h2>
+
+<blockquote>
+  <script type="math/tex; mode=display">P_{max} = BkA</script>
+</blockquote>
+
+<blockquote>
+  <script type="math/tex; mode=display">v = \sqrt{B}{\rho}</script>
+</blockquote>
+
+<blockquote>
+  <script type="math/tex; mode=display">\beta = 10dB\cdot log(\frac{I}{I_0})</script>
+</blockquote>
+
+<blockquote>
+  <script type="math/tex; mode=display">I \propto \frac{1}{r^2} \propto A^2</script>
+</blockquote>
+
+<blockquote>
+  <script type="math/tex; mode=display">f_n = \frac{nv}{2L}</script>
+</blockquote>
+
+<blockquote>
+  <script type="math/tex; mode=display">f_n = \frac{nv}{4L}</script>
+</blockquote>
+
+<blockquote>
+  <script type="math/tex; mode=display">f_{beat} = f_b - f_a</script>
+</blockquote>
+
+<blockquote>
+  <script type="math/tex; mode=display">f_L = f_S(\frac{v + v_L}{v + v_S})</script>
+</blockquote>
+
+<h2 id="fluid-mechanics">Fluid Mechanics</h2>
+
+<blockquote>
+  <script type="math/tex; mode=display">\rho = \frac{m}{V}</script>
+</blockquote>
+
+<blockquote>
+  <script type="math/tex; mode=display">P = P_0 + \rho gh + \frac{1}{2}\rho v^2</script>
+</blockquote>
+
+<blockquote>
+  <script type="math/tex; mode=display">P = \frac{F}{A}</script>
+</blockquote>
+
+<blockquote>
+  <script type="math/tex; mode=display">\frac{V}{t} = Av</script>
+</blockquote>
+
+<blockquote>
+  <script type="math/tex; mode=display">A_1F_2 = A_2F_1</script>
+</blockquote>
+
+<blockquote>
+  <script type="math/tex; mode=display">P_2 - P_1 = -\rho g(y_2 - y_1)</script>
+</blockquote>
+
+<blockquote>
+  <script type="math/tex; mode=display">p_1 + \rho gh_1 + \frac{1}{2}\rho v^2_1 = p_1 + \rho gh_2 + \frac{1}{2}\rho v^2_2</script>
+</blockquote>
+
+<blockquote>
+  <script type="math/tex; mode=display">F_B = \rho V</script>
+</blockquote>
+
+<h2 id="temperature-and-heat">Temperature and Heat</h2>
+
+<blockquote>
+  <script type="math/tex; mode=display">T_F = \frac{9}{5}T_C + 32</script>
+</blockquote>
+
+<blockquote>
+  <script type="math/tex; mode=display">T_C = \frac{5}{9}(T_F - 32)</script>
+</blockquote>
+
+<blockquote>
+  <script type="math/tex; mode=display">T_K = T_C = 273</script>
+</blockquote>
+
+<blockquote>
+  <script type="math/tex; mode=display">PV = nRT</script>
+</blockquote>
+
+<blockquote>
+  <script type="math/tex; mode=display">R = 8.314 \frac{J}{mole\cdot K}</script>
+</blockquote>
+
+<blockquote>
+  <script type="math/tex; mode=display">R = \frac{PV}{nT}</script>
+</blockquote>
+
+<blockquote>
+  <script type="math/tex; mode=display">\frac{T_2}{T_1} = \frac{P_2}{P_1}</script>
+</blockquote>
+
+<blockquote>
+  <script type="math/tex; mode=display">\Delta L = \alpha L_0\Delta T</script>
+</blockquote>
+
+<blockquote>
+  <script type="math/tex; mode=display">\frac{\Delta L}{L_0} = \alpha\Delta T</script>
+</blockquote>
+
+<blockquote>
+  <script type="math/tex; mode=display">1 cal = 4.186 Joules</script>
+</blockquote>
+
+<blockquote>
+  <script type="math/tex; mode=display">Q = mc\Delta T</script>
+</blockquote>
+
+<blockquote>
+  <script type="math/tex; mode=display">m = nM</script>
+</blockquote>
+
+<blockquote>
+  <script type="math/tex; mode=display">Q = nMc\Delta T = nC\Delta T</script>
+</blockquote>
+
+<blockquote>
+  <script type="math/tex; mode=display">B = 3\alpha</script>
+</blockquote>
+
+<blockquote>
+  <script type="math/tex; mode=display">\Delta V = BV_0\Delta T</script>
+</blockquote>
+
+<blockquote>
+  <script type="math/tex; mode=display">Q = \pm mL</script>
+</blockquote>
+
+<blockquote>
+  <script type="math/tex; mode=display">H = \frac{dQ}{dt} = kA\frac{T_H - T_C}{L}</script>
+</blockquote>
+
+<blockquote>
+  <script type="math/tex; mode=display">H = Ae\sigma T^4</script>
+</blockquote>
+
+<blockquote>
+  <script type="math/tex; mode=display">\sigma = 5.6704 \cdot 10^{-8} \frac{W}{m^2\cdot K^4}</script>
+</blockquote>
+
+<blockquote>
+  <script type="math/tex; mode=display">H = Ae\sigma(T^4 - T_S^4)</script>
+</blockquote>
+
+<h2 id="thermal-properties-of-matter">Thermal Properties of Matter</h2>
+
+<blockquote>
+  <script type="math/tex; mode=display">PV = nRT</script>
+</blockquote>
+
+<blockquote>
+  <script type="math/tex; mode=display">PV = \frac{3}{2}K_{TR}</script>
+</blockquote>
+
+<blockquote>
+  <script type="math/tex; mode=display">K_{TR} = \frac{3}{2}nRT</script>
+</blockquote>
+
+<blockquote>
+  <script type="math/tex; mode=display">M = N_Am</script>
+</blockquote>
+
+<blockquote>
+  <script type="math/tex; mode=display">\frac{1}{2}m(v^2)_ave = \frac{3}{2}RT</script>
+</blockquote>
+
+<blockquote>
+  <script type="math/tex; mode=display">k = \frac{R}{N_A} = 1.381\cdot 10^{-23}</script>
+</blockquote>
+
+<blockquote>
+  <script type="math/tex; mode=display">\frac{1}{2}m(v^2)_ave = \frac{3}{2}kT</script>
+</blockquote>
+
+<blockquote>
+  <script type="math/tex; mode=display">v_{rms} = \sqrt{v_rms^2} = \sqrt{\frac{3kT}{m}} = \sqrt{\frac{3RT}{M}}</script>
+</blockquote>
+
+<h5 id="monatomic-gas">Monatomic Gas</h5>
+
+<blockquote>
+  <script type="math/tex; mode=display">C_V = \frac{3}{2}R</script>
+</blockquote>
+
+<h5 id="diatomic-gas">Diatomic Gas</h5>
+
+<blockquote>
+  <script type="math/tex; mode=display">C_V = \frac{5}{2}R</script>
+</blockquote>
+
+<h5 id="monatomic-solid">Monatomic Solid</h5>
+
+<blockquote>
+  <script type="math/tex; mode=display">C_V = 3R</script>
+</blockquote>
+
+<blockquote>
+  <script type="math/tex; mode=display">E_T = 3nRT</script>
+</blockquote>
+
+<h2 id="the-first-law-of-thermodynamics">The First Law of Thermodynamics</h2>
+
+<blockquote>
+  <script type="math/tex; mode=display">W = \int_{V_1}^{V_2}pdV</script>
+</blockquote>
+
+<blockquote>
+  <script type="math/tex; mode=display">W = p(V_2 - V_1)</script>
+</blockquote>
+
+<blockquote>
+  <script type="math/tex; mode=display">W = nRT\cdot ln(\frac{V_2}{V_1}) = nRT\cdot ln(\frac{p_1}{P_2})</script>
+</blockquote>
+
+<blockquote>
+  <script type="math/tex; mode=display">U_2 - U_1 = \Delta U = Q - W</script>
+</blockquote>
+
+<blockquote>
+  <script type="math/tex; mode=display">\Delta U = Q - p\Delta V</script>
+</blockquote>
+
+<blockquote>
+  <script type="math/tex; mode=display">\Delta U = nC_V\Delta T</script>
+</blockquote>
+
+<h6 id="adiabatic">Adiabatic</h6>
+
+<blockquote>
+  <script type="math/tex; mode=display">\Delta U = -W</script>
+</blockquote>
+
+<h5 id="isochoric">Isochoric</h5>
+
+<blockquote>
+  <script type="math/tex; mode=display">\Delta U = Q</script>
+</blockquote>
+
+<h5 id="isobaric">Isobaric</h5>
+
+<blockquote>
+  <script type="math/tex; mode=display">W = p\Delta V</script>
+</blockquote>
+
+<h5 id="isothermal">Isothermal</h5>
+
+<blockquote>
+  <script type="math/tex; mode=display">\Delta U = 0 \therefore Q = W</script>
+</blockquote>
+
+<blockquote>
+  <script type="math/tex; mode=display">C_p = C_V + R</script>
+</blockquote>
+
+<blockquote>
+  <script type="math/tex; mode=display">\gamma = \frac{C_p}{C_V}</script>
+</blockquote>
+
+<blockquote>
+  <script type="math/tex; mode=display">W = nC_V(T_1 - T_2)</script>
+</blockquote>
+
+<blockquote>
+  <script type="math/tex; mode=display">W = \frac{C_V}{R}(p_1V_1 - p_2V_2)</script>
+</blockquote>
+
+<h2 id="the-second-law-of-thermodynamics">The Second Law Of Thermodynamics</h2>
+
+<blockquote>
+  <script type="math/tex; mode=display">Q = |Q_H| - |Q_C|</script>
+</blockquote>
+
+<blockquote>
+  <script type="math/tex; mode=display">e = \frac{W}{Q_H} = 1 + \frac{Q_C}{Q_H} = 1 - \left|\frac{Q_C}{Q_H}\right|</script>
+</blockquote>
+
+<blockquote>
+  <script type="math/tex; mode=display">e = 1- \frac{1}{r^{\gamma - 1}}</script>
+</blockquote>
+
+<blockquote>
+  <script type="math/tex; mode=display">|Q_H| = Q_C + W</script>
+</blockquote>
+
+<blockquote>
+  <script type="math/tex; mode=display">K = \left|\frac{Q_C}{W}\right| = \left|\frac{Q_C}{Q_H - Q_C}\right|</script>
+</blockquote>
+
+<blockquote>
+  <script type="math/tex; mode=display">K = \frac{H}{P}</script>
+</blockquote>
+
+<blockquote>
+  <script type="math/tex; mode=display">e_{Carnot} = 1 - \frac{T_C}{T_H} = \frac{T_H - T_C}{T_H}</script>
+</blockquote>
+
+<blockquote>
+  <script type="math/tex; mode=display">K_{Carnot} = \frac{T_C}{T_H - T_C}</script>
+</blockquote>
+
+<blockquote>
+  <script type="math/tex; mode=display">dS = \frac{dQ}{T} = \Delta S = \frac{Q}{T}</script>
+</blockquote>
+
+<blockquote>
+  <script type="math/tex; mode=display">\Delta S = \int_1^2\frac{dQ}{T}</script>
+</blockquote>
 
 
   </article>
@@ -166,7 +586,7 @@
 
       <footer class="footer">
         <small>
-          &copy; <time datetime="2015-03-23T11:02:31-04:00">2015</time>. All rights reserved.
+          &copy; <time datetime="2015-05-10T02:28:43-04:00">2015</time>. All rights reserved.
         </small>
       </footer>
     </div>
