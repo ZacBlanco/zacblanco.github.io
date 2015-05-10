@@ -23,72 +23,143 @@ The format of this post will be the following: For each equation I will explain 
 
 ## Rotational Dynamics
 
+##### Toque
+
 > $$ \tau = Fl $$
+
+##### Kinetic Energy of Rolling Body
 
 > $$ KE = \frac{1}{2}mv_{cm}^2 + \frac{1}{2}I\omega^2 $$ 
 
+##### Rotational to Translational Velocity
+
 > $$ v_{cm} = R\omega $$
+
+##### Rotational Work
 
 > $$ W = \tau\Delta\theta $$ 
 
+##### Power of Rotation
+
 > $$ P = \tau\omega $$ 
 
+##### Angular Momentum
+
 > $$ L = I\omega $$ 
+
+##### Conservation of Angular Momentum
 
 > $$ I_1\omega_1 = I_2\omega_2 $$ 
 
 
 ## Gravitation
 
+##### Gravitational Constant
+
+> $$ G = 6.67 \cdot 10^{-11} $$
+
+##### Graviational Force of Two Bodies
+
 > $$ F = \frac{GMm}{r^2} $$ 
+
+##### Potential Energy of Gravitation
 
 > $$ U = \frac{GMm}{r} $$ 
 
+##### Finding $$ g $$ on Earth and Other Planets
+
 > $$ g = \frac{GM_E}{R_E^2} $$ 
+
+##### Circular Orbit Velocity
 
 > $$ v_{orbit} = \sqrt{\frac{GM_E}{R}} $$ 
 
+##### Period of Orbit
+
 > $$ T = \frac{2\pi r}{v} = \frac{2\pi r^{\frac{3}{2}}}{\sqrt{GM_E}} $$ 
+
+##### Kepler's Law of Equal Areas
 
 > $$ \frac{dA}{dt} = rv\cdot sin\phi $$ 
 
+##### Kepler's Law of Orbits
+
 > $$ T^2 = \frac{4\pi^2a^3}{GM} $$ 
+
+##### Total Energy of a Body in Orbit
 
 > $$ E_T = -\frac{GMm}{2R} $$ 
 
 
 ## Oscillation and Periodic Motion
 
+##### Frequency
 
 > $$ f = \frac{1}{T} $$
 
+##### Period
+
 > $$ T = \frac{1}{f} $$
+
+##### Angular Frequency
 
 > $$ \omega = 2\pi f $$
 
+##### Hooke's Law
+
 > $$ F = -kx $$
+
+##### Angular Frequency (Spring Constant)
 
 > $$ \omega = \sqrt{\frac{k}{m}} $$
 
+##### Period of an Oscillating Object on a Spring
+
 > $$ T = 2\pi\sqrt{\frac{m}{k}} $$
+
+##### Total Energy in SHM
 
 > $$ E_T = \frac{1}{2}mv^2 + \frac{1}{2}kx^2 = \frac{1}{2}kA^2 $$
 
+##### Maximum Velocity in SHM
+
 > $$ v_{max} = \omega A $$
+
+##### Maximum Acceleration in SHM
 
 > $$ a_{max} = \omega^2A $$
 
+##### Displacement of SHM
+
 > $$ x = A\cdot cos(\omega t + \phi) $$
+
+##### Velocity of SHM
 
 > $$ v = -\omega A\cdot sin(\omega t + \phi)  $$
 
+##### Acceleration of SHM 
+
 > $$ a = -\omega^2A\cdot cos(\omega t + \phi) $$
+
+### Pendulums
+
+#### Simple Pendulums
+
+##### Angular Frequency (Simple Pendulum)
 
 > $$ \omega = \sqrt{\frac{g}{L}} $$
 
+##### Period (Simple Pendulum)
+
 > $$ T = 2\pi\sqrt{\frac{L}{g}} $$
 
+#### Real Pendulums
+
+##### Angular Frequency (Real Pendulum)
+
 > $$ \omega = \sqrt{\frac{mgd}{I}} $$
+
+##### Period (Real Pendulum)
 
 > $$ T = 2\pi\sqrt{\frac{I}{mgd}} $$
 
@@ -96,53 +167,100 @@ The format of this post will be the following: For each equation I will explain 
 
 ## Mechanical Waves
 
+##### Velocity of a Wave
+
 > $$ v = \lambda f $$
+
+##### Velocity of Waves on a String
 
 > $$ v =  \sqrt{\frac{F}{\mu}} $$
 
+##### Wave Number
+
 > $$ k = \frac{2\pi}{\lambda} $$
+
+##### Displacement of a Mechanical Wave
 
 > $$ y(x, t) = A\cdot cos(kx - \omega t) $$
 
+##### Displacement of a Standing Wave on a String
+
 > $$ y(x, t) = 2A\cdot sin(kx)sin(\omega t) $$
+
+##### Average Power of a Wave
 
 > $$ P_{ave} = \frac{1}{2}\sqrt{F\mu}\omega^2A^2 $$
 
-> $$ f_n = \frac{nv}{2L} $$
+##### Fundamental Frequencies of a Wave on a String
 
+> $$ f_n = \frac{nv}{2L} $$
 
 ## Sound
 
+##### Maximum Pressure of a Sound Wave
+
 > $$ P_{max} = BkA $$
 
-> $$ v = \sqrt{B}{\rho} $$
+##### Velocity of a Sound Wave
+
+> $$ v = \sqrt{\frac{B}{\rho}} $$
+
+##### Threshold of Hearing Intensity
+
+> $$ I_0 = 10^{-12} \frac{W}{m^2}$$
+
+##### Intensity in Decibels
 
 > $$ \beta = 10dB\cdot log(\frac{I}{I_0}) $$
 
+##### Relations of Sound Intensity
+
 > $$ I \propto \frac{1}{r^2} \propto A^2 $$
+
+##### Fundamental Frequencies (Open Pipe)
 
 > $$ f_n = \frac{nv}{2L} $$
 
+##### Fundamental Frequencies (Stopped Pipe)
+
 > $$ f_n = \frac{nv}{4L} $$
 
+##### Beat Frequency
+
 > $$ f_{beat} = f_b - f_a $$
+
+##### The Doppler Effect
 
 > $$ f_L = f_S(\frac{v + v_L}{v + v_S}) $$
 
 
 ## Fluid Mechanics
 
+##### Definition of Density
+
 > $$ \rho = \frac{m}{V} $$
+
+##### Pressure (on Bernoulli's Equation)
 
 > $$ P = P_0 + \rho gh + \frac{1}{2}\rho v^2 $$
 
+##### Definition of Pressure
+
 > $$ P = \frac{F}{A} $$
+
+##### Definition of Flow Rate
 
 > $$ \frac{V}{t} = Av $$
 
+##### Equal Pressures and Forces
+
 > $$ A_1F_2 = A_2F_1 $$
 
+##### Difference in Pressure due to Height
+
 > $$ P_2 - P_1 = -\rho g(y_2 - y_1) $$
+
+##### Bernoulli's Equation
 
 > $$ p_1 + \rho gh_1 + \frac{1}{2}\rho v^2_1 = p_1 + \rho gh_2 + \frac{1}{2}\rho v^2_2 $$
 
@@ -289,7 +407,7 @@ The mass of one molecule of a gas can be found by dividing the Molar Mass, $$ M 
 
 ###### Average Kinetic Energy of a Gas
 
-> $$ \frac{1}{2}M(v^2)_ave = \frac{3}{2}RT $$
+> $$ \frac{1}{2}M(v^2)_{ave} = \frac{3}{2}RT $$
 
 We can relat the average kinetic energy of molecule of a gas by the values of R and T and its Molar Mass
 
@@ -301,7 +419,7 @@ The Boltzmann constant, $$ k $$, is simply equal to the gas constant, $$ R $$ di
 
 ##### Average Kinetic Energy of a Molecule (Mass)
 
-> $$ \frac{1}{2}m(v^2)_ave = \frac{3}{2}kT $$
+> $$ \frac{1}{2}m(v^2)_{ave} = \frac{3}{2}kT $$
 
 If we know the mass of the gas, then the average kinetic energy of a molecule is simply the above equation.
 
@@ -350,7 +468,7 @@ At constant pressure, the work done is simply the pressure (in pascals), multipl
 
 > $$ W = nRT\cdot ln(\frac{V_2}{V_1}) = nRT\cdot ln(\frac{p_1}{P_2}) $$
 
-To derive this, from the ideal gas law, $$ P = \frac{NRT}{V} $$. If we replace P with this value in our integral, we find that $$ W = nRT \int_{V_1}^{V_2} \frac{dV}{V} $$. This is how we find the equation. All units are in SI.
+To derive this, from the ideal gas law, $$ P = \frac{NRT}{V} $$. If we replace P with this value in our integral, we find that $$ W = nRT \int_{V_1}^{V_2} \frac{dV}{V} $$. This is how we find the equation. All units are in SI. Also, because $$\frac{V_2}{V_1} = \frac{p_1}{p_2} $$, we get the second form of this equation.
 
 #### _The First Law of Thermodynamics_
 
