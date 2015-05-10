@@ -6,13 +6,15 @@
 </description>
     <link>http://zacblanco.github.io//</link>
     <atom:link href="http://zacblanco.github.io//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 10 May 2015 15:48:28 -0400</pubDate>
-    <lastBuildDate>Sun, 10 May 2015 15:48:28 -0400</lastBuildDate>
+    <pubDate>Sun, 10 May 2015 15:59:58 -0400</pubDate>
+    <lastBuildDate>Sun, 10 May 2015 15:59:58 -0400</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
         <title>A (Somewhat) Comprehensive Guide to Physics IB at Rutgers University</title>
-        <description>&lt;p&gt;The topics covered in this course are:&lt;/p&gt;
+        <description>&lt;p&gt;POST UPDATE: I’ve finished all the explanations for everything after exam 2, except for fluids. Everything from chapter 17-20 is finished. I still need to do 11-16.&lt;/p&gt;
+
+&lt;p&gt;The topics covered in this course are:&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Rotational Dynamics&lt;/li&gt;
@@ -37,11 +39,15 @@
   &lt;script type=&quot;math/tex; mode=display&quot;&gt;\tau = Fl&lt;/script&gt;
 &lt;/blockquote&gt;
 
+&lt;p&gt;Torque &lt;script type=&quot;math/tex&quot;&gt;\tau&lt;/script&gt; is equal to the perpendicular force along the moment arm applied a distance, &lt;script type=&quot;math/tex&quot;&gt;l&lt;/script&gt;  from a rotational axis.&lt;/p&gt;
+
 &lt;h5 id=&quot;kinetic-energy-of-rolling-body&quot;&gt;Kinetic Energy of Rolling Body&lt;/h5&gt;
 
 &lt;blockquote&gt;
   &lt;script type=&quot;math/tex; mode=display&quot;&gt;KE = \frac{1}{2}mv_{cm}^2 + \frac{1}{2}I\omega^2&lt;/script&gt;
 &lt;/blockquote&gt;
+
+&lt;p&gt;The total kinetic energy of a body in rolling motion is equal to the sum of the translational kinetic energy and the rotational kinetic energy.&lt;/p&gt;
 
 &lt;h5 id=&quot;rotational-to-translational-velocity&quot;&gt;Rotational to Translational Velocity&lt;/h5&gt;
 
@@ -49,11 +55,15 @@
   &lt;script type=&quot;math/tex; mode=display&quot;&gt;v_{cm} = R\omega&lt;/script&gt;
 &lt;/blockquote&gt;
 
+&lt;p&gt;To convert from angular velocity to translational velocity, simply multiply the radius of the object &lt;script type=&quot;math/tex&quot;&gt;R&lt;/script&gt; by the angular velocity.&lt;/p&gt;
+
 &lt;h5 id=&quot;rotational-work&quot;&gt;Rotational Work&lt;/h5&gt;
 
 &lt;blockquote&gt;
   &lt;script type=&quot;math/tex; mode=display&quot;&gt;W = \tau\Delta\theta&lt;/script&gt;
 &lt;/blockquote&gt;
+
+&lt;p&gt;The angular version of &lt;script type=&quot;math/tex&quot;&gt;W = Fd&lt;/script&gt;. A toque multiple by the distance rotated in radians.&lt;/p&gt;
 
 &lt;h5 id=&quot;power-of-rotation&quot;&gt;Power of Rotation&lt;/h5&gt;
 
@@ -61,17 +71,23 @@
   &lt;script type=&quot;math/tex; mode=display&quot;&gt;P = \tau\omega&lt;/script&gt;
 &lt;/blockquote&gt;
 
+&lt;p&gt;The power applied is the angular version of &lt;script type=&quot;math/tex&quot;&gt;P = Fv&lt;/script&gt;. Toque, &lt;script type=&quot;math/tex&quot;&gt;\tau&lt;/script&gt; multiplied by the angular velocity, &lt;script type=&quot;math/tex&quot;&gt;\omega&lt;/script&gt;.&lt;/p&gt;
+
 &lt;h5 id=&quot;angular-momentum&quot;&gt;Angular Momentum&lt;/h5&gt;
 
 &lt;blockquote&gt;
-  &lt;script type=&quot;math/tex; mode=display&quot;&gt;L = I\omega&lt;/script&gt;
+  &lt;script type=&quot;math/tex; mode=display&quot;&gt;L = I\omega = rmv\cdot sin(\phi)&lt;/script&gt;
 &lt;/blockquote&gt;
+
+&lt;p&gt;Angular momentum is the angular version of normal momentum. It is equal to the moment of inertia multiplied by its angular velocity. This can also be translated to the normal momentum, &lt;script type=&quot;math/tex&quot;&gt;p = mv&lt;/script&gt;, multiplied by the velocity at angle &lt;script type=&quot;math/tex&quot;&gt;\phi&lt;/script&gt; from the perpendicular of the ‘moment arm’ to the object,&lt;/p&gt;
 
 &lt;h5 id=&quot;conservation-of-angular-momentum&quot;&gt;Conservation of Angular Momentum&lt;/h5&gt;
 
 &lt;blockquote&gt;
   &lt;script type=&quot;math/tex; mode=display&quot;&gt;I_1\omega_1 = I_2\omega_2&lt;/script&gt;
 &lt;/blockquote&gt;
+
+&lt;p&gt;If there is &lt;em&gt;NO&lt;/em&gt; net toque applied to an object, the angular momentum in conserved. That is, th &lt;script type=&quot;math/tex&quot;&gt;L_1&lt;/script&gt; (initial state) should be equal to &lt;script type=&quot;math/tex&quot;&gt;L_2&lt;/script&gt; (final state).&lt;/p&gt;
 
 &lt;h2 id=&quot;gravitation&quot;&gt;Gravitation&lt;/h2&gt;
 

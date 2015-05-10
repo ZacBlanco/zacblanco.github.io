@@ -5,6 +5,9 @@ tags: [physics, rutgers, spring 2015, ]
 Author: Zac Blanco
 ---
 
+POST UPDATE: I've finished all the explanations for everything after exam 2, except for fluids. Everything from chapter 17-20 is finished. I still need to do 11-16.
+
+
 The topics covered in this course are:
 
 - Rotational Dynamics
@@ -27,30 +30,43 @@ The format of this post will be the following: For each equation I will explain 
 
 > $$ \tau = Fl $$
 
+Torque $$ \tau $$ is equal to the perpendicular force along the moment arm applied a distance, $$ l $$  from a rotational axis.
+
 ##### Kinetic Energy of Rolling Body
 
 > $$ KE = \frac{1}{2}mv_{cm}^2 + \frac{1}{2}I\omega^2 $$ 
+
+The total kinetic energy of a body in rolling motion is equal to the sum of the translational kinetic energy and the rotational kinetic energy.
 
 ##### Rotational to Translational Velocity
 
 > $$ v_{cm} = R\omega $$
 
+To convert from angular velocity to translational velocity, simply multiply the radius of the object $$ R $$ by the angular velocity.
+
 ##### Rotational Work
 
 > $$ W = \tau\Delta\theta $$ 
+
+The angular version of $$ W = Fd $$. A toque multiple by the distance rotated in radians.
 
 ##### Power of Rotation
 
 > $$ P = \tau\omega $$ 
 
+The power applied is the angular version of $$ P = Fv $$. Toque, $$ \tau $$ multiplied by the angular velocity, $$ \omega $$.
+
 ##### Angular Momentum
 
-> $$ L = I\omega $$ 
+> $$ L = I\omega = rmv\cdot sin(\phi) $$ 
+
+Angular momentum is the angular version of normal momentum. It is equal to the moment of inertia multiplied by its angular velocity. This can also be translated to the normal momentum, $$ p = mv $$, multiplied by the velocity at angle $$ \phi $$ from the perpendicular of the 'moment arm' to the object,
 
 ##### Conservation of Angular Momentum
 
 > $$ I_1\omega_1 = I_2\omega_2 $$ 
 
+If there is _NO_ net toque applied to an object, the angular momentum in conserved. That is, th $$ L_1 $$ (initial state) should be equal to $$ L_2 $$ (final state).
 
 ## Gravitation
 
