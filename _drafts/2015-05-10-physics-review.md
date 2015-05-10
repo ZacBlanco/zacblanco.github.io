@@ -151,43 +151,111 @@ The format of this post will be the following: For each equation I will explain 
 
 ## Temperature and Heat
 
+##### Temperature in Fahrenheit
+
 > $$ T_F = \frac{9}{5}T_C + 32 $$
+
+This equation is used to convert Temperature in Celsius to Fahrenheit. $$ T_F $$ is the temperature in Fahrenheit and $$ T_C $$ is the temperature in Celsius.
+
+##### Temperature in Celsius
 
 > $$ T_C = \frac{5}{9}(T_F - 32) $$
 
+This equation is used to convert Temperature in Fahrenheit to Celsius and is simply a re-arraned form of the above equation.
+
+##### Temperature in Kelvin
+
 > $$ T_K = T_C = 273 $$
+
+Temperature on the absolute scale is measured in Kelvins. $$ 0K $$ is absolute 0. Other temperature scales can be conerted to Kelvin by the above formula.
+
+##### The Ideal Gas Law
 
 > $$ PV = nRT $$
 
+This is the ideal gas law. In physics we like to use SI units, therefore these quantities are measured in their respective SI units. P is pressure in pascals. V is volume in $$ m^3 $$. n is number of moles of gas. R is equal to $$ 8.314 \frac{J}{mole\cdot K} $$. T is temperature measured in Kelvin.
+
+##### Gas Constant, R
+
 > $$ R = 8.314 \frac{J}{mole\cdot K} $$
+
+Just  restatement of value of the gas constant, R.
 
 > $$ R = \frac{PV}{nT} $$
 
+We can rearrange the ideal gas law into this form. We can set two states of a gas equal to each other because we know the gas constant is equal, then we can solve for any changes in values.
+
 > $$ \frac{T_2}{T_1} = \frac{P_2}{P_1} $$
+
+A thermometer measures temperature by using the change in pressure that occurs when the temperature rises (or falls) in order to make measurements.
+
+##### Linear Thermal Expansion
 
 > $$ \Delta L = \alpha L_0\Delta T $$
 
+A solid rod will change length with a change in temperature. $$ \alpha $$ is a constant different for specific materials that is traditionally measured in $$ (^\circ C)^{-1} $$ or $$K^{-1} $$. $$ L_0 $$ is the inital length of the beam at the initial temperature. $$ \Delta T $$ is the change in temperature measured in Celsius or Kelvin
+
+##### Thermal Stress
+
 > $$ \frac{\Delta L}{L_0} = \alpha\Delta T $$
 
-> $$ 1 cal = 4.186 Joules $$
+Thermal stress can be simply found by divinding $$ L_0 $$ by the above equation to obtain the thermal stress by a change in temperature.
+
+##### calories and Joules
+
+> $$ 1 cal = 4.186 \cdot J$$
+
+1 calorie is the amount of energy is takes to raise the temperature of 1 gram of water by one degree celsius. This energy is equal to 4.186 Joules.
+
+##### Heat Transfer
 
 > $$ Q = mc\Delta T $$
 
+We can find the amount of heat required to change the themperature of the object if we know the specific heat, $$ c $$, and the mass of the object. $$ c $$ is specific to every material. $$ \Delta T $$ is the change in temperature, usually in Kelvin or celsius depending on the units of the specific heat capacity.
+
+##### Total Mass
+
 > $$ m = nM $$
+
+The total mass of a gas, or material, can be found by multiplying the number of moles, $$ n $$, and the Molar Mass, $$ M $$. It is usually measured in $$ \frac{g}{mole} $$.
 
 > $$ Q = nMc\Delta T = nC\Delta T $$
 
+Substituting the above equation into the one for heat transfer we find that there is a Molar heat capacity $$ C $$ which is equal to $$ Mc $$. 
+
+##### Thermal Expansion in 3 Dimensions
+
 > $$ B = 3\alpha $$
+
+To find a coefficient for volumetric expansion, we can simply multiply a material's linear expansion constant by 3 to find the value for volumetric expansion.
+
+##### Volumetric Expansion
 
 > $$ \Delta V = BV_0\Delta T $$
 
+The change in volume of an object due to a change in temperature. $$ B $$ is a constant that we defined above. $$ V_0 $$ is the inital volume of the object. $$ \Delta T $$ is simply the change in temperature, typically in Celsius or Kelvin.
+
+##### Heat Required for Phase Change
+
 > $$ Q = \pm mL $$
+
+We can calculate the heat required for a phase change of a compound by simply multiplying the mass of the compound by the latent heat of fusion, or latent heat of fusion. Latent heat, $$ L $$ is typically measured in $$ \frac{J}{kg} $$.
+
+##### Thermal Conductivity
 
 > $$ H = \frac{dQ}{dt} = kA\frac{T_H - T_C}{L} $$
 
+The rate of heat transfer between a hot and cold resevoir is equal to the change in heat, or energy, over a period of time. This means the value is measured in Watts. We can calculate the power flowing through an object by using its thermal conductivity, $$ k $$, the cross-sectional area that the heat is flowing through, $$ A $$. The Temperatures of each hot and cold resevoir respectively measured in $$ K $$. and the length of the heat conductor, $$ L $$.
+
+##### Heat Radiation
+
 > $$ H = Ae\sigma T^4 $$
 
+Every body emits some kind of electromagnetic radiation. The amount of power that a body emits is equal to its surface area, $$ A $$ multipled by its emmisivity, $$ e $$, the Stefan-Boltzmann constant, $$ \sigma $$, and the temperature of the body in Kelvin.
+
 > $$ \sigma = 5.6704 \cdot 10^{-8} \frac{W}{m^2\cdot K^4} $$
+
+This is the constant value of the Stefan-Boltzmann constant, $$ \sigma $$.
 
 > $$ H = Ae\sigma(T^4 - T_S^4) $$
 
