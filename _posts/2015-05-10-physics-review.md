@@ -291,44 +291,74 @@ A wave cannot exist on a string unless half of a wavelength is equal to a multip
 
 > $$ P_{max} = BkA $$
 
+The maximum pressure of a sound wave depends on Bulk's modulus, $$ B $$, the amplitude of the sound, and, $$ k $$, the wave number.
+
 ##### Velocity of a Sound Wave
 
 > $$ v = \sqrt{\frac{B}{\rho}} $$
+
+The velocity of sound is based on the Bulk modulus of the medium and the density of the medium, $$ \rho $$.
 
 ##### Threshold of Hearing Intensity
 
 > $$ I_0 = 10^{-12} \frac{W}{m^2}$$
 
+The threshold of human hearing for sound intensity is equal to the above value. it is a constant.
+
 ##### Intensity in Decibels
 
 > $$ \beta = 10dB\cdot log(\frac{I}{I_0}) $$
+
+Intensity is normally measured on a log scale that we call _Decibels_. The equation describes the intensity in decibels using the $$ I $$ values.
 
 ##### Relations of Sound Intensity
 
 > $$ I \propto \frac{1}{r^2} \propto A^2 $$
 
+Sound intensity is proportional to the amplitude of the sound wave being produced and the distance from the source at which the listener hears the sound. That is to double the distance from the source of a sound, you would have an intensity decrease of approximately $$ \frac{1}{4} $$ that of the original.
+
 ##### Fundamental Frequencies (Open Pipe)
 
 > $$ f_n = \frac{nv}{2L} $$
+
+There are fundamental frequencies for sound in open pipes (one with openings at each end). Similar to a string. we need only the speed of sound and the length of the pipe to calculate the fundamental frequencies.
 
 ##### Fundamental Frequencies (Stopped Pipe)
 
 > $$ f_n = \frac{nv}{4L} $$
 
+Similar to the above, this equation is for a stopped pipe (one end open, the other closed). We can calculate the fundamental frequncies for any pipe with length L.
+
+See below for visualization.
+
+![Fundamental Frequencies in Pipes](../assets/images/physics-review/sound-fund-freq.gif)
+
 ##### Beat Frequency
 
 > $$ f_{beat} = f_b - f_a $$
+
+Two different sound frequencies create what we call 'beats'. It is addional amplitude variations in the sound we hear. See below image.
+
+![Image of Beat](../assets/images/physics-review/beat-freq.jpeg)
 
 ##### The Doppler Effect
 
 > $$ f_L = f_S(\frac{v + v_L}{v + v_S}) $$
 
+The doppler effect tells us that the frequency a listener hears when they, or a source is moving to or away from the listener changes based on the velocity.
+
+- $$ v_L $$ is positive if the listener moves toward the source.
+- $$ v_L $$ is negative if the listener moves away from the source.
+- $$ v_S $$ is positive if the source moves away from the listener
+- $$ v_S $$ is negative if the source moves toward the listener
 
 ## Fluid Mechanics
 
 ##### Definition of Density
 
 > $$ \rho = \frac{m}{V} $$
+
+Simply defining density as amount of mass per unit of volume
 
 ##### Pressure (on Bernoulli's Equation)
 

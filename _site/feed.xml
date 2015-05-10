@@ -6,8 +6,8 @@
 </description>
     <link>http://zacblanco.github.io//</link>
     <atom:link href="http://zacblanco.github.io//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 10 May 2015 16:51:16 -0400</pubDate>
-    <lastBuildDate>Sun, 10 May 2015 16:51:16 -0400</lastBuildDate>
+    <pubDate>Sun, 10 May 2015 17:06:36 -0400</pubDate>
+    <lastBuildDate>Sun, 10 May 2015 17:06:36 -0400</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -379,11 +379,15 @@
   &lt;script type=&quot;math/tex; mode=display&quot;&gt;P_{max} = BkA&lt;/script&gt;
 &lt;/blockquote&gt;
 
+&lt;p&gt;The maximum pressure of a sound wave depends on Bulk’s modulus, &lt;script type=&quot;math/tex&quot;&gt;B&lt;/script&gt;, the amplitude of the sound, and, &lt;script type=&quot;math/tex&quot;&gt;k&lt;/script&gt;, the wave number.&lt;/p&gt;
+
 &lt;h5 id=&quot;velocity-of-a-sound-wave&quot;&gt;Velocity of a Sound Wave&lt;/h5&gt;
 
 &lt;blockquote&gt;
   &lt;script type=&quot;math/tex; mode=display&quot;&gt;v = \sqrt{\frac{B}{\rho}}&lt;/script&gt;
 &lt;/blockquote&gt;
+
+&lt;p&gt;The velocity of sound is based on the Bulk modulus of the medium and the density of the medium, &lt;script type=&quot;math/tex&quot;&gt;\rho&lt;/script&gt;.&lt;/p&gt;
 
 &lt;h5 id=&quot;threshold-of-hearing-intensity&quot;&gt;Threshold of Hearing Intensity&lt;/h5&gt;
 
@@ -391,11 +395,15 @@
   &lt;script type=&quot;math/tex; mode=display&quot;&gt;I_0 = 10^{-12} \frac{W}{m^2}&lt;/script&gt;
 &lt;/blockquote&gt;
 
+&lt;p&gt;The threshold of human hearing for sound intensity is equal to the above value. it is a constant.&lt;/p&gt;
+
 &lt;h5 id=&quot;intensity-in-decibels&quot;&gt;Intensity in Decibels&lt;/h5&gt;
 
 &lt;blockquote&gt;
   &lt;script type=&quot;math/tex; mode=display&quot;&gt;\beta = 10dB\cdot log(\frac{I}{I_0})&lt;/script&gt;
 &lt;/blockquote&gt;
+
+&lt;p&gt;Intensity is normally measured on a log scale that we call &lt;em&gt;Decibels&lt;/em&gt;. The equation describes the intensity in decibels using the &lt;script type=&quot;math/tex&quot;&gt;I&lt;/script&gt; values.&lt;/p&gt;
 
 &lt;h5 id=&quot;relations-of-sound-intensity&quot;&gt;Relations of Sound Intensity&lt;/h5&gt;
 
@@ -403,11 +411,15 @@
   &lt;script type=&quot;math/tex; mode=display&quot;&gt;I \propto \frac{1}{r^2} \propto A^2&lt;/script&gt;
 &lt;/blockquote&gt;
 
+&lt;p&gt;Sound intensity is proportional to the amplitude of the sound wave being produced and the distance from the source at which the listener hears the sound. That is to double the distance from the source of a sound, you would have an intensity decrease of approximately &lt;script type=&quot;math/tex&quot;&gt;\frac{1}{4}&lt;/script&gt; that of the original.&lt;/p&gt;
+
 &lt;h5 id=&quot;fundamental-frequencies-open-pipe&quot;&gt;Fundamental Frequencies (Open Pipe)&lt;/h5&gt;
 
 &lt;blockquote&gt;
   &lt;script type=&quot;math/tex; mode=display&quot;&gt;f_n = \frac{nv}{2L}&lt;/script&gt;
 &lt;/blockquote&gt;
+
+&lt;p&gt;There are fundamental frequencies for sound in open pipes (one with openings at each end). Similar to a string. we need only the speed of sound and the length of the pipe to calculate the fundamental frequencies.&lt;/p&gt;
 
 &lt;h5 id=&quot;fundamental-frequencies-stopped-pipe&quot;&gt;Fundamental Frequencies (Stopped Pipe)&lt;/h5&gt;
 
@@ -415,17 +427,36 @@
   &lt;script type=&quot;math/tex; mode=display&quot;&gt;f_n = \frac{nv}{4L}&lt;/script&gt;
 &lt;/blockquote&gt;
 
+&lt;p&gt;Similar to the above, this equation is for a stopped pipe (one end open, the other closed). We can calculate the fundamental frequncies for any pipe with length L.&lt;/p&gt;
+
+&lt;p&gt;See below for visualization.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../assets/images/physics-review/sound-fund-freq.gif&quot; alt=&quot;Fundamental Frequencies in Pipes&quot; /&gt;&lt;/p&gt;
+
 &lt;h5 id=&quot;beat-frequency&quot;&gt;Beat Frequency&lt;/h5&gt;
 
 &lt;blockquote&gt;
   &lt;script type=&quot;math/tex; mode=display&quot;&gt;f_{beat} = f_b - f_a&lt;/script&gt;
 &lt;/blockquote&gt;
 
+&lt;p&gt;Two different sound frequencies create what we call ‘beats’. It is addional amplitude variations in the sound we hear. See below image.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../assets/images/physics-review/beat-freq.jpeg&quot; alt=&quot;Image of Beat&quot; /&gt;&lt;/p&gt;
+
 &lt;h5 id=&quot;the-doppler-effect&quot;&gt;The Doppler Effect&lt;/h5&gt;
 
 &lt;blockquote&gt;
   &lt;script type=&quot;math/tex; mode=display&quot;&gt;f_L = f_S(\frac{v + v_L}{v + v_S})&lt;/script&gt;
 &lt;/blockquote&gt;
+
+&lt;p&gt;The doppler effect tells us that the frequency a listener hears when they, or a source is moving to or away from the listener changes based on the velocity.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;script type=&quot;math/tex&quot;&gt;v_L&lt;/script&gt; is positive if the listener moves toward the source.&lt;/li&gt;
+  &lt;li&gt;&lt;script type=&quot;math/tex&quot;&gt;v_L&lt;/script&gt; is negative if the listener moves away from the source.&lt;/li&gt;
+  &lt;li&gt;&lt;script type=&quot;math/tex&quot;&gt;v_S&lt;/script&gt; is positive if the source moves away from the listener&lt;/li&gt;
+  &lt;li&gt;&lt;script type=&quot;math/tex&quot;&gt;v_S&lt;/script&gt; is negative if the source moves toward the listener&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h2 id=&quot;fluid-mechanics&quot;&gt;Fluid Mechanics&lt;/h2&gt;
 
@@ -434,6 +465,8 @@
 &lt;blockquote&gt;
   &lt;script type=&quot;math/tex; mode=display&quot;&gt;\rho = \frac{m}{V}&lt;/script&gt;
 &lt;/blockquote&gt;
+
+&lt;p&gt;Simply defining density as amount of mass per unit of volume&lt;/p&gt;
 
 &lt;h5 id=&quot;pressure-on-bernoullis-equation&quot;&gt;Pressure (on Bernoulli’s Equation)&lt;/h5&gt;
 
