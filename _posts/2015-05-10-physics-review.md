@@ -533,24 +533,43 @@ Again in an adiabatic process we rearrange what we have above we can find that t
 
 ## The Second Law Of Thermodynamics
 
+##### Net Heat Absorbed in an Engine Cycle
 
 > $$ Q = |Q_H| - |Q_C| $$
 
+##### Thermal Efficiency of an Engine
+
 > $$ e = \frac{W}{Q_H} = 1 + \frac{Q_C}{Q_H} = 1 - \left|\frac{Q_C}{Q_H}\right| $$
+
+##### Thermal Efficiency in an Otto Cycle
 
 > $$ e = 1- \frac{1}{r^{\gamma - 1}} $$
 
+##### Work an Heat in Refrigeration
+
 > $$ |Q_H| = Q_C + W $$
+
+##### Efficiency of Refrigeration
 
 > $$ K = \left|\frac{Q_C}{W}\right| = \left|\frac{Q_C}{Q_H - Q_C}\right| $$
 
+##### Efficiency of Refrigeration (Form 2)
+
 > $$ K = \frac{H}{P} $$
+
+##### Efficicency of a Carnot Engine
 
 > $$ e_{Carnot} = 1 - \frac{T_C}{T_H} = \frac{T_H - T_C}{T_H} $$
 
+##### Efficiency Through Refrigeration
+
 > $$ K_{Carnot} = \frac{T_C}{T_H - T_C} $$
 
-> $$ dS = \frac{dQ}{T} = \Delta S = \frac{Q}{T} $$
+##### Entropy
+
+> $$ \Delta S = \frac{Q}{T} $$
+
+##### Entropy Restated
 
 > $$ \Delta S = \int_1^2\frac{dQ}{T} $$
 
