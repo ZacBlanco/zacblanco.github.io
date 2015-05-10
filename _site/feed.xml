@@ -6,8 +6,8 @@
 </description>
     <link>http://zacblanco.github.io//</link>
     <atom:link href="http://zacblanco.github.io//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 10 May 2015 11:59:08 -0400</pubDate>
-    <lastBuildDate>Sun, 10 May 2015 11:59:08 -0400</lastBuildDate>
+    <pubDate>Sun, 10 May 2015 12:26:35 -0400</pubDate>
+    <lastBuildDate>Sun, 10 May 2015 12:26:35 -0400</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -411,37 +411,73 @@
 
 &lt;h2 id=&quot;thermal-properties-of-matter&quot;&gt;Thermal Properties of Matter&lt;/h2&gt;
 
+&lt;h5 id=&quot;the-ideal-gas-law-again&quot;&gt;The Ideal Gas Law (Again)&lt;/h5&gt;
+
 &lt;blockquote&gt;
   &lt;script type=&quot;math/tex; mode=display&quot;&gt;PV = nRT&lt;/script&gt;
 &lt;/blockquote&gt;
+
+&lt;p&gt;Just iterating over the gas law again. Make sure you know it!&lt;/p&gt;
+
+&lt;h5 id=&quot;relation-between-pv-and-the-translational-kinetic-energy-of-a-gas&quot;&gt;Relation Between PV and the Translational Kinetic Energy of a Gas&lt;/h5&gt;
 
 &lt;blockquote&gt;
   &lt;script type=&quot;math/tex; mode=display&quot;&gt;PV = \frac{3}{2}K_{TR}&lt;/script&gt;
 &lt;/blockquote&gt;
 
+&lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;K_{TR}&lt;/script&gt; is the Average translational kinetic energy of a gas. &lt;script type=&quot;math/tex&quot;&gt;PV&lt;/script&gt; is equal to &lt;script type=&quot;math/tex&quot;&gt;\frac{3}{2}&lt;/script&gt; this value.&lt;/p&gt;
+
+&lt;h5 id=&quot;average-translational-kinetic-energy&quot;&gt;Average Translational Kinetic Energy&lt;/h5&gt;
+
 &lt;blockquote&gt;
   &lt;script type=&quot;math/tex; mode=display&quot;&gt;K_{TR} = \frac{3}{2}nRT&lt;/script&gt;
 &lt;/blockquote&gt;
+
+&lt;p&gt;The average translational kinetic energy of an entire gas is equal to this. &lt;script type=&quot;math/tex&quot;&gt;nRT&lt;/script&gt; are their respective values from the ideal gas law.&lt;/p&gt;
+
+&lt;h5 id=&quot;molar-mass&quot;&gt;Molar Mass&lt;/h5&gt;
 
 &lt;blockquote&gt;
   &lt;script type=&quot;math/tex; mode=display&quot;&gt;M = N_Am&lt;/script&gt;
 &lt;/blockquote&gt;
 
+&lt;p&gt;The mass of one molecule of a gas can be found by dividing the Molar Mass, &lt;script type=&quot;math/tex&quot;&gt;M&lt;/script&gt; by Avogadro’s number, &lt;script type=&quot;math/tex&quot;&gt;N_A&lt;/script&gt;. It is equal to &lt;script type=&quot;math/tex&quot;&gt;6.022 \cdot 10^{23}&lt;/script&gt;.&lt;/p&gt;
+
+&lt;h6 id=&quot;average-kinetic-energy-of-a-gas&quot;&gt;Average Kinetic Energy of a Gas&lt;/h6&gt;
+
 &lt;blockquote&gt;
-  &lt;script type=&quot;math/tex; mode=display&quot;&gt;\frac{1}{2}m(v^2)_ave = \frac{3}{2}RT&lt;/script&gt;
+  &lt;script type=&quot;math/tex; mode=display&quot;&gt;\frac{1}{2}M(v^2)_ave = \frac{3}{2}RT&lt;/script&gt;
 &lt;/blockquote&gt;
+
+&lt;p&gt;We can relat the average kinetic energy of molecule of a gas by the values of R and T and its Molar Mass&lt;/p&gt;
+
+&lt;h5 id=&quot;average-kinetic-energy-of-a-molecule-molar-mass&quot;&gt;Average Kinetic Energy of a Molecule (Molar Mass)&lt;/h5&gt;
 
 &lt;blockquote&gt;
   &lt;script type=&quot;math/tex; mode=display&quot;&gt;k = \frac{R}{N_A} = 1.381\cdot 10^{-23}&lt;/script&gt;
 &lt;/blockquote&gt;
 
+&lt;p&gt;The Boltzmann constant, &lt;script type=&quot;math/tex&quot;&gt;k&lt;/script&gt;, is simply equal to the gas constant, &lt;script type=&quot;math/tex&quot;&gt;R&lt;/script&gt; divided by Avogadro’s Number.&lt;/p&gt;
+
+&lt;h5 id=&quot;average-kinetic-energy-of-a-molecule-mass&quot;&gt;Average Kinetic Energy of a Molecule (Mass)&lt;/h5&gt;
+
 &lt;blockquote&gt;
   &lt;script type=&quot;math/tex; mode=display&quot;&gt;\frac{1}{2}m(v^2)_ave = \frac{3}{2}kT&lt;/script&gt;
 &lt;/blockquote&gt;
 
+&lt;p&gt;If we know the mass of the gas, then the average kinetic energy of a molecule is simply the above equation.&lt;/p&gt;
+
+&lt;h5 id=&quot;root-mean-square-speed-of-a-molecule&quot;&gt;Root-Mean Square Speed of a Molecule&lt;/h5&gt;
+
 &lt;blockquote&gt;
-  &lt;script type=&quot;math/tex; mode=display&quot;&gt;v_{rms} = \sqrt{v_rms^2} = \sqrt{\frac{3kT}{m}} = \sqrt{\frac{3RT}{M}}&lt;/script&gt;
+  &lt;script type=&quot;math/tex; mode=display&quot;&gt;v_{rms} = \sqrt{v_{rms}^2} = \sqrt{\frac{3kT}{m}} = \sqrt{\frac{3RT}{M}}&lt;/script&gt;
 &lt;/blockquote&gt;
+
+&lt;p&gt;We can calculate the average velocity of a gas particle by the above equations. Remember &lt;script type=&quot;math/tex&quot;&gt;m&lt;/script&gt; is just the normal mass of the gas, while &lt;script type=&quot;math/tex&quot;&gt;M&lt;/script&gt; is the Molar mass.&lt;/p&gt;
+
+&lt;h4 id=&quot;heat-capacities&quot;&gt;Heat Capacities&lt;/h4&gt;
+
+&lt;p&gt;Using the theory behind the kinetic energy of a particle, we can estimate the heat capacities of simple gases that have &lt;em&gt;constant volume&lt;/em&gt;. It is important that we note this is with constant volume.&lt;/p&gt;
 
 &lt;h5 id=&quot;monatomic-gas&quot;&gt;Monatomic Gas&lt;/h5&gt;
 
@@ -449,11 +485,15 @@
   &lt;script type=&quot;math/tex; mode=display&quot;&gt;C_V = \frac{3}{2}R&lt;/script&gt;
 &lt;/blockquote&gt;
 
+&lt;p&gt;For a monatomic gas, this is simply the heat capacity&lt;/p&gt;
+
 &lt;h5 id=&quot;diatomic-gas&quot;&gt;Diatomic Gas&lt;/h5&gt;
 
 &lt;blockquote&gt;
   &lt;script type=&quot;math/tex; mode=display&quot;&gt;C_V = \frac{5}{2}R&lt;/script&gt;
 &lt;/blockquote&gt;
+
+&lt;p&gt;For a diatomic gas (two atoms per molecule) the heat capacity is &lt;script type=&quot;math/tex&quot;&gt;\frac{5}{2} R&lt;/script&gt; which is because we add rotational degrees of freedom to the molecule.&lt;/p&gt;
 
 &lt;h5 id=&quot;monatomic-solid&quot;&gt;Monatomic Solid&lt;/h5&gt;
 

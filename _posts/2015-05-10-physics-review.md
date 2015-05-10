@@ -263,29 +263,69 @@ If a body and it's surrounding temperature are not the same, then we can find th
 
 ## Thermal Properties of Matter
 
+##### The Ideal Gas Law (Again)
+
 > $$ PV = nRT $$
+
+Just iterating over the gas law again. Make sure you know it!
+
+##### Relation Between PV and the Translational Kinetic Energy of a Gas
 
 > $$ PV = \frac{3}{2}K_{TR} $$
 
+$$ K_{TR} $$ is the Average translational kinetic energy of a gas. $$ PV $$ is equal to $$ \frac{3}{2} $$ this value. 
+
+##### Average Translational Kinetic Energy
+
 > $$ K_{TR} = \frac{3}{2}nRT $$
+
+The average translational kinetic energy of an entire gas is equal to this. $$ nRT $$ are their respective values from the ideal gas law.
+
+##### Molar Mass
 
 > $$ M = N_Am $$
 
-> $$ \frac{1}{2}m(v^2)_ave = \frac{3}{2}RT $$
+The mass of one molecule of a gas can be found by dividing the Molar Mass, $$ M $$ by Avogadro's number, $$ N_A $$. It is equal to $$ 6.022 \cdot 10^{23} $$.
+
+###### Average Kinetic Energy of a Gas
+
+> $$ \frac{1}{2}M(v^2)_ave = \frac{3}{2}RT $$
+
+We can relat the average kinetic energy of molecule of a gas by the values of R and T and its Molar Mass
+
+##### Average Kinetic Energy of a Molecule (Molar Mass)
 
 > $$ k = \frac{R}{N_A} = 1.381\cdot 10^{-23} $$
 
+The Boltzmann constant, $$ k $$, is simply equal to the gas constant, $$ R $$ divided by Avogadro's Number.
+
+##### Average Kinetic Energy of a Molecule (Mass)
+
 > $$ \frac{1}{2}m(v^2)_ave = \frac{3}{2}kT $$
 
-> $$ v_{rms} = \sqrt{v_rms^2} = \sqrt{\frac{3kT}{m}} = \sqrt{\frac{3RT}{M}} $$
+If we know the mass of the gas, then the average kinetic energy of a molecule is simply the above equation.
+
+##### Root-Mean Square Speed of a Molecule
+
+> $$ v_{rms} = \sqrt{v_{rms}^2} = \sqrt{\frac{3kT}{m}} = \sqrt{\frac{3RT}{M}} $$
+
+We can calculate the average velocity of a gas particle by the above equations. Remember $$ m $$ is just the normal mass of the gas, while $$ M $$ is the Molar mass.
+
+#### Heat Capacities
+
+Using the theory behind the kinetic energy of a particle, we can estimate the heat capacities of simple gases that have _constant volume_. It is important that we note this is with constant volume.
 
 ##### Monatomic Gas
 
 > $$ C_V = \frac{3}{2}R $$
 
+For a monatomic gas, this is simply the heat capacity
+
 ##### Diatomic Gas
 
 > $$ C_V = \frac{5}{2}R $$
+
+For a diatomic gas (two atoms per molecule) the heat capacity is $$ \frac{5}{2} R $$ which is because we add rotational degrees of freedom to the molecule.
 
 ##### Monatomic Solid
 
