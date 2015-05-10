@@ -241,29 +241,49 @@ Similar to a simple pendulum, we can also solve for period if we know the angula
 
 > $$ v = \lambda f $$
 
+The velocity of any wave is equal to the above.
+
 ##### Velocity of Waves on a String
 
 > $$ v =  \sqrt{\frac{F}{\mu}} $$
+
+We can find the velocity of any wave on a string if we know the tension that the string is under, $$ F $$, and the linear density of the string, $$ \mu $$. Linear density is measured in $$ \frac{kg}{m} $$ or $$ \frac{mass}{distance} $$.
 
 ##### Wave Number
 
 > $$ k = \frac{2\pi}{\lambda} $$
 
+Simply the equation for wave number.
+
 ##### Displacement of a Mechanical Wave
 
 > $$ y(x, t) = A\cdot cos(kx - \omega t) $$
 
-##### Displacement of a Standing Wave on a String
+This equation tells us the vertical displacement, $$ y $$, from equilibrium of any point on a string moving left to right, given the x position on the string, and the time t, since it oscillating.
+
+##### Principle of Superposition
+
+> $$ y(x, t) = y_1(x, t) + y_2(x, t) $$
+
+This is the principle of superposition. This basically says that any two waves traveling on the same string will sum their displacements together when traveling to form the new displacement from equilibrium
+
+##### Displacement of 2 Standing Waves on a String
 
 > $$ y(x, t) = 2A\cdot sin(kx)sin(\omega t) $$
+
+If there are two standing waves on a string, the equation for the displacement from equilibrium become the following.
 
 ##### Average Power of a Wave
 
 > $$ P_{ave} = \frac{1}{2}\sqrt{F\mu}\omega^2A^2 $$
 
+This equation describes the average amount of power used by a string to make a wave with amplitude $$ A $$
+
 ##### Fundamental Frequencies of a Wave on a String
 
 > $$ f_n = \frac{nv}{2L} $$
+
+A wave cannot exist on a string unless half of a wavelength is equal to a multiple of the length of the string. Because a fixed string with tension, $$ F $$ and linear density $$ \mu $$ doesn't change, there are only certain frequencies that can be played on a string. These are called the fundamental frequencies. $$ n = 1, 2, 3... $$, v is the velocity that the waves travel on the string. $$ L $$ is the length of the string.
 
 ## Sound
 
