@@ -5,9 +5,6 @@ tags: [physics, rutgers, spring 2015, ]
 Author: Zac Blanco
 ---
 
-POST UPDATE: I've finished all the explanations for everything after exam 2, except for fluids. Everything from chapter 17-20 is finished. I still need to do 11-16.
-
-
 The topics covered in this course are:
 
 - Rotational Dynamics
