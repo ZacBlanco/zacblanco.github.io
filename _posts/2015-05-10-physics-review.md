@@ -18,7 +18,7 @@ The topics covered in this course are:
 - The First Law of Thermodynamics
 - The Second Law Of Thermodynamics
 
-The format of this post will be the following: For each equation I will explain each variables used in the equation, the typical units used, any constant values (if they haven't been defined already). If there are concepts that don't reside within equations, they will be explained nearest to the equations I feel are most related to that concept.
+The format of this post will be the following: For each equation I will explain the variables used, the typical units used, any constant values (if they haven't been defined already). If there are concepts that don't reside within equations, they will be explained nearest to the equations I feel are most related to that concept.
 
 
 ## Rotational Dynamics
