@@ -92,7 +92,7 @@
   <li>The Second Law Of Thermodynamics</li>
 </ul>
 
-<p>The format of this post will be the following: For each equation I will explain the variables used, the typical units used, any constant values (if they haven’t been defined already). If there are concepts that don’t reside within equations, they will be explained nearest to the equations I feel are most related to that concept.</p>
+<p>The format of this post will be the following: For each equation I will explain the variables used, the typical units used, and any constant values (if they haven’t been defined already). If there are concepts that don’t reside within equations, they will be explained nearest to the equations I feel are most related to that concept.</p>
 
 <h2 id="rotational-dynamics">Rotational Dynamics</h2>
 
@@ -802,11 +802,19 @@
 
 <h2 id="the-second-law-of-thermodynamics">The Second Law Of Thermodynamics</h2>
 
+<p>Any device that can turn heat into Work, is called a <em>heat engine</em>. All engines absorb heat form some resevoir at a higher temperature, use that heat to do work, and discard some heat at a lower temperature. That is the net heat <script type="math/tex">Q</script> of a engine process is equal to <script type="math/tex">W</script>. <script type="math/tex">Q = W</script>.</p>
+
+<p>We can visualize he cycle with the following image:</p>
+
+<p><img src="../assets/images/physics-review/carnot-cycle.gif" alt="Image of Carnot Cycle" /></p>
+
 <h5 id="net-heat-absorbed-in-an-engine-cycle">Net Heat Absorbed in an Engine Cycle</h5>
 
 <blockquote>
   <script type="math/tex; mode=display">Q = |Q_H| - |Q_C|</script>
 </blockquote>
+
+<p>This is the amount of heat that is transferred into work. Because <script type="math/tex">Q = W</script>, the amount of work done in an engine cycle is the difference of the absolute values of the heats <script type="math/tex">Q_C</script> and <script type="math/tex">Q_H</script></p>
 
 <h5 id="thermal-efficiency-of-an-engine">Thermal Efficiency of an Engine</h5>
 
@@ -814,11 +822,17 @@
   <script type="math/tex; mode=display">e = \frac{W}{Q_H} = 1 + \frac{Q_C}{Q_H} = 1 - \left|\frac{Q_C}{Q_H}\right|</script>
 </blockquote>
 
+<p>Because we know from above that <script type="math/tex">Q_C</script> can never be zero, this means that <script type="math/tex">W</script> is always less than <script type="math/tex">Q_H</script>. This leaves us with the fact that our engine efficiency, <script type="math/tex">e</script> <em>MUST</em> be less than 1. It is impossible to have an efficiency of 1 or greater.</p>
+
 <h5 id="thermal-efficiency-in-an-otto-cycle">Thermal Efficiency in an Otto Cycle</h5>
 
 <blockquote>
   <script type="math/tex; mode=display">e = 1- \frac{1}{r^{\gamma - 1}}</script>
 </blockquote>
+
+<p><img src="../assets/images/physics-review/otto-cycle.png" alt="Image of Otto Cycle" /></p>
+
+<p>Above is an image detailing a <script type="math/tex">pV</script> diagram of a normal Otto Cycle. From A to B there is an adiabatic compression (no heat lost). B to C we have heat added into the system with constant pressure and some volume change (This means some work is done). Point C to D there is the power stroke. The gas expands at somewhat constant temperature doing as much work as is can while pressure decreases. Then from point D to A the extra heat is exhausted as the gas cools in temperature. It also drops in pressure while volume remains constant.</p>
 
 <h5 id="work-an-heat-in-refrigeration">Work an Heat in Refrigeration</h5>
 
@@ -880,7 +894,7 @@
 
       <footer class="footer">
         <small>
-          &copy; <time datetime="2015-05-10T14:31:37-04:00">2015</time>. All rights reserved.
+          &copy; <time datetime="2015-05-10T15:14:07-04:00">2015</time>. All rights reserved.
         </small>
       </footer>
     </div>

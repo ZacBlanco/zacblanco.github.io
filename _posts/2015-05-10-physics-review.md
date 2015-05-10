@@ -18,7 +18,7 @@ The topics covered in this course are:
 - The First Law of Thermodynamics
 - The Second Law Of Thermodynamics
 
-The format of this post will be the following: For each equation I will explain the variables used, the typical units used, any constant values (if they haven't been defined already). If there are concepts that don't reside within equations, they will be explained nearest to the equations I feel are most related to that concept.
+The format of this post will be the following: For each equation I will explain the variables used, the typical units used, and any constant values (if they haven't been defined already). If there are concepts that don't reside within equations, they will be explained nearest to the equations I feel are most related to that concept.
 
 
 ## Rotational Dynamics
@@ -533,17 +533,33 @@ Again in an adiabatic process we rearrange what we have above we can find that t
 
 ## The Second Law Of Thermodynamics
 
+Any device that can turn heat into Work, is called a _heat engine_. All engines absorb heat form some resevoir at a higher temperature, use that heat to do work, and discard some heat at a lower temperature. That is the net heat $$ Q $$ of a engine process is equal to $$ W $$. $$ Q = W $$.
+
+We can visualize he cycle with the following image:
+
+![Image of Carnot Cycle](../assets/images/physics-review/carnot-cycle.gif)
+
+
+
 ##### Net Heat Absorbed in an Engine Cycle
 
 > $$ Q = |Q_H| - |Q_C| $$
+
+This is the amount of heat that is transferred into work. Because $$ Q = W $$, the amount of work done in an engine cycle is the difference of the absolute values of the heats $$Q_C$$ and $$Q_H$$
 
 ##### Thermal Efficiency of an Engine
 
 > $$ e = \frac{W}{Q_H} = 1 + \frac{Q_C}{Q_H} = 1 - \left|\frac{Q_C}{Q_H}\right| $$
 
+Because we know from above that $$ Q_C $$ can never be zero, this means that $$ W $$ is always less than $$ Q_H $$. This leaves us with the fact that our engine efficiency, $$ e $$ _MUST_ be less than 1. It is impossible to have an efficiency of 1 or greater.
+
 ##### Thermal Efficiency in an Otto Cycle
 
 > $$ e = 1- \frac{1}{r^{\gamma - 1}} $$
+
+![Image of Otto Cycle](../assets/images/physics-review/otto-cycle.png)
+
+Above is an image detailing a $$ pV $$ diagram of a normal Otto Cycle. From A to B there is an adiabatic compression (no heat lost). B to C we have heat added into the system with constant pressure and some volume change (This means some work is done). Point C to D there is the power stroke. The gas expands at somewhat constant temperature doing as much work as is can while pressure decreases. Then from point D to A the extra heat is exhausted as the gas cools in temperature. It also drops in pressure while volume remains constant.
 
 ##### Work an Heat in Refrigeration
 

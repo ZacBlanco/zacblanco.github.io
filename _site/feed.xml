@@ -6,8 +6,8 @@
 </description>
     <link>http://zacblanco.github.io//</link>
     <atom:link href="http://zacblanco.github.io//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 10 May 2015 14:31:37 -0400</pubDate>
-    <lastBuildDate>Sun, 10 May 2015 14:31:37 -0400</lastBuildDate>
+    <pubDate>Sun, 10 May 2015 15:14:07 -0400</pubDate>
+    <lastBuildDate>Sun, 10 May 2015 15:14:07 -0400</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -27,7 +27,7 @@
   &lt;li&gt;The Second Law Of Thermodynamics&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;The format of this post will be the following: For each equation I will explain the variables used, the typical units used, any constant values (if they haven’t been defined already). If there are concepts that don’t reside within equations, they will be explained nearest to the equations I feel are most related to that concept.&lt;/p&gt;
+&lt;p&gt;The format of this post will be the following: For each equation I will explain the variables used, the typical units used, and any constant values (if they haven’t been defined already). If there are concepts that don’t reside within equations, they will be explained nearest to the equations I feel are most related to that concept.&lt;/p&gt;
 
 &lt;h2 id=&quot;rotational-dynamics&quot;&gt;Rotational Dynamics&lt;/h2&gt;
 
@@ -737,11 +737,19 @@
 
 &lt;h2 id=&quot;the-second-law-of-thermodynamics&quot;&gt;The Second Law Of Thermodynamics&lt;/h2&gt;
 
+&lt;p&gt;Any device that can turn heat into Work, is called a &lt;em&gt;heat engine&lt;/em&gt;. All engines absorb heat form some resevoir at a higher temperature, use that heat to do work, and discard some heat at a lower temperature. That is the net heat &lt;script type=&quot;math/tex&quot;&gt;Q&lt;/script&gt; of a engine process is equal to &lt;script type=&quot;math/tex&quot;&gt;W&lt;/script&gt;. &lt;script type=&quot;math/tex&quot;&gt;Q = W&lt;/script&gt;.&lt;/p&gt;
+
+&lt;p&gt;We can visualize he cycle with the following image:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../assets/images/physics-review/carnot-cycle.gif&quot; alt=&quot;Image of Carnot Cycle&quot; /&gt;&lt;/p&gt;
+
 &lt;h5 id=&quot;net-heat-absorbed-in-an-engine-cycle&quot;&gt;Net Heat Absorbed in an Engine Cycle&lt;/h5&gt;
 
 &lt;blockquote&gt;
   &lt;script type=&quot;math/tex; mode=display&quot;&gt;Q = |Q_H| - |Q_C|&lt;/script&gt;
 &lt;/blockquote&gt;
+
+&lt;p&gt;This is the amount of heat that is transferred into work. Because &lt;script type=&quot;math/tex&quot;&gt;Q = W&lt;/script&gt;, the amount of work done in an engine cycle is the difference of the absolute values of the heats &lt;script type=&quot;math/tex&quot;&gt;Q_C&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;Q_H&lt;/script&gt;&lt;/p&gt;
 
 &lt;h5 id=&quot;thermal-efficiency-of-an-engine&quot;&gt;Thermal Efficiency of an Engine&lt;/h5&gt;
 
@@ -749,11 +757,17 @@
   &lt;script type=&quot;math/tex; mode=display&quot;&gt;e = \frac{W}{Q_H} = 1 + \frac{Q_C}{Q_H} = 1 - \left|\frac{Q_C}{Q_H}\right|&lt;/script&gt;
 &lt;/blockquote&gt;
 
+&lt;p&gt;Because we know from above that &lt;script type=&quot;math/tex&quot;&gt;Q_C&lt;/script&gt; can never be zero, this means that &lt;script type=&quot;math/tex&quot;&gt;W&lt;/script&gt; is always less than &lt;script type=&quot;math/tex&quot;&gt;Q_H&lt;/script&gt;. This leaves us with the fact that our engine efficiency, &lt;script type=&quot;math/tex&quot;&gt;e&lt;/script&gt; &lt;em&gt;MUST&lt;/em&gt; be less than 1. It is impossible to have an efficiency of 1 or greater.&lt;/p&gt;
+
 &lt;h5 id=&quot;thermal-efficiency-in-an-otto-cycle&quot;&gt;Thermal Efficiency in an Otto Cycle&lt;/h5&gt;
 
 &lt;blockquote&gt;
   &lt;script type=&quot;math/tex; mode=display&quot;&gt;e = 1- \frac{1}{r^{\gamma - 1}}&lt;/script&gt;
 &lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src=&quot;../assets/images/physics-review/otto-cycle.png&quot; alt=&quot;Image of Otto Cycle&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Above is an image detailing a &lt;script type=&quot;math/tex&quot;&gt;pV&lt;/script&gt; diagram of a normal Otto Cycle. From A to B there is an adiabatic compression (no heat lost). B to C we have heat added into the system with constant pressure and some volume change (This means some work is done). Point C to D there is the power stroke. The gas expands at somewhat constant temperature doing as much work as is can while pressure decreases. Then from point D to A the extra heat is exhausted as the gas cools in temperature. It also drops in pressure while volume remains constant.&lt;/p&gt;
 
 &lt;h5 id=&quot;work-an-heat-in-refrigeration&quot;&gt;Work an Heat in Refrigeration&lt;/h5&gt;
 
