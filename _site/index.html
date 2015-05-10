@@ -238,11 +238,15 @@
   <script type="math/tex; mode=display">f = \frac{1}{T}</script>
 </blockquote>
 
+<p>Frequency is defined as the amount of rotations/oscillations per second. units of <script type="math/tex">s^{-1}</script>.</p>
+
 <h5 id="period">Period</h5>
 
 <blockquote>
   <script type="math/tex; mode=display">T = \frac{1}{f}</script>
 </blockquote>
+
+<p>The period is simply the inverse of frequency. It is measured in seconds. As in, seconds per oscillation.</p>
 
 <h5 id="angular-frequency">Angular Frequency</h5>
 
@@ -250,11 +254,15 @@
   <script type="math/tex; mode=display">\omega = 2\pi f</script>
 </blockquote>
 
+<p>angular frequency is a quantity measured in radians per second (<script type="math/tex">\frac{rad}{s}</script>). It is used frequently. The magnitude of angular velocity.</p>
+
 <h5 id="hookes-law">Hooke’s Law</h5>
 
 <blockquote>
   <script type="math/tex; mode=display">F = -kx</script>
 </blockquote>
+
+<p>Hooke’s law related the force that a spring pulls on an object given a spring’s stiffness (k) and the distance the object is pulled from equilibrium on the spring.</p>
 
 <h5 id="angular-frequency-spring-constant">Angular Frequency (Spring Constant)</h5>
 
@@ -262,11 +270,15 @@
   <script type="math/tex; mode=display">\omega = \sqrt{\frac{k}{m}}</script>
 </blockquote>
 
+<p>We can calculate the angular frequncy of a mass on a spring by the above equation.</p>
+
 <h5 id="period-of-an-oscillating-object-on-a-spring">Period of an Oscillating Object on a Spring</h5>
 
 <blockquote>
   <script type="math/tex; mode=display">T = 2\pi\sqrt{\frac{m}{k}}</script>
 </blockquote>
+
+<p>Similarly, because we know <script type="math/tex">\omega =  2\pi f</script>, we can solve for the period too.</p>
 
 <h5 id="total-energy-in-shm">Total Energy in SHM</h5>
 
@@ -274,11 +286,15 @@
   <script type="math/tex; mode=display">E_T = \frac{1}{2}mv^2 + \frac{1}{2}kx^2 = \frac{1}{2}kA^2</script>
 </blockquote>
 
+<p>The total energy in SHM is equal to the kinetic energy of an object plus its potential energy. This should always sum to a constant value so long as no energy is lost in the system. It should also be equal to the value <script type="math/tex">\frac{1}{2}kA^2</script> because that is the max potential energy when the object is moved from displacement.</p>
+
 <h5 id="maximum-velocity-in-shm">Maximum Velocity in SHM</h5>
 
 <blockquote>
   <script type="math/tex; mode=display">v_{max} = \omega A</script>
 </blockquote>
+
+<p>The maximum velocity for any object in SHM is just the angular frequency multiplied by the amplitude of motion.</p>
 
 <h5 id="maximum-acceleration-in-shm">Maximum Acceleration in SHM</h5>
 
@@ -286,11 +302,15 @@
   <script type="math/tex; mode=display">a_{max} = \omega^2A</script>
 </blockquote>
 
+<p>The maximum accleration is similar to velocity where it is related to angular frequency and amplitude.</p>
+
 <h5 id="displacement-of-shm">Displacement of SHM</h5>
 
 <blockquote>
   <script type="math/tex; mode=display">x = A\cdot cos(\omega t + \phi)</script>
 </blockquote>
+
+<p>The following equation gives us the displacement of any object at time <script type="math/tex">t</script> in SHM. Because we know that the max value of <script type="math/tex">cos\theta</script> is 1, then the max displacement is the amplitude, A, which it should be. This same concept will follow to the next two equations also.</p>
 
 <h5 id="velocity-of-shm">Velocity of SHM</h5>
 
@@ -298,15 +318,21 @@
   <script type="math/tex; mode=display">v = -\omega A\cdot sin(\omega t + \phi)</script>
 </blockquote>
 
+<p>Because velocity is the derivative of displacement with respect to time, this equation is simply the derivative of the previous one.</p>
+
 <h5 id="acceleration-of-shm">Acceleration of SHM</h5>
 
 <blockquote>
   <script type="math/tex; mode=display">a = -\omega^2A\cdot cos(\omega t + \phi)</script>
 </blockquote>
 
+<p>Again, similar to the above equation this equation is the derivative of the velocity equation with respect to time.</p>
+
 <h3 id="pendulums">Pendulums</h3>
 
 <h4 id="simple-pendulums">Simple Pendulums</h4>
+
+<p>A simple pendulum is a pendulum in which the mass of the string is neglected (or it is too small in comparison to make a noticable difference).</p>
 
 <h5 id="angular-frequency-simple-pendulum">Angular Frequency (Simple Pendulum)</h5>
 
@@ -314,25 +340,35 @@
   <script type="math/tex; mode=display">\omega = \sqrt{\frac{g}{L}}</script>
 </blockquote>
 
+<p>Angular frequency of a simple pendulum is proportional to the gravitational acceleration, <script type="math/tex">g</script> and the length of the pendulum <script type="math/tex">L</script>.</p>
+
 <h5 id="period-simple-pendulum">Period (Simple Pendulum)</h5>
 
 <blockquote>
   <script type="math/tex; mode=display">T = 2\pi\sqrt{\frac{L}{g}}</script>
 </blockquote>
 
-<h4 id="real-pendulums">Real Pendulums</h4>
+<p>We know <script type="math/tex">\omega = 2\pi f</script>, so we can solve for Period and we find that it’s a pretty simple equation.</p>
 
-<h5 id="angular-frequency-real-pendulum">Angular Frequency (Real Pendulum)</h5>
+<h4 id="physical-pendulums">Physical Pendulums</h4>
+
+<p>Real pendulums are pendulum where all of the mass if <em>NOT</em> concentrated at the end of the string (or arm). <script type="math/tex">m</script> is the total mass of the pendulum. <script type="math/tex">g</script> is the constant of gravitation. <script type="math/tex">d</script> is the distance from the axis of rotation to the center of gravity of the pendulum. <script type="math/tex">I</script> is the moment of inertia of the whole pendulum.</p>
+
+<h5 id="angular-frequency-physical-pendulum">Angular Frequency (Physical Pendulum)</h5>
 
 <blockquote>
   <script type="math/tex; mode=display">\omega = \sqrt{\frac{mgd}{I}}</script>
 </blockquote>
 
-<h5 id="period-real-pendulum">Period (Real Pendulum)</h5>
+<p>Angular frequency for a real pendulum is defined above.</p>
+
+<h5 id="period-physical-pendulum">Period (Physical Pendulum)</h5>
 
 <blockquote>
   <script type="math/tex; mode=display">T = 2\pi\sqrt{\frac{I}{mgd}}</script>
 </blockquote>
+
+<p>Similar to a simple pendulum, we can also solve for period if we know the angular frequency.</p>
 
 <h2 id="mechanical-waves">Mechanical Waves</h2>
 
@@ -965,7 +1001,7 @@
 
       <footer class="footer">
         <small>
-          &copy; <time datetime="2015-05-10T16:15:29-04:00">2015</time>. All rights reserved.
+          &copy; <time datetime="2015-05-10T16:36:50-04:00">2015</time>. All rights reserved.
         </small>
       </footer>
     </div>

@@ -132,72 +132,107 @@ The total energy for a body in orbit ($$ KE + U $$) is equal to the above equati
 
 > $$ f = \frac{1}{T} $$
 
+Frequency is defined as the amount of rotations/oscillations per second. units of $$ s^{-1} $$.
+
 ##### Period
 
 > $$ T = \frac{1}{f} $$
+
+The period is simply the inverse of frequency. It is measured in seconds. As in, seconds per oscillation.
 
 ##### Angular Frequency
 
 > $$ \omega = 2\pi f $$
 
+angular frequency is a quantity measured in radians per second ($$ \frac{rad}{s} $$). It is used frequently. The magnitude of angular velocity.
+
 ##### Hooke's Law
 
 > $$ F = -kx $$
+
+Hooke's law related the force that a spring pulls on an object given a spring's stiffness (k) and the distance the object is pulled from equilibrium on the spring.
 
 ##### Angular Frequency (Spring Constant)
 
 > $$ \omega = \sqrt{\frac{k}{m}} $$
 
+We can calculate the angular frequncy of a mass on a spring by the above equation.
+
 ##### Period of an Oscillating Object on a Spring
 
 > $$ T = 2\pi\sqrt{\frac{m}{k}} $$
+
+Similarly, because we know $$ \omega =  2\pi f $$, we can solve for the period too.
 
 ##### Total Energy in SHM
 
 > $$ E_T = \frac{1}{2}mv^2 + \frac{1}{2}kx^2 = \frac{1}{2}kA^2 $$
 
+The total energy in SHM is equal to the kinetic energy of an object plus its potential energy. This should always sum to a constant value so long as no energy is lost in the system. It should also be equal to the value $$ \frac{1}{2}kA^2 $$ because that is the max potential energy when the object is moved from displacement.
+
 ##### Maximum Velocity in SHM
 
 > $$ v_{max} = \omega A $$
+
+The maximum velocity for any object in SHM is just the angular frequency multiplied by the amplitude of motion.
 
 ##### Maximum Acceleration in SHM
 
 > $$ a_{max} = \omega^2A $$
 
+The maximum accleration is similar to velocity where it is related to angular frequency and amplitude.
+
 ##### Displacement of SHM
 
 > $$ x = A\cdot cos(\omega t + \phi) $$
+
+The following equation gives us the displacement of any object at time $$ t $$ in SHM. Because we know that the max value of $$ cos\theta $$ is 1, then the max displacement is the amplitude, A, which it should be. This same concept will follow to the next two equations also.
 
 ##### Velocity of SHM
 
 > $$ v = -\omega A\cdot sin(\omega t + \phi)  $$
 
+Because velocity is the derivative of displacement with respect to time, this equation is simply the derivative of the previous one.
+
 ##### Acceleration of SHM 
 
 > $$ a = -\omega^2A\cdot cos(\omega t + \phi) $$
+
+Again, similar to the above equation this equation is the derivative of the velocity equation with respect to time.
 
 ### Pendulums
 
 #### Simple Pendulums
 
+A simple pendulum is a pendulum in which the mass of the string is neglected (or it is too small in comparison to make a noticable difference).
+
 ##### Angular Frequency (Simple Pendulum)
 
 > $$ \omega = \sqrt{\frac{g}{L}} $$
+
+Angular frequency of a simple pendulum is proportional to the gravitational acceleration, $$ g $$ and the length of the pendulum $$ L $$.
 
 ##### Period (Simple Pendulum)
 
 > $$ T = 2\pi\sqrt{\frac{L}{g}} $$
 
-#### Real Pendulums
+We know $$ \omega = 2\pi f $$, so we can solve for Period and we find that it's a pretty simple equation.
 
-##### Angular Frequency (Real Pendulum)
+#### Physical Pendulums
+
+Real pendulums are pendulum where all of the mass if _NOT_ concentrated at the end of the string (or arm). $$ m $$ is the total mass of the pendulum. $$ g $$ is the constant of gravitation. $$ d $$ is the distance from the axis of rotation to the center of gravity of the pendulum. $$ I $$ is the moment of inertia of the whole pendulum. 
+
+##### Angular Frequency (Physical Pendulum)
 
 > $$ \omega = \sqrt{\frac{mgd}{I}} $$
 
-##### Period (Real Pendulum)
+Angular frequency for a real pendulum is defined above.
+
+##### Period (Physical Pendulum)
 
 > $$ T = 2\pi\sqrt{\frac{I}{mgd}} $$
 
+Similar to a simple pendulum, we can also solve for period if we know the angular frequency.
 
 
 ## Mechanical Waves

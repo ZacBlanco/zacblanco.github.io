@@ -6,8 +6,8 @@
 </description>
     <link>http://zacblanco.github.io//</link>
     <atom:link href="http://zacblanco.github.io//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 10 May 2015 16:15:29 -0400</pubDate>
-    <lastBuildDate>Sun, 10 May 2015 16:15:29 -0400</lastBuildDate>
+    <pubDate>Sun, 10 May 2015 16:36:50 -0400</pubDate>
+    <lastBuildDate>Sun, 10 May 2015 16:36:50 -0400</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -173,11 +173,15 @@
   &lt;script type=&quot;math/tex; mode=display&quot;&gt;f = \frac{1}{T}&lt;/script&gt;
 &lt;/blockquote&gt;
 
+&lt;p&gt;Frequency is defined as the amount of rotations/oscillations per second. units of &lt;script type=&quot;math/tex&quot;&gt;s^{-1}&lt;/script&gt;.&lt;/p&gt;
+
 &lt;h5 id=&quot;period&quot;&gt;Period&lt;/h5&gt;
 
 &lt;blockquote&gt;
   &lt;script type=&quot;math/tex; mode=display&quot;&gt;T = \frac{1}{f}&lt;/script&gt;
 &lt;/blockquote&gt;
+
+&lt;p&gt;The period is simply the inverse of frequency. It is measured in seconds. As in, seconds per oscillation.&lt;/p&gt;
 
 &lt;h5 id=&quot;angular-frequency&quot;&gt;Angular Frequency&lt;/h5&gt;
 
@@ -185,11 +189,15 @@
   &lt;script type=&quot;math/tex; mode=display&quot;&gt;\omega = 2\pi f&lt;/script&gt;
 &lt;/blockquote&gt;
 
+&lt;p&gt;angular frequency is a quantity measured in radians per second (&lt;script type=&quot;math/tex&quot;&gt;\frac{rad}{s}&lt;/script&gt;). It is used frequently. The magnitude of angular velocity.&lt;/p&gt;
+
 &lt;h5 id=&quot;hookes-law&quot;&gt;Hooke’s Law&lt;/h5&gt;
 
 &lt;blockquote&gt;
   &lt;script type=&quot;math/tex; mode=display&quot;&gt;F = -kx&lt;/script&gt;
 &lt;/blockquote&gt;
+
+&lt;p&gt;Hooke’s law related the force that a spring pulls on an object given a spring’s stiffness (k) and the distance the object is pulled from equilibrium on the spring.&lt;/p&gt;
 
 &lt;h5 id=&quot;angular-frequency-spring-constant&quot;&gt;Angular Frequency (Spring Constant)&lt;/h5&gt;
 
@@ -197,11 +205,15 @@
   &lt;script type=&quot;math/tex; mode=display&quot;&gt;\omega = \sqrt{\frac{k}{m}}&lt;/script&gt;
 &lt;/blockquote&gt;
 
+&lt;p&gt;We can calculate the angular frequncy of a mass on a spring by the above equation.&lt;/p&gt;
+
 &lt;h5 id=&quot;period-of-an-oscillating-object-on-a-spring&quot;&gt;Period of an Oscillating Object on a Spring&lt;/h5&gt;
 
 &lt;blockquote&gt;
   &lt;script type=&quot;math/tex; mode=display&quot;&gt;T = 2\pi\sqrt{\frac{m}{k}}&lt;/script&gt;
 &lt;/blockquote&gt;
+
+&lt;p&gt;Similarly, because we know &lt;script type=&quot;math/tex&quot;&gt;\omega =  2\pi f&lt;/script&gt;, we can solve for the period too.&lt;/p&gt;
 
 &lt;h5 id=&quot;total-energy-in-shm&quot;&gt;Total Energy in SHM&lt;/h5&gt;
 
@@ -209,11 +221,15 @@
   &lt;script type=&quot;math/tex; mode=display&quot;&gt;E_T = \frac{1}{2}mv^2 + \frac{1}{2}kx^2 = \frac{1}{2}kA^2&lt;/script&gt;
 &lt;/blockquote&gt;
 
+&lt;p&gt;The total energy in SHM is equal to the kinetic energy of an object plus its potential energy. This should always sum to a constant value so long as no energy is lost in the system. It should also be equal to the value &lt;script type=&quot;math/tex&quot;&gt;\frac{1}{2}kA^2&lt;/script&gt; because that is the max potential energy when the object is moved from displacement.&lt;/p&gt;
+
 &lt;h5 id=&quot;maximum-velocity-in-shm&quot;&gt;Maximum Velocity in SHM&lt;/h5&gt;
 
 &lt;blockquote&gt;
   &lt;script type=&quot;math/tex; mode=display&quot;&gt;v_{max} = \omega A&lt;/script&gt;
 &lt;/blockquote&gt;
+
+&lt;p&gt;The maximum velocity for any object in SHM is just the angular frequency multiplied by the amplitude of motion.&lt;/p&gt;
 
 &lt;h5 id=&quot;maximum-acceleration-in-shm&quot;&gt;Maximum Acceleration in SHM&lt;/h5&gt;
 
@@ -221,11 +237,15 @@
   &lt;script type=&quot;math/tex; mode=display&quot;&gt;a_{max} = \omega^2A&lt;/script&gt;
 &lt;/blockquote&gt;
 
+&lt;p&gt;The maximum accleration is similar to velocity where it is related to angular frequency and amplitude.&lt;/p&gt;
+
 &lt;h5 id=&quot;displacement-of-shm&quot;&gt;Displacement of SHM&lt;/h5&gt;
 
 &lt;blockquote&gt;
   &lt;script type=&quot;math/tex; mode=display&quot;&gt;x = A\cdot cos(\omega t + \phi)&lt;/script&gt;
 &lt;/blockquote&gt;
+
+&lt;p&gt;The following equation gives us the displacement of any object at time &lt;script type=&quot;math/tex&quot;&gt;t&lt;/script&gt; in SHM. Because we know that the max value of &lt;script type=&quot;math/tex&quot;&gt;cos\theta&lt;/script&gt; is 1, then the max displacement is the amplitude, A, which it should be. This same concept will follow to the next two equations also.&lt;/p&gt;
 
 &lt;h5 id=&quot;velocity-of-shm&quot;&gt;Velocity of SHM&lt;/h5&gt;
 
@@ -233,15 +253,21 @@
   &lt;script type=&quot;math/tex; mode=display&quot;&gt;v = -\omega A\cdot sin(\omega t + \phi)&lt;/script&gt;
 &lt;/blockquote&gt;
 
+&lt;p&gt;Because velocity is the derivative of displacement with respect to time, this equation is simply the derivative of the previous one.&lt;/p&gt;
+
 &lt;h5 id=&quot;acceleration-of-shm&quot;&gt;Acceleration of SHM&lt;/h5&gt;
 
 &lt;blockquote&gt;
   &lt;script type=&quot;math/tex; mode=display&quot;&gt;a = -\omega^2A\cdot cos(\omega t + \phi)&lt;/script&gt;
 &lt;/blockquote&gt;
 
+&lt;p&gt;Again, similar to the above equation this equation is the derivative of the velocity equation with respect to time.&lt;/p&gt;
+
 &lt;h3 id=&quot;pendulums&quot;&gt;Pendulums&lt;/h3&gt;
 
 &lt;h4 id=&quot;simple-pendulums&quot;&gt;Simple Pendulums&lt;/h4&gt;
+
+&lt;p&gt;A simple pendulum is a pendulum in which the mass of the string is neglected (or it is too small in comparison to make a noticable difference).&lt;/p&gt;
 
 &lt;h5 id=&quot;angular-frequency-simple-pendulum&quot;&gt;Angular Frequency (Simple Pendulum)&lt;/h5&gt;
 
@@ -249,25 +275,35 @@
   &lt;script type=&quot;math/tex; mode=display&quot;&gt;\omega = \sqrt{\frac{g}{L}}&lt;/script&gt;
 &lt;/blockquote&gt;
 
+&lt;p&gt;Angular frequency of a simple pendulum is proportional to the gravitational acceleration, &lt;script type=&quot;math/tex&quot;&gt;g&lt;/script&gt; and the length of the pendulum &lt;script type=&quot;math/tex&quot;&gt;L&lt;/script&gt;.&lt;/p&gt;
+
 &lt;h5 id=&quot;period-simple-pendulum&quot;&gt;Period (Simple Pendulum)&lt;/h5&gt;
 
 &lt;blockquote&gt;
   &lt;script type=&quot;math/tex; mode=display&quot;&gt;T = 2\pi\sqrt{\frac{L}{g}}&lt;/script&gt;
 &lt;/blockquote&gt;
 
-&lt;h4 id=&quot;real-pendulums&quot;&gt;Real Pendulums&lt;/h4&gt;
+&lt;p&gt;We know &lt;script type=&quot;math/tex&quot;&gt;\omega = 2\pi f&lt;/script&gt;, so we can solve for Period and we find that it’s a pretty simple equation.&lt;/p&gt;
 
-&lt;h5 id=&quot;angular-frequency-real-pendulum&quot;&gt;Angular Frequency (Real Pendulum)&lt;/h5&gt;
+&lt;h4 id=&quot;physical-pendulums&quot;&gt;Physical Pendulums&lt;/h4&gt;
+
+&lt;p&gt;Real pendulums are pendulum where all of the mass if &lt;em&gt;NOT&lt;/em&gt; concentrated at the end of the string (or arm). &lt;script type=&quot;math/tex&quot;&gt;m&lt;/script&gt; is the total mass of the pendulum. &lt;script type=&quot;math/tex&quot;&gt;g&lt;/script&gt; is the constant of gravitation. &lt;script type=&quot;math/tex&quot;&gt;d&lt;/script&gt; is the distance from the axis of rotation to the center of gravity of the pendulum. &lt;script type=&quot;math/tex&quot;&gt;I&lt;/script&gt; is the moment of inertia of the whole pendulum.&lt;/p&gt;
+
+&lt;h5 id=&quot;angular-frequency-physical-pendulum&quot;&gt;Angular Frequency (Physical Pendulum)&lt;/h5&gt;
 
 &lt;blockquote&gt;
   &lt;script type=&quot;math/tex; mode=display&quot;&gt;\omega = \sqrt{\frac{mgd}{I}}&lt;/script&gt;
 &lt;/blockquote&gt;
 
-&lt;h5 id=&quot;period-real-pendulum&quot;&gt;Period (Real Pendulum)&lt;/h5&gt;
+&lt;p&gt;Angular frequency for a real pendulum is defined above.&lt;/p&gt;
+
+&lt;h5 id=&quot;period-physical-pendulum&quot;&gt;Period (Physical Pendulum)&lt;/h5&gt;
 
 &lt;blockquote&gt;
   &lt;script type=&quot;math/tex; mode=display&quot;&gt;T = 2\pi\sqrt{\frac{I}{mgd}}&lt;/script&gt;
 &lt;/blockquote&gt;
+
+&lt;p&gt;Similar to a simple pendulum, we can also solve for period if we know the angular frequency.&lt;/p&gt;
 
 &lt;h2 id=&quot;mechanical-waves&quot;&gt;Mechanical Waves&lt;/h2&gt;
 
