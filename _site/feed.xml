@@ -1774,6 +1774,40 @@ Just thought it would be fun to share here. As of today I am confirmed to be wor
         
         
       </item>
+      <item>
+        <title>Projects and More Interesting Updates</title>
+        <description>&lt;div class=&quot;css-full-post-content js-full-post-content&quot;&gt;
+So I&#39;ve been pretty busy these last two weeks with schoolwork and other matters so I haven&#39;t had much time to update anything here.&lt;br /&gt;&lt;br /&gt;I did want to let you know that I started working on a Java library use and to implement statistics functions that I think would be useful to analyze large datasets.&lt;br /&gt;&lt;br /&gt;For now I&#39;m calling the project DStat (unless someone can come up with a better name). It will hopefully become a fully fledged statistics library for performing operations on multiple types of distributions of data. As of now it only has a few functions, but feel free to take a look at that and the other projects over at my &lt;a href=&quot;https://github.com/zacblanco&quot; target=&quot;_blank&quot;&gt;GitHub page&lt;/a&gt;. I try to make progress whenever I find free time to do a little extra work. Feel free to contribute too! Everything I do I release as open source.&lt;br /&gt;&lt;br /&gt;I eventually would like to be able to take some data you might find from your own &lt;a href=&quot;https://www.google.com/settings/takeout&quot; target=&quot;_blank&quot;&gt;Google Data Archive&lt;/a&gt;&amp;nbsp;and within a few minutes (using DStat of course!) come up with some neat conclusions based on your own search habits or other usage statistics. Of course it might be some time before that&#39;s possible I hope that in time you will be able to find that kind of functionality with it.&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
+&lt;/div&gt;</description>
+        <pubDate>Thu, 05 Mar 2015 00:01:00 -0500</pubDate>
+        <link>http://zacblanco.github.io//2015/03/projects-and-more-interesting-updates.html</link>
+        <guid isPermaLink="true">http://zacblanco.github.io//2015/03/projects-and-more-interesting-updates.html</guid>
+        
+        
+      </item>
     
-  </channel>
+      <item>
+        <title>Data....Science?</title>
+        <description>&lt;div class=&quot;css-full-post-content js-full-post-content&quot;&gt;
+So, I&#39;ll have to break it to you now I guess. If you couldn&#39;t already tell from the title of this blog I&#39;m really into the whole &#39;big data&#39; thing. I think data science is a really cool and interesting field that&#39;s starting to emerge. Universities are offering new courses on data science and some are even starting degree programs.&lt;br /&gt;&lt;br /&gt;This past semester I took a Byrne Seminar called &lt;i&gt;Data: What is it Good for? (Absolutely Something)&lt;/i&gt;&amp;nbsp;It was taught by two ECE faculty here at Rutgers. I&#39;ll link to their pages at the end.&lt;br /&gt;&lt;br /&gt;The class really opened up my eyes to this whole whole new prospect of data and put it in this different light. We don&#39;t realize the potential that all these numbers have. They all tell part of a huge story, and the data tells different stories too! The possibilities are really almost endless.&lt;br /&gt;&lt;br /&gt;I&#39;m excited to be in the position I am in now to see how the field evolves over the next 5-10 years and what advances we make.&lt;br /&gt;&lt;br /&gt;I&#39;m also really interested in machine learning and the solutions it proposes to solving some problems.&lt;br /&gt;&lt;br /&gt;Here&#39;s an interesting video I found over at &lt;a href=&quot;http://reddit.com/r/machinelearning&quot;&gt;reddit.com/r/machinelearning&lt;/a&gt; on teaching computers how to &lt;a href=&quot;https://www.youtube.com/watch?v=xKt21ucdBY0&quot;&gt;automatically caption digital photographs&lt;/a&gt;. I found it really interesting.&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;Links to my professor&#39;s pages. I think they have some really interesting research.&lt;br /&gt;&lt;br /&gt;&lt;a href=&quot;http://www.ece.rutgers.edu/~asarwate/&quot; rel=&quot;nofollow&quot; target=&quot;_blank&quot;&gt;Anand Sarwate&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;&lt;a href=&quot;http://www.rci.rutgers.edu/~wub1/&quot; rel=&quot;nofollow&quot; target=&quot;_blank&quot;&gt;Waheed Bajwa&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
+&lt;/div&gt;</description>
+        <pubDate>Sat, 21 Feb 2015 01:16:00 -0500</pubDate>
+        <link>http://zacblanco.github.io//2015/02/datascience.html</link>
+        <guid isPermaLink="true">http://zacblanco.github.io//2015/02/datascience.html</guid>
+        
+        
+        <category>data</category>
+        
+        <category>data science</category>
+        
+        <category>bajwa</category>
+        
+        <category>science</category>
+        
+        <category>sarwate</category>
+        
+        <category>intro</category>
+        
+      </item>
+      </channel>
 </rss>
