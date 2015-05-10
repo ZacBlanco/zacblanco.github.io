@@ -70,83 +70,167 @@
   
   <article class="post">
     <h1 class="post-title">
-      <a href="/hosting-with-github-pages.html">
-        Hosting your Jekyll site with GitHub Pages
+      <a href="/nerual-networks-and-backpropagation.html">
+        Neural Networks and the Backpropagation Algorithm
       </a>
     </h1>
 
-    <time datetime="2015-03-18T00:00:00-04:00" class="post-date">18 Mar 2015</time>
+    <time datetime="2015-05-09T20:12:56-04:00" class="post-date">09 May 2015</time>
 
-    <p>As a continuation to the series of the last few posts I will be explaining how to host your jekyll site for <strong>free</strong> using <a href="https://github.com">GitHub</a>. GitHub provides completely free website hosting using your own GitHub account. For more information I suggest reading up on <a href="https://pages.github.com/">GitHub Pages</a>.</p>
+    <p>The other day I had been looking up information on <a href="http://en.wikipedia.org/wiki/Machine_learning">machine learning</a>. I’m new to some of the topics in this field but I have been introduced to some before. I’ve always wanted to learn more. The idea of teaching a computer how to “learn” just seems intriguing to me.</p>
 
-<p>First off, you’re going to need to <a href="https://github.com/join">create an account on GitHub</a> if you haven’t already. GitHub is a fantastic site that can host private and public git repositories for your personal projects.</p>
+<p>Specifically I had been researching <a href="http://en.wikipedia.org/wiki/Artificial_neural_network">neural networks</a>. They are useful because they can help uncover hidden patterns in a plethora of data, or be taught to perform certain tasks such as handwriting or facial recognition.</p>
 
-<p>Here’s a list of a few advantages to using GitHub Pages:</p>
+<p>I had watched an <a href="https://www.youtube.com/watch?v=q0pm3BrIUFo">MIT OpenCourseWare Lecture</a> which gave a rough introduction to neural networks which I found to be quite captivating. I found it so fantastic actually that I wanted to share the basic concepts here. For the purpose of this post, I’m going to assume that we’re teaching this neural net via supervised learning.</p>
+
+<p>Or, in other words, we are going to make this neural network learn by giving it a set of “correct” input and output values, which it will use to calibrate, or change its own structure to make sure that it also outputs the correct values. Now let’s dive in!</p>
+
+<p>To explain briefly, neural networks are modeled after the same neurons that exist in our brain.</p>
+
+<p><img src="http://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Neuron.svg/500px-Neuron.svg.png" alt="Image of Neuron" /></p>
+
+<p>For our purpose we focus on only a few of the main features of a neuron which are critical to our model for a neural network.</p>
+
+<p>The main parts of the neuron we want to focus on are:</p>
 
 <ul>
-  <li>Completely Free</li>
-  <li>A site for every project</li>
-  <li>Use your own domain name</li>
-  <li>Completely integrated with Git</li>
+  <li>Dendrites</li>
+  <li>The Axon</li>
+  <li>The Axon Terminals</li>
 </ul>
 
-<p>And of course some disadvantages:</p>
+<p><strong>The dendrites</strong> are small tree-like structures that are stimulated when enough neurotransmitters are dumped into the synapse between a neuron and the end of the dendrite. Some of these dendrites might be easier to stimulate than other based on various factors</p>
+
+<p><strong>The axon</strong> is the lengthy part of the neuron which simply propagates a “spike” of energy to the axon terminals, which originates from the dendrites.</p>
+
+<p><strong>The axon terminals</strong> dump neurotransmitters into the synapse to help stimulate the dendrites of the next neuron.</p>
+
+<p>If there are enough neurotransmitters dumped into the synapse, It will stimulate the next neuron’s dendrites, sending a spike of “excitement” or “energy” to the next neuron, and so forth. At each end of the axom terminals there is another neuron’s dendrites separated by a space called the <strong>synapse</strong>. If a neuron is stimulated, it will dump neurotransmitters into the synapse.</p>
+
+<p>This is a gross simplification of a neuron, but for the model of a neural network and the backpropagation algorithm, we don’t need to understand more than this.</p>
+
+<h4 id="modeling-the-neuron">Modeling the Neuron</h4>
+<hr />
+
+<p><img src="../assets/images/neural-nets/net-model.jpg" alt="Image of Model" /></p>
+
+<p>First, notice the inputs. Each input from <script type="math/tex">x_1</script> to <script type="math/tex">x_n</script> is given as an input to the neuron. Each of the inputs is multiplied by a weight <script type="math/tex">w</script> corresponding to an input before being summed into the function.</p>
+
+<p>The neuron also has a bias, labeled  <script type="math/tex">b</script> in the diagram, which I like to call <script type="math/tex">w_0</script>. We can think of this bias as a given input to each neuron that always has a value of -1. The weight of the bias input <script type="math/tex">w_0</script> can be adjusted accordingly.</p>
+
+<p>Think of this part as the neurotransmitters being the inputs multiplied by the weights which stimulate the dendrites of the neuron.</p>
+
+<p>From here we can represent the total stimulus as the sum of each input multiplied by a corresponding weight.</p>
+
+<script type="math/tex; mode=display">-w_0 + \sum_{i=1}^{n}x_iw_i</script>
+
+<p>The value of this will be then be passed onto the activation, or <em>threshold</em> function. The threshold function might be best viewed as a single-step function, where say once the input <script type="math/tex">\alpha</script> reaches a certain value, it will output a certain value. We’re going to keep this to ones and zeros.</p>
+
+<p><img src="../assets/images/neural-nets/threshold-med.png" alt="Threshold Example" /></p>
+
+<p>Next, once the threshold is activated or not, we will get an output from this neuron. Once we run this neural network through for the first time, we are going to need to find out how good (or bad) the neural network did at predicting our answer.</p>
+
+<p>Remember how I said that the neural network is given a set of “correct” inputs and outputs to learn from? Well here’s where that comes into play.</p>
+
+<p>Let’s say that our output of the neural net is <script type="math/tex">y</script> and our desired or <em>correct</em> output is going to be assigned to <script type="math/tex">d</script>. We are going to need a function to test our performance of the neural network.</p>
+
+<p>Let’s call this function <script type="math/tex">P</script>. Also, for simplicity’s sake, and because this is <em>convenient</em> we’re going to make the performance function the following:</p>
+
+<script type="math/tex; mode=display">P(d, y) = -\frac{1}{2}(d-y)^2</script>
+
+<p>(<em>You’ll see what I mean by convenient later</em>)</p>
+
+<h4 id="adjusting-the-model">Adjusting the Model</h4>
+<hr />
+
+<p>So now we’ve got this model. We have a function to test whether our output is close to what we want it to be. We have a way to add our inputs together. What comes next?</p>
+
+<p>Well, we need to have some way of adjusting the neuron to make sure we get closer to our desired output. But how do we know what to adjust? and by how much?</p>
+
+<p>We’re going to use a method called <strong>gradient descent</strong> (or <em>ascent</em> depending on direction). We’re going to use some math here.</p>
+
+<p>So we know that our desired outputs <script type="math/tex">d</script> can be given by <script type="math/tex">\overline{d} = g(\overline{x})</script>; where <script type="math/tex">\overline{d}</script> and <script type="math/tex">\overline{x}</script> are our vectors of inputs and desired outputs that our neural network is going to learn from.</p>
+
+<p>The problem is that we don’t know what function <script type="math/tex">g</script> is, which is why we’re using the neural network to represent it. With the neural networks, we can represent our inputs and outputs by a multivaraite function <script type="math/tex">f</script>. This function can be represented by <script type="math/tex">\overline{y} = f(\overline{x}, \overline{w})</script>.</p>
+
+<p>Given these functions, we can see our performance function is now</p>
+
+<script type="math/tex; mode=display">P(g(\overline{x}), f(\overline{x}, \overline{w})) = -\frac{1}{2}(g(\overline{x})-f(\overline{x}, \overline{w}))^2</script>
+
+<p>We can see from here the performance function is really just a function of the inputs, <script type="math/tex">x</script> and the weights <script type="math/tex">w</script>.</p>
+
+<p>Now imagine that we add some complexity to our neural network. We are going make two neural layers <em>chained</em> together. That is, we have an input <script type="math/tex">x</script> passed to <script type="math/tex">w_1</script> passed to a threshold function, who’s output is then the input to the next neuron. This is multiplied by another weight <script type="math/tex">w_n</script> which is then passed to the next neuron’s threshold. The output of this 2nd threshold will be the output of the neural network.</p>
+
+<p>Just imagine the above diagram of the neural network laid end to end and on top of each other. A general overview can be seen below, where each circle represents a neuron:</p>
+
+<p><img src="http://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Colored_neural_network.svg/300px-Colored_neural_network.svg.png" alt="Model of Neural Net" /></p>
+
+<p>This is where things start to become more interesting. Using the algorithm of gradient descent, we can alter the weights <script type="math/tex">\overline{w}</script> by taking the gradient of our performance function with respect to each weight. We can also multiply this gradient by a rate constant, let’s say <script type="math/tex">\delta</script>, that will determine how much we alter the weights over each iteration.</p>
+
+<p>So let’s look at our formula</p>
+
+<script type="math/tex; mode=display">\triangle w = \delta\nabla_w P = \delta\langle \frac{\partial P}{\partial w_0}, \frac{\partial P}{\partial w_1}, \cdot\cdot\cdot, \frac{\partial P}{\partial w_n} \rangle</script>
+
+<p>This is now telling us that the change in our <script type="math/tex">w</script> over each iteration is going to be equal to <script type="math/tex">\delta</script> multiplied by the partial derivative of <script type="math/tex">P</script> with respect to each weight.</p>
+
+<p>But wait! We have a problem here. We can’t just simply take the partial derivative of <script type="math/tex">w</script> with respect to <script type="math/tex">P</script> because <script type="math/tex">w</script> lies within our other function <script type="math/tex">f</script>. This means that we are going to need the chain rule.</p>
+
+<p>So this brings up another problem: because we are going to need to take all these derivatives all of the functions in our neural network <em>must</em> be differentiable.</p>
+
+<p>So the problem of differentiability lies within our step function. Because a step function is not differentiable we need another function to replace this. Fortunately there is one similar to it that <em>is</em> differentiable!</p>
+
+<p>It’s called a sigmoid function. You might have seen it before. It has the form</p>
+
+<script type="math/tex; mode=display">S(\alpha) = \frac{1}{1 + e^{-\alpha}}</script>
+
+<p>The graph of the sigmoid has the following shape:</p>
+
+<p><img src="../assets/images/neural-nets/sigmoid.png" alt="Sigmoid function" />.</p>
+
+<p>Great! So where do we go from here?</p>
+
+<p>Well, I suggest you watch the <a href="https://www.youtube.com/watch?v=q0pm3BrIUFo">video I linked earlier</a> if you want a really good understanding of how this works. I will do my best to explain it, but I won’t go into explicit detail of how this all works together. The video will explain things more thoroughly.</p>
+
+<p>So if we keep taking our partial derivatives with the chain rule, it turns out that we will need to take the derivative of this sigmoid function.</p>
+
+<p>Turns out this function is actually pretty neat. Let’s call the sigmoid function <script type="math/tex">\beta</script>. It just so happens, that if you take the derivative of this function <em>and</em> we manipulate it a bit, that the derivative of the function turns out to be expressed in terms of the original function itself. I’ll let the math do the talking here.</p>
+
+<script type="math/tex; mode=display">\beta = \frac{1}{1 + e^{-\alpha}}</script>
+
+<script type="math/tex; mode=display">\frac{d}{d\alpha}(\beta) = (1 + e^{-\alpha})^2 e^{-\alpha}</script>
+
+<p>Then we rearrange our derivative a little bit:</p>
+
+<script type="math/tex; mode=display">\frac{d}{d\alpha}(\beta) = \beta(1-\beta)</script>
+
+<p>Voila! The derivative of the sigmoid function turns out to be given in terms of the original! I find that to be quite astounding. If you don’t believe me you’ll just have to take my word for it. I promise you it works. (This is also why I called this function <em>convenient</em>).</p>
+
+<p>So now if we do the calculation for each of the partial derivative we get something like. Also, pretend like the value <script type="math/tex">y_n</script> is the respective output for each neuron in the neural network and <script type="math/tex">z</script> is the final output  of the neural net.</p>
+
+<p>The change in weight is then given by</p>
+
+<script type="math/tex; mode=display">\frac{\partial P}{\partial w_n} = \delta (w_{n+1})(d - z) (\beta(y_n)(1 - \beta(y_n)) (\beta(y_{n-1})(1 - \beta(y_{n-1}))...</script>
+
+<h4 id="wrapping-up">Wrapping Up</h4>
+<hr />
+
+<p>So what does all of this mean?</p>
+
+<p>What this means is that when we are calculating exactly how to adjust the weights in our neural network, the change in each weight depends on a few things.</p>
 
 <ul>
-  <li>No server side scripting</li>
-  <li>No control over how the site is served</li>
-  <li>No secure connections with <code>https</code></li>
+  <li>The input to the neuron</li>
+  <li>The output of the neuron</li>
+  <li>The weight of the next neuron.</li>
 </ul>
 
-<p>Now this really isn’t a complete list, but these are some of the things I thought would stand out to most people.</p>
+<p>This helps explain why it’s called the backpropagation algorithm. You need to calculate the change in weights at the end of your neural network before you can calculate the change in the beginning. So you work your way back in a wave-like manner, hence the name <em>backpropagation</em>.</p>
 
-<p>Now for the fun part! Let’s get started.</p>
+<p>The other great thing about this algorithm is that the change in weight depends on things you’ve already calculated, <em>or</em> things you’re going to have to calculate anyways. It’s extremely effecient. There are few, if any, wasted computations.</p>
 
-<h3 id="create-a-repository-for-your-site">Create a Repository for Your Site</h3>
+<p>And that’s simply it. The most basic of neural networks and the backpropagation</p>
 
-<p>First make sure that you’re logged in to GitHub. Then, head over to your GitHub profile located at <code>https://github.com/username</code>.</p>
-
-<p>At the top of the screen click the <strong><code>+</code></strong> button at the top of the page and create a new repository. You <strong>MUST</strong> name the repository in the following way: <code>username.github.io</code>. Your site will not be created if it is not named correctly.</p>
-
-<p>Now that we’ve got your site’s repository set up we can finally add your Jekyll files to that repository.</p>
-
-<p>Now let’s head back to the desktop and open a new terminal window. Using the terminal navigate to the desired folder where you would like your project to be contained.</p>
-
-<p>Then, assuming you’ve got git installed we’re going to use the following command:</p>
-
-<pre><code>    ~ $ git clone https://github.com/username/username.github.io
-</code></pre>
-
-<p>Now check using <code>ls</code> or by opening up a new finder window, navigate to the same folder you just had by using the terminal and you should find a new folder by the name of <code>username.github.io</code>. Open up this folder. This is the place where we will copy your Jekyll files to be pushed to GitHub’s servers.</p>
-
-<p>Now assuming you’ve already built a Jekyll site, copy the files from your site into this folder. Go back to your terminal window and <code>cd</code> into <code>username.github.io</code> folder. Then type the following commands</p>
-
-<pre><code>    ~ $ git add --all
-    ~ $ git commit -m "Init Commit"
-    ~ $ git push -u origin master
-</code></pre>
-
-<p>Once you’ve done that, congratulations! You’ve made your first GitHub pages site! Open up a web browser and head over to <code>http://username.github.io</code>.</p>
-
-<p>The site should be live within a few minutes. New changes after this should be live within seconds of pushing to the server.</p>
-
-<h4 id="an-alternative-method">An Alternative Method</h4>
-
-<p>If you do not have git installed on your computer, or you are unfamiliar with the command line, <em>and</em> you’re running Microsoft Windows or Mac OS X, there’s another method you can use to get your site running.</p>
-
-<p>Download <a href="https://windows.github.com/">GitHub for Windows</a> if you’re running Windows, or <a href="https://mac.github.com/">GitHub for Mac</a> if you’re running OS X. Once you install GitHub’s software, login to the git client. You should see a list of your repositories within the software. Clone the repository that we just created on GitHub. There should be a menu to do this.</p>
-
-<p>If you open a file browser, look for a folder in the location <code>~/username/documents/GitHub/username.github.io</code>. This is the location where your repository is located. You can copy your files from the Jekyll site into that folder. Once you’ve done that, head over to the GitHub software and name your commit, add a message if you’d like. Then <code>commit</code> and <code>sync</code>.</p>
-
-<p>Once you’ve synced your repository, you can open a web browser and navigate to <code>http://username.github.io</code> where your site should be live in a matter of seconds.</p>
-
-<p>If your site is not appearing, then you may have named your repository wrong, or you might have to wait a few minutes for the servers to create your site. Wait at least 10 minutes to see if your site is up.</p>
-
-<p>If you’re having trouble refer to the github pages documentation</p>
-
-<p>Another great thing about GitHub pages is that on top of having a site for yourself, you are allowed a site for each project you have located at <code>http://username.github.io/project-name</code>. This is a great way to host many pages and to allow people to access and learn more about your open source project.</p>
-
-<p>Hopefully this brief guide was enough for you to get your site set up on GitHub Pages. Good luck!</p>
+<hr />
 
 
   </article>
@@ -166,7 +250,7 @@
 
       <footer class="footer">
         <small>
-          &copy; <time datetime="2015-03-23T11:02:31-04:00">2015</time>. All rights reserved.
+          &copy; <time datetime="2015-05-09T20:12:56-04:00">2015</time>. All rights reserved.
         </small>
       </footer>
     </div>
