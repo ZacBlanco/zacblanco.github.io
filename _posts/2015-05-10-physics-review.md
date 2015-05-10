@@ -26,7 +26,7 @@ The format of this post will be the following: For each equation I will explain 
 
 ## Rotational Dynamics
 
-##### Toque
+##### Torque
 
 > $$ \tau = Fl $$
 
@@ -758,14 +758,6 @@ For a reversible isothermal process, the entropy is measured as above. It has un
 For a process which isn't isothermal we can't use the above equations. The equation to use is:
 
 > $$ \Delta S = \int_{T_1}^{T_2}mc\frac{dT}{T} = mc\cdot ln(\frac{T_2}{T_1}) $$
-
-
-
-
-
-
-
-
 
 
 
