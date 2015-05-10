@@ -362,30 +362,47 @@ Simply defining density as amount of mass per unit of volume
 
 ##### Pressure (on Bernoulli's Equation)
 
-> $$ P = P_0 + \rho gh + \frac{1}{2}\rho v^2 $$
+> $$ P = P_0 + \rho gh + $$
+
+The pressure given density of the fluid and changes in height are given by this equation.
 
 ##### Definition of Pressure
 
 > $$ P = \frac{F}{A} $$
 
+We define pressure here as force per unit of area.
+
 ##### Definition of Flow Rate
 
 > $$ \frac{V}{t} = Av $$
+
+The flow rate of a fluid is defined by the Volume, $$ V $$, of fluid that passes through a given point in a unit of time, $$ t $$
 
 ##### Equal Pressures and Forces
 
 > $$ A_1F_2 = A_2F_1 $$
 
+This equation relates the cross-sectional area of a pipe and the force pushing against the pipe at two different point on level ground must be equal.
+
 ##### Difference in Pressure due to Height
 
 > $$ P_2 - P_1 = -\rho g(y_2 - y_1) $$
+
+This equation tells us the difference in pressure to to a change in height, h of the pipe.
 
 ##### Bernoulli's Equation
 
 > $$ p_1 + \rho gh_1 + \frac{1}{2}\rho v^2_1 = p_1 + \rho gh_2 + \frac{1}{2}\rho v^2_2 $$
 
+Bernoulli's equation tells us that the pressure and velocity of any two points in a pipe system are related. Remember higher pressure means lower velocity. Lower pressure means higher velocity.
+
+##### Force of Buoyancy
+
 > $$ F_B = \rho V $$
 
+The force of buoyancy that an object experiences is directly related to the volume of the object submerged in water and the density of the water displaced.
+
+_Remember_: if an object floats in water, not fully submerged, the bouyant force is still equal to the weight of the object.
 
 ## Temperature and Heat
 
