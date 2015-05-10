@@ -557,13 +557,18 @@ Because we know from above that $$ Q_C $$ can never be zero, this means that $$ 
 
 > $$ e = 1- \frac{1}{r^{\gamma - 1}} $$
 
+Remember $$ \gamma $$ is defined as the ratio of heat capacities at constant volume and pressure (see earlier).
+
 ![Image of Otto Cycle](../assets/images/physics-review/otto-cycle.png)
 
 Above is an image detailing a $$ pV $$ diagram of a normal Otto Cycle. From A to B there is an adiabatic compression (no heat lost). B to C we have heat added into the system with constant pressure and some volume change (This means some work is done). Point C to D there is the power stroke. The gas expands at somewhat constant temperature doing as much work as is can while pressure decreases. Then from point D to A the extra heat is exhausted as the gas cools in temperature. It also drops in pressure while volume remains constant.
 
-##### Work an Heat in Refrigeration
+
+##### Work and Heat in Refrigeration
 
 > $$ |Q_H| = Q_C + W $$
+
+We can think of a refrigerator as simply a heat engine, but reversed. Instead of the hot resevoir letting heat out to do work, a refrigerator will have a cold resevoir, add work into the system, and exhaust more heat.
 
 ##### Efficiency of Refrigeration
 
@@ -573,23 +578,49 @@ Above is an image detailing a $$ pV $$ diagram of a normal Otto Cycle. From A to
 
 > $$ K = \frac{H}{P} $$
 
+
+#### _Stating the Second Law of Thermodynamics_
+
+_It is impossible for any system ot udnergo a pocess in which it absorbs heat from a resevoir at a single temperaure and converts the heat completely into mechanical work, with the system ending in the same state in which is began._
+
+We can also state it as: _It is impossible for any process to have as its sole result the transfer of heat form a cooler to a hotter body._
+
+#### Steps of the Carnot Cycle
+
+![Carnot Diagram](../assets/images/physics-review/carnot-diag.gif)
+
+1. The gas expands isothermally at Temperature $$ T_H $$ absorbing heat $$ Q_H $$
+2. It expands adiabatically until its temperature drops to $$ T_C $$
+3. It is compressed isothermally at $$ T_C $$ rejecting heat $$ Q_C $$.
+4. It is compressed adiabatically back to its inital state at tempterature $$ T_H $$
+
 ##### Efficicency of a Carnot Engine
 
 > $$ e_{Carnot} = 1 - \frac{T_C}{T_H} = \frac{T_H - T_C}{T_H} $$
+
+$$ T_C $$ and $$ T_H $$ are the temperatures of the cold and hot resevoirs respectively. However, it is important to note that all temperatures should be measured in _Kelvin_.
 
 ##### Efficiency Through Refrigeration
 
 > $$ K_{Carnot} = \frac{T_C}{T_H - T_C} $$
 
+Similar to the efficiency of a carnot engine, the temperatures for the efficiency of refrigeration must also be measured in Kelvin.
+
 ##### Entropy
 
 > $$ \Delta S = \frac{Q}{T} $$
+
+For a reversible isothermal process, the entropy is measured as above. It has units of Energy / Temperature which normally is $$ \frac{J}{K} $$.
 
 ##### Entropy Restated
 
 > $$ \Delta S = \int_1^2\frac{dQ}{T} $$
 
+##### Entropy in Non-Isothermal Processes
 
+For a process which isn't isothermal we can't use the above equations. The equation to use is:
+
+> $$ \Delta S = \int_{T_1}^{T_2}mc\frac{dT}{T} = mc\cdot ln(\frac{T_2}{T_1}) $$
 
 
 

@@ -830,15 +830,19 @@
   <script type="math/tex; mode=display">e = 1- \frac{1}{r^{\gamma - 1}}</script>
 </blockquote>
 
+<p>Remember <script type="math/tex">\gamma</script> is defined as the ratio of heat capacities at constant volume and pressure (see earlier).</p>
+
 <p><img src="../assets/images/physics-review/otto-cycle.png" alt="Image of Otto Cycle" /></p>
 
 <p>Above is an image detailing a <script type="math/tex">pV</script> diagram of a normal Otto Cycle. From A to B there is an adiabatic compression (no heat lost). B to C we have heat added into the system with constant pressure and some volume change (This means some work is done). Point C to D there is the power stroke. The gas expands at somewhat constant temperature doing as much work as is can while pressure decreases. Then from point D to A the extra heat is exhausted as the gas cools in temperature. It also drops in pressure while volume remains constant.</p>
 
-<h5 id="work-an-heat-in-refrigeration">Work an Heat in Refrigeration</h5>
+<h5 id="work-and-heat-in-refrigeration">Work and Heat in Refrigeration</h5>
 
 <blockquote>
   <script type="math/tex; mode=display">|Q_H| = Q_C + W</script>
 </blockquote>
+
+<p>We can think of a refrigerator as simply a heat engine, but reversed. Instead of the hot resevoir letting heat out to do work, a refrigerator will have a cold resevoir, add work into the system, and exhaust more heat.</p>
 
 <h5 id="efficiency-of-refrigeration">Efficiency of Refrigeration</h5>
 
@@ -852,11 +856,30 @@
   <script type="math/tex; mode=display">K = \frac{H}{P}</script>
 </blockquote>
 
+<h4 id="stating-the-second-law-of-thermodynamics"><em>Stating the Second Law of Thermodynamics</em></h4>
+
+<p><em>It is impossible for any system ot udnergo a pocess in which it absorbs heat from a resevoir at a single temperaure and converts the heat completely into mechanical work, with the system ending in the same state in which is began.</em></p>
+
+<p>We can also state it as: <em>It is impossible for any process to have as its sole result the transfer of heat form a cooler to a hotter body.</em></p>
+
+<h4 id="steps-of-the-carnot-cycle">Steps of the Carnot Cycle</h4>
+
+<p><img src="../assets/images/physics-review/carnot-diag.gif" alt="Carnot Diagram" /></p>
+
+<ol>
+  <li>The gas expands isothermally at Temperature <script type="math/tex">T_H</script> absorbing heat <script type="math/tex">Q_H</script></li>
+  <li>It expands adiabatically until its temperature drops to <script type="math/tex">T_C</script></li>
+  <li>It is compressed isothermally at <script type="math/tex">T_C</script> rejecting heat <script type="math/tex">Q_C</script>.</li>
+  <li>It is compressed adiabatically back to its inital state at tempterature <script type="math/tex">T_H</script></li>
+</ol>
+
 <h5 id="efficicency-of-a-carnot-engine">Efficicency of a Carnot Engine</h5>
 
 <blockquote>
   <script type="math/tex; mode=display">e_{Carnot} = 1 - \frac{T_C}{T_H} = \frac{T_H - T_C}{T_H}</script>
 </blockquote>
+
+<p><script type="math/tex">T_C</script> and <script type="math/tex">T_H</script> are the temperatures of the cold and hot resevoirs respectively. However, it is important to note that all temperatures should be measured in <em>Kelvin</em>.</p>
 
 <h5 id="efficiency-through-refrigeration">Efficiency Through Refrigeration</h5>
 
@@ -864,16 +887,28 @@
   <script type="math/tex; mode=display">K_{Carnot} = \frac{T_C}{T_H - T_C}</script>
 </blockquote>
 
+<p>Similar to the efficiency of a carnot engine, the temperatures for the efficiency of refrigeration must also be measured in Kelvin.</p>
+
 <h5 id="entropy">Entropy</h5>
 
 <blockquote>
   <script type="math/tex; mode=display">\Delta S = \frac{Q}{T}</script>
 </blockquote>
 
+<p>For a reversible isothermal process, the entropy is measured as above. It has units of Energy / Temperature which normally is <script type="math/tex">\frac{J}{K}</script>.</p>
+
 <h5 id="entropy-restated">Entropy Restated</h5>
 
 <blockquote>
   <script type="math/tex; mode=display">\Delta S = \int_1^2\frac{dQ}{T}</script>
+</blockquote>
+
+<h5 id="entropy-in-non-isothermal-processes">Entropy in Non-Isothermal Processes</h5>
+
+<p>For a process which isn’t isothermal we can’t use the above equations. The equation to use is:</p>
+
+<blockquote>
+  <script type="math/tex; mode=display">\Delta S = \int_{T_1}^{T_2}mc\frac{dT}{T} = mc\cdot ln(\frac{T_2}{T_1})</script>
 </blockquote>
 
 
@@ -894,7 +929,7 @@
 
       <footer class="footer">
         <small>
-          &copy; <time datetime="2015-05-10T15:14:07-04:00">2015</time>. All rights reserved.
+          &copy; <time datetime="2015-05-10T15:48:28-04:00">2015</time>. All rights reserved.
         </small>
       </footer>
     </div>

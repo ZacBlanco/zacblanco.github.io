@@ -6,8 +6,8 @@
 </description>
     <link>http://zacblanco.github.io//</link>
     <atom:link href="http://zacblanco.github.io//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 10 May 2015 15:14:07 -0400</pubDate>
-    <lastBuildDate>Sun, 10 May 2015 15:14:07 -0400</lastBuildDate>
+    <pubDate>Sun, 10 May 2015 15:48:28 -0400</pubDate>
+    <lastBuildDate>Sun, 10 May 2015 15:48:28 -0400</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -765,15 +765,19 @@
   &lt;script type=&quot;math/tex; mode=display&quot;&gt;e = 1- \frac{1}{r^{\gamma - 1}}&lt;/script&gt;
 &lt;/blockquote&gt;
 
+&lt;p&gt;Remember &lt;script type=&quot;math/tex&quot;&gt;\gamma&lt;/script&gt; is defined as the ratio of heat capacities at constant volume and pressure (see earlier).&lt;/p&gt;
+
 &lt;p&gt;&lt;img src=&quot;../assets/images/physics-review/otto-cycle.png&quot; alt=&quot;Image of Otto Cycle&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Above is an image detailing a &lt;script type=&quot;math/tex&quot;&gt;pV&lt;/script&gt; diagram of a normal Otto Cycle. From A to B there is an adiabatic compression (no heat lost). B to C we have heat added into the system with constant pressure and some volume change (This means some work is done). Point C to D there is the power stroke. The gas expands at somewhat constant temperature doing as much work as is can while pressure decreases. Then from point D to A the extra heat is exhausted as the gas cools in temperature. It also drops in pressure while volume remains constant.&lt;/p&gt;
 
-&lt;h5 id=&quot;work-an-heat-in-refrigeration&quot;&gt;Work an Heat in Refrigeration&lt;/h5&gt;
+&lt;h5 id=&quot;work-and-heat-in-refrigeration&quot;&gt;Work and Heat in Refrigeration&lt;/h5&gt;
 
 &lt;blockquote&gt;
   &lt;script type=&quot;math/tex; mode=display&quot;&gt;|Q_H| = Q_C + W&lt;/script&gt;
 &lt;/blockquote&gt;
+
+&lt;p&gt;We can think of a refrigerator as simply a heat engine, but reversed. Instead of the hot resevoir letting heat out to do work, a refrigerator will have a cold resevoir, add work into the system, and exhaust more heat.&lt;/p&gt;
 
 &lt;h5 id=&quot;efficiency-of-refrigeration&quot;&gt;Efficiency of Refrigeration&lt;/h5&gt;
 
@@ -787,11 +791,30 @@
   &lt;script type=&quot;math/tex; mode=display&quot;&gt;K = \frac{H}{P}&lt;/script&gt;
 &lt;/blockquote&gt;
 
+&lt;h4 id=&quot;stating-the-second-law-of-thermodynamics&quot;&gt;&lt;em&gt;Stating the Second Law of Thermodynamics&lt;/em&gt;&lt;/h4&gt;
+
+&lt;p&gt;&lt;em&gt;It is impossible for any system ot udnergo a pocess in which it absorbs heat from a resevoir at a single temperaure and converts the heat completely into mechanical work, with the system ending in the same state in which is began.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;We can also state it as: &lt;em&gt;It is impossible for any process to have as its sole result the transfer of heat form a cooler to a hotter body.&lt;/em&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;steps-of-the-carnot-cycle&quot;&gt;Steps of the Carnot Cycle&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&quot;../assets/images/physics-review/carnot-diag.gif&quot; alt=&quot;Carnot Diagram&quot; /&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;The gas expands isothermally at Temperature &lt;script type=&quot;math/tex&quot;&gt;T_H&lt;/script&gt; absorbing heat &lt;script type=&quot;math/tex&quot;&gt;Q_H&lt;/script&gt;&lt;/li&gt;
+  &lt;li&gt;It expands adiabatically until its temperature drops to &lt;script type=&quot;math/tex&quot;&gt;T_C&lt;/script&gt;&lt;/li&gt;
+  &lt;li&gt;It is compressed isothermally at &lt;script type=&quot;math/tex&quot;&gt;T_C&lt;/script&gt; rejecting heat &lt;script type=&quot;math/tex&quot;&gt;Q_C&lt;/script&gt;.&lt;/li&gt;
+  &lt;li&gt;It is compressed adiabatically back to its inital state at tempterature &lt;script type=&quot;math/tex&quot;&gt;T_H&lt;/script&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
 &lt;h5 id=&quot;efficicency-of-a-carnot-engine&quot;&gt;Efficicency of a Carnot Engine&lt;/h5&gt;
 
 &lt;blockquote&gt;
   &lt;script type=&quot;math/tex; mode=display&quot;&gt;e_{Carnot} = 1 - \frac{T_C}{T_H} = \frac{T_H - T_C}{T_H}&lt;/script&gt;
 &lt;/blockquote&gt;
+
+&lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;T_C&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;T_H&lt;/script&gt; are the temperatures of the cold and hot resevoirs respectively. However, it is important to note that all temperatures should be measured in &lt;em&gt;Kelvin&lt;/em&gt;.&lt;/p&gt;
 
 &lt;h5 id=&quot;efficiency-through-refrigeration&quot;&gt;Efficiency Through Refrigeration&lt;/h5&gt;
 
@@ -799,16 +822,28 @@
   &lt;script type=&quot;math/tex; mode=display&quot;&gt;K_{Carnot} = \frac{T_C}{T_H - T_C}&lt;/script&gt;
 &lt;/blockquote&gt;
 
+&lt;p&gt;Similar to the efficiency of a carnot engine, the temperatures for the efficiency of refrigeration must also be measured in Kelvin.&lt;/p&gt;
+
 &lt;h5 id=&quot;entropy&quot;&gt;Entropy&lt;/h5&gt;
 
 &lt;blockquote&gt;
   &lt;script type=&quot;math/tex; mode=display&quot;&gt;\Delta S = \frac{Q}{T}&lt;/script&gt;
 &lt;/blockquote&gt;
 
+&lt;p&gt;For a reversible isothermal process, the entropy is measured as above. It has units of Energy / Temperature which normally is &lt;script type=&quot;math/tex&quot;&gt;\frac{J}{K}&lt;/script&gt;.&lt;/p&gt;
+
 &lt;h5 id=&quot;entropy-restated&quot;&gt;Entropy Restated&lt;/h5&gt;
 
 &lt;blockquote&gt;
   &lt;script type=&quot;math/tex; mode=display&quot;&gt;\Delta S = \int_1^2\frac{dQ}{T}&lt;/script&gt;
+&lt;/blockquote&gt;
+
+&lt;h5 id=&quot;entropy-in-non-isothermal-processes&quot;&gt;Entropy in Non-Isothermal Processes&lt;/h5&gt;
+
+&lt;p&gt;For a process which isn’t isothermal we can’t use the above equations. The equation to use is:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;script type=&quot;math/tex; mode=display&quot;&gt;\Delta S = \int_{T_1}^{T_2}mc\frac{dT}{T} = mc\cdot ln(\frac{T_2}{T_1})&lt;/script&gt;
 &lt;/blockquote&gt;
 
 </description>
