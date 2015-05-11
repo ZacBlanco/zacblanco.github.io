@@ -278,7 +278,7 @@ This equation describes the average amount of power used by a string to make a w
 
 ##### Fundamental Frequencies of a Wave on a String
 
-> $$ f_n = \frac{nv}{2L} $$
+> $$ f_n = \frac{nv}{2L}; (n=1, 2, 3, ...)$$
 
 A wave cannot exist on a string unless half of a wavelength is equal to a multiple of the length of the string. Because a fixed string with tension, $$ F $$ and linear density $$ \mu $$ doesn't change, there are only certain frequencies that can be played on a string. These are called the fundamental frequencies. $$ n = 1, 2, 3... $$, v is the velocity that the waves travel on the string. $$ L $$ is the length of the string.
 
@@ -316,13 +316,13 @@ Sound intensity is proportional to the amplitude of the sound wave being produce
 
 ##### Fundamental Frequencies (Open Pipe)
 
-> $$ f_n = \frac{nv}{2L} $$
+> $$ f_n = \frac{nv}{2L}; (n = 1, 2, 3, ...) $$
 
 There are fundamental frequencies for sound in open pipes (one with openings at each end). Similar to a string. we need only the speed of sound and the length of the pipe to calculate the fundamental frequencies.
 
 ##### Fundamental Frequencies (Stopped Pipe)
 
-> $$ f_n = \frac{nv}{4L} $$
+> $$ f_n = \frac{nv}{4L}; (n = 1, 3, 5, ...)$$
 
 Similar to the above, this equation is for a stopped pipe (one end open, the other closed). We can calculate the fundamental frequncies for any pipe with length L.
 
@@ -359,7 +359,7 @@ Simply defining density as amount of mass per unit of volume
 
 ##### Pressure (on Bernoulli's Equation)
 
-> $$ P = P_0 + \rho gh + $$
+> $$ P = P_0 + \rho gh $$
 
 The pressure given density of the fluid and changes in height are given by this equation.
 
@@ -529,7 +529,7 @@ Just iterating over the gas law again. Make sure you know it!
 
 ##### Relation Between PV and the Translational Kinetic Energy of a Gas
 
-> $$ PV = \frac{3}{2}K_{TR} $$
+> $$ PV = \frac{2}{3}K_{TR} $$
 
 $$ K_{TR} $$ is the Average translational kinetic energy of a gas. $$ PV $$ is equal to $$ \frac{3}{2} $$ this value. 
 
@@ -595,6 +595,15 @@ For a solid that has molecules of only 1 atom, the heat capacity at constant vol
 
 The total Energy of a solid is equal to $$ 3nRT $$.
 
+#### Phase Diagrams
+
+![Image of Phase Diagram](../assets/images/physics-review/phase-diag.png)
+
+Phase diagrams can be useful in determining the conditions under which a material transitions phases from solid, to liquid, and gas.
+
+The figure denotes the curves which show melting, freezing, vaporization, condensation, sublimation, and deposition. Each area shows the different phases that occur given certain temperature and pressure.
+
+The triple point is the point at which all 3 states of matter can exist for a certain material. The critical point is the point at which the properties of liquids and gases mix due to high pressure and temperature.
 
 ## The First Law of Thermodynamics
 
