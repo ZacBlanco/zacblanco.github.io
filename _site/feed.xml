@@ -6,8 +6,8 @@
 </description>
     <link>http://zacblanco.github.io//</link>
     <atom:link href="http://zacblanco.github.io//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 10 May 2015 17:19:09 -0400</pubDate>
-    <lastBuildDate>Sun, 10 May 2015 17:19:09 -0400</lastBuildDate>
+    <pubDate>Mon, 11 May 2015 13:27:51 -0400</pubDate>
+    <lastBuildDate>Mon, 11 May 2015 13:27:51 -0400</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -34,7 +34,7 @@
 &lt;h5 id=&quot;torque&quot;&gt;Torque&lt;/h5&gt;
 
 &lt;blockquote&gt;
-  &lt;script type=&quot;math/tex; mode=display&quot;&gt;\tau = Fl&lt;/script&gt;
+  &lt;script type=&quot;math/tex; mode=display&quot;&gt;\tau = Fl = I\alpha&lt;/script&gt;
 &lt;/blockquote&gt;
 
 &lt;p&gt;Torque &lt;script type=&quot;math/tex&quot;&gt;\tau&lt;/script&gt; is equal to the perpendicular force along the moment arm applied a distance, &lt;script type=&quot;math/tex&quot;&gt;l&lt;/script&gt;  from a rotational axis.&lt;/p&gt;
@@ -490,6 +490,14 @@
 
 &lt;p&gt;The flow rate of a fluid is defined by the Volume, &lt;script type=&quot;math/tex&quot;&gt;V&lt;/script&gt;, of fluid that passes through a given point in a unit of time, &lt;script type=&quot;math/tex&quot;&gt;t&lt;/script&gt;&lt;/p&gt;
 
+&lt;h5 id=&quot;continuity-of-flow-rate&quot;&gt;Continuity Of Flow Rate&lt;/h5&gt;
+
+&lt;blockquote&gt;
+  &lt;script type=&quot;math/tex; mode=display&quot;&gt;A_1v_1 = A_2v_2 &gt;&gt; \frac{A_1}{A_2} = \frac{v_2}{v_1}&lt;/script&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;This equation is basically telling us that for a pipe flowing with an incompressible fluid inside, the velocity multiplied by the cross sectional area should be exactly the same.&lt;/p&gt;
+
 &lt;h5 id=&quot;equal-pressures-and-forces&quot;&gt;Equal Pressures and Forces&lt;/h5&gt;
 
 &lt;blockquote&gt;
@@ -509,7 +517,7 @@
 &lt;h5 id=&quot;bernoullis-equation&quot;&gt;Bernoulli’s Equation&lt;/h5&gt;
 
 &lt;blockquote&gt;
-  &lt;script type=&quot;math/tex; mode=display&quot;&gt;p_1 + \rho gh_1 + \frac{1}{2}\rho v^2_1 = p_1 + \rho gh_2 + \frac{1}{2}\rho v^2_2&lt;/script&gt;
+  &lt;script type=&quot;math/tex; mode=display&quot;&gt;p_1 + \rho gh_1 + \frac{1}{2}\rho v^2_1 = p_1 + \rho gh_2 + \frac{1}{2}\rho v^2_2 = constant&lt;/script&gt;
 &lt;/blockquote&gt;
 
 &lt;p&gt;Bernoulli’s equation tells us that the pressure and velocity of any two points in a pipe system are related. Remember higher pressure means lower velocity. Lower pressure means higher velocity.&lt;/p&gt;
@@ -517,7 +525,7 @@
 &lt;h5 id=&quot;force-of-buoyancy&quot;&gt;Force of Buoyancy&lt;/h5&gt;
 
 &lt;blockquote&gt;
-  &lt;script type=&quot;math/tex; mode=display&quot;&gt;F_B = \rho V&lt;/script&gt;
+  &lt;script type=&quot;math/tex; mode=display&quot;&gt;F_B = \rho gV&lt;/script&gt;
 &lt;/blockquote&gt;
 
 &lt;p&gt;The force of buoyancy that an object experiences is directly related to the volume of the object submerged in water and the density of the water displaced.&lt;/p&gt;
@@ -545,7 +553,7 @@
 &lt;h5 id=&quot;temperature-in-kelvin&quot;&gt;Temperature in Kelvin&lt;/h5&gt;
 
 &lt;blockquote&gt;
-  &lt;script type=&quot;math/tex; mode=display&quot;&gt;T_K = T_C = 273&lt;/script&gt;
+  &lt;script type=&quot;math/tex; mode=display&quot;&gt;T_K = T_C + 273&lt;/script&gt;
 &lt;/blockquote&gt;
 
 &lt;p&gt;Temperature on the absolute scale is measured in Kelvins. &lt;script type=&quot;math/tex&quot;&gt;0K&lt;/script&gt; is absolute 0. Other temperature scales can be conerted to Kelvin by the above formula.&lt;/p&gt;
@@ -1544,23 +1552,11 @@ We&#39;re ust getting started here.
       </item>
     
       <item>
-        <title>Blog transfer</title>
-        <description>&lt;div class=&quot;css-full-post-content js-full-post-content&quot;&gt;
-Since I&#39;m pretty new to blogging I haven&#39;t found the platform yet that I like best. I decided blogger was a little too plain and wordpress had some better layouts but didn&#39;t give me enough control, so I&#39;ve decided to move to jekyll hosting using github pages.&lt;br /&gt;&lt;br /&gt;I won&#39;t be posting here any longer. Please direct all traffic to &lt;a href=&quot;http://zacblanco.github.io/&quot;&gt;zacblanco.github.io&lt;/a&gt;.&lt;br /&gt;&lt;br /&gt;EDIT:&lt;br /&gt;&lt;br /&gt;I just want to add my previous post about an updated site-- well. Now that I&#39;m using Jekyll I won&#39;t be able to keep that as the landing page. You can still find it and view-source &lt;a href=&quot;http://zacblanco.github.io/s-old/index.html&quot;&gt;zacblanco.github.io/s-old/index.html&lt;/a&gt;
-&lt;/div&gt;</description>
-        <pubDate>Mon, 09 Mar 2015 17:50:00 -0400</pubDate>
-        <link>http://zacblanco.github.io//2015/03/blog-transfer.html</link>
-        <guid isPermaLink="true">http://zacblanco.github.io//2015/03/blog-transfer.html</guid>
-        
-        
-      </item>
-    
-      <item>
         <title>Updated Site</title>
         <description>&lt;div class=&quot;css-full-post-content js-full-post-content&quot;&gt;
 So I just wanted to let you guys know that I&#39;ve updated my GitHub pages site. Because I like learning and building things form scratch to learn how everything is put together I built my site from the ground up and learned a few things along the way.&lt;br /&gt;&lt;br /&gt;I was inspired to do this redesign after I came across flexbox. A CSS display property that I had not previously known of. It makes a lot of resizing and overall site layout much easier. I was inspired to rebuild my site using this.&lt;br /&gt;&lt;br /&gt;The great thing is that flexbox is easy. It just works. and It&#39;s trivial to center things in your screen and resize the browser causing them to flow onto other line. It really is a great tool. The one caveat is that it doesn&#39;t have great browser support.&lt;br /&gt;&lt;br /&gt;I&#39;ve currently tested on the most updated versions of the major browsers (IE, Chrome, Firefox, Safari) and so far Chrome and Firefox render the page properly. Unfortunately however, Safari definitely does not render the page properly. Most older browsers don&#39;t Although I&#39;m not too worried about this. Even with improper display the page is still navigable. IE11 surprisingly does. Even with limited support for this display I think people should start adopting it in their designs so we can force more people to upgrade their browsers, so that everyone can anjoy a modern browsing experience.&lt;br /&gt;&lt;br /&gt;Over the next few days I&#39;ll do my best to post some simple tutorials using flexbox and some of the new CSS3 tricks I&#39;ve learned over the weekend while I made my site.&lt;br /&gt;&lt;br /&gt;In the meantime you should check out&amp;nbsp;&lt;a href=&quot;http://flexboxin5.com/&quot; target=&quot;_blank&quot;&gt;flexboxin5&lt;/a&gt;&amp;nbsp;it helped me figure out what I was doing and what to include in my CSS to fix the layouts. It&#39;s a great tutorial&lt;br /&gt;&lt;br /&gt;Don&#39;t forget to check out the new design!&lt;br /&gt;&lt;br /&gt;&lt;a href=&quot;http://zacblanco.github.io/&quot;&gt;zacblanco.github.io&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;Zac
 &lt;/div&gt;</description>
-        <pubDate>Mon, 09 Mar 2015 05:29:00 -0400</pubDate>
+        <pubDate>Mon, 09 Mar 2015 00:00:00 -0400</pubDate>
         <link>http://zacblanco.github.io//2015/03/updated-site.html</link>
         <guid isPermaLink="true">http://zacblanco.github.io//2015/03/updated-site.html</guid>
         
@@ -1568,13 +1564,13 @@ So I just wanted to let you guys know that I&#39;ve updated my GitHub pages site
       </item>
     
       <item>
-        <title>Internship</title>
+        <title>Blog transfer</title>
         <description>&lt;div class=&quot;css-full-post-content js-full-post-content&quot;&gt;
-Just thought it would be fun to share here. As of today I am confirmed to be working as an intern this summer with Hortonworks; a major corporate contributor to the open-source Hadoop platform.&lt;br /&gt;&lt;br /&gt;I still have a lot to learn as a ECE/Comp. Sci student, but I&#39;m sure this internship will prepare me for the future. I know that I&#39;ll be surrounded by some of the best minds in the industry this summer and I really hope to learn as much as I can from my future colleagues.&lt;br /&gt;&lt;br /&gt;In light of this I thought it would be fun to make a new desktop background. I took a large image of the Hortonworks logo, the image editor GIMP and a little magic to pull this together:&lt;br /&gt;&lt;br /&gt;&lt;div class=&quot;separator&quot; style=&quot;clear: both; text-align: center;&quot;&gt;&lt;a href=&quot;http://2.bp.blogspot.com/-S1nePG9AdvQ/VPf1tYvdE3I/AAAAAAAAEBg/hMMzj7M4Uts/s1600/Hortonworks.png&quot; imageanchor=&quot;1&quot; style=&quot;margin-left: 1em; margin-right: 1em;&quot;&gt;&lt;img border=&quot;0&quot; src=&quot;http://2.bp.blogspot.com/-S1nePG9AdvQ/VPf1tYvdE3I/AAAAAAAAEBg/hMMzj7M4Uts/s1600/Hortonworks.png&quot; height=&quot;200&quot; width=&quot;320&quot; /&gt;&lt;/a&gt;&lt;/div&gt;&lt;br /&gt;Feel free to copy and redistribute this too!&lt;br /&gt;&lt;br /&gt;Cheers to a (hopefully) fantastic opportunity.
+Since I&#39;m pretty new to blogging I haven&#39;t found the platform yet that I like best. I decided blogger was a little too plain and wordpress had some better layouts but didn&#39;t give me enough control, so I&#39;ve decided to move to jekyll hosting using github pages.&lt;br /&gt;&lt;br /&gt;I won&#39;t be posting here any longer. Please direct all traffic to &lt;a href=&quot;http://zacblanco.github.io/&quot;&gt;zacblanco.github.io&lt;/a&gt;.&lt;br /&gt;&lt;br /&gt;EDIT:&lt;br /&gt;&lt;br /&gt;I just want to add my previous post about an updated site-- well. Now that I&#39;m using Jekyll I won&#39;t be able to keep that as the landing page. You can still find it and view-source &lt;a href=&quot;http://zacblanco.github.io/s-old/index.html&quot;&gt;zacblanco.github.io/s-old/index.html&lt;/a&gt;
 &lt;/div&gt;</description>
-        <pubDate>Thu, 05 Mar 2015 06:23:00 -0500</pubDate>
-        <link>http://zacblanco.github.io//2015/03/internship.html</link>
-        <guid isPermaLink="true">http://zacblanco.github.io//2015/03/internship.html</guid>
+        <pubDate>Mon, 09 Mar 2015 00:00:00 -0400</pubDate>
+        <link>http://zacblanco.github.io//2015/03/blog-transfer.html</link>
+        <guid isPermaLink="true">http://zacblanco.github.io//2015/03/blog-transfer.html</guid>
         
         
       </item>
@@ -1584,9 +1580,21 @@ Just thought it would be fun to share here. As of today I am confirmed to be wor
         <description>&lt;div class=&quot;css-full-post-content js-full-post-content&quot;&gt;
 So I&#39;ve been pretty busy these last two weeks with schoolwork and other matters so I haven&#39;t had much time to update anything here.&lt;br /&gt;&lt;br /&gt;I did want to let you know that I started working on a Java library use and to implement statistics functions that I think would be useful to analyze large datasets.&lt;br /&gt;&lt;br /&gt;For now I&#39;m calling the project DStat (unless someone can come up with a better name). It will hopefully become a fully fledged statistics library for performing operations on multiple types of distributions of data. As of now it only has a few functions, but feel free to take a look at that and the other projects over at my &lt;a href=&quot;https://github.com/zacblanco&quot; target=&quot;_blank&quot;&gt;GitHub page&lt;/a&gt;. I try to make progress whenever I find free time to do a little extra work. Feel free to contribute too! Everything I do I release as open source.&lt;br /&gt;&lt;br /&gt;I eventually would like to be able to take some data you might find from your own &lt;a href=&quot;https://www.google.com/settings/takeout&quot; target=&quot;_blank&quot;&gt;Google Data Archive&lt;/a&gt;&amp;nbsp;and within a few minutes (using DStat of course!) come up with some neat conclusions based on your own search habits or other usage statistics. Of course it might be some time before that&#39;s possible I hope that in time you will be able to find that kind of functionality with it.&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
 &lt;/div&gt;</description>
-        <pubDate>Thu, 05 Mar 2015 00:01:00 -0500</pubDate>
+        <pubDate>Thu, 05 Mar 2015 00:00:00 -0500</pubDate>
         <link>http://zacblanco.github.io//2015/03/projects-and-more-interesting-updates.html</link>
         <guid isPermaLink="true">http://zacblanco.github.io//2015/03/projects-and-more-interesting-updates.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Internship</title>
+        <description>&lt;div class=&quot;css-full-post-content js-full-post-content&quot;&gt;
+Just thought it would be fun to share here. As of today I am confirmed to be working as an intern this summer with Hortonworks; a major corporate contributor to the open-source Hadoop platform.&lt;br /&gt;&lt;br /&gt;I still have a lot to learn as a ECE/Comp. Sci student, but I&#39;m sure this internship will prepare me for the future. I know that I&#39;ll be surrounded by some of the best minds in the industry this summer and I really hope to learn as much as I can from my future colleagues.&lt;br /&gt;&lt;br /&gt;In light of this I thought it would be fun to make a new desktop background. I took a large image of the Hortonworks logo, the image editor GIMP and a little magic to pull this together:&lt;br /&gt;&lt;br /&gt;&lt;div class=&quot;separator&quot; style=&quot;clear: both; text-align: center;&quot;&gt;&lt;a href=&quot;http://2.bp.blogspot.com/-S1nePG9AdvQ/VPf1tYvdE3I/AAAAAAAAEBg/hMMzj7M4Uts/s1600/Hortonworks.png&quot; imageanchor=&quot;1&quot; style=&quot;margin-left: 1em; margin-right: 1em;&quot;&gt;&lt;img border=&quot;0&quot; src=&quot;http://2.bp.blogspot.com/-S1nePG9AdvQ/VPf1tYvdE3I/AAAAAAAAEBg/hMMzj7M4Uts/s1600/Hortonworks.png&quot; height=&quot;200&quot; width=&quot;320&quot; /&gt;&lt;/a&gt;&lt;/div&gt;&lt;br /&gt;Feel free to copy and redistribute this too!&lt;br /&gt;&lt;br /&gt;Cheers to a (hopefully) fantastic opportunity.
+&lt;/div&gt;</description>
+        <pubDate>Thu, 05 Mar 2015 00:00:00 -0500</pubDate>
+        <link>http://zacblanco.github.io//2015/03/internship.html</link>
+        <guid isPermaLink="true">http://zacblanco.github.io//2015/03/internship.html</guid>
         
         
       </item>
@@ -1596,7 +1604,7 @@ So I&#39;ve been pretty busy these last two weeks with schoolwork and other matt
         <description>&lt;div class=&quot;css-full-post-content js-full-post-content&quot;&gt;
 So, I&#39;ll have to break it to you now I guess. If you couldn&#39;t already tell from the title of this blog I&#39;m really into the whole &#39;big data&#39; thing. I think data science is a really cool and interesting field that&#39;s starting to emerge. Universities are offering new courses on data science and some are even starting degree programs.&lt;br /&gt;&lt;br /&gt;This past semester I took a Byrne Seminar called &lt;i&gt;Data: What is it Good for? (Absolutely Something)&lt;/i&gt;&amp;nbsp;It was taught by two ECE faculty here at Rutgers. I&#39;ll link to their pages at the end.&lt;br /&gt;&lt;br /&gt;The class really opened up my eyes to this whole whole new prospect of data and put it in this different light. We don&#39;t realize the potential that all these numbers have. They all tell part of a huge story, and the data tells different stories too! The possibilities are really almost endless.&lt;br /&gt;&lt;br /&gt;I&#39;m excited to be in the position I am in now to see how the field evolves over the next 5-10 years and what advances we make.&lt;br /&gt;&lt;br /&gt;I&#39;m also really interested in machine learning and the solutions it proposes to solving some problems.&lt;br /&gt;&lt;br /&gt;Here&#39;s an interesting video I found over at &lt;a href=&quot;http://reddit.com/r/machinelearning&quot;&gt;reddit.com/r/machinelearning&lt;/a&gt; on teaching computers how to &lt;a href=&quot;https://www.youtube.com/watch?v=xKt21ucdBY0&quot;&gt;automatically caption digital photographs&lt;/a&gt;. I found it really interesting.&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;Links to my professor&#39;s pages. I think they have some really interesting research.&lt;br /&gt;&lt;br /&gt;&lt;a href=&quot;http://www.ece.rutgers.edu/~asarwate/&quot; rel=&quot;nofollow&quot; target=&quot;_blank&quot;&gt;Anand Sarwate&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;&lt;a href=&quot;http://www.rci.rutgers.edu/~wub1/&quot; rel=&quot;nofollow&quot; target=&quot;_blank&quot;&gt;Waheed Bajwa&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
 &lt;/div&gt;</description>
-        <pubDate>Sat, 21 Feb 2015 01:16:00 -0500</pubDate>
+        <pubDate>Sat, 21 Feb 2015 00:00:00 -0500</pubDate>
         <link>http://zacblanco.github.io//2015/02/datascience.html</link>
         <guid isPermaLink="true">http://zacblanco.github.io//2015/02/datascience.html</guid>
         

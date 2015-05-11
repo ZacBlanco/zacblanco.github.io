@@ -25,7 +25,7 @@ The format of this post will be the following: For each equation I will explain 
 
 ##### Torque
 
-> $$ \tau = Fl $$
+> $$ \tau = Fl = I\alpha $$
 
 Torque $$ \tau $$ is equal to the perpendicular force along the moment arm applied a distance, $$ l $$  from a rotational axis.
 
@@ -375,6 +375,12 @@ We define pressure here as force per unit of area.
 
 The flow rate of a fluid is defined by the Volume, $$ V $$, of fluid that passes through a given point in a unit of time, $$ t $$
 
+##### Continuity Of Flow Rate
+
+> $$ A_1v_1 = A_2v_2 >> \frac{A_1}{A_2} = \frac{v_2}{v_1} $$
+
+This equation is basically telling us that for a pipe flowing with an incompressible fluid inside, the velocity multiplied by the cross sectional area should be exactly the same.  
+
 ##### Equal Pressures and Forces
 
 > $$ A_1F_2 = A_2F_1 $$
@@ -389,13 +395,13 @@ This equation tells us the difference in pressure to to a change in height, h of
 
 ##### Bernoulli's Equation
 
-> $$ p_1 + \rho gh_1 + \frac{1}{2}\rho v^2_1 = p_1 + \rho gh_2 + \frac{1}{2}\rho v^2_2 $$
+> $$ p_1 + \rho gh_1 + \frac{1}{2}\rho v^2_1 = p_1 + \rho gh_2 + \frac{1}{2}\rho v^2_2 = constant $$
 
 Bernoulli's equation tells us that the pressure and velocity of any two points in a pipe system are related. Remember higher pressure means lower velocity. Lower pressure means higher velocity.
 
 ##### Force of Buoyancy
 
-> $$ F_B = \rho V $$
+> $$ F_B = \rho gV $$
 
 The force of buoyancy that an object experiences is directly related to the volume of the object submerged in water and the density of the water displaced.
 
@@ -417,7 +423,7 @@ This equation is used to convert Temperature in Fahrenheit to Celsius and is sim
 
 ##### Temperature in Kelvin
 
-> $$ T_K = T_C = 273 $$
+> $$ T_K = T_C + 273 $$
 
 Temperature on the absolute scale is measured in Kelvins. $$ 0K $$ is absolute 0. Other temperature scales can be conerted to Kelvin by the above formula.
 
