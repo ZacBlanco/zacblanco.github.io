@@ -77,7 +77,7 @@ This is Newton's constant of gravitation. Used in the equations to follow.
 
 > $$ F = \frac{GMm}{r^2} $$ 
 
-This equation tells us that two bodies exert the same force on each other based on one objects mass, $$ m $$, the other objects mass, $$ M $$, and the distance between the two objects centers of gravity.
+This equation tells us that two bodies exert the same force on each other based on one object's mass, $$ m $$, the other object's mass, $$ M $$, and the distance between the two objects' centers of gravity.
 
 ##### Potential Energy of Gravitation
 
