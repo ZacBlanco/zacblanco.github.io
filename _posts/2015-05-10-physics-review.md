@@ -730,7 +730,7 @@ We can think of a refrigerator as simply a heat engine, but reversed. Instead of
 
 #### _Stating the Second Law of Thermodynamics_
 
-_It is impossible for any system ot udnergo a pocess in which it absorbs heat from a resevoir at a single temperaure and converts the heat completely into mechanical work, with the system ending in the same state in which is began._
+_It is impossible for any system to undergo a pocess in which it absorbs heat from a resevoir at a single temperaure and converts the heat completely into mechanical work, with the system ending in the same state in which is began._
 
 We can also state it as: _It is impossible for any process to have as its sole result the transfer of heat form a cooler to a hotter body._
 
