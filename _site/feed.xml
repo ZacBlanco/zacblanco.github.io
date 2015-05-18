@@ -6,8 +6,8 @@
 </description>
     <link>http://zacblanco.github.io//</link>
     <atom:link href="http://zacblanco.github.io//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 18 May 2015 16:26:27 -0400</pubDate>
-    <lastBuildDate>Mon, 18 May 2015 16:26:27 -0400</lastBuildDate>
+    <pubDate>Mon, 18 May 2015 16:27:24 -0400</pubDate>
+    <lastBuildDate>Mon, 18 May 2015 16:27:24 -0400</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -335,7 +335,7 @@
 
 &lt;p&gt;The heart of validation is done within the &lt;code&gt;validateXML()&lt;/code&gt; method. It’s quite simple and it also tells us the errors we receive.&lt;/p&gt;
 
-&lt;p&gt;The problem is that once we receive an error, it quits. We don’t find &lt;em&gt;all&lt;/em&gt; of the errorsm which may or may not be a problem depending on the application. If you notice in the &lt;code&gt;Penelope.xml&lt;/code&gt; file there are two errors, but the program should only return once it finds the first.&lt;/p&gt;
+&lt;p&gt;The problem is that once we receive an error, it quits. We don’t find &lt;em&gt;all&lt;/em&gt; of the errors which may or may not be a problem depending on the application. If you notice in the &lt;code&gt;Penelope.xml&lt;/code&gt; file there are two errors, but the program should only return once it finds the first.&lt;/p&gt;
 
 &lt;p&gt;And that’s simply it. XML Schema validation in a nutshell.&lt;/p&gt;
 

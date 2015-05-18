@@ -179,7 +179,7 @@ public class validator {
 The heart of validation is done within the `validateXML()` method. It's quite simple and it also tells us the errors we receive.
 
 
-The problem is that once we receive an error, it quits. We don't find _all_ of the errorsm which may or may not be a problem depending on the application. If you notice in the `Penelope.xml` file there are two errors, but the program should only return once it finds the first.
+The problem is that once we receive an error, it quits. We don't find _all_ of the errors which may or may not be a problem depending on the application. If you notice in the `Penelope.xml` file there are two errors, but the program should only return once it finds the first.
 
 
 And that's simply it. XML Schema validation in a nutshell.
