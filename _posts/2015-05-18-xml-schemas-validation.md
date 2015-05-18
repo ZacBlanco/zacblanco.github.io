@@ -172,11 +172,6 @@ public class validator {
 		}
 		return true;
 	}
-
-	public static void print(String s){
-		System.out.println(s);
-	}
-
 }
 
 {% endhighlight %}
