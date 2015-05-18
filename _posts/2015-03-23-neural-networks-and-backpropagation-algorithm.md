@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Neural Networks and the Backpropagation Algorithm
+permalink: "2015/3/23/neural-networks-and-backpropagation"
 tags: [neural networks, machine learning, AI, artificial intelligence, MIT]
 Author: Zac
 ---

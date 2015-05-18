@@ -1,6 +1,7 @@
 ---
 layout: post
 title: A (Somewhat) Comprehensive Guide to Physics IB at Rutgers University
+permalink: "2015/5/10/physics-IB-review"
 tags: [physics, rutgers, spring 2015, final review]
 Author: Zac Blanco
 ---

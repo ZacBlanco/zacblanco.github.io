@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Adding Flavor to Jekyll
+permalink: "2015/3/17/adding-flavor-to-jekyll"
 tags: [jekyll, poole, site, css, web]
 ---
 
