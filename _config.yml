@@ -1,9 +1,10 @@
 # Site settings
 title: zacblanco.github.io
-email: zacblanco@live.com
+email: zacdblanco@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
- A simple tech blog to keepp you updated on my projects and for interesting 
- tips tricks and hacks.
+ A personal site to outline my professional experience, as well as showcase my small part-time projects.
+ I enjoy writing posts from time to time whenever I learn something new or feel like sharing things with
+ the world.
 baseurl: "/" # the subpath of your site, e.g. /blog/
 url: "http://zacblanco.github.io" # the base hostname & protocol for your site
 twitter_username: ZacBlanco
@@ -11,7 +12,7 @@ github_username:  ZacBlanco
 
 pages_list:       
   Projects: '/projects'
-  Archive: '/archive'
+  Blog: '/blog'
   About: '/about'
   Feed: '/atom.xml'
 
@@ -25,7 +26,7 @@ paginate:         1
 author:
   name:           Zac Blanco
   url:            "http://zacblanco.github.io"
-  email:          zacblanco@live.com
+  email:          zacdblanco@gmail.com
 
 # Custom vars
 #version:          1.0.0
