@@ -15,8 +15,8 @@
   </title>
 
   <!-- CSS -->
-  <link rel="stylesheet" href="http://zacblanco.github.io/public/css/poole.css">
-  <link rel="stylesheet" href="http://zacblanco.github.io/public/css/syntax.css">
+  <link rel="stylesheet" href="/css/poole.css">
+  <link rel="stylesheet" href="/css/syntax.css">
 
   <!-- Icons -->
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://zacblanco.github.io/public/apple-touch-icon-precomposed.png">
@@ -25,7 +25,7 @@
   <!-- RSS -->
   <link rel="alternate" type="application/atom+xml" title="zacblanco.github.io" href="/atom.xml">
     
-    <script src='https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+<!--    <script src='https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>-->
 
     <!-- Google Analytics -->
     <script>
@@ -66,173 +66,60 @@
       </header>
 
       <main>
-        <div class="posts">
-  
-  <article class="post">
-    <h1 class="post-title">
-      <a href="/blog/markup-language/xml-schema-validation">
-        Quick Tips: XML Schemas and Validation
-      </a>
-    </h1>
+        <h1 style="text-align:center">Zac Blanco</h1>
+<div class="home-double">
+	
+	<h3 class="home-section-title">Student and Aspiring Engineer</h3>
+		<div class="left-section">
+			<img class="home-image" src="/assets/images/homepage/ASF-logo.png">
+			<p>I'm currently a commiter on the <a style="color:red" href="http://knox.apache.org"> Apache Knox Project</a>. I believe security is a critical part of the Hadoop ecosystem and Knox helps to provide that functionality.
+			You can see the my projects page for my other projects on GitHub.</p>
+		</div>
 
-    <time datetime="2015-05-18T00:00:00-07:00" class="post-date">18 May 2015</time>
-
-    <p>A quick side note before the post: I’ve finally started working on for the summer, so I’m hoping that I will be able to write posts more frequently than I did during the semester.</p>
-
-<h3 id="xml-schemas">XML Schemas</h3>
-
-<p><em>What the heck is a schema anyway?</em></p>
-
-<p>You can think of a schema as almost like writing a class in Java. It basically gives us a layout that we want out XML files to follow. It’s basically giving us a blueprint that we want our XML files to conform to.</p>
-
-<p><em>Why should I validate my XML files?</em></p>
-
-<p>Well it’s plain and simple. If your program parses XML files, and it needs to file a certain format, you want to make sure that all the files you process are in the correct format. If you don’t validate your files it could break your program. Think of it as like dumping pasta into your toaster oven because you want to cook your pasta. You can’t just cook everything by putting it in the toaster. You have to make sure it’s in the form of a bread first.</p>
-
-<p><em>All right all right, so I get the point of schemas and validation. How do I validate my files? How do I even write a schema?</em></p>
-
-<p>Well first, we’re going to need to write a schema to validate some kind of xml file.</p>
-
-<h3 id="writing-a-schema">Writing a Schema</h3>
-
-<p>I’m going to make this <em>very</em> simple. If you want to learn more about writing schemas check out <a href="http://www.w3schools.com/schema">w3 schools’ tutorial on it</a>. We’re going to write a schema for a person. The person element should contain only 3 simple elements; name, age, and height (in cm). See below for the schema (<code>Person.xsd</code>).</p>
-
-<div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="cp">&lt;?xml version=&quot;1.0&quot;?&gt;</span>
-
-	<span class="nt">&lt;xs:schema</span> <span class="na">xmlns:xs=</span><span class="s">&quot;http://www.w3.org/2001/XMLSchema&quot;</span><span class="nt">&gt;</span>
-
-		<span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;Person&quot;</span><span class="nt">&gt;</span>
-			<span class="nt">&lt;xs:complexType&gt;</span>
-				<span class="nt">&lt;xs:sequence&gt;</span>
-					<span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;name&quot;</span> <span class="na">type=</span><span class="s">&quot;xs:string&quot;</span> <span class="nt">/&gt;</span>
-					<span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;age&quot;</span> <span class="na">type=</span><span class="s">&quot;xs:integer&quot;</span> <span class="nt">/&gt;</span>
-					<span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;height&quot;</span> <span class="na">type=</span><span class="s">&quot;xs:integer&quot;</span> <span class="nt">/&gt;</span>
-				<span class="nt">&lt;/xs:sequence&gt;</span>
-			<span class="nt">&lt;/xs:complexType&gt;</span>
-		<span class="nt">&lt;/xs:element&gt;</span>
-	<span class="nt">&lt;/xs:schema&gt;</span></code></pre></div>
-
-<h5 id="a-quick-note-on-namespaces"><em>A Quick Note on Namespaces</em></h5>
-
-<p>If you notice in the above schema I have prefixed each element with the <code>xs</code> namespace. This is done to avoid confusion with similar elements over large xml documents that might have conflicting element names. The above document without using namespaces can similarly be written like the following:</p>
-
-<div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="cp">&lt;?xml version=&quot;1.0&quot;?&gt;</span>
-
-	<span class="nt">&lt;schema</span> <span class="na">xmlns=</span><span class="s">&quot;http://www.w3.org/2001/XMLSchema&quot;</span><span class="nt">&gt;</span>
-
-		<span class="nt">&lt;element</span> <span class="na">name=</span><span class="s">&quot;Person&quot;</span><span class="nt">&gt;</span>
-			<span class="nt">&lt;complexType&gt;</span>
-				<span class="nt">&lt;sequence&gt;</span>
-					<span class="nt">&lt;element</span> <span class="na">name=</span><span class="s">&quot;name&quot;</span> <span class="na">type=</span><span class="s">&quot;string&quot;</span> <span class="nt">/&gt;</span>
-					<span class="nt">&lt;element</span> <span class="na">name=</span><span class="s">&quot;age&quot;</span> <span class="na">type=</span><span class="s">&quot;integer&quot;</span> <span class="nt">/&gt;</span>
-					<span class="nt">&lt;element</span> <span class="na">name=</span><span class="s">&quot;height&quot;</span> <span class="na">type=</span><span class="s">&quot;integer&quot;</span> <span class="nt">/&gt;</span>
-				<span class="nt">&lt;/sequence&gt;</span>
-			<span class="nt">&lt;/complexType&gt;</span>
-		<span class="nt">&lt;/element&gt;</span>
-	<span class="nt">&lt;/schema&gt;</span></code></pre></div>
-
-<p>Whichever way you write the schemas doesn’t matter. If you do have conflicting elements though, it will be beneficial to look more into XML namespaces too. That is not within the scope of this post though.</p>
-
-<h4 id="writing-the-xml-files">Writing the XML Files</h4>
-
-<p>I use eclipse as my IDE and I have set up my project and I have the following folder structure</p>
-
-<pre><code>/src/xmlValidator
-		/schemas
-			/Person.xsd
-		/xml
-			/Bob.xml
-			/Penelope.xml
-</code></pre>
-
-<p>Now that you can see my folder structure let’s write some more files. You should have already created <code>Person.xsd</code> from the above snippet.</p>
-
-<p>Let’s Make a Person. We’ll call the file <code>Bob.xml</code></p>
-
-<p><code>Bob.xml</code> will contain the following:</p>
-
-<div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="cp">&lt;?xml version=&quot;1.0&quot;?&gt;</span>
-
-<span class="nt">&lt;Person&gt;</span>
-	<span class="nt">&lt;name&gt;</span>Bob<span class="nt">&lt;/name&gt;</span>
-	<span class="nt">&lt;age&gt;</span>18<span class="nt">&lt;/age&gt;</span>
-	<span class="nt">&lt;height&gt;</span>150<span class="nt">&lt;/height&gt;</span>
-<span class="nt">&lt;/Person&gt;</span></code></pre></div>
-
-<p>Now here’s <code>Penelope.xml</code>:</p>
-
-<div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="cp">&lt;?xml version=&quot;1.0&quot;?&gt;</span>
-
-<span class="nt">&lt;Person&gt;</span>
-	<span class="nt">&lt;name&gt;</span>Penelope<span class="nt">&lt;/name&gt;</span>
-	<span class="nt">&lt;age&gt;</span>nineteen<span class="nt">&lt;/age&gt;</span>
-	<span class="nt">&lt;height&gt;</span>150.1<span class="nt">&lt;/height&gt;</span>
-<span class="nt">&lt;/Person&gt;</span></code></pre></div>
-
-<p>Okay, so now take a look at each of the xml files. Which one do you think is valid? not valid? Pay close attention to the types we defined in our schema.</p>
-
-<h4 id="main-method-to-check-our-files">Main Method to Check our Files</h4>
-
-<p>Now let’s actually write the code to how we can validate our xml files to ensure they follow the schema.</p>
-
-<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kn">import</span> <span class="nn">java.io.File</span><span class="o">;</span>
-<span class="kn">import</span> <span class="nn">java.io.IOException</span><span class="o">;</span>
-<span class="kn">import</span> <span class="nn">java.nio.file.Paths</span><span class="o">;</span>
-
-<span class="kn">import</span> <span class="nn">javax.xml.*</span><span class="o">;</span>
-<span class="kn">import</span> <span class="nn">javax.xml.transform.stream.StreamSource</span><span class="o">;</span>
-<span class="kn">import</span> <span class="nn">javax.xml.validation.Schema</span><span class="o">;</span>
-<span class="kn">import</span> <span class="nn">javax.xml.validation.SchemaFactory</span><span class="o">;</span>
-<span class="kn">import</span> <span class="nn">javax.xml.validation.Validator</span><span class="o">;</span>
-
-<span class="kn">import</span> <span class="nn">org.xml.sax.SAXException</span><span class="o">;</span>
-
-<span class="kd">public</span> <span class="kd">class</span> <span class="nc">validator</span> <span class="o">{</span>
-
-	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
-
-		<span class="n">String</span> <span class="n">path</span> <span class="o">=</span> <span class="n">System</span><span class="o">.</span><span class="na">getProperty</span><span class="o">(</span><span class="s">&quot;user.dir&quot;</span><span class="o">)</span> <span class="o">+</span> <span class="s">&quot;/bin&quot;</span><span class="o">;</span>
-		<span class="n">String</span> <span class="n">filePath</span> <span class="o">=</span> <span class="n">path</span> <span class="o">+</span> <span class="s">&quot;/xmlValidator/xml/Bob.xml&quot;</span><span class="o">;</span>
-		<span class="n">String</span> <span class="n">filePath2</span> <span class="o">=</span> <span class="n">path</span> <span class="o">+</span> <span class="s">&quot;/xmlValidator/xml/Penelope.xml&quot;</span><span class="o">;</span>
-		<span class="n">String</span> <span class="n">schemaPath</span> <span class="o">=</span> <span class="n">path</span> <span class="o">+</span> <span class="s">&quot;/xmlValidator/schemas/Person.xsd&quot;</span><span class="o">;</span>
-
-		<span class="n">File</span> <span class="n">f</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">File</span><span class="o">(</span><span class="n">filePath</span><span class="o">);</span>
-		<span class="n">File</span> <span class="n">f2</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">File</span><span class="o">(</span><span class="n">filePath2</span><span class="o">);</span>
-		<span class="n">File</span> <span class="n">xsd</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">File</span><span class="o">(</span><span class="n">schemaPath</span><span class="o">);</span>
-
-		<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;XML file at &quot;</span> <span class="o">+</span> <span class="n">f</span><span class="o">.</span><span class="na">getName</span><span class="o">()</span> <span class="o">+</span> <span class="s">&quot; is valid: &quot;</span> <span class="o">+</span> <span class="n">validateXML</span><span class="o">(</span><span class="n">xsd</span><span class="o">,</span> <span class="n">f</span><span class="o">)</span> <span class="o">+</span> <span class="s">&quot; for schema &quot;</span> <span class="o">+</span> <span class="n">xsd</span><span class="o">.</span><span class="na">getName</span><span class="o">());</span>
-		<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;XML file at &quot;</span> <span class="o">+</span> <span class="n">f2</span><span class="o">.</span><span class="na">getName</span><span class="o">()</span> <span class="o">+</span> <span class="s">&quot; is valid: &quot;</span> <span class="o">+</span> <span class="n">validateXML</span><span class="o">(</span><span class="n">xsd</span><span class="o">,</span> <span class="n">f2</span><span class="o">)</span> <span class="o">+</span> <span class="s">&quot; for schema &quot;</span> <span class="o">+</span> <span class="n">xsd</span><span class="o">.</span><span class="na">getName</span><span class="o">());</span>
-
-
-
-	<span class="o">}</span>
-
-
-	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">boolean</span> <span class="nf">validateXML</span><span class="o">(</span><span class="n">File</span> <span class="n">xsd</span><span class="o">,</span> <span class="n">File</span> <span class="n">xml</span><span class="o">){</span>
-		<span class="k">try</span><span class="o">{</span>
-			<span class="n">SchemaFactory</span> <span class="n">fact</span> <span class="o">=</span> <span class="n">SchemaFactory</span><span class="o">.</span><span class="na">newInstance</span><span class="o">(</span><span class="n">XMLConstants</span><span class="o">.</span><span class="na">W3C_XML_SCHEMA_NS_URI</span><span class="o">);</span>
-			<span class="n">Schema</span> <span class="n">s</span> <span class="o">=</span> <span class="n">fact</span><span class="o">.</span><span class="na">newSchema</span><span class="o">(</span><span class="n">xsd</span><span class="o">);</span>
-			<span class="n">Validator</span> <span class="n">vdr</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="na">newValidator</span><span class="o">();</span>
-			<span class="n">vdr</span><span class="o">.</span><span class="na">validate</span><span class="o">(</span><span class="k">new</span> <span class="nf">StreamSource</span><span class="o">(</span><span class="n">xml</span><span class="o">));</span>
-		<span class="o">}</span><span class="k">catch</span><span class="o">(</span><span class="n">IOException</span> <span class="o">|</span> <span class="n">SAXException</span> <span class="n">e</span><span class="o">){</span>
-			<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">e</span><span class="o">.</span><span class="na">getMessage</span><span class="o">());</span>
-			<span class="k">return</span> <span class="kc">false</span><span class="o">;</span>
-		<span class="o">}</span>
-		<span class="k">return</span> <span class="kc">true</span><span class="o">;</span>
-	<span class="o">}</span>
-<span class="o">}</span></code></pre></div>
-
-<p>The heart of validation is done within the <code>validateXML()</code> method. It’s quite simple and it also tells us the errors we receive.</p>
-
-<p>The problem is that once we receive an error, it quits. We don’t find <em>all</em> of the errors which may or may not be a problem depending on the application. If you notice in the <code>Penelope.xml</code> file there are two errors, but the program should only return once it finds the first.</p>
-
-<p>And that’s simply it. XML Schema validation in a nutshell.</p>
-
-
-  </article>
-  
+		<div class="right-section">
+			<img class="home-image" src="/assets/images/homepage/rutgers-logo-2.png">
+			<p>I am Currently a student studying Computer Science and Computer Engineering at Rutgers University, The State University of New Jersey, New Brunswick. Expected Graduation: 2018. </p>
+		</div>
+	
 </div>
 
+<div class="home-single">
+
+	<p><h3 class="home-section-title">Activities</h3></p>
+
+
+	<div class="center-section">
+	<img class="home-image" src="/assets/images/homepage/baldy-picture.jpg">
+	<p>I enjoy running, biking, hiking, swimming, camping, and just about anything
+	that gets me active. I always like trying new things! I do my best to lead a
+	healthy and active lifestyle.</p>
+
+	</div>
+
+</div>
+
+<div class="home-double">
+
+	<h3 class="home-section-title">Professional Experience</h3>
+
+	<div class="left-section"> 
+		<img class="home-image" src="assets/images/homepage/hortonworks-logo.png">
+	<p>
+		I've worked for numerous companies filling technology roles. Previously I worked as a developer
+		at <a href="http://drivershistory.com">Drivers History Inc</a>. My most recent position was at <a href="http://hortonworks.com">Hortonworks</a> serving as a
+		software engineer helping to develop enterprise grade security for the Hadoop platform
+		through <a href="http://knox.apache.org">Apache Knox</a>.
+		</p>
+	</div>
+
+	<div class="right-section">
+		<img class="home-image" src="assets/images/homepage/info-icon.png" >
+		<p>
+			To find my resume, projects, LinkedIn an other information about me you can read the <a href="/about">About page</a> found at the top of this website. Also, take a look at my <a href="/blog">blog page</a> which I try to maintain regularly and update regularly with new content!
+		</p>
+	</div>
+
+</div>
       </main>
 
       <footer class="footer">

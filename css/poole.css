@@ -433,3 +433,60 @@ a.pagination-item:hover {
     border-bottom-right-radius: 4px;
   }
 }
+
+.home-double {
+	margin: 0px;
+	padding:2%;
+	text-align: center;
+	border-radius: 5px;
+	min-width: 100%;
+	clear:both;
+}
+
+.left-section {
+	max-width:45%;
+	min-width:40%;
+	float:left;
+	padding:2%
+}
+
+.right-section {
+	max-width:45%;
+	min-width:40%;
+	float:right;
+	padding:2%;
+}
+
+.home-image {
+	min-height:50px;
+	max-height:75px;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+.home-single {
+    padding: 2% ;
+	text-align: center;
+	border-radius: 5px;
+	clear:both;
+}
+
+.home-section-title {
+  padding-bottom: 20px;
+  text-align:center;
+}
+
+.center-section {
+	max-width:50%;
+	min-width:45%;
+	margin-left:auto;
+	margin-right:auto;
+	padding:2%
+}
+
+
+.footer {
+	bottom: 0;
+	clear:both;
+}
+
