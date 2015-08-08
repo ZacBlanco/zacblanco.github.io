@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Hosting your Jekyll site with GitHub Pages
-permalink: "2015/3/18/hosting-with-github-pages"
+permalink: "blog/jekyll/hosting-with-github-pages"
 tags: [jekyll, site, poole, web, hosting]
 ---
 

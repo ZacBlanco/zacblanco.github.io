@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Building a Site with Jekyll
-permalink: "2015/3/11/building-a-site-with-jekyll"
+permalink: "blog/jekyll/building-a-site-with-jekyll"
 tags: [jekyll, hyde, site, blog, markdown]
 Author: Zac
 ---

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Neural Networks and the Backpropagation Algorithm
-permalink: "2015/3/23/neural-networks-and-backpropagation"
+permalink: "blog/machine-learning/neural-networks-and-backpropagation"
 tags: [neural networks, machine learning, AI, artificial intelligence, MIT]
 Author: Zac
 ---
@@ -43,7 +43,7 @@ This is a gross simplification of a neuron, but for the model of a neural networ
 ### Modeling the Neuron
 ------------------
 
-![Image of Model](../assets/images/neural-nets/net-model.jpg)
+![Image of Model](/assets/images/neural-nets/net-model.jpg)
 
 
 First, notice the inputs. Each input from $$ x_1 $$ to $$ x_n $$ is given as an input to the neuron. Each of the inputs is multiplied by a weight $$ w $$ corresponding to an input before being summed into the function.
@@ -60,7 +60,7 @@ $$
 
 The value of this will be then be passed onto the activation, or *threshold* function. The threshold function might be best viewed as a single-step function, where say once the input $$ \alpha $$ reaches a certain value, it will output a certain value. We're going to keep this to ones and zeros. 
 
-![Threshold Example](../assets/images/neural-nets/threshold-med.png)
+![Threshold Example](/assets/images/neural-nets/threshold-med.png)
 
 
 This part is where the dendrites need to pick up enough neurotransmitter signals to send that spike of "energy" or "excitement" down its axon to the axon terminals.
@@ -144,7 +144,7 @@ This function also happens to be *convenient*. (You'll see why in a second)
 
 The graph of the sigmoid has the following shape:
 
-![Sigmoid function](../assets/images/neural-nets/sigmoid.png).
+![Sigmoid function](/assets/images/neural-nets/sigmoid.png).
 
 Great! So where do we go from here?
 

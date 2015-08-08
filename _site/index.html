@@ -54,7 +54,7 @@
             <small><a href="/projects">Projects</a></small>
             
             &nbsp;&nbsp;&nbsp;
-            <small><a href="/archive">Archive</a></small>
+            <small><a href="/blog">Blog</a></small>
             
             &nbsp;&nbsp;&nbsp;
             <small><a href="/about">About</a></small>
@@ -70,12 +70,12 @@
   
   <article class="post">
     <h1 class="post-title">
-      <a href="/2015/5/18/xml-schema-validation">
+      <a href="/blog/markup-language/xml-schema-validation">
         Quick Tips: XML Schemas and Validation
       </a>
     </h1>
 
-    <time datetime="2015-05-18T16:22:27-04:00" class="post-date">18 May 2015</time>
+    <time datetime="2015-05-18T00:00:00-07:00" class="post-date">18 May 2015</time>
 
     <p>A quick side note before the post: I’ve finally started working on for the summer, so I’m hoping that I will be able to write posts more frequently than I did during the semester.</p>
 
@@ -220,30 +220,16 @@
 		<span class="o">}</span>
 		<span class="k">return</span> <span class="kc">true</span><span class="o">;</span>
 	<span class="o">}</span>
-
-	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">print</span><span class="o">(</span><span class="n">String</span> <span class="n">s</span><span class="o">){</span>
-		<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">s</span><span class="o">);</span>
-	<span class="o">}</span>
-
 <span class="o">}</span></code></pre></div>
 
 <p>The heart of validation is done within the <code>validateXML()</code> method. It’s quite simple and it also tells us the errors we receive.</p>
 
-<p>The problem is that once we receive an error, it quits. We don’t find <em>all</em> of the errorsm which may or may not be a problem depending on the application. If you notice in the <code>Penelope.xml</code> file there are two errors, but the program should only return once it finds the first.</p>
+<p>The problem is that once we receive an error, it quits. We don’t find <em>all</em> of the errors which may or may not be a problem depending on the application. If you notice in the <code>Penelope.xml</code> file there are two errors, but the program should only return once it finds the first.</p>
 
 <p>And that’s simply it. XML Schema validation in a nutshell.</p>
 
 
   </article>
-  
-</div>
-
-<div class="pagination">
-  
-    <a class="pagination-item older" href="/page2">Older</a>
-  
-  
-    <span class="pagination-item newer">Newer</span>
   
 </div>
 

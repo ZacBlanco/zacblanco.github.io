@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "Quick Tips: XML Schemas and Validation"
-permalink: "2015/5/18/xml-schema-validation"
-tags: [xml, java, schema, validation, namespaces]
+permalink: "blog/markup-language/xml-schema-validation"
+tags: [xml, java, schema, validation, namespaces, markup language]
 Author: Zac Blanco
 ---
 

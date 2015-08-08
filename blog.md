@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Archive
-permalink: /archive/
+title: Blog
+permalink: /blog/
 ---
 
 ## Blog Posts
