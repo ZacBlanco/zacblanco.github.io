@@ -15,7 +15,7 @@ Let's go over a few quick things about writing posts.
 - Everything's written in markdown
 - Blockquotes are made by `>`
 - bullets are made by the `-`
-- Images can be added by an exclamation mark `!` followed by `[]()`. -> ![Caption for when image doesn't load](URL/to/image)
+- Images can be added by an exclamation mark `!` immediately followed by `[Image caption](url/to/image)`.
 - I use MathJax on my site. If you would like to add any LaTex symbols simply surround your equation/variables with $$
 
 You can google "Markdown guide" to get more information on markdown features in posts. These are just the main points I wanted to address.
