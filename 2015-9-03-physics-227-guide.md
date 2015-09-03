@@ -11,6 +11,40 @@ The aim of this is post/page to provide a (somewhat) comprehensive guide to this
 
 Without furthur ado - Let's dive in!
 
-September 3rd, 2015
+## September 3rd, 2015
 
-Almost everything in the universe can be described by just 4 (!) equations. This is 
+Almost everything in the universe can be described by just 4 (!) equations.
+
+### Electric Charge
+
+- _Electric Charge_ is a physical quantity that characterizes how charged object participate in electrostatic interactions
+
+#### Elec. Charge Properties
+ 
+- It is a scalar value
+- It is quantizes - meaning that a charge must be in integer multiples of the fundamental value of charge
+ - This fundamental amount is the charge of an electron.
+ - $$ e ~ 1.6 * 10 ^ -19 C $$
+ - The net charge of any isolated system is _conserved_. i.e the net charge of the universe is zero
+ 
+ 
+### Coulomb's Law
+
+Coulomb's law describes the _forces_ that charged particles exert on each other due to...well...simply their charge.
+
+The equation for Coulomb's law is the following:
+
+> $$ F_{12} = k\frac{\abs{q_1q_2}}{r^2}
+
+Now let's quickly describe each quantity
+
+ - $$ F_{12} $$ is the force that each particle exerts on one another. This means that _both particles experience the same force_!
+ - $$ k $$ is a constant value expressed in this function. It's value is equal to $$ \frac{1}{4\pi\eps_0} $$
+ - $$ q_1 $$ and $$ q_2 $$ are the charges of each particle measured in  _Coulomb's_ or the symbol $$ C $$
+ - $$ r $$ is the distance between the two charges.
+ 
+ 
+> $$ k = \frac{1}{4\pi\eps_0} = 9*10^9 \frac{Nm^2}{C^2} $$
+> $$ \eps_0 = 9 * 10^{-12} \frac{C^2}{Nm^2} $$
+ 
+
