@@ -6,111 +6,9 @@
 </description>
     <link>http://zacblanco.github.io//</link>
     <atom:link href="http://zacblanco.github.io//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 03 Sep 2015 12:52:42 -0400</pubDate>
-    <lastBuildDate>Thu, 03 Sep 2015 12:52:42 -0400</lastBuildDate>
+    <pubDate>Thu, 03 Sep 2015 12:57:51 -0400</pubDate>
+    <lastBuildDate>Thu, 03 Sep 2015 12:57:51 -0400</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
-    
-      <item>
-        <title>A Guide for Principles of EE I at Rutgers University</title>
-        <description>&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
-
-&lt;p&gt;Here we are - a new study guide - for Principles of Electrical Engineering 1 at Rutgers University in the Fall of 2015.&lt;/p&gt;
-
-&lt;p&gt;I will try to keep this as up to date as possible as the class goea on throughout the year. Hopefully addressing all topics in the syllabus. The aim is for this to serve as a study-guide for the end of the semester.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Course Instructor: Prof. Hana Godrich&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Topics:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Voltage, Current, Resistance&lt;/li&gt;
-  &lt;li&gt;Ohm’s Law, Kirkhoff’s Law&lt;/li&gt;
-  &lt;li&gt;Tools for analyizing circuits&lt;/li&gt;
-  &lt;li&gt;Node-Voltage Method, Mesh-Current Method
--Thevenin and Norton Equivalents, maximum Power Transfer&lt;/li&gt;
-  &lt;li&gt;Operational amplifiers, inverting, not-inverting and difference amplifier circuits&lt;/li&gt;
-  &lt;li&gt;Properties of Inductances, etc.&lt;/li&gt;
-  &lt;li&gt;Review of Complex variables - Intro to sinusoidal steady state analysis, sinusoidal sources, Phasors&lt;/li&gt;
-  &lt;li&gt;Impedance, Admittance, reactance, susceptance, delta-wye simplifications, Phasor Diagrams&lt;/li&gt;
-  &lt;li&gt;Sinusoidal steady sate power calculates, RMS values, frequency selective circuits&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;september-3rd-2015&quot;&gt;September 3rd, 2015&lt;/h3&gt;
-
-&lt;h5 id=&quot;definition-circuit&quot;&gt;Definition: Circuit&lt;/h5&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;An interconnection of components or elements that form a &lt;em&gt;closed path&lt;/em&gt; or many closed paths.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Of any element or component in a circuit, there are at least two terminals (i.e a connection) on each side of the element&lt;/li&gt;
-  &lt;li&gt;A node is an intersection of &lt;em&gt;two or more&lt;/em&gt; branches or connections off of an element. It can also be thought of as anything that is not part of a component or element.&lt;/li&gt;
-  &lt;li&gt;Circuits can take many different forms - but they can still perform the same function so long as all of the interconnections are the exact same.&lt;/li&gt;
-  &lt;li&gt;A &lt;em&gt;Path&lt;/em&gt; is a single “way” that you can walk through a circuit. Most circuits will have many, many, many paths. They must be continuous - no breaks in the&lt;/li&gt;
-  &lt;li&gt;A &lt;em&gt;Branch&lt;/em&gt; is a path that moves form one node to another to another. It encompasses only a single element&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;basic-circuit-components&quot;&gt;Basic Circuit Components&lt;/h4&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;em&gt;Element or Component&lt;/em&gt;: a two - or more - terminal device in a circuit with behavior described by &lt;em&gt;charactieristics&lt;/em&gt; which vary with time&lt;/li&gt;
-  &lt;li&gt;&lt;script type=&quot;math/tex&quot;&gt;V&lt;/script&gt; or &lt;script type=&quot;math/tex&quot;&gt;v&lt;/script&gt; - Voltage. Usually talked about voltage drop or gain over an element or component represented with  &lt;script type=&quot;math/tex&quot;&gt;+&lt;/script&gt; or &lt;script type=&quot;math/tex&quot;&gt;-&lt;/script&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;script type=&quot;math/tex&quot;&gt;I&lt;/script&gt; or  &lt;script type=&quot;math/tex&quot;&gt;i&lt;/script&gt; - Current. Current has a direction chosen &lt;em&gt;almost&lt;/em&gt; arbitrarily by a person analyzing a circuit.&lt;/li&gt;
-  &lt;li&gt;Elements and components don’t have to actually be a &lt;em&gt;part&lt;/em&gt; of the circuit. For example, we can think of a lightbulb as behaving similarly to a resistor. This means in a circuit diagram we can represent the lightbulb as simply a resistor.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;more-definitions&quot;&gt;More Definitions&lt;/h4&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;em&gt;Essential Node&lt;/em&gt; - A node where three or more circuit elements join&lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;Essential Branch&lt;/em&gt; - A path that cnnects two essential nodes withoutpassing through an essential node. Must include elements in series.&lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;Loop&lt;/em&gt; - a closed path that starts and ends at the same point.&lt;/li&gt;
-  &lt;li&gt;A set of independent loops - Each loop in the set contains at least one branch that is not part of any other loop in the set(a-b-c, b-e-g-d, b-c-f-h-g-d)&lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;Mesh&lt;/em&gt; - a loop that does not enclose any other loop (d-b-e-g)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;../../assets/images/ee1-guide/definition-slide-1.png&quot; alt=&quot;Circuit and definitions slide&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;!Important!&lt;/em&gt; A network with &lt;script type=&quot;math/tex&quot;&gt;b&lt;/script&gt; branches, &lt;script type=&quot;math/tex&quot;&gt;n&lt;/script&gt; nodes and a total of &lt;script type=&quot;math/tex&quot;&gt;l&lt;/script&gt; indenedent loops will satisfy the following:&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;script type=&quot;math/tex; mode=display&quot;&gt;b = l + n - 1&lt;/script&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;See the image below for an explanation&lt;/p&gt;
-
-</description>
-        <pubDate>Thu, 03 Sep 2015 00:00:00 -0400</pubDate>
-        <link>http://zacblanco.github.io//blog/rutgers-principles-electrical-engineering-1</link>
-        <guid isPermaLink="true">http://zacblanco.github.io//blog/rutgers-principles-electrical-engineering-1</guid>
-        
-        <category>engineering</category>
-        
-        <category>rutgers</category>
-        
-        <category>fall 2015</category>
-        
-        <category>principles of electrical engineering</category>
-        
-        <category>guide</category>
-        
-        <category>class</category>
-        
-        <category>study</category>
-        
-        <category>circuits</category>
-        
-        <category>computer engineering</category>
-        
-        <category>electrical engineering</category>
-        
-        <category>engineers</category>
-        
-        
-      </item>
     
       <item>
         <title>A (Somewhat) Comprehensive Guide to Physics 227 at Rutgers University</title>
@@ -207,6 +105,108 @@ If you would like to contribute to this guide please submit a pull request on Gi
         <category>electrostatics</category>
         
         <category>dipoles</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>A Guide for Principles of EE I at Rutgers University</title>
+        <description>&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
+
+&lt;p&gt;Here we are - a new study guide - for Principles of Electrical Engineering 1 at Rutgers University in the Fall of 2015.&lt;/p&gt;
+
+&lt;p&gt;I will try to keep this as up to date as possible as the class goea on throughout the year. Hopefully addressing all topics in the syllabus. The aim is for this to serve as a study-guide for the end of the semester.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Course Instructor: Prof. Hana Godrich&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Topics:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Voltage, Current, Resistance&lt;/li&gt;
+  &lt;li&gt;Ohm’s Law, Kirkhoff’s Law&lt;/li&gt;
+  &lt;li&gt;Tools for analyizing circuits&lt;/li&gt;
+  &lt;li&gt;Node-Voltage Method, Mesh-Current Method
+-Thevenin and Norton Equivalents, maximum Power Transfer&lt;/li&gt;
+  &lt;li&gt;Operational amplifiers, inverting, not-inverting and difference amplifier circuits&lt;/li&gt;
+  &lt;li&gt;Properties of Inductances, etc.&lt;/li&gt;
+  &lt;li&gt;Review of Complex variables - Intro to sinusoidal steady state analysis, sinusoidal sources, Phasors&lt;/li&gt;
+  &lt;li&gt;Impedance, Admittance, reactance, susceptance, delta-wye simplifications, Phasor Diagrams&lt;/li&gt;
+  &lt;li&gt;Sinusoidal steady sate power calculates, RMS values, frequency selective circuits&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;september-3rd-2015&quot;&gt;September 3rd, 2015&lt;/h3&gt;
+
+&lt;h5 id=&quot;definition-circuit&quot;&gt;Definition: Circuit&lt;/h5&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;An interconnection of components or elements that form a &lt;em&gt;closed path&lt;/em&gt; or many closed paths.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Of any element or component in a circuit, there are at least two terminals (i.e a connection) on each side of the element&lt;/li&gt;
+  &lt;li&gt;A node is an intersection of &lt;em&gt;two or more&lt;/em&gt; branches or connections off of an element. It can also be thought of as anything that is not part of a component or element.&lt;/li&gt;
+  &lt;li&gt;Circuits can take many different forms - but they can still perform the same function so long as all of the interconnections are the exact same.&lt;/li&gt;
+  &lt;li&gt;A &lt;em&gt;Path&lt;/em&gt; is a single “way” that you can walk through a circuit. Most circuits will have many, many, many paths. They must be continuous - no breaks in the&lt;/li&gt;
+  &lt;li&gt;A &lt;em&gt;Branch&lt;/em&gt; is a path that moves form one node to another to another. It encompasses only a single element&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;basic-circuit-components&quot;&gt;Basic Circuit Components&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;em&gt;Element or Component&lt;/em&gt;: a two - or more - terminal device in a circuit with behavior described by &lt;em&gt;charactieristics&lt;/em&gt; which vary with time&lt;/li&gt;
+  &lt;li&gt;&lt;script type=&quot;math/tex&quot;&gt;V&lt;/script&gt; or &lt;script type=&quot;math/tex&quot;&gt;v&lt;/script&gt; - Voltage. Usually talked about voltage drop or gain over an element or component represented with  &lt;script type=&quot;math/tex&quot;&gt;+&lt;/script&gt; or &lt;script type=&quot;math/tex&quot;&gt;-&lt;/script&gt;.&lt;/li&gt;
+  &lt;li&gt;&lt;script type=&quot;math/tex&quot;&gt;I&lt;/script&gt; or  &lt;script type=&quot;math/tex&quot;&gt;i&lt;/script&gt; - Current. Current has a direction chosen &lt;em&gt;almost&lt;/em&gt; arbitrarily by a person analyzing a circuit.&lt;/li&gt;
+  &lt;li&gt;Elements and components don’t have to actually be a &lt;em&gt;part&lt;/em&gt; of the circuit. For example, we can think of a lightbulb as behaving similarly to a resistor. This means in a circuit diagram we can represent the lightbulb as simply a resistor.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;more-definitions&quot;&gt;More Definitions&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;em&gt;Essential Node&lt;/em&gt; - A node where three or more circuit elements join&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;Essential Branch&lt;/em&gt; - A path that cnnects two essential nodes withoutpassing through an essential node. Must include elements in series.&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;Loop&lt;/em&gt; - a closed path that starts and ends at the same point.&lt;/li&gt;
+  &lt;li&gt;A set of independent loops - Each loop in the set contains at least one branch that is not part of any other loop in the set(a-b-c, b-e-g-d, b-c-f-h-g-d)&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;Mesh&lt;/em&gt; - a loop that does not enclose any other loop (d-b-e-g)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;../assets/images/ee1-guide/definition-slide-1.png&quot; alt=&quot;Circuit and definitions slide&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;!Important!&lt;/em&gt; A network with &lt;script type=&quot;math/tex&quot;&gt;b&lt;/script&gt; branches, &lt;script type=&quot;math/tex&quot;&gt;n&lt;/script&gt; nodes and a total of &lt;script type=&quot;math/tex&quot;&gt;l&lt;/script&gt; indenedent loops will satisfy the following:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;script type=&quot;math/tex; mode=display&quot;&gt;b = l + n - 1&lt;/script&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;See the image below for an explanation&lt;/p&gt;
+
+</description>
+        <pubDate>Thu, 03 Sep 2015 00:00:00 -0400</pubDate>
+        <link>http://zacblanco.github.io//blog/electrical-engineering/rutgers-principles-electrical-engineering-1</link>
+        <guid isPermaLink="true">http://zacblanco.github.io//blog/electrical-engineering/rutgers-principles-electrical-engineering-1</guid>
+        
+        <category>engineering</category>
+        
+        <category>rutgers</category>
+        
+        <category>fall 2015</category>
+        
+        <category>principles of electrical engineering</category>
+        
+        <category>guide</category>
+        
+        <category>class</category>
+        
+        <category>study</category>
+        
+        <category>circuits</category>
+        
+        <category>computer engineering</category>
+        
+        <category>electrical engineering</category>
+        
+        <category>engineers</category>
         
         
       </item>
@@ -517,7 +517,7 @@ If you would like to contribute to this guide please submit a pull request on Gi
   &lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;\frac{dA}{dt} = rv\cdot sin\phi&lt;/script&gt; s&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;&lt;img src=&quot;../assets/images/physics-review/kepler-areas.png&quot; alt=&quot;Kepler&#39;s Law of Equal Areas&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../../../assets/images/physics-review/kepler-areas.png&quot; alt=&quot;Kepler&#39;s Law of Equal Areas&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Kepler’s Law of Equal Areas. In equal units of time, the area a planet sweeps out in a triangle along its orbit path will always be equal to each other.&lt;/p&gt;
 
@@ -803,7 +803,7 @@ If you would like to contribute to this guide please submit a pull request on Gi
 
 &lt;p&gt;See below for visualization.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;../assets/images/physics-review/sound-fund-freq.gif&quot; alt=&quot;Fundamental Frequencies in Pipes&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../../../assets/images/physics-review/sound-fund-freq.gif&quot; alt=&quot;Fundamental Frequencies in Pipes&quot; /&gt;&lt;/p&gt;
 
 &lt;h5 id=&quot;beat-frequency&quot;&gt;Beat Frequency&lt;/h5&gt;
 
@@ -813,7 +813,7 @@ If you would like to contribute to this guide please submit a pull request on Gi
 
 &lt;p&gt;Two different sound frequencies create what we call ‘beats’. It is addional amplitude variations in the sound we hear. See below image.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;../assets/images/physics-review/beat-freq.jpeg&quot; alt=&quot;Image of Beat&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../../../assets/images/physics-review/beat-freq.jpeg&quot; alt=&quot;Image of Beat&quot; /&gt;&lt;/p&gt;
 
 &lt;h5 id=&quot;the-doppler-effect&quot;&gt;The Doppler Effect&lt;/h5&gt;
 
@@ -1160,7 +1160,7 @@ If you would like to contribute to this guide please submit a pull request on Gi
 
 &lt;h4 id=&quot;phase-diagrams&quot;&gt;Phase Diagrams&lt;/h4&gt;
 
-&lt;p&gt;&lt;img src=&quot;../assets/images/physics-review/phase-diag.png&quot; alt=&quot;Image of Phase Diagram&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../../../assets/images/physics-review/phase-diag.png&quot; alt=&quot;Image of Phase Diagram&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Phase diagrams can be useful in determining the conditions under which a material transitions phases from solid, to liquid, and gas.&lt;/p&gt;
 
@@ -1276,7 +1276,7 @@ If you would like to contribute to this guide please submit a pull request on Gi
 
 &lt;p&gt;We can visualize he cycle with the following image:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;../assets/images/physics-review/carnot-cycle.gif&quot; alt=&quot;Image of Carnot Cycle&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../../../assets/images/physics-review/carnot-cycle.gif&quot; alt=&quot;Image of Carnot Cycle&quot; /&gt;&lt;/p&gt;
 
 &lt;h5 id=&quot;net-heat-absorbed-in-an-engine-cycle&quot;&gt;Net Heat Absorbed in an Engine Cycle&lt;/h5&gt;
 
@@ -1302,7 +1302,7 @@ If you would like to contribute to this guide please submit a pull request on Gi
 
 &lt;p&gt;Remember &lt;script type=&quot;math/tex&quot;&gt;\gamma&lt;/script&gt; is defined as the ratio of heat capacities at constant volume and pressure (see earlier).&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;../assets/images/physics-review/otto-cycle.png&quot; alt=&quot;Image of Otto Cycle&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../../../assets/images/physics-review/otto-cycle.png&quot; alt=&quot;Image of Otto Cycle&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Above is an image detailing a &lt;script type=&quot;math/tex&quot;&gt;pV&lt;/script&gt; diagram of a normal Otto Cycle. From A to B there is an adiabatic compression (no heat lost). B to C we have heat added into the system with constant pressure and some volume change (This means some work is done). Point C to D there is the power stroke. The gas expands at somewhat constant temperature doing as much work as is can while pressure decreases. Then from point D to A the extra heat is exhausted as the gas cools in temperature. It also drops in pressure while volume remains constant.&lt;/p&gt;
 
@@ -1334,7 +1334,7 @@ If you would like to contribute to this guide please submit a pull request on Gi
 
 &lt;h4 id=&quot;steps-of-the-carnot-cycle&quot;&gt;Steps of the Carnot Cycle&lt;/h4&gt;
 
-&lt;p&gt;&lt;img src=&quot;../assets/images/physics-review/carnot-diag.gif&quot; alt=&quot;Carnot Diagram&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../../../assets/images/physics-review/carnot-diag.gif&quot; alt=&quot;Carnot Diagram&quot; /&gt;&lt;/p&gt;
 
 &lt;ol&gt;
   &lt;li&gt;The gas expands isothermally at Temperature &lt;script type=&quot;math/tex&quot;&gt;T_H&lt;/script&gt; absorbing heat &lt;script type=&quot;math/tex&quot;&gt;Q_H&lt;/script&gt;&lt;/li&gt;
