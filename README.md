@@ -16,13 +16,14 @@ Let's go over a few quick things about writing posts.
 - Blockquotes are made by `>`
 - bullets are made by the `-`
 - Images can be added by an exclamation mark `!` followed by `[]()`. -> ![Caption for when image doesn't load](URL/to/image)
-- I use MathJax on my site. If you would like to add any text symbols simply surround your equation/variables with $$
+- I use MathJax on my site. If you would like to add any LaTex symbols simply surround your equation/variables with $$
 
 You can google "Markdown guide" to get more information on markdown features in posts. These are just the main points I wanted to address.
 
 
 > A quick note on adding images - if you would like to add an image to the site - please make sure there are no copyright infringement with image use on the site and please download as save a copy to the assets folder.
-> make sure you reference the URL to the image via the assets folder an not an external resource on another site.
+
+> Make sure you reference the URL to the image via the assets folder an not an external resource on another site.
 
 
 If you have any more questions for me please feel free to email me or post and issue here on GitHub. 
