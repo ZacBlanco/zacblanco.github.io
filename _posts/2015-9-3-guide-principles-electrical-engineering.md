@@ -11,12 +11,12 @@ Author: Zac Blanco
 
 Here we are - a new study guide - for Principles of Electrical Engineering 1 at Rutgers University in the Fall of 2015.
 
-I will try to keep this as up to date as possible as the class goea on throughout the year. Hopefully addressing all topics in the syllabus. The aim is for this to serve as a study-guide for the end of the semester.
+I will try to keep this as up to date as possible as the class goes on throughout the semester. Hopefully addressing all topics in the syllabus. The aim is for this to hopefully be able to serve as a study-guide by the time the end of the semester comes around. I hope that this guide will be able to cover all of the topics that are in this course, as well as provide examples of circuits and step-by-step solutions to different problems.
 
 - Course Instructor: Prof. Hana Godrich
 
 Topics:
-
+s
 - Voltage, Current, Resistance
 - Ohm's Law, Kirkhoff's Law
 - Tools for analyizing circuits
@@ -55,14 +55,13 @@ Topics:
 - A set of independent loops - Each loop in the set contains at least one branch that is not part of any other loop in the set(a-b-c, b-e-g-d, b-c-f-h-g-d)
 - _Mesh_ - a loop that does not enclose any other loop (d-b-e-g)
 
-![Circuit and definitions slide](../../../assets/images/ee1-guide/definition-slide-1.png)
-
-_!Important!_ A network with $$ b $$ branches, $$ n $$ nodes and a total of $$ l $$ indenedent loops will satisfy the following:
+_!Important!_ A network with $$ b $$ _branches_, $$ n $$ _nodes_ and a total of $$ l $$ _indenedent loops_ will satisfy the following:
 
 > $$ b = l + n - 1 $$
 
 
 See the image below for an explanation
+![Circuit and definitions slide](../../../assets/images/ee1-guide/definition-slide-1.png)
 
 
 

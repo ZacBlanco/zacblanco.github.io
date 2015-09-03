@@ -6,8 +6,8 @@
 </description>
     <link>http://zacblanco.github.io//</link>
     <atom:link href="http://zacblanco.github.io//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 03 Sep 2015 12:58:59 -0400</pubDate>
-    <lastBuildDate>Thu, 03 Sep 2015 12:58:59 -0400</lastBuildDate>
+    <pubDate>Thu, 03 Sep 2015 13:13:39 -0400</pubDate>
+    <lastBuildDate>Thu, 03 Sep 2015 13:13:39 -0400</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -115,26 +115,24 @@ If you would like to contribute to this guide please submit a pull request on Gi
 
 &lt;p&gt;Here we are - a new study guide - for Principles of Electrical Engineering 1 at Rutgers University in the Fall of 2015.&lt;/p&gt;
 
-&lt;p&gt;I will try to keep this as up to date as possible as the class goea on throughout the year. Hopefully addressing all topics in the syllabus. The aim is for this to serve as a study-guide for the end of the semester.&lt;/p&gt;
+&lt;p&gt;I will try to keep this as up to date as possible as the class goes on throughout the semester. Hopefully addressing all topics in the syllabus. The aim is for this to hopefully be able to serve as a study-guide by the time the end of the semester comes around. I hope that this guide will be able to cover all of the topics that are in this course, as well as provide examples of circuits and step-by-step solutions to different problems.&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Course Instructor: Prof. Hana Godrich&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Topics:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Voltage, Current, Resistance&lt;/li&gt;
-  &lt;li&gt;Ohm’s Law, Kirkhoff’s Law&lt;/li&gt;
-  &lt;li&gt;Tools for analyizing circuits&lt;/li&gt;
-  &lt;li&gt;Node-Voltage Method, Mesh-Current Method
--Thevenin and Norton Equivalents, maximum Power Transfer&lt;/li&gt;
-  &lt;li&gt;Operational amplifiers, inverting, not-inverting and difference amplifier circuits&lt;/li&gt;
-  &lt;li&gt;Properties of Inductances, etc.&lt;/li&gt;
-  &lt;li&gt;Review of Complex variables - Intro to sinusoidal steady state analysis, sinusoidal sources, Phasors&lt;/li&gt;
-  &lt;li&gt;Impedance, Admittance, reactance, susceptance, delta-wye simplifications, Phasor Diagrams&lt;/li&gt;
-  &lt;li&gt;Sinusoidal steady sate power calculates, RMS values, frequency selective circuits&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;Topics:
+s
+- Voltage, Current, Resistance
+- Ohm’s Law, Kirkhoff’s Law
+- Tools for analyizing circuits
+- Node-Voltage Method, Mesh-Current Method
+-Thevenin and Norton Equivalents, maximum Power Transfer
+- Operational amplifiers, inverting, not-inverting and difference amplifier circuits
+- Properties of Inductances, etc.
+- Review of Complex variables - Intro to sinusoidal steady state analysis, sinusoidal sources, Phasors
+- Impedance, Admittance, reactance, susceptance, delta-wye simplifications, Phasor Diagrams
+- Sinusoidal steady sate power calculates, RMS values, frequency selective circuits&lt;/p&gt;
 
 &lt;h3 id=&quot;september-3rd-2015&quot;&gt;September 3rd, 2015&lt;/h3&gt;
 
@@ -171,15 +169,14 @@ If you would like to contribute to this guide please submit a pull request on Gi
   &lt;li&gt;&lt;em&gt;Mesh&lt;/em&gt; - a loop that does not enclose any other loop (d-b-e-g)&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&quot;../../../assets/images/ee1-guide/definition-slide-1.png&quot; alt=&quot;Circuit and definitions slide&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;!Important!&lt;/em&gt; A network with &lt;script type=&quot;math/tex&quot;&gt;b&lt;/script&gt; branches, &lt;script type=&quot;math/tex&quot;&gt;n&lt;/script&gt; nodes and a total of &lt;script type=&quot;math/tex&quot;&gt;l&lt;/script&gt; indenedent loops will satisfy the following:&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;!Important!&lt;/em&gt; A network with &lt;script type=&quot;math/tex&quot;&gt;b&lt;/script&gt; &lt;em&gt;branches&lt;/em&gt;, &lt;script type=&quot;math/tex&quot;&gt;n&lt;/script&gt; &lt;em&gt;nodes&lt;/em&gt; and a total of &lt;script type=&quot;math/tex&quot;&gt;l&lt;/script&gt; &lt;em&gt;indenedent loops&lt;/em&gt; will satisfy the following:&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;script type=&quot;math/tex; mode=display&quot;&gt;b = l + n - 1&lt;/script&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;See the image below for an explanation&lt;/p&gt;
+&lt;p&gt;See the image below for an explanation
+&lt;img src=&quot;../../../assets/images/ee1-guide/definition-slide-1.png&quot; alt=&quot;Circuit and definitions slide&quot; /&gt;&lt;/p&gt;
 
 </description>
         <pubDate>Thu, 03 Sep 2015 00:00:00 -0400</pubDate>
