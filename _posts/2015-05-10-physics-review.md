@@ -108,7 +108,7 @@ Simply the time it takes to make one revolution given velocity v. Second equatio
 
 > $$ \frac{dA}{dt} = rv\cdot sin\phi $$ s
 
-![Kepler's Law of Equal Areas](../assets/images/physics-review/kepler-areas.png)
+![Kepler's Law of Equal Areas](../../assets/images/physics-review/kepler-areas.png)
 
 Kepler's Law of Equal Areas. In equal units of time, the area a planet sweeps out in a triangle along its orbit path will always be equal to each other.
 
@@ -329,7 +329,7 @@ Similar to the above, this equation is for a stopped pipe (one end open, the oth
 
 See below for visualization.
 
-![Fundamental Frequencies in Pipes](../assets/images/physics-review/sound-fund-freq.gif)
+![Fundamental Frequencies in Pipes](../../assets/images/physics-review/sound-fund-freq.gif)
 
 ##### Beat Frequency
 
@@ -337,7 +337,7 @@ See below for visualization.
 
 Two different sound frequencies create what we call 'beats'. It is addional amplitude variations in the sound we hear. See below image.
 
-![Image of Beat](../assets/images/physics-review/beat-freq.jpeg)
+![Image of Beat](../../assets/images/physics-review/beat-freq.jpeg)
 
 ##### The Doppler Effect
 
@@ -598,7 +598,7 @@ The total Energy of a solid is equal to $$ 3nRT $$.
 
 #### Phase Diagrams
 
-![Image of Phase Diagram](../assets/images/physics-review/phase-diag.png)
+![Image of Phase Diagram](../../assets/images/physics-review/phase-diag.png)
 
 Phase diagrams can be useful in determining the conditions under which a material transitions phases from solid, to liquid, and gas.
 
@@ -687,7 +687,7 @@ Any device that can turn heat into Work, is called a _heat engine_. All engines 
 
 We can visualize he cycle with the following image:
 
-![Image of Carnot Cycle](../assets/images/physics-review/carnot-cycle.gif)
+![Image of Carnot Cycle](../../assets/images/physics-review/carnot-cycle.gif)
 
 
 
@@ -709,7 +709,7 @@ Because we know from above that $$ Q_C $$ can never be zero, this means that $$ 
 
 Remember $$ \gamma $$ is defined as the ratio of heat capacities at constant volume and pressure (see earlier).
 
-![Image of Otto Cycle](../assets/images/physics-review/otto-cycle.png)
+![Image of Otto Cycle](../../assets/images/physics-review/otto-cycle.png)
 
 Above is an image detailing a $$ pV $$ diagram of a normal Otto Cycle. From A to B there is an adiabatic compression (no heat lost). B to C we have heat added into the system with constant pressure and some volume change (This means some work is done). Point C to D there is the power stroke. The gas expands at somewhat constant temperature doing as much work as is can while pressure decreases. Then from point D to A the extra heat is exhausted as the gas cools in temperature. It also drops in pressure while volume remains constant.
 
@@ -737,7 +737,7 @@ We can also state it as: _It is impossible for any process to have as its sole r
 
 #### Steps of the Carnot Cycle
 
-![Carnot Diagram](../assets/images/physics-review/carnot-diag.gif)
+![Carnot Diagram](../../assets/images/physics-review/carnot-diag.gif)
 
 1. The gas expands isothermally at Temperature $$ T_H $$ absorbing heat $$ Q_H $$
 2. It expands adiabatically until its temperature drops to $$ T_C $$
