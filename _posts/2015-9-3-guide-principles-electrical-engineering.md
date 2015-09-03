@@ -55,7 +55,7 @@ Topics:
 - A set of independent loops - Each loop in the set contains at least one branch that is not part of any other loop in the set(a-b-c, b-e-g-d, b-c-f-h-g-d)
 - _Mesh_ - a loop that does not enclose any other loop (d-b-e-g)
 
-![Circuit and definitions slide](../assets/images/ee1-guide/definition-slide-1.png)
+![Circuit and definitions slide](../../../assets/images/ee1-guide/definition-slide-1.png)
 
 _!Important!_ A network with $$ b $$ branches, $$ n $$ nodes and a total of $$ l $$ indenedent loops will satisfy the following:
 
