@@ -6,9 +6,210 @@
 </description>
     <link>http://zacblanco.github.io//</link>
     <atom:link href="http://zacblanco.github.io//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 08 Aug 2015 19:40:43 -0700</pubDate>
-    <lastBuildDate>Sat, 08 Aug 2015 19:40:43 -0700</lastBuildDate>
+    <pubDate>Thu, 03 Sep 2015 12:43:41 -0400</pubDate>
+    <lastBuildDate>Thu, 03 Sep 2015 12:43:41 -0400</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>A Guide for Principles of EE I at Rutgers University</title>
+        <description>&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
+
+&lt;p&gt;Here we are - a new study guide - for Principles of Electrical Engineering 1 at Rutgers University in the Fall of 2015.&lt;/p&gt;
+
+&lt;p&gt;I will try to keep this as up to date as possible as the class goea on throughout the year. Hopefully addressing all topics in the syllabus. The aim is for this to serve as a study-guide for the end of the semester.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Course Instructor: Prof. Hana Godrich&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Topics:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Voltage, Current, Resistance&lt;/li&gt;
+  &lt;li&gt;Ohm’s Law, Kirkhoff’s Law&lt;/li&gt;
+  &lt;li&gt;Tools for analyizing circuits&lt;/li&gt;
+  &lt;li&gt;Node-Voltage Method, Mesh-Current Method
+-Thevenin and Norton Equivalents, maximum Power Transfer&lt;/li&gt;
+  &lt;li&gt;Operational amplifiers, inverting, not-inverting and difference amplifier circuits&lt;/li&gt;
+  &lt;li&gt;Properties of Inductances, etc.&lt;/li&gt;
+  &lt;li&gt;Review of Complex variables - Intro to sinusoidal steady state analysis, sinusoidal sources, Phasors&lt;/li&gt;
+  &lt;li&gt;Impedance, Admittance, reactance, susceptance, delta-wye simplifications, Phasor Diagrams&lt;/li&gt;
+  &lt;li&gt;Sinusoidal steady sate power calculates, RMS values, frequency selective circuits&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;september-3rd-2015&quot;&gt;September 3rd, 2015&lt;/h3&gt;
+
+&lt;h5 id=&quot;definition-circuit&quot;&gt;Definition: Circuit&lt;/h5&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;An interconnection of components or elements that form a &lt;em&gt;closed path&lt;/em&gt; or many closed paths.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Of any element or component in a circuit, there are at least two terminals (i.e a connection) on each side of the element&lt;/li&gt;
+  &lt;li&gt;A node is an intersection of &lt;em&gt;two or more&lt;/em&gt; branches or connections off of an element. It can also be thought of as anything that is not part of a component or element.&lt;/li&gt;
+  &lt;li&gt;Circuits can take many different forms - but they can still perform the same function so long as all of the interconnections are the exact same.&lt;/li&gt;
+  &lt;li&gt;A &lt;em&gt;Path&lt;/em&gt; is a single “way” that you can walk through a circuit. Most circuits will have many, many, many paths. They must be continuous - no breaks in the&lt;/li&gt;
+  &lt;li&gt;A &lt;em&gt;Branch&lt;/em&gt; is a path that moves form one node to another to another. It encompasses only a single element&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;basic-circuit-components&quot;&gt;Basic Circuit Components&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;em&gt;Element or Component&lt;/em&gt;: a two - or more - terminal device in a circuit with behavior described by &lt;em&gt;charactieristics&lt;/em&gt; which vary with time&lt;/li&gt;
+  &lt;li&gt;&lt;script type=&quot;math/tex&quot;&gt;V&lt;/script&gt; or &lt;script type=&quot;math/tex&quot;&gt;v&lt;/script&gt; - Voltage. Usually talked about voltage drop or gain over an element or component represented with  &lt;script type=&quot;math/tex&quot;&gt;+&lt;/script&gt; or &lt;script type=&quot;math/tex&quot;&gt;-&lt;/script&gt;.&lt;/li&gt;
+  &lt;li&gt;&lt;script type=&quot;math/tex&quot;&gt;I&lt;/script&gt; or  &lt;script type=&quot;math/tex&quot;&gt;i&lt;/script&gt; - Current. Current has a direction chosen &lt;em&gt;almost&lt;/em&gt; arbitrarily by a person analyzing a circuit.&lt;/li&gt;
+  &lt;li&gt;Elements and components don’t have to actually be a &lt;em&gt;part&lt;/em&gt; of the circuit. For example, we can think of a lightbulb as behaving similarly to a resistor. This means in a circuit diagram we can represent the lightbulb as simply a resistor.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;more-definitions&quot;&gt;More Definitions&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;em&gt;Essential Node&lt;/em&gt; - A node where three or more circuit elements join&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;Essential Branch&lt;/em&gt; - A path that cnnects two essential nodes withoutpassing through an essential node. Must include elements in series.&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;Loop&lt;/em&gt; - a closed path that starts and ends at the same point.&lt;/li&gt;
+  &lt;li&gt;A set of independent loops - Each loop in the set contains at least one branch that is not part of any other loop in the set(a-b-c, b-e-g-d, b-c-f-h-g-d)&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;Mesh&lt;/em&gt; - a loop that does not enclose any other loop (d-b-e-g)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;../assets/images/ee1-guide/definition-slide-1.png&quot; alt=&quot;Circuit and definitions slide&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;!Important!&lt;/em&gt; A network with &lt;script type=&quot;math/tex&quot;&gt;b&lt;/script&gt; branches, &lt;script type=&quot;math/tex&quot;&gt;n&lt;/script&gt; nodes and a total of &lt;script type=&quot;math/tex&quot;&gt;l&lt;/script&gt; indenedent loops will satisfy the following:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;script type=&quot;math/tex; mode=display&quot;&gt;b = l + n - 1&lt;/script&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;See the image below for an explanation&lt;/p&gt;
+
+</description>
+        <pubDate>Thu, 03 Sep 2015 00:00:00 -0400</pubDate>
+        <link>http://zacblanco.github.io//blog/rutgers-principles-electrical-engineering-1</link>
+        <guid isPermaLink="true">http://zacblanco.github.io//blog/rutgers-principles-electrical-engineering-1</guid>
+        
+        <category>engineering</category>
+        
+        <category>rutgers</category>
+        
+        <category>fall 2015</category>
+        
+        <category>principles of electrical engineering</category>
+        
+        <category>guide</category>
+        
+        <category>class</category>
+        
+        <category>study</category>
+        
+        <category>circuits</category>
+        
+        <category>computer engineering</category>
+        
+        <category>electrical engineering</category>
+        
+        <category>engineers</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>A (Somewhat) Comprehensive Guide to Physics 227 at Rutgers University</title>
+        <description>&lt;p&gt;So here we are again - another semester of introductory physics at Rutgers University, New Brunswick. This is the Fall 2015 semester. This will be a kind-of continuation from the Physics IB guide from the previous spring 2015 semester.&lt;/p&gt;
+
+&lt;p&gt;The aim of this is post/page to provide a (somewhat) comprehensive guide to this class by periodically updating it throughout the semester. My plan is to make notes during lecture as well as provide practice problems and explanations.&lt;/p&gt;
+
+&lt;p&gt;Without furthur ado - Let’s dive in!&lt;/p&gt;
+
+&lt;h2 id=&quot;september-3rd-2015&quot;&gt;September 3rd, 2015&lt;/h2&gt;
+
+&lt;p&gt;Almost everything in the universe can be described by just 4 (!) equations.&lt;/p&gt;
+
+&lt;h3 id=&quot;electric-charge&quot;&gt;Electric Charge&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;em&gt;Electric Charge&lt;/em&gt; is a physical quantity that characterizes how charged object participate in electrostatic interactions&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;electric-charge-properties&quot;&gt;Electric Charge Properties&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;It is a scalar value&lt;/li&gt;
+  &lt;li&gt;It is quantizes - meaning that a charge must be in integer multiples of the fundamental value of charge&lt;/li&gt;
+  &lt;li&gt;This fundamental amount is the charge of an electron.&lt;/li&gt;
+  &lt;li&gt;
+    &lt;script type=&quot;math/tex; mode=display&quot;&gt;e ~ 1.6 * 10 ^ -19 C&lt;/script&gt;
+  &lt;/li&gt;
+  &lt;li&gt;The net charge of any isolated system is &lt;em&gt;conserved&lt;/em&gt;. i.e the net charge of the universe is zero&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;coulombs-law&quot;&gt;Coulomb’s Law&lt;/h3&gt;
+
+&lt;p&gt;Coulomb’s law describes the &lt;em&gt;forces&lt;/em&gt; that charged particles exert on each other due to…well…simply their charge.&lt;/p&gt;
+
+&lt;p&gt;The equation for Coulomb’s law is the following:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;script type=&quot;math/tex; mode=display&quot;&gt;F_{12} = k\frac{\left|q_1q_2\right|}{r^2}&lt;/script&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Now let’s quickly describe each quantity&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;script type=&quot;math/tex&quot;&gt;F_{12}&lt;/script&gt; is the force that each particle exerts on one another. This means that &lt;em&gt;both particles experience the same force&lt;/em&gt;!&lt;/li&gt;
+  &lt;li&gt;&lt;script type=&quot;math/tex&quot;&gt;k&lt;/script&gt; is a constant value expressed in this function. It’s value is equal to &lt;script type=&quot;math/tex&quot;&gt;\frac{1}{4\pi\epsilon_0}&lt;/script&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;script type=&quot;math/tex&quot;&gt;q_1&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;q_2&lt;/script&gt; are the charges of each particle measured in  &lt;em&gt;Coulomb’s&lt;/em&gt; or the symbol &lt;script type=&quot;math/tex&quot;&gt;C&lt;/script&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;script type=&quot;math/tex&quot;&gt;r&lt;/script&gt; is the distance between the two charges.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;script type=&quot;math/tex; mode=display&quot;&gt;k = \frac{1}{4\pi\epsilon_0} = 9*10^9 \frac{Nm^2}{C^2}&lt;/script&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;script type=&quot;math/tex; mode=display&quot;&gt;\epsilon_0 = 9 * 10^{-12} \frac{C^2}{Nm^2}&lt;/script&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;the-superposition-principle&quot;&gt;The Superposition Principle&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;This principle states that the &lt;em&gt;interaction between any two charges is unaffected by any other charges present&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;This principle also tells us that the equations are &lt;em&gt;linear&lt;/em&gt;. The solutions of multiple equations can be added together to form other solutions (as in the presence of multiple charges).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;electric-dipole&quot;&gt;Electric Dipole&lt;/h3&gt;
+
+&lt;p&gt;An &lt;em&gt;electric dipole&lt;/em&gt; is formed by two charges &lt;script type=&quot;math/tex&quot;&gt;+q&lt;/script&gt; and  &lt;script type=&quot;math/tex&quot;&gt;-q&lt;/script&gt; at the distance &lt;script type=&quot;math/tex&quot;&gt;d&lt;/script&gt; apart.&lt;/p&gt;
+
+&lt;p&gt;And that wraps up section one! I hope to keep this as up to date as possible.
+If you would like to contribute to this guide please submit a pull request on GitHub.&lt;/p&gt;
+
+</description>
+        <pubDate>Thu, 03 Sep 2015 00:00:00 -0400</pubDate>
+        <link>http://zacblanco.github.io//blog/rutgers-physics-227-guide</link>
+        <guid isPermaLink="true">http://zacblanco.github.io//blog/rutgers-physics-227-guide</guid>
+        
+        <category>physics</category>
+        
+        <category>rutgers</category>
+        
+        <category>fall 2015</category>
+        
+        <category>electromagnetism</category>
+        
+        <category>magnet</category>
+        
+        <category>227</category>
+        
+        <category>undergraduate</category>
+        
+        <category>physics.rutgers.edu</category>
+        
+        <category>electrostatics</category>
+        
+        <category>dipoles</category>
+        
+        
+      </item>
     
       <item>
         <title>Quick Tips: XML Schemas and Validation</title>
@@ -164,7 +365,7 @@
 &lt;p&gt;And that’s simply it. XML Schema validation in a nutshell.&lt;/p&gt;
 
 </description>
-        <pubDate>Mon, 18 May 2015 00:00:00 -0700</pubDate>
+        <pubDate>Mon, 18 May 2015 00:00:00 -0400</pubDate>
         <link>http://zacblanco.github.io//blog/markup-language/xml-schema-validation</link>
         <guid isPermaLink="true">http://zacblanco.github.io//blog/markup-language/xml-schema-validation</guid>
         
@@ -1181,7 +1382,7 @@
 &lt;/blockquote&gt;
 
 </description>
-        <pubDate>Sun, 10 May 2015 00:00:00 -0700</pubDate>
+        <pubDate>Sun, 10 May 2015 00:00:00 -0400</pubDate>
         <link>http://zacblanco.github.io//blog/physics/physics-IB-review</link>
         <guid isPermaLink="true">http://zacblanco.github.io//blog/physics/physics-IB-review</guid>
         
@@ -1404,7 +1605,7 @@
 &lt;p&gt;For any corrections to this post, please leave a comment.&lt;/p&gt;
 
 </description>
-        <pubDate>Mon, 23 Mar 2015 00:00:00 -0700</pubDate>
+        <pubDate>Mon, 23 Mar 2015 00:00:00 -0400</pubDate>
         <link>http://zacblanco.github.io//blog/machine-learning/neural-networks-and-backpropagation</link>
         <guid isPermaLink="true">http://zacblanco.github.io//blog/machine-learning/neural-networks-and-backpropagation</guid>
         
@@ -1495,7 +1696,7 @@
 &lt;p&gt;Hopefully this brief guide was enough for you to get your site set up on GitHub Pages. Good luck!&lt;/p&gt;
 
 </description>
-        <pubDate>Wed, 18 Mar 2015 00:00:00 -0700</pubDate>
+        <pubDate>Wed, 18 Mar 2015 00:00:00 -0400</pubDate>
         <link>http://zacblanco.github.io//blog/jekyll/hosting-with-github-pages</link>
         <guid isPermaLink="true">http://zacblanco.github.io//blog/jekyll/hosting-with-github-pages</guid>
         
@@ -1573,7 +1774,7 @@
 &lt;p&gt;I hope now that you have enough knowledge about the structure of a Jekyll site to be able to customize it to your liking.&lt;/p&gt;
 
 </description>
-        <pubDate>Tue, 17 Mar 2015 00:00:00 -0700</pubDate>
+        <pubDate>Tue, 17 Mar 2015 00:00:00 -0400</pubDate>
         <link>http://zacblanco.github.io//blog/jekyll/adding-flavor-to-jekyll</link>
         <guid isPermaLink="true">http://zacblanco.github.io//blog/jekyll/adding-flavor-to-jekyll</guid>
         
@@ -1719,7 +1920,7 @@ We&#39;re ust getting started here.
 
 &lt;p&gt;Happy blogging!&lt;/p&gt;
 </description>
-        <pubDate>Wed, 11 Mar 2015 00:00:00 -0700</pubDate>
+        <pubDate>Wed, 11 Mar 2015 00:00:00 -0400</pubDate>
         <link>http://zacblanco.github.io//blog/jekyll/building-a-site-with-jekyll</link>
         <guid isPermaLink="true">http://zacblanco.github.io//blog/jekyll/building-a-site-with-jekyll</guid>
         
@@ -1741,7 +1942,7 @@ We&#39;re ust getting started here.
         <description>&lt;div class=&quot;css-full-post-content js-full-post-content&quot;&gt;
 So I just wanted to let you guys know that I&#39;ve updated my GitHub pages site. Because I like learning and building things form scratch to learn how everything is put together I built my site from the ground up and learned a few things along the way.&lt;br /&gt;&lt;br /&gt;I was inspired to do this redesign after I came across flexbox. A CSS display property that I had not previously known of. It makes a lot of resizing and overall site layout much easier. I was inspired to rebuild my site using this.&lt;br /&gt;&lt;br /&gt;The great thing is that flexbox is easy. It just works. and It&#39;s trivial to center things in your screen and resize the browser causing them to flow onto other line. It really is a great tool. The one caveat is that it doesn&#39;t have great browser support.&lt;br /&gt;&lt;br /&gt;I&#39;ve currently tested on the most updated versions of the major browsers (IE, Chrome, Firefox, Safari) and so far Chrome and Firefox render the page properly. Unfortunately however, Safari definitely does not render the page properly. Most older browsers don&#39;t Although I&#39;m not too worried about this. Even with improper display the page is still navigable. IE11 surprisingly does. Even with limited support for this display I think people should start adopting it in their designs so we can force more people to upgrade their browsers, so that everyone can anjoy a modern browsing experience.&lt;br /&gt;&lt;br /&gt;Over the next few days I&#39;ll do my best to post some simple tutorials using flexbox and some of the new CSS3 tricks I&#39;ve learned over the weekend while I made my site.&lt;br /&gt;&lt;br /&gt;In the meantime you should check out&amp;nbsp;&lt;a href=&quot;http://flexboxin5.com/&quot; target=&quot;_blank&quot;&gt;flexboxin5&lt;/a&gt;&amp;nbsp;it helped me figure out what I was doing and what to include in my CSS to fix the layouts. It&#39;s a great tutorial&lt;br /&gt;&lt;br /&gt;Don&#39;t forget to check out the new design!&lt;br /&gt;&lt;br /&gt;&lt;a href=&quot;http://zacblanco.github.io/&quot;&gt;zacblanco.github.io&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;Zac
 &lt;/div&gt;</description>
-        <pubDate>Mon, 09 Mar 2015 00:00:00 -0700</pubDate>
+        <pubDate>Mon, 09 Mar 2015 00:00:00 -0400</pubDate>
         <link>http://zacblanco.github.io//blog/blogspot-posts/updated-site.html</link>
         <guid isPermaLink="true">http://zacblanco.github.io//blog/blogspot-posts/updated-site.html</guid>
         
@@ -1753,33 +1954,9 @@ So I just wanted to let you guys know that I&#39;ve updated my GitHub pages site
         <description>&lt;div class=&quot;css-full-post-content js-full-post-content&quot;&gt;
 Since I&#39;m pretty new to blogging I haven&#39;t found the platform yet that I like best. I decided blogger was a little too plain and wordpress had some better layouts but didn&#39;t give me enough control, so I&#39;ve decided to move to jekyll hosting using github pages.&lt;br /&gt;&lt;br /&gt;I won&#39;t be posting here any longer. Please direct all traffic to &lt;a href=&quot;http://zacblanco.github.io/&quot;&gt;zacblanco.github.io&lt;/a&gt;.&lt;br /&gt;&lt;br /&gt;EDIT:&lt;br /&gt;&lt;br /&gt;I just want to add my previous post about an updated site-- well. Now that I&#39;m using Jekyll I won&#39;t be able to keep that as the landing page. You can still find it and view-source &lt;a href=&quot;http://zacblanco.github.io/s-old/index.html&quot;&gt;zacblanco.github.io/s-old/index.html&lt;/a&gt;
 &lt;/div&gt;</description>
-        <pubDate>Mon, 09 Mar 2015 00:00:00 -0700</pubDate>
+        <pubDate>Mon, 09 Mar 2015 00:00:00 -0400</pubDate>
         <link>http://zacblanco.github.io//blog/blogspot-posts/blog-transfer.html</link>
         <guid isPermaLink="true">http://zacblanco.github.io//blog/blogspot-posts/blog-transfer.html</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Projects and More Interesting Updates</title>
-        <description>&lt;div class=&quot;css-full-post-content js-full-post-content&quot;&gt;
-So I&#39;ve been pretty busy these last two weeks with schoolwork and other matters so I haven&#39;t had much time to update anything here.&lt;br /&gt;&lt;br /&gt;I did want to let you know that I started working on a Java library use and to implement statistics functions that I think would be useful to analyze large datasets.&lt;br /&gt;&lt;br /&gt;For now I&#39;m calling the project DStat (unless someone can come up with a better name). It will hopefully become a fully fledged statistics library for performing operations on multiple types of distributions of data. As of now it only has a few functions, but feel free to take a look at that and the other projects over at my &lt;a href=&quot;https://github.com/zacblanco&quot; target=&quot;_blank&quot;&gt;GitHub page&lt;/a&gt;. I try to make progress whenever I find free time to do a little extra work. Feel free to contribute too! Everything I do I release as open source.&lt;br /&gt;&lt;br /&gt;I eventually would like to be able to take some data you might find from your own &lt;a href=&quot;https://www.google.com/settings/takeout&quot; target=&quot;_blank&quot;&gt;Google Data Archive&lt;/a&gt;&amp;nbsp;and within a few minutes (using DStat of course!) come up with some neat conclusions based on your own search habits or other usage statistics. Of course it might be some time before that&#39;s possible I hope that in time you will be able to find that kind of functionality with it.&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
-&lt;/div&gt;</description>
-        <pubDate>Thu, 05 Mar 2015 00:00:00 -0800</pubDate>
-        <link>http://zacblanco.github.io//blog/blogspot-posts/projects-and-more-interesting-updates.html</link>
-        <guid isPermaLink="true">http://zacblanco.github.io//blog/blogspot-posts/projects-and-more-interesting-updates.html</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Internship</title>
-        <description>&lt;div class=&quot;css-full-post-content js-full-post-content&quot;&gt;
-Just thought it would be fun to share here. As of today I am confirmed to be working as an intern this summer with Hortonworks; a major corporate contributor to the open-source Hadoop platform.&lt;br /&gt;&lt;br /&gt;I still have a lot to learn as a ECE/Comp. Sci student, but I&#39;m sure this internship will prepare me for the future. I know that I&#39;ll be surrounded by some of the best minds in the industry this summer and I really hope to learn as much as I can from my future colleagues.&lt;br /&gt;&lt;br /&gt;In light of this I thought it would be fun to make a new desktop background. I took a large image of the Hortonworks logo, the image editor GIMP and a little magic to pull this together:&lt;br /&gt;&lt;br /&gt;&lt;div class=&quot;separator&quot; style=&quot;clear: both; text-align: center;&quot;&gt;&lt;a href=&quot;http://2.bp.blogspot.com/-S1nePG9AdvQ/VPf1tYvdE3I/AAAAAAAAEBg/hMMzj7M4Uts/s1600/Hortonworks.png&quot; imageanchor=&quot;1&quot; style=&quot;margin-left: 1em; margin-right: 1em;&quot;&gt;&lt;img border=&quot;0&quot; src=&quot;http://2.bp.blogspot.com/-S1nePG9AdvQ/VPf1tYvdE3I/AAAAAAAAEBg/hMMzj7M4Uts/s1600/Hortonworks.png&quot; height=&quot;200&quot; width=&quot;320&quot; /&gt;&lt;/a&gt;&lt;/div&gt;&lt;br /&gt;Feel free to copy and redistribute this too!&lt;br /&gt;&lt;br /&gt;Cheers to a (hopefully) fantastic opportunity.
-&lt;/div&gt;</description>
-        <pubDate>Thu, 05 Mar 2015 00:00:00 -0800</pubDate>
-        <link>http://zacblanco.github.io//blog/blogspot-posts/internship.html</link>
-        <guid isPermaLink="true">http://zacblanco.github.io//blog/blogspot-posts/internship.html</guid>
         
         
       </item>
