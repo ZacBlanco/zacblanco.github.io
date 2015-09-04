@@ -26,7 +26,7 @@ Almost everything in the universe can be described by just 4 (!) equations.
 - It is a scalar value
 - It is quantizes - meaning that a charge must be in integer multiples of the fundamental value of charge
  - This fundamental amount is the charge of an electron.
- - $$ e ~ 1.6 * 10 ^ -19 C $$
+ - $$ e = 1.6 * 10 ^ -19 C $$
  - The net charge of any isolated system is _conserved_. i.e the net charge of the universe is zero
  
  
