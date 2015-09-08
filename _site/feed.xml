@@ -6,8 +6,8 @@
 </description>
     <link>http://zacblanco.github.io//</link>
     <atom:link href="http://zacblanco.github.io//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 08 Sep 2015 11:24:49 -0400</pubDate>
-    <lastBuildDate>Tue, 08 Sep 2015 11:24:49 -0400</lastBuildDate>
+    <pubDate>Tue, 08 Sep 2015 13:41:43 -0400</pubDate>
+    <lastBuildDate>Tue, 08 Sep 2015 13:41:43 -0400</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -81,10 +81,67 @@
 &lt;p&gt;And that wraps up section one! I hope to keep this as up to date as possible.
 If you would like to contribute to this guide please submit a pull request on GitHub.&lt;/p&gt;
 
+&lt;h2 id=&quot;september-6th-2015&quot;&gt;September 6th 2015&lt;/h2&gt;
+
+&lt;h3 id=&quot;lecture-2---electric-field-and-electric-field-lines&quot;&gt;Lecture 2 - Electric Field and Electric Field Lines.&lt;/h3&gt;
+
+&lt;p&gt;One great analogy for electrostatic fields is gravity. Think about it&lt;/p&gt;
+
+&lt;p&gt;Gravity is a force we feel due to mass. All around a massive object, the force due to gravity than another object would feel is always directed at the center of mass of the larger object no matter the position around the massive object.&lt;/p&gt;
+
+&lt;p&gt;Now think about a negatively charged object with no mass (and every other object is a positively charged object). Every positive object would undergo a force directed at the very center of the negatively charged object (so long as it is a point charge). It wouldn’t matter the location of the positive test charges. The force is always pointing towards the same point on the negatively charged object.&lt;/p&gt;
+
+&lt;h4 id=&quot;electric-field&quot;&gt;Electric Field&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Units are in &lt;script type=&quot;math/tex&quot;&gt;\frac{N}{C}&lt;/script&gt;&lt;/li&gt;
+  &lt;li&gt;A force due to an electric field can be defined as &lt;script type=&quot;math/tex&quot;&gt;\vec{F} = q\vec{E}&lt;/script&gt;&lt;/li&gt;
+  &lt;li&gt;Another form: &lt;script type=&quot;math/tex&quot;&gt;\vec{E} = k\frac{q}{r^2}&lt;/script&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;It’s very useful to know that due to the superposition principle (mentioned above) We can add vectors of electric fields to find the &lt;em&gt;net electric field&lt;/em&gt; due to multiple charges, simply by adding the fields due do different charges at a single point. To add fields from different charges together, you must be using the &lt;em&gt;same test-point for each field&lt;/em&gt;.&lt;/p&gt;
+
+&lt;h4 id=&quot;electric-field-lines&quot;&gt;Electric Field Lines&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;The direction of the electric field vector is tangential to the field line (curve)&lt;/li&gt;
+  &lt;li&gt;The intensity of the electric field at a given point is proportional to the local density of the field lines.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Another way of stating it, is that at every point on a field line, the force experienced by a test charge is in a direction that is tangential to the field line.&lt;/p&gt;
+
+&lt;p&gt;More things to note:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;When drawing electric field lines, the lines should always point away from a positive charge, and either terminate at a negative charge, or at infinity.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;A weaker field will have less lines (less dense)&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;A stronger field will have more lines (more dense)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;For a point charge: &lt;script type=&quot;math/tex&quot;&gt;E(r) \propto \frac{1}{r^2}&lt;/script&gt;&lt;/li&gt;
+  &lt;li&gt;The density of the lines is &lt;script type=&quot;math/tex&quot;&gt;\propto \frac{1}{r^2}&lt;/script&gt;&lt;/li&gt;
+  &lt;li&gt;The area of a sphere centered at the charge is &lt;script type=&quot;math/tex&quot;&gt;\propto r^2&lt;/script&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;electric-polarization&quot;&gt;Electric Polarization&lt;/h4&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Redistribution of charges within a neutral object by an external electric field. As a result, a neutral object acquires a dipole moment.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;We call materials that have induced or built-in dipoles, &lt;strong&gt;dialectrics&lt;/strong&gt;. For example &lt;strong&gt;water&lt;/strong&gt;. Dialectrics are usually insulators.&lt;/p&gt;
+
+&lt;p&gt;If we apply an electric field to any of these dialectrics, they will polarize themselves. As is one side of the object will become more positive, and one more negative.&lt;/p&gt;
+
+&lt;p&gt;On the other hand, we have conductors that can polarize themselves because their electrons act as a “sea”. The electrons flow freely inside the metal. So if you apply and electric field, the electrons will move in the directon of the electric field, leaving some parts more positively/negatively charged than others.&lt;/p&gt;
+
 </description>
         <pubDate>Thu, 03 Sep 2015 00:00:00 -0400</pubDate>
-        <link>http://zacblanco.github.io//blog/rutgers-physics-227-guide</link>
-        <guid isPermaLink="true">http://zacblanco.github.io//blog/rutgers-physics-227-guide</guid>
+        <link>http://zacblanco.github.io//blog/physics/rutgers-physics-227-guide</link>
+        <guid isPermaLink="true">http://zacblanco.github.io//blog/physics/rutgers-physics-227-guide</guid>
         
         <category>physics</category>
         
@@ -136,7 +193,7 @@ If you would like to contribute to this guide please submit a pull request on Gi
   &lt;li&gt;Sinusoidal steady sate power calculates, RMS values, frequency selective circuits&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&quot;september-3rd-2015&quot;&gt;September 3rd 2015&lt;/h3&gt;
+&lt;h2 id=&quot;september-3rd-2015&quot;&gt;September 3rd 2015&lt;/h2&gt;
 
 &lt;h5 id=&quot;definition-circuit&quot;&gt;Definition: Circuit&lt;/h5&gt;
 
@@ -187,7 +244,7 @@ If you would like to contribute to this guide please submit a pull request on Gi
 &lt;p&gt;See the image below for an explanation
 &lt;img src=&quot;../../../assets/images/ee1-guide/definition-slide-1.png&quot; alt=&quot;Circuit and definitions slide&quot; /&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;september-6th-2015&quot;&gt;September 6th 2015&lt;/h3&gt;
+&lt;h2 id=&quot;september-6th-2015&quot;&gt;September 6th 2015&lt;/h2&gt;
 
 &lt;h4 id=&quot;circuit-variables&quot;&gt;Circuit Variables&lt;/h4&gt;
 
@@ -285,6 +342,16 @@ If you would like to contribute to this guide please submit a pull request on Gi
 &lt;h4 id=&quot;passive-sign-convention&quot;&gt;Passive Sign Convention&lt;/h4&gt;
 
 &lt;p&gt;&lt;img src=&quot;../../../assets/images/ee1-guide/passive-sign-convention.png&quot; alt=&quot;Passive Sign Convention Example&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;finding-the-power-consumed-or-delivered-by-an-element&quot;&gt;Finding the power consumed or delivered by an Element&lt;/h4&gt;
+
+&lt;p&gt;If we have multiple elements in a circuit, we know the voltage drop/rise across each, and the current for all but one element, then we can find the power that is being delivered across the final element. We follow just a few simple steps&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;For each element, find if the power is consumed or delivered.&lt;/li&gt;
+  &lt;li&gt;For each element calculate the power the is being consumed or delivered.&lt;/li&gt;
+  &lt;li&gt;Add all of the power across each element up. Whatever the remaining difference is, the opposite sign (positive/negative) is the amount of power delivered across the last element.&lt;/li&gt;
+&lt;/ol&gt;
 
 </description>
         <pubDate>Thu, 03 Sep 2015 00:00:00 -0400</pubDate>

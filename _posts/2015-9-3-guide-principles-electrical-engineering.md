@@ -28,7 +28,7 @@ I will try to keep this as up to date as possible as the class goes on throughou
 - Impedance, Admittance, reactance, susceptance, delta-wye simplifications, Phasor Diagrams
 - Sinusoidal steady sate power calculates, RMS values, frequency selective circuits
 
-### September 3rd 2015
+## September 3rd 2015
 
 ##### Definition: Circuit
 
@@ -69,7 +69,7 @@ See the image below for an explanation
 ![Circuit and definitions slide](../../../assets/images/ee1-guide/definition-slide-1.png)
 
 
-### September 6th 2015
+## September 6th 2015
 
 #### Circuit Variables
 
