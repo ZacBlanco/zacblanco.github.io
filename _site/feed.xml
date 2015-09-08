@@ -6,8 +6,8 @@
 </description>
     <link>http://zacblanco.github.io//</link>
     <atom:link href="http://zacblanco.github.io//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 03 Sep 2015 13:19:37 -0400</pubDate>
-    <lastBuildDate>Thu, 03 Sep 2015 13:19:37 -0400</lastBuildDate>
+    <pubDate>Tue, 08 Sep 2015 11:24:49 -0400</pubDate>
+    <lastBuildDate>Tue, 08 Sep 2015 11:24:49 -0400</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -121,20 +121,22 @@ If you would like to contribute to this guide please submit a pull request on Gi
   &lt;li&gt;Course Instructor: Prof. Hana Godrich&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Topics:
-s
-- Voltage, Current, Resistance
-- Ohm’s Law, Kirkhoff’s Law
-- Tools for analyizing circuits
-- Node-Voltage Method, Mesh-Current Method
--Thevenin and Norton Equivalents, maximum Power Transfer
-- Operational amplifiers, inverting, not-inverting and difference amplifier circuits
-- Properties of Inductances, etc.
-- Review of Complex variables - Intro to sinusoidal steady state analysis, sinusoidal sources, Phasors
-- Impedance, Admittance, reactance, susceptance, delta-wye simplifications, Phasor Diagrams
-- Sinusoidal steady sate power calculates, RMS values, frequency selective circuits&lt;/p&gt;
+&lt;h5 id=&quot;topics&quot;&gt;Topics:&lt;/h5&gt;
 
-&lt;h3 id=&quot;september-3rd-2015&quot;&gt;September 3rd, 2015&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Voltage, Current, Resistance&lt;/li&gt;
+  &lt;li&gt;Ohm’s Law, Kirkhoff’s Law&lt;/li&gt;
+  &lt;li&gt;Tools for analyizing circuits&lt;/li&gt;
+  &lt;li&gt;Node-Voltage Method, Mesh-Current Method
+-Thevenin and Norton Equivalents, maximum Power Transfer&lt;/li&gt;
+  &lt;li&gt;Operational amplifiers, inverting, not-inverting and difference amplifier circuits&lt;/li&gt;
+  &lt;li&gt;Properties of Inductances, etc.&lt;/li&gt;
+  &lt;li&gt;Review of Complex variables - Intro to sinusoidal steady state analysis, sinusoidal sources, Phasors&lt;/li&gt;
+  &lt;li&gt;Impedance, Admittance, reactance, susceptance, delta-wye simplifications, Phasor Diagrams&lt;/li&gt;
+  &lt;li&gt;Sinusoidal steady sate power calculates, RMS values, frequency selective circuits&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;september-3rd-2015&quot;&gt;September 3rd 2015&lt;/h3&gt;
 
 &lt;h5 id=&quot;definition-circuit&quot;&gt;Definition: Circuit&lt;/h5&gt;
 
@@ -143,7 +145,7 @@ s
 &lt;/blockquote&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;Of any element or component in a circuit, there are at least two terminals (i.e a connection) on each side of the element&lt;/li&gt;
+  &lt;li&gt;For any element or component in a circuit, there are at least two terminals (i.e a connection) on each side of the element&lt;/li&gt;
   &lt;li&gt;A node is an intersection of &lt;em&gt;two or more&lt;/em&gt; branches or connections off of an element. It can also be thought of as anything that is not part of a component or element.&lt;/li&gt;
   &lt;li&gt;Circuits can take many different forms - but they can still perform the same function so long as all of the interconnections are the exact same.&lt;/li&gt;
   &lt;li&gt;A &lt;em&gt;Path&lt;/em&gt; is a single “way” that you can walk through a circuit. Most circuits will have many, many, many paths. They must be continuous - no breaks in the&lt;/li&gt;
@@ -156,17 +158,20 @@ s
   &lt;li&gt;&lt;em&gt;Element or Component&lt;/em&gt;: a two - or more - terminal device in a circuit with behavior described by &lt;em&gt;charactieristics&lt;/em&gt; which vary with time&lt;/li&gt;
   &lt;li&gt;&lt;script type=&quot;math/tex&quot;&gt;V&lt;/script&gt; or &lt;script type=&quot;math/tex&quot;&gt;v&lt;/script&gt; - Voltage. Usually talked about voltage drop or gain over an element or component represented with  &lt;script type=&quot;math/tex&quot;&gt;+&lt;/script&gt; or &lt;script type=&quot;math/tex&quot;&gt;-&lt;/script&gt;.&lt;/li&gt;
   &lt;li&gt;&lt;script type=&quot;math/tex&quot;&gt;I&lt;/script&gt; or  &lt;script type=&quot;math/tex&quot;&gt;i&lt;/script&gt; - Current. Current has a direction chosen &lt;em&gt;almost&lt;/em&gt; arbitrarily by a person analyzing a circuit.&lt;/li&gt;
-  &lt;li&gt;Elements and components don’t have to actually be a &lt;em&gt;part&lt;/em&gt; of the circuit. For example, we can think of a lightbulb as behaving similarly to a resistor. This means in a circuit diagram we can represent the lightbulb as simply a resistor.&lt;/li&gt;
+  &lt;li&gt;Elements and components don’t have to actually be a &lt;em&gt;part&lt;/em&gt; of the circuit. For example, we can think of a lightbulb as behaving similarly to a resistor. This means in a circuit diagram we can represent the lightbulb simply as a resistor.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h4 id=&quot;more-definitions&quot;&gt;More Definitions&lt;/h4&gt;
 
 &lt;ul&gt;
   &lt;li&gt;&lt;em&gt;Essential Node&lt;/em&gt; - A node where three or more circuit elements join&lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;Essential Branch&lt;/em&gt; - A path that cnnects two essential nodes withoutpassing through an essential node. Must include elements in series.&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;Essential Branch&lt;/em&gt; - A path that cnnects two essential nodes without passing through an essential node. Must include elements in series. (d-g)&lt;/li&gt;
   &lt;li&gt;&lt;em&gt;Loop&lt;/em&gt; - a closed path that starts and ends at the same point.&lt;/li&gt;
   &lt;li&gt;A set of independent loops - Each loop in the set contains at least one branch that is not part of any other loop in the set(a-b-c, b-e-g-d, b-c-f-h-g-d)&lt;/li&gt;
   &lt;li&gt;&lt;em&gt;Mesh&lt;/em&gt; - a loop that does not enclose any other loop (d-b-e-g)&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;Path&lt;/em&gt; - A trace of connecting basic components or sources with no component or source included (a-b-e-h)&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;Node&lt;/em&gt; A point (junction) within a circuit where &lt;em&gt;two or more&lt;/em&gt; circuit elements join. (D)&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;A set of Indenpendent Loops&lt;/em&gt; - Each loop in the set contains at least one branch that is not part of any other loop in the set&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;em&gt;!Important!&lt;/em&gt; A network with &lt;script type=&quot;math/tex&quot;&gt;b&lt;/script&gt; &lt;em&gt;branches&lt;/em&gt;, &lt;script type=&quot;math/tex&quot;&gt;n&lt;/script&gt; &lt;em&gt;nodes&lt;/em&gt; and a total of &lt;script type=&quot;math/tex&quot;&gt;l&lt;/script&gt; &lt;em&gt;indenedent loops&lt;/em&gt; will satisfy the following:&lt;/p&gt;
@@ -175,8 +180,111 @@ s
   &lt;script type=&quot;math/tex; mode=display&quot;&gt;b = l + n - 1&lt;/script&gt;
 &lt;/blockquote&gt;
 
+&lt;ul&gt;
+  &lt;li&gt;Note! The above equation also works for the number of essential branches and essential nodes.&lt;/li&gt;
+&lt;/ul&gt;
+
 &lt;p&gt;See the image below for an explanation
 &lt;img src=&quot;../../../assets/images/ee1-guide/definition-slide-1.png&quot; alt=&quot;Circuit and definitions slide&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;september-6th-2015&quot;&gt;September 6th 2015&lt;/h3&gt;
+
+&lt;h4 id=&quot;circuit-variables&quot;&gt;Circuit Variables&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Charge: &lt;script type=&quot;math/tex&quot;&gt;q&lt;/script&gt; or &lt;script type=&quot;math/tex&quot;&gt;Q&lt;/script&gt;&lt;/li&gt;
+  &lt;li&gt;Current: &lt;script type=&quot;math/tex&quot;&gt;i&lt;/script&gt; or &lt;script type=&quot;math/tex&quot;&gt;I&lt;/script&gt;&lt;/li&gt;
+  &lt;li&gt;Voltage: &lt;script type=&quot;math/tex&quot;&gt;v&lt;/script&gt; or &lt;script type=&quot;math/tex&quot;&gt;V&lt;/script&gt;&lt;/li&gt;
+  &lt;li&gt;Power: &lt;script type=&quot;math/tex&quot;&gt;p&lt;/script&gt;&lt;/li&gt;
+  &lt;li&gt;Energy (or work done): &lt;script type=&quot;math/tex&quot;&gt;w&lt;/script&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;charge&quot;&gt;Charge&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Charge is a property that almost all particles posess.&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;Like charges repel, and similar charges attract&lt;/em&gt;.&lt;/li&gt;
+  &lt;li&gt;There is a minimum unit of charge is denoted by &lt;script type=&quot;math/tex&quot;&gt;q_e = 1.6 * 10^{-19} C&lt;/script&gt;&lt;/li&gt;
+  &lt;li&gt;Measured in Coulombs.&lt;/li&gt;
+  &lt;li&gt;Coloumb’s law: &lt;script type=&quot;math/tex&quot;&gt;F = k\frac{q_1q_2}{r^2}&lt;/script&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;How does this help us???&lt;/p&gt;
+
+&lt;p&gt;Electrical current is actually defined as &lt;em&gt;the flow of positive charge&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;It is very important to note that current flow is usually defined as the flow with POSITIVE charge.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;electron-drift&quot;&gt;Electron Drift&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;A conducting wire consists of atoms with loosely attached electrons. The electric force from Coulomb’s law causes the loose electrons to jump from atom to atom inside the metal.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;electrical-current&quot;&gt;Electrical Current&lt;/h4&gt;
+
+&lt;blockquote&gt;
+  &lt;script type=&quot;math/tex; mode=display&quot;&gt;i(t) = \frac{dq(t)}{dt}&lt;/script&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;The unit &lt;em&gt;Ampere&lt;/em&gt; is what we use to measure current - Also defined as &lt;em&gt;Coulomb’s per second&lt;/em&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;voltage-or-electric-potential-difference&quot;&gt;Voltage or Electric Potential Difference&lt;/h4&gt;
+
+&lt;blockquote&gt;
+  &lt;script type=&quot;math/tex; mode=display&quot;&gt;v = \frac{dw}{dq}&lt;/script&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;The units for &lt;strong&gt;voltage&lt;/strong&gt; is Joules per Coulomb, or &lt;script type=&quot;math/tex&quot;&gt;\frac{J}{C}&lt;/script&gt;&lt;/li&gt;
+  &lt;li&gt;Voltage is the energy per unit of charge created by the separation of positive and negative charges&lt;/li&gt;
+  &lt;li&gt;So we might also say that voltage is the amount of work required to get a certain amount of charge across two terminals.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;direction-for-current-and-voltage&quot;&gt;Direction for Current and Voltage&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../../assets/images/ee1-guide/basic-element-flow.png&quot; alt=&quot;Image of basic circuit element with flow&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;When creating circuits, it’s very important to note the direction of current and where voltage drops occur.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;** SECTION NOT FINISHED **&lt;/p&gt;
+
+&lt;h4 id=&quot;power&quot;&gt;Power&lt;/h4&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Power, &lt;script type=&quot;math/tex&quot;&gt;p&lt;/script&gt; is defined as &lt;script type=&quot;math/tex&quot;&gt;\frac{dw}{dt} = iv&lt;/script&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Think about multiplying the units of Voltage and Current&lt;/li&gt;
+  &lt;li&gt;&lt;script type=&quot;math/tex&quot;&gt;\frac{Coulomb}{second} * \frac{Joules}{Coulomb} = \frac{Joules}{second}&lt;/script&gt; which is the unit for Power.&lt;/li&gt;
+  &lt;li&gt;In an electric circuit, the total power generated or consumed by elements within the circuit must be equal to 0.&lt;/li&gt;
+  &lt;li&gt;This means that &lt;script type=&quot;math/tex&quot;&gt;p_{generated} = p_{consumed}&lt;/script&gt;.yse&lt;/li&gt;
+  &lt;li&gt;If power is supplied or generated by an element, another element will supplant/cancel out that element’s power out&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Whenever the current flows in a direction from high potential to low potential (i.e. there is a voltage drop across the element), then the element is &lt;strong&gt;consuming&lt;/strong&gt; the power or energy being delivered to it. (Positive Value&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Whenever the current flows in a direction from low potential to high potential (i.e. there is a voltage rise across the element), then the element is &lt;strong&gt;generating&lt;/strong&gt; the power or energy (Negative Value)&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Low potential to high potential: &lt;script type=&quot;math/tex&quot;&gt;p = -iv&lt;/script&gt;&lt;/li&gt;
+  &lt;li&gt;High potential to low potential &lt;script type=&quot;math/tex&quot;&gt;p = iv&lt;/script&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;See below for more explanation&lt;/p&gt;
+
+&lt;h4 id=&quot;passive-sign-convention&quot;&gt;Passive Sign Convention&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../../assets/images/ee1-guide/passive-sign-convention.png&quot; alt=&quot;Passive Sign Convention Example&quot; /&gt;&lt;/p&gt;
 
 </description>
         <pubDate>Thu, 03 Sep 2015 00:00:00 -0400</pubDate>
