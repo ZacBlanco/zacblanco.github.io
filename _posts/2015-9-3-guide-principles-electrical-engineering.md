@@ -152,6 +152,150 @@ If we have multiple elements in a circuit, we know the voltage drop/rise across 
 2. For each element calculate the power the is being consumed or delivered.
 3. Add all of the power across each element up. Whatever the remaining difference is, the opposite sign (positive/negative) is the amount of power delivered across the last element.
 
+## September 10th 2015
+
+### Unit 2 Circuit Components
+
+Topics covered in this Unit:
+
+- Inpedendent Source
+- Depedent Source
+- Passive Circuit Elements
+- Resistance and Ohm's Law
+- Kirchoff's Law
+- Sources Interconnection
+- Components Interconnection
+- Circuit Modeling and Circuit Analysis
+
+### Circuit Components Symbols: Ideal, Independent, Voltage Source
+
+**Independent Voltage Source**: Generates a voltage drop across its terminals without relying on other voltages in the circuit.
+
+![Voltage Source Component](../../../assets/images/ee1-guide/voltage-source-1.png)
+
+- Independent sources are always marked with a circle
+
+> An _ideal voltage source_ supplies the same voltage regardless of current.
+
+**Independent Current Source**: Generates a current through a branch in a circuit without relying on other currents in the circuit.
+
+![Current Source Component](../../../assets/images/ee1-guide/current-source-1.png)
+
+> An _ideal current source_ supplies the same current regardless of voltage.
+
+- It is very important to note here that the two sources we just introduced do _not_ effect the other properties of the circuit. i.e. the independent voltage source will not change anythign about the current, and the independent current source will not change anything about the voltage.
+
+### DC (Direct Current) & AC (Alternating Current) Sources
+
+There are two types current sources that are present in electric current. AC (Alternating current), and DC (direct current). In the images below you can see the difference in these two types of currents.
+
+> **Direct Current**
+
+![DC Current Image](../../../assets/images/ee1-guide/dc-current-1.png)
+
+> **Alternating Current**
+
+![AC Current Image](../../../assets/images/ee1-guide/ac-current-1.png)
+
+- AC in the United States changes at a frequency at 60Hz. Many other countries in the world use 50Hz.
+- AC is usually used to transmit power to power plants and so on.
+- See chapter 9 for advantages and disadvantages of AC and DC current. 
+
+
+### Additional Circuit Sources
+
+**Dependent Sources** Generate a voltage whose value depends on the value of another voltage or current in the circuit. They are usually represented by a diamond.
+
+> Voltage Controlled Voltage Source (VCVS): $$ v_s = \alpha v_x $$
+> Current Controlled Voltage Source (CCVS): $$ v_s = ri_x $$
+
+- Note: $$ \alpha $$ and $$ r $$ are constants
+- $$ v_x $$ and $$ i_x $$ are a specific voltage and a specific current elsewhere in the circuit.
+
+
+> Voltage Controlled Current Source (VCCS): $$ i_s = gv_x $$
+> Current Controlled Current Source (CCCS): $$ v_s = \beta i_x $$
+
+- Note: $$ g $$ and $$ \beta $$ are constants
+- $$ v_x $$ and $$ i_x $$ are a specific voltage and a specific current elsewhere in the circuit.
+
+
+### Interconnection of Sources 
+
+#### Voltage Sources
+
+> Voltage sources in parallel must be of the same value.
+
+- A good analogy for voltages changes is that it is a change in elevation. Think of walking up a mountain. If you walk up a mountain 10 meters. Then you walk down 10 meters. You end up at the same elevation.
+- Now think of walking up and down the mountain as the change in voltage level instead. Where elevation is the same as voltage change.
+
+- Voltage sources of any type can be connected in series. It will step up (or down) the voltage whatever the direction.
+- **Voltage sources in parallel must be of the same value**.
+
+#### Current Sources
+
+> Current sources connected in series must be of the same value.
+
+- Current sources connected in parallel are okay. Current flow on the sources essential branch can be maintained without interference.
+
+
+### Passive Circuit Components Symbols
+
+> **Passive Circuit Component**: A device that cannot generate electric energy and does not require external power sources to operate.
+
+
+There are three types of passive circuit components:
+
+- Resistors
+
+> Equation: $$ v_R = Ri_R $$
+
+- Capacitor:
+
+> Equation: $$ i_C = C\frac{dv_C}{dt} $$
+
+- Inductor:
+
+> Equation: $$ v_L = L\frac{di_L}{dt} $$
+
+![Passive Circuit Component](../../../assets/images/ee1-guide/passive-circuit-comp-1.png)
+
+### Resistance
+
+> **Resistance**: The physical property of an element that impedes the flow of current (electron drift)
+
+Represented by $$ R $$ and is defined by:
+
+- $$ \rho = $$ resistivity in $$ ohm\cdot cm $$
+- $$ l = $$ length of material in $$ cm $$
+- $$ A = $$ cross section of the material in $$cm^2$$
+
+> $$ R = \frac{\rho \cdot l}{A} $$
+
+The unit of resistance is the _Ohm_ --> $$ \Omega $$
+
+
+### Ohm's Law: Linear Model
+
+> $$ v= i \cdot R $$ or $$ i = \frac{v}{R} $$
+
+When the voltage is positive and current flows into the positive terminal, then the current **_drops_**.
+
+
+The voltage, $$v$$ across and the current, $$i$$ through a resistance $$R$$ that flows down the potential hill 
+
+> Power delivered to a resistor: $$ p = i^2R=\frac{v^2}{R} $$
+
+- Note! Power is always **_consumed_** by a resistor (_positive_).
+
+
+
+
+
+
+
+
+
 
 
 

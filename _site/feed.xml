@@ -6,8 +6,8 @@
 </description>
     <link>http://zacblanco.github.io//</link>
     <atom:link href="http://zacblanco.github.io//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 10 Sep 2015 10:12:05 -0400</pubDate>
-    <lastBuildDate>Thu, 10 Sep 2015 10:12:05 -0400</lastBuildDate>
+    <pubDate>Thu, 10 Sep 2015 13:32:32 -0400</pubDate>
+    <lastBuildDate>Thu, 10 Sep 2015 13:32:32 -0400</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -453,6 +453,194 @@ Cylindrical + translational
   &lt;li&gt;For each element calculate the power the is being consumed or delivered.&lt;/li&gt;
   &lt;li&gt;Add all of the power across each element up. Whatever the remaining difference is, the opposite sign (positive/negative) is the amount of power delivered across the last element.&lt;/li&gt;
 &lt;/ol&gt;
+
+&lt;h2 id=&quot;september-10th-2015&quot;&gt;September 10th 2015&lt;/h2&gt;
+
+&lt;h3 id=&quot;unit-2-circuit-components&quot;&gt;Unit 2 Circuit Components&lt;/h3&gt;
+
+&lt;p&gt;Topics covered in this Unit:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Inpedendent Source&lt;/li&gt;
+  &lt;li&gt;Depedent Source&lt;/li&gt;
+  &lt;li&gt;Passive Circuit Elements&lt;/li&gt;
+  &lt;li&gt;Resistance and Ohm’s Law&lt;/li&gt;
+  &lt;li&gt;Kirchoff’s Law&lt;/li&gt;
+  &lt;li&gt;Sources Interconnection&lt;/li&gt;
+  &lt;li&gt;Components Interconnection&lt;/li&gt;
+  &lt;li&gt;Circuit Modeling and Circuit Analysis&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;circuit-components-symbols-ideal-independent-voltage-source&quot;&gt;Circuit Components Symbols: Ideal, Independent, Voltage Source&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;Independent Voltage Source&lt;/strong&gt;: Generates a voltage drop across its terminals without relying on other voltages in the circuit.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../../assets/images/ee1-guide/voltage-source-1.png&quot; alt=&quot;Voltage Source Component&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Independent sources are always marked with a circle&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;An &lt;em&gt;ideal voltage source&lt;/em&gt; supplies the same voltage regardless of current.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;strong&gt;Independent Current Source&lt;/strong&gt;: Generates a current through a branch in a circuit without relying on other currents in the circuit.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../../assets/images/ee1-guide/current-source-1.png&quot; alt=&quot;Current Source Component&quot; /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;An &lt;em&gt;ideal current source&lt;/em&gt; supplies the same current regardless of voltage.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;It is very important to note here that the two sources we just introduced do &lt;em&gt;not&lt;/em&gt; effect the other properties of the circuit. i.e. the independent voltage source will not change anythign about the current, and the independent current source will not change anything about the voltage.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;dc-direct-current--ac-alternating-current-sources&quot;&gt;DC (Direct Current) &amp;amp; AC (Alternating Current) Sources&lt;/h3&gt;
+
+&lt;p&gt;There are two types current sources that are present in electric current. AC (Alternating current), and DC (direct current). In the images below you can see the difference in these two types of currents.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;Direct Current&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../../assets/images/ee1-guide/dc-current-1.png&quot; alt=&quot;DC Current Image&quot; /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;Alternating Current&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../../assets/images/ee1-guide/ac-current-1.png&quot; alt=&quot;AC Current Image&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;AC in the United States changes at a frequency at 60Hz. Many other countries in the world use 50Hz.&lt;/li&gt;
+  &lt;li&gt;AC is usually used to transmit power to power plants and so on.&lt;/li&gt;
+  &lt;li&gt;See chapter 9 for advantages and disadvantages of AC and DC current.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;additional-circuit-sources&quot;&gt;Additional Circuit Sources&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;Dependent Sources&lt;/strong&gt; Generate a voltage whose value depends on the value of another voltage or current in the circuit. They are usually represented by a diamond.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Voltage Controlled Voltage Source (VCVS): &lt;script type=&quot;math/tex&quot;&gt;v_s = \alpha v_x&lt;/script&gt;
+Current Controlled Voltage Source (CCVS): &lt;script type=&quot;math/tex&quot;&gt;v_s = ri_x&lt;/script&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Note: &lt;script type=&quot;math/tex&quot;&gt;\alpha&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;r&lt;/script&gt; are constants&lt;/li&gt;
+  &lt;li&gt;&lt;script type=&quot;math/tex&quot;&gt;v_x&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;i_x&lt;/script&gt; are a specific voltage and a specific current elsewhere in the circuit.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Voltage Controlled Current Source (VCCS): &lt;script type=&quot;math/tex&quot;&gt;i_s = gv_x&lt;/script&gt;
+Current Controlled Current Source (CCCS): &lt;script type=&quot;math/tex&quot;&gt;v_s = \beta i_x&lt;/script&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Note: &lt;script type=&quot;math/tex&quot;&gt;g&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;\beta&lt;/script&gt; are constants&lt;/li&gt;
+  &lt;li&gt;&lt;script type=&quot;math/tex&quot;&gt;v_x&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;i_x&lt;/script&gt; are a specific voltage and a specific current elsewhere in the circuit.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;interconnection-of-sources&quot;&gt;Interconnection of Sources&lt;/h3&gt;
+
+&lt;h4 id=&quot;voltage-sources&quot;&gt;Voltage Sources&lt;/h4&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Voltage sources in parallel must be of the same value.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;A good analogy for voltages changes is that it is a change in elevation. Think of walking up a mountain. If you walk up a mountain 10 meters. Then you walk down 10 meters. You end up at the same elevation.&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Now think of walking up and down the mountain as the change in voltage level instead. Where elevation is the same as voltage change.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Voltage sources of any type can be connected in series. It will step up (or down) the voltage whatever the direction.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Voltage sources in parallel must be of the same value&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;current-sources&quot;&gt;Current Sources&lt;/h4&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Current sources connected in series must be of the same value.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Current sources connected in parallel are okay. Current flow on the sources essential branch can be maintained without interference.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;passive-circuit-components-symbols&quot;&gt;Passive Circuit Components Symbols&lt;/h3&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;Passive Circuit Component&lt;/strong&gt;: A device that cannot generate electric energy and does not require external power sources to operate.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;There are three types of passive circuit components:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Resistors&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Equation: &lt;script type=&quot;math/tex&quot;&gt;v_R = Ri_R&lt;/script&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Capacitor:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Equation: &lt;script type=&quot;math/tex&quot;&gt;i_C = C\frac{dv_C}{dt}&lt;/script&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Inductor:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Equation: &lt;script type=&quot;math/tex&quot;&gt;v_L = L\frac{di_L}{dt}&lt;/script&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../../assets/images/ee1-guide/passive-circuit-comp-1.png&quot; alt=&quot;Passive Circuit Component&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;resistance&quot;&gt;Resistance&lt;/h3&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;Resistance&lt;/strong&gt;: The physical property of an element that impedes the flow of current (electron drift)&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Represented by &lt;script type=&quot;math/tex&quot;&gt;R&lt;/script&gt; and is defined by:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;script type=&quot;math/tex&quot;&gt;\rho =&lt;/script&gt; resistivity in &lt;script type=&quot;math/tex&quot;&gt;ohm\cdot cm&lt;/script&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;script type=&quot;math/tex&quot;&gt;l =&lt;/script&gt; length of material in &lt;script type=&quot;math/tex&quot;&gt;cm&lt;/script&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;script type=&quot;math/tex&quot;&gt;A =&lt;/script&gt; cross section of the material in &lt;script type=&quot;math/tex&quot;&gt;cm^2&lt;/script&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;script type=&quot;math/tex; mode=display&quot;&gt;R = \frac{\rho \cdot l}{A}&lt;/script&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;The unit of resistance is the &lt;em&gt;Ohm&lt;/em&gt; –&amp;gt; &lt;script type=&quot;math/tex&quot;&gt;\Omega&lt;/script&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;ohms-law-linear-model&quot;&gt;Ohm’s Law: Linear Model&lt;/h3&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;v= i \cdot R&lt;/script&gt; or &lt;script type=&quot;math/tex&quot;&gt;i = \frac{v}{R}&lt;/script&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;When the voltage is positive and current flows into the positive terminal, then the current &lt;strong&gt;&lt;em&gt;drops&lt;/em&gt;&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;The voltage, &lt;script type=&quot;math/tex&quot;&gt;v&lt;/script&gt; across and the current, &lt;script type=&quot;math/tex&quot;&gt;i&lt;/script&gt; through a resistance &lt;script type=&quot;math/tex&quot;&gt;R&lt;/script&gt; that flows down the potential hill&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Power delivered to a resistor: &lt;script type=&quot;math/tex&quot;&gt;p = i^2R=\frac{v^2}{R}&lt;/script&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Note! Power is always &lt;strong&gt;&lt;em&gt;consumed&lt;/em&gt;&lt;/strong&gt; by a resistor (&lt;em&gt;positive&lt;/em&gt;).&lt;/li&gt;
+&lt;/ul&gt;
 
 </description>
         <pubDate>Thu, 03 Sep 2015 00:00:00 -0400</pubDate>
