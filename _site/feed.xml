@@ -6,8 +6,8 @@
 </description>
     <link>http://zacblanco.github.io//</link>
     <atom:link href="http://zacblanco.github.io//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 08 Sep 2015 13:41:43 -0400</pubDate>
-    <lastBuildDate>Tue, 08 Sep 2015 13:41:43 -0400</lastBuildDate>
+    <pubDate>Thu, 10 Sep 2015 10:12:05 -0400</pubDate>
+    <lastBuildDate>Thu, 10 Sep 2015 10:12:05 -0400</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -137,6 +137,107 @@ If you would like to contribute to this guide please submit a pull request on Gi
 &lt;p&gt;If we apply an electric field to any of these dialectrics, they will polarize themselves. As is one side of the object will become more positive, and one more negative.&lt;/p&gt;
 
 &lt;p&gt;On the other hand, we have conductors that can polarize themselves because their electrons act as a “sea”. The electrons flow freely inside the metal. So if you apply and electric field, the electrons will move in the directon of the electric field, leaving some parts more positively/negatively charged than others.&lt;/p&gt;
+
+&lt;h2 id=&quot;september-10th-2015&quot;&gt;September 10th 2015&lt;/h2&gt;
+
+&lt;h3 id=&quot;lecture-3-electric-field-flux-and-gauss-law&quot;&gt;Lecture 3 Electric Field Flux and Gauss’ Law&lt;/h3&gt;
+
+&lt;p&gt;Quick review question:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Imagine there is a negative charge, &lt;script type=&quot;math/tex&quot;&gt;-Q&lt;/script&gt;, in an electric field. It is released from rest. What direction will the particle’s acceleration be?&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;The particle will travel &lt;em&gt;opposite&lt;/em&gt; the direction of the electric field. Positive charges will flow with the field, negative flow in the opposite direction.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;electric-flux&quot;&gt;Electric Flux&lt;/h3&gt;
+
+&lt;p&gt;First, imagine water flowing through a pipe. How would you find the flow rate? Most people will probably want to use an equation similar to &lt;script type=&quot;math/tex&quot;&gt;\Delta{V} = A * v * 1s&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;Now what happens if we don’t take a perfect cross section of the pipe though? How can we calculate the flow rate through this new cut? (Imagine the cut being at an angle to the edge of the pipe rather than perpendicular). Turns out we can still find the flow rate even though the cut is different.&lt;/p&gt;
+
+&lt;p&gt;All we have to do is simply take a dot product (or multiple through by &lt;script type=&quot;math/tex&quot;&gt;cos(\phi)&lt;/script&gt;).&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;So the flow rate for a different (non-perpendicular cut) is &lt;script type=&quot;math/tex&quot;&gt;\Delta{V} =  \vec{A} * \vec{v} * 1s&lt;/script&gt; or &lt;script type=&quot;math/tex&quot;&gt;\Delta{V} = Av cos(\phi)&lt;/script&gt;.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Equation for flux&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;script type=&quot;math/tex; mode=display&quot;&gt;\Phi_a = \vec{a}(\vec{r}) * d\vec{A} = a(r)A*cos\phi&lt;/script&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Units of flux: &lt;script type=&quot;math/tex&quot;&gt;\frac{Nm^2}{C}&lt;/script&gt;&lt;/li&gt;
+  &lt;li&gt;Another Form: &lt;script type=&quot;math/tex&quot;&gt;\Phi_E = \vec{E} * \vec{A} = \int\vec{E}(\vec{R}) * d\vec{A}&lt;/script&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;point-charge-at-the-center-of-a-spherical-object&quot;&gt;Point Charge at the Center of a Spherical Object&lt;/h3&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;At each point of a surface &lt;script type=&quot;math/tex&quot;&gt;\vec{E} * d\vec{A} ( cos\phi=1 )&lt;/script&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Simplified, this means that the flux for a spehere is equal to &lt;script type=&quot;math/tex&quot;&gt;\frac{1}{4\pi\epsilon_0}\frac{q}{r^2}4\pi r^2&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;This expression is equal to &lt;script type=&quot;math/tex&quot;&gt;\frac{q}{\epsilon_0}&lt;/script&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;So what if we pose the question: What would be the flux of the gravitational field of Earth, through Earth’s surface?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Flux of Graviatational Field &lt;script type=&quot;math/tex&quot;&gt;= -4\pi G M&lt;/script&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;For fields that have &lt;script type=&quot;math/tex&quot;&gt;\frac{1}{r^2}&lt;/script&gt; dependence, it is true that any field lines entering an object’s surface must also exit. This means that the flix for any surface not contianing any charge, the flux is zero.&lt;/p&gt;
+
+&lt;p&gt;This also means &lt;em&gt;any surface deformations do not have an effect on the flux of the object&lt;/em&gt;.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Put simply this means that for any and all objects, the flux is dependent only upon the sum of the charge within the object,&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;From the lecture notes:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;For any closed surface, the flux of the electrostatic field would be proportional to the net charge inside the surface.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Gauss’ Law is also valid in electrodynamic, not just electrostatics because it is valid for &lt;strong&gt;any&lt;/strong&gt; point inside of an object.&lt;/li&gt;
+  &lt;li&gt;Gauss’ Law: First of Maxwell’s Equations.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;applications-of-gauss-law&quot;&gt;Applications of Gauss’ Law&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Gauss’ Law in its integral form (one scalar equation) is not sufficient for finding three components of a vector field, &lt;strong&gt;E&lt;/strong&gt;.&lt;/li&gt;
+  &lt;li&gt;However, Gauss’ Law is very useful whenever it is possible to reduce a 3D (vector) problem to a 1D (scalar) problem.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Useful symmetries:
+- Sphereical
+Cylindrical + translational
+- Plane&lt;/p&gt;
+
+&lt;p&gt;an example of &lt;em&gt;insufficient&lt;/em&gt; symmetry could be an electric dipole.&lt;/p&gt;
+
+&lt;h3 id=&quot;spherical-symmetry&quot;&gt;Spherical Symmetry&lt;/h3&gt;
+
+&lt;p&gt;Ex: The electric field of a uniformly charged ball. Radius &lt;script type=&quot;math/tex&quot;&gt;R&lt;/script&gt;, Total charge &lt;script type=&quot;math/tex&quot;&gt;Q&lt;/script&gt;.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Gaussian surface: a sphere centered at the origin O. It’s radius &lt;script type=&quot;math/tex&quot;&gt;r&lt;/script&gt; can be smaller or larger than &lt;script type=&quot;math/tex&quot;&gt;R&lt;/script&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;__PUT SLIDE IN HERE__&lt;/strong&gt;&lt;/p&gt;
 
 </description>
         <pubDate>Thu, 03 Sep 2015 00:00:00 -0400</pubDate>

@@ -114,13 +114,91 @@ If we apply an electric field to any of these dialectrics, they will polarize th
 
 On the other hand, we have conductors that can polarize themselves because their electrons act as a "sea". The electrons flow freely inside the metal. So if you apply and electric field, the electrons will move in the directon of the electric field, leaving some parts more positively/negatively charged than others.
 
+## September 10th 2015
+
+### Lecture 3 Electric Field Flux and Gauss' Law
+
+Quick review question:
+
+> Imagine there is a negative charge, $$ -Q $$, in an electric field. It is released from rest. What direction will the particle's acceleration be?
+
+- The particle will travel _opposite_ the direction of the electric field. Positive charges will flow with the field, negative flow in the opposite direction.
+
+### Electric Flux
+
+First, imagine water flowing through a pipe. How would you find the flow rate? Most people will probably want to use an equation similar to $$ \Delta{V} = A * v * 1s $$
+
+Now what happens if we don't take a perfect cross section of the pipe though? How can we calculate the flow rate through this new cut? (Imagine the cut being at an angle to the edge of the pipe rather than perpendicular). Turns out we can still find the flow rate even though the cut is different.
+
+All we have to do is simply take a dot product (or multiple through by $$ cos(\phi) $$).
+
+- So the flow rate for a different (non-perpendicular cut) is $$ \Delta{V} =  \vec{A} * \vec{v} * 1s $$ or $$ \Delta{V} = Av cos(\phi) $$.
+
+- Equation for flux
+
+> $$ \Phi_a = \vec{a}(\vec{r}) * d\vec{A} = a(r)A*cos\phi $$
+
+- Units of flux: $$ \frac{Nm^2}{C} $$
+- Another Form: $$ \Phi_E = \vec{E} * \vec{A} = \int\vec{E}(\vec{R}) * d\vec{A} $$
+
+### Point Charge at the Center of a Spherical Object
+
+> At each point of a surface $$ \vec{E} * d\vec{A} ( cos\phi=1 ) $$
+
+Simplified, this means that the flux for a spehere is equal to $$ \frac{1}{4\pi\epsilon_0}\frac{q}{r^2}4\pi r^2 $$
+
+This expression is equal to $$ \frac{q}{\epsilon_0} $$
+
+- So what if we pose the question: What would be the flux of the gravitational field of Earth, through Earth's surface?
+
+> Flux of Graviatational Field $$ = -4\pi G M $$
+
+For fields that have $$ \frac{1}{r^2} $$ dependence, it is true that any field lines entering an object's surface must also exit. This means that the flix for any surface not contianing any charge, the flux is zero.
+
+This also means _any surface deformations do not have an effect on the flux of the object_.
+
+- Put simply this means that for any and all objects, the flux is dependent only upon the sum of the charge within the object,
+
+From the lecture notes:
+
+> For any closed surface, the flux of the electrostatic field would be proportional to the net charge inside the surface.
+
+- Gauss' Law is also valid in electrodynamic, not just electrostatics because it is valid for **any** point inside of an object.
+- Gauss' Law: First of Maxwell's Equations.
+
+### Applications of Gauss' Law
+
+
+- Gauss' Law in its integral form (one scalar equation) is not sufficient for finding three components of a vector field, **E**.
+- However, Gauss' Law is very useful whenever it is possible to reduce a 3D (vector) problem to a 1D (scalar) problem.
+
+Useful symmetries:
+- Sphereical
+Cylindrical + translational
+- Plane
+
+an example of _insufficient_ symmetry could be an electric dipole.
+
+### Spherical Symmetry
+
+Ex: The electric field of a uniformly charged ball. Radius $$ R $$, Total charge $$ Q $$.
+
+- Gaussian surface: a sphere centered at the origin O. It's radius $$ r $$ can be smaller or larger than $$ R $$. 
+
+**__PUT SLIDE IN HERE__**
 
 
 
 
 
 
- 
- 
+
+
+
+
+
+
+
+
 
 
