@@ -26,7 +26,9 @@ Almost everything in the universe can be described by just 4 (!) equations.
 - It is a scalar value
 - It is quantizes - meaning that a charge must be in integer multiples of the fundamental value of charge
  - This fundamental amount is the charge of an electron.
- - $$ e = 1.6 * 10 ^ -19 C $$
+ 
+ > $$ e = 1.6 \cdot 10^{-19} Coulombs $$
+ 
  - The net charge of any isolated system is _conserved_. i.e the net charge of the universe is zero
  
  
@@ -126,24 +128,24 @@ Quick review question:
 
 ### Electric Flux
 
-First, imagine water flowing through a pipe. How would you find the flow rate? Most people will probably want to use an equation similar to $$ \Delta{V} = A * v * 1s $$
+First, imagine water flowing through a pipe. How would you find the flow rate? Most people will probably want to use an equation similar to $$ \Delta{V} = A \cdot v \cdot 1s $$
 
 Now what happens if we don't take a perfect cross section of the pipe though? How can we calculate the flow rate through this new cut? (Imagine the cut being at an angle to the edge of the pipe rather than perpendicular). Turns out we can still find the flow rate even though the cut is different.
 
 All we have to do is simply take a dot product (or multiple through by $$ cos(\phi) $$).
 
-- So the flow rate for a different (non-perpendicular cut) is $$ \Delta{V} =  \vec{A} * \vec{v} * 1s $$ or $$ \Delta{V} = Av cos(\phi) $$.
+- So the flow rate for a different (non-perpendicular cut) is $$ \Delta{V} =  \vec{A} \cdot \vec{v} \cdot 1s $$ or $$ \Delta{V} = Av cos(\phi) $$.
 
 - Equation for flux
 
-> $$ \Phi_a = \vec{a}(\vec{r}) * d\vec{A} = a(r)A*cos\phi $$
+> $$ \Phi_a = \vec{a}(\vec{r}) \cdot d\vec{A} = a(r)A \cdot cos\phi $$
 
 - Units of flux: $$ \frac{Nm^2}{C} $$
-- Another Form: $$ \Phi_E = \vec{E} * \vec{A} = \int\vec{E}(\vec{R}) * d\vec{A} $$
+- Another Form: $$ \Phi_E = \vec{E} \cdot \vec{A} = \int\vec{E}(\vec{R}) \cdot d\vec{A} $$
 
 ### Point Charge at the Center of a Spherical Object
 
-> At each point of a surface $$ \vec{E} * d\vec{A} ( cos\phi=1 ) $$
+> At each point of a surface $$ \vec{E} * d\vec{A} $$ where $$( cos\phi=1 ) $$
 
 Simplified, this means that the flux for a spehere is equal to $$ \frac{1}{4\pi\epsilon_0}\frac{q}{r^2}4\pi r^2 $$
 
@@ -185,8 +187,7 @@ Ex: The electric field of a uniformly charged ball. Radius $$ R $$, Total charge
 
 - Gaussian surface: a sphere centered at the origin O. It's radius $$ r $$ can be smaller or larger than $$ R $$. 
 
-**__PUT SLIDE IN HERE__**
-
+![Slide with Spherical Symmetry](../../../assets/images/physics-227/spherical-symmetry-1.png)
 
 
 

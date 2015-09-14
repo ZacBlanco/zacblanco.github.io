@@ -6,9 +6,66 @@
 </description>
     <link>http://zacblanco.github.io//</link>
     <atom:link href="http://zacblanco.github.io//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 10 Sep 2015 13:32:32 -0400</pubDate>
-    <lastBuildDate>Thu, 10 Sep 2015 13:32:32 -0400</lastBuildDate>
+    <pubDate>Sun, 13 Sep 2015 23:41:17 -0400</pubDate>
+    <lastBuildDate>Sun, 13 Sep 2015 23:41:17 -0400</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>My Summer Experience at Hortonworks</title>
+        <description>&lt;p&gt;So this past summer I worked for a company called &lt;a href=&quot;http://hortonworks.com&quot;&gt;Hortonworks&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../../assets/images/hortonworks-review/hortonworks-logo-1.png&quot; alt=&quot;Hortonworks Logo&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The whole experience this summer was much more than I had ever expected to come from this internship. It really opened my eyes (and a few doors!) for my career and other years to come.&lt;/p&gt;
+
+&lt;p&gt;This summer I interned for a second time with the Hortonworks security team where I helped to develop enterprise-grade security for the Hadoop ecosystem with &lt;a href=&quot;http://knox.apache.org&quot;&gt;Apache Knox&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://knox.apache.org&quot;&gt;Apache Knox&lt;/a&gt; is a gateway server (also called a proxy) that helps to provide perimeter security for hadoop services. You can access many Hadoop services over &lt;code&gt;HTTP&lt;/code&gt;, but instead of accessing them on a variety of different servers and ports, Knox brings all the services together and allows for a single point of access to all of the services.&lt;/p&gt;
+
+&lt;p&gt;This allows a single point for security authentication, authorization, and auditing to occur as well. This makes aggregating usage and logon data very easy.&lt;/p&gt;
+
+&lt;p&gt;Knox provides many other features as well. I suggest reading up on it over at the &lt;a href=&quot;http://knox.apache.org&quot;&gt;project page&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;The other security project that is a part of the Hadoop ecosystem is called &lt;a href=&quot;http://ranger.apache.org&quot;&gt;Apache Ranger&lt;/a&gt;. It helps govern access to Hadoop services through poly management. I did not directly work on this project but I felt it should at least get a shout out.&lt;/p&gt;
+
+&lt;p&gt;I found the experience that I gained over this summer invaluable as I learned not only about becoming a great software engineer, but I also developed professional skills as well.&lt;/p&gt;
+
+&lt;p&gt;My mentor was probably my biggest motivation in this entire job. He coached me through many, many situations and was always willing to lend a helping hand in my work (so long as he wasn’t busy!). Not to mention he had the patience of a saint. With his help I was able to learn and reflect on my experiences. He questioned and challenged me to do the best work I could - while always providing helpful criticism and guidance.&lt;/p&gt;
+
+&lt;p&gt;Hortonworks as a company had a better culture than I could have imagined. Everyone that worked here was very intelligent and knowledge in their respective areas. It really seems that Hortonworks wants to employ the best of the best, the cream of the crop. And it really shows in the software and product that they provide to their customers.&lt;/p&gt;
+
+&lt;p&gt;Everyone at this company is passionate about what they do - which also goes a long way in seeing the work that they produce. I am very excited to see where this company is heading in the near future. I know it will be a good place.&lt;/p&gt;
+
+&lt;p&gt;I commend Hortonworks and our &lt;a href=&quot;http://interns.hortonworks.com&quot;&gt;Hortonworks Internship Program&lt;/a&gt; coordinator Christina for putting together the intern program and providing everyone this summer with a chance to gain valuable experience in a small, but very quickly growing, company. We were able to get a taste of Silicon Valley and what life like is there. As well as participate in many company events and make us feel like we were part of the team too!&lt;/p&gt;
+
+&lt;p&gt;The whole experience was really enjoyable. I especially liked that we had the chance to meet with many VP’s, founders, and other high-profile employees. It really made us feel like we mattered to them. Especially the fact that those employees helped judge our project presentations at the end!&lt;/p&gt;
+
+&lt;p&gt;Overall my experience this summer was spectacular and I really can’t wait to see where Hadoop goes.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../../assets/images/hortonworks-review/hadoop-logo-1.png&quot; alt=&quot;Hadoop Logo&quot; /&gt;&lt;/p&gt;
+</description>
+        <pubDate>Sat, 12 Sep 2015 00:00:00 -0400</pubDate>
+        <link>http://zacblanco.github.io//blog/professional/my-experience-at-hortonworks</link>
+        <guid isPermaLink="true">http://zacblanco.github.io//blog/professional/my-experience-at-hortonworks</guid>
+        
+        <category>hortonworks</category>
+        
+        <category>professional</category>
+        
+        <category>experience</category>
+        
+        <category>rutgers</category>
+        
+        <category>internship</category>
+        
+        <category>software</category>
+        
+        <category>engineering</category>
+        
+        <category>software engineer</category>
+        
+        
+      </item>
     
       <item>
         <title>A (Somewhat) Comprehensive Guide to Physics 227 at Rutgers University</title>
@@ -34,9 +91,13 @@
   &lt;li&gt;It is a scalar value&lt;/li&gt;
   &lt;li&gt;It is quantizes - meaning that a charge must be in integer multiples of the fundamental value of charge&lt;/li&gt;
   &lt;li&gt;This fundamental amount is the charge of an electron.&lt;/li&gt;
-  &lt;li&gt;
-    &lt;script type=&quot;math/tex; mode=display&quot;&gt;e = 1.6 * 10 ^ -19 C&lt;/script&gt;
-  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;script type=&quot;math/tex; mode=display&quot;&gt;e = 1.6 \cdot 10^{-19} Coulombs&lt;/script&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
   &lt;li&gt;The net charge of any isolated system is &lt;em&gt;conserved&lt;/em&gt;. i.e the net charge of the universe is zero&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -154,7 +215,7 @@ If you would like to contribute to this guide please submit a pull request on Gi
 
 &lt;h3 id=&quot;electric-flux&quot;&gt;Electric Flux&lt;/h3&gt;
 
-&lt;p&gt;First, imagine water flowing through a pipe. How would you find the flow rate? Most people will probably want to use an equation similar to &lt;script type=&quot;math/tex&quot;&gt;\Delta{V} = A * v * 1s&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;First, imagine water flowing through a pipe. How would you find the flow rate? Most people will probably want to use an equation similar to &lt;script type=&quot;math/tex&quot;&gt;\Delta{V} = A \cdot v \cdot 1s&lt;/script&gt;&lt;/p&gt;
 
 &lt;p&gt;Now what happens if we don’t take a perfect cross section of the pipe though? How can we calculate the flow rate through this new cut? (Imagine the cut being at an angle to the edge of the pipe rather than perpendicular). Turns out we can still find the flow rate even though the cut is different.&lt;/p&gt;
 
@@ -162,7 +223,7 @@ If you would like to contribute to this guide please submit a pull request on Gi
 
 &lt;ul&gt;
   &lt;li&gt;
-    &lt;p&gt;So the flow rate for a different (non-perpendicular cut) is &lt;script type=&quot;math/tex&quot;&gt;\Delta{V} =  \vec{A} * \vec{v} * 1s&lt;/script&gt; or &lt;script type=&quot;math/tex&quot;&gt;\Delta{V} = Av cos(\phi)&lt;/script&gt;.&lt;/p&gt;
+    &lt;p&gt;So the flow rate for a different (non-perpendicular cut) is &lt;script type=&quot;math/tex&quot;&gt;\Delta{V} =  \vec{A} \cdot \vec{v} \cdot 1s&lt;/script&gt; or &lt;script type=&quot;math/tex&quot;&gt;\Delta{V} = Av cos(\phi)&lt;/script&gt;.&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;Equation for flux&lt;/p&gt;
@@ -170,18 +231,18 @@ If you would like to contribute to this guide please submit a pull request on Gi
 &lt;/ul&gt;
 
 &lt;blockquote&gt;
-  &lt;script type=&quot;math/tex; mode=display&quot;&gt;\Phi_a = \vec{a}(\vec{r}) * d\vec{A} = a(r)A*cos\phi&lt;/script&gt;
+  &lt;script type=&quot;math/tex; mode=display&quot;&gt;\Phi_a = \vec{a}(\vec{r}) \cdot d\vec{A} = a(r)A \cdot cos\phi&lt;/script&gt;
 &lt;/blockquote&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Units of flux: &lt;script type=&quot;math/tex&quot;&gt;\frac{Nm^2}{C}&lt;/script&gt;&lt;/li&gt;
-  &lt;li&gt;Another Form: &lt;script type=&quot;math/tex&quot;&gt;\Phi_E = \vec{E} * \vec{A} = \int\vec{E}(\vec{R}) * d\vec{A}&lt;/script&gt;&lt;/li&gt;
+  &lt;li&gt;Another Form: &lt;script type=&quot;math/tex&quot;&gt;\Phi_E = \vec{E} \cdot \vec{A} = \int\vec{E}(\vec{R}) \cdot d\vec{A}&lt;/script&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h3 id=&quot;point-charge-at-the-center-of-a-spherical-object&quot;&gt;Point Charge at the Center of a Spherical Object&lt;/h3&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;At each point of a surface &lt;script type=&quot;math/tex&quot;&gt;\vec{E} * d\vec{A} ( cos\phi=1 )&lt;/script&gt;&lt;/p&gt;
+  &lt;p&gt;At each point of a surface &lt;script type=&quot;math/tex&quot;&gt;\vec{E} * d\vec{A}&lt;/script&gt; where &lt;script type=&quot;math/tex&quot;&gt;( cos\phi=1 )&lt;/script&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;p&gt;Simplified, this means that the flux for a spehere is equal to &lt;script type=&quot;math/tex&quot;&gt;\frac{1}{4\pi\epsilon_0}\frac{q}{r^2}4\pi r^2&lt;/script&gt;&lt;/p&gt;
@@ -237,7 +298,7 @@ Cylindrical + translational
   &lt;li&gt;Gaussian surface: a sphere centered at the origin O. It’s radius &lt;script type=&quot;math/tex&quot;&gt;r&lt;/script&gt; can be smaller or larger than &lt;script type=&quot;math/tex&quot;&gt;R&lt;/script&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;strong&gt;__PUT SLIDE IN HERE__&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../../../assets/images/physics-227/spherical-symmetry-1.png&quot; alt=&quot;Slide with Spherical Symmetry&quot; /&gt;&lt;/p&gt;
 
 </description>
         <pubDate>Thu, 03 Sep 2015 00:00:00 -0400</pubDate>
@@ -406,10 +467,12 @@ Cylindrical + translational
 &lt;p&gt;&lt;img src=&quot;../../../assets/images/ee1-guide/basic-element-flow.png&quot; alt=&quot;Image of basic circuit element with flow&quot; /&gt;&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;When creating circuits, it’s very important to note the direction of current and where voltage drops occur.&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;When creating circuits, it’s very important to note the direction of current and where voltage drops occur.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;If we see the current directed into the positive terminal and out of the negative terminal, then we see a &lt;strong&gt;&lt;em&gt;voltage drop&lt;/em&gt;&lt;/strong&gt; occur.&lt;/li&gt;
+  &lt;li&gt;If we see current directed into the negative terminal and out of the positive terminal, then we see a &lt;strong&gt;&lt;em&gt;voltage gain&lt;/em&gt;&lt;/strong&gt;.&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;p&gt;** SECTION NOT FINISHED **&lt;/p&gt;
 
 &lt;h4 id=&quot;power&quot;&gt;Power&lt;/h4&gt;
 
@@ -421,7 +484,7 @@ Cylindrical + translational
   &lt;li&gt;Think about multiplying the units of Voltage and Current&lt;/li&gt;
   &lt;li&gt;&lt;script type=&quot;math/tex&quot;&gt;\frac{Coulomb}{second} * \frac{Joules}{Coulomb} = \frac{Joules}{second}&lt;/script&gt; which is the unit for Power.&lt;/li&gt;
   &lt;li&gt;In an electric circuit, the total power generated or consumed by elements within the circuit must be equal to 0.&lt;/li&gt;
-  &lt;li&gt;This means that &lt;script type=&quot;math/tex&quot;&gt;p_{generated} = p_{consumed}&lt;/script&gt;.yse&lt;/li&gt;
+  &lt;li&gt;This means that &lt;script type=&quot;math/tex&quot;&gt;p_{generated} = p_{consumed}&lt;/script&gt;&lt;/li&gt;
   &lt;li&gt;If power is supplied or generated by an element, another element will supplant/cancel out that element’s power out&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -436,6 +499,15 @@ Cylindrical + translational
 &lt;ul&gt;
   &lt;li&gt;Low potential to high potential: &lt;script type=&quot;math/tex&quot;&gt;p = -iv&lt;/script&gt;&lt;/li&gt;
   &lt;li&gt;High potential to low potential &lt;script type=&quot;math/tex&quot;&gt;p = iv&lt;/script&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;One way to think of it - is that whichever terminal (positive or negative) the current is flowing into - that is the going to be the sign of the power equation.&lt;/p&gt;
+
+&lt;p&gt;Example:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Current flows into the positive terminal of an element in the circuit –&amp;gt; &lt;script type=&quot;math/tex&quot;&gt;p = iv&lt;/script&gt;&lt;/li&gt;
+  &lt;li&gt;Current flows into the negative terminal of an element in the circuit –&amp;gt; &lt;script type=&quot;math/tex&quot;&gt;p = -iv&lt;/script&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;See below for more explanation&lt;/p&gt;
@@ -638,9 +710,13 @@ Current Controlled Current Source (CCCS): &lt;script type=&quot;math/tex&quot;&g
   &lt;p&gt;Power delivered to a resistor: &lt;script type=&quot;math/tex&quot;&gt;p = i^2R=\frac{v^2}{R}&lt;/script&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;Note! Power is always &lt;strong&gt;&lt;em&gt;consumed&lt;/em&gt;&lt;/strong&gt; by a resistor (&lt;em&gt;positive&lt;/em&gt;).&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;Note! Power is always &lt;strong&gt;&lt;em&gt;consumed&lt;/em&gt;&lt;/strong&gt; by a resistor (&lt;em&gt;positive&lt;/em&gt;).&lt;/p&gt;
+
+&lt;p&gt;Hold up! hold up! I just said that power consumed by a resistor is always positive. How is that possible? What if we switch the positive and negative terminals?&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Resistors don’t actually have positive and negative terminals. You can just assume - no matter the orientation or current flow - that they will be consuming power.&lt;/p&gt;
+&lt;/blockquote&gt;
 
 </description>
         <pubDate>Thu, 03 Sep 2015 00:00:00 -0400</pubDate>
@@ -2406,18 +2482,6 @@ So I just wanted to let you guys know that I&#39;ve updated my GitHub pages site
         <pubDate>Mon, 09 Mar 2015 00:00:00 -0400</pubDate>
         <link>http://zacblanco.github.io//blog/blogspot-posts/updated-site.html</link>
         <guid isPermaLink="true">http://zacblanco.github.io//blog/blogspot-posts/updated-site.html</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Blog transfer</title>
-        <description>&lt;div class=&quot;css-full-post-content js-full-post-content&quot;&gt;
-Since I&#39;m pretty new to blogging I haven&#39;t found the platform yet that I like best. I decided blogger was a little too plain and wordpress had some better layouts but didn&#39;t give me enough control, so I&#39;ve decided to move to jekyll hosting using github pages.&lt;br /&gt;&lt;br /&gt;I won&#39;t be posting here any longer. Please direct all traffic to &lt;a href=&quot;http://zacblanco.github.io/&quot;&gt;zacblanco.github.io&lt;/a&gt;.&lt;br /&gt;&lt;br /&gt;EDIT:&lt;br /&gt;&lt;br /&gt;I just want to add my previous post about an updated site-- well. Now that I&#39;m using Jekyll I won&#39;t be able to keep that as the landing page. You can still find it and view-source &lt;a href=&quot;http://zacblanco.github.io/s-old/index.html&quot;&gt;zacblanco.github.io/s-old/index.html&lt;/a&gt;
-&lt;/div&gt;</description>
-        <pubDate>Mon, 09 Mar 2015 00:00:00 -0400</pubDate>
-        <link>http://zacblanco.github.io//blog/blogspot-posts/blog-transfer.html</link>
-        <guid isPermaLink="true">http://zacblanco.github.io//blog/blogspot-posts/blog-transfer.html</guid>
         
         
       </item>
