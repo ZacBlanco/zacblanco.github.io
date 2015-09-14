@@ -66,7 +66,7 @@ _!Important!_ A network with $$ b $$ _branches_, $$ n $$ _nodes_ and a total of 
 
 
 See the image below for an explanation
-![Circuit and definitions slide](../../../assets/images/ee1-guide/definition-slide-1.png)
+![Circuit and definitions slide](/assets/images/ee1-guide/definition-slide-1.png)
 
 
 ## September 6th 2015
@@ -113,7 +113,7 @@ Electrical current is actually defined as _the flow of positive charge_.
 
 #### Direction for Current and Voltage
 
-![Image of basic circuit element with flow](../../../assets/images/ee1-guide/basic-element-flow.png)
+![Image of basic circuit element with flow](/assets/images/ee1-guide/basic-element-flow.png)
 
 - When creating circuits, it's very important to note the direction of current and where voltage drops occur.
 
@@ -148,7 +148,7 @@ See below for more explanation
 
 #### Passive Sign Convention
 
-![Passive Sign Convention Example](../../../assets/images/ee1-guide/passive-sign-convention.png)
+![Passive Sign Convention Example](/assets/images/ee1-guide/passive-sign-convention.png)
 
 
 #### Finding the power consumed or delivered by an Element
@@ -178,7 +178,7 @@ Topics covered in this Unit:
 
 **Independent Voltage Source**: Generates a voltage drop across its terminals without relying on other voltages in the circuit.
 
-![Voltage Source Component](../../../assets/images/ee1-guide/voltage-source-1.png)
+![Voltage Source Component](/assets/images/ee1-guide/voltage-source-1.png)
 
 - Independent sources are always marked with a circle
 
@@ -186,7 +186,7 @@ Topics covered in this Unit:
 
 **Independent Current Source**: Generates a current through a branch in a circuit without relying on other currents in the circuit.
 
-![Current Source Component](../../../assets/images/ee1-guide/current-source-1.png)
+![Current Source Component](/assets/images/ee1-guide/current-source-1.png)
 
 > An _ideal current source_ supplies the same current regardless of voltage.
 
@@ -198,11 +198,11 @@ There are two types current sources that are present in electric current. AC (Al
 
 > **Direct Current**
 
-![DC Current Image](../../../assets/images/ee1-guide/dc-current-1.png)
+![DC Current Image](/assets/images/ee1-guide/dc-current-1.png)
 
 > **Alternating Current**
 
-![AC Current Image](../../../assets/images/ee1-guide/ac-current-1.png)
+![AC Current Image](/assets/images/ee1-guide/ac-current-1.png)
 
 - AC in the United States changes at a frequency at 60Hz. Many other countries in the world use 50Hz.
 - AC is usually used to transmit power to power plants and so on.
@@ -265,7 +265,7 @@ There are three types of passive circuit components:
 
 > Equation: $$ v_L = L\frac{di_L}{dt} $$
 
-![Passive Circuit Component](../../../assets/images/ee1-guide/passive-circuit-comp-1.png)
+![Passive Circuit Component](/assets/images/ee1-guide/passive-circuit-comp-1.png)
 
 ### Resistance
 
@@ -341,6 +341,46 @@ What does this mean?
 - We **SUBTRACT** currents leaving a node. (_Negative_)
 
 ![KCL Example 1](/assets/images/ee1-guide/kcl-ex-1.png)
+
+
+Now! We are going to see a similar law, but this time it will apply to voltage.
+
+##### Kirchoff's Voltage Law
+
+> The algebraic sum of all the voltages around any closed path in a circuit equals zero.
+
+
+So what exactly does this mean? It means that we can pick _any_ closed loop in the circuit. When we follow that loop we must add (or subtract) the voltages over different elements together to give us a final sum of zero.
+
+- If the element causes a _voltage drop_ (positive -> negative), then we **subtract**.
+- If the element causes a _voltage rise_ (negative -> postitive), then we **add**.
+
+
+![KVL Example 1](/assets/images/ee1-guide/kvl-ex-1.png)
+
+
+- Here's one more example problem you can use to test your calculation skills.
+
+![Example Problem 1](/assets/images/ee1-guide/kirchoff-ex-prob-1.png)
+
+
+Mastering these problems takes lots of practice - so it could be beneficial to find more problems online or in a textbook to practice calculating and solving for circuits.
+
+### Unit 3 - Simple Resistive Circuits
+
+In this unit we'll address creating circuits that contain resistors in series and parallel - and then finding methods for learning about how to simplify said circuits and then solve for them.
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

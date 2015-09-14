@@ -6,8 +6,8 @@
 </description>
     <link>http://zacblanco.github.io//</link>
     <atom:link href="http://zacblanco.github.io//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 14 Sep 2015 12:17:49 -0400</pubDate>
-    <lastBuildDate>Mon, 14 Sep 2015 12:17:49 -0400</lastBuildDate>
+    <pubDate>Mon, 14 Sep 2015 12:47:50 -0400</pubDate>
+    <lastBuildDate>Mon, 14 Sep 2015 12:47:50 -0400</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -503,7 +503,7 @@ Cylindrical + translational
 &lt;/ul&gt;
 
 &lt;p&gt;See the image below for an explanation
-&lt;img src=&quot;../../../assets/images/ee1-guide/definition-slide-1.png&quot; alt=&quot;Circuit and definitions slide&quot; /&gt;&lt;/p&gt;
+&lt;img src=&quot;/assets/images/ee1-guide/definition-slide-1.png&quot; alt=&quot;Circuit and definitions slide&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;september-6th-2015&quot;&gt;September 6th 2015&lt;/h2&gt;
 
@@ -563,7 +563,7 @@ Cylindrical + translational
 
 &lt;h4 id=&quot;direction-for-current-and-voltage&quot;&gt;Direction for Current and Voltage&lt;/h4&gt;
 
-&lt;p&gt;&lt;img src=&quot;../../../assets/images/ee1-guide/basic-element-flow.png&quot; alt=&quot;Image of basic circuit element with flow&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/ee1-guide/basic-element-flow.png&quot; alt=&quot;Image of basic circuit element with flow&quot; /&gt;&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;
@@ -613,7 +613,7 @@ Cylindrical + translational
 
 &lt;h4 id=&quot;passive-sign-convention&quot;&gt;Passive Sign Convention&lt;/h4&gt;
 
-&lt;p&gt;&lt;img src=&quot;../../../assets/images/ee1-guide/passive-sign-convention.png&quot; alt=&quot;Passive Sign Convention Example&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/ee1-guide/passive-sign-convention.png&quot; alt=&quot;Passive Sign Convention Example&quot; /&gt;&lt;/p&gt;
 
 &lt;h4 id=&quot;finding-the-power-consumed-or-delivered-by-an-element&quot;&gt;Finding the power consumed or delivered by an Element&lt;/h4&gt;
 
@@ -646,7 +646,7 @@ Cylindrical + translational
 
 &lt;p&gt;&lt;strong&gt;Independent Voltage Source&lt;/strong&gt;: Generates a voltage drop across its terminals without relying on other voltages in the circuit.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;../../../assets/images/ee1-guide/voltage-source-1.png&quot; alt=&quot;Voltage Source Component&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/ee1-guide/voltage-source-1.png&quot; alt=&quot;Voltage Source Component&quot; /&gt;&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Independent sources are always marked with a circle&lt;/li&gt;
@@ -658,7 +658,7 @@ Cylindrical + translational
 
 &lt;p&gt;&lt;strong&gt;Independent Current Source&lt;/strong&gt;: Generates a current through a branch in a circuit without relying on other currents in the circuit.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;../../../assets/images/ee1-guide/current-source-1.png&quot; alt=&quot;Current Source Component&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/ee1-guide/current-source-1.png&quot; alt=&quot;Current Source Component&quot; /&gt;&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;An &lt;em&gt;ideal current source&lt;/em&gt; supplies the same current regardless of voltage.&lt;/p&gt;
@@ -676,13 +676,13 @@ Cylindrical + translational
   &lt;p&gt;&lt;strong&gt;Direct Current&lt;/strong&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;&lt;img src=&quot;../../../assets/images/ee1-guide/dc-current-1.png&quot; alt=&quot;DC Current Image&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/ee1-guide/dc-current-1.png&quot; alt=&quot;DC Current Image&quot; /&gt;&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;&lt;strong&gt;Alternating Current&lt;/strong&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;&lt;img src=&quot;../../../assets/images/ee1-guide/ac-current-1.png&quot; alt=&quot;AC Current Image&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/ee1-guide/ac-current-1.png&quot; alt=&quot;AC Current Image&quot; /&gt;&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;AC in the United States changes at a frequency at 60Hz. Many other countries in the world use 50Hz.&lt;/li&gt;
@@ -773,7 +773,7 @@ Current Controlled Current Source (CCCS): &lt;script type=&quot;math/tex&quot;&g
   &lt;p&gt;Equation: &lt;script type=&quot;math/tex&quot;&gt;v_L = L\frac{di_L}{dt}&lt;/script&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;&lt;img src=&quot;../../../assets/images/ee1-guide/passive-circuit-comp-1.png&quot; alt=&quot;Passive Circuit Component&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/ee1-guide/passive-circuit-comp-1.png&quot; alt=&quot;Passive Circuit Component&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;resistance&quot;&gt;Resistance&lt;/h3&gt;
 
@@ -871,6 +871,35 @@ Current Controlled Current Source (CCCS): &lt;script type=&quot;math/tex&quot;&g
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/ee1-guide/kcl-ex-1.png&quot; alt=&quot;KCL Example 1&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Now! We are going to see a similar law, but this time it will apply to voltage.&lt;/p&gt;
+
+&lt;h5 id=&quot;kirchoffs-voltage-law&quot;&gt;Kirchoff’s Voltage Law&lt;/h5&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;The algebraic sum of all the voltages around any closed path in a circuit equals zero.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;So what exactly does this mean? It means that we can pick &lt;em&gt;any&lt;/em&gt; closed loop in the circuit. When we follow that loop we must add (or subtract) the voltages over different elements together to give us a final sum of zero.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;If the element causes a &lt;em&gt;voltage drop&lt;/em&gt; (positive -&amp;gt; negative), then we &lt;strong&gt;subtract&lt;/strong&gt;.&lt;/li&gt;
+  &lt;li&gt;If the element causes a &lt;em&gt;voltage rise&lt;/em&gt; (negative -&amp;gt; postitive), then we &lt;strong&gt;add&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/ee1-guide/kvl-ex-1.png&quot; alt=&quot;KVL Example 1&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Here’s one more example problem you can use to test your calculation skills.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/ee1-guide/kirchoff-ex-prob-1.png&quot; alt=&quot;Example Problem 1&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Mastering these problems takes lots of practice - so it could be beneficial to find more problems online or in a textbook to practice calculating and solving for circuits.&lt;/p&gt;
+
+&lt;h3 id=&quot;unit-3---simple-resistive-circuits&quot;&gt;Unit 3 - Simple Resistive Circuits&lt;/h3&gt;
+
+&lt;p&gt;In this unit we’ll address creating circuits that contain resistors in series and parallel - and then finding methods for learning about how to simplify said circuits and then solve for them.&lt;/p&gt;
 
 </description>
         <pubDate>Thu, 03 Sep 2015 00:00:00 -0400</pubDate>
