@@ -300,7 +300,47 @@ Hold up! hold up! I just said that power consumed by a resistor is always positi
 > Resistors don't actually have positive and negative terminals. You can just assume - no matter the orientation or current flow - that they will be consuming power.
 
 
+## September 14 2015
 
+### Unit 2, Lecture 2
+
+#### Calculating Power From Ohm's Law
+
+We know now that $$ p = iv $$, right? We also know that from Ohm's law, $$ v = iR $$. This can then give us a new equation to calculate power based on resistance.
+
+- $$ p = iv = i \cdot (iR) = i^2R $$
+
+Another form is:
+
+- $$ p = iv = (\frac{v}{R}) \cdot v = \frac{v^2}{R} $$
+
+
+#### Open and Short Circuit Symbols
+
+- In a short circuit the Resistance through between two nodes is 0.
+- In a closed circuit the resistance between two nodes is $$ \infty $$.
+
+![Open and Short Ciruit Symbols](/assets/images/ee1-guide/open-short-circuit-symbols.png)
+
+
+#### Kirchoff's Laws
+
+Arguably some of the most important equations in solving circuits come from Kirchoff's laws. They help us gain information about a circuit to be able to obtain and solve for different component's quantities.
+
+Let's start off with current, $$ i $$.
+
+##### Kirchoff's Current Law
+
+> The algebraic sum of all the currents at any node in a circuit equals zero.
+
+What does this mean?
+
+- We can pick any nodes in our circuit. A node should always have _at least_ two currents flowing into it. This means that those two (or more) currents flowing into that node **must** sum to equal 0.
+
+- We **ADD** currents entering a node. (_Postive_)
+- We **SUBTRACT** currents leaving a node. (_Negative_)
+
+![KCL Example 1](/assets/images/ee1-guide/kcl-ex-1.png)
 
 
 

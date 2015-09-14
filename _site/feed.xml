@@ -6,8 +6,8 @@
 </description>
     <link>http://zacblanco.github.io//</link>
     <atom:link href="http://zacblanco.github.io//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 14 Sep 2015 11:30:10 -0400</pubDate>
-    <lastBuildDate>Mon, 14 Sep 2015 11:30:10 -0400</lastBuildDate>
+    <pubDate>Mon, 14 Sep 2015 12:17:49 -0400</pubDate>
+    <lastBuildDate>Mon, 14 Sep 2015 12:17:49 -0400</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -816,6 +816,61 @@ Current Controlled Current Source (CCCS): &lt;script type=&quot;math/tex&quot;&g
 &lt;blockquote&gt;
   &lt;p&gt;Resistors don’t actually have positive and negative terminals. You can just assume - no matter the orientation or current flow - that they will be consuming power.&lt;/p&gt;
 &lt;/blockquote&gt;
+
+&lt;h2 id=&quot;september-14-2015&quot;&gt;September 14 2015&lt;/h2&gt;
+
+&lt;h3 id=&quot;unit-2-lecture-2&quot;&gt;Unit 2, Lecture 2&lt;/h3&gt;
+
+&lt;h4 id=&quot;calculating-power-from-ohms-law&quot;&gt;Calculating Power From Ohm’s Law&lt;/h4&gt;
+
+&lt;p&gt;We know now that &lt;script type=&quot;math/tex&quot;&gt;p = iv&lt;/script&gt;, right? We also know that from Ohm’s law, &lt;script type=&quot;math/tex&quot;&gt;v = iR&lt;/script&gt;. This can then give us a new equation to calculate power based on resistance.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;script type=&quot;math/tex; mode=display&quot;&gt;p = iv = i \cdot (iR) = i^2R&lt;/script&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Another form is:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;script type=&quot;math/tex; mode=display&quot;&gt;p = iv = (\frac{v}{R}) \cdot v = \frac{v^2}{R}&lt;/script&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;open-and-short-circuit-symbols&quot;&gt;Open and Short Circuit Symbols&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;In a short circuit the Resistance through between two nodes is 0.&lt;/li&gt;
+  &lt;li&gt;In a closed circuit the resistance between two nodes is &lt;script type=&quot;math/tex&quot;&gt;\infty&lt;/script&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/ee1-guide/open-short-circuit-symbols.png&quot; alt=&quot;Open and Short Ciruit Symbols&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;kirchoffs-laws&quot;&gt;Kirchoff’s Laws&lt;/h4&gt;
+
+&lt;p&gt;Arguably some of the most important equations in solving circuits come from Kirchoff’s laws. They help us gain information about a circuit to be able to obtain and solve for different component’s quantities.&lt;/p&gt;
+
+&lt;p&gt;Let’s start off with current, &lt;script type=&quot;math/tex&quot;&gt;i&lt;/script&gt;.&lt;/p&gt;
+
+&lt;h5 id=&quot;kirchoffs-current-law&quot;&gt;Kirchoff’s Current Law&lt;/h5&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;The algebraic sum of all the currents at any node in a circuit equals zero.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;What does this mean?&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;We can pick any nodes in our circuit. A node should always have &lt;em&gt;at least&lt;/em&gt; two currents flowing into it. This means that those two (or more) currents flowing into that node &lt;strong&gt;must&lt;/strong&gt; sum to equal 0.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;We &lt;strong&gt;ADD&lt;/strong&gt; currents entering a node. (&lt;em&gt;Postive&lt;/em&gt;)&lt;/li&gt;
+  &lt;li&gt;We &lt;strong&gt;SUBTRACT&lt;/strong&gt; currents leaving a node. (&lt;em&gt;Negative&lt;/em&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/ee1-guide/kcl-ex-1.png&quot; alt=&quot;KCL Example 1&quot; /&gt;&lt;/p&gt;
 
 </description>
         <pubDate>Thu, 03 Sep 2015 00:00:00 -0400</pubDate>
