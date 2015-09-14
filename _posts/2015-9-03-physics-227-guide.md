@@ -190,6 +190,124 @@ Ex: The electric field of a uniformly charged ball. Radius $$ R $$, Total charge
 ![Slide with Spherical Symmetry](../../../assets/images/physics-227/spherical-symmetry-1.png)
 
 
+## September 14th 2015
+
+### Lecture 4 - Conductors in Electrostatics
+
+The general problem of electrostatics is that given object carry many different charges - and we want to find out the electric field
+
+Reminder: Gauss' Law
+
+> $$ \int \vec{E}(\vec{r}) \cdot d\vec{A} = \frac{Q_{net}}{\epsilon_0} $$
+
+Basically the law tells us that the integral over a sphere of an electric field (a vector) dot-multiplied by the differential area will give us the flux - which for any sphere can be simplified to $$ \Phi = \frac{Q_{net}}{\epsilon_0} $$
+
+
+##### Matter in Electrosatic Fields
+
+##### Conductors
+
+- Electrons flow freely inside the metals - they will arrange themselves based on the field applied to the metal
+
+- An electric field applied to a metal will cause the electric field inside the confuctor to become zero, because the electrons will rearrange themselves to form an arrangement where the total field ends up being zero.
+
+Electric Field inside a metal
+
+> $$ E = 0 $$
+
+##### Dialectrics
+
+- Electrons don't flow freely. But they will align or arrange themselves in an orientation based on the electric field applied to the dialectric.
+
+Note:
+
+#### iClicker Question Concept
+
+- We cannot measure the electric field inside of a cynlinder using Gauss' Law due to the ends of the sphere requiring different integrals than the sides of the cylinder.
+
+
+
+#### Comparison of Charged Metallic and Dialectric Spheres
+
+In a uniformly charged dialectric spehere, the electric field inside (and only inside!) the sphere is equal to:
+
+> $$ E = \frac{kQr}{R^3} $$ where $$r$$ is the radius of the sphere inside the dialectric and $$R$$ is the radius of the dialectric.
+
+When $$ R = r $$:
+
+> $$ E = k\frac{Q}{R^2} $$
+
+And then when the gaussian surface has a radius _outside_ of the sphere, then the electric field is equal to: 
+
+> $$ E = \frac{kQ}{r^2} $$
+
+For a conducting spehere where the gaussian surface sphere is inside the conducting sphere:
+
+> $$ E = 0 $$
+
+For when the radius of the gaussian sphere is greater than the radius of the conducting sphere, the electric field is:
+
+> $$ E = \frac{kQ}{r^2}
+
+#### Faraday Cage
+
+- A piece of metal with a hole in the middle. If the cage is conducting, then the electric field inside the cage is 0.
+
+#### Cavities (No Charge within the cavity)
+
+$$ Q_{net} = +Q = Q_{in} + Q_{out}
+
+We can find the net surface charge is we place a charge inside a metallic shell.
+
+Normally $$ E = 0 $$
+
+then $$\Phi = 0 $$
+
+So then if we put Q in a cavity inside the aphere then we know that the enclosed charge in the cavity will then attract charge to the inside surface of the cavity (within the conductor). This means the leftover charge will be equal to the charge felt on the outside of the sphere.
+
+Thus, the charge enclosed in the cavity is equal to the charge on the outsie of the sphere.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -6,8 +6,8 @@
 </description>
     <link>http://zacblanco.github.io//</link>
     <atom:link href="http://zacblanco.github.io//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 13 Sep 2015 23:41:17 -0400</pubDate>
-    <lastBuildDate>Sun, 13 Sep 2015 23:41:17 -0400</lastBuildDate>
+    <pubDate>Mon, 14 Sep 2015 11:30:10 -0400</pubDate>
+    <lastBuildDate>Mon, 14 Sep 2015 11:30:10 -0400</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -299,6 +299,105 @@ Cylindrical + translational
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;img src=&quot;../../../assets/images/physics-227/spherical-symmetry-1.png&quot; alt=&quot;Slide with Spherical Symmetry&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;september-14th-2015&quot;&gt;September 14th 2015&lt;/h2&gt;
+
+&lt;h3 id=&quot;lecture-4---conductors-in-electrostatics&quot;&gt;Lecture 4 - Conductors in Electrostatics&lt;/h3&gt;
+
+&lt;p&gt;The general problem of electrostatics is that given object carry many different charges - and we want to find out the electric field&lt;/p&gt;
+
+&lt;p&gt;Reminder: Gauss’ Law&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;script type=&quot;math/tex; mode=display&quot;&gt;\int \vec{E}(\vec{r}) \cdot d\vec{A} = \frac{Q_{net}}{\epsilon_0}&lt;/script&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Basically the law tells us that the integral over a sphere of an electric field (a vector) dot-multiplied by the differential area will give us the flux - which for any sphere can be simplified to &lt;script type=&quot;math/tex&quot;&gt;\Phi = \frac{Q_{net}}{\epsilon_0}&lt;/script&gt;&lt;/p&gt;
+
+&lt;h5 id=&quot;matter-in-electrosatic-fields&quot;&gt;Matter in Electrosatic Fields&lt;/h5&gt;
+
+&lt;h5 id=&quot;conductors&quot;&gt;Conductors&lt;/h5&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Electrons flow freely inside the metals - they will arrange themselves based on the field applied to the metal&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;An electric field applied to a metal will cause the electric field inside the confuctor to become zero, because the electrons will rearrange themselves to form an arrangement where the total field ends up being zero.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Electric Field inside a metal&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;script type=&quot;math/tex; mode=display&quot;&gt;E = 0&lt;/script&gt;
+&lt;/blockquote&gt;
+
+&lt;h5 id=&quot;dialectrics&quot;&gt;Dialectrics&lt;/h5&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Electrons don’t flow freely. But they will align or arrange themselves in an orientation based on the electric field applied to the dialectric.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Note:&lt;/p&gt;
+
+&lt;h4 id=&quot;iclicker-question-concept&quot;&gt;iClicker Question Concept&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;We cannot measure the electric field inside of a cynlinder using Gauss’ Law due to the ends of the sphere requiring different integrals than the sides of the cylinder.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;comparison-of-charged-metallic-and-dialectric-spheres&quot;&gt;Comparison of Charged Metallic and Dialectric Spheres&lt;/h4&gt;
+
+&lt;p&gt;In a uniformly charged dialectric spehere, the electric field inside (and only inside!) the sphere is equal to:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;E = \frac{kQr}{R^3}&lt;/script&gt; where &lt;script type=&quot;math/tex&quot;&gt;r&lt;/script&gt; is the radius of the sphere inside the dialectric and &lt;script type=&quot;math/tex&quot;&gt;R&lt;/script&gt; is the radius of the dialectric.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;When &lt;script type=&quot;math/tex&quot;&gt;R = r&lt;/script&gt;:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;script type=&quot;math/tex; mode=display&quot;&gt;E = k\frac{Q}{R^2}&lt;/script&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;And then when the gaussian surface has a radius &lt;em&gt;outside&lt;/em&gt; of the sphere, then the electric field is equal to:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;script type=&quot;math/tex; mode=display&quot;&gt;E = \frac{kQ}{r^2}&lt;/script&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;For a conducting spehere where the gaussian surface sphere is inside the conducting sphere:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;script type=&quot;math/tex; mode=display&quot;&gt;E = 0&lt;/script&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;For when the radius of the gaussian sphere is greater than the radius of the conducting sphere, the electric field is:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;$$ E = \frac{kQ}{r^2}&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h4 id=&quot;faraday-cage&quot;&gt;Faraday Cage&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;A piece of metal with a hole in the middle. If the cage is conducting, then the electric field inside the cage is 0.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;cavities-no-charge-within-the-cavity&quot;&gt;Cavities (No Charge within the cavity)&lt;/h4&gt;
+
+&lt;p&gt;$$ Q_{net} = +Q = Q_{in} + Q_{out}&lt;/p&gt;
+
+&lt;p&gt;We can find the net surface charge is we place a charge inside a metallic shell.&lt;/p&gt;
+
+&lt;p&gt;Normally &lt;script type=&quot;math/tex&quot;&gt;E = 0&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;then &lt;script type=&quot;math/tex&quot;&gt;\Phi = 0&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;So then if we put Q in a cavity inside the aphere then we know that the enclosed charge in the cavity will then attract charge to the inside surface of the cavity (within the conductor). This means the leftover charge will be equal to the charge felt on the outside of the sphere.&lt;/p&gt;
+
+&lt;p&gt;Thus, the charge enclosed in the cavity is equal to the charge on the outsie of the sphere.&lt;/p&gt;
 
 </description>
         <pubDate>Thu, 03 Sep 2015 00:00:00 -0400</pubDate>
