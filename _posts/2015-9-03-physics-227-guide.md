@@ -247,7 +247,7 @@ For a conducting spehere where the gaussian surface sphere is inside the conduct
 
 For when the radius of the gaussian sphere is greater than the radius of the conducting sphere, the electric field is:
 
-> $$ E = \frac{kQ}{r^2}
+> $$ E = \frac{kQ}{r^2} $$
 
 #### Faraday Cage
 
@@ -255,7 +255,7 @@ For when the radius of the gaussian sphere is greater than the radius of the con
 
 #### Cavities (No Charge within the cavity)
 
-$$ Q_{net} = +Q = Q_{in} + Q_{out}
+$$ Q_{net} = +Q = Q_{in} + Q_{out} $$
 
 We can find the net surface charge is we place a charge inside a metallic shell.
 
@@ -267,6 +267,54 @@ So then if we put Q in a cavity inside the aphere then we know that the enclosed
 
 Thus, the charge enclosed in the cavity is equal to the charge on the outsie of the sphere.
 
+## September 17th 2015
+
+### Lecture 4 - Electrostatic Potential Energy
+
+Note:
+
+- Potentiential Energy $$ = U(r) $$ - measured in Joules
+- Potential $$ V(r) $$ measured in volts
+- $$ V(r) = \frac{U(r)}{q_0} $$
+
+
+Coulomb's Law and the Superposition principle are usually sufficient to solve any electrostatic problem. Gauss' Law simplifies the alculation of $$ E $$ fields for symmetric charge distributions.
+
+Say we want to calculate the velocity of two particles. Given the equation we have it would be very difficult because if the electrostatic forces push the particles away from each other, the acceleration changes. Because acceleration changes it would involve solving an integral to obtain the speed. This can be difficult.
+
+So instead we can use potential energy to find the kinetic energy, and thus, speed.
+
+- Remember that the force to move an object from point a to point b is going to be equal to:
+
+$$ W_{a-b} = F_{a-b} \cdot (b - a) $$
+
+_Integral Form_
+
+$$ \Delta U(r) = W_{a-b} = \int_{a}^{b} \vec{F} \cdot d\vec{l} $$
+
+**Reference Points** : A matter of convencience, only $$ \Delta U $$ matters (because only forces can be measured and he forces depend on $$ \Delta U $$ not $$ U $$)
+
+$$ \vec{F}(f) = \frac{\partial U(r)}{\partial r} \hat{r} $$
+
+##### Gravitational and *Electrostatic* fields are conservative
+
+The reason? Both fields are **central** (a central force depends only on the distance between interacting objects and is directed along the line joining them.)
+
+$$ \Delta U $$ depends only on the _initial_ and _final_ points of the trajectory.
+
+- For any loop $$ \int \vec{F_e} \cdot d\vec{l} = 0 $$ .
+
+Thus for our potential energy for any two electrostatic charges
+
+#### Electrostatic Potential Energy
+
+- $$ W_{\infty - r} = \frac{q_1q_2}{4\pi\epsilon_0 \cdot r} $$
+
+This energy is conservative. Meaning that no matter the path a particle takes from point 1 to point 2 - The change in energy will still be the same!
+
+##### From $$ U(r) to F(r) $$
+
+> $$ \vec{F}(x) = -\frac{dU(x)}{dx}\hat{x} $$
 
 
 

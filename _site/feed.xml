@@ -6,8 +6,8 @@
 </description>
     <link>http://zacblanco.github.io//</link>
     <atom:link href="http://zacblanco.github.io//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 14 Sep 2015 12:47:50 -0400</pubDate>
-    <lastBuildDate>Mon, 14 Sep 2015 12:47:50 -0400</lastBuildDate>
+    <pubDate>Thu, 17 Sep 2015 09:48:11 -0400</pubDate>
+    <lastBuildDate>Thu, 17 Sep 2015 09:48:11 -0400</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -376,7 +376,7 @@ Cylindrical + translational
 &lt;p&gt;For when the radius of the gaussian sphere is greater than the radius of the conducting sphere, the electric field is:&lt;/p&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;$$ E = \frac{kQ}{r^2}&lt;/p&gt;
+  &lt;script type=&quot;math/tex; mode=display&quot;&gt;E = \frac{kQ}{r^2}&lt;/script&gt;
 &lt;/blockquote&gt;
 
 &lt;h4 id=&quot;faraday-cage&quot;&gt;Faraday Cage&lt;/h4&gt;
@@ -387,7 +387,7 @@ Cylindrical + translational
 
 &lt;h4 id=&quot;cavities-no-charge-within-the-cavity&quot;&gt;Cavities (No Charge within the cavity)&lt;/h4&gt;
 
-&lt;p&gt;$$ Q_{net} = +Q = Q_{in} + Q_{out}&lt;/p&gt;
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;Q_{net} = +Q = Q_{in} + Q_{out}&lt;/script&gt;
 
 &lt;p&gt;We can find the net surface charge is we place a charge inside a metallic shell.&lt;/p&gt;
 
@@ -398,6 +398,68 @@ Cylindrical + translational
 &lt;p&gt;So then if we put Q in a cavity inside the aphere then we know that the enclosed charge in the cavity will then attract charge to the inside surface of the cavity (within the conductor). This means the leftover charge will be equal to the charge felt on the outside of the sphere.&lt;/p&gt;
 
 &lt;p&gt;Thus, the charge enclosed in the cavity is equal to the charge on the outsie of the sphere.&lt;/p&gt;
+
+&lt;h2 id=&quot;september-17th-2015&quot;&gt;September 17th 2015&lt;/h2&gt;
+
+&lt;h3 id=&quot;lecture-4---electrostatic-potential-energy&quot;&gt;Lecture 4 - Electrostatic Potential Energy&lt;/h3&gt;
+
+&lt;p&gt;Note:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Potentiential Energy &lt;script type=&quot;math/tex&quot;&gt;= U(r)&lt;/script&gt; - measured in Joules&lt;/li&gt;
+  &lt;li&gt;Potential &lt;script type=&quot;math/tex&quot;&gt;V(r)&lt;/script&gt; measured in volts&lt;/li&gt;
+  &lt;li&gt;
+    &lt;script type=&quot;math/tex; mode=display&quot;&gt;V(r) = \frac{U(r)}{q_0}&lt;/script&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Coulomb’s Law and the Superposition principle are usually sufficient to solve any electrostatic problem. Gauss’ Law simplifies the alculation of &lt;script type=&quot;math/tex&quot;&gt;E&lt;/script&gt; fields for symmetric charge distributions.&lt;/p&gt;
+
+&lt;p&gt;Say we want to calculate the velocity of two particles. Given the equation we have it would be very difficult because if the electrostatic forces push the particles away from each other, the acceleration changes. Because acceleration changes it would involve solving an integral to obtain the speed. This can be difficult.&lt;/p&gt;
+
+&lt;p&gt;So instead we can use potential energy to find the kinetic energy, and thus, speed.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Remember that the force to move an object from point a to point b is going to be equal to:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;W_{a-b} = F_{a-b} \cdot (b - a)&lt;/script&gt;
+
+&lt;p&gt;&lt;em&gt;Integral Form&lt;/em&gt;&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\Delta U(r) = W_{a-b} = \int_{a}^{b} \vec{F} \cdot d\vec{l}&lt;/script&gt;
+
+&lt;p&gt;&lt;strong&gt;Reference Points&lt;/strong&gt; : A matter of convencience, only &lt;script type=&quot;math/tex&quot;&gt;\Delta U&lt;/script&gt; matters (because only forces can be measured and he forces depend on &lt;script type=&quot;math/tex&quot;&gt;\Delta U&lt;/script&gt; not &lt;script type=&quot;math/tex&quot;&gt;U&lt;/script&gt;)&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\vec{F}(f) = \frac{\partial U(r)}{\partial r} \hat{r}&lt;/script&gt;
+
+&lt;h5 id=&quot;gravitational-and-electrostatic-fields-are-conservative&quot;&gt;Gravitational and &lt;em&gt;Electrostatic&lt;/em&gt; fields are conservative&lt;/h5&gt;
+
+&lt;p&gt;The reason? Both fields are &lt;strong&gt;central&lt;/strong&gt; (a central force depends only on the distance between interacting objects and is directed along the line joining them.)&lt;/p&gt;
+
+&lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;\Delta U&lt;/script&gt; depends only on the &lt;em&gt;initial&lt;/em&gt; and &lt;em&gt;final&lt;/em&gt; points of the trajectory.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;For any loop &lt;script type=&quot;math/tex&quot;&gt;\int \vec{F_e} \cdot d\vec{l} = 0&lt;/script&gt; .&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Thus for our potential energy for any two electrostatic charges&lt;/p&gt;
+
+&lt;h4 id=&quot;electrostatic-potential-energy&quot;&gt;Electrostatic Potential Energy&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;script type=&quot;math/tex; mode=display&quot;&gt;W_{\infty - r} = \frac{q_1q_2}{4\pi\epsilon_0 \cdot r}&lt;/script&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;This energy is conservative. Meaning that no matter the path a particle takes from point 1 to point 2 - The change in energy will still be the same!&lt;/p&gt;
+
+&lt;h5 id=&quot;from--ur-to-fr-&quot;&gt;From &lt;script type=&quot;math/tex&quot;&gt;U(r) to F(r)&lt;/script&gt;&lt;/h5&gt;
+
+&lt;blockquote&gt;
+  &lt;script type=&quot;math/tex; mode=display&quot;&gt;\vec{F}(x) = -\frac{dU(x)}{dx}\hat{x}&lt;/script&gt;
+&lt;/blockquote&gt;
 
 </description>
         <pubDate>Thu, 03 Sep 2015 00:00:00 -0400</pubDate>
