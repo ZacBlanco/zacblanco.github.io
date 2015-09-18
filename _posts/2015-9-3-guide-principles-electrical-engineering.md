@@ -322,6 +322,15 @@ Another form is:
 
 ![Open and Short Ciruit Symbols](/assets/images/ee1-guide/open-short-circuit-symbols.png)
 
+#### The Switch Symbol
+
+![Switch Symbol](/assets/images/ee1-guide/switch-symbol-1.png)
+
+- Switches can affect the direction the current will flow.
+- The current will try to take the path of least resistace.
+
+If a current can take a path through a circuit that eliminates flow through a resistor, then the current will not flow through to that part of the circuit (or resistor) at all.
+
 
 #### Kirchoff's Laws
 
@@ -336,6 +345,8 @@ Let's start off with current, $$ i $$.
 What does this mean?
 
 - We can pick any nodes in our circuit. A node should always have _at least_ two currents flowing into it. This means that those two (or more) currents flowing into that node **must** sum to equal 0.
+
+> $$ \Sigma_j i_j = 0 $$
 
 - We **ADD** currents entering a node. (_Postive_)
 - We **SUBTRACT** currents leaving a node. (_Negative_)
@@ -355,6 +366,7 @@ So what exactly does this mean? It means that we can pick _any_ closed loop in t
 - If the element causes a _voltage drop_ (positive -> negative), then we **subtract**.
 - If the element causes a _voltage rise_ (negative -> postitive), then we **add**.
 
+> $$ \Sigma_j v_j = 0 $$
 
 ![KVL Example 1](/assets/images/ee1-guide/kvl-ex-1.png)
 
