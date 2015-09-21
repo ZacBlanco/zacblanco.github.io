@@ -378,9 +378,43 @@ So what exactly does this mean? It means that we can pick _any_ closed loop in t
 
 Mastering these problems takes lots of practice - so it could be beneficial to find more problems online or in a textbook to practice calculating and solving for circuits.
 
+#### September 21st 2015
+
+How many KCL and KVL Independent Equations?
+
+- KVL
+
+> $$ b-n+1 $$ independent loop equations OR $$ b_e - n_e + 1 $$ Is the number of essential branches and $$n_e$$ is the number of essential nodes
+
+- KCL
+
+> $$ n - 1 $$ independent node equations OR $$ n_e - 1 $$ if every essential branch has a single current associated with it.
+
+##### Steps to Solve for a Circuit
+
+1. Mark all nodes, resistors, currents, and voltages including direction and polarity.
+
+2. Choose Nodes for KCL
+
+3. Choose Loops for KVL
+
+4. Write KCL equations --> $$ n_e - 1 = 3 $$ 
+
+
 ### Unit 3 - Simple Resistive Circuits
 
 In this unit we'll address creating circuits that contain resistors in series and parallel - and then finding methods for learning about how to simplify said circuits and then solve for them.
+
+#### Resistors In Series
+
+Resistors are an element within a circuit - and sometimes these elements are difficult to solve for indicidually. But what we can do is simplify these circuits with multiple of similar elements to make solving these circuits easier.
+
+
+Resistors in series mean that the resistors are in a "line" with each other. There are no essential nodes between the two resistors. In this case (where there are no essential nodes) we can simply add the resistances of each resistor together
+
+> $$ R_{eq} = R_1 + R_2 $$
+
+From here on our circuit diagrams we can simply just combine the two resistors into one, where the single resistor now has the resistance of $$ R_{eq} $$.
 
 
 

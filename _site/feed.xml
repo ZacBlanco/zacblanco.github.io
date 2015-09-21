@@ -6,8 +6,8 @@
 </description>
     <link>http://zacblanco.github.io//</link>
     <atom:link href="http://zacblanco.github.io//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 17 Sep 2015 11:01:21 -0400</pubDate>
-    <lastBuildDate>Thu, 17 Sep 2015 11:01:21 -0400</lastBuildDate>
+    <pubDate>Mon, 21 Sep 2015 11:44:27 -0400</pubDate>
+    <lastBuildDate>Mon, 21 Sep 2015 11:44:27 -0400</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -979,9 +979,58 @@ Current Controlled Current Source (CCCS): &lt;script type=&quot;math/tex&quot;&g
 
 &lt;p&gt;Mastering these problems takes lots of practice - so it could be beneficial to find more problems online or in a textbook to practice calculating and solving for circuits.&lt;/p&gt;
 
+&lt;h4 id=&quot;september-21st-2015&quot;&gt;September 21st 2015&lt;/h4&gt;
+
+&lt;p&gt;How many KCL and KVL Independent Equations?&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;KVL&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;b-n+1&lt;/script&gt; independent loop equations OR &lt;script type=&quot;math/tex&quot;&gt;b_e - n_e + 1&lt;/script&gt; Is the number of essential branches and &lt;script type=&quot;math/tex&quot;&gt;n_e&lt;/script&gt; is the number of essential nodes&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;KCL&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;n - 1&lt;/script&gt; independent node equations OR &lt;script type=&quot;math/tex&quot;&gt;n_e - 1&lt;/script&gt; if every essential branch has a single current associated with it.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h5 id=&quot;steps-to-solve-for-a-circuit&quot;&gt;Steps to Solve for a Circuit&lt;/h5&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Mark all nodes, resistors, currents, and voltages including direction and polarity.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Choose Nodes for KCL&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Choose Loops for KVL&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Write KCL equations –&amp;gt; &lt;script type=&quot;math/tex&quot;&gt;n_e - 1 = 3&lt;/script&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
 &lt;h3 id=&quot;unit-3---simple-resistive-circuits&quot;&gt;Unit 3 - Simple Resistive Circuits&lt;/h3&gt;
 
 &lt;p&gt;In this unit we’ll address creating circuits that contain resistors in series and parallel - and then finding methods for learning about how to simplify said circuits and then solve for them.&lt;/p&gt;
+
+&lt;h4 id=&quot;resistors-in-series&quot;&gt;Resistors In Series&lt;/h4&gt;
+
+&lt;p&gt;Resistors are an element within a circuit - and sometimes these elements are difficult to solve for indicidually. But what we can do is simplify these circuits with multiple of similar elements to make solving these circuits easier.&lt;/p&gt;
+
+&lt;p&gt;Resistors in series mean that the resistors are in a “line” with each other. There are no essential nodes between the two resistors. In this case (where there are no essential nodes) we can simply add the resistances of each resistor together&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;script type=&quot;math/tex; mode=display&quot;&gt;R_{eq} = R_1 + R_2&lt;/script&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;From here on our circuit diagrams we can simply just combine the two resistors into one, where the single resistor now has the resistance of &lt;script type=&quot;math/tex&quot;&gt;R_{eq}&lt;/script&gt;.&lt;/p&gt;
 
 </description>
         <pubDate>Thu, 03 Sep 2015 00:00:00 -0400</pubDate>
