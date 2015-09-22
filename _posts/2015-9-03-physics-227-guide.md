@@ -312,9 +312,52 @@ Thus for our potential energy for any two electrostatic charges
 
 This energy is conservative. Meaning that no matter the path a particle takes from point 1 to point 2 - The change in energy will still be the same!
 
-##### From $$ U(r) to F(r) $$
+##### From $$ U(r) $$ to $$ F(r) $$
 
 > $$ \vec{F}(x) = -\frac{dU(x)}{dx}\hat{x} $$
+
+### September 21st 2015
+
+#### Electrostatic Potential
+
+Volts! The electrostatic potential.
+
+> $$ V(r) = \frac{U(r)}{q} $$
+
+The electrostatic potential is related to the potential energy of charges in the electric field. Numberically, this is the work done by external forces to bring a positite unit charge from some reference point to the point in question.
+
+- Units: $$ \frac{J}{C} = $$ Volt
+
+#### Electric Potential to Electric Field
+
+We know that $$ \vec{F}(x, y) = -\frac{\partial{U}(x, y)}{\partial x}\hat{x} -\frac{\partial{U}(x, y)}{\partial y\hat{y} $$
+
+Similarly the Electric field is equal to the derivative of the electrostatic potential.
+
+That is 
+
+- $$ \vec{F}(x, y) = q\vec{E}(x, y) $$
+- $$ U(x, y) = qV(x, y) $$
+
+
+#### Calculations of Electrostatic Potential
+
+- $$ V(r) = k\Sigma_i\frac{q_i}{|\vec{r} - \vec{r_i}|} $$
+
+##### Electric Field and Potential of a Charged Ring
+
+$$ V(x) = \frac{1}{4\pi\epsilon_0}\frac{Q}{\sqrt{x^2 + a^2}} $$
+
+#### Electric Potential Inside and Outside a Conductor
+
+- Inside of a (spherical) conductor, the electric potential is equal to $$ k\frac{q}{R} $$
+- Outside of a conductor, the electric potential decreases with distance and is equal to $$ k\frac{q}{r} $$
+
+
+
+
+
+
 
 
 
