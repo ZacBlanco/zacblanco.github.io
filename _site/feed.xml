@@ -6,8 +6,8 @@
 </description>
     <link>http://zacblanco.github.io//</link>
     <atom:link href="http://zacblanco.github.io//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 24 Sep 2015 10:25:45 -0400</pubDate>
-    <lastBuildDate>Thu, 24 Sep 2015 10:25:45 -0400</lastBuildDate>
+    <pubDate>Thu, 24 Sep 2015 11:38:41 -0400</pubDate>
+    <lastBuildDate>Thu, 24 Sep 2015 11:38:41 -0400</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -1180,6 +1180,71 @@ Current Controlled Current Source (CCCS): &lt;script type=&quot;math/tex&quot;&g
 &lt;/blockquote&gt;
 
 &lt;p&gt;From here on our circuit diagrams we can simply just combine the two resistors into one, where the single resistor now has the resistance of &lt;script type=&quot;math/tex&quot;&gt;R_{eq}&lt;/script&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;september-24th-2015&quot;&gt;September 24th 2015&lt;/h2&gt;
+
+&lt;h3 id=&quot;simplifying-circuits-with-resistors-in-series-and-parallel&quot;&gt;Simplifying Circuits with Resistors in Series and Parallel&lt;/h3&gt;
+
+&lt;h4 id=&quot;resistors-in-series-1&quot;&gt;Resistors in Series&lt;/h4&gt;
+
+&lt;p&gt;We can simplify resistors that share a single essential node. We know that they are in series if they share an essential node and there are no other elements in between them. We can simply add their resistances.&lt;/p&gt;
+
+&lt;p&gt;So for resistors in series&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;script type=&quot;math/tex; mode=display&quot;&gt;R_{eq} = R_1 + R_2&lt;/script&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/ee1-guide/res-series-1.png&quot; alt=&quot;Resistors in Series&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Some notes about simplifying resistors in series&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;The current through both resistors is the same. You can prove it using KCL.&lt;/li&gt;
+  &lt;li&gt;The voltage drop is related to the addition of the voltage drop across each individual resistor.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;resistors-in-parallel&quot;&gt;Resistors In Parallel&lt;/h4&gt;
+
+&lt;p&gt;Resistors in parallel is where two resistors share a node with another branch from an element. To find the equivalent resistance we must use the reciprocal of the resistances.&lt;/p&gt;
+
+&lt;p&gt;So for resistors in parallel:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;script type=&quot;math/tex; mode=display&quot;&gt;\frac{1}{R_{eq}} = \frac{1}{R_1} + \frac{1}{R_2}&lt;/script&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Therefore&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;script type=&quot;math/tex; mode=display&quot;&gt;R_{eq} = \frac{R_1R_2}{R_1 + R_2}&lt;/script&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/ee1-guide/res-parallel-1.png&quot; alt=&quot;Resistors in Parallel&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The equivalent resitance of resistors in parallel will ALWAYS be smaller than the minimum resistance in the set of parallel resistors.&lt;/p&gt;
+
+&lt;h3 id=&quot;the-delta-wye-connection&quot;&gt;The Delta-Wye Connection&lt;/h3&gt;
+
+&lt;p&gt;In the triangular (Delta) configuration - We name the resistors in a very systematic way.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;For the branch between node a and b, the resistor must be &lt;script type=&quot;math/tex&quot;&gt;R_c&lt;/script&gt;.&lt;/li&gt;
+  &lt;li&gt;For the branch connecting nodes b and c, the resistor must be &lt;script type=&quot;math/tex&quot;&gt;R_a&lt;/script&gt;.&lt;/li&gt;
+  &lt;li&gt;For the branch ocnnection nodes a and c, the resistfor must be &lt;script type=&quot;math/tex&quot;&gt;R_b&lt;/script&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;In the Wye (Y) configuration&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;The (a) node should be connected to &lt;script type=&quot;math/tex&quot;&gt;R_1&lt;/script&gt;.&lt;/li&gt;
+  &lt;li&gt;The (b) node should be connected to &lt;script type=&quot;math/tex&quot;&gt;R_2&lt;/script&gt;.&lt;/li&gt;
+  &lt;li&gt;The (c) node should be connected to &lt;script type=&quot;math/tex&quot;&gt;R_3&lt;/script&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/ee1-guide/delta-wye-equivalents-1.png&quot; alt=&quot;Resistors in Parallel&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;This transformation to and from the Delta and Wye (Y) configurations can be useful in analyzing more complex circuits.&lt;/p&gt;
 
 </description>
         <pubDate>Thu, 03 Sep 2015 00:00:00 -0400</pubDate>

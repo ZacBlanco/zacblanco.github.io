@@ -417,8 +417,59 @@ Resistors in series mean that the resistors are in a "line" with each other. The
 From here on our circuit diagrams we can simply just combine the two resistors into one, where the single resistor now has the resistance of $$ R_{eq} $$.
 
 
+## September 24th 2015
+
+### Simplifying Circuits with Resistors in Series and Parallel
+
+#### Resistors in Series 
+
+We can simplify resistors that share a single essential node. We know that they are in series if they share an essential node and there are no other elements in between them. We can simply add their resistances.
+
+So for resistors in series
+
+> $$ R_{eq} = R_1 + R_2 $$
+
+![Resistors in Series](/assets/images/ee1-guide/res-series-1.png)
+
+Some notes about simplifying resistors in series
+
+- The current through both resistors is the same. You can prove it using KCL.
+- The voltage drop is related to the addition of the voltage drop across each individual resistor.
 
 
+#### Resistors In Parallel
+
+Resistors in parallel is where two resistors share a node with another branch from an element. To find the equivalent resistance we must use the reciprocal of the resistances. 
+
+So for resistors in parallel:
+
+> $$ \frac{1}{R_{eq}} = \frac{1}{R_1} + \frac{1}{R_2} $$
+
+Therefore
+
+> $$ R_{eq} = \frac{R_1R_2}{R_1 + R_2} $$
+
+![Resistors in Parallel](/assets/images/ee1-guide/res-parallel-1.png)
+
+The equivalent resitance of resistors in parallel will ALWAYS be smaller than the minimum resistance in the set of parallel resistors.
+
+### The Delta-Wye Connection
+
+In the triangular (Delta) configuration - We name the resistors in a very systematic way.
+
+- For the branch between node a and b, the resistor must be $$ R_c $$.
+- For the branch connecting nodes b and c, the resistor must be $$ R_a $$.
+- For the branch ocnnection nodes a and c, the resistfor must be $$ R_b $$.
+
+In the Wye (Y) configuration
+
+- The (a) node should be connected to $$ R_1 $$.
+- The (b) node should be connected to $$ R_2 $$.
+- The (c) node should be connected to $$ R_3 $$.
+
+![Resistors in Parallel](/assets/images/ee1-guide/delta-wye-equivalents-1.png)
+
+This transformation to and from the Delta and Wye (Y) configurations can be useful in analyzing more complex circuits.
 
 
 
