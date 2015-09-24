@@ -330,7 +330,7 @@ The electrostatic potential is related to the potential energy of charges in the
 
 #### Electric Potential to Electric Field
 
-We know that $$ \vec{F}(x, y) = -\frac{\partial{U}(x, y)}{\partial x}\hat{x} -\frac{\partial{U}(x, y)}{\partial y\hat{y} $$
+We know that $$ \vec{F}(x, y) = -\frac{\partial{U}(x, y)}{\partial x}\hat{x} -\frac{\partial{U}(x, y)}{\partial y}\hat{y} $$
 
 Similarly the Electric field is equal to the derivative of the electrostatic potential.
 
@@ -350,23 +350,78 @@ $$ V(x) = \frac{1}{4\pi\epsilon_0}\frac{Q}{\sqrt{x^2 + a^2}} $$
 
 #### Electric Potential Inside and Outside a Conductor
 
-- Inside of a (spherical) conductor, the electric potential is equal to $$ k\frac{q}{R} $$
-- Outside of a conductor, the electric potential decreases with distance and is equal to $$ k\frac{q}{r} $$
+- Inside of a (spherical) conductor, the electric potential is equal to $$ k\frac{q}{R} $$ where $$R$$ is equal to the radius of the "sphere" conductor.
+- Outside of a conductor, the electric potential decreases with distance and is equal to $$ k\frac{q}{r} $$. Where $$r$$ is the total distance from the center of the spherical conductor.
+
+## September 24th 2015
+
+###  Lecture 7 - Capacitors and Electric Field Energy
+
+With a metal we know that the electric field must be perpendicular to the surface of the metal (while the inside of the metal has an electric field of zero).
+
+But what about the electric potential distribution over the surface?
+
+> The conducting surface is an equipotential surface
+
+Because the E field is 0 everywhere inside a conductor, the electrostatic potential on the surface of a conductor must be equal to the potential everywhere on the surface.
+
+> The E field in a conductor is always zero!
+
+> The Electrostatic Potential at any point in the spehere is the same as the potential on the surface!
 
 
+### Capacitors
+
+- A cpacitor is a system of two conducting surfaces (electrodes), the net charge of the two are zero.
+
+That is, one plate will be positively charged and the other will be negatively charged.
+
+- _Important!_ Because the surfaces are conducting, they are equipotential and 
+
+$$ \Delta V = \int^{-electrode}_{+electrode}\vec{E}\cdot d\vec{l} $$
+
+Capacitance - Is the amount of charge per equipotential. $$ \frac{Coulombs}{Volts} $$
+
+> Capacitance: $$ C = \frac{Q}{\Delta V} = \frac{Q}{\int^{-electrode}_{+electrode}\vec{E}\cdot d\vec{l}} $$
+
+##### Capacitance Analogy
+
+Bucket Of Water
+
+- $$Q$$ = Amount of Water
+- $$C$$ = Amount of water divided by volume of bucket
+- $$\Delta V $$ = Height of water in bucket
+
+Capacitance Does not depend on the "amount of charge" really. If we increase the charge on the capacitor, the voltage will also change, meaning the capcitance is constant.
+
+### Computing Capacitance
+
+Computing capacitance for a given $$Q$$: Calculate $$ \Delta V $$ and use the definition of capacitance.
+
+- $$ E = \frac{\sigma}{\epsilon_0} = \frac{Q}{\epsilon_0A} $$
+- $$ \Delta V = Ed = \frac{Qd}{\epsilon_0A} $$
+- $$ C = \frac{\epsilon_0A}{d} $$ (For a parallel Plate capacitor).
 
 
+### Energy Stored in a Capacitor
+
+Final state for a charged capacitor --> E field - $$ Q = \frac{Q}{\epsilon_0A} $$
 
 
+Work for a capacitor:
 
+- $$ W = \frac{Q^2}{2C} $$
+- $$ U = \frac{Q^2}{2C} = \frac{CV^2}{2} = \frac{QV}{2} $$
 
+### Energy Density
 
+Valid for almost any point! Very Useful 
 
+- $$ u_E = \frac{1}{2}\epsilon_0E^2 $$ 
 
+Total Energy of the electric field
 
-
-
-
+$$ U_E = \int_{all space} \frac{1}{2}\epsilon_0E^2(r)d\tau $$
 
 
 

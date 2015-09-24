@@ -6,8 +6,8 @@
 </description>
     <link>http://zacblanco.github.io//</link>
     <atom:link href="http://zacblanco.github.io//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 21 Sep 2015 12:54:45 -0400</pubDate>
-    <lastBuildDate>Mon, 21 Sep 2015 12:54:45 -0400</lastBuildDate>
+    <pubDate>Thu, 24 Sep 2015 10:25:45 -0400</pubDate>
+    <lastBuildDate>Thu, 24 Sep 2015 10:25:45 -0400</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -479,7 +479,7 @@ Cylindrical + translational
 
 &lt;h4 id=&quot;electric-potential-to-electric-field&quot;&gt;Electric Potential to Electric Field&lt;/h4&gt;
 
-&lt;p&gt;We know that &lt;script type=&quot;math/tex&quot;&gt;\vec{F}(x, y) = -\frac{\partial{U}(x, y)}{\partial x}\hat{x} -\frac{\partial{U}(x, y)}{\partial y\hat{y}&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;We know that &lt;script type=&quot;math/tex&quot;&gt;\vec{F}(x, y) = -\frac{\partial{U}(x, y)}{\partial x}\hat{x} -\frac{\partial{U}(x, y)}{\partial y}\hat{y}&lt;/script&gt;&lt;/p&gt;
 
 &lt;p&gt;Similarly the Electric field is equal to the derivative of the electrostatic potential.&lt;/p&gt;
 
@@ -509,9 +509,106 @@ Cylindrical + translational
 &lt;h4 id=&quot;electric-potential-inside-and-outside-a-conductor&quot;&gt;Electric Potential Inside and Outside a Conductor&lt;/h4&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;Inside of a (spherical) conductor, the electric potential is equal to &lt;script type=&quot;math/tex&quot;&gt;k\frac{q}{R}&lt;/script&gt;&lt;/li&gt;
-  &lt;li&gt;Outside of a conductor, the electric potential decreases with distance and is equal to &lt;script type=&quot;math/tex&quot;&gt;k\frac{q}{r}&lt;/script&gt;&lt;/li&gt;
+  &lt;li&gt;Inside of a (spherical) conductor, the electric potential is equal to &lt;script type=&quot;math/tex&quot;&gt;k\frac{q}{R}&lt;/script&gt; where &lt;script type=&quot;math/tex&quot;&gt;R&lt;/script&gt; is equal to the radius of the “sphere” conductor.&lt;/li&gt;
+  &lt;li&gt;Outside of a conductor, the electric potential decreases with distance and is equal to &lt;script type=&quot;math/tex&quot;&gt;k\frac{q}{r}&lt;/script&gt;. Where &lt;script type=&quot;math/tex&quot;&gt;r&lt;/script&gt; is the total distance from the center of the spherical conductor.&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;h2 id=&quot;september-24th-2015&quot;&gt;September 24th 2015&lt;/h2&gt;
+
+&lt;h3 id=&quot;lecture-7---capacitors-and-electric-field-energy&quot;&gt;Lecture 7 - Capacitors and Electric Field Energy&lt;/h3&gt;
+
+&lt;p&gt;With a metal we know that the electric field must be perpendicular to the surface of the metal (while the inside of the metal has an electric field of zero).&lt;/p&gt;
+
+&lt;p&gt;But what about the electric potential distribution over the surface?&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;The conducting surface is an equipotential surface&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Because the E field is 0 everywhere inside a conductor, the electrostatic potential on the surface of a conductor must be equal to the potential everywhere on the surface.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;The E field in a conductor is always zero!&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;The Electrostatic Potential at any point in the spehere is the same as the potential on the surface!&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;capacitors&quot;&gt;Capacitors&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;A cpacitor is a system of two conducting surfaces (electrodes), the net charge of the two are zero.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;That is, one plate will be positively charged and the other will be negatively charged.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;em&gt;Important!&lt;/em&gt; Because the surfaces are conducting, they are equipotential and&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\Delta V = \int^{-electrode}_{+electrode}\vec{E}\cdot d\vec{l}&lt;/script&gt;
+
+&lt;p&gt;Capacitance - Is the amount of charge per equipotential. &lt;script type=&quot;math/tex&quot;&gt;\frac{Coulombs}{Volts}&lt;/script&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Capacitance: &lt;script type=&quot;math/tex&quot;&gt;C = \frac{Q}{\Delta V} = \frac{Q}{\int^{-electrode}_{+electrode}\vec{E}\cdot d\vec{l}}&lt;/script&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h5 id=&quot;capacitance-analogy&quot;&gt;Capacitance Analogy&lt;/h5&gt;
+
+&lt;p&gt;Bucket Of Water&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;script type=&quot;math/tex&quot;&gt;Q&lt;/script&gt; = Amount of Water&lt;/li&gt;
+  &lt;li&gt;&lt;script type=&quot;math/tex&quot;&gt;C&lt;/script&gt; = Amount of water divided by volume of bucket&lt;/li&gt;
+  &lt;li&gt;&lt;script type=&quot;math/tex&quot;&gt;\Delta V&lt;/script&gt; = Height of water in bucket&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Capacitance Does not depend on the “amount of charge” really. If we increase the charge on the capacitor, the voltage will also change, meaning the capcitance is constant.&lt;/p&gt;
+
+&lt;h3 id=&quot;computing-capacitance&quot;&gt;Computing Capacitance&lt;/h3&gt;
+
+&lt;p&gt;Computing capacitance for a given &lt;script type=&quot;math/tex&quot;&gt;Q&lt;/script&gt;: Calculate &lt;script type=&quot;math/tex&quot;&gt;\Delta V&lt;/script&gt; and use the definition of capacitance.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;script type=&quot;math/tex; mode=display&quot;&gt;E = \frac{\sigma}{\epsilon_0} = \frac{Q}{\epsilon_0A}&lt;/script&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;script type=&quot;math/tex; mode=display&quot;&gt;\Delta V = Ed = \frac{Qd}{\epsilon_0A}&lt;/script&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;script type=&quot;math/tex&quot;&gt;C = \frac{\epsilon_0A}{d}&lt;/script&gt; (For a parallel Plate capacitor).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;energy-stored-in-a-capacitor&quot;&gt;Energy Stored in a Capacitor&lt;/h3&gt;
+
+&lt;p&gt;Final state for a charged capacitor –&amp;gt; E field - &lt;script type=&quot;math/tex&quot;&gt;Q = \frac{Q}{\epsilon_0A}&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;Work for a capacitor:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;script type=&quot;math/tex; mode=display&quot;&gt;W = \frac{Q^2}{2C}&lt;/script&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;script type=&quot;math/tex; mode=display&quot;&gt;U = \frac{Q^2}{2C} = \frac{CV^2}{2} = \frac{QV}{2}&lt;/script&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;energy-density&quot;&gt;Energy Density&lt;/h3&gt;
+
+&lt;p&gt;Valid for almost any point! Very Useful&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;script type=&quot;math/tex; mode=display&quot;&gt;u_E = \frac{1}{2}\epsilon_0E^2&lt;/script&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Total Energy of the electric field&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;U_E = \int_{all space} \frac{1}{2}\epsilon_0E^2(r)d\tau&lt;/script&gt;
 
 </description>
         <pubDate>Thu, 03 Sep 2015 00:00:00 -0400</pubDate>
