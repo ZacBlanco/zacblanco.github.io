@@ -424,6 +424,61 @@ Total Energy of the electric field
 $$ U_E = \int_{all space} \frac{1}{2}\epsilon_0E^2(r)d\tau $$
 
 
+## September 28th 2015
+
+### Two types of Capacitor Problems
+
+There are two types of capcitor problems
+
+One where a capacitor is connected to a voltage source
+Here, the voltage is constant
+
+- $$ V = constant $$
+
+One where a voltage is not connected and the capacitor is charged.
+In this case, the charge $$ Q $$ is constant.
+
+- $$ Q = constant $$
+
+
+A few extra equations:
+
+- $$ C = \frac{\epsilon_0A}{d} $$
+- $$ V = \frac{Q}{C} $$
+
+### Parallel Connections of Capacitors
+
+If capacitors are connected in parallel with one another, then we can replace them with an equivalent capacitor $$ C_{eq} $$ that is equal to
+
+> $$ C_{eq} = C_1 + C_2 + ... + C_n $$
+
+### Series Connections of Capacitors
+
+If capacitors are connected in series (nodes that are directly connected to only one other capacitor), then we can combine them into a new capacitor with a capacitance of $$ C_{eq} $$ that is equal to:
+
+> $$ C_{eq} = \frac{1}{\frac{1}{C_1} + \frac{1}{C_2} + ... + \frac{1}{C_n}} $$
+
+### Linear Dialectrucs in an External Electric Field
+
+The electric field inside of a capacitor is actually in the opposite direction. This means the electric around the capacitor will change slightly.
+
+This means that we can place a different material inside of a capacitor, and increase the capacitance
+
+The dialectric constant for a meterial can be measured by taking the E field inside and outside the capacitor.
+
+> $$ K = \frac{E_0}{E_{in}} > 1 $$
+
+> $$ \frac{\sigma_i}{\epsilon_0} = E_0 - E_{in} = E_0(1 - \frac{1}{K}) $$
+
+### Energy in a Capacitor with a Dialectric
+
+> $$ \frac{U_{filled}{U_{empty}} = \frac{1}{K} $$
+
+> $$ U_{empty} = 
+
+> $$ U_{filled} = \frac{Q^2}{}
+
+
 
 
 

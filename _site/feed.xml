@@ -6,8 +6,8 @@
 </description>
     <link>http://zacblanco.github.io//</link>
     <atom:link href="http://zacblanco.github.io//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 28 Sep 2015 10:59:00 -0400</pubDate>
-    <lastBuildDate>Mon, 28 Sep 2015 10:59:00 -0400</lastBuildDate>
+    <pubDate>Mon, 28 Sep 2015 14:05:57 -0400</pubDate>
+    <lastBuildDate>Mon, 28 Sep 2015 14:05:57 -0400</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -609,6 +609,87 @@ Cylindrical + translational
 &lt;p&gt;Total Energy of the electric field&lt;/p&gt;
 
 &lt;script type=&quot;math/tex; mode=display&quot;&gt;U_E = \int_{all space} \frac{1}{2}\epsilon_0E^2(r)d\tau&lt;/script&gt;
+
+&lt;h2 id=&quot;september-28th-2015&quot;&gt;September 28th 2015&lt;/h2&gt;
+
+&lt;h3 id=&quot;two-types-of-capacitor-problems&quot;&gt;Two types of Capacitor Problems&lt;/h3&gt;
+
+&lt;p&gt;There are two types of capcitor problems&lt;/p&gt;
+
+&lt;p&gt;One where a capacitor is connected to a voltage source
+Here, the voltage is constant&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;script type=&quot;math/tex; mode=display&quot;&gt;V = constant&lt;/script&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;One where a voltage is not connected and the capacitor is charged.
+In this case, the charge &lt;script type=&quot;math/tex&quot;&gt;Q&lt;/script&gt; is constant.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;script type=&quot;math/tex; mode=display&quot;&gt;Q = constant&lt;/script&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;A few extra equations:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;script type=&quot;math/tex; mode=display&quot;&gt;C = \frac{\epsilon_0A}{d}&lt;/script&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;script type=&quot;math/tex; mode=display&quot;&gt;V = \frac{Q}{C}&lt;/script&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;parallel-connections-of-capacitors&quot;&gt;Parallel Connections of Capacitors&lt;/h3&gt;
+
+&lt;p&gt;If capacitors are connected in parallel with one another, then we can replace them with an equivalent capacitor &lt;script type=&quot;math/tex&quot;&gt;C_{eq}&lt;/script&gt; that is equal to&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;script type=&quot;math/tex; mode=display&quot;&gt;C_{eq} = C_1 + C_2 + ... + C_n&lt;/script&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;series-connections-of-capacitors&quot;&gt;Series Connections of Capacitors&lt;/h3&gt;
+
+&lt;p&gt;If capacitors are connected in series (nodes that are directly connected to only one other capacitor), then we can combine them into a new capacitor with a capacitance of &lt;script type=&quot;math/tex&quot;&gt;C_{eq}&lt;/script&gt; that is equal to:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;script type=&quot;math/tex; mode=display&quot;&gt;C_{eq} = \frac{1}{\frac{1}{C_1} + \frac{1}{C_2} + ... + \frac{1}{C_n}}&lt;/script&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;linear-dialectrucs-in-an-external-electric-field&quot;&gt;Linear Dialectrucs in an External Electric Field&lt;/h3&gt;
+
+&lt;p&gt;The electric field inside of a capacitor is actually in the opposite direction. This means the electric around the capacitor will change slightly.&lt;/p&gt;
+
+&lt;p&gt;This means that we can place a different material inside of a capacitor, and increase the capacitance&lt;/p&gt;
+
+&lt;p&gt;The dialectric constant for a meterial can be measured by taking the E field inside and outside the capacitor.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;script type=&quot;math/tex; mode=display&quot;&gt;K = \frac{E_0}{E_{in}} &gt; 1&lt;/script&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;script type=&quot;math/tex; mode=display&quot;&gt;\frac{\sigma_i}{\epsilon_0} = E_0 - E_{in} = E_0(1 - \frac{1}{K})&lt;/script&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;energy-in-a-capacitor-with-a-dialectric&quot;&gt;Energy in a Capacitor with a Dialectric&lt;/h3&gt;
+
+&lt;blockquote&gt;
+  &lt;script type=&quot;math/tex; mode=display&quot;&gt;\frac{U_{filled}{U_{empty}} = \frac{1}{K}&lt;/script&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;$$ U_{empty} =&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;$$ U_{filled} = \frac{Q^2}{}&lt;/p&gt;
+&lt;/blockquote&gt;
 
 </description>
         <pubDate>Thu, 03 Sep 2015 00:00:00 -0400</pubDate>
