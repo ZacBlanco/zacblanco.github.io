@@ -472,7 +472,62 @@ In the Wye (Y) configuration
 This transformation to and from the Delta and Wye (Y) configurations can be useful in analyzing more complex circuits.
 
 
+## September 28th 2015
 
+#### Voltage Divider Circuit
+
+So the first thing we need to know is that if we want to measure the voltage over a resistor, then we need to put the voltmeter in parallel with the resistor.
+
+Now in a voltage divider circuit, we take that principle and expand on it to divide the voltage by a certain amount by putting multiple resistors in series with one another.
+
+The voltage divider contains a voltage source of value $$ V_x $$ and resistors $$ R_1 $$ and $$ R_2 $$ in series with one another and the voltage source.
+
+We know that from KVL the equation for the voltage must be that 
+
+> $$ V_x = V_1 + V_2 $$
+
+From KCL we can find that
+
+> $$ i_x = i_1 = i_2 $$
+
+and now from KCL and Ohm's we have
+
+> $$ i_x = \frac{V_1}{R_1} = \frac{V_2}{R_2} $$
+ 
+we want to now find $$V_1$$ in terms of $$V_x$$.
+
+- $$ V_1 = f(V_x) $$
+- $$ V_2 = f(V_x) $$
+
+We can then find that $$ V_x = V_1 + \frac{R_2}{R_1}V_1 = (1 + \frac{R_2}{R_1})V_1 $$
+
+So then solving for $$ V_1 $$ we find:
+
+> $$ V_1 = \frac{R_1}{R_1 +  R_2}V_x $$
+
+Similarly, if we solve for $$ V_2 $$, then 
+
+> $$ V_2 = \frac{R_2}{R_1 + R_2}V_x $$
+
+#### Current Divider Circuits
+
+In a current divider circuit we can divide a voltage source's current by an amount by placing resistors in parallel and putting an ammeter in series with one of the resistors.
+
+So if we have two resistors in series, then through KVL we have:
+
+> $$ V_x = V_1 = V_2 $$
+
+and through KCL we have that
+
+> $$ i_x = i_1 + i_2 $$
+
+And with Ohm's law included, we can get the equation
+
+> $$ i_1 = \frac{R_2}{R_1 + R_2} i_x $$
+
+So then if we solve for $$ i_2 $$ we find that
+
+> $$ i_2 = \frac{}{}i_x $$
 
 
 

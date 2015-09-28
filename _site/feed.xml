@@ -6,8 +6,8 @@
 </description>
     <link>http://zacblanco.github.io//</link>
     <atom:link href="http://zacblanco.github.io//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 24 Sep 2015 11:38:41 -0400</pubDate>
-    <lastBuildDate>Thu, 24 Sep 2015 11:38:41 -0400</lastBuildDate>
+    <pubDate>Mon, 28 Sep 2015 10:59:00 -0400</pubDate>
+    <lastBuildDate>Mon, 28 Sep 2015 10:59:00 -0400</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -1245,6 +1245,87 @@ Current Controlled Current Source (CCCS): &lt;script type=&quot;math/tex&quot;&g
 &lt;p&gt;&lt;img src=&quot;/assets/images/ee1-guide/delta-wye-equivalents-1.png&quot; alt=&quot;Resistors in Parallel&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;This transformation to and from the Delta and Wye (Y) configurations can be useful in analyzing more complex circuits.&lt;/p&gt;
+
+&lt;h2 id=&quot;september-28th-2015&quot;&gt;September 28th 2015&lt;/h2&gt;
+
+&lt;h4 id=&quot;voltage-divider-circuit&quot;&gt;Voltage Divider Circuit&lt;/h4&gt;
+
+&lt;p&gt;So the first thing we need to know is that if we want to measure the voltage over a resistor, then we need to put the voltmeter in parallel with the resistor.&lt;/p&gt;
+
+&lt;p&gt;Now in a voltage divider circuit, we take that principle and expand on it to divide the voltage by a certain amount by putting multiple resistors in series with one another.&lt;/p&gt;
+
+&lt;p&gt;The voltage divider contains a voltage source of value &lt;script type=&quot;math/tex&quot;&gt;V_x&lt;/script&gt; and resistors &lt;script type=&quot;math/tex&quot;&gt;R_1&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;R_2&lt;/script&gt; in series with one another and the voltage source.&lt;/p&gt;
+
+&lt;p&gt;We know that from KVL the equation for the voltage must be that&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;script type=&quot;math/tex; mode=display&quot;&gt;V_x = V_1 + V_2&lt;/script&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;From KCL we can find that&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;script type=&quot;math/tex; mode=display&quot;&gt;i_x = i_1 = i_2&lt;/script&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;and now from KCL and Ohm’s we have&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;script type=&quot;math/tex; mode=display&quot;&gt;i_x = \frac{V_1}{R_1} = \frac{V_2}{R_2}&lt;/script&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;we want to now find &lt;script type=&quot;math/tex&quot;&gt;V_1&lt;/script&gt; in terms of &lt;script type=&quot;math/tex&quot;&gt;V_x&lt;/script&gt;.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;script type=&quot;math/tex; mode=display&quot;&gt;V_1 = f(V_x)&lt;/script&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;script type=&quot;math/tex; mode=display&quot;&gt;V_2 = f(V_x)&lt;/script&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;We can then find that &lt;script type=&quot;math/tex&quot;&gt;V_x = V_1 + \frac{R_2}{R_1}V_1 = (1 + \frac{R_2}{R_1})V_1&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;So then solving for &lt;script type=&quot;math/tex&quot;&gt;V_1&lt;/script&gt; we find:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;script type=&quot;math/tex; mode=display&quot;&gt;V_1 = \frac{R_1}{R_1 +  R_2}V_x&lt;/script&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Similarly, if we solve for &lt;script type=&quot;math/tex&quot;&gt;V_2&lt;/script&gt;, then&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;script type=&quot;math/tex; mode=display&quot;&gt;V_2 = \frac{R_2}{R_1 + R_2}V_x&lt;/script&gt;
+&lt;/blockquote&gt;
+
+&lt;h4 id=&quot;current-divider-circuits&quot;&gt;Current Divider Circuits&lt;/h4&gt;
+
+&lt;p&gt;In a current divider circuit we can divide a voltage source’s current by an amount by placing resistors in parallel and putting an ammeter in series with one of the resistors.&lt;/p&gt;
+
+&lt;p&gt;So if we have two resistors in series, then through KVL we have:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;script type=&quot;math/tex; mode=display&quot;&gt;V_x = V_1 = V_2&lt;/script&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;and through KCL we have that&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;script type=&quot;math/tex; mode=display&quot;&gt;i_x = i_1 + i_2&lt;/script&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;And with Ohm’s law included, we can get the equation&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;script type=&quot;math/tex; mode=display&quot;&gt;i_1 = \frac{R_2}{R_1 + R_2} i_x&lt;/script&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;So then if we solve for &lt;script type=&quot;math/tex&quot;&gt;i_2&lt;/script&gt; we find that&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;script type=&quot;math/tex; mode=display&quot;&gt;i_2 = \frac{}{}i_x&lt;/script&gt;
+&lt;/blockquote&gt;
 
 </description>
         <pubDate>Thu, 03 Sep 2015 00:00:00 -0400</pubDate>
