@@ -6,8 +6,8 @@
 </description>
     <link>http://zacblanco.github.io//</link>
     <atom:link href="http://zacblanco.github.io//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 28 Sep 2015 14:05:57 -0400</pubDate>
-    <lastBuildDate>Mon, 28 Sep 2015 14:05:57 -0400</lastBuildDate>
+    <pubDate>Thu, 01 Oct 2015 10:34:18 -0400</pubDate>
+    <lastBuildDate>Thu, 01 Oct 2015 10:34:18 -0400</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -690,6 +690,29 @@ In this case, the charge &lt;script type=&quot;math/tex&quot;&gt;Q&lt;/script&gt
 &lt;blockquote&gt;
   &lt;p&gt;$$ U_{filled} = \frac{Q^2}{}&lt;/p&gt;
 &lt;/blockquote&gt;
+
+&lt;h2 id=&quot;october-1st-2015&quot;&gt;October 1st 2015&lt;/h2&gt;
+
+&lt;h3 id=&quot;exam-1-review&quot;&gt;Exam 1 Review&lt;/h3&gt;
+
+&lt;p&gt;In a dialectric, the particles inside will align themselves according to the electric field applied to it.&lt;/p&gt;
+
+&lt;p&gt;The dialectric constant for a material is equal to the ratio of the E field inside the material divided by the E field on the outside. The ratio should always be equal to one another.&lt;/p&gt;
+
+&lt;h3 id=&quot;energy-stored-in-a-dialectric-capacitor&quot;&gt;Energy stored in a Dialectric Capacitor&lt;/h3&gt;
+
+&lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;\frac{Q^2}{2C}&lt;/script&gt;
+&lt;script type=&quot;math/tex&quot;&gt;\frac{1}{2}CV^2&lt;/script&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;half-filled-dialelctric-capacitor&quot;&gt;Half Filled Dialelctric Capacitor&lt;/h3&gt;
+
+&lt;p&gt;If the dialectric is in between the positive and negative plates (fully extending from one to the other), we can find the capacitance by adding the similar capacitances as if it was in parallel because the plates receive the same voltage.&lt;/p&gt;
+
+&lt;p&gt;If it is halfway in the opposite way, (only touching one plate), then we can assume they are in series and find the equivalent capacitance by adding the two capacitors as if they were in series.&lt;/p&gt;
+
+&lt;p&gt;Electric Field and Electric Potential&lt;/p&gt;
+
+&lt;p&gt;Remember &lt;script type=&quot;math/tex&quot;&gt;E(x) = -\frac{dV(x)}{dx}&lt;/script&gt;&lt;/p&gt;
 
 </description>
         <pubDate>Thu, 03 Sep 2015 00:00:00 -0400</pubDate>

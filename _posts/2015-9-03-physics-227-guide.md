@@ -478,6 +478,28 @@ The dialectric constant for a meterial can be measured by taking the E field ins
 
 > $$ U_{filled} = \frac{Q^2}{}
 
+## October 1st 2015
+
+### Exam 1 Review
+
+In a dialectric, the particles inside will align themselves according to the electric field applied to it. 
+
+The dialectric constant for a material is equal to the ratio of the E field inside the material divided by the E field on the outside. The ratio should always be equal to one another.
+
+### Energy stored in a Dialectric Capacitor
+
+$$ \frac{Q^2}{2C} $$
+$$ \frac{1}{2}CV^2 $$
+
+### Half Filled Dialelctric Capacitor
+
+If the dialectric is in between the positive and negative plates (fully extending from one to the other), we can find the capacitance by adding the similar capacitances as if it was in parallel because the plates receive the same voltage.
+
+If it is halfway in the opposite way, (only touching one plate), then we can assume they are in series and find the equivalent capacitance by adding the two capacitors as if they were in series.
+
+Electric Field and Electric Potential
+
+Remember $$ E(x) = -\frac{dV(x)}{dx} $$
 
 
 
