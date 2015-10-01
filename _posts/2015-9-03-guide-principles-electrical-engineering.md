@@ -530,6 +530,41 @@ So then if we solve for $$ i_2 $$ we find that
 > $$ i_2 = \frac{}{}i_x $$
 
 
+## October 1st 2015
+
+### The Wheatstone Bridge
+
+In a Wheatstone bridge, the $$R_x$$, (resistor with unkown resistance) is equal to:
+
+- $$ R_x = \frac{R_2R_3}{R_1} $$. Where $$R_2$$ and $$R_3$$ are the resistors that shore a branch with $$R_x$$.
+
+## Unit 4a Node-Voltage, Mesh-Currnet, & Source Transformation
+
+### The Node-Voltage Method
+
+In the node voltage method, you must pick a node as a reference node. At that node we say that it is $$ V_g  = 0 V$$. From here we can create equations that represent the voltage drops over multiple elements.
+
+You can add the voltage drops over multiple elements to remove the amount of variables involved in the cicuit. From here we can represent each element with a difference between two different node voltages.
+
+We can now convert some of these node voltages into current equations. The equation for current between two nodes with a resistance R is equal to:
+
+> $$ i = \frac{V_b - V_a}{R} $$
+
+Note that the value $$V_a$$ is the value of the node connected to the resistor on one end, while $$V_b$$ is equal to the voltage of the node at the other. $$V_b - V_a$$ represents the voltage drop across the resistor.
+
+
+The steps for Vode-Voltage Analysis:
+
+1. Mark all nodes, node voltages, and choose a reference (ground) node.
+2. Write the node voltage equations
+3. Calculate node voltages, elements, and current voltages.
+
+
+
+
+
+
+
 
 
 
