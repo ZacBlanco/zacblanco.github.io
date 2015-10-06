@@ -560,6 +560,61 @@ The steps for Vode-Voltage Analysis:
 3. Calculate node voltages, elements, and current voltages.
 
 
+## October 5th 2015
+
+### Reviewing Node-Voltage Analysis
+
+For every essential node we assign it a voltage V.
+
+In essence, the nodal-voltage analysis is directly related to kirchoff's current law. We calculate the voltages by the adding the currents that end up in each essential node.
+
+ The equations usually end up in a formal similar to the following: 
+ 
+ - $$ 0 = \frac{V_A - V_B}{R} + \frac{V_A - V_C}{R} $$
+
+> If a voltage source is the only element between two essential nodes where one of the nodes is the reference node, the number of unknown node voltages is reduced.
+
+- If a resistor is in series with a current source, the resistor will not change the amount of current flowing through the resistor. So this means it does not change the KCL equation for the nodal analysis.
+
+
+### Constraint Equations
+
+A constraint equation is an equation in our node voltage (or mesh current) analysis where based on a current source or voltage source that determines when a specified potential difference MUST be a specific value between two nodes due to one of these sources.
+
+### Supernodes
+
+When a voltage source is between two essential nodes (other than the reference node) we can combine those to form a supernode.
+
+### The Mesh Current Method
+
+The mesh current method mimics the node-voltage method in the idea that it is based off of one of Kirchoff's laws. In this case, it is based off of Kirchoff's voltage law (KVL).
+
+- Remember that a mesh is a loop that does not contain any other loops in a circuit.
+
+In the mesh current method we assume that we always hit resistors in the positive terminal. But when we hit others, we assume that if we hit the negative terminal, it will be negative, and positive terminal, positive.
+
+- When two different loops share a resistor, we take the difference (or sum!) of the currents depending on the direction of the loops.
+
+- If the directions are the same, we add currents from each loop, i.e. $$ (I_A + I_B)R $$.
+- If the directions are opposite of each other, we take the difference. i.e $$ (I_A - I_B)R $$.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

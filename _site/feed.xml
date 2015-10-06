@@ -6,8 +6,8 @@
 </description>
     <link>http://zacblanco.github.io//</link>
     <atom:link href="http://zacblanco.github.io//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 01 Oct 2015 15:06:03 -0400</pubDate>
-    <lastBuildDate>Thu, 01 Oct 2015 15:06:03 -0400</lastBuildDate>
+    <pubDate>Mon, 05 Oct 2015 11:30:24 -0400</pubDate>
+    <lastBuildDate>Mon, 05 Oct 2015 11:30:24 -0400</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -684,11 +684,11 @@ In this case, the charge &lt;script type=&quot;math/tex&quot;&gt;Q&lt;/script&gt
 &lt;/blockquote&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;$$ U_{empty} =&lt;/p&gt;
+  &lt;script type=&quot;math/tex; mode=display&quot;&gt;U_{empty} =&lt;/script&gt;
 &lt;/blockquote&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;$$ U_{filled} = \frac{Q^2}{}&lt;/p&gt;
+  &lt;script type=&quot;math/tex; mode=display&quot;&gt;U_{filled} = \frac{Q^2}{}&lt;/script&gt;
 &lt;/blockquote&gt;
 
 &lt;h2 id=&quot;october-1st-2015&quot;&gt;October 1st 2015&lt;/h2&gt;
@@ -713,6 +713,86 @@ In this case, the charge &lt;script type=&quot;math/tex&quot;&gt;Q&lt;/script&gt
 &lt;p&gt;Electric Field and Electric Potential&lt;/p&gt;
 
 &lt;p&gt;Remember &lt;script type=&quot;math/tex&quot;&gt;E(x) = -\frac{dV(x)}{dx}&lt;/script&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;october-5th-2015&quot;&gt;October 5th 2015&lt;/h2&gt;
+
+&lt;h3 id=&quot;charging-a-capacitor&quot;&gt;Charging a capacitor&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Electrons are driven by the electric field in the wires (potential difference)&lt;/li&gt;
+  &lt;li&gt;How much time does it take ( &lt;script type=&quot;math/tex&quot;&gt;t_{equal}&lt;/script&gt;) – Will learn in 2 lectures&lt;/li&gt;
+  &lt;li&gt;To keep current running, we need to maintain the potential difference along a wire.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;electrons-in-metals-classical-microscopic-picture&quot;&gt;Electrons in Metals: “Classical” Microscopic Picture”&lt;/h4&gt;
+
+&lt;p&gt;Electrons are in random motion, colliding with static and dynamic imperfections of the crystal lattice&lt;/p&gt;
+
+&lt;p&gt;The average distance between scattering events = &lt;strong&gt;the mean free path&lt;/strong&gt;, &lt;em&gt;mfp&lt;/em&gt;, &lt;script type=&quot;math/tex&quot;&gt;l&lt;/script&gt; depends on temperature, density of defects, …). Typically  &lt;script type=&quot;math/tex&quot;&gt;l&lt;/script&gt; ~ 10 nm @ 300k  (still about 100 lattice periods).&lt;/p&gt;
+
+&lt;p&gt;Time intervals between &lt;em&gt;elastic&lt;/em&gt; (energy conserving) collisions is &lt;script type=&quot;math/tex&quot;&gt;\tau_{el} = 10^{-14}&lt;/script&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;e--0--electron-drift&quot;&gt;E /= 0 : Electron Drift&lt;/h3&gt;
+
+&lt;p&gt;Under a gentle “breeze” of the electric field, the electron cloud drifts slowly inside the wire.&lt;/p&gt;
+
+&lt;p&gt;but why is there a drift velocity? Why don’t they have constant acceleration?&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Because tere are processes of energy dissipation (compared to air friction). The terminal velocity is reached when the rate of energy gained from the electric field becomes equal to the rate of energy loss.&lt;/li&gt;
+  &lt;li&gt;Drift velocity = terminal velocity&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;current&quot;&gt;Current&lt;/h3&gt;
+
+&lt;blockquote&gt;
+  &lt;script type=&quot;math/tex; mode=display&quot;&gt;I = \frac{dQ}{dt}&lt;/script&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Current is the charge carried by the current carriers through a wire cross section in a unit of time&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Units: Amperes &lt;script type=&quot;math/tex&quot;&gt;= \frac{1C}{1s} = 1A&lt;/script&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;script type=&quot;math/tex; mode=display&quot;&gt;I = \frac{ne(v_d \cdot 1s \cdot A)}{1s}  = nev_dA&lt;/script&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;A is cross sectional area.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Current Density : &lt;script type=&quot;math/tex&quot;&gt;j = \frac{I}{A}&lt;/script&gt;
+Regardless of the nature of charge carriers, (both positive and negative carriers exist in different types of conductors), the current is defined as a &lt;strong&gt;directional motion of positive charges&lt;/strong&gt;, it always flows from higher potential to lower potential.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Electrons flow from low potential to high potential flow in the opposite direction of current (towards the positive region of potential)&lt;/p&gt;
+
+&lt;p&gt;We usually assume that we have positive current carriers in a circuit.&lt;/p&gt;
+
+&lt;h3 id=&quot;current-through-two-different-wires&quot;&gt;Current through two different wires&lt;/h3&gt;
+
+&lt;p&gt;If we have two wires conntexted together with different cross-sectional areas, the only quantity that stays the same across the wires is the current. The E field, Drift velocty, and current density all change across the two different wires.&lt;/p&gt;
+
+&lt;p&gt;Another quantity that changes across the two different wires is the drift velocty. It will increase in the smaller wire.&lt;/p&gt;
+
+&lt;h3 id=&quot;ohms-law-and-resistivity&quot;&gt;Ohm’s Law and Resistivity&lt;/h3&gt;
+
+&lt;blockquote&gt;
+  &lt;script type=&quot;math/tex; mode=display&quot;&gt;V = IR&lt;/script&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;script type=&quot;math/tex; mode=display&quot;&gt;I = \frac{E}{\rho}A&lt;/script&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;script type=&quot;math/tex; mode=display&quot;&gt;j = \frac{E}{\rho}&lt;/script&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;The brightness of a lightbulb will increase if you cool the temperature of the resistor of the bulb (using something such as liquid nitrogen).&lt;/p&gt;
+
+&lt;p&gt;Pickles can glow if you connect them to a ciruit.&lt;/p&gt;
 
 </description>
         <pubDate>Thu, 03 Sep 2015 00:00:00 -0400</pubDate>
@@ -1464,6 +1544,56 @@ Current Controlled Current Source (CCCS): &lt;script type=&quot;math/tex&quot;&g
   &lt;li&gt;Write the node voltage equations&lt;/li&gt;
   &lt;li&gt;Calculate node voltages, elements, and current voltages.&lt;/li&gt;
 &lt;/ol&gt;
+
+&lt;h2 id=&quot;october-5th-2015&quot;&gt;October 5th 2015&lt;/h2&gt;
+
+&lt;h3 id=&quot;reviewing-node-voltage-analysis&quot;&gt;Reviewing Node-Voltage Analysis&lt;/h3&gt;
+
+&lt;p&gt;For every essential node we assign it a voltage V.&lt;/p&gt;
+
+&lt;p&gt;In essence, the nodal-voltage analysis is directly related to kirchoff’s current law. We calculate the voltages by the adding the currents that end up in each essential node.&lt;/p&gt;
+
+&lt;p&gt;The equations usually end up in a formal similar to the following:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;script type=&quot;math/tex; mode=display&quot;&gt;0 = \frac{V_A - V_B}{R} + \frac{V_A - V_C}{R}&lt;/script&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;If a voltage source is the only element between two essential nodes where one of the nodes is the reference node, the number of unknown node voltages is reduced.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;If a resistor is in series with a current source, the resistor will not change the amount of current flowing through the resistor. So this means it does not change the KCL equation for the nodal analysis.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;constraint-equations&quot;&gt;Constraint Equations&lt;/h3&gt;
+
+&lt;p&gt;A constraint equation is an equation in our node voltage (or mesh current) analysis where based on a current source or voltage source that determines when a specified potential difference MUST be a specific value between two nodes due to one of these sources.&lt;/p&gt;
+
+&lt;h3 id=&quot;supernodes&quot;&gt;Supernodes&lt;/h3&gt;
+
+&lt;p&gt;When a voltage source is between two essential nodes (other than the reference node) we can combine those to form a supernode.&lt;/p&gt;
+
+&lt;h3 id=&quot;the-mesh-current-method&quot;&gt;The Mesh Current Method&lt;/h3&gt;
+
+&lt;p&gt;The mesh current method mimics the node-voltage method in the idea that it is based off of one of Kirchoff’s laws. In this case, it is based off of Kirchoff’s voltage law (KVL).&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Remember that a mesh is a loop that does not contain any other loops in a circuit.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;In the mesh current method we assume that we always hit resistors in the positive terminal. But when we hit others, we assume that if we hit the negative terminal, it will be negative, and positive terminal, positive.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;When two different loops share a resistor, we take the difference (or sum!) of the currents depending on the direction of the loops.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;If the directions are the same, we add currents from each loop, i.e. &lt;script type=&quot;math/tex&quot;&gt;(I_A + I_B)R&lt;/script&gt;.&lt;/li&gt;
+  &lt;li&gt;If the directions are opposite of each other, we take the difference. i.e &lt;script type=&quot;math/tex&quot;&gt;(I_A - I_B)R&lt;/script&gt;.&lt;/li&gt;
+&lt;/ul&gt;
 
 </description>
         <pubDate>Thu, 03 Sep 2015 00:00:00 -0400</pubDate>

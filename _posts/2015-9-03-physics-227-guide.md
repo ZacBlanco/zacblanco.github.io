@@ -474,9 +474,9 @@ The dialectric constant for a meterial can be measured by taking the E field ins
 
 > $$ \frac{U_{filled}{U_{empty}} = \frac{1}{K} $$
 
-> $$ U_{empty} = 
+> $$ U_{empty} = $$
 
-> $$ U_{filled} = \frac{Q^2}{}
+> $$ U_{filled} = \frac{Q^2}{}$$
 
 ## October 1st 2015
 
@@ -500,6 +500,82 @@ If it is halfway in the opposite way, (only touching one plate), then we can ass
 Electric Field and Electric Potential
 
 Remember $$ E(x) = -\frac{dV(x)}{dx} $$
+
+
+## October 5th 2015
+
+### Charging a capacitor
+
+1. Electrons are driven by the electric field in the wires (potential difference)
+2. How much time does it take ( $$t_{equal} $$) -- Will learn in 2 lectures
+3. To keep current running, we need to maintain the potential difference along a wire.
+
+#### Electrons in Metals: "Classical" Microscopic Picture" 
+
+Electrons are in random motion, colliding with static and dynamic imperfections of the crystal lattice
+
+The average distance between scattering events = **the mean free path**, _mfp_, $$l$$ depends on temperature, density of defects, ...). Typically  $$l$$ ~ 10 nm @ 300k  (still about 100 lattice periods).
+
+Time intervals between _elastic_ (energy conserving) collisions is $$\tau_{el} = 10^{-14} $$
+
+### E /= 0 : Electron Drift
+
+Under a gentle "breeze" of the electric field, the electron cloud drifts slowly inside the wire.
+
+but why is there a drift velocity? Why don't they have constant acceleration?
+
+- Because tere are processes of energy dissipation (compared to air friction). The terminal velocity is reached when the rate of energy gained from the electric field becomes equal to the rate of energy loss.
+- Drift velocity = terminal velocity
+
+### Current
+
+> $$ I = \frac{dQ}{dt} $$
+
+Current is the charge carried by the current carriers through a wire cross section in a unit of time
+
+- Units: Amperes $$ = \frac{1C}{1s} = 1A $$.
+
+
+> $$ I = \frac{ne(v_d \cdot 1s \cdot A)}{1s}  = nev_dA$$
+
+A is cross sectional area.
+
+- Current Density : $$ j = \frac{I}{A} $$
+Regardless of the nature of charge carriers, (both positive and negative carriers exist in different types of conductors), the current is defined as a __directional motion of positive charges__, it always flows from higher potential to lower potential.
+
+Electrons flow from low potential to high potential flow in the opposite direction of current (towards the positive region of potential)
+
+We usually assume that we have positive current carriers in a circuit.
+
+### Current through two different wires
+
+If we have two wires conntexted together with different cross-sectional areas, the only quantity that stays the same across the wires is the current. The E field, Drift velocty, and current density all change across the two different wires.
+
+Another quantity that changes across the two different wires is the drift velocty. It will increase in the smaller wire.
+
+### Ohm's Law and Resistivity
+
+> $$ V = IR $$
+
+> $$ I = \frac{E}{\rho}A $$
+
+> $$ j = \frac{E}{\rho} $$
+
+The brightness of a lightbulb will increase if you cool the temperature of the resistor of the bulb (using something such as liquid nitrogen).
+
+Pickles can glow if you connect them to a ciruit.
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
