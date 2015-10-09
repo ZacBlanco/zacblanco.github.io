@@ -565,9 +565,71 @@ The brightness of a lightbulb will increase if you cool the temperature of the r
 
 Pickles can glow if you connect them to a ciruit.
 
+## October 8th 2015
 
+### DC Current, Resistance, and EMF
 
+For a DC current to run, it is not necessary to have a non-zero net charge density. But we do need mobile charge carriers, and electric field, 
 
+### In Series
+
+- Current is the same through all elements.
+- Voltage across them may be different.
+
+### In Parallel
+
+- Voltage is the same across all elements.
+- Current through them can be different.
+
+### Resistors: Connection in Series and in Parallel
+
+> $$ R_{eq} = \frac{V_ab}{I}
+
+**In Series**, the common quantity for all resistors is current. Thus:
+
+This equation we have the sum of voltage drops over the resistors is equal to $$i$$ multiplied by $$ R_1 + R_2 + R_3 $$.
+
+> $$ R_{eq} = \Sigma_iR R_i $$
+
+**In parallel**, the common quantity is voltage.
+
+> $$ R_{eq} = (\frac{1}{R_1} + \frac{1}{R_2} + \frac{1}{R_3})^{-1} $$
+
+For two resistors $$R_1$$ and $$R_2$$, then the $$R_{eq}$$ is:
+
+- $$ R_{eq} = \frac{R_1R_2}{R_1 + R_2} $$
+
+### Ideal Batteries (No Energy dissipation inside battery)
+
+We assume that wired=s have resistance much smaller than the load $$R$$. (All voltage difference provided by the battery is applied to $$R$$)
+
+Conclusion: An external agent inside the battery (Not the electrostatic E filed!) forces the charge carriers to climb "the potential hill".
+
+### External Forces Separate Charges
+
+_Ficticious_ field $$\vec{E_{NC}}$$ inside the battery: a source of additional force on charge carriers. This field is _non-conservative_. This field is zero outside of the battery. Inside the battery the electrons are driven by the total electric field $$ \vec{E_{net}} = \vec{E} + \vec{E_{NC}} $$
+
+### The Electromotive Force (EMF)
+
+$$ EMF = \int^+_- \vec{E_{NC}} \cdot d\vec{l} $$
+
+Units for EMF = volts.
+
+In an ideal battery, $$ EMF = V = IR $$, where $$R$$ is the net resistance of the circuit.
+
+### A Non-Ideal Battery
+
+$$r$$ is the internal resistance of the battery. The output voltage is
+
+$$ I = \frac{\EMF}{r + R}
+
+$$ V = \EMF - Ir = \EMF\frac{R}{r + R} $$
+
+### Battery Discharge
+
+The internal resistance of a battery increases in the process of work: it is small **in comparison with a typical load resistor** for a "fresh" battery and becomes large for an old (discharged) one.
+
+To test the "freshness" of a battery, you need to have the battery connected to its typical load.
 
 
 
