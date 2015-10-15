@@ -583,7 +583,7 @@ For a DC current to run, it is not necessary to have a non-zero net charge densi
 
 ### Resistors: Connection in Series and in Parallel
 
-> $$ R_{eq} = \frac{V_ab}{I}
+> $$ R_{eq} = \frac{V_ab}{I} $$
 
 **In Series**, the common quantity for all resistors is current. Thus:
 
@@ -621,7 +621,7 @@ In an ideal battery, $$ EMF = V = IR $$, where $$R$$ is the net resistance of th
 
 $$r$$ is the internal resistance of the battery. The output voltage is
 
-$$ I = \frac{\EMF}{r + R}
+$$ I = \frac{\EMF}{r + R} $$
 
 $$ V = \EMF - Ir = \EMF\frac{R}{r + R} $$
 
@@ -632,12 +632,54 @@ The internal resistance of a battery increases in the process of work: it is sma
 To test the "freshness" of a battery, you need to have the battery connected to its typical load.
 
 
+## Lecture 12 - RC Circuits
+
+Capacitor circuit with an open switch: $$i = 0$$, $$q=0$$
+
+A switch is very similar to a capacitor! If we have a capacitor with capacitance $$C_1$$, and a switch with $$C_2$$, we can say that $$C_1 >> C_2 $$.
+
+With a resistor in the circuit with a capacitor, The capacitor doesn't instantly charge because the current is less (due to the resistance now present in the circuit).
+
+### Capcitance Qualitatively
+
+A capacitor behaves as a "break" in the circuit when the potential difference between the two plates of the capacitor is equal to the potential difference of the emf.
+
+While the above is true, we can also say that we a capacitor is equilibrated (both plates of equal potential. Potential difference = 0) then we can say that a capacitor behavaes as a short.
+
+As a capacitor charges with a resistor in the circuit, its plates gain a greater potential difference, thus a capacitor behaves as a type of "quasi-switch" where it actually acts like an open circuit at some points, and a closed circuit at other times (only if a resistor is present in the circuit).
 
 
+### Charging a Capacitor (with a resistor)
 
+For instantaneous values
 
+> $$ \emf - i(t)R - \frac{q(t)}{C} = 0 $$
 
+- $$i(t) = \frac{dq(t)}{dt} $$.
 
+After solving for $$q(t)$$...
+
+> $$q(t) = -\emf Ce^{\frac{-t}{\tau}} + \emf C $$
+
+> $$\tau = RC$$
+
+- For a $$1k\omega$$ resistor and a $$C=1mF$$, $$\tau=RC=1s$$.
+
+Now for the current in a circuit including a resistor and capacitor:
+
+> $$ i(t) = \frac{dq(t)}{dt} = \frac{\emf}{R}e^{-\frac{t}{\tau}} $$
+
+### Discharging a Capacitor (with a resistor)
+
+The charge when discharing a capacitor is:
+
+> $$ q(t) = \emf C e^{-\frac{t}{\tau}} $$
+
+> $$ i(t) = -\frac{\emf}{R}e^{\frac{-t}{\tau}} $$
+
+### Energy Loss in a Capacitor
+
+In order to charge a capacitor by driving the current through a resistor into a capacitor. At least half the energy is lost in heat to the resistor.
 
 
 

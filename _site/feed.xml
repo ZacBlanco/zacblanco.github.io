@@ -6,8 +6,8 @@
 </description>
     <link>http://zacblanco.github.io//</link>
     <atom:link href="http://zacblanco.github.io//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 05 Oct 2015 11:30:24 -0400</pubDate>
-    <lastBuildDate>Mon, 05 Oct 2015 11:30:24 -0400</lastBuildDate>
+    <pubDate>Thu, 15 Oct 2015 09:50:17 -0400</pubDate>
+    <lastBuildDate>Thu, 15 Oct 2015 09:50:17 -0400</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -793,6 +793,150 @@ Regardless of the nature of charge carriers, (both positive and negative carrier
 &lt;p&gt;The brightness of a lightbulb will increase if you cool the temperature of the resistor of the bulb (using something such as liquid nitrogen).&lt;/p&gt;
 
 &lt;p&gt;Pickles can glow if you connect them to a ciruit.&lt;/p&gt;
+
+&lt;h2 id=&quot;october-8th-2015&quot;&gt;October 8th 2015&lt;/h2&gt;
+
+&lt;h3 id=&quot;dc-current-resistance-and-emf&quot;&gt;DC Current, Resistance, and EMF&lt;/h3&gt;
+
+&lt;p&gt;For a DC current to run, it is not necessary to have a non-zero net charge density. But we do need mobile charge carriers, and electric field,&lt;/p&gt;
+
+&lt;h3 id=&quot;in-series&quot;&gt;In Series&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Current is the same through all elements.&lt;/li&gt;
+  &lt;li&gt;Voltage across them may be different.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;in-parallel&quot;&gt;In Parallel&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Voltage is the same across all elements.&lt;/li&gt;
+  &lt;li&gt;Current through them can be different.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;resistors-connection-in-series-and-in-parallel&quot;&gt;Resistors: Connection in Series and in Parallel&lt;/h3&gt;
+
+&lt;blockquote&gt;
+  &lt;script type=&quot;math/tex; mode=display&quot;&gt;R_{eq} = \frac{V_ab}{I}&lt;/script&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;strong&gt;In Series&lt;/strong&gt;, the common quantity for all resistors is current. Thus:&lt;/p&gt;
+
+&lt;p&gt;This equation we have the sum of voltage drops over the resistors is equal to &lt;script type=&quot;math/tex&quot;&gt;i&lt;/script&gt; multiplied by &lt;script type=&quot;math/tex&quot;&gt;R_1 + R_2 + R_3&lt;/script&gt;.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;script type=&quot;math/tex; mode=display&quot;&gt;R_{eq} = \Sigma_iR R_i&lt;/script&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;strong&gt;In parallel&lt;/strong&gt;, the common quantity is voltage.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;script type=&quot;math/tex; mode=display&quot;&gt;R_{eq} = (\frac{1}{R_1} + \frac{1}{R_2} + \frac{1}{R_3})^{-1}&lt;/script&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;For two resistors &lt;script type=&quot;math/tex&quot;&gt;R_1&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;R_2&lt;/script&gt;, then the &lt;script type=&quot;math/tex&quot;&gt;R_{eq}&lt;/script&gt; is:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;script type=&quot;math/tex; mode=display&quot;&gt;R_{eq} = \frac{R_1R_2}{R_1 + R_2}&lt;/script&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;ideal-batteries-no-energy-dissipation-inside-battery&quot;&gt;Ideal Batteries (No Energy dissipation inside battery)&lt;/h3&gt;
+
+&lt;p&gt;We assume that wired=s have resistance much smaller than the load &lt;script type=&quot;math/tex&quot;&gt;R&lt;/script&gt;. (All voltage difference provided by the battery is applied to &lt;script type=&quot;math/tex&quot;&gt;R&lt;/script&gt;)&lt;/p&gt;
+
+&lt;p&gt;Conclusion: An external agent inside the battery (Not the electrostatic E filed!) forces the charge carriers to climb “the potential hill”.&lt;/p&gt;
+
+&lt;h3 id=&quot;external-forces-separate-charges&quot;&gt;External Forces Separate Charges&lt;/h3&gt;
+
+&lt;p&gt;&lt;em&gt;Ficticious&lt;/em&gt; field &lt;script type=&quot;math/tex&quot;&gt;\vec{E_{NC}}&lt;/script&gt; inside the battery: a source of additional force on charge carriers. This field is &lt;em&gt;non-conservative&lt;/em&gt;. This field is zero outside of the battery. Inside the battery the electrons are driven by the total electric field &lt;script type=&quot;math/tex&quot;&gt;\vec{E_{net}} = \vec{E} + \vec{E_{NC}}&lt;/script&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;the-electromotive-force-emf&quot;&gt;The Electromotive Force (EMF)&lt;/h3&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;EMF = \int^+_- \vec{E_{NC}} \cdot d\vec{l}&lt;/script&gt;
+
+&lt;p&gt;Units for EMF = volts.&lt;/p&gt;
+
+&lt;p&gt;In an ideal battery, &lt;script type=&quot;math/tex&quot;&gt;EMF = V = IR&lt;/script&gt;, where &lt;script type=&quot;math/tex&quot;&gt;R&lt;/script&gt; is the net resistance of the circuit.&lt;/p&gt;
+
+&lt;h3 id=&quot;a-non-ideal-battery&quot;&gt;A Non-Ideal Battery&lt;/h3&gt;
+
+&lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;r&lt;/script&gt; is the internal resistance of the battery. The output voltage is&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;I = \frac{\EMF}{r + R}&lt;/script&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;V = \EMF - Ir = \EMF\frac{R}{r + R}&lt;/script&gt;
+
+&lt;h3 id=&quot;battery-discharge&quot;&gt;Battery Discharge&lt;/h3&gt;
+
+&lt;p&gt;The internal resistance of a battery increases in the process of work: it is small &lt;strong&gt;in comparison with a typical load resistor&lt;/strong&gt; for a “fresh” battery and becomes large for an old (discharged) one.&lt;/p&gt;
+
+&lt;p&gt;To test the “freshness” of a battery, you need to have the battery connected to its typical load.&lt;/p&gt;
+
+&lt;h2 id=&quot;lecture-12---rc-circuits&quot;&gt;Lecture 12 - RC Circuits&lt;/h2&gt;
+
+&lt;p&gt;Capacitor circuit with an open switch: &lt;script type=&quot;math/tex&quot;&gt;i = 0&lt;/script&gt;, &lt;script type=&quot;math/tex&quot;&gt;q=0&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;A switch is very similar to a capacitor! If we have a capacitor with capacitance &lt;script type=&quot;math/tex&quot;&gt;C_1&lt;/script&gt;, and a switch with &lt;script type=&quot;math/tex&quot;&gt;C_2&lt;/script&gt;, we can say that &lt;script type=&quot;math/tex&quot;&gt;C_1 &gt;&gt; C_2&lt;/script&gt;.&lt;/p&gt;
+
+&lt;p&gt;With a resistor in the circuit with a capacitor, The capacitor doesn’t instantly charge because the current is less (due to the resistance now present in the circuit).&lt;/p&gt;
+
+&lt;h3 id=&quot;capcitance-qualitatively&quot;&gt;Capcitance Qualitatively&lt;/h3&gt;
+
+&lt;p&gt;A capacitor behaves as a “break” in the circuit when the potential difference between the two plates of the capacitor is equal to the potential difference of the emf.&lt;/p&gt;
+
+&lt;p&gt;While the above is true, we can also say that we a capacitor is equilibrated (both plates of equal potential. Potential difference = 0) then we can say that a capacitor behavaes as a short.&lt;/p&gt;
+
+&lt;p&gt;As a capacitor charges with a resistor in the circuit, its plates gain a greater potential difference, thus a capacitor behaves as a type of “quasi-switch” where it actually acts like an open circuit at some points, and a closed circuit at other times (only if a resistor is present in the circuit).&lt;/p&gt;
+
+&lt;h3 id=&quot;charging-a-capacitor-with-a-resistor&quot;&gt;Charging a Capacitor (with a resistor)&lt;/h3&gt;
+
+&lt;p&gt;For instantaneous values&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;script type=&quot;math/tex; mode=display&quot;&gt;\emf - i(t)R - \frac{q(t)}{C} = 0&lt;/script&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;script type=&quot;math/tex&quot;&gt;i(t) = \frac{dq(t)}{dt}&lt;/script&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;After solving for &lt;script type=&quot;math/tex&quot;&gt;q(t)&lt;/script&gt;…&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;script type=&quot;math/tex; mode=display&quot;&gt;q(t) = -\emf Ce^{\frac{-t}{\tau}} + \emf C&lt;/script&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;script type=&quot;math/tex; mode=display&quot;&gt;\tau = RC&lt;/script&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;For a &lt;script type=&quot;math/tex&quot;&gt;1k\omega&lt;/script&gt; resistor and a &lt;script type=&quot;math/tex&quot;&gt;C=1mF&lt;/script&gt;, &lt;script type=&quot;math/tex&quot;&gt;\tau=RC=1s&lt;/script&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Now for the current in a circuit including a resistor and capacitor:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;script type=&quot;math/tex; mode=display&quot;&gt;i(t) = \frac{dq(t)}{dt} = \frac{\emf}{R}e^{-\frac{t}{\tau}}&lt;/script&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;discharging-a-capacitor-with-a-resistor&quot;&gt;Discharging a Capacitor (with a resistor)&lt;/h3&gt;
+
+&lt;p&gt;The charge when discharing a capacitor is:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;script type=&quot;math/tex; mode=display&quot;&gt;q(t) = \emf C e^{-\frac{t}{\tau}}&lt;/script&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;script type=&quot;math/tex; mode=display&quot;&gt;i(t) = -\frac{\emf}{R}e^{\frac{-t}{\tau}}&lt;/script&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;energy-loss-in-a-capacitor&quot;&gt;Energy Loss in a Capacitor&lt;/h3&gt;
+
+&lt;p&gt;In order to charge a capacitor by driving the current through a resistor into a capacitor. At least half the energy is lost in heat to the resistor.&lt;/p&gt;
 
 </description>
         <pubDate>Thu, 03 Sep 2015 00:00:00 -0400</pubDate>

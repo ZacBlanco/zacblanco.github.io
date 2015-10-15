@@ -15,5 +15,10 @@
 
 -
  name: Dstat
- url: https://github.com/ZacBlanco/DStat
+ url: https://github.com/ZacBlanco/DStat/
  description: A java library that can report statistics on a distribution of numbers.
+  
+-
+ name: Jiffy
+ url: https://github.com/ZacBlanco/jiffy/
+ description: A wrapper on the jetty web-server to make developing beautiful web applications easy.
