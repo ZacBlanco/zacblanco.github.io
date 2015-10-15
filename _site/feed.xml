@@ -6,8 +6,8 @@
 </description>
     <link>http://zacblanco.github.io//</link>
     <atom:link href="http://zacblanco.github.io//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 15 Oct 2015 09:50:17 -0400</pubDate>
-    <lastBuildDate>Thu, 15 Oct 2015 09:50:17 -0400</lastBuildDate>
+    <pubDate>Thu, 15 Oct 2015 11:31:21 -0400</pubDate>
+    <lastBuildDate>Thu, 15 Oct 2015 11:31:21 -0400</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -1738,6 +1738,109 @@ Current Controlled Current Source (CCCS): &lt;script type=&quot;math/tex&quot;&g
   &lt;li&gt;If the directions are the same, we add currents from each loop, i.e. &lt;script type=&quot;math/tex&quot;&gt;(I_A + I_B)R&lt;/script&gt;.&lt;/li&gt;
   &lt;li&gt;If the directions are opposite of each other, we take the difference. i.e &lt;script type=&quot;math/tex&quot;&gt;(I_A - I_B)R&lt;/script&gt;.&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;h2 id=&quot;october-15th-2015&quot;&gt;October 15th 2015&lt;/h2&gt;
+
+&lt;p&gt;Current Sources: Shared by two mesh currents&lt;/p&gt;
+
+&lt;h5 id=&quot;supermeshes&quot;&gt;Supermeshes&lt;/h5&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/ee1-guide/supermesh-1.png&quot; alt=&quot;Slide with Supermesh&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Some notes on a Super Mesh&lt;/p&gt;
+
+&lt;p&gt;Case 1:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Sum (all meshes) = Mesh A + Mesh B; while skipping all elements on the branch that contains the current source&lt;/li&gt;
+  &lt;li&gt;In each mesh, the local mesh current is used!&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Case 2:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Sum (all meshes) - SUM(all meshes in other direction) = Mesh A - Mesh B; while skipping all elements on the branch that contains the current source&lt;/li&gt;
+  &lt;li&gt;In each mesh the local mesh current is used.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;node-voltage-or-mesh-current&quot;&gt;Node Voltage or Mesh Current?&lt;/h3&gt;
+
+&lt;p&gt;Deciding which approach to take in a particular circuit usually boils down to determining which method leads to easier math - the fewest numer of simultaneous equations&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Evaluate the number of equations for node-boltage and the mesh-current method that results in the smallest number of equations&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Networks that contain many series connected elements, voltage source or super meshes are more suitable for mesh analysis.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Network with parallel connected elements, current sources, or supernodes are more suitable for nodal analysis.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;source-transformations&quot;&gt;Source Transformations&lt;/h3&gt;
+
+&lt;p&gt;How can we change a voltage source or current source, with its opposite type, while still keeping the original behavior of the circuit?&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/ee1-guide/source-transformation-1.png&quot; alt=&quot;Source Transformations&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;We want to keep the same behavior of the circuit, so we must use equivalent resistance and collapse parts of the circuit to transform the sources. We need to make sure that current and voltage are preserved.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/ee1-guide/source-transformation-2.png&quot; alt=&quot;Source Transformations&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;thevenin-equivalent&quot;&gt;Thevenin Equivalent&lt;/h3&gt;
+
+&lt;p&gt;Suppose we have a section of a circuit name &lt;script type=&quot;math/tex&quot;&gt;\alpha&lt;/script&gt;. This &lt;script type=&quot;math/tex&quot;&gt;\alpha&lt;/script&gt; is connected to another section &lt;script type=&quot;math/tex&quot;&gt;\beta&lt;/script&gt;. Now &lt;script type=&quot;math/tex&quot;&gt;\alpha&lt;/script&gt; is a part that we always know will be constant. But what if &lt;script type=&quot;math/tex&quot;&gt;\beta&lt;/script&gt; can change? How can we represent &lt;script type=&quot;math/tex&quot;&gt;\alpha&lt;/script&gt; to simplify our calculations with different loads, &lt;script type=&quot;math/tex&quot;&gt;\beta&lt;/script&gt;?&lt;/p&gt;
+
+&lt;h5 id=&quot;thevenin-theorem&quot;&gt;Thevenin Theorem&lt;/h5&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;If &lt;script type=&quot;math/tex&quot;&gt;\alpha&lt;/script&gt; is a linear circuit with passive or active elements, with all controlled and controlling branches contained within &lt;script type=&quot;math/tex&quot;&gt;\alpha&lt;/script&gt;, then we can replace entire network &lt;script type=&quot;math/tex&quot;&gt;\alpha&lt;/script&gt; by an equivalent circuit that contains one independent voltage source in series with a single resistor (impedance) in series with it, such that the current-voltage relationship at &lt;script type=&quot;math/tex&quot;&gt;\beta&lt;/script&gt; is unchanged.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h4 id=&quot;norton-equivalent---a-source-transformation-on-thevenin&quot;&gt;Norton Equivalent -&amp;gt; A source transformation on Thevenin&lt;/h4&gt;
+
+&lt;p&gt;Norton’s Theorem&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Identical to thevenin theorem only that the equivalent circuit is one independent current source in parallel with a single resistor (impedance)&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;The Norton equivalent circuit is a source transformation of the Thevenin equivalent circuit.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;how-to-find-the-theveninnorton-equivalent&quot;&gt;How to Find the Thevenin/Norton Equivalent&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Remove all elements that do not belong to th &lt;script type=&quot;math/tex&quot;&gt;\alpha&lt;/script&gt; circuit - Usually refers to removing the output load&lt;/li&gt;
+  &lt;li&gt;Do TWO of the following&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;At the &lt;script type=&quot;math/tex&quot;&gt;\alpha&lt;/script&gt; circuit, at the output terminals a-b, calculate the short-circuit current&lt;/li&gt;
+  &lt;li&gt;At the &lt;script type=&quot;math/tex&quot;&gt;\alpha&lt;/script&gt; circuit at the output terminals a-b calculate the equivalent resistance &lt;script type=&quot;math/tex&quot;&gt;R_{eq}&lt;/script&gt; as seen by the output. i.e. as if we have a voltage source connected between terminals a and b and &lt;script type=&quot;math/tex&quot;&gt;R_{eq} = \frac{V_{in}}{I_{in}}&lt;/script&gt;&lt;/li&gt;
+  &lt;li&gt;For the &lt;script type=&quot;math/tex&quot;&gt;\alpha&lt;/script&gt; circuit, find the &lt;script type=&quot;math/tex&quot;&gt;V_oc&lt;/script&gt; over the circuit where the split between terminals a and b is an open circuit.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;-The short circuit current is calculated by making a short between terminals a and b, and finding the current flowing through this short from the positive terminal to the negative one.
+- Notice that the voltage drop between terminals a and b should be zero.
+- The short circuit current &lt;script type=&quot;math/tex&quot;&gt;i_{sc}&lt;/script&gt; is defined as the current flow from the positive terminal, lets say, b, to the negative terminal, a, for the &lt;script type=&quot;math/tex&quot;&gt;\alpha&lt;/script&gt; cicuit, once a short is appllied between a and b (after removing all elements not belonging to the &lt;script type=&quot;math/tex&quot;&gt;\alpha&lt;/script&gt; circuit)&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/ee1-guide/thevenin-method-1.png&quot; alt=&quot;Thevenin&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/ee1-guide/norton-thevenin-equiv-1.png&quot; alt=&quot;Thevenin-to-Norton&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Caution&lt;/em&gt;!&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;The Thevenin and Norton equivalents can be used only when the circuit &lt;script type=&quot;math/tex&quot;&gt;\alpha&lt;/script&gt; does not have any controlling variables that control some dependent source which is the circuit &lt;script type=&quot;math/tex&quot;&gt;\beta&lt;/script&gt;.&lt;/li&gt;
+  &lt;li&gt;Access to the controlling variable and therefore to the knowledge of how to characterize the dependent source which is in the circuit &lt;script type=&quot;math/tex&quot;&gt;\beta&lt;/script&gt; is lost.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/ee1-guide/equivalent-example-1.png&quot; alt=&quot;Equivalents Examples 1&quot; /&gt;
+&lt;img src=&quot;/assets/images/ee1-guide/equivalent-method-2.png&quot; alt=&quot;Equivalents Examples 1&quot; /&gt;&lt;/p&gt;
 
 </description>
         <pubDate>Thu, 03 Sep 2015 00:00:00 -0400</pubDate>

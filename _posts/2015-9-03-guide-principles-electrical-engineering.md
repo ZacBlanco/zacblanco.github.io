@@ -598,14 +598,92 @@ In the mesh current method we assume that we always hit resistors in the positiv
 - If the directions are the same, we add currents from each loop, i.e. $$ (I_A + I_B)R $$.
 - If the directions are opposite of each other, we take the difference. i.e $$ (I_A - I_B)R $$.
 
+## October 15th 2015
+
+Current Sources: Shared by two mesh currents
+
+##### Supermeshes
+
+![Slide with Supermesh](/assets/images/ee1-guide/supermesh-1.png)
+
+Some notes on a Super Mesh
+
+Case 1:
+
+- Sum (all meshes) = Mesh A + Mesh B; while skipping all elements on the branch that contains the current source
+- In each mesh, the local mesh current is used!
+
+Case 2:
+
+- Sum (all meshes) - SUM(all meshes in other direction) = Mesh A - Mesh B; while skipping all elements on the branch that contains the current source
+- In each mesh the local mesh current is used.
 
 
+### Node Voltage or Mesh Current?
 
 
+Deciding which approach to take in a particular circuit usually boils down to determining which method leads to easier math - the fewest numer of simultaneous equations
+
+- Evaluate the number of equations for node-boltage and the mesh-current method that results in the smallest number of equations
+
+- Networks that contain many series connected elements, voltage source or super meshes are more suitable for mesh analysis.
+
+- Network with parallel connected elements, current sources, or supernodes are more suitable for nodal analysis.
 
 
+### Source Transformations
+
+How can we change a voltage source or current source, with its opposite type, while still keeping the original behavior of the circuit?
 
 
+![Source Transformations](/assets/images/ee1-guide/source-transformation-1.png)
+
+We want to keep the same behavior of the circuit, so we must use equivalent resistance and collapse parts of the circuit to transform the sources. We need to make sure that current and voltage are preserved.
+
+![Source Transformations](/assets/images/ee1-guide/source-transformation-2.png)
+
+
+### Thevenin Equivalent
+
+Suppose we have a section of a circuit name $$ \alpha $$. This $$\alpha$$ is connected to another section $$\beta$$. Now $$\alpha$$ is a part that we always know will be constant. But what if $$\beta$$ can change? How can we represent $$\alpha$$ to simplify our calculations with different loads, $$\beta$$?
+
+##### Thevenin Theorem
+
+> If $$\alpha$$ is a linear circuit with passive or active elements, with all controlled and controlling branches contained within $$\alpha$$, then we can replace entire network $$\alpha$$ by an equivalent circuit that contains one independent voltage source in series with a single resistor (impedance) in series with it, such that the current-voltage relationship at $$\beta$$ is unchanged.
+
+#### Norton Equivalent -> A source transformation on Thevenin
+
+Norton's Theorem
+
+> Identical to thevenin theorem only that the equivalent circuit is one independent current source in parallel with a single resistor (impedance)
+
+- The Norton equivalent circuit is a source transformation of the Thevenin equivalent circuit.
+
+### How to Find the Thevenin/Norton Equivalent
+
+1. Remove all elements that do not belong to th $$\alpha$$ circuit - Usually refers to removing the output load
+2. Do TWO of the following
+
+- At the $$\alpha$$ circuit, at the output terminals a-b, calculate the short-circuit current 
+- At the $$\alpha$$ circuit at the output terminals a-b calculate the equivalent resistance $$R_{eq}$$ as seen by the output. i.e. as if we have a voltage source connected between terminals a and b and $$R_{eq} = \frac{V_{in}}{I_{in}}$$
+- For the $$\alpha$$ circuit, find the $$V_oc$$ over the circuit where the split between terminals a and b is an open circuit.
+
+-The short circuit current is calculated by making a short between terminals a and b, and finding the current flowing through this short from the positive terminal to the negative one.
+- Notice that the voltage drop between terminals a and b should be zero.
+- The short circuit current $$i_{sc}$$ is defined as the current flow from the positive terminal, lets say, b, to the negative terminal, a, for the $$\alpha$$ cicuit, once a short is appllied between a and b (after removing all elements not belonging to the $$\alpha$$ circuit)
+
+![Thevenin](/assets/images/ee1-guide/thevenin-method-1.png)
+
+![Thevenin-to-Norton](/assets/images/ee1-guide/norton-thevenin-equiv-1.png)
+
+_Caution_!
+
+- The Thevenin and Norton equivalents can be used only when the circuit $$\alpha$$ does not have any controlling variables that control some dependent source which is the circuit $$\beta$$.
+- Access to the controlling variable and therefore to the knowledge of how to characterize the dependent source which is in the circuit $$\beta$$ is lost.
+
+
+![Equivalents Examples 1](/assets/images/ee1-guide/equivalent-example-1.png)
+![Equivalents Examples 1](/assets/images/ee1-guide/equivalent-method-2.png)
 
 
 
