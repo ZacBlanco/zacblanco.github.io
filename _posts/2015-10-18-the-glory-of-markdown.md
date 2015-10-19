@@ -54,7 +54,7 @@ Markdown. It's small. It's tidy. The same size as a text document. Extremely por
 Not to mention because markdown is made to be formatted for the web, when exported to HTML, we can put it anywhere. Copy-and-paste into a Word document, save as a PDF, or just read as HTML. It let's you put your content anywhere in many different formats.
 
 
-##### Heck, its so awesome I even [_wrote this post in markdown_](https://raw.githubusercontent.com/ZacBlanco/zacblanco.github.io/master/_posts/2015-10-18-the-glory-of-markdown){:target="_blank"}
+##### Heck, its so awesome I even [_wrote this post in markdown_](https://raw.githubusercontent.com/ZacBlanco/zacblanco.github.io/master/_posts/2015-10-18-the-glory-of-markdown.md){:target="_blank"}
 
 
 
