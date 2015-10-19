@@ -681,6 +681,70 @@ The charge when discharing a capacitor is:
 
 In order to charge a capacitor by driving the current through a resistor into a capacitor. At least half the energy is lost in heat to the resistor.
 
+## October 19th 2015
+
+### Introduction to Magnetostatics
+
+Goal: Describe the magnetostatic field the same way we've described the electrostatic field.
+
+Charged at rest do not generate any magnetic field, $$B$$.
+
+- There is no such thing as a magnetic monopole - It has never been observed.
+- A Moving single chaarge: the field is **non-stationary**, not good for magnetostatics
+
+A steadt (time-independent) current is the best bet.
+
+Possible sources of $$B$$
+
+- Charges in motion: currents, orbital motion of electrons in atoms.
+- Ferromagnetic materials (electron spins)
+- Time-dependent electric fields
+
+### Characteristic Magnetic Fields
+
+- Earth's magnetic field > $$10^{-4} T $$.
+- Rare-earth magnetcs > $$1.4T$$
+- MRI machines > $$ 1 - 2 T $$.
+- LHC in Switzerland > $$ 8 T $$
+- Strongest solenoids > $$ 30 T $$
+
+### Magnetic Field Lines
+
+The magnetic field is **non-conservative**.
+
+> $$ \int \vec{B} \cdot d\vec{l} =/ 0 $$
+ 
+Magnetic field lines are **closed loops**. (no magnetic monopoles.)
+ 
+On Earth, the North pole is magnetic south, and the South pole is magnetic north.
+
+### Force on a Charge Moving in A magnetic Field
+ 
+> $$ \vec{F} = q(\vec{v} X \vec{B}) $$
+ 
+> $$ F = qvBsin(\phi) $$
+
+_Hint: Remember to use the right hand rule to determine direction of the force_
+
+### No Work done by the Magnetic Force
+
+Because the force of the magnetic field acts perpendicular to the direction of the change in position, then the work done by the magnetic field is 0. Which also means any power from the magnetic field must also be 0.
+
+
+### Cyclotron Motion in a Magnetic Field
+
+> $$ \vec{F} = qvB = m\frac{v^2}{R} $$.
+
+Given this information we can find the radius of the path of a charged particle.
+
+> $$ R = \frac{mv}{qB} $$
+
+So from this we can calculate the period of the circular motion of the particle.
+
+> $$ T = \frac{2\pi R}{v} $$.
+
+
+
 
 
 

@@ -6,8 +6,8 @@
 </description>
     <link>http://zacblanco.github.io//</link>
     <atom:link href="http://zacblanco.github.io//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 19 Oct 2015 11:37:31 -0400</pubDate>
-    <lastBuildDate>Mon, 19 Oct 2015 11:37:31 -0400</lastBuildDate>
+    <pubDate>Mon, 19 Oct 2015 13:02:04 -0400</pubDate>
+    <lastBuildDate>Mon, 19 Oct 2015 13:02:04 -0400</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -995,6 +995,85 @@ Regardless of the nature of charge carriers, (both positive and negative carrier
 &lt;h3 id=&quot;energy-loss-in-a-capacitor&quot;&gt;Energy Loss in a Capacitor&lt;/h3&gt;
 
 &lt;p&gt;In order to charge a capacitor by driving the current through a resistor into a capacitor. At least half the energy is lost in heat to the resistor.&lt;/p&gt;
+
+&lt;h2 id=&quot;october-19th-2015&quot;&gt;October 19th 2015&lt;/h2&gt;
+
+&lt;h3 id=&quot;introduction-to-magnetostatics&quot;&gt;Introduction to Magnetostatics&lt;/h3&gt;
+
+&lt;p&gt;Goal: Describe the magnetostatic field the same way we’ve described the electrostatic field.&lt;/p&gt;
+
+&lt;p&gt;Charged at rest do not generate any magnetic field, &lt;script type=&quot;math/tex&quot;&gt;B&lt;/script&gt;.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;There is no such thing as a magnetic monopole - It has never been observed.&lt;/li&gt;
+  &lt;li&gt;A Moving single chaarge: the field is &lt;strong&gt;non-stationary&lt;/strong&gt;, not good for magnetostatics&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;A steadt (time-independent) current is the best bet.&lt;/p&gt;
+
+&lt;p&gt;Possible sources of &lt;script type=&quot;math/tex&quot;&gt;B&lt;/script&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Charges in motion: currents, orbital motion of electrons in atoms.&lt;/li&gt;
+  &lt;li&gt;Ferromagnetic materials (electron spins)&lt;/li&gt;
+  &lt;li&gt;Time-dependent electric fields&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;characteristic-magnetic-fields&quot;&gt;Characteristic Magnetic Fields&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Earth’s magnetic field &amp;gt; &lt;script type=&quot;math/tex&quot;&gt;10^{-4} T&lt;/script&gt;.&lt;/li&gt;
+  &lt;li&gt;Rare-earth magnetcs &amp;gt; &lt;script type=&quot;math/tex&quot;&gt;1.4T&lt;/script&gt;&lt;/li&gt;
+  &lt;li&gt;MRI machines &amp;gt; &lt;script type=&quot;math/tex&quot;&gt;1 - 2 T&lt;/script&gt;.&lt;/li&gt;
+  &lt;li&gt;LHC in Switzerland &amp;gt; &lt;script type=&quot;math/tex&quot;&gt;8 T&lt;/script&gt;&lt;/li&gt;
+  &lt;li&gt;Strongest solenoids &amp;gt; &lt;script type=&quot;math/tex&quot;&gt;30 T&lt;/script&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;magnetic-field-lines&quot;&gt;Magnetic Field Lines&lt;/h3&gt;
+
+&lt;p&gt;The magnetic field is &lt;strong&gt;non-conservative&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;script type=&quot;math/tex; mode=display&quot;&gt;\int \vec{B} \cdot d\vec{l} =/ 0&lt;/script&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Magnetic field lines are &lt;strong&gt;closed loops&lt;/strong&gt;. (no magnetic monopoles.)&lt;/p&gt;
+
+&lt;p&gt;On Earth, the North pole is magnetic south, and the South pole is magnetic north.&lt;/p&gt;
+
+&lt;h3 id=&quot;force-on-a-charge-moving-in-a-magnetic-field&quot;&gt;Force on a Charge Moving in A magnetic Field&lt;/h3&gt;
+
+&lt;blockquote&gt;
+  &lt;script type=&quot;math/tex; mode=display&quot;&gt;\vec{F} = q(\vec{v} X \vec{B})&lt;/script&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;script type=&quot;math/tex; mode=display&quot;&gt;F = qvBsin(\phi)&lt;/script&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;em&gt;Hint: Remember to use the right hand rule to determine direction of the force&lt;/em&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;no-work-done-by-the-magnetic-force&quot;&gt;No Work done by the Magnetic Force&lt;/h3&gt;
+
+&lt;p&gt;Because the force of the magnetic field acts perpendicular to the direction of the change in position, then the work done by the magnetic field is 0. Which also means any power from the magnetic field must also be 0.&lt;/p&gt;
+
+&lt;h3 id=&quot;cyclotron-motion-in-a-magnetic-field&quot;&gt;Cyclotron Motion in a Magnetic Field&lt;/h3&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;\vec{F} = qvB = m\frac{v^2}{R}&lt;/script&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Given this information we can find the radius of the path of a charged particle.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;script type=&quot;math/tex; mode=display&quot;&gt;R = \frac{mv}{qB}&lt;/script&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;So from this we can calculate the period of the circular motion of the particle.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;T = \frac{2\pi R}{v}&lt;/script&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
 
 </description>
         <pubDate>Thu, 03 Sep 2015 00:00:00 -0400</pubDate>
