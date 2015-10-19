@@ -686,7 +686,81 @@ _Caution_!
 ![Equivalents Examples 1](/assets/images/ee1-guide/equivalent-method-2.png)
 
 
+## October 19th 2015
 
+### Thevenin and Norton Equivalents with Independent Sources
+
+Method for direct calculation of $$R_{TH}=R_{EQ}$$.
+
+1. Deactivate all independent voltage sources --> Set them equal to $$0V$$.
+  - Short Circuit.
+2. Deactivate all independent current sources --> Set to$$0A$$.
+3. Find the equivalent resistance between the $$a$$ and $$b$$ terminals
+
+(This only works if there are _no dependent sources_.)
+
+However, we can modify this method slightly so that it is possible to calculate the $$R_{TH}$$ even if there are dependent sources.
+
+![Equivalent resistance calculation](/assets/images/ee1-guide/calc-r-thev-1.png)
+
+So after we calculate our equivalent resistance. We then need to find the voltage drop (or total current) through that branch of the circuit.
+
+After finding the current through it, then we can replace the entire circuit (up to the terminals) with our thevenin or Norton equivalents.
+
+![Equivalents Examples 2](/assets/images/ee1-guide/calc-thev-2.png)
+
+
+### Thevenin and Norton Equivalents with Dependent Sources
+
+Okay, so now we know how to calculate the Thevenin and Norton Equivalents, but what if there are dependent sources?
+
+We need to do the following:
+
+1. Deactivate all independent voltage sources --> Set to $$0V$$.
+2. Deactivate all independent current source --> set to $$0A$$.
+3. Add a test source, $$V_T$$, between the terminals $$a$$ and $$b$$.
+4. The Thevenin resistance is then $$R_{TH} = \frac{V_T}{i_T}$$.
+
+For example, if we find $$V_T = 1V$$, then we just need to find the $$i_T$$ from $$R_{TH} = \frac{1}{i_T}$$.
+
+While this method does introduce an extra variable, it still makes it relatively easy to calculate the equivalents with the node-voltage or mesh-current methods.
+
+### Notes on Supermeshes
+
+Case 1 All mesh currents in a super mesh follow the same directions:
+  
+  - In a supermesh, then we need to add the equations. so we have SUM[all meshes] = (Mesh A) + (Mesh B) -- while skipping all elements that contain current sources.
+  - In each mesh, the local mesh current should be used.
+  
+Case 2 Not all mesh current in a super mesh follow the same direction:
+  
+  - Sum[al meshes in one direction] = (Mesh A) - (Mesh B) -- while skipping all elements on the branch that contains the current source.
+  - In each mesh the local mesh current is used!
+  
+
+### Maximum Power Transfer
+  
+![Maximum Power Transfer 1](/assets/images/ee1-guide/max-power-transfer-1.png)
+  
+To find the maximum power, we need to take the derivative of the power and find the poitn where the derivative equals 0, because that will maximize (or minimize) the value for power.
+
+So if we take the equation $$ P = i^2(R_TH + R_L)$$ or $$ P = \frac{v^2R_L}{(R_{TH} + R_L)^2}$$.
+
+Now if we take the derivative with respect to $$R_L$$, then we find that:
+
+> $$ \frac{dP}{dR_L} = [\frac{v^2R_L}{(R_{TH} + R_L)^2}] = 0$$
+
+So then from there we can find the P_{max} is when $$R_L = R_{TH}$$.
+
+Then our $$P_{max} = \frac{V^2_TH}{4R_L}$$
+
+### Finding the Thevenin/Norton Equivalents for a larger Circuit.
+
+See The following problem to see how to calculate the Thevenin equivalent for a whole circuit
+
+![Thevenin Problem 1](/assets/images/ee1-guide/thev-problem-1-1.png)
+![Thevenin Problem 1](/assets/images/ee1-guide/thev-problem-1-2.png)
+![Thevenin Problem 1](/assets/images/ee1-guide/thev-problem-1-3.png)
 
 
 
