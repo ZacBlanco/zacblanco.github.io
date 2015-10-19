@@ -6,9 +6,67 @@
 </description>
     <link>http://zacblanco.github.io//</link>
     <atom:link href="http://zacblanco.github.io//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 18 Oct 2015 20:25:17 -0400</pubDate>
-    <lastBuildDate>Sun, 18 Oct 2015 20:25:17 -0400</lastBuildDate>
+    <pubDate>Sun, 18 Oct 2015 22:08:07 -0400</pubDate>
+    <lastBuildDate>Sun, 18 Oct 2015 22:08:07 -0400</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>The Glory of Markdown</title>
+        <description>&lt;p&gt;&lt;img src=&quot;/assets/images/awesome-markdown/markdown-logo.png&quot; alt=&quot;Markdown Logo&quot; /&gt;&lt;/p&gt;
+
+&lt;div style=&quot;text-align:center;&quot;&gt;Why do I think &lt;a href=&quot;http://daringfireball.net/projects/markdown&quot; target=&quot;_blank&quot;&gt;Markdown&lt;/a&gt; is so awesome?&lt;/div&gt;
+
+&lt;h2 id=&quot;markdown-brings-us-back-to-our-roots&quot;&gt;1. Markdown brings us back to our roots&lt;/h2&gt;
+
+&lt;p&gt;Html is the language of the web. It unifies the view by which everyone consumes content.&lt;/p&gt;
+
+&lt;p&gt;But let’s face it: HTML is &lt;strong&gt;not&lt;/strong&gt; fun to write manually. Neither is CSS. And I don’t even want to think about what it would be like to write all of a webpage using pure Javascript.&lt;/p&gt;
+
+&lt;p&gt;So how do we create content for the web without writing HTML? &lt;strong&gt;With a text editor&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Yes. That’s right. A &lt;em&gt;text editor&lt;/em&gt;. Open up your &lt;code&gt;notepad.exe&lt;/code&gt;, &lt;code&gt;vi&lt;/code&gt;, &lt;code&gt;vim&lt;/code&gt;, &lt;code&gt;emacs&lt;/code&gt;, or &lt;code&gt;gedit&lt;/code&gt;. Whatever suits your fancy. No add-ons, no plugins, no bullshit. Markdown is &lt;em&gt;simple&lt;/em&gt; to write and &lt;em&gt;easy&lt;/em&gt; to learn.&lt;/p&gt;
+
+&lt;h2 id=&quot;markdown-is-simple&quot;&gt;2. Markdown is &lt;em&gt;simple&lt;/em&gt;&lt;/h2&gt;
+
+&lt;p&gt;Markdown’s syntax is simple. Deceivingly simple. It’s so intuitive that you wonder: “&lt;em&gt;why didn’t I think of that?&lt;/em&gt;”&lt;/p&gt;
+
+&lt;p&gt;There’s no special characters here. Everything can be found right on your keyboard so you don’t even need a mouse. Some might even go as far as to say that markdown is designed for &lt;a href=&quot;https://en.wikipedia.org/wiki/List_of_text_editors&quot;&gt;command-line editors&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;You never even have to pick your fingers up off the keyboard. That’s why it’s so simple. No fiddle, no fuss.&lt;/p&gt;
+
+&lt;h2 id=&quot;markdown-is-beautiful&quot;&gt;3. Markdown is &lt;em&gt;beautiful&lt;/em&gt;&lt;/h2&gt;
+
+&lt;p&gt;Yeah so your webpage might look cool with all those colors and fancy CSS3-box shadows, borders, and transitions, but when you write those webpages, can you tell exactly what it’s going to look like by taking a quick glance at your HTML file?&lt;/p&gt;
+
+&lt;p&gt;(&lt;em&gt;Hint: the answer is &lt;strong&gt;no&lt;/strong&gt;&lt;/em&gt;)&lt;/p&gt;
+
+&lt;p&gt;Markdown itself is a beautiful and simple syntax. It’s about as close to &lt;a href=&quot;https://en.wikipedia.org/wiki/WYSIWYG&quot; target=&quot;_blank&quot;&gt;&lt;em&gt;WSYIWYG&lt;/em&gt;&lt;/a&gt; as you’ll get. You open up a &lt;code&gt;.md&lt;/code&gt; file and you can immediately tell how it’s going to look.&lt;/p&gt;
+
+&lt;p&gt;We get no frills and no fancy, but at least you know how it’s going to look. While deceivingly simple to write, markdown has many features that makes its syntax powerful.&lt;/p&gt;
+
+&lt;h2 id=&quot;markdown-lets-you-worry-about-your-content&quot;&gt;4. Markdown lets you worry about your content&lt;/h2&gt;
+
+&lt;p&gt;Markdown allows you to &lt;em&gt;get stuff done&lt;/em&gt;. I guarantee that anyone who writes documents in markdown is far more productive than someone who writes in a full fledged editor like Microsoft Word or Google Docs.&lt;/p&gt;
+
+&lt;p&gt;Instead of messing around with the fancy-shmancy fonts, page layouts, headers, names, text-size, and the million other attributes, Markdown let’s you focus on what’s important. &lt;em&gt;&lt;strong&gt;The content&lt;/strong&gt;&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;A quick glance at your markdown document and you already know how it will look. No more worries.&lt;/p&gt;
+
+&lt;h2 id=&quot;markdown-is-portable&quot;&gt;5. Markdown is &lt;em&gt;portable&lt;/em&gt;&lt;/h2&gt;
+
+&lt;p&gt;Markdown. It’s small. It’s tidy. The same size as a text document. Extremely portable. You can open and edit files on any computer. No extra installs. No different formats. It’s the same everywhere.&lt;/p&gt;
+
+&lt;p&gt;Not to mention because markdown is made to be formatted for the web, when exported to HTML, we can put it anywhere. Copy-and-paste into a Word document, save as a PDF, or just read as HTML. It let’s you put your content anywhere in many different formats.&lt;/p&gt;
+
+&lt;h5 id=&quot;heck-its-so-awesome-i-even-wrote-this-post-in-markdownhttpsrawgithubusercontentcomzacblancozacblancogithubiomasterposts2015-10-18-the-glory-of-markdowntargetblank&quot;&gt;Heck, its so awesome I even &lt;a href=&quot;https://raw.githubusercontent.com/ZacBlanco/zacblanco.github.io/master/_posts/2015-10-18-the-glory-of-markdown&quot; target=&quot;_blank&quot;&gt;&lt;em&gt;wrote this post in markdown&lt;/em&gt;&lt;/a&gt;&lt;/h5&gt;
+
+</description>
+        <pubDate>Sun, 18 Oct 2015 00:00:00 -0400</pubDate>
+        <link>http://zacblanco.github.io//blog/markup-languages/markdown-is-awesome/</link>
+        <guid isPermaLink="true">http://zacblanco.github.io//blog/markup-languages/markdown-is-awesome/</guid>
+        
+        
+      </item>
     
       <item>
         <title>My Summer Experience at Hortonworks</title>
@@ -3594,18 +3652,6 @@ We&#39;re ust getting started here.
         <category>blog</category>
         
         <category>markdown</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>Updated Site</title>
-        <description>&lt;div class=&quot;css-full-post-content js-full-post-content&quot;&gt;
-So I just wanted to let you guys know that I&#39;ve updated my GitHub pages site. Because I like learning and building things form scratch to learn how everything is put together I built my site from the ground up and learned a few things along the way.&lt;br /&gt;&lt;br /&gt;I was inspired to do this redesign after I came across flexbox. A CSS display property that I had not previously known of. It makes a lot of resizing and overall site layout much easier. I was inspired to rebuild my site using this.&lt;br /&gt;&lt;br /&gt;The great thing is that flexbox is easy. It just works. and It&#39;s trivial to center things in your screen and resize the browser causing them to flow onto other line. It really is a great tool. The one caveat is that it doesn&#39;t have great browser support.&lt;br /&gt;&lt;br /&gt;I&#39;ve currently tested on the most updated versions of the major browsers (IE, Chrome, Firefox, Safari) and so far Chrome and Firefox render the page properly. Unfortunately however, Safari definitely does not render the page properly. Most older browsers don&#39;t Although I&#39;m not too worried about this. Even with improper display the page is still navigable. IE11 surprisingly does. Even with limited support for this display I think people should start adopting it in their designs so we can force more people to upgrade their browsers, so that everyone can anjoy a modern browsing experience.&lt;br /&gt;&lt;br /&gt;Over the next few days I&#39;ll do my best to post some simple tutorials using flexbox and some of the new CSS3 tricks I&#39;ve learned over the weekend while I made my site.&lt;br /&gt;&lt;br /&gt;In the meantime you should check out&amp;nbsp;&lt;a href=&quot;http://flexboxin5.com/&quot; target=&quot;_blank&quot;&gt;flexboxin5&lt;/a&gt;&amp;nbsp;it helped me figure out what I was doing and what to include in my CSS to fix the layouts. It&#39;s a great tutorial&lt;br /&gt;&lt;br /&gt;Don&#39;t forget to check out the new design!&lt;br /&gt;&lt;br /&gt;&lt;a href=&quot;http://zacblanco.github.io/&quot;&gt;zacblanco.github.io&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;Zac
-&lt;/div&gt;</description>
-        <pubDate>Mon, 09 Mar 2015 00:00:00 -0400</pubDate>
-        <link>http://zacblanco.github.io//blog/blogspot-posts/updated-site.html</link>
-        <guid isPermaLink="true">http://zacblanco.github.io//blog/blogspot-posts/updated-site.html</guid>
         
         
       </item>
