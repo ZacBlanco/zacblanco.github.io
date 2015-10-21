@@ -632,6 +632,43 @@ The internal resistance of a battery increases in the process of work: it is sma
 To test the "freshness" of a battery, you need to have the battery connected to its typical load.
 
 
+- Remeber in series, resistors are $$ R_{eq} = R_1 + R_2 + .. + R_n $$
+- In Parallel resistors are $$ R_{eq} = \frac{1}{\frac{1}{R_1} + \frac{1}{R_2} + ... + \frac{1}{R_n}} $$
+
+
+##### In an ideal voltage source:
+
+> A voltage source has zero internal resistance.
+
+
+##### An ideal current source
+
+> has infinite internal resistance
+
+##### An ideal voltmeter
+
+> has $$ R_{in} = \inf $$ and should be connected in parallel with the circuit element being measured
+
+Voltmeter should have high internal resistance
+
+##### An ideal ammeter
+
+> has $$ R_{in} = 0 $$ and should be connected in series with the circuit element being measured.
+
+Ammeter should have low internal resistance
+
+## Kirchhoff's Current Law
+
+> $$ \Sigma_i I_i = 0 $$
+
+The sum of all current entering and leaving a node (connection), should always sum to zero.
+
+## Kirchoff's Voltage Law
+
+> The sum of all voltage drops over a closed loop should sum to zero
+
+> $$ \Sigma_{loop} iR = \Sigma_{loop} V = 0 $$
+
 ## Lecture 12 - RC Circuits
 
 Capacitor circuit with an open switch: $$i = 0$$, $$q=0$$
