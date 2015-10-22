@@ -611,19 +611,19 @@ _Ficticious_ field $$\vec{E_{NC}}$$ inside the battery: a source of additional f
 
 ### The Electromotive Force (EMF)
 
-$$ EMF = \int^+_- \vec{E_{NC}} \cdot d\vec{l} $$
+$$ \varepsilon = \int^+_- \vec{E_{NC}} \cdot d\vec{l} $$
 
 Units for EMF = volts.
 
-In an ideal battery, $$ EMF = V = IR $$, where $$R$$ is the net resistance of the circuit.
+In an ideal battery, $$ \varepsilon = V = IR $$, where $$R$$ is the net resistance of the circuit.
 
 ### A Non-Ideal Battery
 
 $$r$$ is the internal resistance of the battery. The output voltage is
 
-$$ I = \frac{\EMF}{r + R} $$
+$$ I = \frac{\varepsilon}{r + R} $$
 
-$$ V = \EMF - Ir = \EMF\frac{R}{r + R} $$
+$$ V = \varepsilon - Ir = \varepsilon\frac{R}{r + R} $$
 
 ### Battery Discharge
 
@@ -690,13 +690,13 @@ As a capacitor charges with a resistor in the circuit, its plates gain a greater
 
 For instantaneous values
 
-> $$ \emf - i(t)R - \frac{q(t)}{C} = 0 $$
+> $$ \varepsilon - i(t)R - \frac{q(t)}{C} = 0 $$
 
 - $$i(t) = \frac{dq(t)}{dt} $$.
 
 After solving for $$q(t)$$...
 
-> $$q(t) = -\emf Ce^{\frac{-t}{\tau}} + \emf C $$
+> $$q(t) = -\varepsilon Ce^{\frac{-t}{\tau}} + \varepsilon C $$
 
 > $$\tau = RC$$
 
@@ -704,15 +704,15 @@ After solving for $$q(t)$$...
 
 Now for the current in a circuit including a resistor and capacitor:
 
-> $$ i(t) = \frac{dq(t)}{dt} = \frac{\emf}{R}e^{-\frac{t}{\tau}} $$
+> $$ i(t) = \frac{dq(t)}{dt} = \frac{\varepsilon}{R}e^{-\frac{t}{\tau}} $$
 
 ### Discharging a Capacitor (with a resistor)
 
 The charge when discharing a capacitor is:
 
-> $$ q(t) = \emf C e^{-\frac{t}{\tau}} $$
+> $$ q(t) = \varepsilon C e^{-\frac{t}{\tau}} $$
 
-> $$ i(t) = -\frac{\emf}{R}e^{\frac{-t}{\tau}} $$
+> $$ i(t) = -\frac{\varepsilon}{R}e^{\frac{-t}{\tau}} $$
 
 ### Energy Loss in a Capacitor
 
@@ -757,7 +757,7 @@ On Earth, the North pole is magnetic south, and the South pole is magnetic north
 
 ### Force on a Charge Moving in A magnetic Field
  
-> $$ \vec{F} = q(\vec{v} X \vec{B}) $$
+> $$ \vec{F} = q(\vec{v} \times \vec{B}) $$
  
 > $$ F = qvBsin(\phi) $$
 
@@ -826,7 +826,7 @@ Hall Voltage:
 
 The force on a wire segment of length $$l$$:
 
-> $$\vec{F} = l( \vec{I} X \vec{B} )$$
+> $$\vec{F} = l( \vec{I} \times \vec{B} )$$
 
 ### Torque on a Current Carrying Loop
 
@@ -855,7 +855,7 @@ Given a wire with $$N$$ loops, the total magnetic dipole moment is:
 
 In general:
 
-> $$ \vec{\tau} = \vec{\mu} X \vec{B} $$
+> $$ \vec{\tau} = \vec{\mu} \times \vec{B} $$
 
 > $$ \tau = \mu B \sin(\phi) $$
 

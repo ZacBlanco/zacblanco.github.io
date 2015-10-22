@@ -6,8 +6,8 @@
 </description>
     <link>http://zacblanco.github.io//</link>
     <atom:link href="http://zacblanco.github.io//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 22 Oct 2015 09:50:32 -0400</pubDate>
-    <lastBuildDate>Thu, 22 Oct 2015 09:50:32 -0400</lastBuildDate>
+    <pubDate>Thu, 22 Oct 2015 10:14:04 -0400</pubDate>
+    <lastBuildDate>Thu, 22 Oct 2015 10:14:04 -0400</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -912,25 +912,76 @@ Regardless of the nature of charge carriers, (both positive and negative carrier
 
 &lt;h3 id=&quot;the-electromotive-force-emf&quot;&gt;The Electromotive Force (EMF)&lt;/h3&gt;
 
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;EMF = \int^+_- \vec{E_{NC}} \cdot d\vec{l}&lt;/script&gt;
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\varepsilon = \int^+_- \vec{E_{NC}} \cdot d\vec{l}&lt;/script&gt;
 
 &lt;p&gt;Units for EMF = volts.&lt;/p&gt;
 
-&lt;p&gt;In an ideal battery, &lt;script type=&quot;math/tex&quot;&gt;EMF = V = IR&lt;/script&gt;, where &lt;script type=&quot;math/tex&quot;&gt;R&lt;/script&gt; is the net resistance of the circuit.&lt;/p&gt;
+&lt;p&gt;In an ideal battery, &lt;script type=&quot;math/tex&quot;&gt;\varepsilon = V = IR&lt;/script&gt;, where &lt;script type=&quot;math/tex&quot;&gt;R&lt;/script&gt; is the net resistance of the circuit.&lt;/p&gt;
 
 &lt;h3 id=&quot;a-non-ideal-battery&quot;&gt;A Non-Ideal Battery&lt;/h3&gt;
 
 &lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;r&lt;/script&gt; is the internal resistance of the battery. The output voltage is&lt;/p&gt;
 
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;I = \frac{\EMF}{r + R}&lt;/script&gt;
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;I = \frac{\varepsilon}{r + R}&lt;/script&gt;
 
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;V = \EMF - Ir = \EMF\frac{R}{r + R}&lt;/script&gt;
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;V = \varepsilon - Ir = \varepsilon\frac{R}{r + R}&lt;/script&gt;
 
 &lt;h3 id=&quot;battery-discharge&quot;&gt;Battery Discharge&lt;/h3&gt;
 
 &lt;p&gt;The internal resistance of a battery increases in the process of work: it is small &lt;strong&gt;in comparison with a typical load resistor&lt;/strong&gt; for a “fresh” battery and becomes large for an old (discharged) one.&lt;/p&gt;
 
 &lt;p&gt;To test the “freshness” of a battery, you need to have the battery connected to its typical load.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Remeber in series, resistors are &lt;script type=&quot;math/tex&quot;&gt;R_{eq} = R_1 + R_2 + .. + R_n&lt;/script&gt;&lt;/li&gt;
+  &lt;li&gt;In Parallel resistors are &lt;script type=&quot;math/tex&quot;&gt;R_{eq} = \frac{1}{\frac{1}{R_1} + \frac{1}{R_2} + ... + \frac{1}{R_n}}&lt;/script&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h5 id=&quot;in-an-ideal-voltage-source&quot;&gt;In an ideal voltage source:&lt;/h5&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;A voltage source has zero internal resistance.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h5 id=&quot;an-ideal-current-source&quot;&gt;An ideal current source&lt;/h5&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;has infinite internal resistance&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h5 id=&quot;an-ideal-voltmeter&quot;&gt;An ideal voltmeter&lt;/h5&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;has &lt;script type=&quot;math/tex&quot;&gt;R_{in} = \inf&lt;/script&gt; and should be connected in parallel with the circuit element being measured&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Voltmeter should have high internal resistance&lt;/p&gt;
+
+&lt;h5 id=&quot;an-ideal-ammeter&quot;&gt;An ideal ammeter&lt;/h5&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;has &lt;script type=&quot;math/tex&quot;&gt;R_{in} = 0&lt;/script&gt; and should be connected in series with the circuit element being measured.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Ammeter should have low internal resistance&lt;/p&gt;
+
+&lt;h2 id=&quot;kirchhoffs-current-law&quot;&gt;Kirchhoff’s Current Law&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;script type=&quot;math/tex; mode=display&quot;&gt;\Sigma_i I_i = 0&lt;/script&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;The sum of all current entering and leaving a node (connection), should always sum to zero.&lt;/p&gt;
+
+&lt;h2 id=&quot;kirchoffs-voltage-law&quot;&gt;Kirchoff’s Voltage Law&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;The sum of all voltage drops over a closed loop should sum to zero&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;script type=&quot;math/tex; mode=display&quot;&gt;\Sigma_{loop} iR = \Sigma_{loop} V = 0&lt;/script&gt;
+&lt;/blockquote&gt;
 
 &lt;h2 id=&quot;lecture-12---rc-circuits&quot;&gt;Lecture 12 - RC Circuits&lt;/h2&gt;
 
@@ -953,7 +1004,7 @@ Regardless of the nature of charge carriers, (both positive and negative carrier
 &lt;p&gt;For instantaneous values&lt;/p&gt;
 
 &lt;blockquote&gt;
-  &lt;script type=&quot;math/tex; mode=display&quot;&gt;\emf - i(t)R - \frac{q(t)}{C} = 0&lt;/script&gt;
+  &lt;script type=&quot;math/tex; mode=display&quot;&gt;\varepsilon - i(t)R - \frac{q(t)}{C} = 0&lt;/script&gt;
 &lt;/blockquote&gt;
 
 &lt;ul&gt;
@@ -963,7 +1014,7 @@ Regardless of the nature of charge carriers, (both positive and negative carrier
 &lt;p&gt;After solving for &lt;script type=&quot;math/tex&quot;&gt;q(t)&lt;/script&gt;…&lt;/p&gt;
 
 &lt;blockquote&gt;
-  &lt;script type=&quot;math/tex; mode=display&quot;&gt;q(t) = -\emf Ce^{\frac{-t}{\tau}} + \emf C&lt;/script&gt;
+  &lt;script type=&quot;math/tex; mode=display&quot;&gt;q(t) = -\varepsilon Ce^{\frac{-t}{\tau}} + \varepsilon C&lt;/script&gt;
 &lt;/blockquote&gt;
 
 &lt;blockquote&gt;
@@ -977,7 +1028,7 @@ Regardless of the nature of charge carriers, (both positive and negative carrier
 &lt;p&gt;Now for the current in a circuit including a resistor and capacitor:&lt;/p&gt;
 
 &lt;blockquote&gt;
-  &lt;script type=&quot;math/tex; mode=display&quot;&gt;i(t) = \frac{dq(t)}{dt} = \frac{\emf}{R}e^{-\frac{t}{\tau}}&lt;/script&gt;
+  &lt;script type=&quot;math/tex; mode=display&quot;&gt;i(t) = \frac{dq(t)}{dt} = \frac{\varepsilon}{R}e^{-\frac{t}{\tau}}&lt;/script&gt;
 &lt;/blockquote&gt;
 
 &lt;h3 id=&quot;discharging-a-capacitor-with-a-resistor&quot;&gt;Discharging a Capacitor (with a resistor)&lt;/h3&gt;
@@ -985,11 +1036,11 @@ Regardless of the nature of charge carriers, (both positive and negative carrier
 &lt;p&gt;The charge when discharing a capacitor is:&lt;/p&gt;
 
 &lt;blockquote&gt;
-  &lt;script type=&quot;math/tex; mode=display&quot;&gt;q(t) = \emf C e^{-\frac{t}{\tau}}&lt;/script&gt;
+  &lt;script type=&quot;math/tex; mode=display&quot;&gt;q(t) = \varepsilon C e^{-\frac{t}{\tau}}&lt;/script&gt;
 &lt;/blockquote&gt;
 
 &lt;blockquote&gt;
-  &lt;script type=&quot;math/tex; mode=display&quot;&gt;i(t) = -\frac{\emf}{R}e^{\frac{-t}{\tau}}&lt;/script&gt;
+  &lt;script type=&quot;math/tex; mode=display&quot;&gt;i(t) = -\frac{\varepsilon}{R}e^{\frac{-t}{\tau}}&lt;/script&gt;
 &lt;/blockquote&gt;
 
 &lt;h3 id=&quot;energy-loss-in-a-capacitor&quot;&gt;Energy Loss in a Capacitor&lt;/h3&gt;
@@ -1044,7 +1095,7 @@ Regardless of the nature of charge carriers, (both positive and negative carrier
 &lt;h3 id=&quot;force-on-a-charge-moving-in-a-magnetic-field&quot;&gt;Force on a Charge Moving in A magnetic Field&lt;/h3&gt;
 
 &lt;blockquote&gt;
-  &lt;script type=&quot;math/tex; mode=display&quot;&gt;\vec{F} = q(\vec{v} X \vec{B})&lt;/script&gt;
+  &lt;script type=&quot;math/tex; mode=display&quot;&gt;\vec{F} = q(\vec{v} \times \vec{B})&lt;/script&gt;
 &lt;/blockquote&gt;
 
 &lt;blockquote&gt;
@@ -1142,7 +1193,7 @@ Regardless of the nature of charge carriers, (both positive and negative carrier
 &lt;p&gt;The force on a wire segment of length &lt;script type=&quot;math/tex&quot;&gt;l&lt;/script&gt;:&lt;/p&gt;
 
 &lt;blockquote&gt;
-  &lt;script type=&quot;math/tex; mode=display&quot;&gt;\vec{F} = l( \vec{I} X \vec{B} )&lt;/script&gt;
+  &lt;script type=&quot;math/tex; mode=display&quot;&gt;\vec{F} = l( \vec{I} \times \vec{B} )&lt;/script&gt;
 &lt;/blockquote&gt;
 
 &lt;h3 id=&quot;torque-on-a-current-carrying-loop&quot;&gt;Torque on a Current Carrying Loop&lt;/h3&gt;
@@ -1183,7 +1234,7 @@ Regardless of the nature of charge carriers, (both positive and negative carrier
 &lt;p&gt;In general:&lt;/p&gt;
 
 &lt;blockquote&gt;
-  &lt;script type=&quot;math/tex; mode=display&quot;&gt;\vec{\tau} = \vec{\mu} X \vec{B}&lt;/script&gt;
+  &lt;script type=&quot;math/tex; mode=display&quot;&gt;\vec{\tau} = \vec{\mu} \times \vec{B}&lt;/script&gt;
 &lt;/blockquote&gt;
 
 &lt;blockquote&gt;
