@@ -6,37 +6,9 @@
 </description>
     <link>http://zacblanco.github.io//</link>
     <atom:link href="http://zacblanco.github.io//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 21 Oct 2015 19:22:41 -0400</pubDate>
-    <lastBuildDate>Wed, 21 Oct 2015 19:22:41 -0400</lastBuildDate>
+    <pubDate>Thu, 22 Oct 2015 09:50:32 -0400</pubDate>
+    <lastBuildDate>Thu, 22 Oct 2015 09:50:32 -0400</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
-    
-      <item>
-        <title>Running Time Analysis for Sorted Sequential Search</title>
-        <description>&lt;h2 id=&quot;sequential-search-on-a-sorted-list-of-numbers&quot;&gt;Sequential Search on a Sorted List of Numbers&lt;/h2&gt;
-
-&lt;p&gt;One question that many people struggled with (including myself) on the first data structures midterm involved a problem similar to the following:&lt;/p&gt;
-
-&lt;p&gt;Given the following algorithm for sequential search on a sorted list of numbers, derive the average running time for this algorithm on&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;lineno&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;boolean&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;search&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;target&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-&lt;span class=&quot;lineno&quot;&gt;2&lt;/span&gt;   &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-&lt;span class=&quot;lineno&quot;&gt;3&lt;/span&gt;     &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;target&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;])&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;lineno&quot;&gt;4&lt;/span&gt;     &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;target&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;])&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;lineno&quot;&gt;5&lt;/span&gt;   &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;lineno&quot;&gt;6&lt;/span&gt;   &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;lineno&quot;&gt;7&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;A successful search (one where the item is found).&lt;/li&gt;
-  &lt;li&gt;A failed search (where the item is &lt;strong&gt;not&lt;/strong&gt; found).&lt;/li&gt;
-&lt;/ol&gt;
-</description>
-        <pubDate>Wed, 21 Oct 2015 19:22:41 -0400</pubDate>
-        <link>http://zacblanco.github.io//blog/data-structures/sorted-sequential-search-analysis</link>
-        <guid isPermaLink="true">http://zacblanco.github.io//blog/data-structures/sorted-sequential-search-analysis</guid>
-        
-        
-      </item>
     
       <item>
         <title>The Glory of Markdown</title>
@@ -1062,7 +1034,7 @@ Regardless of the nature of charge carriers, (both positive and negative carrier
 &lt;p&gt;The magnetic field is &lt;strong&gt;non-conservative&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;blockquote&gt;
-  &lt;script type=&quot;math/tex; mode=display&quot;&gt;\int \vec{B} \cdot d\vec{l} =/ 0&lt;/script&gt;
+  &lt;script type=&quot;math/tex; mode=display&quot;&gt;\int \vec{B} \cdot d\vec{l} = 0&lt;/script&gt;
 &lt;/blockquote&gt;
 
 &lt;p&gt;Magnetic field lines are &lt;strong&gt;closed loops&lt;/strong&gt;. (no magnetic monopoles.)&lt;/p&gt;
@@ -1102,6 +1074,144 @@ Regardless of the nature of charge carriers, (both positive and negative carrier
 &lt;blockquote&gt;
   &lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;T = \frac{2\pi R}{v}&lt;/script&gt;.&lt;/p&gt;
 &lt;/blockquote&gt;
+
+&lt;h2 id=&quot;october-22nd-2015&quot;&gt;October 22nd 2015&lt;/h2&gt;
+
+&lt;h3 id=&quot;lecture-14-magnetic-forces-on-currents&quot;&gt;Lecture 14: Magnetic Forces on Currents&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Hall Effect&lt;/li&gt;
+  &lt;li&gt;Magnetic Force on a Wire Segment&lt;/li&gt;
+  &lt;li&gt;Torque on a Current-Carrying Loop&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;magnetic-flux-lines&quot;&gt;Magnetic Flux Lines&lt;/h3&gt;
+
+&lt;p&gt;Is it ever possible to have total magnetic flux through a closed surface positive?&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;No&lt;/strong&gt; it is not because the flux lines don’t start or end. Magnetic field lines are closed loops. So if these lines come out of the North end of a magnet then they must also re-enter through the south pole of the magnet inside the closed surface. (Think of the magnetic field lines inside the magnet).&lt;/p&gt;
+
+&lt;h3 id=&quot;hall-effect&quot;&gt;Hall Effect&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Current carrying conuctors in external magnetic field: two system of charges - mobile current carriers and immobile ion lattice - and only the current carriers are affected by &lt;script type=&quot;math/tex&quot;&gt;B&lt;/script&gt;.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;In the steady state, the magnetic force on moving charges is compensated by the elerostatic force due to &lt;strong&gt;uncompensated&lt;/strong&gt; surface charge.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Hall Voltage&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;script type=&quot;math/tex; mode=display&quot;&gt;\vec{F}_E = -\vec{F}_B&lt;/script&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;script type=&quot;math/tex; mode=display&quot;&gt;qE = qv_dB&lt;/script&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;script type=&quot;math/tex; mode=display&quot;&gt;E = v_dB&lt;/script&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;script type=&quot;math/tex; mode=display&quot;&gt;I = qnv_dWt&lt;/script&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;script type=&quot;math/tex&quot;&gt;n&lt;/script&gt; the density of mobile carriers&lt;/li&gt;
+  &lt;li&gt;&lt;script type=&quot;math/tex&quot;&gt;W&lt;/script&gt; the width of the conductor&lt;/li&gt;
+  &lt;li&gt;&lt;script type=&quot;math/tex&quot;&gt;t&lt;/script&gt; the thickness of the conductor&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Hall Voltage:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;script type=&quot;math/tex; mode=display&quot;&gt;V_H = \frac{IB}{qnt}&lt;/script&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;magnetic-force-on-a-current-carrying-conductor&quot;&gt;Magnetic Force on a Current-Carrying-Conductor&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;The electrons drift along the wire because the net electromagnetic force on them in the direction normal to the wire is 0. However, positively charged ions are at rest, they feel only an uncompensated electric force.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;script type=&quot;math/tex&quot;&gt;E_H  = \frac{IB}{qnWt}&lt;/script&gt;.&lt;/li&gt;
+  &lt;li&gt;&lt;script type=&quot;math/tex&quot;&gt;f = qE_H = \frac{IB}{nWt}&lt;/script&gt; - force per one ion&lt;/li&gt;
+  &lt;li&gt;&lt;script type=&quot;math/tex&quot;&gt;F = nWtf = IB&lt;/script&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The force on a wire segment of length &lt;script type=&quot;math/tex&quot;&gt;l&lt;/script&gt;:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;script type=&quot;math/tex; mode=display&quot;&gt;\vec{F} = l( \vec{I} X \vec{B} )&lt;/script&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;torque-on-a-current-carrying-loop&quot;&gt;Torque on a Current Carrying Loop&lt;/h3&gt;
+
+&lt;p&gt;Consider an area of a loop of wire &lt;script type=&quot;math/tex&quot;&gt;A&lt;/script&gt; which is in the same plane  as a magnetic field &lt;script type=&quot;math/tex&quot;&gt;B&lt;/script&gt;.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;This creates a force &lt;script type=&quot;math/tex&quot;&gt;F&lt;/script&gt; equal to:&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;script type=&quot;math/tex; mode=display&quot;&gt;F = aIB&lt;/script&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;where a is the length of the wire (perpendicular to the magnetic field).&lt;/p&gt;
+
+&lt;p&gt;If the magnetic field acts perpendicular to the area then the net toque should be zero.&lt;/p&gt;
+
+&lt;h5 id=&quot;magnetic-dipole-moment&quot;&gt;Magnetic Dipole Moment&lt;/h5&gt;
+
+&lt;blockquote&gt;
+  &lt;script type=&quot;math/tex; mode=display&quot;&gt;\mu = abI = AI&lt;/script&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;For the direction of &lt;script type=&quot;math/tex&quot;&gt;\vec{\mu}&lt;/script&gt; you should use the right hand rule.&lt;/p&gt;
+
+&lt;p&gt;But what about a wire with many loops?&lt;/p&gt;
+
+&lt;p&gt;Given a wire with &lt;script type=&quot;math/tex&quot;&gt;N&lt;/script&gt; loops, the total magnetic dipole moment is:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;script type=&quot;math/tex; mode=display&quot;&gt;\mu = NAI&lt;/script&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;In general:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;script type=&quot;math/tex; mode=display&quot;&gt;\vec{\tau} = \vec{\mu} X \vec{B}&lt;/script&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;script type=&quot;math/tex; mode=display&quot;&gt;\tau = \mu B \sin(\phi)&lt;/script&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;potential-enegery-of-a-current-loop-in-a-magnetic-field&quot;&gt;Potential Enegery of a Current Loop in a Magnetic Field&lt;/h3&gt;
+
+&lt;blockquote&gt;
+  &lt;script type=&quot;math/tex; mode=display&quot;&gt;U(\phi) = -\mu B cos(\phi)&lt;/script&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;magnetic-dipoles-vs-electric-dipoles&quot;&gt;Magnetic Dipoles vs. Electric Dipoles&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;Similarities&lt;/strong&gt;:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;A magnet’s magnetic field is very similar to a dipole’s electric field at points for from the dipoles.&lt;/li&gt;
+  &lt;li&gt;both repel/attract each other&lt;/li&gt;
+  &lt;li&gt;Both align along the field lines.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Differences&lt;/strong&gt;:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Unlike electric dipoles, magnetic poles cannot be separated.&lt;/li&gt;
+  &lt;li&gt;Magnets have no effect on stationary charges.&lt;/li&gt;
+&lt;/ul&gt;
 
 </description>
         <pubDate>Thu, 03 Sep 2015 00:00:00 -0400</pubDate>
@@ -3700,6 +3810,152 @@ Current Controlled Current Source (CCCS): &lt;script type=&quot;math/tex&quot;&g
         <category>css</category>
         
         <category>web</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Building a Site with Jekyll</title>
+        <description>&lt;p&gt;So I when I first started trying to make a blog I didn’t realize how difficult it would actually be to find something that worked. No other free platform contained the features that I wanted. And as a college student we should know that, free = good.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt; is no perfect solution, but it does provide a host of features and is much more open than any other option I could find, which is why I opted to switch.&lt;/p&gt;
+
+&lt;p&gt;For a quick intro, Jekyll straight out of the box really isn’t anything special. Basically it takes some text that you write up for your posts and converts them into some static html files that can be served to a user.&lt;/p&gt;
+
+&lt;p&gt;Posts are written in &lt;a href=&quot;http://en.wikipedia.org/wiki/Markdown&quot;&gt;Markdown&lt;/a&gt; which is a really handy markup language. Great for writing posts, but it does have a bit of a learning curve and takes some time to get used to.&lt;/p&gt;
+
+&lt;p&gt;Another great thing about using Jekyll is that there’s quite a bit of resources, and its open source! It’s very flexible, you can use plugins, create new themes, and add commenting features. This list just goes on!&lt;/p&gt;
+
+&lt;p&gt;Creating a site from scratch with Jekyll is definitely not for the faint-hearted. If you’re willing to put the time and effort in you can come out with a blog customized to your very liking including only the features you would like. It’s a very hands-on get-dirty-with-the-code project, but it’s a lot of fun and you might learn a few things along the way.&lt;/p&gt;
+
+&lt;p&gt;The rest of this post I’ll be showing you how exactly to install and run Jekyll to &lt;em&gt;quickly&lt;/em&gt; create your own static website.&lt;/p&gt;
+
+&lt;h1 id=&quot;prerequisites&quot;&gt;Prerequisites&lt;/h1&gt;
+
+&lt;h5 id=&quot;please-download-ruby-first-then-rubygems&quot;&gt;&lt;strong&gt;Please download ruby first, then RubyGems&lt;/strong&gt;&lt;/h5&gt;
+
+&lt;p&gt;You’re going to need &lt;strong&gt;ruby&lt;/strong&gt; installed on your machine. If you dont have ruby installed &lt;a href=&quot;https://www.ruby-lang.org/en/downloads/&quot;&gt;you can get it here&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;You’re also going to have to install &lt;a href=&quot;https://rubygems.org/pages/download&quot;&gt;RubyGems&lt;/a&gt;. It’s package manager for ruby.&lt;/p&gt;
+
+&lt;p&gt;Now I’m going to assume you know how to install these or already have them on your system. Follow the documentation provided online or do a quick google search if you’re having any trouble.&lt;/p&gt;
+
+&lt;p&gt;Once you’ve got them both installed, open up a command terminal and try this command&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;~ user$ ruby --version
+~ user$ gem --version
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;If everything works correctly you should get some type of outputs similar to this:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;ruby 2.0.0p481 (2014-05-08 revision 45883) [universal.x86_64-darwin14]
+2.0.14
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Great! now we have the two essentials installed.&lt;/p&gt;
+
+&lt;h1 id=&quot;getting-jekyll&quot;&gt;Getting Jekyll&lt;/h1&gt;
+
+&lt;p&gt;With a valid internet connection and a command terminal, use the following commands to install Jekyll on your machine.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;~ user$ sudo gem install jekyll
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Check now that you have the latest version of Jekyll installed by using&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;~ user$ jekyll --version
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id=&quot;creating-your-first-site&quot;&gt;Creating your first site&lt;/h1&gt;
+
+&lt;p&gt;Here’s where things start getting fun.&lt;/p&gt;
+
+&lt;p&gt;Using your terminal, navigate to the chosen directory on your filesystem where you would like to keep your code, site, and any other files &lt;em&gt;(Preferably a location where you might keep some repositories)&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Assuming you’ve already navigated there perform the following&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;~/location/ user$ jekyll new &amp;lt;site-name&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Or if you’d like to have jekyll generate the files in the folder you’re currently located in&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;~/site-name/ user$ jekyll new .
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now if you use ls command or view that directory you just created inside a file manager you should see something similar to the following&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;_config.yml	_layouts    _sass	css		index.html
+_includes	_posts		about.md	feed.xml
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h5 id=&quot;configyml&quot;&gt;_config.yml&lt;/h5&gt;
+
+&lt;p&gt;This file is where we store some sitewide variables, like author name, baseurl, twitter and GitHub handles, etc. Edit the variables in here as you like.&lt;/p&gt;
+
+&lt;h5 id=&quot;posts&quot;&gt;_posts&lt;/h5&gt;
+
+&lt;p&gt;This is where you’re going to write posts in the Markdown syntax. I suggest an editor than can support previews of Markdown. Personally I use &lt;a href=&quot;http://brackets.io&quot;&gt;Adobe Brackets&lt;/a&gt; with the Markdown plugin to preview. More on all of this later&lt;/p&gt;
+
+&lt;h5 id=&quot;aboutmd&quot;&gt;about.md&lt;/h5&gt;
+
+&lt;p&gt;This is a markdown file you can edit to change the “About” page on your site.&lt;/p&gt;
+
+&lt;h5 id=&quot;includes-layouts-sass-css&quot;&gt;_includes, _layouts, _sass, css&lt;/h5&gt;
+
+&lt;p&gt;These are all other places where you can change configurations and views of your site. The layout and css can all be found under these places. We’re not really going to edit those right now.&lt;/p&gt;
+
+&lt;h1 id=&quot;making-your-first-post&quot;&gt;Making your first post&lt;/h1&gt;
+
+&lt;p&gt;Lets navigate to our folder and create a new post. Create a new file and name is something following the scheme: &lt;code&gt;YYYY-MM-DD-your-title.md&lt;/code&gt;. Open this new file in a text editor.&lt;/p&gt;
+
+&lt;p&gt;Inside we’re going to put:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;---
+layout: post
+title: Hello World!
+---
+
+# Howdy there partner
+Congratulations! You&#39;ve made it to[site](site.url)
+
+We&#39;re ust getting started here.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now save your document and return to the terminal that has navigated inside of your site’s directory.&lt;/p&gt;
+
+&lt;h1 id=&quot;building-the-site&quot;&gt;Building the Site&lt;/h1&gt;
+
+&lt;p&gt;Run the following command&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;~/location/ user$ jekyll build
+~/location/ user$ jekyll serve
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Leave the terminal open. Open up a new tab in your browser of choice and navigate to &lt;code&gt;http://localhost:4000&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;You should see a home page with a link to Jekyll’s default page for new sites, and your own post we just wrote!&lt;/p&gt;
+
+&lt;p&gt;Click on the post to make sure it works there. If it does, congratulations! you’ve made your first blog post using Jekyll&lt;/p&gt;
+
+&lt;p&gt;There’s tons more you can do with themes, pages, and other sweet customizations for your shiny new blog, but I’ll go into those at a later date.&lt;/p&gt;
+
+&lt;p&gt;For now, play around with Jekyll and get a feel for the software. It’s something interesting that I’ve never encountered before and is definitely worth a try.&lt;/p&gt;
+
+&lt;p&gt;Happy blogging!&lt;/p&gt;
+</description>
+        <pubDate>Wed, 11 Mar 2015 00:00:00 -0400</pubDate>
+        <link>http://zacblanco.github.io//blog/jekyll/building-a-site-with-jekyll</link>
+        <guid isPermaLink="true">http://zacblanco.github.io//blog/jekyll/building-a-site-with-jekyll</guid>
+        
+        <category>jekyll</category>
+        
+        <category>hyde</category>
+        
+        <category>site</category>
+        
+        <category>blog</category>
+        
+        <category>markdown</category>
         
         
       </item>

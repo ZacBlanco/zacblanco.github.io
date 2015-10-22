@@ -749,7 +749,7 @@ Possible sources of $$B$$
 
 The magnetic field is **non-conservative**.
 
-> $$ \int \vec{B} \cdot d\vec{l} =/ 0 $$
+> $$ \int \vec{B} \cdot d\vec{l} = 0 $$
  
 Magnetic field lines are **closed loops**. (no magnetic monopoles.)
  
@@ -780,7 +780,101 @@ So from this we can calculate the period of the circular motion of the particle.
 
 > $$ T = \frac{2\pi R}{v} $$.
 
+## October 22nd 2015
 
+### Lecture 14: Magnetic Forces on Currents
+
+- Hall Effect
+- Magnetic Force on a Wire Segment
+- Torque on a Current-Carrying Loop
+
+### Magnetic Flux Lines
+
+Is it ever possible to have total magnetic flux through a closed surface positive?
+
+**No** it is not because the flux lines don't start or end. Magnetic field lines are closed loops. So if these lines come out of the North end of a magnet then they must also re-enter through the south pole of the magnet inside the closed surface. (Think of the magnetic field lines inside the magnet).
+
+### Hall Effect
+
+- Current carrying conuctors in external magnetic field: two system of charges - mobile current carriers and immobile ion lattice - and only the current carriers are affected by $$B$$.
+
+- In the steady state, the magnetic force on moving charges is compensated by the elerostatic force due to **uncompensated** surface charge.
+
+Hall Voltage
+
+- $$ \vec{F}_E = -\vec{F}_B $$
+
+- $$ qE = qv_dB $$
+- $$ E = v_dB $$
+- $$ I = qnv_dWt $$
+
+- $$n$$ the density of mobile carriers
+- $$W$$ the width of the conductor
+- $$t$$ the thickness of the conductor
+
+Hall Voltage:
+
+> $$ V_H = \frac{IB}{qnt} $$
+
+### Magnetic Force on a Current-Carrying-Conductor
+
+- The electrons drift along the wire because the net electromagnetic force on them in the direction normal to the wire is 0. However, positively charged ions are at rest, they feel only an uncompensated electric force.
+
+- $$ E_H  = \frac{IB}{qnWt} $$.
+- $$ f = qE_H = \frac{IB}{nWt} $$ - force per one ion
+- $$ F = nWtf = IB $$.
+
+The force on a wire segment of length $$l$$:
+
+> $$\vec{F} = l( \vec{I} X \vec{B} )$$
+
+### Torque on a Current Carrying Loop
+
+Consider an area of a loop of wire $$A$$ which is in the same plane  as a magnetic field $$B$$.
+
+- This creates a force $$F$$ equal to:
+
+- $$ F = aIB $$
+
+where a is the length of the wire (perpendicular to the magnetic field).
+
+If the magnetic field acts perpendicular to the area then the net toque should be zero.
+
+##### Magnetic Dipole Moment
+
+> $$ \mu = abI = AI $$
+
+For the direction of $$\vec{\mu}$$ you should use the right hand rule.
+
+But what about a wire with many loops?
+
+
+Given a wire with $$N$$ loops, the total magnetic dipole moment is:
+
+- $$\mu = NAI $$
+
+In general:
+
+> $$ \vec{\tau} = \vec{\mu} X \vec{B} $$
+
+> $$ \tau = \mu B \sin(\phi) $$
+
+### Potential Enegery of a Current Loop in a Magnetic Field
+
+> $$ U(\phi) = -\mu B cos(\phi) $$
+
+### Magnetic Dipoles vs. Electric Dipoles
+
+**Similarities**:
+
+- A magnet's magnetic field is very similar to a dipole's electric field at points for from the dipoles.
+- both repel/attract each other
+- Both align along the field lines.
+
+**Differences**:
+
+- Unlike electric dipoles, magnetic poles cannot be separated.
+- Magnets have no effect on stationary charges.
 
 
 
