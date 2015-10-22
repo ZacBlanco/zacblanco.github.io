@@ -763,6 +763,81 @@ See The following problem to see how to calculate the Thevenin equivalent for a 
 ![Thevenin Problem 1](/assets/images/ee1-guide/thev-problem-1-3.png)
 
 
+## October 22nd 2015
+
+### The Superposition Principle
+
+- In a ciecui with independent voltage sources we can find a current through an element or voltage across an element as the sum of the contribution of individual sources in the circuit.
+
+How?
+
+- At each stage, set all sources except for one equal to zero and find the contribution of this individual source to the current through an element or voltage across an element
+- The total current through an element or voltage across an element is the sum of all individual contributions
+
+REMEMBER:
+
+- Setting a voltage source to zero means making it a short circuit.
+- Setting a current source ot zero means making it an open circuit.
+
+At each stage, set ALL sources ecept for ONE to zero and find the contribution of this indicidual source to the current through an element or voltage across an element
+
+- The total current through an element or voltage across an element is the SUM of all individual contributions.
+
+### Operational Amplifiers
+
+![Operational Amplifier](/assets/images/ee1-guide/op-amp-1.png)
+
+Operational Amplifiers are a **5 terminal element**.
+
+There are 5 terminals:
+
+- Noninverting input
+- Inverting input
+- Positive power supply
+- Negative power supply
+- Output
+
+![Operational Amplifier 2](/assets/images/ee1-guide/op-amp-2.png)
+
+An operational amplifier **amplifies** the difference between the **inverting input** and the **non-inververting** input.
+
+![Operational Amplifier 3](/assets/images/ee1-guide/op-amp-3.png)
+
+We can simplify the behavior for an op. amp. so long as the voltage remains in the linear region of the amplifier's operation. This allows us to simpligy the model.
+
+![Operational Amplifier 4](/assets/images/ee1-guide/op-amp-4.png)
+
+A good Op-Amp circuit model has 3 important characteristics
+
+- Op_Amp gain, $$S$$ is very high (order of $$10^6$$)
+- Op-Amp input resistance $$R_{in}$$ is very high (order of $$10^6 \Omega$$)
+- Op-Amp output resistance $$R_o$$ is very small (order of $$1 \Omega$$)
+
+### An Ideal Op-Amp
+
+![Ideal Operational Amplifier](/assets/images/ee1-guide/op-amp-1.png)
+
+
+### Operational Amplifier Feedback Loop
+
+
+![Operational Amplifier Feedback 1](/assets/images/ee1-guide/op-amp-feedback-1.png)
+
+We can simplify the model of the op-amp so that we can solve for the output voltage as a function of the input voltage.
+
+![Operational Amplifier Simplified 1](/assets/images/ee1-guide/op-amp-simplified-1.png)
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
