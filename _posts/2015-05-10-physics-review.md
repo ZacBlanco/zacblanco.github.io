@@ -1,9 +1,10 @@
 ---
 layout: post
 title: A (Somewhat) Comprehensive Guide to Physics IB at Rutgers University
-permalink: "blog/physics/physics-IB-review"
-tags: [physics, rutgers, spring 2015, final review]
-Author: Zac Blanco
+permalink: /blog/physics/physics-IB-review/
+keywords: physics, rutgers, spring 2015, final review
+author: Zac Blanco
+description: A guide with handy explanations for all of the concepts covered in the Spring portion of Rutgers University first year physics courses
 ---
 
 The topics covered in this course are:

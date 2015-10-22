@@ -1,8 +1,9 @@
 ---
 layout: post
 title: Hosting your Jekyll site with GitHub Pages
-permalink: "blog/jekyll/hosting-with-github-pages"
-tags: [jekyll, site, poole, web, hosting]
+permalink: /blog/jekyll/hosting-with-github-pages/
+keywords: jekyll, site, poole, web, hosting
+description: How to host your own public site using Jekyll and GitHub Pages
 ---
 
 As a continuation to the series of the last few posts I will be explaining how to host your jekyll site for **free** using [GitHub](https://github.com). GitHub provides completely free website hosting using your own GitHub account. For more information I suggest reading up on [GitHub Pages](https://pages.github.com/).

@@ -6,8 +6,8 @@
 </description>
     <link>http://zacblanco.github.io//</link>
     <atom:link href="http://zacblanco.github.io//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 22 Oct 2015 11:37:10 -0400</pubDate>
-    <lastBuildDate>Thu, 22 Oct 2015 11:37:10 -0400</lastBuildDate>
+    <pubDate>Thu, 22 Oct 2015 13:31:19 -0400</pubDate>
+    <lastBuildDate>Thu, 22 Oct 2015 13:31:19 -0400</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -105,22 +105,6 @@
         <pubDate>Sat, 12 Sep 2015 00:00:00 -0400</pubDate>
         <link>http://zacblanco.github.io//blog/professional/my-experience-at-hortonworks</link>
         <guid isPermaLink="true">http://zacblanco.github.io//blog/professional/my-experience-at-hortonworks</guid>
-        
-        <category>hortonworks</category>
-        
-        <category>professional</category>
-        
-        <category>experience</category>
-        
-        <category>rutgers</category>
-        
-        <category>internship</category>
-        
-        <category>software</category>
-        
-        <category>engineering</category>
-        
-        <category>software engineer</category>
         
         
       </item>
@@ -1269,26 +1253,6 @@ Regardless of the nature of charge carriers, (both positive and negative carrier
         <link>http://zacblanco.github.io//blog/physics/rutgers-physics-227-guide</link>
         <guid isPermaLink="true">http://zacblanco.github.io//blog/physics/rutgers-physics-227-guide</guid>
         
-        <category>physics</category>
-        
-        <category>rutgers</category>
-        
-        <category>fall 2015</category>
-        
-        <category>electromagnetism</category>
-        
-        <category>magnet</category>
-        
-        <category>227</category>
-        
-        <category>undergraduate</category>
-        
-        <category>physics.rutgers.edu</category>
-        
-        <category>electrostatics</category>
-        
-        <category>dipoles</category>
-        
         
       </item>
     
@@ -2334,28 +2298,6 @@ Current Controlled Current Source (CCCS): &lt;script type=&quot;math/tex&quot;&g
         <link>http://zacblanco.github.io//blog/electrical-engineering/rutgers-principles-electrical-engineering-1</link>
         <guid isPermaLink="true">http://zacblanco.github.io//blog/electrical-engineering/rutgers-principles-electrical-engineering-1</guid>
         
-        <category>engineering</category>
-        
-        <category>rutgers</category>
-        
-        <category>fall 2015</category>
-        
-        <category>principles of electrical engineering</category>
-        
-        <category>guide</category>
-        
-        <category>class</category>
-        
-        <category>study</category>
-        
-        <category>circuits</category>
-        
-        <category>computer engineering</category>
-        
-        <category>electrical engineering</category>
-        
-        <category>engineers</category>
-        
         
       </item>
     
@@ -2514,20 +2456,8 @@ Current Controlled Current Source (CCCS): &lt;script type=&quot;math/tex&quot;&g
 
 </description>
         <pubDate>Mon, 18 May 2015 00:00:00 -0400</pubDate>
-        <link>http://zacblanco.github.io//blog/markup-language/xml-schema-validation</link>
-        <guid isPermaLink="true">http://zacblanco.github.io//blog/markup-language/xml-schema-validation</guid>
-        
-        <category>xml</category>
-        
-        <category>java</category>
-        
-        <category>schema</category>
-        
-        <category>validation</category>
-        
-        <category>namespaces</category>
-        
-        <category>markup language</category>
+        <link>http://zacblanco.github.io//blog/markup-language/xml-schema-validation/</link>
+        <guid isPermaLink="true">http://zacblanco.github.io//blog/markup-language/xml-schema-validation/</guid>
         
         
       </item>
@@ -3531,16 +3461,8 @@ Current Controlled Current Source (CCCS): &lt;script type=&quot;math/tex&quot;&g
 
 </description>
         <pubDate>Sun, 10 May 2015 00:00:00 -0400</pubDate>
-        <link>http://zacblanco.github.io//blog/physics/physics-IB-review</link>
-        <guid isPermaLink="true">http://zacblanco.github.io//blog/physics/physics-IB-review</guid>
-        
-        <category>physics</category>
-        
-        <category>rutgers</category>
-        
-        <category>spring 2015</category>
-        
-        <category>final review</category>
+        <link>http://zacblanco.github.io//blog/physics/physics-IB-review/</link>
+        <guid isPermaLink="true">http://zacblanco.github.io//blog/physics/physics-IB-review/</guid>
         
         
       </item>
@@ -3754,18 +3676,8 @@ Current Controlled Current Source (CCCS): &lt;script type=&quot;math/tex&quot;&g
 
 </description>
         <pubDate>Mon, 23 Mar 2015 00:00:00 -0400</pubDate>
-        <link>http://zacblanco.github.io//blog/machine-learning/neural-networks-and-backpropagation</link>
-        <guid isPermaLink="true">http://zacblanco.github.io//blog/machine-learning/neural-networks-and-backpropagation</guid>
-        
-        <category>neural networks</category>
-        
-        <category>machine learning</category>
-        
-        <category>AI</category>
-        
-        <category>artificial intelligence</category>
-        
-        <category>MIT</category>
+        <link>http://zacblanco.github.io//blog/machine-learning/neural-networks-and-backpropagation/</link>
+        <guid isPermaLink="true">http://zacblanco.github.io//blog/machine-learning/neural-networks-and-backpropagation/</guid>
         
         
       </item>
@@ -3845,18 +3757,8 @@ Current Controlled Current Source (CCCS): &lt;script type=&quot;math/tex&quot;&g
 
 </description>
         <pubDate>Wed, 18 Mar 2015 00:00:00 -0400</pubDate>
-        <link>http://zacblanco.github.io//blog/jekyll/hosting-with-github-pages</link>
-        <guid isPermaLink="true">http://zacblanco.github.io//blog/jekyll/hosting-with-github-pages</guid>
-        
-        <category>jekyll</category>
-        
-        <category>site</category>
-        
-        <category>poole</category>
-        
-        <category>web</category>
-        
-        <category>hosting</category>
+        <link>http://zacblanco.github.io//blog/jekyll/hosting-with-github-pages/</link>
+        <guid isPermaLink="true">http://zacblanco.github.io//blog/jekyll/hosting-with-github-pages/</guid>
         
         
       </item>
@@ -3923,18 +3825,8 @@ Current Controlled Current Source (CCCS): &lt;script type=&quot;math/tex&quot;&g
 
 </description>
         <pubDate>Tue, 17 Mar 2015 00:00:00 -0400</pubDate>
-        <link>http://zacblanco.github.io//blog/jekyll/adding-flavor-to-jekyll</link>
-        <guid isPermaLink="true">http://zacblanco.github.io//blog/jekyll/adding-flavor-to-jekyll</guid>
-        
-        <category>jekyll</category>
-        
-        <category>poole</category>
-        
-        <category>site</category>
-        
-        <category>css</category>
-        
-        <category>web</category>
+        <link>http://zacblanco.github.io//blog/jekyll/adding-flavor-to-jekyll/</link>
+        <guid isPermaLink="true">http://zacblanco.github.io//blog/jekyll/adding-flavor-to-jekyll/</guid>
         
         
       </item>

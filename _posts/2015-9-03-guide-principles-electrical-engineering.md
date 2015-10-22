@@ -1,10 +1,10 @@
 ---
 layout: post
 title: A Guide for Principles of EE I at Rutgers University
-tags: [ engineering, rutgers, fall 2015, principles of electrical engineering, guide, class, study, circuits, computer engineering, electrical engineering, engineers  ]
+keywords: engineering, rutgers, fall 2015, principles of electrical engineering, guide, class, study, circuits, computer engineering, electrical engineering, engineers, kirchhoff, voltage, current
 permalink: blog/electrical-engineering/rutgers-principles-electrical-engineering-1
 date: 3/9/2015
-Author: Zac Blanco
+author: Zac Blanco
 ---
 
 ## Introduction

@@ -1,9 +1,10 @@
 ---
 layout: post
 title: Neural Networks and the Backpropagation Algorithm
-permalink: "blog/machine-learning/neural-networks-and-backpropagation"
-tags: [neural networks, machine learning, AI, artificial intelligence, MIT]
-Author: Zac
+permalink: /blog/machine-learning/neural-networks-and-backpropagation/
+keywords: neural networks, machine learning, AI, artificial intelligence, MIT
+author: Zac
+description: An introduction to how neural networks work and the backpropagation algorithm
 ---
 
 The other day I had been looking up information on [machine learning](http://en.wikipedia.org/wiki/Machine_learning). I'm new to some of the topics in this field but I have been introduced to them before. I've always wanted to learn more. The idea of teaching a computer how to "learn" just seems intriguing to me.

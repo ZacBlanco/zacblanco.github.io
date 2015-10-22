@@ -12,13 +12,25 @@
       {{ page.title }} &middot; {{ site.title }}
     {% endif %}
   </title>
+  
+  {% if page.description %}
+  <meta name="description" content="{{ page.description }}">
+  {% endif %}
+  
+  {% if page.keywords %}
+  <meta name="keywords" content="{{ page.keywords }}">
+  {% endif %}
+
+  {% if page.author %}
+  <meta name="author" content="{{ page.author }}">
+  {% endif %}
 
   <!-- CSS -->
   <link rel="stylesheet" href="/css/poole.css">
   <link rel="stylesheet" href="/css/syntax.css">
 
   <!-- Icons -->
-  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ site.url }}/public/apple-touch-icon-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-precomposed.png">
   <link rel="shortcut icon" href="public/favicon.ico">
 
   <!-- RSS -->

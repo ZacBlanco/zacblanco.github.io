@@ -1,9 +1,10 @@
 ---
 layout: post
 title: "Quick Tips: XML Schemas and Validation"
-permalink: "blog/markup-language/xml-schema-validation"
-tags: [xml, java, schema, validation, namespaces, markup language]
-Author: Zac Blanco
+permalink: /blog/markup-language/xml-schema-validation/
+keywords: xml, java, schema, validation, namespaces, markup language
+author: Zac Blanco
+description: How to validate an XML file using a custom schema in Java.
 ---
 
 

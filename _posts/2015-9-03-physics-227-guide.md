@@ -1,10 +1,10 @@
 ---
 layout: post
 title: A (Somewhat) Comprehensive Guide to Physics 227 at Rutgers University
-tags: [physics, rutgers, fall 2015, electromagnetism, magnet, 227, undergraduate, physics.rutgers.edu, electrostatics, dipoles ]
-permalink: blog/physics/rutgers-physics-227-guide
+keywords: physics, rutgers, fall 2015, electromagnetism, magnet, 227, undergraduate, physics.rutgers.edu, electrostatics, dipoles, circuits, capacitance
+permalink: /blog/physics/rutgers-physics-227-guide
 date: 3/9/2015
-Author: Zac Blanco
+author: Zac Blanco
 ---
 
 So here we are again - another semester of introductory physics at Rutgers University, New Brunswick. This is the Fall 2015 semester. This will be a kind-of continuation from the Physics IB guide from the previous spring 2015 semester.

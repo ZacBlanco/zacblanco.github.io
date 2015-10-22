@@ -1,9 +1,11 @@
 ---
 layout: post
 title: The Glory of Markdown
-Author: Zac
+author: Zac
 date: 2015-10-18
 permalink: /blog/markup-languages/markdown-is-awesome/
+keywords: markdown, markup, text, writing, html
+description: This is why you should be using markdown _right now_!
 ---
 
 ![Markdown Logo](/assets/images/awesome-markdown/markdown-logo.png)

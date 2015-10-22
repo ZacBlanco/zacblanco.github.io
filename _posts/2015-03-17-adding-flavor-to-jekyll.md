@@ -1,8 +1,9 @@
 ---
 layout: post
 title: Adding Flavor to Jekyll
-permalink: "blog/jekyll/adding-flavor-to-jekyll"
-tags: [jekyll, poole, site, css, web]
+permalink: /blog/jekyll/adding-flavor-to-jekyll/
+keywords: jekyll, poole, site, css, web
+description: Making Jekyll cleaner by using the Poole theme on your Jekyll GitHub Pages site.
 ---
 
 So you've got your Jekyll site running, you can write some posts, but it still doesn't feel like your own. 
