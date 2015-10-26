@@ -827,10 +827,27 @@ We can simplify the model of the op-amp so that we can solve for the output volt
 
 ![Operational Amplifier Simplified 1](/assets/images/ee1-guide/op-amp-simplified-1.png)
 
+## October 26th 2015
 
+#### Continuing NOn-Inverting Amplifiers
 
+In short: The voltage output from an operational amplifier will stay between the two input voltages of $$-V_{cc}$$ and $$+V_{cc}$$.
 
+The slope of the range then depends on our Amplifier's gain, $$V_{cc}/A$$.
 
+- If an op-amp- is _not saturated_ we can analyze any circuit having an op-amp by replacing it by its equivalent circuit.
+ 
+> $$ V_o = \frac{A}{1 + FA} $$
+ 
+![Op Amp Diagram](/assets/images/ee1-guide/op-amp-diagram-1.png)
+ 
+> $$ V_o = ( 1 + \frac{R_1}{R_2})V_{IN} $$
+
+### Inverting Operational Amplifiers
+
+Now we're going to take a look at **inverting amplifiers**
+
+![Op Amp Diagram](/assets/images/ee1-guide/inverting-amp-1.png)
 
 
 

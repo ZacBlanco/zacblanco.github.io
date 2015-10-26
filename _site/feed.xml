@@ -6,8 +6,8 @@
 </description>
     <link>http://zacblanco.github.io//</link>
     <atom:link href="http://zacblanco.github.io//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 22 Oct 2015 13:31:19 -0400</pubDate>
-    <lastBuildDate>Thu, 22 Oct 2015 13:31:19 -0400</lastBuildDate>
+    <pubDate>Mon, 26 Oct 2015 10:55:25 -0400</pubDate>
+    <lastBuildDate>Mon, 26 Oct 2015 10:55:25 -0400</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -2292,6 +2292,34 @@ Current Controlled Current Source (CCCS): &lt;script type=&quot;math/tex&quot;&g
 &lt;p&gt;We can simplify the model of the op-amp so that we can solve for the output voltage as a function of the input voltage.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/ee1-guide/op-amp-simplified-1.png&quot; alt=&quot;Operational Amplifier Simplified 1&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;october-26th-2015&quot;&gt;October 26th 2015&lt;/h2&gt;
+
+&lt;h4 id=&quot;continuing-non-inverting-amplifiers&quot;&gt;Continuing NOn-Inverting Amplifiers&lt;/h4&gt;
+
+&lt;p&gt;In short: The voltage output from an operational amplifier will stay between the two input voltages of &lt;script type=&quot;math/tex&quot;&gt;-V_{cc}&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;+V_{cc}&lt;/script&gt;.&lt;/p&gt;
+
+&lt;p&gt;The slope of the range then depends on our Amplifier’s gain, &lt;script type=&quot;math/tex&quot;&gt;V_{cc}/A&lt;/script&gt;.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;If an op-amp- is &lt;em&gt;not saturated&lt;/em&gt; we can analyze any circuit having an op-amp by replacing it by its equivalent circuit.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;script type=&quot;math/tex; mode=display&quot;&gt;V_o = \frac{A}{1 + FA}&lt;/script&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/ee1-guide/op-amp-diagram-1.png&quot; alt=&quot;Op Amp Diagram&quot; /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;script type=&quot;math/tex; mode=display&quot;&gt;V_o = ( 1 + \frac{R_1}{R_2})V_{IN}&lt;/script&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;inverting-operational-amplifiers&quot;&gt;Inverting Operational Amplifiers&lt;/h3&gt;
+
+&lt;p&gt;Now we’re going to take a look at &lt;strong&gt;inverting amplifiers&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/ee1-guide/inverting-amp-1.png&quot; alt=&quot;Op Amp Diagram&quot; /&gt;&lt;/p&gt;
 
 </description>
         <pubDate>Thu, 03 Sep 2015 00:00:00 -0400</pubDate>
