@@ -878,6 +878,72 @@ In general:
 
 
 
+## October 26th 2015
+
+### Lecture 15 - Magnetic Fields of Moving Charges and Currents
+
+- Magnetic Field of a Moving Charge
+- Magnetic Field of CUrrents
+- Interaction between two wires
+
+When there is a positive charge that is moving with a constant velocty where $$ v << c $$
+
+Then we can say that the magnetic field is equal to: 
+
+> $$ \vec{B}(r) = \frac{\mu_0}{4\pi}q \frac{v\times r}{\hat{r}^2} = \frac{\mu_0}{4\pi}q \frac{v\times \vec{r}{r^3} $$
+
+Remember $$\hat{r}$$ is the unit vector, where $$\vec{r}$$ is the actual vector of $$r$$
+
+Also note that that $$\mu_0 = 4\pi \cdot 10^{-7} \frac{Ns^2}{C^2}$$
+
+### The Magnetic Field of Currents
+
+The charge carriers of a wire segment --> $$ Adl $$.
+
+> $$ q_{seg} = \Sigma_i q_i = neAdl $$
+
+> $$ I = nev_dA $$ -- > $$ q_seg\vec{v}_d = Id\vec{l} $$
+
+So then
+
+> $$ \vec{B}(r)  = \frac{\mu_0}{4\pi} I \frac{d\vec{l} \times \hat{r}}{r^2} $$
+
+This givens us the _Biot-Savart Law_ where
+
+> $$ \vec{B}(r)  = \frac{\mu_0}{4\pi} I \int \frac{ d\vec{l} \times (\vec{r} - \vec{r`} ) }{r^2} $$
+
+### The Magnetic Field of  Circular Loop With Current
+
+The field at the center of a circular loop:
+
+> $$ B(0) = \frac{\mu_0}{2R} $$
+
+What about with more wire turns??
+
+You simply multiply the above expression by $$N$$ the number of turns in the loop.
+
+### Magnetic Field inside of a Solenoid.
+
+$$ n = \frac{N}{L} $$ - The number of turns per unit of length of a solenoid.
+
+Field at the center of a solenoid is
+
+> $$  B = \mu_0nI $$
+
+Also, at the end of a solenoid
+
+> $$ B = \frac{\mu_0nI}{2} $$
+
+### Magnetic Field of a Straight Wire Segment
+
+For an infinitely long straight wire:
+
+> $$ B(r) = \frac{\mu_0I}{2\pi r} $$
+
+
+
+
+
 
 
 

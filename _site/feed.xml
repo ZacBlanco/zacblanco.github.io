@@ -6,8 +6,8 @@
 </description>
     <link>http://zacblanco.github.io//</link>
     <atom:link href="http://zacblanco.github.io//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 26 Oct 2015 10:55:25 -0400</pubDate>
-    <lastBuildDate>Mon, 26 Oct 2015 10:55:25 -0400</lastBuildDate>
+    <pubDate>Mon, 26 Oct 2015 21:06:38 -0400</pubDate>
+    <lastBuildDate>Mon, 26 Oct 2015 21:06:38 -0400</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -1247,6 +1247,89 @@ Regardless of the nature of charge carriers, (both positive and negative carrier
   &lt;li&gt;Unlike electric dipoles, magnetic poles cannot be separated.&lt;/li&gt;
   &lt;li&gt;Magnets have no effect on stationary charges.&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;h2 id=&quot;october-26th-2015&quot;&gt;October 26th 2015&lt;/h2&gt;
+
+&lt;h3 id=&quot;lecture-15---magnetic-fields-of-moving-charges-and-currents&quot;&gt;Lecture 15 - Magnetic Fields of Moving Charges and Currents&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Magnetic Field of a Moving Charge&lt;/li&gt;
+  &lt;li&gt;Magnetic Field of CUrrents&lt;/li&gt;
+  &lt;li&gt;Interaction between two wires&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;When there is a positive charge that is moving with a constant velocty where &lt;script type=&quot;math/tex&quot;&gt;% &lt;![CDATA[
+v &lt;&lt; c %]]&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;Then we can say that the magnetic field is equal to:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;script type=&quot;math/tex; mode=display&quot;&gt;\vec{B}(r) = \frac{\mu_0}{4\pi}q \frac{v\times r}{\hat{r}^2} = \frac{\mu_0}{4\pi}q \frac{v\times \vec{r}{r^3}&lt;/script&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Remember &lt;script type=&quot;math/tex&quot;&gt;\hat{r}&lt;/script&gt; is the unit vector, where &lt;script type=&quot;math/tex&quot;&gt;\vec{r}&lt;/script&gt; is the actual vector of &lt;script type=&quot;math/tex&quot;&gt;r&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;Also note that that &lt;script type=&quot;math/tex&quot;&gt;\mu_0 = 4\pi \cdot 10^{-7} \frac{Ns^2}{C^2}&lt;/script&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;the-magnetic-field-of-currents&quot;&gt;The Magnetic Field of Currents&lt;/h3&gt;
+
+&lt;p&gt;The charge carriers of a wire segment –&amp;gt; &lt;script type=&quot;math/tex&quot;&gt;Adl&lt;/script&gt;.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;script type=&quot;math/tex; mode=display&quot;&gt;q_{seg} = \Sigma_i q_i = neAdl&lt;/script&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;I = nev_dA&lt;/script&gt; – &amp;gt; &lt;script type=&quot;math/tex&quot;&gt;q_seg\vec{v}_d = Id\vec{l}&lt;/script&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;So then&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;script type=&quot;math/tex; mode=display&quot;&gt;\vec{B}(r)  = \frac{\mu_0}{4\pi} I \frac{d\vec{l} \times \hat{r}}{r^2}&lt;/script&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;This givens us the &lt;em&gt;Biot-Savart Law&lt;/em&gt; where&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;script type=&quot;math/tex; mode=display&quot;&gt;\vec{B}(r)  = \frac{\mu_0}{4\pi} I \int \frac{ d\vec{l} \times (\vec{r} - \vec{r`} ) }{r^2}&lt;/script&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;the-magnetic-field-of--circular-loop-with-current&quot;&gt;The Magnetic Field of  Circular Loop With Current&lt;/h3&gt;
+
+&lt;p&gt;The field at the center of a circular loop:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;script type=&quot;math/tex; mode=display&quot;&gt;B(0) = \frac{\mu_0}{2R}&lt;/script&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;What about with more wire turns??&lt;/p&gt;
+
+&lt;p&gt;You simply multiply the above expression by &lt;script type=&quot;math/tex&quot;&gt;N&lt;/script&gt; the number of turns in the loop.&lt;/p&gt;
+
+&lt;h3 id=&quot;magnetic-field-inside-of-a-solenoid&quot;&gt;Magnetic Field inside of a Solenoid.&lt;/h3&gt;
+
+&lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;n = \frac{N}{L}&lt;/script&gt; - The number of turns per unit of length of a solenoid.&lt;/p&gt;
+
+&lt;p&gt;Field at the center of a solenoid is&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;script type=&quot;math/tex; mode=display&quot;&gt;B = \mu_0nI&lt;/script&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Also, at the end of a solenoid&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;script type=&quot;math/tex; mode=display&quot;&gt;B = \frac{\mu_0nI}{2}&lt;/script&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;magnetic-field-of-a-straight-wire-segment&quot;&gt;Magnetic Field of a Straight Wire Segment&lt;/h3&gt;
+
+&lt;p&gt;For an infinitely long straight wire:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;script type=&quot;math/tex; mode=display&quot;&gt;B(r) = \frac{\mu_0I}{2\pi r}&lt;/script&gt;
+&lt;/blockquote&gt;
 
 </description>
         <pubDate>Thu, 03 Sep 2015 00:00:00 -0400</pubDate>
