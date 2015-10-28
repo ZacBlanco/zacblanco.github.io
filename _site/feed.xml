@@ -6,9 +6,116 @@
 </description>
     <link>http://zacblanco.github.io//</link>
     <atom:link href="http://zacblanco.github.io//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 26 Oct 2015 21:06:38 -0400</pubDate>
-    <lastBuildDate>Mon, 26 Oct 2015 21:06:38 -0400</lastBuildDate>
+    <pubDate>Wed, 28 Oct 2015 18:21:55 -0400</pubDate>
+    <lastBuildDate>Wed, 28 Oct 2015 18:21:55 -0400</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Intro to Hadoop Workshop</title>
+        <description>&lt;h2 id=&quot;outline&quot;&gt;Outline&lt;/h2&gt;
+
+&lt;p&gt;The following is an outline of events for this workshop&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Introduction&lt;/li&gt;
+  &lt;li&gt;Install virtualbox + download sandbox&lt;/li&gt;
+  &lt;li&gt;Intro to Hadoop Presentation&lt;/li&gt;
+  &lt;li&gt;Workshop&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;downloading--installing-virtualbox&quot;&gt;Downloading + Installing VirtualBox&lt;/h2&gt;
+
+&lt;p&gt;Virtualbox is free virtualization software developed by Oracle. You will need to download and install the software from the website here:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;a href=&quot;https://www.virtualbox.org/wiki/Downloads&quot;&gt;Virtualbox Download&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h5 id=&quot;important&quot;&gt;IMPORTANT&lt;/h5&gt;
+
+&lt;p&gt;If you’re running on an intel processor, please make sure you’ve enabled &lt;strong&gt;Intel’s Vt-x&lt;/strong&gt; virtualization technology in your &lt;strong&gt;computer’s BIOS&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;If you don’t know how to enable this, please search on google or ask someone else nearby.&lt;/p&gt;
+
+&lt;h2 id=&quot;downloading-the-sandbox&quot;&gt;Downloading The Sandbox&lt;/h2&gt;
+
+&lt;p&gt;You must download the &lt;a href=&quot;http://s3.amazonaws.com/hortonassets/2.3.2/HDP_2.3.2_virtualbox.ova&quot;&gt;Sandbox here&lt;/a&gt; if you haven’t already.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt; you will need a &lt;em&gt;MINIMUM&lt;/em&gt; of 8GB of RAM to run this. 16GB is recommended. I will instruct you on which settings to change in Virtualbox once you&lt;/p&gt;
+
+&lt;h3 id=&quot;importing-the-vm-into-virtualbox&quot;&gt;Importing the VM into VirtualBox&lt;/h3&gt;
+
+&lt;p&gt;Open virtualbox, then go to &lt;strong&gt;File &amp;gt; Import Appliance&lt;/strong&gt;. From here select the &lt;code&gt;.ova&lt;/code&gt; file that you just downloaded.&lt;/p&gt;
+
+&lt;p&gt;It should import within a minute or two. Sit tight now and we’ll get the sandbox up and running after the presentation&lt;/p&gt;
+
+&lt;h2 id=&quot;presentation&quot;&gt;Presentation&lt;/h2&gt;
+
+&lt;p&gt;The presentation will consist of:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Information detailing the history of the Apache Hadoop project&lt;/li&gt;
+  &lt;li&gt;A general overview of what Hadoop really does&lt;/li&gt;
+  &lt;li&gt;Why we should care about hadoop&lt;/li&gt;
+  &lt;li&gt;Learn about the architecture of a cluster&lt;/li&gt;
+  &lt;li&gt;Learn about the architecture of Hadoop services&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;workshop&quot;&gt;Workshop&lt;/h2&gt;
+
+&lt;p&gt;First off, you’ll need the &lt;a href=&quot;/assets/hadoop-workshop/geolocation.zip&quot;&gt;dataset here&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;You can find the instructions for the whole workshop &lt;a href=&quot;https://www.outlearn.com/learn/hortonworks/hortonworks-tutorial/1&quot;&gt;here&lt;/a&gt;, but we’re going to work through the entire tutorial together. However you may work ahead if you like.&lt;/p&gt;
+
+&lt;p&gt;If you computer has only 8GB of RAM, please lower the RAM for the Sandbox VM:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Make sure your Virtual Machine is OFF before doing this&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Open virtualbox&lt;/li&gt;
+  &lt;li&gt;Right click on the sandbox&lt;/li&gt;
+  &lt;li&gt;Open &lt;strong&gt;Settings&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;Navigate to &lt;strong&gt;System &amp;gt; Motherboard&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;Use the slider and set the RAM to about 6000 MB&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;please-ask-questions-if-you-need-help-or-are-confused&quot;&gt;Please ask questions if you need help or are confused&lt;/h1&gt;
+
+</description>
+        <pubDate>Wed, 28 Oct 2015 00:00:00 -0400</pubDate>
+        <link>http://zacblanco.github.io//hadoop-workshop/</link>
+        <guid isPermaLink="true">http://zacblanco.github.io//hadoop-workshop/</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Running Time Analysis for Sorted Sequential Search</title>
+        <description>&lt;h2 id=&quot;sequential-search-on-a-sorted-list-of-numbers&quot;&gt;Sequential Search on a Sorted List of Numbers&lt;/h2&gt;
+
+&lt;p&gt;One question that many people struggled with (including myself) on the first data structures midterm involved a problem similar to the following:&lt;/p&gt;
+
+&lt;p&gt;Given the following algorithm for sequential search on a sorted list of numbers, derive the average running time for this algorithm on&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;lineno&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;boolean&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;search&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;target&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;2&lt;/span&gt;   &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;3&lt;/span&gt;     &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;target&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;])&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;4&lt;/span&gt;     &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;target&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;])&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;5&lt;/span&gt;   &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;6&lt;/span&gt;   &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;7&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;A successful search (one where the item is found).&lt;/li&gt;
+  &lt;li&gt;A failed search (where the item is &lt;strong&gt;not&lt;/strong&gt; found).&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+        <pubDate>Wed, 21 Oct 2015 19:22:41 -0400</pubDate>
+        <link>http://zacblanco.github.io//blog/data-structures/sorted-sequential-search-analysis</link>
+        <guid isPermaLink="true">http://zacblanco.github.io//blog/data-structures/sorted-sequential-search-analysis</guid>
+        
+        
+      </item>
     
       <item>
         <title>The Glory of Markdown</title>
@@ -3870,220 +3977,6 @@ Current Controlled Current Source (CCCS): &lt;script type=&quot;math/tex&quot;&g
         <pubDate>Wed, 18 Mar 2015 00:00:00 -0400</pubDate>
         <link>http://zacblanco.github.io//blog/jekyll/hosting-with-github-pages/</link>
         <guid isPermaLink="true">http://zacblanco.github.io//blog/jekyll/hosting-with-github-pages/</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Adding Flavor to Jekyll</title>
-        <description>&lt;p&gt;So you’ve got your Jekyll site running, you can write some posts, but it still doesn’t feel like your own.&lt;/p&gt;
-
-&lt;p&gt;This is where Jekyll can be awesome, but also slightly confusing.&lt;/p&gt;
-
-&lt;p&gt;At the core, Jekyll takes a markdown file and uses it’s templating system called &lt;strong&gt;liquid&lt;/strong&gt; to help insert html and structure pages, and all of this is then converted into static html files that can be served on a web server.&lt;/p&gt;
-
-&lt;p&gt;For the rest of this post I’m going to assume that you at least know how to build your site with Jekyll and serve it locally to your web browser.&lt;/p&gt;
-
-&lt;h2 id=&quot;liquid&quot;&gt;Liquid&lt;/h2&gt;
-
-&lt;p&gt;I’m going to breeze over liquid right now, but I suggest that you take a look at &lt;a href=&quot;http://jekyllrb.com/docs/templates/&quot;&gt;the liquid templating features in Jekyll&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;To be brief, &lt;strong&gt;liquid&lt;/strong&gt; allows us to pull sitewide variables and html code and place them right into our pages with ease.&lt;/p&gt;
-
-&lt;p&gt;In your posts and any pages on  your Jekyll site by calling sitewide variables to insert values into your pages. In one of your posts, try adding the following.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;##### [Homepage]({{ site.url  }})
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;The previous code should produce a link that directs you to your blog’s homepage. See below for it in action!&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;h5 id=&quot;homepagehttpzacblancogithubio&quot;&gt;&lt;a href=&quot;http://zacblanco.github.io&quot;&gt;Homepage&lt;/a&gt;&lt;/h5&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=&quot;changing-the-style-of-your-site&quot;&gt;Changing the Style of Your Site&lt;/h2&gt;
-
-&lt;p&gt;Jekyll has a whole host of themes that can change the look of your site. This includes downloading and installing prebuilt themes, or diving straight in to the &lt;code&gt;sass&lt;/code&gt;, &lt;code&gt;css&lt;/code&gt;, and &lt;code&gt;_layouts&lt;/code&gt; foldera of the site to change how it looks.&lt;/p&gt;
-
-&lt;h3 id=&quot;sass-and-css&quot;&gt;sass and CSS&lt;/h3&gt;
-
-&lt;p&gt;No, this sass is not the same thing that you gave to your mother when you were a teenager. Sass is a version of css that can be run through a compiler  to compile css. If you’d like to learn more about sass, &lt;a href=&quot;http://sass-lang.com/&quot;&gt;click here&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Take a look inside the &lt;code&gt;css&lt;/code&gt; or &lt;code&gt;_sass&lt;/code&gt; folder within the directory of your jekyll site. Although these files are not &lt;code&gt;.css&lt;/code&gt; files, you can still write normal css, and if you know sass, you can write sass too. The files that you modify will change the corresponding sitewide visuals based on those files.&lt;/p&gt;
-
-&lt;h3 id=&quot;layouts&quot;&gt;_Layouts&lt;/h3&gt;
-
-&lt;p&gt;The &lt;code&gt;_layouts&lt;/code&gt; folder is where you can write html templates for certain types of pages on your site. There should currently be at least one layout with the name &lt;code&gt;default&lt;/code&gt;, &lt;code&gt;page&lt;/code&gt;, and &lt;code&gt;post&lt;/code&gt;. These names are the same names you will specify in the &lt;code&gt;yaml&lt;/code&gt; at the beginning of a post, or page that you write. An example of the &lt;code&gt;yaml&lt;/code&gt; header for this page is:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;    ---
-    layout: post
-    title: Adding Flavor to Jekyll
-    tags: [jekyll, poole, site, css, web]
-    ---
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;We can see that the layout type for this post is &lt;code&gt;post&lt;/code&gt; which tells Jekyll to use the &lt;code&gt;post.html&lt;/code&gt; layout to format and style this page. You can also edit these files to change the look of your site.&lt;/p&gt;
-
-&lt;h3 id=&quot;poole&quot;&gt;Poole&lt;/h3&gt;
-
-&lt;p&gt;Personally on this site I use a theme called &lt;a href=&quot;http://getpoole.com/&quot;&gt;Poole&lt;/a&gt;. If you would like to use this theme for your own site you can download and replace all of the &lt;code&gt;layout&lt;/code&gt; and &lt;code&gt;css&lt;/code&gt; files with the ones from Poole. It’s a very simple and easy to use theme. Follow the documentation for the installation procedure.&lt;/p&gt;
-
-&lt;h3 id=&quot;wrapping-up&quot;&gt;Wrapping Up&lt;/h3&gt;
-
-&lt;p&gt;Hopefully from here you can better understand how Jekyll generates the site pages on your site. A bit of research and some work can make your site unique! You can also add new features and pages too by using the layouts and css files too.&lt;/p&gt;
-
-&lt;p&gt;I hope now that you have enough knowledge about the structure of a Jekyll site to be able to customize it to your liking.&lt;/p&gt;
-
-</description>
-        <pubDate>Tue, 17 Mar 2015 00:00:00 -0400</pubDate>
-        <link>http://zacblanco.github.io//blog/jekyll/adding-flavor-to-jekyll/</link>
-        <guid isPermaLink="true">http://zacblanco.github.io//blog/jekyll/adding-flavor-to-jekyll/</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Building a Site with Jekyll</title>
-        <description>&lt;p&gt;So I when I first started trying to make a blog I didn’t realize how difficult it would actually be to find something that worked. No other free platform contained the features that I wanted. And as a college student we should know that, free = good.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt; is no perfect solution, but it does provide a host of features and is much more open than any other option I could find, which is why I opted to switch.&lt;/p&gt;
-
-&lt;p&gt;For a quick intro, Jekyll straight out of the box really isn’t anything special. Basically it takes some text that you write up for your posts and converts them into some static html files that can be served to a user.&lt;/p&gt;
-
-&lt;p&gt;Posts are written in &lt;a href=&quot;http://en.wikipedia.org/wiki/Markdown&quot;&gt;Markdown&lt;/a&gt; which is a really handy markup language. Great for writing posts, but it does have a bit of a learning curve and takes some time to get used to.&lt;/p&gt;
-
-&lt;p&gt;Another great thing about using Jekyll is that there’s quite a bit of resources, and its open source! It’s very flexible, you can use plugins, create new themes, and add commenting features. This list just goes on!&lt;/p&gt;
-
-&lt;p&gt;Creating a site from scratch with Jekyll is definitely not for the faint-hearted. If you’re willing to put the time and effort in you can come out with a blog customized to your very liking including only the features you would like. It’s a very hands-on get-dirty-with-the-code project, but it’s a lot of fun and you might learn a few things along the way.&lt;/p&gt;
-
-&lt;p&gt;The rest of this post I’ll be showing you how exactly to install and run Jekyll to &lt;em&gt;quickly&lt;/em&gt; create your own static website.&lt;/p&gt;
-
-&lt;h1 id=&quot;prerequisites&quot;&gt;Prerequisites&lt;/h1&gt;
-
-&lt;h5 id=&quot;please-download-ruby-first-then-rubygems&quot;&gt;&lt;strong&gt;Please download ruby first, then RubyGems&lt;/strong&gt;&lt;/h5&gt;
-
-&lt;p&gt;You’re going to need &lt;strong&gt;ruby&lt;/strong&gt; installed on your machine. If you dont have ruby installed &lt;a href=&quot;https://www.ruby-lang.org/en/downloads/&quot;&gt;you can get it here&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;You’re also going to have to install &lt;a href=&quot;https://rubygems.org/pages/download&quot;&gt;RubyGems&lt;/a&gt;. It’s package manager for ruby.&lt;/p&gt;
-
-&lt;p&gt;Now I’m going to assume you know how to install these or already have them on your system. Follow the documentation provided online or do a quick google search if you’re having any trouble.&lt;/p&gt;
-
-&lt;p&gt;Once you’ve got them both installed, open up a command terminal and try this command&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;~ user$ ruby --version
-~ user$ gem --version
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;If everything works correctly you should get some type of outputs similar to this:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;ruby 2.0.0p481 (2014-05-08 revision 45883) [universal.x86_64-darwin14]
-2.0.14
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Great! now we have the two essentials installed.&lt;/p&gt;
-
-&lt;h1 id=&quot;getting-jekyll&quot;&gt;Getting Jekyll&lt;/h1&gt;
-
-&lt;p&gt;With a valid internet connection and a command terminal, use the following commands to install Jekyll on your machine.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;~ user$ sudo gem install jekyll
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Check now that you have the latest version of Jekyll installed by using&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;~ user$ jekyll --version
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h1 id=&quot;creating-your-first-site&quot;&gt;Creating your first site&lt;/h1&gt;
-
-&lt;p&gt;Here’s where things start getting fun.&lt;/p&gt;
-
-&lt;p&gt;Using your terminal, navigate to the chosen directory on your filesystem where you would like to keep your code, site, and any other files &lt;em&gt;(Preferably a location where you might keep some repositories)&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;Assuming you’ve already navigated there perform the following&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;~/location/ user$ jekyll new &amp;lt;site-name&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Or if you’d like to have jekyll generate the files in the folder you’re currently located in&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;~/site-name/ user$ jekyll new .
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Now if you use ls command or view that directory you just created inside a file manager you should see something similar to the following&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;_config.yml	_layouts    _sass	css		index.html
-_includes	_posts		about.md	feed.xml
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h5 id=&quot;configyml&quot;&gt;_config.yml&lt;/h5&gt;
-
-&lt;p&gt;This file is where we store some sitewide variables, like author name, baseurl, twitter and GitHub handles, etc. Edit the variables in here as you like.&lt;/p&gt;
-
-&lt;h5 id=&quot;posts&quot;&gt;_posts&lt;/h5&gt;
-
-&lt;p&gt;This is where you’re going to write posts in the Markdown syntax. I suggest an editor than can support previews of Markdown. Personally I use &lt;a href=&quot;http://brackets.io&quot;&gt;Adobe Brackets&lt;/a&gt; with the Markdown plugin to preview. More on all of this later&lt;/p&gt;
-
-&lt;h5 id=&quot;aboutmd&quot;&gt;about.md&lt;/h5&gt;
-
-&lt;p&gt;This is a markdown file you can edit to change the “About” page on your site.&lt;/p&gt;
-
-&lt;h5 id=&quot;includes-layouts-sass-css&quot;&gt;_includes, _layouts, _sass, css&lt;/h5&gt;
-
-&lt;p&gt;These are all other places where you can change configurations and views of your site. The layout and css can all be found under these places. We’re not really going to edit those right now.&lt;/p&gt;
-
-&lt;h1 id=&quot;making-your-first-post&quot;&gt;Making your first post&lt;/h1&gt;
-
-&lt;p&gt;Lets navigate to our folder and create a new post. Create a new file and name is something following the scheme: &lt;code&gt;YYYY-MM-DD-your-title.md&lt;/code&gt;. Open this new file in a text editor.&lt;/p&gt;
-
-&lt;p&gt;Inside we’re going to put:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;---
-layout: post
-title: Hello World!
----
-
-# Howdy there partner
-Congratulations! You&#39;ve made it to[site](site.url)
-
-We&#39;re ust getting started here.
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Now save your document and return to the terminal that has navigated inside of your site’s directory.&lt;/p&gt;
-
-&lt;h1 id=&quot;building-the-site&quot;&gt;Building the Site&lt;/h1&gt;
-
-&lt;p&gt;Run the following command&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;~/location/ user$ jekyll build
-~/location/ user$ jekyll serve
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Leave the terminal open. Open up a new tab in your browser of choice and navigate to &lt;code&gt;http://localhost:4000&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;You should see a home page with a link to Jekyll’s default page for new sites, and your own post we just wrote!&lt;/p&gt;
-
-&lt;p&gt;Click on the post to make sure it works there. If it does, congratulations! you’ve made your first blog post using Jekyll&lt;/p&gt;
-
-&lt;p&gt;There’s tons more you can do with themes, pages, and other sweet customizations for your shiny new blog, but I’ll go into those at a later date.&lt;/p&gt;
-
-&lt;p&gt;For now, play around with Jekyll and get a feel for the software. It’s something interesting that I’ve never encountered before and is definitely worth a try.&lt;/p&gt;
-
-&lt;p&gt;Happy blogging!&lt;/p&gt;
-</description>
-        <pubDate>Wed, 11 Mar 2015 00:00:00 -0400</pubDate>
-        <link>http://zacblanco.github.io//blog/jekyll/building-a-site-with-jekyll</link>
-        <guid isPermaLink="true">http://zacblanco.github.io//blog/jekyll/building-a-site-with-jekyll</guid>
-        
-        <category>jekyll</category>
-        
-        <category>hyde</category>
-        
-        <category>site</category>
-        
-        <category>blog</category>
-        
-        <category>markdown</category>
         
         
       </item>
