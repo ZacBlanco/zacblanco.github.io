@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>zacblanco.github.io</title>
+    <title>Zac Blanco</title>
     <description>A personal site to outline my professional experience, as well as showcase my small part-time projects. I enjoy writing posts from time to time whenever I learn something new or feel like sharing things with the world.
 </description>
-    <link>http://zacblanco.github.io//</link>
-    <atom:link href="http://zacblanco.github.io//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 29 Oct 2015 11:20:14 -0400</pubDate>
-    <lastBuildDate>Thu, 29 Oct 2015 11:20:14 -0400</lastBuildDate>
+    <link>http://blanco.io//</link>
+    <atom:link href="http://blanco.io//feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Thu, 29 Oct 2015 12:52:24 -0400</pubDate>
+    <lastBuildDate>Thu, 29 Oct 2015 12:52:24 -0400</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -164,8 +164,8 @@ final_data &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k
 
 </description>
         <pubDate>Wed, 28 Oct 2015 00:00:00 -0400</pubDate>
-        <link>http://zacblanco.github.io//hadoop-workshop/</link>
-        <guid isPermaLink="true">http://zacblanco.github.io//hadoop-workshop/</guid>
+        <link>http://blanco.io//hadoop-workshop/</link>
+        <guid isPermaLink="true">http://blanco.io//hadoop-workshop/</guid>
         
         
       </item>
@@ -222,8 +222,8 @@ final_data &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k
 
 </description>
         <pubDate>Sun, 18 Oct 2015 00:00:00 -0400</pubDate>
-        <link>http://zacblanco.github.io//blog/markup-languages/markdown-is-awesome/</link>
-        <guid isPermaLink="true">http://zacblanco.github.io//blog/markup-languages/markdown-is-awesome/</guid>
+        <link>http://blanco.io//blog/markup-languages/markdown-is-awesome/</link>
+        <guid isPermaLink="true">http://blanco.io//blog/markup-languages/markdown-is-awesome/</guid>
         
         
       </item>
@@ -263,8 +263,8 @@ final_data &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k
 &lt;p&gt;&lt;img src=&quot;../../../assets/images/hortonworks-review/hadoop-logo-1.png&quot; alt=&quot;Hadoop Logo&quot; /&gt;&lt;/p&gt;
 </description>
         <pubDate>Sat, 12 Sep 2015 00:00:00 -0400</pubDate>
-        <link>http://zacblanco.github.io//blog/professional/my-experience-at-hortonworks</link>
-        <guid isPermaLink="true">http://zacblanco.github.io//blog/professional/my-experience-at-hortonworks</guid>
+        <link>http://blanco.io//blog/professional/my-experience-at-hortonworks</link>
+        <guid isPermaLink="true">http://blanco.io//blog/professional/my-experience-at-hortonworks</guid>
         
         
       </item>
@@ -1604,8 +1604,8 @@ r &lt; R %]]&gt;&lt;/script&gt; then we have &lt;script type=&quot;math/tex&quot
 
 </description>
         <pubDate>Thu, 03 Sep 2015 00:00:00 -0400</pubDate>
-        <link>http://zacblanco.github.io//blog/physics/rutgers-physics-227-guide</link>
-        <guid isPermaLink="true">http://zacblanco.github.io//blog/physics/rutgers-physics-227-guide</guid>
+        <link>http://blanco.io//blog/physics/rutgers-physics-227-guide</link>
+        <guid isPermaLink="true">http://blanco.io//blog/physics/rutgers-physics-227-guide</guid>
         
         
       </item>
@@ -2677,8 +2677,8 @@ Current Controlled Current Source (CCCS): &lt;script type=&quot;math/tex&quot;&g
 
 </description>
         <pubDate>Thu, 03 Sep 2015 00:00:00 -0400</pubDate>
-        <link>http://zacblanco.github.io//blog/electrical-engineering/rutgers-principles-electrical-engineering-1</link>
-        <guid isPermaLink="true">http://zacblanco.github.io//blog/electrical-engineering/rutgers-principles-electrical-engineering-1</guid>
+        <link>http://blanco.io//blog/electrical-engineering/rutgers-principles-electrical-engineering-1</link>
+        <guid isPermaLink="true">http://blanco.io//blog/electrical-engineering/rutgers-principles-electrical-engineering-1</guid>
         
         
       </item>
@@ -2838,8 +2838,8 @@ Current Controlled Current Source (CCCS): &lt;script type=&quot;math/tex&quot;&g
 
 </description>
         <pubDate>Mon, 18 May 2015 00:00:00 -0400</pubDate>
-        <link>http://zacblanco.github.io//blog/markup-language/xml-schema-validation/</link>
-        <guid isPermaLink="true">http://zacblanco.github.io//blog/markup-language/xml-schema-validation/</guid>
+        <link>http://blanco.io//blog/markup-language/xml-schema-validation/</link>
+        <guid isPermaLink="true">http://blanco.io//blog/markup-language/xml-schema-validation/</guid>
         
         
       </item>
@@ -3843,8 +3843,8 @@ Current Controlled Current Source (CCCS): &lt;script type=&quot;math/tex&quot;&g
 
 </description>
         <pubDate>Sun, 10 May 2015 00:00:00 -0400</pubDate>
-        <link>http://zacblanco.github.io//blog/physics/physics-IB-review/</link>
-        <guid isPermaLink="true">http://zacblanco.github.io//blog/physics/physics-IB-review/</guid>
+        <link>http://blanco.io//blog/physics/physics-IB-review/</link>
+        <guid isPermaLink="true">http://blanco.io//blog/physics/physics-IB-review/</guid>
         
         
       </item>
@@ -4058,8 +4058,8 @@ Current Controlled Current Source (CCCS): &lt;script type=&quot;math/tex&quot;&g
 
 </description>
         <pubDate>Mon, 23 Mar 2015 00:00:00 -0400</pubDate>
-        <link>http://zacblanco.github.io//blog/machine-learning/neural-networks-and-backpropagation/</link>
-        <guid isPermaLink="true">http://zacblanco.github.io//blog/machine-learning/neural-networks-and-backpropagation/</guid>
+        <link>http://blanco.io//blog/machine-learning/neural-networks-and-backpropagation/</link>
+        <guid isPermaLink="true">http://blanco.io//blog/machine-learning/neural-networks-and-backpropagation/</guid>
         
         
       </item>
@@ -4139,8 +4139,8 @@ Current Controlled Current Source (CCCS): &lt;script type=&quot;math/tex&quot;&g
 
 </description>
         <pubDate>Wed, 18 Mar 2015 00:00:00 -0400</pubDate>
-        <link>http://zacblanco.github.io//blog/jekyll/hosting-with-github-pages/</link>
-        <guid isPermaLink="true">http://zacblanco.github.io//blog/jekyll/hosting-with-github-pages/</guid>
+        <link>http://blanco.io//blog/jekyll/hosting-with-github-pages/</link>
+        <guid isPermaLink="true">http://blanco.io//blog/jekyll/hosting-with-github-pages/</guid>
         
         
       </item>
@@ -4169,7 +4169,7 @@ Current Controlled Current Source (CCCS): &lt;script type=&quot;math/tex&quot;&g
 &lt;p&gt;The previous code should produce a link that directs you to your blog’s homepage. See below for it in action!&lt;/p&gt;
 
 &lt;blockquote&gt;
-  &lt;h5 id=&quot;homepagehttpzacblancogithubio&quot;&gt;&lt;a href=&quot;http://zacblanco.github.io&quot;&gt;Homepage&lt;/a&gt;&lt;/h5&gt;
+  &lt;h5 id=&quot;homepagehttpblancoio&quot;&gt;&lt;a href=&quot;http://blanco.io&quot;&gt;Homepage&lt;/a&gt;&lt;/h5&gt;
 &lt;/blockquote&gt;
 
 &lt;h2 id=&quot;changing-the-style-of-your-site&quot;&gt;Changing the Style of Your Site&lt;/h2&gt;
@@ -4207,8 +4207,8 @@ Current Controlled Current Source (CCCS): &lt;script type=&quot;math/tex&quot;&g
 
 </description>
         <pubDate>Tue, 17 Mar 2015 00:00:00 -0400</pubDate>
-        <link>http://zacblanco.github.io//blog/jekyll/adding-flavor-to-jekyll/</link>
-        <guid isPermaLink="true">http://zacblanco.github.io//blog/jekyll/adding-flavor-to-jekyll/</guid>
+        <link>http://blanco.io//blog/jekyll/adding-flavor-to-jekyll/</link>
+        <guid isPermaLink="true">http://blanco.io//blog/jekyll/adding-flavor-to-jekyll/</guid>
         
         
       </item>
