@@ -941,6 +941,89 @@ For an infinitely long straight wire:
 > $$ B(r) = \frac{\mu_0I}{2\pi r} $$
 
 
+## Lecture 16 - October 29th 2015
+
+### The Circulation of B
+
+Remember the _Biot Savart Law_: $$ B(r) = \frac{\mu_0I}{2\pi r} $$
+
+Now what happens when we integrate this part around the path of a magnetic field loop? It turns out, that this will always be equal to: 
+- $$ \int B(r) \cdot dl = \mu_0I $$
+
+Now let's think about taking this line integral over different parts of a circular magnetic field.
+
+Any integral over a portion perpendicular to the magnetic field will be 0. If we take any integrals around a circular magnetic field for a **portion of it that does not contain any current, the circulation of loop will be 0**
+
+### Ampere's Law
+
+**Magnetostatics**: both B and I are time independent.
+
+Circulation of the magnetic field around a loop:
+
+> $$ \int B(r) \cdot dl = \mu_0I_{encl} $$.
+
+"Discrete" enclosed currents give us $$ I_{encl} = \Sigma_i I_i $$
+
+The line integral could go around the loop in either direction. The sign of the currents is determined by the right-hand-rule: the curled fingers are aligned along $$dl$$, the thumb points in the direction of positive currents
+
+Basically we can sum the currents that pass through a loop
+
+### Continuous Current Distribution
+
+The total current enclosed depends on the local current density $$ \vec{J}(\vec{r}) $$.
+
+The total current $$ I_{encl} = \int_{surface} \vec{J}(\vec{r}) \cdot d\vec{A} $$
+
+We can then say that $$ \int B(r) \cdot dl = \mu_0 \int \vec{J}(\vec{r}) \cdot d\vec{A} $$
+
+### Gauss' Law v.s. Ampere's Law
+
+
+| Gauss' Law | Ampere's Law |
+|------------|--------------|
+| Gives a relationship between surface integral | Gives a relationship between a line integral|
+|Symmetry: if a charge distribution is unchanged by rotation, translations, and reflections, then the E field is unchanged | If a current distribution is unchanged by rotations and translations, then B field is also unchanged |
+|Useful | Symmetries|
+|Axial, spherical, infinite slab (plane) | Axial, infinite solenoid, infinite slab (plane)| 
+
+**Mirror Rule for Magnetic Fields**:
+
+> If we can slice a current distribution with a mirror in such a way that the distrbution looks exactly the same after we insert the mirror as before, then $$\vec{B}$$ at any point on the mirrors surface will be perpendicular to the plane.
+
+## Axial and Translational Symmetry
+
+An infinite cylinder carrying a current whose density depends at most on the distance $$r$$ from the axis.
+
+Symmetries of the current distribution:
+
+- Rotations around the axis
+- Translations along the axis
+- Reflections across any plane containing the axis
+
+$$B(r)$$ is tangest to a curcle centered at the axis and depends only on the distance from the axis
+
+
+**Amperian Loop**: a circle centered at the axis.
+
+let's assume we have a circular wire of radius R with a uniform current density $$j = \frac{I}{\pi R^2} $$
+
+So now for $$ r < R $$ then we have $$B(r) = \frac{\mu_0Ir}{2\pi R^2} $$
+
+Now for $$ R > r $$, then we can say $$ B(r) = \frac{\mu_0I}{2\pi r} $$
+
+### Field of an Infinitely Long Solenoid
+
+**Approximation**: The solenoid's radius is much smaller than its length, and we ecaluate the field far from the solendoid's ends.
+
+The solenoid carries a current, I the number of turnsper unit length is $$n$$.
+
+Symmetries of the current distribution:
+
+- Rotations around the axis
+- Translations along the acos
+- Reflections across any plane perpendicular to the axis
+
+$$B$$ at any point is directed along the axis. It can depend only on the distance from the axis.
 
 
 
