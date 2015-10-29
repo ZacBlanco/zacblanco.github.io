@@ -7,6 +7,11 @@ permalink: /hadoop-workshop/
 date: 2015-10-28 
 ---
 
+## Presentation Slides
+
+[Slides Found Here](crash-course-1.pdf)
+
+
 ## Outline
 
 The following is an outline of events for this workshop
