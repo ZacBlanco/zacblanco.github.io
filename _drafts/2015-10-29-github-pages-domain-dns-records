@@ -1,0 +1,11 @@
+---
+layout: post
+title: Configuring A Custom Domain with GitHub Pages
+keywords: namecheap, hosting, github pages, github, pages, cloudflare, cdn, DNS, domains, records, ANAME, CNAME, A record
+permalink: /blog/tips/custom-domains-github-pages/
+date: 2015-10-29
+author: Zac Blanco
+---
+
+
+This article will tell you how to set up your domain registrar's DNS records so that you can forward your GitHub Pages site to your newly purchased domain.
