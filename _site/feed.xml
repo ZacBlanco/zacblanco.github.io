@@ -6,9 +6,81 @@
 </description>
     <link>http://blanco.io//</link>
     <atom:link href="http://blanco.io//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 29 Oct 2015 12:56:24 -0400</pubDate>
-    <lastBuildDate>Thu, 29 Oct 2015 12:56:24 -0400</lastBuildDate>
+    <pubDate>Thu, 29 Oct 2015 13:24:51 -0400</pubDate>
+    <lastBuildDate>Thu, 29 Oct 2015 13:24:51 -0400</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Configuring A Custom Domain with GitHub Pages</title>
+        <description>&lt;p&gt;This article will tell you how to set up your domain registrar’s DNS records so that you can forward your GitHub Pages site to your newly purchased domain.&lt;/p&gt;
+
+&lt;p&gt;It’s actually quite easy to do. The hard part is actually figuring out where to start and which information to put in the records.&lt;/p&gt;
+
+&lt;h2 id=&quot;steps&quot;&gt;Steps&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Purchase domain&lt;/li&gt;
+  &lt;li&gt;Commit a CNAME File to your GitHub Pages Directory&lt;/li&gt;
+  &lt;li&gt;Add A Records for GitHub&lt;/li&gt;
+  &lt;li&gt;Add CNAME record for your GitHub Pages domain.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;step-1&quot;&gt;Step 1&lt;/h3&gt;
+
+&lt;p&gt;So if you haven’t got your own domain yet, you should head over to places like &lt;a href=&quot;http://domains.google.com&quot;&gt;Google Domains&lt;/a&gt;, &lt;a href=&quot;http://cloudflare.com&quot;&gt;Cloudflare&lt;/a&gt;, or &lt;a href=&quot;http://namecheap.com&quot;&gt;Namecheap&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;You can purchase your own domain for as little as $8 per &lt;em&gt;year&lt;/em&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;step-2&quot;&gt;Step 2&lt;/h3&gt;
+
+&lt;p&gt;Next you’ll need to commit a new file to your github pages named &lt;code&gt;CNAME&lt;/code&gt;. Note that on this file there is no extension. The entire file name is simply &lt;code&gt;CNAME&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;This file should be placed at the root of your site directory. That is at the very base of your repository (see image below)&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/github-pages-dns/github-1.png&quot; alt=&quot;Github repo&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;step-3&quot;&gt;Step 3&lt;/h3&gt;
+
+&lt;p&gt;We’re going to now go into your domain registrars DNS settings and add two &lt;code&gt;A records&lt;/code&gt; for your domain.&lt;/p&gt;
+
+&lt;p&gt;I’m using namecheap, so I’m going to head over to the dashboard and manage my domain &lt;code&gt;blanco.io&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/github-pages-dns/namecheap-1.png&quot; alt=&quot;Namecheap domain&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Then we’re going to go to &lt;strong&gt;Advanced DNS&lt;/strong&gt; then click &lt;strong&gt;Add Records&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/github-pages-dns/namecheap-2.png&quot; alt=&quot;Namecheap DNS&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Once you’ve clicked add records, select the record type  &lt;strong&gt;A Record&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;The &lt;strong&gt;A Record&lt;/strong&gt; points to the IP Address for Github. We’re going to need to add two of these. One for each IP address&lt;/p&gt;
+
+&lt;p&gt;Make sure you fill in the values exactly as shown below, except you will create a record for each of these IP addresses&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code&gt;192.30.252.153&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;192.30.252.154&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/github-pages-dns/namecheap-3.png&quot; alt=&quot;Namecheap A Records&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Once you’ve done that you’ll finally need to create a CNAME record that looks exactly like the one below. Except you will just need to replace &lt;code&gt;username&lt;/code&gt; with the your github username that is the location of your current github pages site.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/github-pages-dns/namecheap-4.png&quot; alt=&quot;Namecheap A Records&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Lastly, make sure you have disabled any other redirects or records than may have been active before adding these records as well.&lt;/p&gt;
+
+&lt;p&gt;After that you should be done! If you have set the &lt;code&gt;TTL&lt;/code&gt; (Time to Live) to Automatic, then your page should update almost instantly!&lt;/p&gt;
+
+&lt;p&gt;Enjoy your new custom domain :)&lt;/p&gt;
+
+</description>
+        <pubDate>Thu, 29 Oct 2015 00:00:00 -0400</pubDate>
+        <link>http://blanco.io//blog/tips/custom-domains-github-pages/</link>
+        <guid isPermaLink="true">http://blanco.io//blog/tips/custom-domains-github-pages/</guid>
+        
+        
+      </item>
     
       <item>
         <title>Intro to Hadoop Workshop</title>
@@ -166,6 +238,34 @@ final_data &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k
         <pubDate>Wed, 28 Oct 2015 00:00:00 -0400</pubDate>
         <link>http://blanco.io//hadoop-workshop/</link>
         <guid isPermaLink="true">http://blanco.io//hadoop-workshop/</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Running Time Analysis for Sorted Sequential Search</title>
+        <description>&lt;h2 id=&quot;sequential-search-on-a-sorted-list-of-numbers&quot;&gt;Sequential Search on a Sorted List of Numbers&lt;/h2&gt;
+
+&lt;p&gt;One question that many people struggled with (including myself) on the first data structures midterm involved a problem similar to the following:&lt;/p&gt;
+
+&lt;p&gt;Given the following algorithm for sequential search on a sorted list of numbers, derive the average running time for this algorithm on&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;lineno&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;boolean&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;search&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;target&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;2&lt;/span&gt;   &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;3&lt;/span&gt;     &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;target&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;])&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;4&lt;/span&gt;     &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;target&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;])&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;5&lt;/span&gt;   &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;6&lt;/span&gt;   &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;7&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;A successful search (one where the item is found).&lt;/li&gt;
+  &lt;li&gt;A failed search (where the item is &lt;strong&gt;not&lt;/strong&gt; found).&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+        <pubDate>Wed, 21 Oct 2015 19:22:41 -0400</pubDate>
+        <link>http://blanco.io//blog/data-structures/sorted-sequential-search-analysis</link>
+        <guid isPermaLink="true">http://blanco.io//blog/data-structures/sorted-sequential-search-analysis</guid>
         
         
       </item>
@@ -4060,155 +4160,6 @@ Current Controlled Current Source (CCCS): &lt;script type=&quot;math/tex&quot;&g
         <pubDate>Mon, 23 Mar 2015 00:00:00 -0400</pubDate>
         <link>http://blanco.io//blog/machine-learning/neural-networks-and-backpropagation/</link>
         <guid isPermaLink="true">http://blanco.io//blog/machine-learning/neural-networks-and-backpropagation/</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Hosting your Jekyll site with GitHub Pages</title>
-        <description>&lt;p&gt;As a continuation to the series of the last few posts I will be explaining how to host your jekyll site for &lt;strong&gt;free&lt;/strong&gt; using &lt;a href=&quot;https://github.com&quot;&gt;GitHub&lt;/a&gt;. GitHub provides completely free website hosting using your own GitHub account. For more information I suggest reading up on &lt;a href=&quot;https://pages.github.com/&quot;&gt;GitHub Pages&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;First off, you’re going to need to &lt;a href=&quot;https://github.com/join&quot;&gt;create an account on GitHub&lt;/a&gt; if you haven’t already. GitHub is a fantastic site that can host private and public git repositories for your personal projects.&lt;/p&gt;
-
-&lt;p&gt;Here’s a list of a few advantages to using GitHub Pages:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Completely Free&lt;/li&gt;
-  &lt;li&gt;A site for every project&lt;/li&gt;
-  &lt;li&gt;Use your own domain name&lt;/li&gt;
-  &lt;li&gt;Completely integrated with Git&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;And of course some disadvantages:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;No server side scripting&lt;/li&gt;
-  &lt;li&gt;No control over how the site is served&lt;/li&gt;
-  &lt;li&gt;No secure connections with &lt;code&gt;https&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Now this really isn’t a complete list, but these are some of the things I thought would stand out to most people.&lt;/p&gt;
-
-&lt;p&gt;Now for the fun part! Let’s get started.&lt;/p&gt;
-
-&lt;h3 id=&quot;create-a-repository-for-your-site&quot;&gt;Create a Repository for Your Site&lt;/h3&gt;
-
-&lt;p&gt;First make sure that you’re logged in to GitHub. Then, head over to your GitHub profile located at &lt;code&gt;https://github.com/username&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;At the top of the screen click the &lt;strong&gt;&lt;code&gt;+&lt;/code&gt;&lt;/strong&gt; button at the top of the page and create a new repository. You &lt;strong&gt;MUST&lt;/strong&gt; name the repository in the following way: &lt;code&gt;username.github.io&lt;/code&gt;. Your site will not be created if it is not named correctly.&lt;/p&gt;
-
-&lt;p&gt;Now that we’ve got your site’s repository set up we can finally add your Jekyll files to that repository.&lt;/p&gt;
-
-&lt;p&gt;Now let’s head back to the desktop and open a new terminal window. Using the terminal navigate to the desired folder where you would like your project to be contained.&lt;/p&gt;
-
-&lt;p&gt;Then, assuming you’ve got git installed we’re going to use the following command:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;    ~ $ git clone https://github.com/username/username.github.io
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Now check using &lt;code&gt;ls&lt;/code&gt; or by opening up a new finder window, navigate to the same folder you just had by using the terminal and you should find a new folder by the name of &lt;code&gt;username.github.io&lt;/code&gt;. Open up this folder. This is the place where we will copy your Jekyll files to be pushed to GitHub’s servers.&lt;/p&gt;
-
-&lt;p&gt;Now assuming you’ve already built a Jekyll site, copy the files from your site into this folder. Go back to your terminal window and &lt;code&gt;cd&lt;/code&gt; into &lt;code&gt;username.github.io&lt;/code&gt; folder. Then type the following commands&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;    ~ $ git add --all
-    ~ $ git commit -m &quot;Init Commit&quot;
-    ~ $ git push -u origin master
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Once you’ve done that, congratulations! You’ve made your first GitHub pages site! Open up a web browser and head over to &lt;code&gt;http://username.github.io&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;The site should be live within a few minutes. New changes after this should be live within seconds of pushing to the server.&lt;/p&gt;
-
-&lt;h4 id=&quot;an-alternative-method&quot;&gt;An Alternative Method&lt;/h4&gt;
-
-&lt;p&gt;If you do not have git installed on your computer, or you are unfamiliar with the command line, &lt;em&gt;and&lt;/em&gt; you’re running Microsoft Windows or Mac OS X, there’s another method you can use to get your site running.&lt;/p&gt;
-
-&lt;p&gt;Download &lt;a href=&quot;https://windows.github.com/&quot;&gt;GitHub for Windows&lt;/a&gt; if you’re running Windows, or &lt;a href=&quot;https://mac.github.com/&quot;&gt;GitHub for Mac&lt;/a&gt; if you’re running OS X. Once you install GitHub’s software, login to the git client. You should see a list of your repositories within the software. Clone the repository that we just created on GitHub. There should be a menu to do this.&lt;/p&gt;
-
-&lt;p&gt;If you open a file browser, look for a folder in the location &lt;code&gt;~/username/documents/GitHub/username.github.io&lt;/code&gt;. This is the location where your repository is located. You can copy your files from the Jekyll site into that folder. Once you’ve done that, head over to the GitHub software and name your commit, add a message if you’d like. Then &lt;code&gt;commit&lt;/code&gt; and &lt;code&gt;sync&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;Once you’ve synced your repository, you can open a web browser and navigate to &lt;code&gt;http://username.github.io&lt;/code&gt; where your site should be live in a matter of seconds.&lt;/p&gt;
-
-&lt;p&gt;If your site is not appearing, then you may have named your repository wrong, or you might have to wait a few minutes for the servers to create your site. Wait at least 10 minutes to see if your site is up.&lt;/p&gt;
-
-&lt;p&gt;If you’re having trouble refer to the github pages documentation&lt;/p&gt;
-
-&lt;p&gt;Another great thing about GitHub pages is that on top of having a site for yourself, you are allowed a site for each project you have located at &lt;code&gt;http://username.github.io/project-name&lt;/code&gt;. This is a great way to host many pages and to allow people to access and learn more about your open source project.&lt;/p&gt;
-
-&lt;p&gt;Hopefully this brief guide was enough for you to get your site set up on GitHub Pages. Good luck!&lt;/p&gt;
-
-</description>
-        <pubDate>Wed, 18 Mar 2015 00:00:00 -0400</pubDate>
-        <link>http://blanco.io//blog/jekyll/hosting-with-github-pages/</link>
-        <guid isPermaLink="true">http://blanco.io//blog/jekyll/hosting-with-github-pages/</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Adding Flavor to Jekyll</title>
-        <description>&lt;p&gt;So you’ve got your Jekyll site running, you can write some posts, but it still doesn’t feel like your own.&lt;/p&gt;
-
-&lt;p&gt;This is where Jekyll can be awesome, but also slightly confusing.&lt;/p&gt;
-
-&lt;p&gt;At the core, Jekyll takes a markdown file and uses it’s templating system called &lt;strong&gt;liquid&lt;/strong&gt; to help insert html and structure pages, and all of this is then converted into static html files that can be served on a web server.&lt;/p&gt;
-
-&lt;p&gt;For the rest of this post I’m going to assume that you at least know how to build your site with Jekyll and serve it locally to your web browser.&lt;/p&gt;
-
-&lt;h2 id=&quot;liquid&quot;&gt;Liquid&lt;/h2&gt;
-
-&lt;p&gt;I’m going to breeze over liquid right now, but I suggest that you take a look at &lt;a href=&quot;http://jekyllrb.com/docs/templates/&quot;&gt;the liquid templating features in Jekyll&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;To be brief, &lt;strong&gt;liquid&lt;/strong&gt; allows us to pull sitewide variables and html code and place them right into our pages with ease.&lt;/p&gt;
-
-&lt;p&gt;In your posts and any pages on  your Jekyll site by calling sitewide variables to insert values into your pages. In one of your posts, try adding the following.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;##### [Homepage]({{ site.url  }})
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;The previous code should produce a link that directs you to your blog’s homepage. See below for it in action!&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;h5 id=&quot;homepagehttpblancoio&quot;&gt;&lt;a href=&quot;http://blanco.io&quot;&gt;Homepage&lt;/a&gt;&lt;/h5&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=&quot;changing-the-style-of-your-site&quot;&gt;Changing the Style of Your Site&lt;/h2&gt;
-
-&lt;p&gt;Jekyll has a whole host of themes that can change the look of your site. This includes downloading and installing prebuilt themes, or diving straight in to the &lt;code&gt;sass&lt;/code&gt;, &lt;code&gt;css&lt;/code&gt;, and &lt;code&gt;_layouts&lt;/code&gt; foldera of the site to change how it looks.&lt;/p&gt;
-
-&lt;h3 id=&quot;sass-and-css&quot;&gt;sass and CSS&lt;/h3&gt;
-
-&lt;p&gt;No, this sass is not the same thing that you gave to your mother when you were a teenager. Sass is a version of css that can be run through a compiler  to compile css. If you’d like to learn more about sass, &lt;a href=&quot;http://sass-lang.com/&quot;&gt;click here&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Take a look inside the &lt;code&gt;css&lt;/code&gt; or &lt;code&gt;_sass&lt;/code&gt; folder within the directory of your jekyll site. Although these files are not &lt;code&gt;.css&lt;/code&gt; files, you can still write normal css, and if you know sass, you can write sass too. The files that you modify will change the corresponding sitewide visuals based on those files.&lt;/p&gt;
-
-&lt;h3 id=&quot;layouts&quot;&gt;_Layouts&lt;/h3&gt;
-
-&lt;p&gt;The &lt;code&gt;_layouts&lt;/code&gt; folder is where you can write html templates for certain types of pages on your site. There should currently be at least one layout with the name &lt;code&gt;default&lt;/code&gt;, &lt;code&gt;page&lt;/code&gt;, and &lt;code&gt;post&lt;/code&gt;. These names are the same names you will specify in the &lt;code&gt;yaml&lt;/code&gt; at the beginning of a post, or page that you write. An example of the &lt;code&gt;yaml&lt;/code&gt; header for this page is:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;    ---
-    layout: post
-    title: Adding Flavor to Jekyll
-    tags: [jekyll, poole, site, css, web]
-    ---
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;We can see that the layout type for this post is &lt;code&gt;post&lt;/code&gt; which tells Jekyll to use the &lt;code&gt;post.html&lt;/code&gt; layout to format and style this page. You can also edit these files to change the look of your site.&lt;/p&gt;
-
-&lt;h3 id=&quot;poole&quot;&gt;Poole&lt;/h3&gt;
-
-&lt;p&gt;Personally on this site I use a theme called &lt;a href=&quot;http://getpoole.com/&quot;&gt;Poole&lt;/a&gt;. If you would like to use this theme for your own site you can download and replace all of the &lt;code&gt;layout&lt;/code&gt; and &lt;code&gt;css&lt;/code&gt; files with the ones from Poole. It’s a very simple and easy to use theme. Follow the documentation for the installation procedure.&lt;/p&gt;
-
-&lt;h3 id=&quot;wrapping-up&quot;&gt;Wrapping Up&lt;/h3&gt;
-
-&lt;p&gt;Hopefully from here you can better understand how Jekyll generates the site pages on your site. A bit of research and some work can make your site unique! You can also add new features and pages too by using the layouts and css files too.&lt;/p&gt;
-
-&lt;p&gt;I hope now that you have enough knowledge about the structure of a Jekyll site to be able to customize it to your liking.&lt;/p&gt;
-
-</description>
-        <pubDate>Tue, 17 Mar 2015 00:00:00 -0400</pubDate>
-        <link>http://blanco.io//blog/jekyll/adding-flavor-to-jekyll/</link>
-        <guid isPermaLink="true">http://blanco.io//blog/jekyll/adding-flavor-to-jekyll/</guid>
         
         
       </item>
