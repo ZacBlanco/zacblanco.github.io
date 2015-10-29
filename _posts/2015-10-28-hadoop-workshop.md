@@ -9,7 +9,7 @@ date: 2015-10-28
 
 ## Presentation Slides
 
-[Slides Found Here](crash-course-1.pdf)
+[Slides Found Here](/assets/hadoop-workshop/crash-course-1.pdf)
 
 
 ## Outline
