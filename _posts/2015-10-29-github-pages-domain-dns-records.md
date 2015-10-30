@@ -60,9 +60,11 @@ Make sure you fill in the values exactly as shown below, except you will create 
 
 ![Namecheap A Records](/assets/images/github-pages-dns/namecheap-3.png)
 
+### Step 4
+
 Once you've done that you'll finally need to create a CNAME record that looks exactly like the one below. Except you will just need to replace `username` with the your github username that is the location of your current github pages site.
 
-![Namecheap A Records](/assets/images/github-pages-dns/namecheap-4.png)
+![Namecheap CNAME Records](/assets/images/github-pages-dns/namecheap-4.png)
 
 
 Lastly, make sure you have disabled any other redirects or records than may have been active before adding these records as well.
