@@ -851,6 +851,83 @@ Now we're going to take a look at **inverting amplifiers**
 
 
 
+## November 2nd 2015
+
+### Unit 6 - Inductance and Capacitance
+
+
+Up until now we assumed that everything in a circuit happened instantaneously.
+
+capacitors and inductors have inputs and outputs that depends on **time**!
+
+These elements **store** energy at different times and they may either produce or absorb energy.
+
+### Capacitors and Inductors
+
+![Inductor and Capacitors](/assets/images/ee1-guide/inductor-capacitor-1.png)
+
+## Capacitors and Inductors: Energy Storage
+
+- Capacitors store energy in an electric field
+- Inductors store energy in a magnetic field
+- Capacitors and inductors are **passive dynamic** elements
+ - Can store energy supplied by a circuit
+ - Can return stored energy to a circuit
+ - Cannot supply more energy to a circuit than it has stored.
+
+
+### Capacitance
+
+**Capacitance** is a measure of the ability of a device to store energy in the form of a separated charge or an electric field
+
+- The strength of capacitors is measured in _Farads_
+- Capacitance is represented by the letter **C**
+- Typical capacitors are measured from pico-farads ($$pF$$) to micro-farads ($$\mu F$$).
+
+> $$ C = \frac{\epsilon A}{d} $$
+
+> $$ q = C \cdot v(t) $$
+
+It should be noted that **if there is no change in voltage, current DOES NOT flow through a capacitor**.
+
+### Capacitor - Current, Charge, Power, and Energy
+
+We can calculate the energy stored in a capacitor over time using the following formulas:
+
+- $$ i(t) = C \frac{d}{dt}(v(t)) $$
+- $$ C = \frac{q(t)}{v(t)} $$
+- $$ v(t) = \frac{q(t)}{C} $$
+
+So then using the integration from $$t_0$$ to $$t$$ for charge, then we can find the work required which we find as
+
+> $$ W = \frac{1}{2}Cv^2(t) = \frac{1}{2}\frac{q^2(t)}{C} = \frac{1}{2}q(t)v(t)$$
+
+### Finding the Voltage and Current from a graph of capacitor states.
+
+We can find the graph for voltage or current for a capacitor given that we have at least one of the graphs.
+
+- We know that the graph for current in a capacitor is the derivative of the voltage graph
+- That is the voltage graph is the integral of the current graph.
+
+We can also solve for the total charge on a place capacitor knowing that $$ v(t) = \frac{q(t)}{C} $$
+
+### Energy From a Capacitor over Time
+
+The work from a capacitor is the integral of the power over a period of time.
+
+### Simplifying Capacitors
+
+It's very easy to simplify capacitors. They are similar to resistors in how we simplified them. The only difference is that the way we add them together is flipped.
+
+That is, in **parallel**
+
+> $$ C_{eq} = C_1 + C_2 + ... + C_n $$
+
+and in **series**:
+
+> $$ \frac{1}{C_{eq}} = \frac{1}{C_1} + \frac{1}{C_2} + ... + \frac{1}{C_n} $$
+
+
 
 
 
