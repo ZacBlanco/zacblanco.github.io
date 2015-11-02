@@ -1025,7 +1025,45 @@ Symmetries of the current distribution:
 
 $$B$$ at any point is directed along the axis. It can depend only on the distance from the axis.
 
+## Lecture 17 - Magnetic Materials, EM Induction, and Faraday's Law
 
+### Dia-, Para-, and Ferromagnetics in a Zero External $$B$$ Field.
+
+Sources of local magnetic fileds inside any material:
+
+1. Magnetic moments associated with the electrons orbiting around nuclei.
+2. The magnetic moments associated with spins of both electrons and nuclei.
+
+1.  **Weak** interactions between internal magnetic moments:
+ - **Dia**magnets: No permanent magnetic moments (nonpolar dielectrics).
+ - **Para**magnets: Randomly oriented moments - the average magnetic field is zero (polar dielectrics).
+2. **Strong** interactions between internal moments: the moments ordered in space
+ - Parallel ordering - ferromagnetics (iron, nickel, etc..), antiparallel ordering - antiferromagnetic (chromium, etc)
+ 
+ 
+In ferromagnets, there is a strong local magnetic field in the material. Large numbers of elementary moments line up in the magnetic domains. The global field depends on the orientation of magnetic domains. In permanent magnets the domains are preferentially oriented.
+
+We can calculate the total magnetic field of a magnetic material as where $$K_m$$ is the relative permeability, and $$\Chi_m = K_m - 1 $$.
+
+- $$ \vec{B} = \vec{B}_{ext} + \mu_0\vec{M} = K_m\vec{B}_{ext} $$
+
+### Faraday's Law
+
+$$ \varepsilon = -\frac{d\PHI_B}{dt} $$
+
+Magnetically induced emf in a battery is the result of non-electrostatic (non-conservative) forces:
+
+The total electric field is the sum of conservative and non-conservative terms.
+
+### Sign Convention - Lenz's Law
+
+An induced current has a direction such that the magnetic field due to the induced current **opposes the change** in the magnetic flux that induces the current
+
+In other words, current will opposes the direction the flux changes. i.e. current moves in the negative direction of flux.
+
+### Multi-Turn Coils
+
+$$ \varepsilon = -N\frac{d\Phi_m}{dt} $$
 
 
 
