@@ -5,6 +5,7 @@ permalink: /blog/physics/physics-IB-review/
 keywords: physics, rutgers, spring 2015, final review
 author: Zac Blanco
 description: A guide with handy explanations for all of the concepts covered in the Spring portion of Rutgers University first year physics courses
+mathjax: true
 ---
 
 The topics covered in this course are:

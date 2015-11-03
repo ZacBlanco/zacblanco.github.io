@@ -36,7 +36,9 @@
   <!-- RSS -->
   <link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="{{ site.baseurl }}atom.xml">
     
+	{% if page.mathjax %}
     <script src='https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+	{% endif %}
 
     <!-- Google Analytics -->
     {% include google-analytics.html %}
