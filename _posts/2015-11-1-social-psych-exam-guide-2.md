@@ -12,11 +12,11 @@ permalink: /blog/social-psychology/exam-2/
 
 **Racism**: Prejudice and discrimination based on a person's racial background, or institutional and cultural practices that promote the domination of one racial group over another
 
-**Sexism**: Prejudice and discrimination based ona person's gender, or insrirurional and cultural practices that promote th domination of one gender over another.
+**Sexism**: Prejudice and discrimination based on a person's gender, or institutional and cultural practices that promote the domination of one gender over another.
 
 **Stereotype**: A belief or association that links a whole group of people with certain traits or characteristics.
 
-**Prejudice**: Negatice feelings towards persons based on their membership in certain groups.
+**Prejudice**: Negative feelings towards persons based on their membership in certain groups.
 
 **Discrimination**: Behavior directed against persons because of their membership in a particular group.
 
@@ -26,7 +26,7 @@ permalink: /blog/social-psychology/exam-2/
 
 > Children tend to show biases based on race. Even before they understand or know what racism is.
 
-**Metastereotypes**: Thoughts about the outgroups steretypes about them, and worry about being seen as consistent with these stereotypes
+**Metastereotypes**: Thoughts about the outgroups stereoptypes about them, and worry about being seen as consistent with these stereotypes
 
 **Ambivalent Sexism**: A form of sexism chatacterized by attitudes about women that reflect both negative, resentful beliefs and feelings and, affectionate and chivalrous, but potentially patronizing beliefs and feelings
 
@@ -34,23 +34,23 @@ permalink: /blog/social-psychology/exam-2/
 
 **Stigmatized**: Being persistently stereotyped, perceived as deviant and devalued in society because of membership in a particular social group or because of a particular characteristic.
 
-**Stereptype Threat**: The experience of concern about being evaluated based on negative stereotypes about one's group.
+**Stereotype Threat**: The experience of concern about being evaluated based on negative stereotypes about one's group.
 
 > ￼An African American student is likely to perform worse on an athletic task if the task is described as one reflecting sports intelligence than if it is described as reflecting natural athletic ability.
 
 **Social Categorization**: The classification of persons into grouups on the basis of common attributes
 
-**Ingroups**: Groups with which an indicidual feels a sense of membership, belonging, and identity
+**Ingroups**: Groups with which an individual feels a sense of membership, belonging, and identity
 
 **Outgroups**: Groups with which an individual does not feel a sense of membership, belonging, or identity.
 
-**Outgroup Homogeneity Effec**: The tendency to assume that there is greater similarity among members of outgroups rather than among members of ingroups.
+**Outgroup Homogeneity Effect**: The tendency to assume that there is greater similarity among members of outgroups rather than among members of ingroups.
 
-**Social Dominance Orientation**: A desire to see one's ingroup as dominant over others groups and a willingness to adopt cultural values that favilitate oppression over other groups.
+**Social Dominance Orientation**: A desire to see one's ingroup as dominant over others groups and a willingness to adopt cultural values that facilitate oppression over other groups.
 
-**System Justification Theory**: A theory that proposes that people are motivated (at least in part) to defend and justiy the existing social, political, and economic conditions.
+**System Justification Theory**: A theory that proposes that people are motivated (at least in part) to defend and justify the existing social, political, and economic conditions.
 
-**Stereotype Content Model**: A model proposing that the relative stus and competition between groups influence group stereotyes along the dimensions of competence and warmth.
+**Stereotype Content Model**: A model proposing that the relative status and competition between groups influence group stereotyes along the dimensions of competence and warmth.
 
 **Superordinate Goal**: A shared goal that can be achieved only through cooperation among individual groups.
 
@@ -58,7 +58,7 @@ permalink: /blog/social-psychology/exam-2/
 
 **Relative Deprivation**: Feelings of discontent aroused by the belief that one fares poorly compared to others.
 
-**Ingroup Favoritism**: THe tendency to discriminate in favor of ingroups over outgroups.
+**Ingroup Favoritism**: The tendency to discriminate in favor of ingroups over outgroups.
 
 **Social Identity Theory**: The theory that people favor ingroups over outgroups in order to enhance their self-esteem.
 
@@ -71,7 +71,7 @@ permalink: /blog/social-psychology/exam-2/
 
 ## Attitudes
 
-**Attitude**: A positive, negative, or mixed reactino to a person, object or idea.
+**Attitude**: A positive, negative, or mixed reaction to a person, object or idea.
 
 > Attitudes are measured through self report, Covert Measures, and Implicit Association Tests (IATs)
 
@@ -79,7 +79,7 @@ permalink: /blog/social-psychology/exam-2/
 
 **Bogus Pipeline**: A phony lie detector device that is sometimes used to get respondents to give truthful answers to sensitive questions.
 
-**Facial Electromyograph (EMG)**: An electronic instrument that records favial muscle activity associated with emotions and attitudes.
+**Facial Electromyograph (EMG)**: An electronic instrument that records facial muscle activity associated with emotions and attitudes.
 
 **Implicit Attitudes**: An attitude, such as prejudive that one is not aware of having.
 
@@ -91,9 +91,9 @@ permalink: /blog/social-psychology/exam-2/
 
 **Evaluative Conditioning**: The process by which we form an attitude toward a neutral stimulus because of its association with a positive or negative person, place, or thing.
 
-**Theory of Planned Behavior**: The theory that attitudes toward a specific behavior combine with objective normas and perceived control to onfluence a person's actions.
+**Theory of Planned Behavior**: The theory that attitudes toward a specific behavior combine with objective norms and perceived control to influence a person's actions.
 
-**Persuation**: The process by which attitudes are changed.
+**Persuasion**: The process by which attitudes are changed.
 
 **Central Route to Persuasion**: The process by which a person think carefully about a communication and is influenced by the strength of its arguments.
 
