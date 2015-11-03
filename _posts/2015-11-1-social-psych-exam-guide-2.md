@@ -156,7 +156,7 @@ permalink: /blog/social-psychology/exam-2/
 ### Why do People Conform?
 
  - A need to be right
- - Fear of Ostracism
+ - Fear of ostracism
 
 ###### Distinguishing types of conformity
 
@@ -168,25 +168,25 @@ permalink: /blog/social-psychology/exam-2/
 
 **Idiosyncrasy Credits**: Interpersonal credits that a person earns by following group norms.
 
-**Individualism**: A cultural orienttion in which independence, autonomy, and self-reliance take priority over group allegiances.
+**Individualism**: A cultural orientation in which independence, autonomy, and self-reliance take priority over group allegiances.
 
 **Collectivism**: A cultural orientation in which interdependece, cooperation, and social harmony take priority over personal goals.
 
 **Compliance**: Changes in behavior that are elciited by direct requisites.
 
-**The Norm of Reciprocity**: Dictates that we treat other ave they have treated us.
+**The Norm of Reciprocity**: Dictates that we treat others the way they have treated us.
 
 **Foot-In-The-Door**: A two-step compliance technique in which an influencer sets the stage for the real request by first getting a person to comply with a smaller request.
 
-**Lowballing** A two-step compliance technique in which the influencer secures agreement with a request but then increases the size of that reque tby revealing hidden costs.
+**Lowballing** A two-step compliance technique in which the influencer secures agreement with a request but then increases the size of that request by revealing hidden costs.
 
 **Door-In-The-Face**: A two-step compliance technique in which an influencer prefaces the real request with one thats so large that it is rejected.
 
-**That's-Not-All Technique**: A twp-step compliance technique in which the influencer begins with an inflated request and then decreases its apparent size by offering a discount or bonus.
+**That's-Not-All Technique**: A two-step compliance technique in which the influencer begins with an inflated request and then decreases its apparent size by offering a discount or bonus.
 
 **Obedience**: Behavior change produced by the commands of authority.
 
-**Social Impact Theory**: The theory that social influence depends on the strength, immediacy, and number of source epersons relative to target persons.
+**Social Impact Theory**: The theory that social influence depends on the strength, immediacy, and number of source persons relative to target persons.
 
 
 
