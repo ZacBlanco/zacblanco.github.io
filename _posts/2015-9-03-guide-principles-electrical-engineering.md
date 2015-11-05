@@ -788,7 +788,7 @@ At each stage, set ALL sources ecept for ONE to zero and find the contribution o
 
 ![Operational Amplifier](/assets/images/ee1-guide/op-amp-1.png)
 
-Operational Amplifiers are a **5 terminal element**.
+For our purposes, operational Amplifiers are a **5 terminal element**.
 
 There are 5 terminals:
 
@@ -814,13 +814,9 @@ A good Op-Amp circuit model has 3 important characteristics
 - Op-Amp input resistance $$R_{in}$$ is very high (order of $$10^6 \Omega$$)
 - Op-Amp output resistance $$R_o$$ is very small (order of $$1 \Omega$$)
 
-### An Ideal Op-Amp
-
 ![Ideal Operational Amplifier](/assets/images/ee1-guide/op-amp-1.png)
 
-
 ### Operational Amplifier Feedback Loop
-
 
 ![Operational Amplifier Feedback 1](/assets/images/ee1-guide/op-amp-feedback-1.png)
 
@@ -830,7 +826,7 @@ We can simplify the model of the op-amp so that we can solve for the output volt
 
 ## October 26th 2015
 
-#### Continuing NOn-Inverting Amplifiers
+#### Continuing Non-Inverting Amplifiers
 
 In short: The voltage output from an operational amplifier will stay between the two input voltages of $$-V_{cc}$$ and $$+V_{cc}$$.
 
@@ -850,6 +846,73 @@ Now we're going to take a look at **inverting amplifiers**
 
 ![Op Amp Diagram](/assets/images/ee1-guide/inverting-amp-1.png)
 
+
+From this we focus on the 4 different types of amplifier circuits. The 4 types we focus on are:
+
+1. Inverting
+2. Non-Inverting
+3. Summing
+4. Difference
+
+### Inverting Op Amp Circuit
+
+![Inverting Op Amp Circuit](/assets/images/ee1-guide/inverting-amplifier-circuit-1.png)
+
+In an inverting amplifier our gain values $$K$$ will be negative because we want the output to be the inverted from the input.
+
+The output voltage is calculated as:
+
+> $$ v_0 = \frac{-R_f}{R_s}v_s $$
+
+It might also be useful to note that 
+
+- $$ i_s = \frac{v_s}{R_s} $$
+- $$ i_f = \frac{v_0}{R_f} $$
+
+### Non-Inverting Op Amp Circuit
+
+![Non-Inverting Op Amp Circuit](/assets/images/ee1-guide/noninverting-amplifier-circuit-1.png)
+
+In an inverting amplifier our gain values $$K$$ will _not_ be negative because we want the output to be the same sign as the input.
+
+The output voltage is calculated as:
+
+> $$ v_0 = \frac{R_f + R_s}{R_s}v_g $$
+
+Operation in the linear range requires that:
+
+> $$ \frac{R_s + R_f}{R_s} < \left|\frac{V_{CC}}{v_g}\right| $$
+
+
+### Summing Op Amp Circuit
+
+![Summing Op Amp Circuit](/assets/images/ee1-guide/summing-amplifier-circuit-1.png)
+
+In a summing amplifier circuit, the output voltage can be related by:
+
+> $$ v_0 = -(\frac{R_f}{R_a}v_a + \frac{R_f}{R_b}v_b + \frac{R_f}{R_c}v_c) $$
+
+Now if $$R_s = R_a = R_b = R_c$$ (all resistors equal) then we can say the output voltage is 
+
+- $$ v_0 = -\frac{R_f}{R_s}(v_a + v_b + v_c) $$
+
+Then if we find that $$R_s = R_f$$, the summing amplifier's output is simply 
+
+- $$ v_0 = -(v_a + v_b + v_c) $$
+
+### Difference Op Amp Circuit
+
+![Difference Op Amp Circuit](/assets/images/ee1-guide/difference-amplifier-circuit-1.png)
+
+Difference amplifier circuits are slighly different from the previous ones. However we can still simplify the equation to obtain our output voltage.
+We say for the difference circuit that 
+
+> $$ v_0 = \frac{R_d(R_a + R_b)}{R_a(R_c + R_d)}v_b - \frac{R_b}{R_a}v_a $$
+
+
+But then if we find that the circuit variables satisfies the equation: $$ \frac{R_a}{R_b} = \frac{R_c}{R_d} $$, then we can represent this as
+
+> $$ v_0 = \frac{R_b}{R_s}(v_b - v_a) $$
 
 
 ## November 2nd 2015
@@ -928,6 +991,72 @@ and in **series**:
 
 > $$ \frac{1}{C_{eq}} = \frac{1}{C_1} + \frac{1}{C_2} + ... + \frac{1}{C_n} $$
 
+
+## November 5th 2015
+
+### Energy Stored in a Capacitor
+
+
+$$ i(t) = C\frac{dv(t)}{dt} $$
+
+$$ w = \frac{1}{2}Cv^2(t) $$
+
+
+### Inductance
+
+- **Inductance** is a measure of the ability of a device to store energy in the form of a magnetic field.
+- The strength of inductors is measured in _Henrys_
+- Inductance is usually represented by the letter L
+- _L_ values typically range from $$1\mu H$$ to $$10 H$$.
+- The polarity of the voltage is such as to oppose the change in current (Lenz's Law).
+
+
+To calculate the inductance of a inductor we can use the following equation:
+
+> $$ L = \frac{\mu N^2A}{l} $$
+
+And the voltage from an inductor
+
+> $$ v(t) = L\frac{di(t)}{dt} $$
+
+![Inductor Voltage](/assets/images/ee1-guide/inductors-1.png)
+
+The factors that affect inductance:
+
+- **N**: The number of turns in a capacitor. The more turns we have then the coil will generate a greater magnetic force - N is usually measured in $$\frac{Amps}{turns}$$
+- **$$\mu$$**: The magnetic permeability of the core of the inductor.
+- **A**: The cross sectional area ($$m^2$$) of the coil. The greater the coil area, then the less opposition there is to the formation of the magnetic flux for a given amount of force.
+- **l**: Length ($$m$$): the longer the path for the magnetic field flux, the more opposition to the formation of flux it experiences for any given amount of field force.
+
+- $$ \mu=1 $$ for air, and $$600$$ for iron.
+
+The work done by an inductor is proportional to the current flowing through it. We can say that:
+
+> $$ w(t) = \frac{1}{2}Li^2(t) $$
+
+### Inductors in Series and in Parallel
+
+Inductors simplify similar to resistors.
+
+**In Series**
+
+> $$ L_{eq} = L_1 + L_2 + L_3 + ... + L_n $$
+
+**In Parallel**:
+
+> $$ \frac{1}{L_{eq}} = \frac{1}{L_1} + \frac{1}{L_2} + \frac{1}{L_3} + ... + \frac{1}{L_n} $$
+
+![Inductor and Capacitors - A Summary](/assets/images/ee1-guide/inductor-capacitor-summary.png)
+
+### Initial Conditions of DC Switched Circuits
+
+- A circuit at **steady state** means that the switches in the circuit have been in the same position for a long period of time.
+- If all independent voltage and current sources are **DC** and the circuits are in steady state, then all of the element currents and voltages are also constant (with respect to time)
+
+
+If a DC circuit is steady state then, 
+- An inductor behaves as a short circuit
+- A capacitor in the circuit behaves as an open circuit
 
 
 

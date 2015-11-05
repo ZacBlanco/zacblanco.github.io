@@ -1086,7 +1086,7 @@ We also are the ones providing the power to the loop by moving it as we pull it.
 
 ### Eddy Currents (Foucalt) Brakes
 
-These breaks are very efficient at high speeds, usless at low speeds however.
+These breaks are very efficient at high speeds, useless at low speeds however.
 
 The breaking force depends on the speed of the rotating disk. You simply just need to apply a magnetic field to the metal disk. You can just apply a magnetic field to the rotating disk, which will induce a current, and thus a force that will work to slow down the object.
 
