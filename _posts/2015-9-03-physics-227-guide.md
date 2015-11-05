@@ -1066,10 +1066,33 @@ In other words, current will opposes the direction the flux changes. i.e. curren
 
 $$ \varepsilon = -N\frac{d\Phi_m}{dt} $$
 
+## November 5th 2015 - Induced Currents and Eddy Currents
 
+### Motional EMF
 
+Imagine a loop of wire with a current$$I$$ that is in magnetic field. We pull that loop into the right, then we need to find the induced current.
 
+Remember $$\varepsilon$$ is equal to $$\frac{d\Phi}{dt} = \frac{d}{dt}(Blx) = Blv $$
 
+We can find current by
+
+$$ I = \frac{\varepsilon}{R} = \frac{BLv}{R} $$
+
+Heat from wire:
+
+$$ P = I^2R = \frac{(BLv)^2}{R} $$
+
+We also are the ones providing the power to the loop by moving it as we pull it.
+
+### Eddy Currents (Foucalt) Brakes
+
+These breaks are very efficient at high speeds, usless at low speeds however.
+
+The breaking force depends on the speed of the rotating disk. You simply just need to apply a magnetic field to the metal disk. You can just apply a magnetic field to the rotating disk, which will induce a current, and thus a force that will work to slow down the object.
+
+### The Third Maxwell Equation
+
+$$\varepsilon = \int Encl \cdot dl $$
 
 
 
