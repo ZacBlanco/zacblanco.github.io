@@ -10,7 +10,7 @@ My name is Zac (yes I spell it Z-A-C). I'm an aspiring software engineer. I'm cu
 
 My interests lie in big data, analytics, machine learning, artificial intelligence, and computer vision.
 
-I'm also a firm believer in great education. I enjoy helping others learn! I am currently a [learning assistant at Rutgers University](https://rlc.rutgers.edu/student-info/group-and-individual-academic- support/learning-assistant-program). I help teach undergraduate students in introductory Physics courses.
+I'm also a firm believer in great education. I enjoy helping others learn! I am currently a [learning assistant at Rutgers University](https://rlc.rutgers.edu/student-info/group-and-individual-academic-support/learning-assistant-program). I help teach undergraduate students in introductory Physics courses.
 
 Here's a list of languages and technologies I've worked with in the past:
 
