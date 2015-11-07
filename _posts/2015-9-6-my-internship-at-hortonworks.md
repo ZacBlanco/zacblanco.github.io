@@ -3,7 +3,7 @@ layout: post
 title: My Summer Experience at Hortonworks
 keywords: hortonworks, professional, experience, rutgers, internship, software, engineering, software engineer
 permalink: /blog/professional/my-experience-at-hortonworks
-date: 12/9/2015
+date: 2015-9-12
 author: Zac
 description: A quick summary about my experience over the summer working for Hortonworks
 ---
