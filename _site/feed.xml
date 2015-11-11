@@ -6,8 +6,8 @@
 </description>
     <link>http://blanco.io//</link>
     <atom:link href="http://blanco.io//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 06 Nov 2015 23:22:01 -0500</pubDate>
-    <lastBuildDate>Fri, 06 Nov 2015 23:22:01 -0500</lastBuildDate>
+    <pubDate>Wed, 11 Nov 2015 11:48:18 -0500</pubDate>
+    <lastBuildDate>Wed, 11 Nov 2015 11:48:18 -0500</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -50,7 +50,7 @@ credit: reddit user &lt;strong&gt;/u/Portaljacker&lt;/strong&gt;&lt;/p&gt;
 &lt;strong&gt;A&lt;/strong&gt;: Inheritance&lt;br /&gt;
 credit to StackOverflow user &lt;strong&gt;spelchec&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;em&gt;Disclaimer&lt;/em&gt;: These are either not mine, and I may have modified them slightly. I do not take credit for them. I have credited jokes from where I have found them on the interwebs :)&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Disclaimer&lt;/em&gt;: These are not mine, and I may have modified them slightly. I have credited jokes from where I have found them on the interwebs :)&lt;/p&gt;
 
 </description>
         <pubDate>Fri, 06 Nov 2015 00:00:00 -0500</pubDate>
@@ -1213,15 +1213,7 @@ In this case, the charge &lt;script type=&quot;math/tex&quot;&gt;Q&lt;/script&gt
 &lt;h3 id=&quot;energy-in-a-capacitor-with-a-dialectric&quot;&gt;Energy in a Capacitor with a Dialectric&lt;/h3&gt;
 
 &lt;blockquote&gt;
-  &lt;script type=&quot;math/tex; mode=display&quot;&gt;\frac{U_{filled}{U_{empty}} = \frac{1}{K}&lt;/script&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;script type=&quot;math/tex; mode=display&quot;&gt;U_{empty} =&lt;/script&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;script type=&quot;math/tex; mode=display&quot;&gt;U_{filled} = \frac{Q^2}{}&lt;/script&gt;
+  &lt;script type=&quot;math/tex; mode=display&quot;&gt;\frac{ U_{filled} }{ U_{empty} } = \frac{1}{K}&lt;/script&gt;
 &lt;/blockquote&gt;
 
 &lt;h2 id=&quot;october-1st-2015&quot;&gt;October 1st 2015&lt;/h2&gt;
@@ -1234,8 +1226,14 @@ In this case, the charge &lt;script type=&quot;math/tex&quot;&gt;Q&lt;/script&gt
 
 &lt;h3 id=&quot;energy-stored-in-a-dialectric-capacitor&quot;&gt;Energy stored in a Dialectric Capacitor&lt;/h3&gt;
 
-&lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;\frac{Q^2}{2C}&lt;/script&gt;
-&lt;script type=&quot;math/tex&quot;&gt;\frac{1}{2}CV^2&lt;/script&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;script type=&quot;math/tex; mode=display&quot;&gt;U = \frac{Q^2}{2C}&lt;/script&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;script type=&quot;math/tex; mode=display&quot;&gt;U = \frac{1}{2}CV^2&lt;/script&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h3 id=&quot;half-filled-dialelctric-capacitor&quot;&gt;Half Filled Dialelctric Capacitor&lt;/h3&gt;
 
@@ -1598,7 +1596,7 @@ Regardless of the nature of charge carriers, (both positive and negative carrier
 &lt;p&gt;So from this we can calculate the period of the circular motion of the particle.&lt;/p&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;T = \frac{2\pi R}{v}&lt;/script&gt;.&lt;/p&gt;
+  &lt;script type=&quot;math/tex; mode=display&quot;&gt;T = \frac{2\pi R}{v}&lt;/script&gt;
 &lt;/blockquote&gt;
 
 &lt;h2 id=&quot;october-22nd-2015&quot;&gt;October 22nd 2015&lt;/h2&gt;
@@ -1630,19 +1628,23 @@ Regardless of the nature of charge carriers, (both positive and negative carrier
 
 &lt;p&gt;Hall Voltage&lt;/p&gt;
 
+&lt;blockquote&gt;
+  &lt;script type=&quot;math/tex; mode=display&quot;&gt;\vec{F}_E = -\vec{F}_B&lt;/script&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;script type=&quot;math/tex; mode=display&quot;&gt;qE = qv_dB&lt;/script&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;script type=&quot;math/tex; mode=display&quot;&gt;E = v_dB&lt;/script&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;script type=&quot;math/tex; mode=display&quot;&gt;I = qnv_dWt&lt;/script&gt;
+&lt;/blockquote&gt;
+
 &lt;ul&gt;
-  &lt;li&gt;
-    &lt;script type=&quot;math/tex; mode=display&quot;&gt;\vec{F}_E = -\vec{F}_B&lt;/script&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;script type=&quot;math/tex; mode=display&quot;&gt;qE = qv_dB&lt;/script&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;script type=&quot;math/tex; mode=display&quot;&gt;E = v_dB&lt;/script&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;script type=&quot;math/tex; mode=display&quot;&gt;I = qnv_dWt&lt;/script&gt;
-  &lt;/li&gt;
   &lt;li&gt;&lt;script type=&quot;math/tex&quot;&gt;n&lt;/script&gt; the density of mobile carriers&lt;/li&gt;
   &lt;li&gt;&lt;script type=&quot;math/tex&quot;&gt;W&lt;/script&gt; the width of the conductor&lt;/li&gt;
   &lt;li&gt;&lt;script type=&quot;math/tex&quot;&gt;t&lt;/script&gt; the thickness of the conductor&lt;/li&gt;
@@ -1755,7 +1757,7 @@ v &lt;&lt; c %]]&gt;&lt;/script&gt;&lt;/p&gt;
 &lt;p&gt;Then we can say that the magnetic field is equal to:&lt;/p&gt;
 
 &lt;blockquote&gt;
-  &lt;script type=&quot;math/tex; mode=display&quot;&gt;\vec{B}(r) = \frac{\mu_0}{4\pi}q \frac{v\times r}{\hat{r}^2} = \frac{\mu_0}{4\pi}q \frac{v\times \vec{r}{r^3}&lt;/script&gt;
+  &lt;script type=&quot;math/tex; mode=display&quot;&gt;\vec{B}(r) = \frac{\mu_0}{4\pi}q \frac{v\times r}{\hat{r}^2} = \frac{\mu_0}{4\pi}q \frac{v\times \vec{r}}{r^3}&lt;/script&gt;
 &lt;/blockquote&gt;
 
 &lt;p&gt;Remember &lt;script type=&quot;math/tex&quot;&gt;\hat{r}&lt;/script&gt; is the unit vector, where &lt;script type=&quot;math/tex&quot;&gt;\vec{r}&lt;/script&gt; is the actual vector of &lt;script type=&quot;math/tex&quot;&gt;r&lt;/script&gt;&lt;/p&gt;
@@ -1959,7 +1961,7 @@ r &lt; R %]]&gt;&lt;/script&gt; then we have &lt;script type=&quot;math/tex&quot
 
 &lt;p&gt;In ferromagnets, there is a strong local magnetic field in the material. Large numbers of elementary moments line up in the magnetic domains. The global field depends on the orientation of magnetic domains. In permanent magnets the domains are preferentially oriented.&lt;/p&gt;
 
-&lt;p&gt;We can calculate the total magnetic field of a magnetic material as where &lt;script type=&quot;math/tex&quot;&gt;K_m&lt;/script&gt; is the relative permeability, and &lt;script type=&quot;math/tex&quot;&gt;\Chi_m = K_m - 1&lt;/script&gt;.&lt;/p&gt;
+&lt;p&gt;We can calculate the total magnetic field of a magnetic material as where &lt;script type=&quot;math/tex&quot;&gt;K_m&lt;/script&gt; is the relative permeability, and &lt;script type=&quot;math/tex&quot;&gt;\chi_m = K_m - 1&lt;/script&gt;.&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;
@@ -1969,7 +1971,7 @@ r &lt; R %]]&gt;&lt;/script&gt; then we have &lt;script type=&quot;math/tex&quot
 
 &lt;h3 id=&quot;faradays-law&quot;&gt;Faraday’s Law&lt;/h3&gt;
 
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;\varepsilon = -\frac{d\PHI_B}{dt}&lt;/script&gt;
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\varepsilon = -\frac{d\Phi_B}{dt}&lt;/script&gt;
 
 &lt;p&gt;Magnetically induced emf in a battery is the result of non-electrostatic (non-conservative) forces:&lt;/p&gt;
 
@@ -2011,7 +2013,65 @@ r &lt; R %]]&gt;&lt;/script&gt; then we have &lt;script type=&quot;math/tex&quot
 
 &lt;h3 id=&quot;the-third-maxwell-equation&quot;&gt;The Third Maxwell Equation&lt;/h3&gt;
 
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;\varepsilon = \int Encl \cdot dl&lt;/script&gt;
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\varepsilon = \int E_{NC} \cdot dl = -\frac{d\Phi_B}{dt}&lt;/script&gt;
+
+&lt;h2 id=&quot;november-9th-2015&quot;&gt;November 9th 2015&lt;/h2&gt;
+
+&lt;p&gt;Before we are given the Maxwell equation of&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;script type=&quot;math/tex; mode=display&quot;&gt;\oint \vec{B} \cdot d\vec{l} = \mu_0I&lt;/script&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;However, because this equation tells us that a B field can induce current, it must also alter the electric field.&lt;/p&gt;
+
+&lt;p&gt;However the problem we have now is that given the equations we have, a magnetic field can create a electric field, but not the other way around!&lt;/p&gt;
+
+&lt;p&gt;How do we fix this?&lt;/p&gt;
+
+&lt;p&gt;Maxwell suggested a generalization of Ampere’s Law by adding the quantity &lt;script type=&quot;math/tex&quot;&gt;\epsilon_0\frac{\partial\vec{E}}{\partial t}\cdot d\vec{A}&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;We call this quantity &lt;strong&gt;displacement current&lt;/strong&gt;. This makes all of our equations with Electric and Magnetic field symmetric.&lt;/p&gt;
+
+&lt;p&gt;Given all this information we can now say that the generalized Ampere’s law is:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;script type=&quot;math/tex; mode=display&quot;&gt;\oint \vec{B} \cdot d\vec{l} = \mu_0I  = \mu_0\int_{surf}(\vec{J} + \epsilon_0\frac{\partial\vec{E}}{\partial t})\cdot d\vec{A} = \mu_0(I_{encl} + \epsilon_0\frac{d\Phi_E}{dt})&lt;/script&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Given this we now have all of Maxwell’s equations at our disposal!&lt;/p&gt;
+
+&lt;h3 id=&quot;maxwells-equations&quot;&gt;Maxwell’s Equations&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;Gauss’s Law&lt;/strong&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;script type=&quot;math/tex; mode=display&quot;&gt;\oint \vec{E}\cdot d\vec{A} = \frac{Q_{encl}}{\epsilon_0}&lt;/script&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;strong&gt;No Magnetic Monopoles&lt;/strong&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;script type=&quot;math/tex; mode=display&quot;&gt;\oint_{surf} = \vec{B} \cdot d\vec{A} = 0&lt;/script&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;strong&gt;Faraday’s Law of Electromagnetic Induction&lt;/strong&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;script type=&quot;math/tex; mode=display&quot;&gt;\oint_{loop} \vec{E}\cdot d\vec{l} = -\frac{d}{dt}\int_{surf}\vec{B} \cdot d\vec{A}&lt;/script&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;strong&gt;The Generalized Ampere’s Law&lt;/strong&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;script type=&quot;math/tex; mode=display&quot;&gt;\oint_{loop} = \vec{B} \cdot d\vec{l} = \mu_0\int_{surf} (\vec{J} + \epsilon_0\frac{\partial\vec{E}}{\partial t}) \cdot d\vec{A}&lt;/script&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;strong&gt;The Force on a Moving Charge&lt;/strong&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;script type=&quot;math/tex; mode=display&quot;&gt;\vec{F} = q(\vec{E} + \vec{v}\times\vec{B})&lt;/script&gt;
+&lt;/blockquote&gt;
 
 </description>
         <pubDate>Thu, 03 Sep 2015 00:00:00 -0400</pubDate>
@@ -3354,6 +3414,113 @@ We say for the difference circuit that&lt;/p&gt;
 &lt;p&gt;If a DC circuit is steady state then, 
 - An inductor behaves as a short circuit
 - A capacitor in the circuit behaves as an open circuit&lt;/p&gt;
+
+&lt;h2 id=&quot;november-9th-2015&quot;&gt;November 9th 2015&lt;/h2&gt;
+
+&lt;h2 id=&quot;unit-9-dc--sinusoidal-transient-and-steady-state-response-phasor-frequency-domain-analysis&quot;&gt;Unit 9: DC &amp;amp; Sinusoidal Transient and Steady State Response Phasor (frequency) Domain Analysis&lt;/h2&gt;
+
+&lt;h3 id=&quot;a-sinusoidal-signal---ac-alternating-current&quot;&gt;A Sinusoidal Signal - AC (Alternating Current)&lt;/h3&gt;
+
+&lt;p&gt;In AC current the voltage level alternates with respect to a trigonometric sine function. The general equation is&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;script type=&quot;math/tex; mode=display&quot;&gt;v(t) = V_mcos(\omega t + \phi)&lt;/script&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;And our variables:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;script type=&quot;math/tex&quot;&gt;\omega = 2\pi f&lt;/script&gt; the angular frequency in radians/second.&lt;/li&gt;
+  &lt;li&gt;&lt;script type=&quot;math/tex&quot;&gt;f = \frac{1}{T}&lt;/script&gt; is the frequency measured in Hertz.&lt;/li&gt;
+  &lt;li&gt;&lt;script type=&quot;math/tex&quot;&gt;T = \frac{1}{f}&lt;/script&gt; is the period in seconds.&lt;/li&gt;
+  &lt;li&gt;&lt;script type=&quot;math/tex&quot;&gt;\phi&lt;/script&gt; is the angle shift in radians (also occassionally expressed in degrees).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;So when our voltage shifts up and down, we also find that we have a current alternating as well.&lt;/p&gt;
+
+&lt;p&gt;However sometimes these are not always &lt;em&gt;in phase&lt;/em&gt;, that is the peaks and troughs of each function will not line up perfectly.&lt;/p&gt;
+
+&lt;p&gt;So we can say that if voltage is &lt;strong&gt;lagging&lt;/strong&gt; then the current is going to be &lt;strong&gt;leading&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Or conversely, if the voltage reaches its peak before the current does, we say the voltage &lt;strong&gt;leads&lt;/strong&gt; and that the current &lt;strong&gt;lags&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/ee1-guide/ac-voltage-lag-lead.png&quot; alt=&quot;Lagging and Leading AC Equations&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;charging-a-capacitor-from-a-dc-source-through-a-resistance&quot;&gt;Charging a Capacitor from a DC source through a Resistance&lt;/h3&gt;
+
+&lt;p&gt;We can analyze the circuit using KVL.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/ee1-guide/first-order-rc-circuit.png&quot; alt=&quot;First Order RC Circuit&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;script type=&quot;math/tex; mode=display&quot;&gt;-V_{in} + v_R + v_0 = 0&lt;/script&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;script type=&quot;math/tex; mode=display&quot;&gt;v_R = i_RR&lt;/script&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;script type=&quot;math/tex; mode=display&quot;&gt;i_R = i_C = C\frac{dv_0}{dt} =&gt; v_R = RC\frac{dv_0}{dt}&lt;/script&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;script type=&quot;math/tex; mode=display&quot;&gt;-V_{in} + RC\frac{dv_0}{dt} + v_0 = 0&lt;/script&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;script type=&quot;math/tex; mode=display&quot;&gt;V_{in} = RC\frac{dv_0}{dt} + v_0&lt;/script&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;From this we have a first order differential equation. Generally this equation shouldn’t be too difficult to solve.&lt;/p&gt;
+
+&lt;p&gt;After solving this differential equation for &lt;script type=&quot;math/tex&quot;&gt;v_0&lt;/script&gt; we find that&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;script type=&quot;math/tex; mode=display&quot;&gt;v_0(t) = (v_0(0) - E)e^{\frac{-t}{RC}} + E&lt;/script&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;The part of the equation with &lt;script type=&quot;math/tex&quot;&gt;(v_0(0) - E)e^{\frac{-t}{RC}}&lt;/script&gt; is called the &lt;strong&gt;transient response&lt;/strong&gt; for the circuit.&lt;/li&gt;
+  &lt;li&gt;The second part &lt;script type=&quot;math/tex&quot;&gt;+ E&lt;/script&gt; is what we call the steady state response of the circuit.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/ee1-guide/rc-circuit-charge-graph.png&quot; alt=&quot;RC Circuit Charging&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;capacitor-charging-for-an-ac-source&quot;&gt;Capacitor Charging for an AC Source&lt;/h3&gt;
+
+&lt;p&gt;So now what happens if our source &lt;script type=&quot;math/tex&quot;&gt;V_{in}&lt;/script&gt; is an AC source where the function of the output is &lt;script type=&quot;math/tex&quot;&gt;Acos(\omega t)&lt;/script&gt;?&lt;/p&gt;
+
+&lt;p&gt;After quite a longer derivation we find that&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;script type=&quot;math/tex; mode=display&quot;&gt;v_o(t) = (v_o(0) - \frac{A}{1 + \omega^2R^2C^2})e^{\frac{-t}{RC}} + \frac{A}{1 + \omega^2R^2C^2}(cos(\omega t) + \omega RCsin(\omega t))&lt;/script&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;So what can we tell from this equation?&lt;/p&gt;
+
+&lt;p&gt;For a sinusoidal input voltage, the &lt;strong&gt;steady state output voltage&lt;/strong&gt; is a sinusoidal signal of the &lt;strong&gt;same angular frquency &lt;script type=&quot;math/tex&quot;&gt;\omega&lt;/script&gt; but could have **different ampligtude and phase angle&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Currents&lt;/strong&gt; will also be sinusoidal signals with the same angular frequency &lt;script type=&quot;math/tex&quot;&gt;\omega&lt;/script&gt; and a different amplitude and phase angles.&lt;/p&gt;
+
+&lt;p&gt;If we simplify the analysis by using only the amplitude and phase information we get &lt;em&gt;Phasor Domain Analysis&lt;/em&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Euler’s Formula&lt;/strong&gt;: &lt;script type=&quot;math/tex&quot;&gt;e^{jx} = cos(x) + jsin(x)&lt;/script&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;script type=&quot;math/tex&quot;&gt;Ae^{j(\omega t + \theta_1)} = Ae^{j\omega t}e^{j\theta}&lt;/script&gt;.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;We call&lt;script type=&quot;math/tex&quot;&gt;\frac{A_1}{\theta_1}&lt;/script&gt; the phasor of &lt;script type=&quot;math/tex&quot;&gt;A_1cos(\omega t  + \theta_1)&lt;/script&gt;q&lt;/li&gt;
+  &lt;li&gt;We call&lt;script type=&quot;math/tex&quot;&gt;\frac{A_2}{\theta_2}&lt;/script&gt; the phasor of &lt;script type=&quot;math/tex&quot;&gt;A_2cos(\omega t  + \theta_2)&lt;/script&gt;&lt;/li&gt;
+  &lt;li&gt;And in general, We call &lt;script type=&quot;math/tex&quot;&gt;\frac{A}{\theta}&lt;/script&gt; the phasor of &lt;script type=&quot;math/tex&quot;&gt;Acos(\omega t  + \theta)&lt;/script&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;When we use &lt;script type=&quot;math/tex&quot;&gt;cos(\omega t)&lt;/script&gt; as the reference sinusoid, we have the following transformation from the &lt;em&gt;time domain&lt;/em&gt; to &lt;em&gt;phasor domain&lt;/em&gt;:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;script type=&quot;math/tex; mode=display&quot;&gt;Acos(\omega t + \theta) ==&gt; Ae^{j\theta} = \frac{A}{\theta}&lt;/script&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;When we use &lt;script type=&quot;math/tex&quot;&gt;cos(\omega t)&lt;/script&gt; as the reference sinusoid, we have the following &lt;strong&gt;inverse tranformation&lt;/strong&gt; from &lt;em&gt;phasor domain&lt;/em&gt; to &lt;em&gt;time domain&lt;/em&gt;.&lt;/p&gt;
 
 </description>
         <pubDate>Thu, 03 Sep 2015 00:00:00 -0400</pubDate>

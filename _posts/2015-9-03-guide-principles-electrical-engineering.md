@@ -1059,10 +1059,84 @@ If a DC circuit is steady state then,
 - A capacitor in the circuit behaves as an open circuit
 
 
+## November 9th 2015
 
+## Unit 9: DC & Sinusoidal Transient and Steady State Response Phasor (frequency) Domain Analysis
 
+### A Sinusoidal Signal - AC (Alternating Current)
 
+In AC current the voltage level alternates with respect to a trigonometric sine function. The general equation is 
 
+> $$ v(t) = V_mcos(\omega t + \phi) $$
+
+And our variables:
+
+- $$\omega = 2\pi f$$ the angular frequency in radians/second.
+- $$f = \frac{1}{T}$$ is the frequency measured in Hertz.
+- $$ T = \frac{1}{f}$$ is the period in seconds.
+- $$\phi$$ is the angle shift in radians (also occassionally expressed in degrees).
+
+So when our voltage shifts up and down, we also find that we have a current alternating as well.
+
+However sometimes these are not always _in phase_, that is the peaks and troughs of each function will not line up perfectly.
+
+So we can say that if voltage is **lagging** then the current is going to be **leading**.
+
+Or conversely, if the voltage reaches its peak before the current does, we say the voltage **leads** and that the current **lags**.
+
+![Lagging and Leading AC Equations](/assets/images/ee1-guide/ac-voltage-lag-lead.png)
+
+### Charging a Capacitor from a DC source through a Resistance
+
+We can analyze the circuit using KVL.
+
+![First Order RC Circuit](/assets/images/ee1-guide/first-order-rc-circuit.png)
+
+- $$ -V_{in} + v_R + v_0 = 0 $$
+- $$ v_R = i_RR $$
+- $$ i_R = i_C = C\frac{dv_0}{dt} => v_R = RC\frac{dv_0}{dt} $$
+- $$ -V_{in} + RC\frac{dv_0}{dt} + v_0 = 0 $$
+- $$ V_{in} = RC\frac{dv_0}{dt} + v_0 $$
+
+From this we have a first order differential equation. Generally this equation shouldn't be too difficult to solve.
+
+After solving this differential equation for $$v_0$$ we find that 
+
+> $$ v_0(t) = (v_0(0) - E)e^{\frac{-t}{RC}} + E $$
+
+- The part of the equation with $$ (v_0(0) - E)e^{\frac{-t}{RC}} $$ is called the **transient response** for the circuit.
+- The second part $$ + E $$ is what we call the steady state response of the circuit.
+
+![RC Circuit Charging](/assets/images/ee1-guide/rc-circuit-charge-graph.png)
+
+### Capacitor Charging for an AC Source
+
+So now what happens if our source $$V_{in}$$ is an AC source where the function of the output is $$Acos(\omega t) $$?
+
+After quite a longer derivation we find that
+
+> $$ v_o(t) = (v_o(0) - \frac{A}{1 + \omega^2R^2C^2})e^{\frac{-t}{RC}} + \frac{A}{1 + \omega^2R^2C^2}(cos(\omega t) + \omega RCsin(\omega t)) $$
+
+So what can we tell from this equation?
+
+For a sinusoidal input voltage, the **steady state output voltage** is a sinusoidal signal of the **same angular frquency $$\omega$$ but could have **different ampligtude and phase angle**.
+
+**Currents** will also be sinusoidal signals with the same angular frequency $$\omega$$ and a different amplitude and phase angles.
+
+If we simplify the analysis by using only the amplitude and phase information we get _Phasor Domain Analysis_
+
+- **Euler's Formula**: $$ e^{jx} = cos(x) + jsin(x) $$
+  - $$Ae^{j(\omega t + \theta_1)} = Ae^{j\omega t}e^{j\theta} $$.
+ 
+- We call$$ \frac{A_1}{\theta_1}$$ the phasor of $$A_1cos(\omega t  + \theta_1) $$q
+- We call$$ \frac{A_2}{\theta_2}$$ the phasor of $$A_2cos(\omega t  + \theta_2) $$
+- And in general, We call $$ \frac{A}{\theta}$$ the phasor of $$Acos(\omega t  + \theta) $$
+
+When we use $$cos(\omega t) $$ as the reference sinusoid, we have the following transformation from the _time domain_ to _phasor domain_:
+
+> $$ Acos(\omega t + \theta) ==> Ae^{j\theta} = \frac{A}{\theta} $$
+
+When we use $$cos(\omega t) $$ as the reference sinusoid, we have the following **inverse tranformation** from _phasor domain_ to _time domain_.
 
 
 

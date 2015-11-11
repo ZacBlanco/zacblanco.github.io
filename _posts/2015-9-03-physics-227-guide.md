@@ -473,11 +473,8 @@ The dialectric constant for a meterial can be measured by taking the E field ins
 
 ### Energy in a Capacitor with a Dialectric
 
-> $$ \frac{U_{filled}{U_{empty}} = \frac{1}{K} $$
+> $$ \frac{ U_{filled} }{ U_{empty} } = \frac{1}{K} $$
 
-> $$ U_{empty} = $$
-
-> $$ U_{filled} = \frac{Q^2}{}$$
 
 ## October 1st 2015
 
@@ -489,8 +486,8 @@ The dialectric constant for a material is equal to the ratio of the E field insi
 
 ### Energy stored in a Dialectric Capacitor
 
-$$ \frac{Q^2}{2C} $$
-$$ \frac{1}{2}CV^2 $$
+- $$ U = \frac{Q^2}{2C} $$
+- $$ U = \frac{1}{2}CV^2 $$
 
 ### Half Filled Dialelctric Capacitor
 
@@ -779,7 +776,7 @@ Given this information we can find the radius of the path of a charged particle.
 
 So from this we can calculate the period of the circular motion of the particle.
 
-> $$ T = \frac{2\pi R}{v} $$.
+> $$ T = \frac{2\pi R}{v} $$
 
 ## October 22nd 2015
 
@@ -803,11 +800,13 @@ Is it ever possible to have total magnetic flux through a closed surface positiv
 
 Hall Voltage
 
-- $$ \vec{F}_E = -\vec{F}_B $$
+> $$ \vec{F}_E = -\vec{F}_B $$
 
-- $$ qE = qv_dB $$
-- $$ E = v_dB $$
-- $$ I = qnv_dWt $$
+> $$ qE = qv_dB $$
+
+> $$ E = v_dB $$
+
+> $$ I = qnv_dWt $$
 
 - $$n$$ the density of mobile carriers
 - $$W$$ the width of the conductor
@@ -891,7 +890,7 @@ When there is a positive charge that is moving with a constant velocty where $$ 
 
 Then we can say that the magnetic field is equal to: 
 
-> $$ \vec{B}(r) = \frac{\mu_0}{4\pi}q \frac{v\times r}{\hat{r}^2} = \frac{\mu_0}{4\pi}q \frac{v\times \vec{r}{r^3} $$
+> $$ \vec{B}(r) = \frac{\mu_0}{4\pi}q \frac{v\times r}{\hat{r}^2} = \frac{\mu_0}{4\pi}q \frac{v\times \vec{r}}{r^3} $$
 
 Remember $$\hat{r}$$ is the unit vector, where $$\vec{r}$$ is the actual vector of $$r$$
 
@@ -1044,13 +1043,13 @@ Sources of local magnetic fileds inside any material:
  
 In ferromagnets, there is a strong local magnetic field in the material. Large numbers of elementary moments line up in the magnetic domains. The global field depends on the orientation of magnetic domains. In permanent magnets the domains are preferentially oriented.
 
-We can calculate the total magnetic field of a magnetic material as where $$K_m$$ is the relative permeability, and $$\Chi_m = K_m - 1 $$.
+We can calculate the total magnetic field of a magnetic material as where $$K_m$$ is the relative permeability, and $$\chi_m = K_m - 1 $$.
 
 - $$ \vec{B} = \vec{B}_{ext} + \mu_0\vec{M} = K_m\vec{B}_{ext} $$
 
 ### Faraday's Law
 
-$$ \varepsilon = -\frac{d\PHI_B}{dt} $$
+$$ \varepsilon = -\frac{d\Phi_B}{dt} $$
 
 Magnetically induced emf in a battery is the result of non-electrostatic (non-conservative) forces:
 
@@ -1092,13 +1091,51 @@ The breaking force depends on the speed of the rotating disk. You simply just ne
 
 ### The Third Maxwell Equation
 
-$$\varepsilon = \int Encl \cdot dl $$
+$$\varepsilon = \int E_{NC} \cdot dl = -\frac{d\Phi_B}{dt} $$
 
+## November 9th 2015
 
+Before we are given the Maxwell equation of 
 
+> $$ \oint \vec{B} \cdot d\vec{l} = \mu_0I $$
 
+However, because this equation tells us that a B field can induce current, it must also alter the electric field.
 
+However the problem we have now is that given the equations we have, a magnetic field can create a electric field, but not the other way around!
 
+How do we fix this?
+
+Maxwell suggested a generalization of Ampere's Law by adding the quantity $$\epsilon_0\frac{\partial\vec{E}}{\partial t}\cdot d\vec{A} $$
+
+We call this quantity **displacement current**. This makes all of our equations with Electric and Magnetic field symmetric.
+
+Given all this information we can now say that the generalized Ampere's law is:
+
+> $$ \oint \vec{B} \cdot d\vec{l} = \mu_0I  = \mu_0\int_{surf}(\vec{J} + \epsilon_0\frac{\partial\vec{E}}{\partial t})\cdot d\vec{A} = \mu_0(I_{encl} + \epsilon_0\frac{d\Phi_E}{dt}) $$
+
+Given this we now have all of Maxwell's equations at our disposal!
+
+### Maxwell's Equations
+
+**Gauss's Law**
+
+> $$ \oint \vec{E}\cdot d\vec{A} = \frac{Q_{encl}}{\epsilon_0} $$
+
+**No Magnetic Monopoles**
+
+> $$ \oint_{surf} = \vec{B} \cdot d\vec{A} = 0 $$
+
+**Faraday's Law of Electromagnetic Induction**
+
+> $$ \oint_{loop} \vec{E}\cdot d\vec{l} = -\frac{d}{dt}\int_{surf}\vec{B} \cdot d\vec{A} $$
+
+**The Generalized Ampere's Law**
+
+> $$ \oint_{loop} = \vec{B} \cdot d\vec{l} = \mu_0\int_{surf} (\vec{J} + \epsilon_0\frac{\partial\vec{E}}{\partial t}) \cdot d\vec{A} $$
+
+**The Force on a Moving Charge**
+
+> $$ \vec{F} = q(\vec{E} + \vec{v}\times\vec{B}) $$
 
 
 

@@ -42,5 +42,5 @@ credit: reddit user **/u/Portaljacker**
 **A**: Inheritance<br>
 credit to StackOverflow user **spelchec**
 
-_Disclaimer_: These are either not mine, and I may have modified them slightly. I do not take credit for them. I have credited jokes from where I have found them on the interwebs :)
+_Disclaimer_: These are not mine, and I may have modified them slightly. I have credited jokes from where I have found them on the interwebs :)
 
