@@ -6,8 +6,8 @@
 </description>
     <link>http://blanco.io//</link>
     <atom:link href="http://blanco.io//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 11 Nov 2015 11:48:18 -0500</pubDate>
-    <lastBuildDate>Wed, 11 Nov 2015 11:48:18 -0500</lastBuildDate>
+    <pubDate>Thu, 12 Nov 2015 11:36:13 -0500</pubDate>
+    <lastBuildDate>Thu, 12 Nov 2015 11:36:13 -0500</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -3521,6 +3521,169 @@ We say for the difference circuit that&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;p&gt;When we use &lt;script type=&quot;math/tex&quot;&gt;cos(\omega t)&lt;/script&gt; as the reference sinusoid, we have the following &lt;strong&gt;inverse tranformation&lt;/strong&gt; from &lt;em&gt;phasor domain&lt;/em&gt; to &lt;em&gt;time domain&lt;/em&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;november-12th-2015&quot;&gt;November 12th 2015&lt;/h2&gt;
+
+&lt;h3 id=&quot;complex-numbers&quot;&gt;Complex Numbers&lt;/h3&gt;
+
+&lt;p&gt;A complex number is in the form&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;script type=&quot;math/tex; mode=display&quot;&gt;a + jb&lt;/script&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;The simples complex value is &lt;script type=&quot;math/tex&quot;&gt;i = j = \sqrt{-1}&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;Recall Euler’s Formula is&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;script type=&quot;math/tex; mode=display&quot;&gt;e^{jx} = cos(x) + jsinx&lt;/script&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Where &lt;script type=&quot;math/tex&quot;&gt;a = cos(x)&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;b = sin(x)&lt;/script&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;a&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;b&lt;/script&gt; are both real numbers.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;script type=&quot;math/tex&quot;&gt;a&lt;/script&gt; is for the &lt;em&gt;real&lt;/em&gt; part of the number.&lt;/li&gt;
+  &lt;li&gt;&lt;script type=&quot;math/tex&quot;&gt;b&lt;/script&gt; is for the &lt;em&gt;imaginary&lt;/em&gt; part of the number.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;plotting-imaginary-numbers&quot;&gt;Plotting Imaginary Numbers&lt;/h3&gt;
+
+&lt;p&gt;Imagine our axes in a 2-dimensional graph. Normally in 2D we define the horizontal axis as the x axis, and the vertical axis as the y-axis.&lt;/p&gt;
+
+&lt;p&gt;However in dealing with imaginary numbers we change the axes slightly.&lt;/p&gt;
+
+&lt;p&gt;When plotting imaginary numbers:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;The horizontal axis is the &lt;em&gt;real axis&lt;/em&gt;.&lt;/li&gt;
+  &lt;li&gt;The vertical axis is the &lt;em&gt;imaginary axis&lt;/em&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;What about on a polar coordinate system?&lt;/p&gt;
+
+&lt;p&gt;We can simply represent &lt;script type=&quot;math/tex&quot;&gt;a + jb&lt;/script&gt; as&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;script type=&quot;math/tex; mode=display&quot;&gt;a + jb = M(cos(\theta) + jsin(\theta))&lt;/script&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;This allows us to express the complex numbers in a polar coordinate system on a graph as well.&lt;/p&gt;
+
+&lt;p&gt;So now we have two ways of writing complex numbers&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;script type=&quot;math/tex; mode=display&quot;&gt;a + jb&lt;/script&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;script type=&quot;math/tex; mode=display&quot;&gt;M(cos(\theta) + jsin(\theta))&lt;/script&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;em&gt;But wait!&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Do you remember the Euler formula from earlier?&lt;/p&gt;
+
+&lt;p&gt;We can manipulate the &lt;strong&gt;2&lt;/strong&gt; representation above to actually make our 3rd representation&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;script type=&quot;math/tex; mode=display&quot;&gt;Me^{j\theta}&lt;/script&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;converting-from-rectangular-to-polar-coordinates&quot;&gt;Converting from Rectangular to Polar Coordinates&lt;/h3&gt;
+
+&lt;p&gt;So we can convert from rectangular coordinates to polar by simply using the relationships:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;script type=&quot;math/tex; mode=display&quot;&gt;tan(\theta) = \frac{y}{x}&lt;/script&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;script type=&quot;math/tex; mode=display&quot;&gt;M = \left|z\right| = \sqrt{x^2+y^2}&lt;/script&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;script type=&quot;math/tex; mode=display&quot;&gt;x = Mcos(\theta)&lt;/script&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;script type=&quot;math/tex; mode=display&quot;&gt;y = Msin(\theta)&lt;/script&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;adding-and-subtracting-complex-numbers&quot;&gt;Adding and Subtracting Complex Numbers&lt;/h3&gt;
+
+&lt;p&gt;When adding or subtracting these types of numbers, we simply only &lt;strong&gt;add or subtract &lt;em&gt;only the real parts&lt;/em&gt;&lt;/strong&gt; to obtain &lt;strong&gt;&lt;em&gt;the sum or difference of real answers&lt;/em&gt;&lt;/strong&gt;. Then we we simply &lt;strong&gt;&lt;em&gt;add or subtract all imaginary parts&lt;/em&gt;&lt;/strong&gt; to obtain the &lt;strong&gt;&lt;em&gt;sum or difference of imaginary parts&lt;/em&gt;&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;For example, given the following:&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;(a + jb) + (c + jd)&lt;/script&gt;
+
+&lt;p&gt;The result is&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;(a+c) + j(b + d)&lt;/script&gt;
+
+&lt;p&gt;But what happens if we have items in &lt;strong&gt;polar coordinates&lt;/strong&gt;?&lt;/p&gt;
+
+&lt;p&gt;Well, the simplest solution is to actually just &lt;strong&gt;convert the numbers to rectangular&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;multiplication-of-complex-numbers&quot;&gt;Multiplication of Complex Numbers&lt;/h3&gt;
+
+&lt;p&gt;Given the numbers:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;script type=&quot;math/tex; mode=display&quot;&gt;a + jb&lt;/script&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;script type=&quot;math/tex; mode=display&quot;&gt;c + jd&lt;/script&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Then the multiplication result of these two is&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;ac + jad + jbc + j^2bd&lt;/script&gt;
+
+&lt;p&gt;Simplified this yields&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;(ac - bd) + j(ad + bc)&lt;/script&gt;
+
+&lt;p&gt;We subtract &lt;script type=&quot;math/tex&quot;&gt;bd&lt;/script&gt; because when we have &lt;script type=&quot;math/tex&quot;&gt;j^2&lt;/script&gt;, we find it is equal to &lt;script type=&quot;math/tex&quot;&gt;-1&lt;/script&gt; given the definition of &lt;script type=&quot;math/tex&quot;&gt;j&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;For &lt;strong&gt;polar coordinates&lt;/strong&gt;:&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;M_1M_2e^{j(\theta_1+\theta_2)} = M_1M_2, \theta_1+\theta_2&lt;/script&gt;
+
+&lt;p&gt;&lt;strong&gt;Complex Conjugate&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;The complex conjugate of a number &lt;script type=&quot;math/tex&quot;&gt;z = a + jb&lt;/script&gt;, we find that the complex conjugate denoted &lt;script type=&quot;math/tex&quot;&gt;z^*&lt;/script&gt;, we find is equal to&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;script type=&quot;math/tex; mode=display&quot;&gt;z = a + jb, z^* = a - bj&lt;/script&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;em&gt;Properties of Complex Conjugates&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;If we multiply two complex conjugates together, we find that in the expansion:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;script type=&quot;math/tex; mode=display&quot;&gt;a^2 + jab - jab -j^2b&lt;/script&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;which is equal to the square magnitude:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;script type=&quot;math/tex; mode=display&quot;&gt;a^2 + b^2&lt;/script&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;division-of-complex-numbers&quot;&gt;Division of Complex Numbers&lt;/h3&gt;
+
+&lt;p&gt;The division of complex number using the rectangular coordinate system is difficult and requires a fair amount of algebra. However, converted to polar coordinates it is much easier&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;script type=&quot;math/tex; mode=display&quot;&gt;\frac{M_1e^{j\theta_1}}{M_2e^{j\theta_2}} = M_1M_2, \theta_1-\theta_2&lt;/script&gt;
+&lt;/blockquote&gt;
 
 </description>
         <pubDate>Thu, 03 Sep 2015 00:00:00 -0400</pubDate>

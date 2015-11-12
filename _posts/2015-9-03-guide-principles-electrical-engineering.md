@@ -1139,6 +1139,133 @@ When we use $$cos(\omega t) $$ as the reference sinusoid, we have the following 
 When we use $$cos(\omega t) $$ as the reference sinusoid, we have the following **inverse tranformation** from _phasor domain_ to _time domain_.
 
 
+## November 12th 2015
+
+### Complex Numbers
+
+
+A complex number is in the form
+
+> $$ a + jb $$
+
+The simples complex value is $$ i = j = \sqrt{-1} $$
+
+Recall Euler's Formula is
+
+> $$ e^{jx} = cos(x) + jsinx $$
+
+Where $$ a = cos(x) $$ and $$ b = sin(x) $$.
+
+$$a$$ and $$b$$ are both real numbers.
+
+- $$a$$ is for the _real_ part of the number.
+- $$b$$ is for the _imaginary_ part of the number.
+
+### Plotting Imaginary Numbers
+
+Imagine our axes in a 2-dimensional graph. Normally in 2D we define the horizontal axis as the x axis, and the vertical axis as the y-axis.
+
+However in dealing with imaginary numbers we change the axes slightly.
+
+When plotting imaginary numbers:
+
+- The horizontal axis is the _real axis_.
+- The vertical axis is the _imaginary axis_.
+
+What about on a polar coordinate system?
+
+We can simply represent $$a + jb$$ as
+
+> $$ a + jb = M(cos(\theta) + jsin(\theta)) $$
+
+This allows us to express the complex numbers in a polar coordinate system on a graph as well.
+
+So now we have two ways of writing complex numbers
+
+1. $$ a + jb $$
+2. $$M(cos(\theta) + jsin(\theta))$$
+
+_But wait!_
+
+Do you remember the Euler formula from earlier?
+
+We can manipulate the **2** representation above to actually make our 3rd representation
+
+> $$Me^{j\theta}$$
+
+### Converting from Rectangular to Polar Coordinates
+
+So we can convert from rectangular coordinates to polar by simply using the relationships:
+
+- $$ tan(\theta) = \frac{y}{x} $$
+- $$ M = \left|z\right| = \sqrt{x^2+y^2} $$
+- $$ x = Mcos(\theta) $$
+- $$ y = Msin(\theta) $$
+
+### Adding and Subtracting Complex Numbers
+
+When adding or subtracting these types of numbers, we simply only **add or subtract _only the real parts_** to obtain **_the sum or difference of real answers_**. Then we we simply **_add or subtract all imaginary parts_** to obtain the **_sum or difference of imaginary parts_**.
+
+For example, given the following:
+
+$$ (a + jb) + (c + jd) $$
+
+The result is 
+
+$$ (a+c) + j(b + d) $$
+
+But what happens if we have items in **polar coordinates**?
+
+Well, the simplest solution is to actually just **convert the numbers to rectangular**
+
+### Multiplication of Complex Numbers
+
+Given the numbers:
+
+- $$ a + jb $$
+- $$ c + jd $$
+
+Then the multiplication result of these two is
+
+$$ ac + jad + jbc + j^2bd $$
+
+Simplified this yields
+
+$$ (ac - bd) + j(ad + bc) $$
+
+We subtract $$bd$$ because when we have $$j^2$$, we find it is equal to $$-1$$ given the definition of $$j$$
+
+For **polar coordinates**:
+
+$$ M_1M_2e^{j(\theta_1+\theta_2)} = M_1M_2, \theta_1+\theta_2 $$
+
+**Complex Conjugate**
+
+The complex conjugate of a number $$z = a + jb $$, we find that the complex conjugate denoted $$z^*$$, we find is equal to 
+
+> $$ z = a + jb, z^* = a - bj $$
+
+_Properties of Complex Conjugates_
+
+If we multiply two complex conjugates together, we find that in the expansion:
+
+> $$ a^2 + jab - jab -j^2b $$
+
+which is equal to the square magnitude:
+
+> $$ a^2 + b^2 $$
+
+### Division of Complex Numbers
+
+The division of complex number using the rectangular coordinate system is difficult and requires a fair amount of algebra. However, converted to polar coordinates it is much easier
+
+> $$ \frac{M_1e^{j\theta_1}}{M_2e^{j\theta_2}} = M_1M_2, \theta_1-\theta_2 $$ 
+
+
+
+
+
+
 
 
 

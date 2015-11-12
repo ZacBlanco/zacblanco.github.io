@@ -1162,8 +1162,3 @@ Given this we now have all of Maxwell's equations at our disposal!
 
 
 
-
-
-
-
-
