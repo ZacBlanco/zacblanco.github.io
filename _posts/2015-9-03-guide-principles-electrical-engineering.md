@@ -51,7 +51,7 @@ I will try to keep this as up to date as possible as the class goes on throughou
 #### More Definitions
 
 - _Essential Node_ - A node where three or more circuit elements join
-- _Essential Branch_ - A path that cnnects two essential nodes without passing through an essential node. Must include elements in series. (d-g)
+- _Essential Branch_ - A path that connects two essential nodes without passing through an essential node. Must include elements in series. (d-g)
 - _Loop_ - a closed path that starts and ends at the same point.
 - A set of independent loops - Each loop in the set contains at least one branch that is not part of any other loop in the set(a-b-c, b-e-g-d, b-c-f-h-g-d)
 - _Mesh_ - a loop that does not enclose any other loop (d-b-e-g)
