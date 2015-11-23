@@ -1261,12 +1261,77 @@ The division of complex number using the rectangular coordinate system is diffic
 
 > $$ \frac{M_1e^{j\theta_1}}{M_2e^{j\theta_2}} = M_1M_2, \theta_1-\theta_2 $$ 
 
+## November 19th 2015
+
+## Conversions from the Time Domain to Phasor Domain
+----------------------------------------------------
 
 
+Conversions from the time domain to a phasor domain make our evaluations and analysis of AC response circuits much easier. 
+
+For every item in the time domain, we have an equivalent in the phasor domain. Remember that $$j=\sqrt{-1}$$.
+
+For a general overview of the Time-Domain to Phasor-Domain conversions see the table below.
+
+| Time Domain 		             	| Phasor (Frequency) Domain      | 
+|-----------------------------------|--------------------------------|
+|$$f(t)=Acos(\omega t + \theta) $$  | $$ Ae^{j\theta}=A\angle\theta$$|
+|$$v(t)=V_mcos(\omega t+\theta_v)$$| $$V=V_me^{j\theta_v}=V_m\angle\theta_v$$|
+|$$i(t)=I_mcos(\omega t+\theta_i)$$|$$I=I_me^{j\theta_i}=I_m\angle\theta_i$$|
+|$$v_\Delta (t)=\frac{dv(t)}{dt}=V_m\omega cos(\omega +\theta_v +90)$$|$$V_\Delta = j\omega V$$|
+|$$v_{\int}(t)=\int v(t) = \frac{V_m}{\omega}cos(\omega t+\theta_v -90)$$|$$V_{\int}=\frac{1}{j\omega}V$$|
+
+Now when dealing with RC and RLC circuits we normally would calculate the voltage/current/resistance by using Ohm's law ($$V=IR$$). When dealing with phasors our calculations are simplified. 
 
 
+### Resistance 
+
+Because our voltage is a function of time we need to deal with functions when we calculate our values. But in the phasor domain it is simply V=IR (When $$V$$ and $$I$$ are in phase!!!).
+
+_Time Domain_: $$i(t)R = v(t)$$
+
+_Phasor Domain_: $$ \frac{V}{I} = R $$
 
 
+### Inductance
+
+_Time Domain_: $$L\frac{di(t)}{dt}=v(t)$$
+
+_Phasor Domain_: $$\frac{V}{I} = j\omega L$$
+
+
+### Inductance
+
+_Time Domain_: $$C\frac{dv(t)}{dt}=i(t)$$
+
+_Phasor Domain_: $$\frac{V}{I} = -j\frac{1}{\omega C}$$
+
+
+### Impedance
+
+Impedance is in the units of Ohms.
+
+- $$R$$ is the real part of the impedance (_resistance_)
+- $$X$$ is the imaginary part of impedance (_reactance_)
+
+> $$ Z = \frac{V}{I} = R + jX $$
+
+### Admittance
+
+Admittance is in the units of Siemens ($$\frac{1}{\Omega})$$.
+
+- $$G$$ is the real part of the admittance (_conductance_)
+- $$B$$ is the imaginary part of admittance (_susceptance_)
+
+> $$ Y = \frac{1}{Z} = \frac{I}{V} = G + jB $$
+
+### RLC in Time vs Phasor
+
+| Time Domain | Phasor Domain |
+|-------------|---------------|
+| Resistance $$R$$ | Impedance $$Z=R$$ 					 |
+| Inductance $$L$$ | Impedance $$Z=j\omega L $$			 |
+| Capacitance $$C$$| Impedance $$Z=-j\frac{1}{\omega C}$$|
 
 
 

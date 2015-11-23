@@ -6,8 +6,8 @@
 </description>
     <link>http://blanco.io//</link>
     <atom:link href="http://blanco.io//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 12 Nov 2015 11:36:13 -0500</pubDate>
-    <lastBuildDate>Thu, 12 Nov 2015 11:36:13 -0500</lastBuildDate>
+    <pubDate>Mon, 23 Nov 2015 01:02:43 -0500</pubDate>
+    <lastBuildDate>Mon, 23 Nov 2015 01:02:43 -0500</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -2073,6 +2073,76 @@ r &lt; R %]]&gt;&lt;/script&gt; then we have &lt;script type=&quot;math/tex&quot
   &lt;script type=&quot;math/tex; mode=display&quot;&gt;\vec{F} = q(\vec{E} + \vec{v}\times\vec{B})&lt;/script&gt;
 &lt;/blockquote&gt;
 
+&lt;h1 id=&quot;insert-a-lecture-here&quot;&gt;INSERT A LECTURE HERE&lt;/h1&gt;
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;lecture-21-november-18th-2015&quot;&gt;Lecture 21, NOvember 18th 2015&lt;/h2&gt;
+
+&lt;h2 id=&quot;electromagnetic-waves&quot;&gt;Electromagnetic Waves&lt;/h2&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;Electromagnetic waves represent a type of solution for Maxwell equations. Properties of electromagnetic waves differ substantially from that of the stationary electric and magnetic fields.&lt;/p&gt;
+
+&lt;p&gt;Given that &lt;script type=&quot;math/tex&quot;&gt;kr-\omega t&lt;/script&gt; is the phase of the wave.&lt;/p&gt;
+
+&lt;p&gt;We say that **an electromagnetic wave in free space is a ransverse wave$$.&lt;/p&gt;
+
+&lt;p&gt;From this we find that&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;script type=&quot;math/tex; mode=display&quot;&gt;\vec{E} \times \vec{B} = \frac{E^2}{c}\vec{k}&lt;/script&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Also we know that the speed of light in a vacuum is&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;script type=&quot;math/tex; mode=display&quot;&gt;c = \frac{1}{\sqrt{\epsilon_0\mu_0}}&lt;/script&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Also the energy densities in the electric and magnetic fields in electromagnetic waves are equal.&lt;/p&gt;
+
+&lt;p&gt;Energy density of electromagnetic waves is&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;script type=&quot;math/tex; mode=display&quot;&gt;u_E = \frac{\epsilon_0}{2}E^2(r, t) = \frac{\epsilon_0}{2}c^2B^2(r, t)&lt;/script&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;So then for the total energy density is:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;script type=&quot;math/tex; mode=display&quot;&gt;u_EB = \frac{1}{2}(\epsilon_0E^2(r, t) + \frac{B^2(r, t)}{\mu_0}) = \epsilon_0E^2 = \frac{B^2}{\mu_0}&lt;/script&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Then we say that&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;script type=&quot;math/tex; mode=display&quot;&gt;u_EB = \frac{1}{2}\epsilon_0E_0^2 = \frac{1}{2\mu_0}B_0^2&lt;/script&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;intensity-of-electromagnetic-waves&quot;&gt;Intensity of Electromagnetic Waves&lt;/h3&gt;
+
+&lt;p&gt;The average power transported by the electromagnetic wave per unit of area:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;script type=&quot;math/tex; mode=display&quot;&gt;I = \frac{1}{2}c\epsilon_0E_0^2 = \frac{1}{2}\sqrt{\frac{\epsilon_0}{\mu_0}} = \frac{1}{2}\sqrt{\frac{\mu_0}{\epsilon_0}}B_0^2&lt;/script&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Question: &lt;strong&gt;How does the electromagneti energy get from one place to another?&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;We use the poynting vector.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;script type=&quot;math/tex; mode=display&quot;&gt;\vec{S} = \frac{1}{\mu_0}[\vec{E}\times\vec{B}]&lt;/script&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;The poynting formalism works well in many situations - our focuses of static and dynamic cases.&lt;/p&gt;
+
+&lt;p&gt;The flow of energy is associated with the &lt;strong&gt;momentum&lt;/strong&gt; of E&amp;amp;M waves. The momentum of E&amp;amp;M waves is realted to Einsteins equatino &lt;script type=&quot;math/tex&quot;&gt;E=mc^2&lt;/script&gt;. Because particles travel at the speed of light we find that they have to have some kind of momentum. Ater a bit of derivtion we find that ythe pressure exerted is&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;script type=&quot;math/tex; mode=display&quot;&gt;P_EB = \frac{S}{c}&lt;/script&gt;
+&lt;/blockquote&gt;
+
 </description>
         <pubDate>Thu, 03 Sep 2015 00:00:00 -0400</pubDate>
         <link>http://blanco.io//blog/physics/rutgers-physics-227-guide/</link>
@@ -2137,7 +2207,7 @@ r &lt; R %]]&gt;&lt;/script&gt; then we have &lt;script type=&quot;math/tex&quot
 
 &lt;ul&gt;
   &lt;li&gt;&lt;em&gt;Essential Node&lt;/em&gt; - A node where three or more circuit elements join&lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;Essential Branch&lt;/em&gt; - A path that cnnects two essential nodes without passing through an essential node. Must include elements in series. (d-g)&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;Essential Branch&lt;/em&gt; - A path that connects two essential nodes without passing through an essential node. Must include elements in series. (d-g)&lt;/li&gt;
   &lt;li&gt;&lt;em&gt;Loop&lt;/em&gt; - a closed path that starts and ends at the same point.&lt;/li&gt;
   &lt;li&gt;A set of independent loops - Each loop in the set contains at least one branch that is not part of any other loop in the set(a-b-c, b-e-g-d, b-c-f-h-g-d)&lt;/li&gt;
   &lt;li&gt;&lt;em&gt;Mesh&lt;/em&gt; - a loop that does not enclose any other loop (d-b-e-g)&lt;/li&gt;
@@ -3684,6 +3754,121 @@ We say for the difference circuit that&lt;/p&gt;
 &lt;blockquote&gt;
   &lt;script type=&quot;math/tex; mode=display&quot;&gt;\frac{M_1e^{j\theta_1}}{M_2e^{j\theta_2}} = M_1M_2, \theta_1-\theta_2&lt;/script&gt;
 &lt;/blockquote&gt;
+
+&lt;h2 id=&quot;november-19th-2015&quot;&gt;November 19th 2015&lt;/h2&gt;
+
+&lt;h2 id=&quot;conversions-from-the-time-domain-to-phasor-domain&quot;&gt;Conversions from the Time Domain to Phasor Domain&lt;/h2&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;Conversions from the time domain to a phasor domain make our evaluations and analysis of AC response circuits much easier.&lt;/p&gt;
+
+&lt;p&gt;For every item in the time domain, we have an equivalent in the phasor domain. Remember that &lt;script type=&quot;math/tex&quot;&gt;j=\sqrt{-1}&lt;/script&gt;.&lt;/p&gt;
+
+&lt;p&gt;For a general overview of the Time-Domain to Phasor-Domain conversions see the table below.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Time Domain&lt;/th&gt;
+      &lt;th&gt;Phasor (Frequency) Domain&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;script type=&quot;math/tex&quot;&gt;f(t)=Acos(\omega t + \theta)&lt;/script&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;script type=&quot;math/tex&quot;&gt;Ae^{j\theta}=A\angle\theta&lt;/script&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;script type=&quot;math/tex&quot;&gt;v(t)=V_mcos(\omega t+\theta_v)&lt;/script&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;script type=&quot;math/tex&quot;&gt;V=V_me^{j\theta_v}=V_m\angle\theta_v&lt;/script&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;script type=&quot;math/tex&quot;&gt;i(t)=I_mcos(\omega t+\theta_i)&lt;/script&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;script type=&quot;math/tex&quot;&gt;I=I_me^{j\theta_i}=I_m\angle\theta_i&lt;/script&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;script type=&quot;math/tex&quot;&gt;v_\Delta (t)=\frac{dv(t)}{dt}=V_m\omega cos(\omega +\theta_v +90)&lt;/script&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;script type=&quot;math/tex&quot;&gt;V_\Delta = j\omega V&lt;/script&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;script type=&quot;math/tex&quot;&gt;v_{\int}(t)=\int v(t) = \frac{V_m}{\omega}cos(\omega t+\theta_v -90)&lt;/script&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;script type=&quot;math/tex&quot;&gt;V_{\int}=\frac{1}{j\omega}V&lt;/script&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Now when dealing with RC and RLC circuits we normally would calculate the voltage/current/resistance by using Ohm’s law (&lt;script type=&quot;math/tex&quot;&gt;V=IR&lt;/script&gt;). When dealing with phasors our calculations are simplified.&lt;/p&gt;
+
+&lt;h3 id=&quot;resistance-1&quot;&gt;Resistance&lt;/h3&gt;
+
+&lt;p&gt;Because our voltage is a function of time we need to deal with functions when we calculate our values. But in the phasor domain it is simply V=IR (When &lt;script type=&quot;math/tex&quot;&gt;V&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;I&lt;/script&gt; are in phase!!!).&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Time Domain&lt;/em&gt;: &lt;script type=&quot;math/tex&quot;&gt;i(t)R = v(t)&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Phasor Domain&lt;/em&gt;: &lt;script type=&quot;math/tex&quot;&gt;\frac{V}{I} = R&lt;/script&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;inductance-1&quot;&gt;Inductance&lt;/h3&gt;
+
+&lt;p&gt;&lt;em&gt;Time Domain&lt;/em&gt;: &lt;script type=&quot;math/tex&quot;&gt;L\frac{di(t)}{dt}=v(t)&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Phasor Domain&lt;/em&gt;: &lt;script type=&quot;math/tex&quot;&gt;\frac{V}{I} = j\omega L&lt;/script&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;inductance-2&quot;&gt;Inductance&lt;/h3&gt;
+
+&lt;p&gt;&lt;em&gt;Time Domain&lt;/em&gt;: &lt;script type=&quot;math/tex&quot;&gt;C\frac{dv(t)}{dt}=i(t)&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Phasor Domain&lt;/em&gt;: &lt;script type=&quot;math/tex&quot;&gt;\frac{V}{I} = -j\frac{1}{\omega C}&lt;/script&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;impedance&quot;&gt;Impedance&lt;/h3&gt;
+
+&lt;p&gt;Impedance is in the units of Ohms.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;script type=&quot;math/tex&quot;&gt;R&lt;/script&gt; is the real part of the impedance (&lt;em&gt;resistance&lt;/em&gt;)&lt;/li&gt;
+  &lt;li&gt;&lt;script type=&quot;math/tex&quot;&gt;X&lt;/script&gt; is the imaginary part of impedance (&lt;em&gt;reactance&lt;/em&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;script type=&quot;math/tex; mode=display&quot;&gt;Z = \frac{V}{I} = R + jX&lt;/script&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;admittance&quot;&gt;Admittance&lt;/h3&gt;
+
+&lt;p&gt;Admittance is in the units of Siemens (&lt;script type=&quot;math/tex&quot;&gt;\frac{1}{\Omega}&lt;/script&gt;.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;script type=&quot;math/tex&quot;&gt;G&lt;/script&gt; is the real part of the admittance (&lt;em&gt;conductance&lt;/em&gt;)&lt;/li&gt;
+  &lt;li&gt;&lt;script type=&quot;math/tex&quot;&gt;B&lt;/script&gt; is the imaginary part of admittance (&lt;em&gt;susceptance&lt;/em&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;script type=&quot;math/tex; mode=display&quot;&gt;Y = \frac{1}{Z} = \frac{I}{V} = G + jB&lt;/script&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;rlc-in-time-vs-phasor&quot;&gt;RLC in Time vs Phasor&lt;/h3&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Time Domain&lt;/th&gt;
+      &lt;th&gt;Phasor Domain&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Resistance &lt;script type=&quot;math/tex&quot;&gt;R&lt;/script&gt;&lt;/td&gt;
+      &lt;td&gt;Impedance &lt;script type=&quot;math/tex&quot;&gt;Z=R&lt;/script&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Inductance &lt;script type=&quot;math/tex&quot;&gt;L&lt;/script&gt;&lt;/td&gt;
+      &lt;td&gt;Impedance &lt;script type=&quot;math/tex&quot;&gt;Z=j\omega L&lt;/script&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Capacitance &lt;script type=&quot;math/tex&quot;&gt;C&lt;/script&gt;&lt;/td&gt;
+      &lt;td&gt;Impedance &lt;script type=&quot;math/tex&quot;&gt;Z=-j\frac{1}{\omega C}&lt;/script&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
 
 </description>
         <pubDate>Thu, 03 Sep 2015 00:00:00 -0400</pubDate>
