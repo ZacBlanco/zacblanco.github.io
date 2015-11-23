@@ -1286,7 +1286,7 @@ Now when dealing with RC and RLC circuits we normally would calculate the voltag
 
 ### Resistance 
 
-Because our voltage is a function of time we need to deal with functions when we calculate our values. But in the phasor domain it is simply V=IR (When $$V$$ and $$I$$ are in phase!!!).
+Because our voltage is a function of time we need to deal with functions when we calculate our values. But in the phasor domain it is simply V=IR (When $$V$$ and $$I$$ are in phase!!).
 
 _Time Domain_: $$i(t)R = v(t)$$
 
@@ -1300,7 +1300,7 @@ _Time Domain_: $$L\frac{di(t)}{dt}=v(t)$$
 _Phasor Domain_: $$\frac{V}{I} = j\omega L$$
 
 
-### Inductance
+### Capacitance
 
 _Time Domain_: $$C\frac{dv(t)}{dt}=i(t)$$
 
@@ -1332,6 +1332,18 @@ Admittance is in the units of Siemens ($$\frac{1}{\Omega})$$.
 | Resistance $$R$$ | Impedance $$Z=R$$ 					 |
 | Inductance $$L$$ | Impedance $$Z=j\omega L $$			 |
 | Capacitance $$C$$| Impedance $$Z=-j\frac{1}{\omega C}$$|
+
+## November 23rd 2015
+
+![AC State Analysis](/assets/images/ee1-guide/ac-state-analysis-steps.png)
+
+In solving these circuits we need to first move from the time domain to the phasor domain before analyzing the circuit. After which we then analyze the circuit, and then finally convert back to the time domain
+
+
+### Maximum Power Transfer
+
+This occurs when the $$Z_{load} = Z_{TH}$$.
+
 
 
 
