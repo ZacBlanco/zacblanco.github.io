@@ -1345,6 +1345,50 @@ In solving these circuits we need to first move from the time domain to the phas
 This occurs when the $$Z_{load} = Z_{TH}$$.
 
 
+## November 30th 2015
+
+## Analyzing AC Circuits in the Phasor Domain
+
+When analyzing circuits in the phasor domain we need to convert all of the elements in the circuit to have impedance values for the phasor domain.
+
+Remember Impedances are in the units of Ohms ($$\Omega$$).
+
+Also remember that to convert different elements to the phasor domain they each have their own respective equations.
+
+- **Resistor**: $$Z=R$$
+- **Capacitor**: $$ Z = j\omega L $$
+- **Inductor**:  $$ Z = -j\frac{1}{\omega C} $$
+
+After converting all elements to the phasor domain we can then solve for our circuit using node voltage or mesh current method using the impedances for each.
+
+
+**However** you must _keep imaginary and real values separated_. Remember that the value $$j$$ represents $$\sqrt{-1}$$. So we cannot simply add the impedance values from resistors and then capacitors (or inductors) because we must separate the real and imaginary values.
+
+This means that it is possible for solutions (voltage, current) to a circuit to be in terms of a real and imaginary values when solving for the entire circuit in the phasor domain.
+
+**How is that possible?**
+
+Remember that we're dealing in the phasor domain because we have an AC current/voltage source. The equation that represents the source has the form $$ V(t) = Acos(\omega t + \phi)$$.
+
+If we recall from earlier we represented our complex terms as a real portion and an angle.
+
+The imaginary part of a solution will represent the tangent value of the angle, $$\phi$$. Then the real part will represent the amplitude, $$A$$.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

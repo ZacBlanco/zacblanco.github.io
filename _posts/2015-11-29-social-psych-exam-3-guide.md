@@ -134,8 +134,21 @@ The three attachment styles are:
 
 **Audience Inhibition**: Reluctance to help for fear of making a bad impression on Observers
 
+**Helping: Location and Culture**
 
+- People from more collectivist cultures will tend to have a better response to help a single person in need.
 
+- People from individualist cultures are have a better response to helping others in abstract ways such as charitable donations, volunterring.
+
+**Moods**
+
+People are more likely to help someone when they're in a good mood.
+
+However, people in a bad mood aren't always less likely to help someone.
+
+**Attractiveness and Helping**
+
+Attractive people have a higher chance of being helped than unattractive people
 
 
 

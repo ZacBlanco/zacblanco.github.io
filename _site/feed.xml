@@ -6,8 +6,8 @@
 </description>
     <link>http://blanco.io//</link>
     <atom:link href="http://blanco.io//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 30 Nov 2015 00:20:51 -0500</pubDate>
-    <lastBuildDate>Mon, 30 Nov 2015 00:20:51 -0500</lastBuildDate>
+    <pubDate>Mon, 30 Nov 2015 14:15:03 -0500</pubDate>
+    <lastBuildDate>Mon, 30 Nov 2015 14:15:03 -0500</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -122,6 +122,51 @@
 &lt;p&gt;&lt;strong&gt;Self-Disclosure&lt;/strong&gt;: Revelations about the self that a person makes to others.&lt;/p&gt;
 
 &lt;h2 id=&quot;helping&quot;&gt;Helping&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;Prosocial Behavior&lt;/strong&gt;: Actions intended to benefit others&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Kin Selection&lt;/strong&gt;: Preferntial helping of genetic relatives, which results in the greater likelihood that genes held in common will survive.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Empathy&lt;/strong&gt;: Understanding or vicariously experiencing another individual’s perspective and feeling sympathy and compassion for that individual.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Arousal: Cost-Reward Model&lt;/strong&gt;: The posposition that people react to emergency situations by acting in the most cost-effective way to reduce the arousal of shock and alarm.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Negative State relief model&lt;/strong&gt;: The proposition that people help others in order to counteract their own feelings of sadness.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Egoistic&lt;/strong&gt;: Motivated by the desire to increase one’s own welfare.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Altruistic&lt;/strong&gt;: Motivated by the desire to imporove another’s welfare.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Empathy-Altruism Model&lt;/strong&gt;: The porposition that empathic concern for a person in need produces an altruistic motive for helping.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Bystnder Effect&lt;/strong&gt;: The effect whereby the presence of others inhibits helping&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Pluralistic Ignorance&lt;/strong&gt;: The state in which people in a group mistakenly think that their own individual thoughts, feelings, or behaviors are different from those of the others in the group.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Diffusion of Responsibility&lt;/strong&gt;: The belief that others will or should take the responsibility for providing assistance to a person in need.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Audience Inhibition&lt;/strong&gt;: Reluctance to help for fear of making a bad impression on Observers&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Helping: Location and Culture&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;People from more collectivist cultures will tend to have a better response to help a single person in need.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;People from individualist cultures are have a better response to helping others in abstract ways such as charitable donations, volunterring.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Moods&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;People are more likely to help someone when they’re in a good mood.&lt;/p&gt;
+
+&lt;p&gt;However, people in a bad mood aren’t always less likely to help someone.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Attractiveness and Helping&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Attractive people have a higher chance of being helped than unattractive people&lt;/p&gt;
 
 </description>
         <pubDate>Sun, 29 Nov 2015 00:00:00 -0500</pubDate>
@@ -4075,6 +4120,36 @@ We say for the difference circuit that&lt;/p&gt;
 &lt;h3 id=&quot;maximum-power-transfer-1&quot;&gt;Maximum Power Transfer&lt;/h3&gt;
 
 &lt;p&gt;This occurs when the &lt;script type=&quot;math/tex&quot;&gt;Z_{load} = Z_{TH}&lt;/script&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;november-30th-2015&quot;&gt;November 30th 2015&lt;/h2&gt;
+
+&lt;h2 id=&quot;analyzing-ac-circuits-in-the-phasor-domain&quot;&gt;Analyzing AC Circuits in the Phasor Domain&lt;/h2&gt;
+
+&lt;p&gt;When analyzing circuits in the phasor domain we need to convert all of the elements in the circuit to have impedance values for the phasor domain.&lt;/p&gt;
+
+&lt;p&gt;Remember Impedances are in the units of Ohms (&lt;script type=&quot;math/tex&quot;&gt;\Omega&lt;/script&gt;).&lt;/p&gt;
+
+&lt;p&gt;Also remember that to convert different elements to the phasor domain they each have their own respective equations.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Resistor&lt;/strong&gt;: &lt;script type=&quot;math/tex&quot;&gt;Z=R&lt;/script&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Capacitor&lt;/strong&gt;: &lt;script type=&quot;math/tex&quot;&gt;Z = j\omega L&lt;/script&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Inductor&lt;/strong&gt;:  &lt;script type=&quot;math/tex&quot;&gt;Z = -j\frac{1}{\omega C}&lt;/script&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;After converting all elements to the phasor domain we can then solve for our circuit using node voltage or mesh current method using the impedances for each.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;However&lt;/strong&gt; you must &lt;em&gt;keep imaginary and real values separated&lt;/em&gt;. Remember that the value &lt;script type=&quot;math/tex&quot;&gt;j&lt;/script&gt; represents &lt;script type=&quot;math/tex&quot;&gt;\sqrt{-1}&lt;/script&gt;. So we cannot simply add the impedance values from resistors and then capacitors (or inductors) because we must separate the real and imaginary values.&lt;/p&gt;
+
+&lt;p&gt;This means that it is possible for solutions (voltage, current) to a circuit to be in terms of a real and imaginary values when solving for the entire circuit in the phasor domain.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;How is that possible?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Remember that we’re dealing in the phasor domain because we have an AC current/voltage source. The equation that represents the source has the form &lt;script type=&quot;math/tex&quot;&gt;V(t) = Acos(\omega t + \phi)&lt;/script&gt;.&lt;/p&gt;
+
+&lt;p&gt;If we recall from earlier we represented our complex terms as a real portion and an angle.&lt;/p&gt;
+
+&lt;p&gt;The imaginary part of a solution will represent the tangent value of the angle, &lt;script type=&quot;math/tex&quot;&gt;\phi&lt;/script&gt;. Then the real part will represent the amplitude, &lt;script type=&quot;math/tex&quot;&gt;A&lt;/script&gt;.&lt;/p&gt;
 
 </description>
         <pubDate>Thu, 03 Sep 2015 00:00:00 -0400</pubDate>
