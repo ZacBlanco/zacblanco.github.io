@@ -19,8 +19,8 @@ _Required to be a group_:
 - Direct interactions among one another
 - A shared common fate, identity, or goal.
 
-- People will join groups for a variety of reasons which may include performing tasks which cant be accomplished alone and to enhance self-esteem or social identity.
-- Evolutionary theoryists propose that atraction to groups is an evolved psychological mechanism.
+- People will join groups for a variety of reasons which may include performing tasks that can't be accomplished alone and to enhance self-esteem or social identity.
+- Evolutionary theorists propose that atraction to groups is an evolved psychological mechanism.
 
 **Collective**: An assembly of people engaging in a common activity, but having little direct interaction with one another.
 
@@ -34,7 +34,7 @@ Zajonc proposed an explanation to make sense of the results. His analyses showed
 
 **Evaluation Apprehension Theory**: A theory that the presence of others will produce social facilitation effects only when those other are seen as potential evaluators.
 
-**Distraction-Conflict Theory**: A theory that the presence of others will produce social favilitation effects only when those other distract from the task and create attentional conflict.
+**Distraction-Conflict Theory**: A theory that the presence of others will produce social facilitation effects only when those other distract from the task and create attentional conflict.
 
 **Social Loafing**: A group-produced reduction in individual output on tasks where contributions are pooled.
 
@@ -66,7 +66,7 @@ More effort will also be put in if there are punishments present, the group is s
 **Need for Affiliation**: The desire to establish and maintain many rewarding interpersonal relationships.
 
 - Stress can cause rise to a need for affiliation
-- Ebarassment can lead to solitude.
+- Embarrassment can lead to solitude.
 
 **Loneliness**: A feeling of deprication about esisting social relations.
 

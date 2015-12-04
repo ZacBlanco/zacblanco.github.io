@@ -6,8 +6,8 @@
 </description>
     <link>http://blanco.io//</link>
     <atom:link href="http://blanco.io//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 30 Nov 2015 14:15:03 -0500</pubDate>
-    <lastBuildDate>Mon, 30 Nov 2015 14:15:03 -0500</lastBuildDate>
+    <pubDate>Thu, 03 Dec 2015 11:05:22 -0500</pubDate>
+    <lastBuildDate>Thu, 03 Dec 2015 11:05:22 -0500</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -26,8 +26,8 @@
   &lt;li&gt;
     &lt;p&gt;A shared common fate, identity, or goal.&lt;/p&gt;
   &lt;/li&gt;
-  &lt;li&gt;People will join groups for a variety of reasons which may include performing tasks which cant be accomplished alone and to enhance self-esteem or social identity.&lt;/li&gt;
-  &lt;li&gt;Evolutionary theoryists propose that atraction to groups is an evolved psychological mechanism.&lt;/li&gt;
+  &lt;li&gt;People will join groups for a variety of reasons which may include performing tasks that can’t be accomplished alone and to enhance self-esteem or social identity.&lt;/li&gt;
+  &lt;li&gt;Evolutionary theorists propose that atraction to groups is an evolved psychological mechanism.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;strong&gt;Collective&lt;/strong&gt;: An assembly of people engaging in a common activity, but having little direct interaction with one another.&lt;/p&gt;
@@ -42,7 +42,7 @@
 
 &lt;p&gt;&lt;strong&gt;Evaluation Apprehension Theory&lt;/strong&gt;: A theory that the presence of others will produce social facilitation effects only when those other are seen as potential evaluators.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Distraction-Conflict Theory&lt;/strong&gt;: A theory that the presence of others will produce social favilitation effects only when those other distract from the task and create attentional conflict.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Distraction-Conflict Theory&lt;/strong&gt;: A theory that the presence of others will produce social facilitation effects only when those other distract from the task and create attentional conflict.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Social Loafing&lt;/strong&gt;: A group-produced reduction in individual output on tasks where contributions are pooled.&lt;/p&gt;
 
@@ -74,7 +74,7 @@
 
 &lt;ul&gt;
   &lt;li&gt;Stress can cause rise to a need for affiliation&lt;/li&gt;
-  &lt;li&gt;Ebarassment can lead to solitude.&lt;/li&gt;
+  &lt;li&gt;Embarrassment can lead to solitude.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;strong&gt;Loneliness&lt;/strong&gt;: A feeling of deprication about esisting social relations.&lt;/p&gt;
@@ -4150,6 +4150,63 @@ We say for the difference circuit that&lt;/p&gt;
 &lt;p&gt;If we recall from earlier we represented our complex terms as a real portion and an angle.&lt;/p&gt;
 
 &lt;p&gt;The imaginary part of a solution will represent the tangent value of the angle, &lt;script type=&quot;math/tex&quot;&gt;\phi&lt;/script&gt;. Then the real part will represent the amplitude, &lt;script type=&quot;math/tex&quot;&gt;A&lt;/script&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;december-3rd-2015&quot;&gt;December 3rd 2015&lt;/h2&gt;
+
+&lt;h2 id=&quot;chapter-10a---power-and-phasor-domain-analysis&quot;&gt;Chapter 10a - Power and Phasor Domain Analysis&lt;/h2&gt;
+
+&lt;p&gt;The root mean square (RMS) value of a periodic function &lt;script type=&quot;math/tex&quot;&gt;x(t)&lt;/script&gt; is defined as:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;script type=&quot;math/tex; mode=display&quot;&gt;X_{rms} = \sqrt{\frac{1}{T}\int^{t_o+T}_{t_o} x^2(\tau)d\tau}&lt;/script&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;This RMS value is equivalent to the **maximum (peak) voltage divided by &lt;script type=&quot;math/tex&quot;&gt;\sqrt{2}&lt;/script&gt;.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;script type=&quot;math/tex; mode=display&quot;&gt;V_{rms} = \frac{V_m}{\sqrt{2}}&lt;/script&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;The same thing applies for the current in AC circuits.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;script type=&quot;math/tex; mode=display&quot;&gt;I_{rms} = \frac{I_m}{\sqrt{2}}&lt;/script&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;The &lt;em&gt;rms&lt;/em&gt; value of any periodic voltage or current delivers the same average power to a resistor as a DC voltage with the same value.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;em&gt;rms&lt;/em&gt; values allow us to compare the effect of various periodic voltages to the effect of a DC voltage, also alled effective values.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;So for the average power delivered to a circuit, we find that given a simple AC source with function &lt;script type=&quot;math/tex&quot;&gt;V_mcos(\omega t + \theta_v)&lt;/script&gt;, then the average power delivered to the resistor is:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;script type=&quot;math/tex; mode=display&quot;&gt;P_{avg} = \frac{V_{rms}^2}{R}&lt;/script&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;So then we know how to calculate our power in the time domain…but what about the phasor domain?&lt;/p&gt;
+
+&lt;p&gt;The instantaneous power in an AC system in the time domain is&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;script type=&quot;math/tex; mode=display&quot;&gt;P = -\frac{V_mI_m}{2}sin(\theta_v-\theta_i)sin(2\omega t)&lt;/script&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;relation-between-voltage-and-current-on-capacitors-and-inductors&quot;&gt;Relation between voltage and Current on Capacitors and Inductors&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;ELI the ICE man&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;This can help us rememebr when voltage lags or leads in a capacitor and how we can estimate the phase angles.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;ELI&lt;/strong&gt; - Voltage LEADS current in an inductor by &lt;script type=&quot;math/tex&quot;&gt;90^o&lt;/script&gt;.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;ICE&lt;/strong&gt; - Voltage LAGS current in a capacitor by &lt;script type=&quot;math/tex&quot;&gt;90^o&lt;/script&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Another way that you could remember this is that capacitors have a &lt;strong&gt;negative imaginary impedance value&lt;/strong&gt;. Because it is negative, this corresponds to a &lt;strong&gt;-90 degrees - LAG&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;We can also say the same for inductors where &lt;strong&gt;inductors have a positive imaginary impedance value&lt;/strong&gt;, so this positive imaginary value corresponds to &lt;strong&gt;a +90 degree phase - LEAD&lt;/strong&gt;.&lt;/p&gt;
 
 </description>
         <pubDate>Thu, 03 Sep 2015 00:00:00 -0400</pubDate>

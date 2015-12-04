@@ -1374,8 +1374,48 @@ If we recall from earlier we represented our complex terms as a real portion and
 
 The imaginary part of a solution will represent the tangent value of the angle, $$\phi$$. Then the real part will represent the amplitude, $$A$$.
 
+## December 3rd 2015
 
+## Chapter 10a - Power and Phasor Domain Analysis
 
+The root mean square (RMS) value of a periodic function $$x(t)$$ is defined as:
+
+> $$ X_{rms} = \sqrt{\frac{1}{T}\int^{t_o+T}_{t_o} x^2(\tau)d\tau} $$
+
+This RMS value is equivalent to the **maximum (peak) voltage divided by $$\sqrt{2}$$.
+
+> $$ V_{rms} = \frac{V_m}{\sqrt{2}} $$
+
+The same thing applies for the current in AC circuits.
+
+> $$ I_{rms} = \frac{I_m}{\sqrt{2}} $$
+
+The _rms_ value of any periodic voltage or current delivers the same average power to a resistor as a DC voltage with the same value.
+
+- _rms_ values allow us to compare the effect of various periodic voltages to the effect of a DC voltage, also alled effective values.
+
+So for the average power delivered to a circuit, we find that given a simple AC source with function $$V_mcos(\omega t + \theta_v) $$, then the average power delivered to the resistor is:
+
+> $$ P_{avg} = \frac{V_{rms}^2}{R} $$
+
+So then we know how to calculate our power in the time domain...but what about the phasor domain?
+
+The instantaneous power in an AC system in the time domain is
+
+> $$ P = -\frac{V_mI_m}{2}sin(\theta_v-\theta_i)sin(2\omega t) $$
+
+### Relation between voltage and Current on Capacitors and Inductors
+
+**ELI the ICE man**
+
+This can help us rememebr when voltage lags or leads in a capacitor and how we can estimate the phase angles.
+
+- **ELI** - Voltage LEADS current in an inductor by $$90^o$$.
+- **ICE** - Voltage LAGS current in a capacitor by $$90^o$$.
+
+Another way that you could remember this is that capacitors have a **negative imaginary impedance value**. Because it is negative, this corresponds to a **-90 degrees - LAG**.
+
+We can also say the same for inductors where **inductors have a positive imaginary impedance value**, so this positive imaginary value corresponds to **a +90 degree phase - LEAD**.
 
 
 
