@@ -5,6 +5,8 @@ keywords: social, psychology, stereotypes, prejudice, discrimination, attitudes,
 permalink: /education/social-psychology/notes-2/
 ---
 
+#### [Click to Go Back to Social Psychology Page](../)
+
 ------------------------------------
 
 ## Stereotypes, Prejudice, and Discrimination

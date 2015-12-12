@@ -6,6 +6,8 @@ permalink: /education/social-psychology/notes-3/
 keywords: social psychology, relationships, groups, ingroup, outgroup, helping, altruism
 ---
 
+#### [Click to Go Back to Social Psychology Page](../)
+
 -----------------------------------
 
 In this guide we will quickly cover the major topics of groups, relationships, and helping.
