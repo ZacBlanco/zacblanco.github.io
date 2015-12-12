@@ -22,7 +22,6 @@ permalink:           none
 relative_permalinks: false  
 
 # Setup
-paginate:         1
 author:
   name:           Zac Blanco
   url:            "http://blanco.io"
