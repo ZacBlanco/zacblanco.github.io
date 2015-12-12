@@ -10,16 +10,16 @@ url: "http://blanco.io" # the base hostname & protocol for your site
 twitter_username: ZacBlanco
 github_username:  ZacBlanco
 
-pages_list:       
-  Projects: '/projects'
+pages_list:    
   Blog: '/blog'
+  Education: '/education'
+  Projects: '/projects'
   About: '/about'
-  Feed: '/atom.xml'
-
+  
 
 # Permalinks
-permalink:        none
-relative_permalinks: true
+permalink:           none
+relative_permalinks: false  
 
 # Setup
 paginate:         1

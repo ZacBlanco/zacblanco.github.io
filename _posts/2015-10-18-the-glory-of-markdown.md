@@ -37,9 +37,9 @@ Yeah so your webpage might look cool with all those colors and fancy CSS3-box sh
 
 (_Hint: the answer is **no**_)
 
-Markdown itself is a beautiful and simple syntax. It's about as close to [_WSYIWYG_](https://en.wikipedia.org/wiki/WYSIWYG){:target="_blank"} as you'll get. You open up a `.md` file and you can immediately tell how it's going to look.
+Markdown itself is a beautiful and simple syntax. It's pretty easy to tell how a page is going to look after it's converted to HTML.
 
-We get no frills and no fancy, but at least you know how it's going to look. While deceivingly simple to write, markdown has many features that makes its syntax powerful.
+We get no frills and no fancy, but we don't really need that anyways. Markdown is deceivingly simple to write, and has many features that makes its syntax powerful.
 
 ## 4. Markdown lets you worry about your content
 

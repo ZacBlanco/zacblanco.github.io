@@ -16,10 +16,11 @@ Here's a list of languages and technologies I've worked with in the past:
 
 - Java
 - Python
-- Hadoop Components: Knox, Ambari, Zeppelin, Hive, HDFS, Ranger, Spark
+- Hadoop Components: Knox, Ambari, Zeppelin, Hive, HDFS, Ranger, NiFi, Solr
+- Apache Spark
 - C#
 - HTML
--  CSS
+- CSS
 - Javascript
 - Node.js
 - Git + GitHub
