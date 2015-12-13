@@ -265,9 +265,9 @@ Normally $$ E = 0 $$
 
 then $$\Phi = 0 $$
 
-So then if we put Q in a cavity inside the aphere then we know that the enclosed charge in the cavity will then attract charge to the inside surface of the cavity (within the conductor). This means the leftover charge will be equal to the charge felt on the outside of the sphere.
+So then if we put Q in a cavity inside the sphere then we know that the enclosed charge in the cavity will then attract charge to the inside surface of the cavity (within the conductor). This means the leftover charge will be equal to the charge felt on the outside of the sphere.
 
-Thus, the charge enclosed in the cavity is equal to the charge on the outsie of the sphere.
+Thus, the charge enclosed in the cavity is equal to the charge on the outside of the sphere.
 
 ## September 17th 2015
 
@@ -374,7 +374,7 @@ Because the E field is 0 everywhere inside a conductor, the electrostatic potent
 
 ### Capacitors
 
-- A cpacitor is a system of two conducting surfaces (electrodes), the net charge of the two are zero.
+- A capacitor is a system of two conducting surfaces (electrodes), the net charge of the two are zero.
 
 That is, one plate will be positively charged and the other will be negatively charged.
 
@@ -460,7 +460,7 @@ If capacitors are connected in series (nodes that are directly connected to only
 
 > $$ C_{eq} = \frac{1}{\frac{1}{C_1} + \frac{1}{C_2} + ... + \frac{1}{C_n}} $$
 
-### Linear Dialectrucs in an External Electric Field
+### Linear Dialectrics in an External Electric Field
 
 The electric field inside of a capacitor is actually in the opposite direction. This means the electric around the capacitor will change slightly.
 
@@ -588,7 +588,7 @@ For a DC current to run, it is not necessary to have a non-zero net charge densi
 
 This equation we have the sum of voltage drops over the resistors is equal to $$i$$ multiplied by $$ R_1 + R_2 + R_3 $$.
 
-> $$ R_{eq} = \Sigma_iR R_i $$
+> $$ R_{eq} = \Sigma_i R_i $$
 
 **In parallel**, the common quantity is voltage.
 
@@ -600,9 +600,9 @@ For two resistors $$R_1$$ and $$R_2$$, then the $$R_{eq}$$ is:
 
 ### Ideal Batteries (No Energy dissipation inside battery)
 
-We assume that wired=s have resistance much smaller than the load $$R$$. (All voltage difference provided by the battery is applied to $$R$$)
+We assume that wires have resistance much smaller than the load $$R$$. (All voltage difference provided by the battery is applied to $$R$$)
 
-Conclusion: An external agent inside the battery (Not the electrostatic E filed!) forces the charge carriers to climb "the potential hill".
+Conclusion: An external agent inside the battery (Not the electrostatic E field!) forces the charge carriers to climb "the potential hill".
 
 ### External Forces Separate Charges
 
@@ -680,7 +680,7 @@ With a resistor in the circuit with a capacitor, The capacitor doesn't instantly
 
 A capacitor behaves as a "break" in the circuit when the potential difference between the two plates of the capacitor is equal to the potential difference of the emf.
 
-While the above is true, we can also say that we a capacitor is equilibrated (both plates of equal potential. Potential difference = 0) then we can say that a capacitor behavaes as a short.
+While the above is true, we can also say that when a capacitor is equilibrated (both plates of equal potential. Potential difference = 0) then we can say that a capacitor behavaes as a short.
 
 As a capacitor charges with a resistor in the circuit, its plates gain a greater potential difference, thus a capacitor behaves as a type of "quasi-switch" where it actually acts like an open circuit at some points, and a closed circuit at other times (only if a resistor is present in the circuit).
 
@@ -699,7 +699,7 @@ After solving for $$q(t)$$...
 
 > $$\tau = RC$$
 
-- For a $$1k\omega$$ resistor and a $$C=1mF$$, $$\tau=RC=1s$$.
+- For a $$1k\Omega$$ resistor and a $$C=1mF$$, $$\tau=RC=1s$$.
 
 Now for the current in a circuit including a resistor and capacitor:
 
@@ -726,9 +726,9 @@ Goal: Describe the magnetostatic field the same way we've described the electros
 Charged at rest do not generate any magnetic field, $$B$$.
 
 - There is no such thing as a magnetic monopole - It has never been observed.
-- A Moving single chaarge: the field is **non-stationary**, not good for magnetostatics
+- A Moving single charge: the field is **non-stationary**, not good for magnetostatics
 
-A steadt (time-independent) current is the best bet.
+A steady (time-independent) current is the best bet.
 
 Possible sources of $$B$$
 
@@ -769,7 +769,7 @@ Because the force of the magnetic field acts perpendicular to the direction of t
 
 ### Cyclotron Motion in a Magnetic Field
 
-> $$ \vec{F} = qvB = m\frac{v^2}{R} $$.
+> $$ \vec{F} = qvB = m\frac{v^2}{R} $$
 
 Given this information we can find the radius of the path of a charged particle.
 
@@ -899,7 +899,7 @@ Also note that that $$\mu_0 = 4\pi \cdot 10^{-7} \frac{Ns^2}{C^2}$$
 
 ### The Magnetic Field of Currents
 
-The charge carriers of a wire segment --> $$ Adl $$.
+The charge carriers of a wire segment --> $$ A\cdot dl $$.
 
 > $$ q_{seg} = \Sigma_i q_i = neAdl $$
 
@@ -911,7 +911,7 @@ So then
 
 This givens us the _Biot-Savart Law_ where
 
-> $$ \vec{B}(r)  = \frac{\mu_0}{4\pi} I \int \frac{ d\vec{l} \times (\vec{r} - \vec{r`} ) }{r^2} $$
+> $$ \vec{B}(r)  = \frac{\mu_0}{4\pi} I \int \frac{ d\vec{l} \times (\vec{r} - \vec{r'} ) }{r^2} $$
 
 ### The Magnetic Field of  Circular Loop With Current
 
@@ -1070,7 +1070,7 @@ $$ \varepsilon = -N\frac{d\Phi_m}{dt} $$
 
 ### Motional EMF
 
-Imagine a loop of wire with a current$$I$$ that is in magnetic field. We pull that loop into the right, then we need to find the induced current.
+Imagine a loop of wire with a current, $$I$$ that is in magnetic field. We pull that loop into the right, then we need to find the induced current.
 
 Remember $$\varepsilon$$ is equal to $$\frac{d\Phi}{dt} = \frac{d}{dt}(Blx) = Blv $$
 
@@ -1151,7 +1151,7 @@ Electromagnetic waves represent a type of solution for Maxwell equations. Proper
 
 Given that $$kr-\omega t$$ is the phase of the wave.
 
-We say that **an electromagnetic wave in free space is a ransverse wave$$.
+We say that **an electromagnetic wave in free space is a transverse wave**.
 
 From this we find that 
 
