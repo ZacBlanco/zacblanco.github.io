@@ -20,7 +20,7 @@ permalink: /education/social-psychology/notes-1/
   - Determining fact from myth
   - Social Psychology relies on the scientific method
   - Forming hypotheses -- testable predictions
-  - Organizing ideas and findings into 
+  - Organizing ideas and findings into theories and principles
 - History/Philosophy
 - Sociology
   - Focus is on the person, rather than the group
