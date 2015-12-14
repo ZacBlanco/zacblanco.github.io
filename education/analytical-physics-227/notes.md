@@ -1194,6 +1194,14 @@ The flow of energy is associated with the **momentum** of E&M waves. The momentu
 
 > $$ P_EB = \frac{S}{c} $$
 
+Electromagnetic waves have four key properties:
+
+1. The wave is transverse; both ES and BS are perpendicular to the direction of propagation of the wave. The electric and magnetic fields are also perpen- dicular to each other. The direction of propagation is the direction of the vector product ES : BS (Fig. 32.9). S S
+2. There is a definite ratio between the magnitudes of E and B: E = cB.
+3. The wave travels in vacuum with a definite and unchanging speed.
+4. Unlike mechanical waves, which need the oscillating particles of a medium
+such as water or air to transmit a wave, electromagnetic waves require no medium.
+
 ## Lecture 22 November 23rd, 2015
 
 ## Inductance and Faraday's Law
