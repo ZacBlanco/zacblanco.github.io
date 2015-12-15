@@ -218,7 +218,7 @@ For number 1. we want to:
 - **Availability Heuristic**: Tendency to estimate that an event will occur by how available a memory is.
 - **False consensus effect**: We overestimate the extent to which others share beliefs and opinions
 - **Counterfactual thinking**: The tendency to imagine alternative events or outcomes that might have occurred but did not
-- **Fundamental attribution error**: The tendency to focus on the role of personal causes ad underestimate the impact of situations on people's behavior
+- **Fundamental attribution error**: The tendency to focus on the role of personal causes and underestimate the impact of situations on people's behavior
 
 **Information Integration Theory**: The theory that impressions are based on (1) the perceiver dispositions and (2) a weighted average of a target person's traits
 

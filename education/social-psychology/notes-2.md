@@ -100,14 +100,14 @@ permalink: /education/social-psychology/notes-2/
 
 **Peripheral Route to Persuasion**: The process by which a person does not think carefully about a communication and is influenced instead by superficial cues.
 
-**Elaboration**: The process of thinking about scrutizing the arguments contained in a persuasive communication.
+**Elaboration**: The process of thinking about scrutinizing the arguments contained in a persuasive communication.
 
 **Attributes influencing The Source Persuasion:**
  - Credibility
  - Likeability
  - "When what you say is more important than who you are"
  
-**The Sleeper Effect**: A delayed increase in th persuasive impact of a noncredible source.
+**The Sleeper Effect**: A delayed increase in th persuasive impact of a non-credible source.
 
 #### Messages in Persuasion
 
@@ -126,7 +126,7 @@ permalink: /education/social-psychology/notes-2/
  - Regulatory Fit
  - Forewarning and Resistance
  
-**Inoculation Hypothesis**: The idea that expsure to weak versions of a persuasive argument increases later resistance to that argument
+**Inoculation Hypothesis**: The idea that exposure to weak versions of a persuasive argument increases later resistance to that argument
 
 **Psychological Reactance**: The theory that people react against threats to their freedom by asserting themselves and perceiving the threatened freedom as more attractive.
 
@@ -136,7 +136,7 @@ permalink: /education/social-psychology/notes-2/
 
 **Insufficient Justification**: A condition in which people freely perform an attitude discrepant behavior without receiving a large reward.
 
-**Insufficient Deterrance**: A condition in which people refrain from engaging in a desirable activity, even when only mild punishment is threatened.
+**Insufficient Deterrence**: A condition in which people refrain from engaging in a desirable activity, even when only mild punishment is threatened.
 
 #### Alternative Routes to Self Persuasion
 
@@ -144,7 +144,7 @@ permalink: /education/social-psychology/notes-2/
 
 **Impression Management Theory**: What matters is not a motive to be consistent, but a motive to appear consistent.
 
-**Self Esteem Theories**: People will will change their attitudes if it can bolster their self-esteem.
+**Self Esteem Theories**: People will change their attitudes if it can bolster their self-esteem.
 
 ## Conformity and Compliance
 
@@ -171,9 +171,9 @@ permalink: /education/social-psychology/notes-2/
 
 **Individualism**: A cultural orientation in which independence, autonomy, and self-reliance take priority over group allegiances.
 
-**Collectivism**: A cultural orientation in which interdependece, cooperation, and social harmony take priority over personal goals.
+**Collectivism**: A cultural orientation in which interdependence, cooperation, and social harmony take priority over personal goals.
 
-**Compliance**: Changes in behavior that are elciited by direct requisites.
+**Compliance**: Changes in behavior that are elicited by direct requisites.
 
 **The Norm of Reciprocity**: Dictates that we treat others the way they have treated us.
 
@@ -181,7 +181,7 @@ permalink: /education/social-psychology/notes-2/
 
 **Lowballing** A two-step compliance technique in which the influencer secures agreement with a request but then increases the size of that request by revealing hidden costs.
 
-**Door-In-The-Face**: A two-step compliance technique in which an influencer prefaces the real request with one thats so large that it is rejected.
+**Door-In-The-Face**: A two-step compliance technique in which an influencer prefaces the real request with one that's so large that it is rejected.
 
 **That's-Not-All Technique**: A two-step compliance technique in which the influencer begins with an inflated request and then decreases its apparent size by offering a discount or bonus.
 
