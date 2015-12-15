@@ -56,7 +56,7 @@ For number 1. we want to:
 **Conceptual Variables vs Operational Definitions**
 
 - A **Conceptual Variable** is some abstract general construct.
-- An **Operational Definition** is a measureable definition for a conceptual variable in research.
+- An **Operational Definition** is a measurable definition for a conceptual variable in research.
 
 **Construct Validity**: The extent to which the experiment measures and manipulates variables in the study actually measure or manipulate what they are meant to.
 
@@ -64,7 +64,7 @@ For number 1. we want to:
 
 **Correlational Designs**: Examines relationships between multiple variables.
 
-**Experimental Designs**: The cornetstone of psychological research. It is used to examine cause and effect relationships. All experiments have two essential characteristics
+**Experimental Designs**: The cornerstone of psychological research. It is used to examine cause and effect relationships. All experiments have two essential characteristics
 
 - Researchers have control over the experimental procedure
 - There should be random assignment to experimental conditions
@@ -72,7 +72,7 @@ For number 1. we want to:
 **Random Sampling Vs Random Assignment**:
 
 - **Random sampling** is when the participants in an experiment are chosen from the population.
-- **Random Assignment** is what we call randomly putting participants into different experiemntal groups (control, etc.)
+- **Random Assignment** is what we call randomly putting participants into different experimental groups (control, etc.)
 
 **Statistical Significance**: if the probability of something happening by chance is less than 5% (.05) we usually say a result is statistically significant
 
@@ -127,7 +127,7 @@ For number 1. we want to:
 - People describe themselves in traits that set themselves apart from others
 - **Social Comparison Theory**: We compare our performance to others (when the uncertain about our own).
 
-**4. Autobiographical Memoery**
+**4. Autobiographical Memory**
 
 - Essential for a coherent self-concept.
   - Recall events from our recent past
@@ -149,7 +149,7 @@ For number 1. we want to:
 - Higher self-esteem _tends_ to make people more happy/healthy/productive
   - Not guaranteed success - low social sensitivity usually comes with a high self-esteem
 
-- **Self-Discrepancy Theory**: The self-esteem refelcts matches and mismatches between how we se eourselves and how we want to see ourselves
+- **Self-Discrepancy Theory**: The self-esteem reflects matches and mismatches between how we se ourselves and how we want to see ourselves
   - Discrepancy between the _ought-self_ tends to lead to feelings of shame or guilt
 
 **Self Awareness**
@@ -168,8 +168,8 @@ For number 1. we want to:
 
 **Mechanisms of Self-Enhancement**
 
-- **Self-Handicapping**: Excuses for poor behavior - we sabatoge our own performance
-- **BIRG**: _Basking In Reflected Glory_ - Assoiate ourselves with success, distance ourselves from our failures.
+- **Self-Handicapping**: Excuses for poor behavior - we sabotoge our own performance
+- **BIRG**: _Basking In Reflected Glory_ - Associate ourselves with success, distance ourselves from our failures.
 - **Downward Social Comparison**: We don't always want objective information. We like to compare ourselves to less successful people sometimes.
   - Depressed people tend to have more realistic views
 
@@ -181,7 +181,7 @@ For number 1. we want to:
 
 **Observation**
 
-- Subtley influenced by appearance
+- Subtly influenced by appearance
 - We sometimes pre-judge on facial features
 - Baby-facedness: large eyes relative to the size of the head/person
   - Genetically programmed
@@ -191,7 +191,7 @@ For number 1. we want to:
   
 **Distorted Perceptions**: Sometimes if we expect to see something our brain will actually fill in the gaps.
 
-- We like to infer information form non-verbal behaviors.
+- We like to infer information from non-verbal behaviors.
 - Primary thing we use is facial expressions
 - Also: tone of voice
 - Gestures
@@ -225,21 +225,11 @@ For number 1. we want to:
 - **Priming**: The tendency for recently used or perceived words or ideas to come to mind easily and influence the interpretation of new information
 - and Embodiment
 - **Central Traits**: Traits that exert a powerful influence on overall impressions
-- **Trait Negativity Bias**: The tendency for negative information to weight more heavily on our impressions than positive information
+- **Trait Negativity Bias**: The tendency for negative information to weigh more heavily on our impressions than positive information
 
-**Primacy Effect**: The tendency for information presented early in a qsequnce to have more impact on impressions than information presented later.
+**Primacy Effect**: The tendency for information presented early in a sequence to have more impact on impressions than information presented later.
 
 **Confirmation Bias**: The tendency to seek interpret, and create information that verifies existing beliefs
 
 - **Self-Fulfilling Prophecy**: The process by which one's expectations about a person eventually lead that person to behave in ways that confirm those expectations
-
-
-
-
-
-
-
-
-
-
 
