@@ -7,6 +7,12 @@ mathjax: true
 description: A collection of notes to reference for the Data Structures (CS112)
 ---
 
+[**Click here to go back to the Data Structures page**](../)
+
+**This page is currently a work in progress**
+
+------------------------------------------------------------------------
+
 ## Binary Trees
 
 ## AVL Trees
