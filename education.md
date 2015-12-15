@@ -16,4 +16,5 @@ To start contributing, you'll need to [make a fork](https://help.github.com/arti
 - [Analytical Physics 1B - (01:750:124)](analytical-physics-124/)
 - [Analytical Physics 2A - Electromagnetism - (01:750:227)](analytical-physics-227/)
 - [Social Psychology - (01:830:321)](social-psychology/)
+- [Data Structures - (01:198:112)](data-structures/)
 
