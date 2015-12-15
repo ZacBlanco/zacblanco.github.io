@@ -23,7 +23,7 @@ _Required to be a group_:
 - A shared common fate, identity, or goal.
 
 - People will join groups for a variety of reasons which may include performing tasks that can't be accomplished alone and to enhance self-esteem or social identity.
-- Evolutionary theorists propose that atraction to groups is an evolved psychological mechanism.
+- Evolutionary theorists propose that attraction to groups is an evolved psychological mechanism.
 
 **Collective**: An assembly of people engaging in a common activity, but having little direct interaction with one another.
 
@@ -58,11 +58,11 @@ More effort will also be put in if there are punishments present, the group is s
 
 **Group Polarization**: The exaggeration of initial tendencies in the thinking of group members through group discussion.
 
-**Groupthink**: Agroup decision making style characterized by an excessive tendency among group members to seek concurrence.
+**Groupthink**: A group decision-making style characterized by an excessive tendency among group members to seek concurrence.
 
 **Escalation Effect** The condition in which commitments to a failing course of action are increased to justify investments already made.
 
-**Prisoner's Dilemma**: A type of dilemma in which one party must make either cooperative or competitive moves in relation to another party. The dilemma is typically designed so that the competitive move appears to be in one's self interest, but if both sides make this move, they both suffer more than if they had both cooperated.
+**Prisoner's Dilemma**: A type of dilemma in which one party must make either cooperative or competitive moves in relation to another party. The dilemma is typically designed so that the competitive move appears to be in one's self-interest, but if both sides make this move, they both suffer more than if they had both cooperated.
 
 ## Relationships
 
@@ -71,15 +71,15 @@ More effort will also be put in if there are punishments present, the group is s
 - Stress can cause rise to a need for affiliation
 - Embarrassment can lead to solitude.
 
-**Loneliness**: A feeling of deprication about esisting social relations.
+**Loneliness**: A feeling of deprivation about existing social relations.
 
-**Mere Exposure Effect**: The phenomenom whereby the more often people are exposed to a stimulus, the more positvely they evaluate that stimulus.
+**Mere Exposure Effect**: The phenomenon whereby the more often people are exposed to a stimulus, the more positivelythey evaluate that stimulus.
 
 **Proximity Effect**: Physical closeness of one another will stimulate.
 
-- In our minds we see that physically attrctive indicidual also possess desirable personality characteristics.
+- In our minds we see that physically attractive individual also possess desirable personality characteristics.
 
-**Matching Hypothesis**: The proposition tha tpeople are attracted to others who are similar in physical attractiveness.
+**Matching Hypothesis**: The proposition that people are attracted to others who are similar in physical attractiveness.
 
 **Reciprocity**: A mutual exchange between what we give and receive-- for example, liking those who like us.
 
@@ -89,7 +89,7 @@ More effort will also be put in if there are punishments present, the group is s
 
 **Equity Theory**: The theory that people are most satisfied with a relationship when the ratio between benefits and contributions is similar for both partners.
 
-**Exchange Relationships**: A relationship in which the participants expect and desire mutual responsibeness to each other's needs.
+**Exchange Relationships**: A relationship in which the participants expect and desire mutual responsibleness to each other's needs.
 
 **Communal Relationship**: A relationship in which the participants expect and desire mutual responsiveness to each other's needs.
 
@@ -101,7 +101,7 @@ The three attachment styles are:
 - Avoidant
 - Anxious
 
-**The Triangular Theory of Love**: A theory proposing that love has three basic components: intimacy, passion, and commitment. That can be combined to produce eigh subtypes.
+**The Triangular Theory of Love**: A theory proposing that love has three basic components: intimacy, passion, and commitment. That can be combined to produce eight subtypes.
 
 **Passionate Love**: Romantic love characterized by high arousal, intense attraction, and fear of rejection.
 
@@ -115,21 +115,21 @@ The three attachment styles are:
 
 **Prosocial Behavior**: Actions intended to benefit others
 
-**Kin Selection**: Preferntial helping of genetic relatives, which results in the greater likelihood that genes held in common will survive.
+**Kin Selection**: Preferential helping of genetic relatives, which results in the greater likelihood that genes held in common will survive.
 
 **Empathy**: Understanding or vicariously experiencing another individual's perspective and feeling sympathy and compassion for that individual.
 
-**Arousal: Cost-Reward Model**: The posposition that people react to emergency situations by acting in the most cost-effective way to reduce the arousal of shock and alarm.
+**Arousal: Cost-Reward Model**: The prosposition that people react to emergency situations by acting in the most cost-effective way to reduce the arousal of shock and alarm.
 
 **Negative State relief model**: The proposition that people help others in order to counteract their own feelings of sadness.
 
 **Egoistic**: Motivated by the desire to increase one's own welfare.
 
-**Altruistic**: Motivated by the desire to imporove another's welfare.
+**Altruistic**: Motivated by the desire to improve another's welfare.
 
-**Empathy-Altruism Model**: The porposition that empathic concern for a person in need produces an altruistic motive for helping.
+**Empathy-Altruism Model**: The proposition that empathic concern for a person in need produces an altruistic motive for helping.
 
-**Bystnder Effect**: The effect whereby the presence of others inhibits helping
+**Bystander Effect**: The effect whereby the presence of others inhibits helping
 
 **Pluralistic Ignorance**: The state in which people in a group mistakenly think that their own individual thoughts, feelings, or behaviors are different from those of the others in the group.
 
@@ -141,7 +141,7 @@ The three attachment styles are:
 
 - People from more collectivist cultures will tend to have a better response to help a single person in need.
 
-- People from individualist cultures are have a better response to helping others in abstract ways such as charitable donations, volunterring.
+- People from individualist cultures are have a better response to helping others in abstract ways such as charitable donations, volunteering.
 
 **Moods**
 
