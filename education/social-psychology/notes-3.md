@@ -73,7 +73,7 @@ More effort will also be put in if there are punishments present, the group is s
 
 **Loneliness**: A feeling of deprivation about existing social relations.
 
-**Mere Exposure Effect**: The phenomenon whereby the more often people are exposed to a stimulus, the more positivelythey evaluate that stimulus.
+**Mere Exposure Effect**: The phenomenon whereby the more often people are exposed to a stimulus, the more positively they evaluate that stimulus.
 
 **Proximity Effect**: Physical closeness of one another will stimulate.
 
@@ -89,7 +89,7 @@ More effort will also be put in if there are punishments present, the group is s
 
 **Equity Theory**: The theory that people are most satisfied with a relationship when the ratio between benefits and contributions is similar for both partners.
 
-**Exchange Relationships**: A relationship in which the participants expect and desire mutual responsibleness to each other's needs.
+**Exchange Relationships**: A relationship in which the participants expect and desire mutual responsibility to each other's needs.
 
 **Communal Relationship**: A relationship in which the participants expect and desire mutual responsiveness to each other's needs.
 

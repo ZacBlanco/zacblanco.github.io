@@ -204,6 +204,127 @@ Given the pseudocode above all we have to do to do to determine whether two vert
 
 ### Dijkstra's Algorithm
 
+Dijkstra's algorithm is interesting because it provides us with a way to to not only determine the shortest path between two vertices. But not simple _just_ because between the two vertices. It finds the shortest path  from one vertex to _all_ other vertices.
+
+This requires that the graph be directed or undirected. But it _must_ also be weighted. This means that the edges between adjacent vertices should have weights to them.
+
+The algorithm itself isn't that complex and may utilize some of the previous structures that we've learned about!
+
+Basically what Dijkstra's algorithm does:
+
+1. Start at our initial vertex. We will mark this vertex as having a distance of 0. We should mark it as **visited**.
+
+2. After **1** so we should add all of the vertices to what we call **the fringe**. This **fringe** is extremely important. The data structure with which we implement the fringe will determine this algorithm's running time
+
+3. After adding all vertices to the fringe, we will then **pick the minimum** vertex from the fringe. The minimum vertex is the vertex which has the shortest distance from the root vertex we picked. This vertex is then removed from the fringe. We will call is vertex, `v`.
+
+4. We then use `v` and check all of `v`'s neighbors. If it's neighbor hasn't been visited yet then we need to **check whether or not we should update its distance in the fringe**. The distance that is stored along with the vertex in the fringe should be the the very smallest possible distance. This means that when we check vertex `v` it's possible to have a smaller distance than what is already stored. So if the new calculated distance is smaller, we need to **search and update** inside of our fringe. We can call this the **check** and **update phase**. 
+
+5. If the fringe is not empty at this point, go back to step **2**.
+
+
+**So then how can we calculate the running time of this algorithm?**
+
+We're going to break down the basic runtime components of this algorithm.
+
+We have: 
+
+- Adding a vertex to the fringe
+- Picking the minimum distance vertex from the fringe
+- Checking and updating the distance of neighbors.
+
+
+For the sake of simplification we're going to take that last point and break it up into two different phases. This leaves us **4** total components to the algorithm that we will use to determine the runtime.
+
+- **Adding a Vertex to the Fringe**
+- **Picking the minimum distance vertex from the fringe**
+- **Checking the distance of the neighbors**
+- **Updating the distance of the neighbors**
+
+All but one of these components depends upon the data structure used in the implementation of **the fringe**. So really it is up to our implementation to determine how fast this algorithm can run.
+
+We're going to look at three different fringe implementations and compare the runtimes for each.
+
+- A linked list
+- A sorted linked list
+- A min heap
+
+See the table below for the runtime for each phase and fringe implementation
+
+
+| Big-O Run Time | Linked List | Sorted LL | Min Heap |
+|:--------------:|:-----------:|:---------:|:--------:|
+| Add to Fringe  | $$O(n)$$    | $$O(n^2)$$|$$O(n\cdot logn)$$|
+| Pick Minimum   | $$O(n^2)$$  | $$O(n)$$  |$$O(n\cdot logn)$$|
+| Checking Neighbor| $$O(n+e)$$  | $$O(n+e)$$|$$O(n+e)$$|
+| Updating Neighbor| $$O(e)$$    | $$O(ne)$$ |$$O(e\cdot logn)$$|
+
+
+So let's go over the runtimes for each step.
+
+**Adding to the fringe**
+
+For each implementation we must add $$n$$ vertices to the fringe. This leaves us with the insertion time of $$n$$ multiplied by the time it takes to insert into a list.
+
+- Linked List
+  - $$O(1) \cdot n $$.
+  - Runtime is $$O(n)$$
+- Sorted Linked List
+  - To insert a single on a sorted linked list of size 0 takes maximum of $$1$$ time. the next item takes a max of 1. The next a max of 2... and so on.
+  - Series Sum: $$\Sigma_{i=1}^n i = 1 + 2 + 3 + ... + n$$
+  - We find that this sums to $$\frac{n\cdot(n + 1)}{2}$$
+  - This gives a runtime of $$O(n^2)$$
+- Min Heap
+  - Takes a maximum of $$log(1)$$ time to insert the first item, $$log(2)$$ for second, and so on...
+  - This will give a series sum of $$\Sigma_{i=1}^n log(i) = log(1) + log(2) + log(3) + ... + log(n) = log(n!)$$
+  - $$ log(n!) \approx log(n^n) = n\cdot log(n)$$
+  - Thus our runtime is $$On\cdot log(n)$$
+
+
+**Picking The minimum from the fringe**
+
+- Linked List
+  - Here our search is on $$n$$ items. We must perform this search a maximum of $$n$$ times.
+  - Runtime is $$ O (n^2) $$
+- Sorted Linked List
+  - This one is pretty simple. It takes $$O(1)$$ time to find the minimum on the sorted linked list (because it is sorted)
+  - We perform the search $$n$$ times on the sorted linked list. 
+  - This gives a runtime of  $$O(n)$$.
+- Min Heap
+  - Takes a maximum of $$log(n)$$ time to delete an item. But we can continuously delete from this heap for $$n$$ times.
+  - This will give a series sum of $$\Sigma_{i=n}^0 log(i) = log(n) + log(n-1) + log(n-2) + ... + log(1) = log(n!)$$
+  - $$ log(n!) \approx log(n^n) = n\cdot log(n)$$
+  - Thus our runtime is $$O(n\cdot log(n))$$
+  
+**Checking if we need to update**
+
+Surpisingly enough, this part of the algorithm runs indepedent of the fringe implementation because it doesn't actually interact with the fringe.
+
+We do a check at $$n$$ vertices and then we can only check for a total of $$e$$ times. 
+
+From this our runtime is simply just $$ O(n+e) $$.
+
+**Updating the Fringe**
+
+- Linked List
+  - Here we update a maximum of $$e$$ times at a speed $$O(1)$$ and the item keeps its spot in the list.
+  - Runtime is $$ O(e) $$
+- Sorted Linked List
+  - Here we must perform the update a maximum number of $$e$$ times. But then after updating it takes $$n$$ time to put into the correct list spot.
+  - Runtime is $$O(ne)$$.
+- Min Heap
+  - Takes a maximum of $$log(n)$$ time to delete an item. But we need to update this heap for $$e$$ times.
+  - Thus our runtime is $$O(e\cdot log(n))$$
+  
+From this we can find our individual runtimes for each fringe implementation!
+
+| Algorithm          | Run Time |
+|:------------------:|:--------:|
+| Linked List        |$$O(n^2)$$|
+| Sorted Linked List |$$O(n^2)$$|
+| Min Heap           |$$O((n+e)log(n))$$|
+
+
 ## Sorting
 
 ### Mergesort
