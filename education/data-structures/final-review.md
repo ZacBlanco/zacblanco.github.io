@@ -333,4 +333,60 @@ From this we can find our individual runtimes for each fringe implementation!
 
 ### Heapsort
 
+#### Building a Heap in Linear ($$O(n)$$) Run Time
+
+When building a heap within an already existing array. You actually don't need to "heapify" the entire array. You can start with the $$\frac{n}{2} - 1$$ element of the array. ($$n$$ is the size of the array.)
+
+Then to build the heap it is simply:
+
+~~~
+build_heap(A)
+  x = A.length/2 - 1;
+  while (x > 0) {
+    v = A[x];
+    siftDown(x, v);
+    x--;
+  }
+~~~
+
+This will "heapify" the array. We can then sort.
+
+We simply just have to "remove" from the heap and accordingly sift down each time.
+
+~~~
+sort(A) {
+  int x = A.length - 1;
+  while (x > 0) {
+    temp = A[x];
+    A[x] = A[0];
+    A[0] = temp;
+    siftDown(0, temp, x);
+    x--;
+  }
+}
+~~~
+
+The run time given that at any level the amount of time it would take to sift down is:
+
+$$ S = 2^0\cdot 2h + 2^1 \cdot 2(h-1) + 2^2 \cdot 2(h-2) +... + 2^{h-2}\cdot 2\cdot 2 + 2^{h-1} \cdot 2 $$
+
+So how do we solve this?
+
+Well, If we multiply S by 2...then simply line up all of the terms (the first and last term of S won't line up)
+
+We find that the total $$S = -2^0\cdot2h + 2\cdot 2^1 + ... + 2\cdot2^{h-1} + 2^h\cdot 2$$
+
+This will sum to give us a value of $$2^{h+2} - 4$$
+
+We then find that $$S = 2^{h+2} - 4 - 2h = 4\cdot 2^h - 2h = 2^{h+2} - 4$$
+
+We understand that the value of  $$h$$ is on the order of $$log(n)$$ so that gives us:
+
+> $$ S \approx 4n - 2log(n) - 4 $$
+
+This means that heapify is linear!!
+
+
+Running time analysis
+
 ### Radix Sort
