@@ -12,9 +12,19 @@ To start contributing, you'll need to [make a fork](https://help.github.com/arti
 
 ### Courses at Rutgers University
 
-- [Principles of Electrical Engineering 1 - (14:332:221)](principles-of-ee-1/)
-- [Analytical Physics 1B - (01:750:124)](analytical-physics-124/)
-- [Analytical Physics 2A - Electromagnetism - (01:750:227)](analytical-physics-227/)
-- [Social Psychology - (01:830:321)](social-psychology/)
-- [Data Structures - (01:198:112)](data-structures/)
+**Freshman Year**
+
+- Spring
+  - [(01:750:124) - Analytical Physics 1B](analytical-physics-124/)
+
+**Sophomore Year**
+
+- Fall
+  - [(14:332:221) - Principles of Electrical Engineering 1](principles-of-ee-1/)
+  - [(01:750:227) - Analytical Physics 2A - Electromagnetism](analytical-physics-227/)
+  - [(01:830:321) - Social Psychology](social-psychology/)
+  - [(01:198:112) - Data Structures](data-structures/)
+- Spring
+  - [(14:332:331) - Computer Architecture](comp-arch-332/)
+  - [(14:332:222) - Principles of Electrical Engineering 2](principles-of-ee-2/)
 
