@@ -10,3 +10,14 @@ author: Zac Blanco
 These are notes for the version of the class which is being taught by professor Minsky in the Spring of 2016.
 
 ## Lecture 1 - January 20th 2016
+
+**Class Information**
+
+In this class we use the book _"Discrete Math"_ by Kenneth Rosen, 7th Edition. We cover chapters, 1, 2, 5, 9, and 13.
+
+
+
+
+
+
+
