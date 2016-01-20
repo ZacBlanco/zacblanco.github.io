@@ -23,10 +23,43 @@ The topics covered in this course are:
 - The First Law of Thermodynamics
 - The Second Law Of Thermodynamics
 
-The format of this post will be the following: For each equation I will explain the variables used, the typical units used, and any constant values (if they haven't been defined already). If there are concepts that don't reside within equations, they will be explained nearest to the equations I feel are most related to that concept.
+For each equation I will explain the variables used, the typical units used, and any constant values (if they haven't been defined already). If there are concepts that don't reside within equations, they will be explained nearest to the equations I feel are most related to that concept.
 
 
 ## Rotational Dynamics
+
+The basic variables: 
+
+- Rotational Displacement: $$ \theta $$
+- Rotational Velocity: $$ \omega $$
+- Rotational Acceleration: $$ \alpha $$
+
+|           | Displacement | Velocity | Acceleration |
+|-----------|--------------|----------|--------------|
+|Rotational | $$\theta$$   |$$\omega = \frac{\Delta\theta}{\Delta t}$$| $$\alpha = \frac{\Delta\omega}{\Delta t}$$   |
+|Linear     | $$x$$        |$$ v = \frac{\Delta x}{\Delta t}$$   | $$ a =  \frac{\Delta v}{\Delta t} $$      |
+
+Remember that the units for rotational kinematic variables are different as well. Instead of measuring in _meters_ we measure in **radians**.
+
+That is:
+
+|           | Displacement | Velocity | Acceleration |
+|-----------|--------------|----------|--------------|
+|Rotational | $$radians$$  |$$radians/second$$  | $$radians/second^2$$   |
+|Linear     | $$meters$$   |$$meters/second$$   | $$meters/second^2$$    |
+
+One last thing:
+
+We need to consider **direction**. Rotation isn't all that different and we can have different directions.
+
+We notate direction as being able to happen in **two directions**. _Clockwise_ and _Counter-Clockwise_. Typically we denote counter-clockwise movement as being _positive_ and clockwise movement as _negative_.
+
+Below are a few equations that which are direct siblings to the linear kinematic equations, but utilize the rotiational variables instead
+
+
+- $$ \theta (t) = \theta_0 + \omega_0 t  + \frac{1}{2}\alpha t^2$$
+- $$  \omega(t) = \omega_0 + \alpha t$$
+- $$ \omega^2 = \omega_0^2 + 2\alpha\theta $$
 
 ##### Torque
 
@@ -110,7 +143,7 @@ Simply the time it takes to make one revolution given velocity v. Second equatio
 
 ##### Kepler's Law of Equal Areas
 
-> $$ \frac{dA}{dt} = rv\cdot sin\phi $$ s
+> $$ \frac{dA}{dt} = rv\cdot sin\phi $$
 
 ![Kepler's Law of Equal Areas](../../../assets/images/physics-review/kepler-areas.png)
 
@@ -120,7 +153,7 @@ Kepler's Law of Equal Areas. In equal units of time, the area a planet sweeps ou
 
 > $$ T^2 = \frac{4\pi^2a^3}{GM} $$ 
 
-This eqation relates the period is takes for a planet to orbit with the semi-major axis, $$ a $$ (or $$ r $$ if orbit is circular), and the mass of the object, $$ M $$ that a planet or body is orbiting.
+This equation relates the period is takes for a planet to orbit with the semi-major axis, $$ a $$ (or $$ r $$ if orbit is circular), and the mass of the object, $$ M $$ that a planet or body is orbiting.
 
 ##### Total Energy of a Body in Orbit
 
@@ -158,7 +191,7 @@ Hooke's law related the force that a spring pulls on an object given a spring's 
 
 > $$ \omega = \sqrt{\frac{k}{m}} $$
 
-We can calculate the angular frequncy of a mass on a spring by the above equation.
+We can calculate the angular frequency of a mass on a spring by the above equation.
 
 ##### Period of an Oscillating Object on a Spring
 
@@ -206,7 +239,7 @@ Again, similar to the above equation this equation is the derivative of the velo
 
 #### Simple Pendulums
 
-A simple pendulum is a pendulum in which the mass of the string is neglected (or it is too small in comparison to make a noticable difference).
+A simple pendulum is a pendulum in which the mass of the string is neglected (or it is too small in comparison to make a noticeable difference).
 
 ##### Angular Frequency (Simple Pendulum)
 
@@ -329,7 +362,7 @@ There are fundamental frequencies for sound in open pipes (one with openings at 
 
 > $$ f_n = \frac{nv}{4L}; (n = 1, 3, 5, ...)$$
 
-Similar to the above, this equation is for a stopped pipe (one end open, the other closed). We can calculate the fundamental frequncies for any pipe with length L.
+Similar to the above, this equation is for a stopped pipe (one end open, the other closed). We can calculate the fundamental frequencies for any pipe with length L.
 
 See below for visualization.
 
@@ -339,7 +372,7 @@ See below for visualization.
 
 > $$ f_{beat} = f_b - f_a $$
 
-Two different sound frequencies create what we call 'beats'. It is addional amplitude variations in the sound we hear. See below image.
+Two different sound frequencies create what we call 'beats'. It is additional amplitude variations in the sound we hear. See below image.
 
 ![Image of Beat](../../../assets/images/physics-review/beat-freq.jpeg)
 
@@ -384,7 +417,7 @@ The flow rate of a fluid is defined by the Volume, $$ V $$, of fluid that passes
 
 > $$ A_1v_1 = A_2v_2 >> \frac{A_1}{A_2} = \frac{v_2}{v_1} $$
 
-This equation is basically telling us that for a pipe flowing with an incompressible fluid inside, the velocity multiplied by the cross sectional area should be exactly the same.  
+This equation is basically telling us that for a pipe flowing with an incompressible fluid inside, the velocity multiplied by the cross-sectional area should be exactly the same.  
 
 ##### Equal Pressures and Forces
 
@@ -396,7 +429,7 @@ This equation relates the cross-sectional area of a pipe and the force pushing a
 
 > $$ P_2 - P_1 = -\rho g(y_2 - y_1) $$
 
-This equation tells us the difference in pressure to to a change in height, h of the pipe.
+This equation tells us the difference in pressure to a change in height, h of the pipe.
 
 ##### Bernoulli's Equation
 
@@ -410,7 +443,7 @@ Bernoulli's equation tells us that the pressure and velocity of any two points i
 
 The force of buoyancy that an object experiences is directly related to the volume of the object submerged in water and the density of the water displaced.
 
-_Remember_: if an object floats in water, not fully submerged, the bouyant force is still equal to the weight of the object.
+_Remember_: if an object floats in water, not fully submerged, the buoyant force is still equal to the weight of the object.
 
 ## Temperature and Heat
 
@@ -430,7 +463,7 @@ This equation is used to convert Temperature in Fahrenheit to Celsius and is sim
 
 > $$ T_K = T_C + 273 $$
 
-Temperature on the absolute scale is measured in Kelvins. $$ 0K $$ is absolute 0. Other temperature scales can be conerted to Kelvin by the above formula.
+Temperature on the absolute scale is measured in Kelvins. $$ 0K $$ is absolute 0. Other temperature scales can be converted to Kelvin by the above formula.
 
 ##### The Ideal Gas Law
 
@@ -456,13 +489,13 @@ A thermometer measures temperature by using the change in pressure that occurs w
 
 > $$ \Delta L = \alpha L_0\Delta T $$
 
-A solid rod will change length with a change in temperature. $$ \alpha $$ is a constant different for specific materials that is traditionally measured in $$ (^\circ C)^{-1} $$ or $$K^{-1} $$. $$ L_0 $$ is the inital length of the beam at the initial temperature. $$ \Delta T $$ is the change in temperature measured in Celsius or Kelvin
+A solid rod will change length with a change in temperature. $$ \alpha $$ is a constant different for specific materials that is traditionally measured in $$ (^\circ C)^{-1} $$ or $$K^{-1} $$. $$ L_0 $$ is the initial length of the beam at the initial temperature. $$ \Delta T $$ is the change in temperature measured in Celsius or Kelvin
 
 ##### Thermal Stress
 
 > $$ \frac{\Delta L}{L_0} = \alpha\Delta T $$
 
-Thermal stress can be simply found by divinding $$ L_0 $$ by the above equation to obtain the thermal stress by a change in temperature.
+Thermal stress can be simply found by dividing $$ L_0 $$ by the above equation to obtain the thermal stress by a change in temperature.
 
 ##### calories and Joules
 
@@ -474,7 +507,7 @@ Thermal stress can be simply found by divinding $$ L_0 $$ by the above equation 
 
 > $$ Q = mc\Delta T $$
 
-We can find the amount of heat required to change the themperature of the object if we know the specific heat, $$ c $$, and the mass of the object. $$ c $$ is specific to every material. $$ \Delta T $$ is the change in temperature, usually in Kelvin or celsius depending on the units of the specific heat capacity.
+We can find the amount of heat required to change the temperature of the object if we know the specific heat, $$ c $$, and the mass of the object. $$ c $$ is specific to every material. $$ \Delta T $$ is the change in temperature, usually in Kelvin or celsius depending on the units of the specific heat capacity.
 
 ##### Total Mass
 
@@ -496,7 +529,7 @@ To find a coefficient for volumetric expansion, we can simply multiply a materia
 
 > $$ \Delta V = BV_0\Delta T $$
 
-The change in volume of an object due to a change in temperature. $$ B $$ is a constant that we defined above. $$ V_0 $$ is the inital volume of the object. $$ \Delta T $$ is simply the change in temperature, typically in Celsius or Kelvin.
+The change in volume of an object due to a change in temperature. $$ B $$ is a constant that we defined above. $$ V_0 $$ is the initial volume of the object. $$ \Delta T $$ is simply the change in temperature, typically in Celsius or Kelvin.
 
 ##### Heat Required for Phase Change
 
@@ -508,13 +541,13 @@ We can calculate the heat required for a phase change of a compound by simply mu
 
 > $$ H = \frac{dQ}{dt} = kA\frac{T_H - T_C}{L} $$
 
-The rate of heat transfer between a hot and cold resevoir is equal to the change in heat, or energy, over a period of time. This means the value is measured in Watts. We can calculate the power flowing through an object by using its thermal conductivity, $$ k $$, the cross-sectional area that the heat is flowing through, $$ A $$. The Temperatures of each hot and cold resevoir respectively measured in $$ K $$. and the length of the heat conductor, $$ L $$.
+The rate of heat transfer between a hot and cold reservoir is equal to the change in heat, or energy, over a period of time. This means the value is measured in Watts. We can calculate the power flowing through an object by using its thermal conductivity, $$ k $$, the cross-sectional area that the heat is flowing through, $$ A $$. The Temperatures of each hot and cold reservoir respectively measured in $$ K $$. and the length of the heat conductor, $$ L $$.
 
 ##### Heat Radiation
 
 > $$ H = Ae\sigma T^4 $$
 
-Every body emits some kind of electromagnetic radiation. The amount of power that a body emits is equal to its surface area, $$ A $$ multipled by its emmisivity, $$ e $$, the Stefan-Boltzmann constant, $$ \sigma $$, and the temperature of the body in Kelvin. However, note that this equation is valid if the body and its surrounding environment are of the same temperature.
+Every body emits some kind of electromagnetic radiation. The amount of power that a body emits is equal to its surface area, $$ A $$ multiplied by its emmisivity, $$ e $$, the Stefan-Boltzmann constant, $$ \sigma $$, and the temperature of the body in Kelvin. However, note that this equation is valid if the body and its surrounding environment are of the same temperature.
 
 > $$ \sigma = 5.6704 \cdot 10^{-8} \frac{W}{m^2\cdot K^4} $$
 
@@ -662,7 +695,7 @@ In an isobaric process, the pressure is constant, which means we can relate the 
 
 In an isothermal process there is no change in the temperature of the system. Therefore is there isn't a change in the temperature, then the change in internal energy $$ \Delta U = 0 $$.
 
-##### Heat capcity at a constant pressure
+##### Heat capacity at a constant pressure
 
 > $$ C_p = C_V + R $$
 
@@ -678,7 +711,7 @@ $$ \gamma $$ is the ratio of heat capacities which is simply the molar heat capa
 
 > $$ W = nC_V(T_1 - T_2) $$
 
-In an adiabatic process we can find the work done by a gas to be equal to the number of moles of the gas, multipled by the molar heat capacity at constant volume multiplied byh the change in temperature from two states, $$ \Delta T $$. Note that temperature should be in Kelvin.
+In an adiabatic process we can find the work done by a gas to be equal to the number of moles of the gas, multiplied by the molar heat capacity at constant volume multiplied by the change in temperature from two states, $$ \Delta T $$. Note that temperature should be in Kelvin.
 
 
 > $$ W = \frac{C_V}{R}(p_1V_1 - p_2V_2) $$
@@ -687,7 +720,7 @@ Again in an adiabatic process we rearrange what we have above we can find that t
 
 ## The Second Law Of Thermodynamics
 
-Any device that can turn heat into Work, is called a _heat engine_. All engines absorb heat form some resevoir at a higher temperature, use that heat to do work, and discard some heat at a lower temperature. That is the net heat $$ Q $$ of a engine process is equal to $$ W $$. $$ Q = W $$.
+Any device that can turn heat into Work, is called a _heat engine_. All engines absorb heat from some reservoir at a higher temperature, use that heat to do work, and discard some heat at a lower temperature. That is the net heat $$ Q $$ of an engine process is equal to $$ W $$. $$ Q = W $$.
 
 We can visualize he cycle with the following image:
 
@@ -722,7 +755,7 @@ Above is an image detailing a $$ pV $$ diagram of a normal Otto Cycle. From A to
 
 > $$ |Q_H| = Q_C + W $$
 
-We can think of a refrigerator as simply a heat engine, but reversed. Instead of the hot resevoir letting heat out to do work, a refrigerator will have a cold resevoir, add work into the system, and exhaust more heat.
+We can think of a refrigerator as simply a heat engine, but reversed. Instead of the hot reservoir letting heat out to do work, a refrigerator will have a cold reservoir, add work into the system, and exhaust more heat.
 
 ##### Efficiency of Refrigeration
 
@@ -735,9 +768,9 @@ We can think of a refrigerator as simply a heat engine, but reversed. Instead of
 
 #### _Stating the Second Law of Thermodynamics_
 
-_It is impossible for any system to undergo a pocess in which it absorbs heat from a resevoir at a single temperaure and converts the heat completely into mechanical work, with the system ending in the same state in which is began._
+_It is impossible for any system to undergo a process in which it absorbs heat from a reservoir at a single temperature and converts the heat completely into mechanical work, with the system ending in the same state in which is began._
 
-We can also state it as: _It is impossible for any process to have as its sole result the transfer of heat form a cooler to a hotter body._
+We can also state it as: _It is impossible for any process to have as its sole result the transfer of heat from a cooler to a hotter body._
 
 #### Steps of the Carnot Cycle
 
@@ -746,13 +779,13 @@ We can also state it as: _It is impossible for any process to have as its sole r
 1. The gas expands isothermally at Temperature $$ T_H $$ absorbing heat $$ Q_H $$
 2. It expands adiabatically until its temperature drops to $$ T_C $$
 3. It is compressed isothermally at $$ T_C $$ rejecting heat $$ Q_C $$.
-4. It is compressed adiabatically back to its inital state at tempterature $$ T_H $$
+4. It is compressed adiabatically back to its inital state at temperature $$ T_H $$
 
 ##### Efficicency of a Carnot Engine
 
 > $$ e_{Carnot} = 1 - \frac{T_C}{T_H} = \frac{T_H - T_C}{T_H} $$
 
-$$ T_C $$ and $$ T_H $$ are the temperatures of the cold and hot resevoirs respectively. However, it is important to note that all temperatures should be measured in _Kelvin_.
+$$ T_C $$ and $$ T_H $$ are the temperatures of the cold and hot reservoirs respectively. However, it is important to note that all temperatures should be measured in _Kelvin_.
 
 ##### Efficiency Through Refrigeration
 
