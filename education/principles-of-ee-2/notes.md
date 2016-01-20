@@ -1,7 +1,7 @@
 ---
 layout: page
 title: A Guide for Principles of EE II at Rutgers University
-keywords: engineering, rutgers, spring 2016, principles of electrical engineering, guide, class, study, circuits, computer engineering, electrical engineering, engineers
+keywords: engineering, rutgers, spring 2016, principles of electrical engineering 2, principles of electrical engineering II, guide, class, study, circuits, computer engineering, electrical engineering, engineers, peddapulla sannuti, sannuti
 permalink: /education/principles-of-ee-2/notes/
 mathjax: true
 author: Zac Blanco
