@@ -15,9 +15,37 @@ description: A collection of notes to reference for the Data Structures (CS112)
 
 ## Binary Trees
 
+Binary trees are an interesting structure. They are similar to linked lists in that they have pointers which point to other nodes in the structure.
+
+What's great about binary trees though is how the data is "ordered". 
+
+In a binary tree a node has **two** pointers. One pointer to the left "subtree" and then one for the right "subtree". These "subtrees" are also binary tree nodes. Then we also need a spot for the data which will be stored at a node. 
+
+You could imagine that a binary tree node have the following structure:
+
+~~~
+public class BinaryTreeNode {
+
+  private BinaryTreeNode left;
+  private BinaryTreeNode right;
+  private int data;
+
+}
+~~~
+
+Hopefully this will give you a better idea of how a binary tree is structured.
+
+Next, let's talk about binary tree operations. There are 3 types of operations that we'll cover: _search_, _insert_, and _delete_.
+
+### Search
+
+### Insert
+
+### Delete
+
 ## AVL Trees
 
-### Huffman Coding
+## Huffman Coding
 
 ## Hash Table
 
