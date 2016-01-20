@@ -27,4 +27,5 @@ To start contributing, you'll need to [make a fork](https://help.github.com/arti
 - Spring
   - [(14:332:331) - Computer Architecture](comp-arch-332/)
   - [(14:332:222) - Principles of Electrical Engineering 2](principles-of-ee-2/)
+  - [(01:198:205) - Discrete Mathematics](discrete-math/)
 
