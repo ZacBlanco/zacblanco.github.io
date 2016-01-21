@@ -135,5 +135,3 @@ We call $$c_1u_1 + c_2u_2 + \cdots + c_ku_k $$. This is called a **linear combin
 
 In other words, it is the sum of all of our vectors $$u$$, each with their own respective coefficient.
 
-But why do we call it linear?
-
