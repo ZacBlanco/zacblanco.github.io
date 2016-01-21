@@ -29,6 +29,13 @@ We solve everything the same way as we previously did. But now we just replace e
 
 It's that simple!
 
+## Lecture 2
+
+See below for notes on Bode plots and filters!
+
+- [Notes on Bode Plots](../Bode-plots.pdf)
+- [Notes on Filters](../Filters-Notes-S2016.pdf)
+
 
 
 
