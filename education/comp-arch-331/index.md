@@ -6,4 +6,6 @@ keywords: 01:332:331, computer, architecture, engineering, rutgers, electrical, 
 description: A page full of notes and useful links for succeeding in the Rutgers Engineering Computer Architecture course.
 ---
 
-- [Class Notes](notes/)
+--------------------------------
+
+- [**Class Notes**](notes/)
