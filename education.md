@@ -28,4 +28,6 @@ To start contributing, you'll need to [make a fork](https://help.github.com/arti
   - [(14:332:331) - Computer Architecture](comp-arch-332/)
   - [(14:332:222) - Principles of Electrical Engineering 2](principles-of-ee-2/)
   - [(01:198:205) - Discrete Mathematics](discrete-math/)
+  - [(14:332:226) - Probability and Random Processes](probability-random-processes/)
+  - [(01:640:250) - Intro to Linear Algebra](intro-linear-algebra/)
 
