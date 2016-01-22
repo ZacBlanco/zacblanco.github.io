@@ -10,6 +10,7 @@ author: Zac Blanco
 
 <!--
 Latex Reference
+https://oeis.org/wiki/List_of_LaTeX_mathematical_symbols
 $$
 \in
 \not\in
@@ -20,6 +21,9 @@ $$
 \cup
 \cap
 \not
+\neq
+\eq
+\varnothing
 $$
 -->
 
@@ -58,13 +62,20 @@ De Morgan's law relates all three basic operations
 
 > $$ (A \cup B)^C = A^c \cap B^c $$
 
-<!--
-Complete later
-This can be proved h7 using the following logical steps
+<!--Complete later-->
+
+This can be proved by using the following logical steps
+
 1. Suppose x belongs the the complement of the union of A and B
-2. 1. implies that x does not belong to the union of sets A and B
-3. 2. implies that 
--->
+  - $$x \in (A \cup B)^c$$
+2. Step 1 implies that x does not belong to the union of sets A and B 
+  - $$ x \not\in A \cup B $$
+3. Step 2 implies that x does not belong to set A nor set B.
+  - $$ x \not\in A \text{ and } x \not\in B$$
+4. Step 3 implies that x must then belong to the complement of set A and the complement of set B. 
+  - $$ x \in A^c \text{ and } x \in B^c$$
+5. Step 4 Then must imply that x is contained within the intersection of sets $$A^c$$ and $$B^c$$. 
+  - $$ x \in A^c \cap B^c$$
 
 ### Applying Set Theory to Probability
 
@@ -92,11 +103,32 @@ A **probability measure** P[.] id s gunction that **maps events in the sample sp
 
 if $$ A = A_1 \cup A_2 \cup \dots \cup A_m $$ and $$ A_i \cap A_j = \varnothing $$ for $$ i \neq j $$.
 
+In other words
+
+> $$ P[A] = \Sigma^m_{i=1} P[A_i] $$
+
+**Theorem 1.4**
+
+The probability measure $$P[.]$$ satisfies the following:
+
+- $$P[\varnothing] = 0$$
+- $$P[A^c] = 1 - P[A]$$
+- For any A and B (not necessarily mutually exclusive) 
+  - $$P[A \cup B] = P[A] + P[B] - P[A \cap B]$$
+- $$A \in B \text{ then } P[A] \leq P[B] $$.
+
+**Theorem 1.5**
+
+The probability of an event $$B = {s_1, S_2, ..., s_m}$$ is the sum of the probabilities of the outcomes contained in the event:
+
+> $$ P[B] = \Sigma^m_{i=1} P[{s_i}] $$
 
 
+**Theorem 1.6**
 
+For an experiment with sample space $$S = {s_1, \dots, s_n}$$ in which each outcome $$s_i$$ is equally likely:
 
-
+> $$P[s_i] = \frac{1}{n}, 1\leq i\leq n$$
 
 
 
