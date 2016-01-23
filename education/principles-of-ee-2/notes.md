@@ -31,10 +31,22 @@ It's that simple!
 
 ## Lecture 2
 
-See below for notes on Bode plots and filters!
+See below for PDF notes on Bode plots and filters.
 
 - [Notes on Bode Plots](../Bode-plots.pdf)
 - [Notes on Filters](../Filters-Notes-S2016.pdf)
+
+**Basic Introduction to Fourier Transforms of a Time Domain Signal**
+
+- Fourier and Laplace revolutionized many fields by introducing the concept that **any signal can be thought of as being composed by a number (finite or infinite) of sinusoidal signal of different frequencies, amplitudes, and phase angles**.
+
+That is the sinusoidal signals that compose a signal $$x(t)$$ are called the **frequency components** of $$x(t)$$. If a sinal has a countably finite or infinite number of frequency components, then
+
+> $$ x(t) = \sum\limits_{k=1}^N X_kcos(\omega_kt + \theta_k) $$
+
+
+
+
 
 
 
