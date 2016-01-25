@@ -105,7 +105,7 @@ if $$ A = A_1 \cup A_2 \cup \dots \cup A_m $$ and $$ A_i \cap A_j = \varnothing 
 
 In other words
 
-> $$ P[A] = \Sigma^m_{i=1} P[A_i] $$
+> $$ P[A] = \sum\limits^m_{i=1} P[A_i] $$
 
 **Theorem 1.4**
 
@@ -119,9 +119,9 @@ The probability measure $$P[.]$$ satisfies the following:
 
 **Theorem 1.5**
 
-The probability of an event $$B = {s_1, S_2, ..., s_m}$$ is the sum of the probabilities of the outcomes contained in the event:
+The probability of an event $$B = {s_1, s_2, ..., s_m}$$ is the sum of the probabilities of the outcomes contained in the event:
 
-> $$ P[B] = \Sigma^m_{i=1} P[{s_i}] $$
+> $$ P[B] = \sum\limits^m_{i=1} P[{s_i}] $$
 
 
 **Theorem 1.6**
@@ -129,6 +129,94 @@ The probability of an event $$B = {s_1, S_2, ..., s_m}$$ is the sum of the proba
 For an experiment with sample space $$S = {s_1, \dots, s_n}$$ in which each outcome $$s_i$$ is equally likely:
 
 > $$P[s_i] = \frac{1}{n}, 1\leq i\leq n$$
+
+
+
+## Lecture 2 - January 25th 2016
+
+
+**Section 1.4 - Conditional Probability**
+
+
+Definition, **Conditional Probability**: The probability of the event A given the occurrence of event B is:
+
+ > $$ P[A|B] = \frac{P[AB]}{P[B]} = \frac{P[A\cap B]}{P[B]}$$
+ 
+ The vertical bar, "\|" stands for the word "given".
+ 
+ What this equation does is "scale up" the probability of all events inside the event B. This effectively makes B the "new" sample space because all events that occur after B is given must be contained within B
+
+
+**Theorem 1.7**
+
+ A conditional probability measure $$P[A\|B]$$ haas the following properties that correspond to the axioms of probability.
+ 
+ 1. $$P[A|B] \geq 0$$
+ 2. $$P[B|B] = 1 $$
+ 3. If $$A=A_1\cup A_2\cup \dots $$ with $$A_i \cap A_j = \varnothing$$ for $$i\neq j$$ then 
+   - $$P[A|B] = P[A_1|B] + P[A_2|B] + \dots$$
+   
+**Partitions and the Law of Total Probability**
+
+**Theorem 1.8**
+
+For a partition $$B = {B_1, B_2, \dots}$$ and any event A in the sample space, let $$C_i = A\cap B_i$$ for $$i \neq j$$ , the events $$C_i \text{and} C_j$$ are mutually exclusive and:
+
+> $$ A = C_1\ cup C_2 \cup \dots$$
+
+**Theorem 1.9**
+
+For any event A, and partition $${B_1, B_2, \dots , B_m}$$
+
+> $$P[A] = \sum\limits^m_{i=1} P[A\cap B_i] $$
+
+
+**Theorem 1.10**
+
+For a patition $${B_1, B_2, \dots, B_m}$$ with $$P[B_i] > 0$$ for all i, 
+
+> $$ P[A] = \sum\limits^m_{i=1} P[A|B_i] P[B_i]$$
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
