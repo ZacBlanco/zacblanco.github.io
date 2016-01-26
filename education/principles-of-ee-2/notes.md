@@ -29,7 +29,8 @@ We solve everything the same way as we previously did. But now we just replace e
 
 It's that simple!
 
-## Lecture 2
+## Bode Plots and Filters
+
 
 See below for PDF notes on Bode plots and filters.
 
@@ -44,9 +45,46 @@ That is the sinusoidal signals that compose a signal $$x(t)$$ are called the **f
 
 > $$ x(t) = \sum\limits_{k=1}^N X_kcos(\omega_kt + \theta_k) $$
 
+But then what happens when we say that our signal $$x(t)$$ has an infinite number of components? We can turn it into an integral:
+
+> $$ x(t) = \int\limits^{\omega_2}_{\omega_1} X(\omega)\cdot cos(\omega t + \theta(\omega))d\omega $$
+
+We are limited here to say that the frequencies lie within the range $$\omega_1 \text{ to } \omega_2$$.
+
+Let's not worry too much about the math right now.
+
+In the purpose of transmitting signals over the air (think TV, radio, etc..) channels will typically occupy a certain **"band"** of signals.
+
+For our purposes we'll just define a **band** as a **range of frequencies**.
+
+Now these TV and radio **channels will typically be made of many different signals with frequencies that lie within a band** assigned to that channel.
+
+For example the TV channel WABC occupies the band of 765 KHz to 775 KHz. This means that the channels transmissions will be made up of a signal of the frequencies in that range.
+
+A filter itself does almost exactly what you think it would it would do with a signal. It will allow (or disallow) a certain range of frequencies from passing through it.
+
+A somewhat more formal definition:
+
+> A **filter** is basically a circuit that has a **transfer function** between its input and output. The transfer function lets certain frequency components of the input pass through to the output,  while it blocks all other frequency components.
+
+Depending on what a filter allows and disallows through it can be classified with different names.
 
 
+Right now we will focus on these 4 types of **ideal filters**
 
+1. Low-Pass Filter
+  - A filter which will only allow signals with frequencies that are **lower** than a specified $$\omega_0$$
+2. High-Pass Filter
+  - A filter which will only allow signals with frequencies that are **higher** than a specified $$\omega_0$$ through the filter
+3. Band-Pass Filter
+  - A filter which will only **allow a certain range (band)** of frequencies between a specified $$\omega_0$$ and $$\omega$$
+4. Band-Rejection Filter
+  - A filter which will **disallow a certain range (band)** of frequencies between a specified $$\omega_0$$ and $$\omega$$
+
+
+Please make note of the word **ideal**. Because this means that the filter will definitely pick up (or block) the intended signal.
+
+A non-ideal filter will pick up the intended signal, but possibly some non-intended signals as well. This results in **channel interference**
 
 
 
