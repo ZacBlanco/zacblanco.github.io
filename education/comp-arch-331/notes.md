@@ -48,11 +48,11 @@ Computers have been increasing in speed and decreasing in size (really the trans
 
 It has been followed by Gordon Moore's Law (more commonly known as Moore's Law) that the amount of transistors that could fit on a silicon die would double every 2 years. Surprisingly his law holds true almost all the way from the 1960s when he first predicted this, all the way until now (2014/2015)!
 
-However one downside to this is that the power consumption of these chips have been increasing as well.
+However one downside to this is that the power consumption of these chips has been increasing as well.
 
 ## Lecture 2 - Introduction 2
 
-We want to lookat how these computers are structured and organized though. What exactly does it do?
+We want to look at how these computers are structured and organized though. What exactly does it do?
 
 - Instruction set, registers
   - MIPS, x86, Alpha, PIC, ARM
@@ -128,12 +128,27 @@ It is the **instruction set**
 
 
 
+## Lecture 3 - January 26th 2016
 
+Most of the time when we think performance we think "execution time" or "response time". For a computing system, or processor. There are many factors of the processor design which can affect the time it takes to a execute a specific program.
 
+Generally the response time is proportional to the _clock speed_ and _instructions per clock cycle_.
 
+Maximizing performance means minimizing execution time.
 
+We can give a general comparison of the speed of two processors running the same program by using the following equations.
 
+> $$ \frac{Performance_x}{Performance_y} = \frac{Time_x}{Time_y} $$
 
+Example: if A runs a program in 10 seconds and B runs the same program in 15 seconds, then A is 1.5 times faster than B.
+
+In measuring the exact time it takes to run a program, we can take a very basic understanding that we can run _x number of instructions per cycle_, _how many instructions we need for a whole program to run_, and finally _the number of seconds for a single clock cycle_.
+
+This will give us that program run time is:
+
+> $$ \text{CPU Time} = \frac{\text{Clock Cycles}}{\text{per Instruction}}\times\text{# of Instructions}\times\frac{Time}{\text{per clock cycle}} $$
+
+One important thing to note with this abstraction is that we assume every instruction takes the same amount of time. This is necessarily always true. Generally a load or retrieval from memory will take a longer amount of time
 
 
 
