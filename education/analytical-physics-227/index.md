@@ -1,8 +1,8 @@
 ---
 layout: page
-title: Analytical Physics 2A (227)
+title: Analytical Physics 2A
 permalink: /education/analytical-physics-227/
-keywords: 01:750:227, analytical, physics, 227, rutgers, university, education, electromagnestism, maxwell, magnetostatics, circuits, currents, impedance
+keywords: 01:750:227, analytical, physics, 227, rutgers, university, education, electromagnestism, maxwell, magnetostatics, circuits, currents, impedance, PHY227, PHYS227
 description: A page full of notes and useful links for succeeding in Analytical Physics 227 at Rutgers University. 
 ---
   
