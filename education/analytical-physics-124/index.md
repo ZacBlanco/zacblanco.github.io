@@ -6,9 +6,9 @@ keywords: 01:750:124, analytical, physics, 124, sound, rotation, rutgers, univer
 description: A page full of notes and useful links for succeeding in Analytical Physics 124 at Rutgers University. 
 ---
   
-Here you will find various links and notes related to Analytical Physics 227 at Rutgers University
+Here you will find various links and notes related to Analytical Physics 124 at Rutgers University
 
-Notes come from the version of the class which was taught during the fall of 2015.
+Notes come from the version of the class which was taught during the spring of 2015.
 
 Links:
 
