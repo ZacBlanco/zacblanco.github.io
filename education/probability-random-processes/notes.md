@@ -66,7 +66,7 @@ De Morgan's law relates all three basic operations
 
 This can be proved by using the following logical steps
 
-1. Suppose x belongs the the complement of the union of A and B
+1. Suppose x belongs the complement of the union of A and B
   - $$x \in (A \cup B)^c$$
 2. Step 1 implies that x does not belong to the union of sets A and B 
   - $$ x \not\in A \cup B $$
@@ -92,7 +92,7 @@ an **event** is a **set of outcomes** of an experiment
 
 ### Probability Axioms
 
-A **probability measure** P[.] id s gunction that **maps events in the sample space to real numbers**.
+A **probability measure** P[.] id s function that **maps events in the sample space to real numbers**.
 
 - **Axiom 1** - For any event A, $$P[A] \geq 0$$
 - **Axiom 2** - $$P[S] = 1$$
@@ -149,7 +149,7 @@ Definition, **Conditional Probability**: The probability of the event A given th
 
 **Theorem 1.7**
 
- A conditional probability measure $$P[A\|B]$$ haas the following properties that correspond to the axioms of probability.
+ A conditional probability measure $$P[A\|B]$$ has the following properties that correspond to the axioms of probability.
  
  1. $$P[A|B] \geq 0$$
  2. $$P[B|B] = 1 $$
@@ -162,7 +162,7 @@ Definition, **Conditional Probability**: The probability of the event A given th
 
 For a partition $$B = {B_1, B_2, \dots}$$ and any event A in the sample space, let $$C_i = A\cap B_i$$ for $$i \neq j$$ , the events $$C_i \text{and} C_j$$ are mutually exclusive and:
 
-> $$ A = C_1\ cup C_2 \cup \dots$$
+> $$ A = C_1 \cup C_2 \cup \dots$$
 
 **Theorem 1.9**
 
@@ -173,18 +173,41 @@ For any event A, and partition $${B_1, B_2, \dots , B_m}$$
 
 **Theorem 1.10**
 
-For a patition $${B_1, B_2, \dots, B_m}$$ with $$P[B_i] > 0$$ for all i, 
+For a partition $${B_1, B_2, \dots, B_m}$$ with $$P[B_i] > 0$$ for all i, 
 
 > $$ P[A] = \sum\limits^m_{i=1} P[A|B_i] P[B_i]$$
 
  
+## Lecture 3 - January 28th 2016
+
+**Theorem 1.11:** Bayes' Theorem
+
+> $$ P[B|A] = \frac{P[A|B] P[B]}{P[A]} $$
+
+What this is saying is that the probability of an event B, given the event A, will be exactly equal to the probability of A divided by the probability of B, multiplied by the probability of A given B
+
+**Section 1.6** Independence
+
+**Definition**: Indepedence - Events A and B are independent if and only if:
+
+> $$ P[AB] = P[A]P[B] $$
 
 
+A comment on event independence and mutually exclusivity. The two are **not synonyms**. In some contexts they can have similar meanings. But in probability this is not the case. 
 
+Mutually exclusive events A and B have no outcomes in common and therefore $$P[AB] = 0$$. **In most situations independent events are not mutually exclusive**.
 
+Exceptions occur only when $$P[A] = 0 \text{ or } P[B] = 0$$. When we have to calculate probabilities, knowledge that events A and B are mutually exclusive is very helpful. Axiom 3 enables us to add their probabilities to obtain the probability of the _union_. Knowledge that events C and D are independent is also very useful. Definition 1.6 enables us to multiply their probabilities to obtain the probability of the _intersection_.
 
+**Definition 1.7** - Three Independent Events
 
+Three events are mutually independent if and only if:
 
+- $$ A_1 \text{ and } A_2 $$ are independent
+- $$ A_2 \text{ and } A_3 $$ are independent
+- $$ A_1 \text{ and } A_3 $$ are independent
+
+and finally as long as: $$ P[A_1 \cap A_2 \cap A_3] = P[A_1]P[A_2]P[A_3] $$
 
 
 
