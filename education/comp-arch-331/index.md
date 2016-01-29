@@ -6,6 +6,10 @@ keywords: 01:332:331, computer, architecture, engineering, rutgers, electrical, 
 description: A page full of notes and useful links for succeeding in the Rutgers Engineering Computer Architecture course.
 ---
 
+Here you will find various links and notes related to ECE Computer Architecture at Rutgers University
+
+Notes come from the version of the class which was taught during the spring of 2016.
+
 --------------------------------
 
 - [**Class Notes**](notes/)
