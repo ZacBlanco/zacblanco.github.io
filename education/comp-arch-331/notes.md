@@ -151,22 +151,130 @@ This will give us that program run time is:
 One important thing to note with this abstraction is that we assume every instruction takes the same amount of time. This is necessarily always true. Generally a load or retrieval from memory will take a longer amount of time
 
 
+## Lecture 4 - January 29th 2016
 
 
+**Assembly Language**
+
+Assembly is the language of the machine. It's primitive and has no real sophisticated control flow. Instructions are also very restrictive with what exactly you can do.
+
+During this course we'll work with the MIPS instruction set
+
+- It's similar to other architectures developed since the 1980's.
+- Used by NEc, Nintendo, Silicon Graphics, Sony, etc..
+- 32-bit architecture
+  - 32 bit address line
+  - data and addresses are 32 bit
 
 
+The **Instruction Set** is the repertoire of instructions that a computer has the ability to use. Different computers will have different instruction sets (bt many aspects will be in common!)
+
+Early computers had simple instruction sets. Now they can be much more complex. But simple ones do still exist!
+
+**RISC** Philosophy
+
+- Fixed Instruction length
+- load-store instruction sets
+- limited number of addressing modes
+- limited numer of operations
+
+Examples:
+
+- MIPS, Sun SPARC, HP PA-RISC, IBM PowerPC, ...
+
+**CISC** (C is for Complex!). Ex: Intel x86, AMD64
+
+**MIPS (RISC) Design Principles**
+
+- Simplicity Favors regularity
+  - Opcode is always the first 6 bits
+- Smaller is faster
+  - limited number of registers
+  - limited number of addressing modes
+- Make the common case fast
+  - arithmetic operands from register file (load-store)
+  - Allow instruction to contain immediate operands
+- Good design demands good compromises
+  - 3 instruction formats
+  
+There are 6 different instruction categories for **MIPS-32 ISA**
+
+- Computational
+- Load-Store
+- Jump and Branch
+- Floating Point
+- Memory Management
+- Special
+
+Registers are places where we can store values for variables in assembly
+
+There are many different registers in MIPS. The register **$r0 always contains the value 0**.
+We also have registers  **0-31, HI, LO**, and the **PC** (program counter)
+
+There are 3 types of instruction formats which are all 32 Bits wide
+
+##### R Format
+
+| op | rs | rt | rd | sa | funct |
+
+##### I Format
+
+| op | rs | rt | immediate |
+
+##### J Format
+
+| op | jump target |
 
 
+### MIP R-Format Instructions
+
+| op     | rs     | rt     | rd     | sa     | funct  |
+| 6 bits | 5 bits | 5 bits | 5 bits | 5 bits | 6 bits |
+
+Instruction fields:
+
+- op - **operation code**
+- rs - **first source register**
+- rt - **second source register**
+- rd - **destination register**
+- shamt - **shift amount**
+- funct - **function code**
+
+Example C-to-MIPS code:
+
+**C Code**
+
+    f = (g + h) - (i + j);
+
+**Compiled MIPS Code**
+
+    add $t0, $s1, $s2
+    add $t1, $s3, $s4
+    sub $s0, $t0, $t1
+
+So then how exactly do we translate these statements into binary (1's and 0's) that our processor can understand
 
 
+Recall that R-Format instructions have the format
 
+| op     | rs     | rt     | rd     | sa     | funct  |
+| 6 bits | 5 bits | 5 bits | 5 bits | 5 bits | 6 bits |
 
+What if we have the instruction:
 
+    add $t0, $s1, $s2
 
+We'll translate it like this
 
+| op     | rs     | rt     | rd     | sa     | funct  |
+|:------:|:------:|:------:|:------:|:------:|:------:|
+| special| $s1    | $s2    | $t0    | 0      | add    |
+| 0      | 17     | 18     | 8      | 0      | 32     |
+| 000000 | 10001  | 10010  | 01000  | 00000  | 100000 |
 
+Our final instruction will then be:
 
-
+`00000010001100100100000000100000`
 
 
 
