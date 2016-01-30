@@ -84,7 +84,37 @@ Right now we will focus on these 4 types of **ideal filters**
 
 Please make note of the word **ideal**. Because this means that the filter will definitely pick up (or block) the intended signal.
 
-A non-ideal filter will pick up the intended signal, but possibly some non-intended signals as well. This results in **channel interference**
+A non-ideal filter will pick up the intended signal, but possibly some non-intended signals as well. This results in **channel interference**.
+
+Now imagine a normal RC-series circuit where we have a voltage source $$V_{in}$$ in series with a Resistor, R, and Capcitor of capacitance C
+
+![img of RC circuit](../../../assets/images/pee-2/rc-circuit-1.png)
+
+Now from this vircuit we can deduce that our transfer function is:
+
+> $$ H(s) = \frac{V_0}{V_{in}} = \frac{\frac{1}{sC}}{R + \frac{1}{sC}} $$
+
+Then we can convert this to the frequency domain
+
+> $$ H(j\omega) = \frac{ 1 }{1 + j\omega RC} $$
+
+This gives us our transfer function based on frequency. This is a ratio between the input and output signals. 
+
+We find that based on different types of filters, these transfer functions will differ.
+
+Now let's take a look at a plot of one of these transfer functions
+
+![img of RC circuit](../../../assets/images/pee-2/low-pass-transfer-1.png)
+
+Here we see 3 different bands of frequencies:
+
+- Pass-band
+- Transfer-band
+- Rejection-band
+
+When we have higher order (3rd, 4th, 5th) RC circuits, we'll see that the range of frequencies  in the transfer-band decreases.
+
+The smaller the transfer band the **less cross-talk interference**.
 
 
 
