@@ -16,3 +16,8 @@ Links:
 - [Rutgers ECE Course Page](http://www.ece.rutgers.edu/332_222)
 - [Wikipedia - Nodal Circuit Analysis](https://en.wikipedia.org/wiki/Nodal_analysis)
 - [Wikipedia - Mesh Current Circuit Analysis](https://en.wikipedia.org/wiki/Mesh_analysis)
+
+### Bode Plots
+
+- [Bode Plots via Swarthmore College](http://lpsa.swarthmore.edu/Bode/Bode.html)
+- [Bode Plots Example - Youtube - abuhajara](https://www.youtube.com/watch?v=WQzu2rnHG9A)
