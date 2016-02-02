@@ -226,7 +226,7 @@ There are 3 types of instruction formats which are all 32 Bits wide
 | op | jump target |
 
 
-### MIP R-Format Instructions
+### MIPS R-Format Instructions
 
 | op     | rs     | rt     | rd     | sa     | funct  |
 | 6 bits | 5 bits | 5 bits | 5 bits | 5 bits | 6 bits |
@@ -275,6 +275,129 @@ We'll translate it like this
 Our final instruction will then be:
 
 `00000010001100100100000000100000`
+
+## Lecture 5 - February 2nd 2016
+
+From here we can actually translate these binary instructions into hexadecimal! The conversion is quite easy using the table below:
+
+| 0 | 0000 | 4 | 0100 | 8 | 1000 | c | 1100 |
+| 1 | 0001 | 5 | 0101 | 9 | 1001 | d | 1101 |
+| 2 | 0010 | 6 | 0110 | a | 1010 | e | 1110 |
+| 3 | 0011 | 7 | 0111 | b | 1011 | f | 1111 |
+
+From this we can translate a binary instruction to hexadecimal:
+
+`1110 1100 1010 1000 0110 0100 0010 0000` ---> `eca8 6420`
+
+**MIPS Register File**
+
+Operands of arithmetic instructions must be from a limited number of special locations contained in the datapath's **register file**
+
+The **register file** holds thirty-two 32-bit registers
+
+This file holds two read ports, and one write port.
+
+Registers are:
+
+  - Faster than main memory
+  - Can hold variables so that code density improves (since register are named with fewer bits than a memory location)
+  - Register addresses are indicated by using `$`.
+
+**MIPS Naming Conventions for Registers**
+  
+![](/assets/images/comp-arch/MIPS-registers.png)
+
+
+**Memory Operands**
+
+In MIPS all arithmetic instructions' operands must be loaded into a register before being operated on.
+
+What if a program includes many, many variables (more than you can use in MIPS)?
+
+  - Then we must store variables in memory!
+  - Load values from memory into registers before use
+  - Store result from register to memory
+  
+Memory is byte-addressed, meaning that each address identifies an 8-bit byte.
+
+Words in memory are _aligned_. Aligned means that the address is a multiple of 4.
+
+MIPS is what we call **Big Endian**. This means that memory is addressed from left to right, where the beginning of a word is the leftmost position. So in a 4-byte word, the 0th byte is on the left, and the 3rd indexed position is at the rightmost position.
+
+**Registers vs. Memory**
+
+- Registers are much faster to access than memory
+- Operating on memory data requires many loads and stores
+- The compiler must use register for variables as much as possible
+  - Only spill to memory for less frequently used variables.
+  
+**Accessing Memory with MIPS**
+  
+MIPS has two basic _data transfer_ instruction for accessing memory
+  
+- The data transfer instructions must specify:
+  - Where in memory to read (load) from or to write (store) - **memory address**
+  - Where in the register file to write to (load) or read from (store) (**register destination**)
+
+- The memory address (a 32 bit address) is formed by adding the offset (plus or minues) the contents of the base address register.
+
+- A 16-bit field (offset) meaning access is limited to memory locations within a region of $$\pm 2^{13}$$ words ($$\pm 2^{15}$$ bytes) of the address in the base register.
+
+**Processor - Memory Interconnections**
+
+- Memory can be viewed as a large, single-dimension array, with an address.
+- A memory address s an index into the array.
+
+Accessing  memory with `lw` and `sw`.
+
+Now imagine we have the C-code:
+
+~~~
+g = h + A[8];
+~~~
+
+Imagine `g` is in `$s1`, `h` is in `$s2`, the base Address of `A` is in `$s3`
+
+So because MIPS is addresses words in multiples of 4, then to find the 8th index of the Array, A, with base address `8 * 4 = 32`. Meaning that to load the value `A[8]` we would use the MIPS line:
+
+~~~
+lw $t0, 32($s3) # Load word A[8] into memory
+~~~
+
+Then to complete the code translation for this we have:
+
+~~~
+lw $t0, 32($s3) # Load word A[8] into memory
+add $s1, $s2, $t0
+~~~
+
+
+Now what happens if instead of 8 as our Array location, we wish to address the array's index as a variable, say `i`.
+
+In this case, one option is to multiply the variable by 4, then add that value to the Array's base address.
+
+From there we may load the variable.
+
+Example. Assume that the base address of Array A is `$s3` and that the variable `i` is represented by `$s1`.
+
+Then to multiple `$s1` by 4 we can do a bitwise shift to the left for 2 bits.
+
+~~~
+sll $s1, $s1, 2
+~~~
+
+Then we must add to that the base address of the array
+
+~~~
+add $s4, $s3, $s1
+~~~
+
+After which we can then access the memory via
+
+~~~
+lw $t1, 0($s4)
+~~~
+
 
 
 
