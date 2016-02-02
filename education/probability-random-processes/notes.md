@@ -188,7 +188,7 @@ What this is saying is that the probability of an event B, given the event A, wi
 
 **Section 1.6** Independence
 
-**Definition**: Indepedence - Events A and B are independent if and only if:
+**Definition**: Independence - Events A and B are independent if and only if:
 
 > $$ P[AB] = P[A]P[B] $$
 
@@ -211,29 +211,86 @@ and finally as long as: $$ P[A_1 \cap A_2 \cap A_3] = P[A_1]P[A_2]P[A_3] $$
 
 
 
+**Definition 1.8** More than two Independent Events
+
+This definition is the same as above. All collections of events must be mutually exclusive of one another, 
+
+The probability of intersections of these events must be equal to the product of their individual probabilities.
 
 
+## Lecture 4 - February 1st, 2016
+
+## Chapter 2 - Tree Diagrams
+
+Below is an example problem which will introduce us to tree diagrams
+
+---
+
+![Tree Diagram Example Problem](/assets/images/probability/tree-diag-1.png)
+
+---
 
 
+From this we can see that tree diagrams help us to calculate probabilities of sequential events.
+
+> Tree diagrams display the outcomes of the **subexperiments** in a _sequential experiment_. The labels of the branches are probabilities and conditional probabilities. The probability of an outcome of the entire experiment is the product of the probabilities of branches from the root of the tree to a leaf.
 
 
+Many experiments will consist of what we call **subexperiments**. The procedure followed for each subexperiment may depend on the results of the previous subexperiments.
+
+In doing this we will assmble outcomes into different partitions, starting at the root of the tree. From there we branch (and label according probabilities) based on the probabilities of each outcome.
+
+###Section 2.2 - Counting Methods 
+
+> In all application of probability theory, it should be important to understand the sample space of an experiment.
+
+The methods in this section will help determine the number of outcomes in the sample space of an experiment.
+
+**Theorem 2.1**
+
+An experiment consists of two subexperiments. If one subexperiment has $$k$$ outcomes and the other subexperiment has $$n$$ outcomes, then the experiment has a total of $$nk$$ outcomes.
 
 
+**Theorem 2.2**
 
 
+The number of $$k$$-permutations of $$n$$ distinguishable objects is:
+
+> $$(n)_k = n(n-1)(n-2)(n-3)\dots(n-k+1)=\frac{n!}{(n-k)!} $$
 
 
+Something that might help to remember permutations is that a **permutation does not depend on the order in which the elements are in** whereas in contrast a combination depends on the order.
+
+For example, think if we had 100 students who wanted to take a class. Imagine that the class could only take 50 students. This means that the number of _different_ **permutations** (arragements, groups) is equal to $$\frac{100!}{50!}$$
 
 
+**Theorem 2.3**
+
+The number of ways to choose k objects out of n distinguishable objects is:
+
+> $$\begin{pmatrix} n\\k \end{pmatrix} = \frac{(n)_k}{k!} = \frac{n!}{k!(n-k)!}$$
+
+Sometimes this is called a **combination** where the order in which items are picked matters, as opposed to the **permutation**.
 
 
+**Definition 2.1**: $$n$$ choose $$k$$
+
+For any integer $$n \geq 0 $$, we define
+
+> $$\begin{pmatrix} n \\ k \end{pmatrix} = \begin{cases} \frac{n!}{k!(n-k)!} & k = 0, 1, \dots, n, \\ 0 & \text{otherwise}. \end{cases} $$
+
+**Theorem 2.4**
+
+Given $$m$$ distinguishable object, there are $$m^n$$ ways to choose with replacement an ordered sample of $$n$$ objects.
+
+**Theorem 2.5**
+
+for $$n$$ repetitions of a subexperiment with sample space $$S_{sub} = \lbrace s_0, \dots, s_{m-1} \rbrace$$, the sample space $$S$$ of the sequential experiment has $$m^n$$ outcomes
 
 
+**Theorem 2.6**
 
-
-
-
-
+The number of observation equencies for n subexperiments with sample space $$S = \lbrace 0, 1 \rbrace$$ with 0 apprearing $$n_)$$ times and 1 appearing $$n_1=n-n_0$$ times is $$\begin{pmatrix} n \\ n_1 \end{pmatrix} $$
 
 
 
