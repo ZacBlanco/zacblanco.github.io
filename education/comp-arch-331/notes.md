@@ -398,8 +398,64 @@ After which we can then access the memory via
 lw $t1, 0($s4)
 ~~~
 
+## Lecture 6 - February 5th, 2015
+
+### MIPS I format Instructions
 
 
+| op     | rs     | rt     | constant or address  |
+| 6 bits | 5 bits | 5 bits | 16 bits              |
+
+These **I-type** instructions allow for 'immediate' load and store instructions to the register.
+
+- `$rt` is the destination register
+- **constant** is a value between $$-2^{15}$$ to $$2^{15} - 1$$
+- Address: offset which is added to the base in `$rs`
+
+![CA - I instruction](/assets/images/comp-arch/ca-i-instruction.png)
+
+In these types of commands, a constant is specified in the instructions.
+
+For subtraction, we can actually just use a negative constant. So instead of using `subi`,  you can use `addi` and make the constant negative.
+
+### The Constant Zero
+
+The MIPS register 0, (`$zero`) is always equal to the constant 0. It **cannot be overwritten**.
+
+It is useful for common operations such as moving between registers
+
+- `add $t2, $s1, $zero`
+
+### Loading and Storing Larger (32-bit) Numbers
+
+Due to the format of I-format instructions, it seems such that we cannot immediately load values which are larger than 16 bits into the register. This seems like a limitation, however there is actually a MIPS command which can work around this. It is called `lui` or `load upper immediate`.
+
+This stores the largest 16 bits into the register specified with the `lui` command. You must then use the command `ori` to store the lower 16 bits into the register, Otherwise just executing the `lui` will fill the lower 16 bits with 0.
+
+
+### Loading and Storing Bytes
+
+- MIPS provides special instructions to move bytes from memory.
+
+~~~
+lb $t0, 1($s3) #load byte from memory
+sb $t0, 6($s3) #store byte to memory
+~~~
+
+![Load and Store Bits](/assets/images/comp-arch/load-store-bits.png)
+
+### Logical Operators
+
+| Operation | C | Java | MIPS |
+| Shift Left| `<<`| `<<` | `sll` |
+| Shift Right | `>>` |`>>`|`srl`|
+| Bitwise AND | `&`|`&` | `and`, `andi`|
+| Bitwise OR |`|` | `|`| `or`, `ori`|
+| Bitwise NOT | `~`|`~` | `nor`| 
+
+These commands are all useful for extracting and inserting bits within a word.
+
+### Shift Operations
 
 
 
