@@ -137,13 +137,13 @@ It should be important to note that due to my current software limitations, I co
 
 **Q: So then how can we plot the phase angle with respect to the frequency, $$\omega$$?**
 
-If we simply take what we know about complex numbers like above we find that $$a + jb = arctan\frac{b}{a}$$
+If we simply take what we know about complex numbers like above we find that $$a + jb, \theta = arctan\frac{b}{a}$$
 
 Let's first take a look at the function of $$arctan(\omega)$$ to refresh us.
 
 ![](/assets/images/pee2/bode-lim-arctan.png)
 
-Also recall that $$ \lim_{\omega\to\infty} arctan(\omega) = 90^{\deg}$$
+Also recall that $$ \lim_{\omega\to\infty} arctan(\omega) = 90^{\circ}$$
 
 So this tells us that the component which is $$arctan(\omega)$$ approaches 90 with large values of $$\omega$$.
 
@@ -151,9 +151,9 @@ So on a semi log scale we can approximate by saying that for all values $$\omega
 
 This will give us the angle for all of the different components. We can then add the respective phase angles together after plotting.
 
-Recall that $$arctan(1)=45^{\deg}$$ as well.
+Recall that $$arctan(1)=45^{\circ}$$ as well.
 
-So this means that for approximation of terms which are $$arctan(1 + \frac{2}{\omega_0}) that at the corner frequency that we will **have a value of $$45^{\deg}$$. However, that this will be positive or negatively sloping depending on whether the term is in the numerator or denominator of the transfer function.
+So this means that for approximation of terms which are $$arctan(1 + \frac{2}{\omega_0})$$ that at the corner frequency that we will **have a value of $$45^{\circ}$$**. However, that this will be positive or negatively sloping depending on whether the term is in the numerator or denominator of the transfer function.
 
 So then a **decade prior** to the corner frequency, the value should be $$\approx 0$$.
 
@@ -162,7 +162,7 @@ Then a **decade after** the corner frequency will have a value $$\approx \pm 90$
 - **POSITIVE** for the numerator
 - **NEGATIVE** for the denominator
 
-Depending on any constants which might be present in the transfer function typical bode approximations will say that $$arctan(k)$$ where $$k$$ is a constant, such as our $$arctan(5)$$ will be equal to zero, or $$\pm 90^{\deg}$$ (depending where the constant lies.
+Depending on any constants which might be present in the transfer function typical bode approximations will say that $$arctan(k)$$ where $$k$$ is a constant, such as our $$arctan(5)$$ will be equal to zero, or $$\pm 90^{\circ}$$ (depending where the constant lies.
 
 If the constant is on an order of magnitude which is $$ > 10^1 $$ Then it should be plotted on the graph, otherwise it should be approximated as $$ \approx 90$$
 
@@ -183,7 +183,7 @@ This gives us the components
 
 From here we simply add the functions to find the phase plot
 
-So now let's take a look at what the approximate graph will look like (**note this is not on a semi-log scale!**)
+So now let's take a look at what the  graph will look like (**note this is not on a semi-log scale!**)
 
 ![](/assets/images/pee2/bode-arctan-full.png)
 
