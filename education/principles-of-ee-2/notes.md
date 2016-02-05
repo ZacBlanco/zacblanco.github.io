@@ -31,8 +31,13 @@ It's that simple!
 
 ## Bode Plots and Filters
 
+-------
 
-See below for PDF notes on Bode plots and filters.
+
+**[How to Bode Plot - A Beginner's Guide](../how-to-bode-plot/)**
+
+
+See below for professor's PDF notes on Bode plots and filters.
 
 - [Notes on Bode Plots](../Bode-plots.pdf)
 - [Notes on Filters](../Filters-Notes-S2016.pdf)
