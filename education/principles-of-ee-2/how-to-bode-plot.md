@@ -17,7 +17,7 @@ The aim of this page is to explain Bode plots as simply as possible. It will not
 
 Bode plots typically consist of two graphs. One we'll call the _magnitude plot_ and one called the _phase angle_ plot.
 
-**Q: What do we need to start doing thee Bode Plots?**
+**Q: What do we need to start doing the Bode Plots?**
 
 **A**: The first thing we'll need is called **transfer function**. Usually denoted as $$H(s)$$ or $$H(j\omega)$$. Generally a transfer function is equivalent to _the ratio of an output to an input_. In terms of circuits this means we might have a $$V_{in}$$ and a $$V_{out}$$ where our transfer function is $$ H(s) = \frac{V_{out}}{V_{in}}$$
 
@@ -36,7 +36,7 @@ Now that we've covered the basics, let's get started!
 
 **Simplifying the Transfer Function**
 
-For this first example, we're going to use the 2nd example function from above, $$ H(s) = \frac{1000s(10+s)}{20(20 + s)(5 + s)}$$.
+For this first example, we're going to use the 1st example function from above, $$ H(s) = \frac{1000s(10+s)}{20(20 + s)(5 + s)}$$.
 
 Typically you will want to get each of the terms into a form which looks something like $$ (1 + \frac{s}{b}) $$ where $$b$$ is a value based on whatever the term is. Let's start simplifying. Let's try simplifying the equation above.
 
@@ -103,6 +103,19 @@ You can imagine that when the input frequencies aren't nearly as high as the cor
 When we plot this we will find that there isn't any real change in these terms contribution to the transfer function until we get to the term's corner frequency.
 
 I should also note that terms which depend on $$s$$ or $$j\omega$$ will increase (or decrease) at a rate of 20dB per **decade**. 
+
+**Q: But wait! How do we plot this if we still have a $$j$$ in the equation?**
+
+**A:** We're simply going to do exactly what we've done with other complex systems. Remember this is a **Magnitude** plot. So that the magnitude of $$a + jb = \sqrt{a^2 - b^2}$$
+
+You should also note that this is exactly why we have the two different plots; magnitude and phase, because $$a + jb = \sqrt{a^2 - b^2} \angle arctan(\frac{jb}{a}) $$
+
+However in this case for our intentions, we're just going to drop the $$j$$ from our magnitude and phase.
+
+This means that for our plots that the magnitude of each term which is in the form of $$20log(1+\frac{j\omega}{\omega_0}) = log(\sqrt{1^2 + \frac{\omega}{\omega_0}})$$ and then our phase is in the form $$arctan(\frac{\omega}{\omega_0})$$
+
+Then the only other term we should account for $$j$$ in is terms which are simply $$log(j\omega)$$
+
 
 In this context decade is a power of 10 before (or after) a number. i.e. a decade after 1 is 10, a decade after 20 is 200, a decade after 300 is 3000, etc...
 
