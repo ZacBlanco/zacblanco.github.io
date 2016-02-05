@@ -23,7 +23,9 @@ Bode plots typically consist of two graphs. One we'll call the _magnitude plot_ 
 
 **Q: What does an actual transfer function look like?**
 
-**A:** Transfer functions can come in many different types. We will only go over _first-order_ and _second-order_ transfer functions. But typically they have a constant $$K$$, multiplied by a first order term in the numerator. These typically look some like:, $$(1 + \frac{s}{5})$$, $$(s)$$, or $$(10 + 5s)$$ . Then they will be divided by another term just like the previous ones (they can also have a constant, $$K$$ too!). Also **note that the term $$s = j\omega$$**.
+**A:** Transfer functions can come in many different types. We will only go over _first-order_ and _second-order_ transfer functions. But typically they have a constant $$K$$, multiplied by a first order term in the numerator. These typically look some like:, $$(1 + \frac{s}{5})$$, $$(s)$$, or $$(10 + 5s)$$ . Then they will be divided by another term just like the previous ones (they can also have a constant, $$K$$ too!). 
+
+Also **note that the term $$s = j\omega$$**.
 
 Examples of a few transfer functions
 
@@ -112,7 +114,7 @@ You should also note that this is exactly why we have the two different plots; m
 
 However in this case for our intentions, we're just going to drop the $$j$$ from our magnitude and phase.
 
-This means that for our plots that the magnitude of each term which is in the form of $$20log(1+\frac{j\omega}{\omega_0}) = log(\sqrt{1^2 + \frac{\omega}{\omega_0}})$$ and then our phase is in the form $$arctan(\frac{\omega}{\omega_0})$$
+This means that for our plots that the magnitude of each term which is in the form of $$20log(1+\frac{j\omega}{\omega_0}) = 20log(\sqrt{1^2 + \frac{\omega}{\omega_0}})$$ and then our phase is in the form $$arctan(\frac{\omega}{\omega_0})$$
 
 Then the only other term we should account for $$j$$ in is terms which are simply $$log(j\omega)$$
 
@@ -131,7 +133,63 @@ As you should be able to see, the 2nd image is simply all of the functions from 
 
 It should be important to note that due to my current software limitations, I could not use the typical Semi-Log graphing style on the x-axis which is typical for Bode plots. This means that this plot **is not exact**. You can see the [actual bode plots for this transfer function with Wolfram Alpha](https://www.wolframalpha.com/input/?i=bode+plot+5s(1%2Bs%2F1000)%2F((1%2Bs%2F20)(1%2Bs%2F5))) 
 
-More to come soon!
+## Phase Plots
+
+**Q: So then how can we plot the phase angle with respect to the frequency, $$\omega$$?**
+
+If we simply take what we know about complex numbers like above we find that $$a + jb = arctan\frac{b}{a}$$
+
+Let's first take a look at the function of $$arctan(\omega)$$ to refresh us.
+
+![](/assets/images/pee2/bode-lim-arctan.png)
+
+Also recall that $$ \lim_{\omega\to\infty} arctan(\omega) = 90^{\deg}$$
+
+So this tells us that the component which is $$arctan(\omega)$$ approaches 90 with large values of $$\omega$$.
+
+So on a semi log scale we can approximate by saying that for all values $$\omega$$, that $$arctan(\omega) = 90$$ 
+
+This will give us the angle for all of the different components. We can then add the respective phase angles together after plotting.
+
+Recall that $$arctan(1)=45^{\deg}$$ as well.
+
+So this means that for approximation of terms which are $$arctan(1 + \frac{2}{\omega_0}) that at the corner frequency that we will **have a value of $$45^{\deg}$$. However, that this will be positive or negatively sloping depending on whether the term is in the numerator or denominator of the transfer function.
+
+So then a **decade prior** to the corner frequency, the value should be $$\approx 0$$.
+
+Then a **decade after** the corner frequency will have a value $$\approx \pm 90$$ where the $$\pm$$ depends on whether the term is in the numerator or denomitor.
+
+- **POSITIVE** for the numerator
+- **NEGATIVE** for the denominator
+
+Depending on any constants which might be present in the transfer function typical bode approximations will say that $$arctan(k)$$ where $$k$$ is a constant, such as our $$arctan(5)$$ will be equal to zero, or $$\pm 90^{\deg}$$ (depending where the constant lies.
+
+If the constant is on an order of magnitude which is $$ > 10^1 $$ Then it should be plotted on the graph, otherwise it should be approximated as $$ \approx 90$$
+
+We then simply add the slopes of all terms together to find the phase
+
+So then to plot our phase diagram from the transfer function:
+
+> $$H(s) = \frac{5s(1+\frac{s}{1000})}{(1 + \frac{s}{20})(1 + \frac{s}{5})}$$
+
+We can then take the arctan of each term, and then add their value together.
+
+This gives us the components
+
+- $$arctan(5) \approx 90 $$
+- $$arctan(1 + \frac{s}{1000})$$
+- $$arctan(1 + \frac{s}{20})$$
+- $$arctan(1 + \frac{s}{5})$$
+
+From here we simply add the functions to find the phase plot
+
+So now let's take a look at what the approximate graph will look like (**note this is not on a semi-log scale!**)
+
+![](/assets/images/pee2/bode-arctan-full.png)
+
+We can see that from this 
+
+
 
 
 

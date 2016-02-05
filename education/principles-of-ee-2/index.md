@@ -19,6 +19,7 @@ Links:
 
 ### Bode Plots
 
+- [Bode Plots for Beginners](how-to-bode-plot/)
 - [Bode Plots via Swarthmore College](http://lpsa.swarthmore.edu/Bode/Bode.html)
-- [Bode Plots Example - Youtube - abuhajara](https://www.youtube.com/watch?v=WQzu2rnHG9A)
-- [Bode Plots - Youtube - ProfKathleenWage](https://www.youtube.com/watch?v=ZiXRL4QWqIU)
+- [Bode Plots Example via Youtube - abuhajara](https://www.youtube.com/watch?v=WQzu2rnHG9A)
+- [Bode Plots via Youtube - ProfKathleenWage](https://www.youtube.com/watch?v=ZiXRL4QWqIU)
