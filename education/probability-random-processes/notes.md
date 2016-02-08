@@ -50,6 +50,10 @@ The **union** of sets $$A$$ and $$B$$ is the set of all elements that are either
 
 The **intersection** of sets is set of elements where each elements present in the set of A is also contained in B. We use the symbol $$\cap$$ to show the intersection of two sets.
 
+**Note!**: Typically the $$\cap$$ is not used in problems and the following statements are equivalent:
+
+> $$ P[A\cap B] = P[AB] $$
+
 **Mutually Exclusive** set what we call two sets with no common elements
 
 We call the **universal set** the set which contains everything. That is if we imagine all of our elements being made up of sets $$A_1 \dots A_n $$ then we get $$ A_1 \cup A_2 \cup \dots \cup A_n = S$$
@@ -291,6 +295,112 @@ for $$n$$ repetitions of a subexperiment with sample space $$S_{sub} = \lbrace s
 **Theorem 2.6**
 
 The number of observation equencies for n subexperiments with sample space $$S = \lbrace 0, 1 \rbrace$$ with 0 apprearing $$n_)$$ times and 1 appearing $$n_1=n-n_0$$ times is $$\begin{pmatrix} n \\ n_1 \end{pmatrix} $$
+
+## Lecture 5 - February 8th 2016
+
+**Theorem 2.7**
+
+For $$n$$ repetitions of a ubexperiment with sample space $$S = \{s_0,\dots,s_{m-1}\}$$ the number of length $$n = n_0 + \dots + n_{m-1}$$ obervation sequencies with $$s_i$$ appearing $$n_i$$ times is
+
+> $$ \begin{pmatrix} n \\ n_0,\dots,n_{m-1} \end{pmatrix} = \frac{n!}{n_0!n_1!\dots n_{m-1}!} $$
+
+### Independent Trials
+
+**Theorem 2.8**
+
+The probability of $$n_0$$ failures an $$n_1$$ successes in $$n=n_0+n_1$$ independent trials is:
+
+> $$ P[E_{n_0}, n_1] = \begin{pmatrix} n \\ n_1 \end{pmatrix} = (1-p)^{n-n_1}p^{n_1} = \begin{pmatrix} n \\ n_0 \end{pmatrix} (1-p)^{n_0}p^{n-n_0} $$
+
+## Chapter 3 - Discrete Random Variables
+
+**Definition - Discrete Variables** - A random variable assigns numbers to outcomes in the sample space of an experiment.
+
+A probability model always begins with an experiments. And each of the random variables is directly related to the experiment.
+
+There are **3 types of relationships**
+
+1. The random variable is the observation
+2. The random cariable is a function of the observation
+3. The random variable is a function of another random variable.
+
+Throughout most of the book probability is examined in models that assign numbers to the outcomes of the sample space. 
+
+When we observe the observation we call it a _random variable_. Typically in our notation the name of our random variable is a capital letter. e.g. $$X$$.
+
+The set of possible values for $$X$$ is the **range of $$X$$**
+
+Since we often consider multiple variables at a time, we denote the range of a random variable by the letter $$S$$ with a subscript that is the name of the random variable.
+
+Thus, $$S_X$$ is the range of the random variable $$X$$, $$S_Y$$ is the range of the random variable $$Y$$ and so on...
+
+
+**Definition 3.1** 
+
+**Random Variable** consists of an experiment with a probability measure $$P[.]$$ defined on a sample space $$S$$ and a _function that assigns a real number to each outcome in the sample space of the experiment._
+
+A note on notation:
+
+- On occasion should we need to identify the random variable $$X$$ with respect to a sample outcome, then we define this as $$X(s)$$. (In other words we define a function which relates the value of X to the outcomes - X is a function of $$s$$, the outcome)
+
+- Sometimes we will write $$\{ X = x\} $$to emphasize that there is a set of sample points $$s \in S $$ for which $$X(s) = x$$.
+
+From these we can adopt the shorthand notation:
+
+> $$\{X = x\} = \{s\in S \ \vert\  X(s) = x\} $$
+
+**Defintion 3.2**
+
+$$X$$ is a **discrete random variable** if the range of $$X$$ is a _countable set_
+
+$$
+S_X = \{x_1,x_2,\dots\}
+$$
+
+**Definition 3.3**
+
+**Probability Mass Function** (PMF) - The probability mass function of the discrete random variable X is 
+
+> $$ P_X(x) = P[X=x] $$
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
