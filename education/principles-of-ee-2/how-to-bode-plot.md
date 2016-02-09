@@ -125,9 +125,9 @@ From here is is possible to then see that we can estimate a bode plot as simply 
 
 See below for a graph with all of the different slopes plotted separately, and then with them all added together.
 
-![](/assets/images/pee2/how-to-bode-1.PNG)
+![](/assets/images/pee-2/how-to-bode-1.PNG)
 
-![](/assets/images/pee2/how-to-bode-2.PNG)
+![](/assets/images/pee-2/how-to-bode-2.PNG)
 
 As you should be able to see, the 2nd image is simply all of the functions from the first image added together.
 
@@ -141,7 +141,7 @@ If we simply take what we know about complex numbers like above we find that $$a
 
 Let's first take a look at the function of $$arctan(\omega)$$ to refresh us.
 
-![](/assets/images/pee2/bode-lim-arctan.png)
+![](/assets/images/pee-2/bode-lim-arctan.png)
 
 Also recall that $$ \lim_{\omega\to\infty} arctan(\omega) = 90^{\circ}$$
 
@@ -185,7 +185,7 @@ From here we simply add the functions to find the phase plot
 
 So now let's take a look at what the  graph will look like (**note this is not on a semi-log scale!**)
 
-![](/assets/images/pee2/bode-arctan-full.png)
+![](/assets/images/pee-2/bode-arctan-full.png)
 
 We can see that from this 
 
