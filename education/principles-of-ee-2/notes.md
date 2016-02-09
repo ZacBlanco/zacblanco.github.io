@@ -121,6 +121,43 @@ When we have higher order (3rd, 4th, 5th) RC circuits, we'll see that the range 
 
 The smaller the transfer band the **less cross-talk interference**.
 
+## Filters - Terminology
+
+Typically of a transfer function we can represent our transfer function in the phasor domain as
+
+> $$ H(j\omega) = M(\omega) \angle \theta(\omega)$$
+
+We should also note that:
+
+- Power $$\propto \text{voltage}^2$$
+- Power transmitted by input to output $$\propto M^2(\omega)$$
+
+At a certain frequency, say $$\omega_m$$ has a maximum possible value of $$M(\omega_m)$$
+
+Then from this we can also say that the **maximum power transferred is $$M^2(\omega_m)$$**
+
+The **half power frequency** is the frequency at which the power transmitted by the input $$\implies M^2(\omega) = \frac{1}{2}M^2(\omega_m)$$
+
+Or, equivalently using a deciBel scale, the **half power frequency** $$= 20log_{10}(M(\omega_m)) - 3dB$$
+
+- **Practical Low Pass Filters** if they are properly designed, will have only one _half-power frequency_ or cut-off frequency (denoted by $$\omega_0$$). Then, the **pass-band** of this filter ranges from 0 to $$\omega_c$$
+- **Practical High-Pass Filter** For properly designed, ideal high pass filters there is only one cutoff frequency which is then starts at the cutoff frequency and continues to $$\infty$$. However, due to signal degredation and other factors, we can assume high-pass filters are just very large **band-pass filters**
+- **Practical Band-Pass Filters** In there there are simply just two cutoff frequencies with a "center" frequency (not necessarily exactly between the two), called the **resonant** frequency.
+- **Band-Reject Filters**: For the reject filters we find there are also two half-power frequencies which reject the frequencies between them.
+
+In filters we also have a **time delay** which occurs due to the phase change of the filter (transfer function)
+
+If our input is $$x(t)$$, then our output has a function of $$x(t - t_d)$$, where $$t_d$$ is the time delay.
+
+We can see the exact relationship with phase angle $$\theta$$ by the following:
+
+> $$ x(t-t_d) = Acos(\omega(t-t_d)) = Acos(\omega t - \omega t_d) = Acos(\omega t + \theta) $$
+
+From this we can see that $$\theta = -\omega t_d$$
+
+Or that $$t_d = -\frac{\theta}{\omega}$$
+
+
 
 
 
