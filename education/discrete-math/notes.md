@@ -171,7 +171,145 @@ We use the notation $$\exists\  x\  P(x)$$ for the existential quantification of
 The uniqueness quantifier, denoted by $$\exists!$$ in $$\exists!\  x \ P(x)$$, states that "there exists a unique x, such that P(x) is true"
 
 
-** Quantifiers with Restricted Domains
+**Quantifiers with Restricted Domains**
+
+Sometimes it occurs that we'll want to restrict which numbers can be valid for a quantifier. In this regard we can say that if we give our quantifier the domain $$D$$ of all real numbers, then we can restrict our statement to certain quantities or portions of such.
+
+Example: 
+
+> $$\forall x < 0\ (x^2 > 0)$$
+
+This statement restricts the domain $$D$$ of all real numbers by specifying "for all x that are less than 0"
+
+**Precedence of Quantifiers**
+
+The quantifiers $$\forall$$ and $$\exists$$ have higher precedence than all logical operators from the propostional logic that were covered before.
+
+That is given the statement $$\forall x P(x) \lor Q(x) \equiv (\forall x P(x)) \lor Q(x)$$
+
+**Binding Variables**
+
+When a quantifier is used on a variable, we call that variable then **bound**. If a variable is not bound we tend to call it **free**.
+
+Example in the statement $$ \exists x (x + y = 1)$$, we say that **x is bound** and **y is free**
+
+**Negating Quantified Expressions**
+
+|Negation|Equivalent Statement |When negation is true?| When false?|
+|$$\neg\exists x P(x)$$|$$\forall x \neg P(x)$$| For every x, P(x) is false.|There is an x for which P(x) is true|
+|$$\neg\forall x P(x)$$|$$\exists x \neg P(x)$$|There is an x for which P(x) is false|P(x) is true for every x|
+
+These rules for negations of quantifiers are called **De Morgan's Laws for Quantifiers**
+
+**Using Quantifiers in System Specifications**
+
+We won't go into much detail here, but take this example for what it represents.
+
+> "Every mail message larger than one megabyte will be compressed"
+
+Equivalent Representation:
+
+> $$\forall m (S(m, 1) \implies C(m)) $$
+
+
+## Section 1.5 - Nested Quantifiers
+
+**Nested Quantifiers** are where one quantifier is within the scope of another quanitifier.
+
+Example:
+
+> $$\forall x \exists y (x + y = 0)
+
+
+The english equivalent of this statement is: "For every x there is a value of y in our domain where (x + y) is equal to 0.
+
+Another, more complex example. Translating to English:
+
+> $$\forall x \forall y ((x > 0) \lor (y < 0) \implies (xy < 0))
+
+Translated:
+
+> "For real numbers x and y, if x is positive and y is negative, then xy is negative"
+
+Sometimes when evaluating these types of statements it is easy to think in terms of nested loops (programming)
+
+**The Order of Quantifiers**
+
+The order of the quantifiers in a statement is important unless **all** of the quantifiers are universal or all existential quantifiers.
+
+Take these two statements:
+
+$$ \exists y \forall x Q(x, y)$$
+
+and 
+
+$$ \forall x \exists y Q(x, y)$$
+
+While both very similar they do not translate to the same thing.
+
+The first one translates to:
+
+> "There is a real number y such that for every real number x, Q(x, y)"
+
+Whereas the latter is:
+
+> "For every real number x there is a real number y such that Q(x, y)"
+
+**Quantifications of Two Variables**
+
+|Statement|When True|When False|
+|$$\forall x\forall y\ P(x, y)$$| P(x, y) is true for every pair x, y.|There is a pair x, y for which P(x, y) is false|
+|$$\forall x\exists y\ P(x, y)$$|For every x there is a y for which P(x, y) is true| There is an x such that P(x, y) is false for every y|
+|$$\exists x\forall y\ P(x, y)$$|There is an x for which P(x, y) is true for every y| For every x there is a y for which P(x, y) is false.|
+|$$\exists x\exists y\ P(x, y)$$| There is a pair x, y for which P(x, y) is true| P(x, y) is false for every pair x, y|
+
+
+**Translating Mathematical Statements into Statements Involving Nested Quantifiers**
+
+Mathematical statements expressed in English can be translated into logical expressions.
+
+Example: "The sum of two positive integers is always positive" 
+
+> $$ \forall x \forall y ((x > 0) \land (y > 0) \implies (x + y > 0)) $$
+
+Note that if we could also simply just change the domain to be all positive integers instead of specifying x and y being greater than 0.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
