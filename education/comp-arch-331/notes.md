@@ -457,6 +457,182 @@ These commands are all useful for extracting and inserting bits within a word.
 
 ### Shift Operations
 
+These are "R Format" instructions.
+
+They have the form:
+
+| op | rs| rt | rd | shamt | funct |
+|6 bits | 5 bits | 5 bits | 5 bits | 5 bits | 6 bits |
+
+The shift left and right operators (`sll`, `srl`)
+
+## Lecture 7 - February 9th, 2016
+
+### AND Operations
+
+These are useful to mask bits in a word. We can select some bits, or clear others to 0.
+
+Example:
+
+```
+and $t0, $t1, $t2
+```
+
+There's also an i-format instruction as well
+
+```
+andi $t0, $t1, 0xFF00
+```
+
+
+### OR Operations
+
+The are useful to include more bits in a word. It uses a logical OR to determine whether a bit should be included in the result
+
+There are two form (R and I format):
+
+```
+or $t0, $t1, $t2
+ori $t0, $t1, 0xFF00
+```
+
+
+AND and OR instructions literally check bit by from each word and determine whether the bits should be flipped or not.
+
+### NOT Operations
+
+There's actually no `not` operator that you can execute against a register
+
+_However_, it is possible to use a **NOR** operator
+
+- `a NOR b == NOT (a OR b)`
+
+```
+nor $t0, $t1, $zero
+```
+
+This will flip each bit to the opposite of what is currently in the word
+
+### Conditional (Control FLow) Operations
+
+In these instructions we will branch (jump) to a labeled instruction or location if a condition is true
+
+We have 3 different types of _control flow_ operations.
+
+- Branch if equal
+- Branch if not eqal
+- jump to
+
+Examples of these three instruction (you should be able to figure out which correspond to which)
+
+
+    beq rs rt L1
+    bne rs rt L1
+    j L1
+    
+
+L1 is simply a location where we determine j
+
+### Compiling IF Statements
+
+In C code we might have something like...
+
+
+    if(i == j)
+      f = g + h;
+
+
+Compiled to MIPS we might see something like:
+
+
+      bne $s3, $s4, Else
+      add $s0, $s1, $s2
+      j Exit
+    Else: sub $s0, $s1, $s2
+    Exit: ...
+
+
+
+### Compiling Loop Statements
+
+In C, we might have code which looks something like:
+
+```
+while (save[i] == k)
+  i += 1;
+```
+
+Then, if compiled to MIPS using the control statements it will look something like:
+
+    
+    Loop: sll $t1, $23, 2
+          add $t1, $t1, $s6
+          lw  $t0, 0($t1)
+          bne $t0, $s5, Exit
+          addi $s3, $s3, 1
+          j Loop
+    Exit: ...
+    
+
+### Conditional Branches
+
+Instructions:
+
+- `bne $s0, $s1, Label`
+- `beq $s0, $s1, Label`
+
+These I format instructions have the form 
+
+| op | rs| rt | jump location |
+|6 bits | 5 bits | 5 bits | 16 bits |
+
+but how exactly is the 16 bit branch location calculated?
+
+### Specifying Branch Destinations
+
+Use a register added to the 16 bit offset.
+
+- We will use the instruction address register.
+  - the PC gets updated during the **fetch** cycle cso that it holds the address of the next instruction
+  
+- This limits the branch distance of an instruction to be $$-2^{15}$$ or $$2^{15} - 1$$
+
+### Other Conditional Operations
+
+```
+slt rd, rs, rt
+```
+
+- Set result to 1 if a condition is true, otherwise set 0
+- `if (rs < rt), rd = 1;, else rd = 0`
+
+```
+slti, rt, rs, constant
+```
+
+- `if (rs < constant) rt = 1; else rt = 0;`
+
+These two can be used in combination with beq and bne
+
+Example:
+
+
+    slt $t1, $s1, $s2 # If ($s1 < $s2)
+    bne $t0, $zero, L # Branch to L
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
