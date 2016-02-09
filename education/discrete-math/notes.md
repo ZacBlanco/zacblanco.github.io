@@ -104,14 +104,74 @@ Below is a table which highlights these equivalencies. Note that _T_ and _F_ rep
 | $$ q \lor p $$ | $$ q \lor p $$ |
 
 
+### DeMorgan's Laws
+
+> $$ \neg(p \land q) = \neg p \lor \neg q $$
+
+> $$ \neg p(\lor q) = \neg p \land \neg q $$
 
 
+**Propositional Satisfiability**
+
+A compound proposition is **satisfiable** if there is an assignment of truth values to its variables that makes it true. 
+
+In other words, if we can assign values to the variables which cause the statement to be true, then it is **satisfiable**.
 
 
+## Predicates and Quantifiers
 
 
+**Predicates** are statements which involve variable such as $$x > 3$$ and $$ x = 3 + y $$ or even statements like: "computer $$x$$ is under attach by an intruder".
+
+The statements all have two different parts:
+
+- **Subject**
+- **Predicate**
+
+In a statement like "$$x$$ is greater than 4", the subject is $$x$$, and the predicate is "greater than 4"
+
+We can call this statement a **propositional function**, which we can replace by $$P(x)$$. Here $$P$$ denotes the predicate "x is greater than 4".
+
+A statement of the form $$P(x_1 ,x_2 ,...,x_n )$$ is the value of the propositional function P at the
+**n-tuple**$$(x_1 ,x_2 ,...,x_n )$$, and P is also called an **n-**place predicate or a **n-ary predicate**.
+
+**Preconditions and Postconditions**
+
+Predicates are also used to establish the correctness of computer programs, that is, to show that computer programs always produce the desired output when given valid input.
+
+The statements that describe valid input are known as **preconditions**. The condititions of that the output should satisfy when the program has run are known as postconditions.
+
+**Quantifiers**
+
+**Quantification** is a way to create a proposition from a propositional function. Quantification expresses the extent to which a predicate is true over a range of elements.
+
+In english, the words _all, some, many, none,_, and _few_ are used in quantifications.
+
+There are two types of quantifications which we will cover
+
+- Universal quantification
+- Existential quantification
+
+The **domain of discourse** often just referred to as the **domain**, is what we call all of the values in a specified domain.
+
+Below is a table describing the two basic quantifiers
+
+| Statement | When True | When False |
+|$$\forall\  x\  P(x)$$| $$P(x)$$ is true for every $$x$$| There is an $$x$$ for which $$P(x)$$ is false |
+|$$\exists\  x\  P(x)$$|There is an x for which $$P(x)$$ is true| $$P(x)$$ is false for every $$x$$.|
+
+The existential quantification of P(x) is the proposition
+
+> There exists an element x in the domain such that P(x).
+
+We use the notation $$\exists\  x\  P(x)$$ for the existential quantification of P(x). Here $$\exists$$ is called the existential quantifier.
+
+**The Uniqueness Quantifier**
+
+The uniqueness quantifier, denoted by $$\exists!$$ in $$\exists!\  x \ P(x)$$, states that "there exists a unique x, such that P(x) is true"
 
 
+** Quantifiers with Restricted Domains
 
 
 
