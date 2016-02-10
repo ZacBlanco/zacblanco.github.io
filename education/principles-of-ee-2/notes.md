@@ -158,7 +158,9 @@ From this we can see that $$\theta = -\omega t_d$$
 Or that $$t_d = -\frac{\theta}{\omega}$$
 
 
+## Transfer Function of a First-Order LPF Op-Amp Circuit
 
+![](/assets/images/pee-2/transfer-of-lpf-op-amp-1.png)
 
 
 
