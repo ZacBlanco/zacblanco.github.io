@@ -317,27 +317,91 @@ The following statements are all equivalent
 3. The reduced row echelon form of the augmented matrix $$[A\ b]$$ has no rown of the form $$[0\ 0\ 0\ 0\ \dots\ d]$$ where $$d \neq 0$$
 
 
- ## The Span of a Set of Vectors
+## The Span of a Set of Vectors
  
  
- **Definition: Span**: For a nonempty set of vectors, $$S = \{u_1, u_2, \dots, u_k\}$$ in the space of $$R^n$$, we define the **span of S** to be the set of all linear combinations of $$u_1, u_2, \dots , u_k$$ in $$R^n$$. This set is denoted by Span S or Span \{u_1, u_2,\dots u_k\}
- 
- 
- 
+**Definition: Span**: For a nonempty set of vectors, $$S = \{u_1, u_2, \dots, u_k\}$$ in the space of $$R^n$$, we define the **span of S** to be the set of all linear combinations of $$u_1, u_2, \dots , u_k$$ in $$R^n$$. This set is denoted by Span S or Span \{u_1, u_2,\dots u_k\}
+
+**Generating Sets**
+
+Imagine instead of trying to find the Span of a set $$S$$ we have a set of vectors $$V$$ and we want to find the span which generates the set $$V$$. We then call $$S$$ the generating set of $$V$$ or that $$S$$ generates $$V$$
+
+**Theorem - Generating Sets**
+
+The following statements are all equivalent:
+
+1. The span of the columns of A is $$R^m$$
+2. The equation $$Ax = b$$
+3. The rank of A is $$m$$, the number of rows of A
+4. Teh reduced row echelon form of A has no zero rows
+5. There is a pivot position in each row of A
 
 
+**Making Smaller Generating Sets**
+
+Let $$S = \{u_1, u_2, \dots, u_k\}$$ be a set of vectors from $$R^n$$ and let $$v$$ be a vector in $$R^n$$. Then the Span $$\{u_1, u_2, \dots, u_k\}$$ if and only if v belongs to the span of $$S$$
+
+## Linear Dependence and Independence
+
+A set of $$k$$ vectors $$\{u_1, u_2, \dots, u_k\}$$ in $$R^n$$ is called **linearly dependent** if there exists a set of scalars $$c_1,c_2, \dots, c_k$$ such that 
+
+$$ c_1u_1 + c_2u_2 + \dots + c_ku_k = 0$$
+
+and that $$c_1, c_2, \dots, c_k \neq 0$$
+
+In other words, if the only set of scalars which satisfy the equation $$ c_1u_1 + c_2u_2 + \dots + c_ku_k = 0$$ are scalars which are all equal to 0, then the set $$k$$ is **linearly independent**
+
+The set $$\{u_1, u_2, \dots, u_k\}$$ is linearly dependent if an only if there exists a nonzero solution of $$Ax=0$$ where $$A = \left[ u_1 \  u_2\ \dots \  u_k  \right]$$
+
+The following statements involving linear independence about a matrix are equivalent:
+
+1. The columns of A are linearly independent
+2. the equation $$Ax=b$$ has at most one solution for each $$b$$ in $$R^m$$
+3. The nullity of A is zero
+4. The rank of A is $$n$$, the number of columns of A
+5. The columns of the RREF of A are distinct standard vectors in $$R^m$$
+6. The only solution of $$Ax = 0$$ zero
+7. There is a pivot position in each column of A
+
+## Matrix Multiplication
+
+Mulitplication of two matrices is different than normal multiplication by a scalar.
+
+**Definition** Let A be an $$m\times n$$ matrix and B be an $$n\times p$$ matrix. We dfine the **matrix product** of $$AB$$ to be the $$m\times p$$ matrix who's jth column is $$Ab_j$$. That is 
+
+> $$C = \left[ Ab_1\ Ab_2\ \dots\ Ab_p\right]$$
+
+Another way of thinking is that the product matrix is equivalent to doing the dot product for all combinations of rows of matrix $$A$$ with all the columns of $$B$$
+
+The product matrix will have a size of $$\left(m\times p\right)$$
 
 
+**Properties of Matrix Multiplication**
+
+- $$(AB)v = A(Bv)$$
+- $$ AB \neq BA $$
+- $$ (A+B)C = AC+AB$$
+- $$ C(P+Q)=CP+CQ$$
+- $$ I_kA = A = AI_m$$
+- The product of any matrix and a zero matrix is zero
+- $$(AC)^T = C^TA^T$$
+
+## Invertibility and Elementary Matrices
+
+**Definition** an $$n\times n$$ matrix A is called invertible if there exists an $$n\times n$$ matrix B such that $$AB = BA = I_n$$. In this case B is called the **inverse** of A.
+
+If A is an invertible $$n\times n$$ matrix, then for every $$b$$ in $$R^n$$ $$Ax = b$$ has the unique solution $$A^{-1}b$$
+
+**Useful Properties of Matrix Inverses**
+
+1. If A is invertible, then $$A^{-1}$$ is invertible and $$(A^{-1})^{-1}=A$$
+2. If A and B are invertible, then AB is invertible and $$(AB)^{-1}=A^{-1}B^{-1}$$
+3. If A is invertible, then $$A^T$$ is invertible and (A^T)^{-1} = (A^{-1})^T$$
 
 
+Let $$A_1, A_2,\dots, A_k$$ be $$n\times n$$ invertible matrices. Then the product $$A_1A_2\dots A_k$$ is invertible and 
 
-
-
-
-
-
-
-
+> $$(A_1A_2\dots A_k)^{-1} = (A_k)^{-1}(A_{k-1})^{-1}(A_1)^{-1}$$
 
 
 
