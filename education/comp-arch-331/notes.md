@@ -621,6 +621,119 @@ Example:
     bne $t0, $zero, L # Branch to L
 
 
+## Lecture 6 - February 12th 2016
+
+**Branch Instruction Design**
+
+Why don't we have a `blt` (branch greater then) or `bge`(branch greater or equal)?
+
+ - The reason is that in hardware these types of instructions are physically slower to run than the $$=$$ or $$\neq$$
+
+
+### Signed vs. Unsigned
+
+- Signed Comparison instructions: `slt`, `slti`
+- Unsigned Comparison: `sltu`, `sltui`
+
+Example:
+
+![](/assets/images/comp-arch/signed-unsigned-comparisons.png)
+
+### More Branch Instructions
+
+We can use `slt`, `beq`, `bne` and the fixed value of 0 in register `$zero` to create other conditions
+
+Example: **less than**
+
+    slt $at, $s1, $s2
+    bne $at, $zero, Label
+
+In MIPS we have pseudo-instructions which allow us to do this on a single line using `ble`, `bgt`, `bge`
+
+
+### Jump Instructions
+
+Just instructions come in the form
+
+    j label # Goes to label, 'label'
+
+Machine Format:
+
+| op | 26-bit address |
+| 2  | ???? |
+
+But how exactly is the jump destination address specified? 
+
+- An _absolute_ address is formed by concatendating the **upper 4 bits of the current PC** and concatendating `00` as the 2 low-order bits.
+
+**Branching Farther Away**
+
+What happens when a destination address ends up being more than 16 bits away? (the maximum length for a branch location in a `bne` or `beq` command.)
+
+The assembler will attempt to then invert the comparison command and then place a `j` command after the comparison
+
+Example:
+
+      beq $s0, $s1, L1
+
+Will then become
+
+      bne $s0, $s1, L2
+      j L1
+    L2:
+    
+## Procedures
+
+Procedures (also known as methods or functions) in C like languages are usually their own blocks of code which run given a set of arguments.
+
+The issue is that given a procedure we must return to a previous spot in our code form thwere is was originally called. It is possible to do this with assembly.
+
+First let's look at the main steps of a procedure
+
+1. The main routine (caller) places actual parameters in a place where the procedure (callee) can access them.
+  - Typically registers `$a0 - $$a3`
+2. The caller transfers control to the callee
+3. The callee axquires the storage resources needed
+4. The callee performs the desired task
+5. The callee places the result value in a place where the caller can access it
+ - `$V0` and `$v` are typically the values for return registers
+6. The callee then returns the control to the caller
+ - `$ra` is the return address register to return to the point of origin.
+
+
+The format for doing this in MIPS assembly is:
+
+    jal procedureAddress # jump and link
+    
+This saves PC+4 in the register `$ra` and then jumps to the address `procedureAddress`
+
+The callee will then do the procedure return with just 
+
+    jr $ra
+
+### MIPS Register Conventions
+
+![](/assets/images/comp-arch/mips-register-convention.png)
+
+
+### Spilling registers
+
+But what will happen if the callee needs to use more registers than allocated to argument and return values?
+
+- The **callee will use a stack** a LIFO queue
+
+One of the general registers `$sp` (also known as `$29`) is used to address the stack which 'grows' from high address to low address
+
+- **Add data onto the Stack** ("push")
+  - `$sp = $sp - 4`
+
+- **Remove Data from the Stack** ("pop")
+  - `$sp = $sp + 4`
+
+
+
+
+
 
 
 
