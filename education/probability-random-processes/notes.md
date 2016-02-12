@@ -363,10 +363,77 @@ $$
 
 > $$ P_X(x) = P[X=x] $$
 
+**Theorem 3.1**
 
 
+For a discrete random variable $$X$$ with a PMF of $$P_X(x) and range $$S_X$$ 
+
+- For any $$x, P_X(x) \geq 0$$
+- $$\Sigma_{x\in S_X} P_X(x) = 1$$
+- For any event $$B\subset S_X$$, the probability that $$X$$ is in the set $$B$$ is 
+  - $$P[B] = \sum\limits_{x\in B} P_X(x) $$
+  
+### Families of Random Variables
+  
+- In practical applications, certain types of random variables appear over and over across many experiments.
+- In each of these families (types) the PMF of all the random variables will have the same mathematical form
+- Differ only in values of one or two parameters
+- Depending on family, each PMF will contain only 1-2 params
+- If we assign numbers to the parameters we can obtain a specific variable.
+- Typical nomenclature for a family consists of the family name followed by one or two parameters in parentheses.
+
+Example: _binomial(n, p)_ refers in general to the family of _binomial_ random variables
+
+_Binomial(7, 0.1) refers to the binomial random variable with parameters $$n=7$$ and $$p = 0.1$$
 
 
+**Definition 3.4**
+
+X is a Bernoulli (p) random variable if the PMF of X has the form
+
+> $$ P_X(x) = \begin{cases} 1-p , & x = 0 \\ p , & x = 1 \\ 0, & \text{otherwise} \end{cases} $$
+
+**Definition 3.5** Geometric (p) Random Variable
+
+X is a geometric (p) random variable if the PMF of X has the form
+
+> $$ P_X(x) = \begin{cases} p(1-p)^{x-1}, & x = 0 \\0, & \text{otherwise} \end{cases} $$
+
+**Definition 3.6** Binomial (n, p) Random Variable
+
+X is a binomial (n, p) random variable if the PMF of X has the form 
+
+> $$ P_X(x) = \begin{pmatrix} n \\ x \end{pmatrix} p^x(1-p)^{n-x} $$
+
+Where $$ 0 < p < 1 $$ and $$n$$ is an integer such that $$ n \geq 1 $$
+
+
+**Definition 3.7** Pascal (k, p) Random Variable
+
+X is a pascal (k, p) random variable if the PMF of X has the form:
+
+> $$ P_X(x) = \begin{pmatrix} x-1 \\ k-1 \end{pmatrix} p^k(1-p)^{x-k} $$
+
+Where $$ 0 < p < 1 $$ and k is an integer such that $$k \geq 1$$
+
+
+- Bernoulli (p) = number successes in 1 trial
+- Geometric (p) = number of trials until 1st success
+- Binomial (n, p) = number of successes in n trials
+- Pascal (k, p) = number of trials until k successes
+
+|Name of Random Variable| Description of variable | PMF Function |
+|-----------------------|-------------------------|--------------|
+|Bernoulli|number successes in 1 trial|$$ P_X(x) = \begin{cases} 1-p , & x = 0 \\ p , & x = 1 \\ 0, & \text{otherwise} \end{cases} $$|
+|Goemetric|number of trials until 1st success|$$ P_X(x) = \begin{cases} p(1-p)^{x-1}, & x = 0 \\0, & \text{otherwise} \end{cases} $$|
+|Binomial|number of successes in n trials|$$ P_X(x) = \begin{pmatrix} n \\ x \end{pmatrix} p^x(1-p)^{n-x} $$|
+|Pascal|number of trials until k successes|$$ P_X(x) = \begin{pmatrix} x-1 \\ k-1 \end{pmatrix} p^k(1-p)^{x-k} $$|
+
+**Definition 3.9** Poisson ($$\alpha$$) Random Variable
+
+X is a poisson ($$\alpha$$) random variable if the PMF of X has the form
+
+> $$P_X(x) = \begin{cases} \alpha^xe^{-\alpha}/x!, 3 \\0, & \text{otherwise} \end{cases} $$
 
 
 
