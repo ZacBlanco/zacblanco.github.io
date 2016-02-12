@@ -269,7 +269,61 @@ There are actually two conditions which need to be met for a matrix to be consid
 1. The first **non-zero** number in each row must be equal to 1.
 2. All numbers which are below and to the left of the first number in each row must be equal to zero.
 
-<!--**Gaussian Elimination**-->
+**Gaussian Elimination**
+
+Gaussian elimination is the name method which we can use to reduce a matrix into RREF (Row-Reduced-Echelon-Form)
+
+This basically consists of using the elementary row operations (noted above) to bring the matrix to a form which falls under the conditions for RREF stated above.
+
+**Note on solving linear systems with augmented matrices and RREF**
+
+> Whenever an augmented matric contains a row in which the only nonzero entry lies in the last column, the corresponding system of linear equations has no solution.
+
+### Procuedure for solving a System of Linear Equations
+
+1. Write the augmented matric $$[A\ b]$$ of the system
+2. Find the reduced row echelon form $$[R\ c] \text{ of }\ [A\ b]$$
+3. if $$[R\ c]$$ contains a row in which the only nonzero entry lies in the last column, the $$Ax=b$$ has no solution.
+  - Otherwise, the system has at least one solution. Write the system of linear equations corresponding to the matrix $$[R\ c]$$ and solve this system for the basic variables in terms of the free variables to obtain a general solution of $$Ax = b$$
+  
+### Rank and Nullity of a Matrix
+ 
+**Definition: Rank**: the **rank** of an $$m\times n$$ matrix A, denoted by $$rank(A)$$ is defined to be the number of nonzero rows in the reduced row echelon form of A
+ 
+**Definition: Nullity**: The **nullity** of A, denoted by $$nullity(A)$$ is defined to be $$n - rank(A)$$, or we can say that $$rank(A) + nullity(A) = n$$, where $$n$$ is the number of columns of the matrix A.
+
+
+If Ax = b is the matrix form of a consistent system of linear equations, then
+
+1. The number of basic variables in a general solution of the system equals the rank of A
+2. The number of free variables in a general solution of the system equals the nullity of A
+
+Thus a consistent system of linear equations has a unique solution only if the nullity of its coefficient matrix equals 0. 
+ 
+Equivalently we can say that a consistent system has infinite solution if the nullity of its coefficient matrix is positive.
+ 
+In shorter terms:
+ 
+|Nullity(A)| Number of solutions of the System with matrix A |
+| $$= 0$$ | 1 |
+| $$ > 0$$ | $$\infty$$ |
+
+### Testing for Consistency of a Matrix
+
+The following statements are all equivalent
+ 
+1. The matrix equation $$Ax = b$$ is consistent
+2. The vector $$b$$ is a linear combination of the columns of A.
+3. The reduced row echelon form of the augmented matrix $$[A\ b]$$ has no rown of the form $$[0\ 0\ 0\ 0\ \dots\ d]$$ where $$d \neq 0$$
+
+
+ ## The Span of a Set of Vectors
+ 
+ 
+ **Definition: Span**: For a nonempty set of vectors, $$S = \{u_1, u_2, \dots, u_k\}$$ in the space of $$R^n$$, we define the **span of S** to be the set of all linear combinations of $$u_1, u_2, \dots , u_k$$ in $$R^n$$. This set is denoted by Span S or Span \{u_1, u_2,\dots u_k\}
+ 
+ 
+ 
 
 
 
