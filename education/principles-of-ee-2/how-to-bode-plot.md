@@ -108,9 +108,9 @@ I should also note that terms which depend on $$s$$ or $$j\omega$$ will increase
 
 **Q: But wait! How do we plot this if we still have a $$j$$ in the equation?**
 
-**A:** We're simply going to do exactly what we've done with other complex systems. Remember this is a **Magnitude** plot. So that the magnitude of $$a + jb = \sqrt{a^2 - b^2}$$
+**A:** We're simply going to do exactly what we've done with other complex systems. Remember this is a **Magnitude** plot. So that the magnitude of $$a + jb = \sqrt{a^2 + b^2}$$
 
-You should also note that this is exactly why we have the two different plots; magnitude and phase, because $$a + jb = \sqrt{a^2 - b^2} \angle arctan(\frac{jb}{a}) $$
+You should also note that this is exactly why we have the two different plots; magnitude and phase, because $$a + jb = \sqrt{a^2 + b^2} \angle arctan(\frac{jb}{a}) $$
 
 However in this case for our intentions, we're just going to drop the $$j$$ from our magnitude and phase.
 

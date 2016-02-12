@@ -138,7 +138,7 @@ Then from this we can also say that the **maximum power transferred is $$M^2(\om
 
 The **half power frequency** is the frequency at which the power transmitted by the input $$\implies M^2(\omega) = \frac{1}{2}M^2(\omega_m)$$
 
-Or, equivalently using a deciBel scale, the **half power frequency** $$= 20log_{10}(M(\omega_m)) - 3dB$$
+Or, equivalently using a decibel scale, the **half power frequency** $$= 20log_{10}(M(\omega_m)) - 3dB$$
 
 - **Practical Low Pass Filters** if they are properly designed, will have only one _half-power frequency_ or cut-off frequency (denoted by $$\omega_0$$). Then, the **pass-band** of this filter ranges from 0 to $$\omega_c$$
 - **Practical High-Pass Filter** For properly designed, ideal high pass filters there is only one cutoff frequency which is then starts at the cutoff frequency and continues to $$\infty$$. However, due to signal degredation and other factors, we can assume high-pass filters are just very large **band-pass filters**
@@ -163,14 +163,66 @@ Or that $$t_d = -\frac{\theta}{\omega}$$
 ![](/assets/images/pee-2/transfer-of-lpf-op-amp-1.png)
 
 
+## Designing Filters
 
+**Roll-Off Rate** At the edges of a passband filter, the rectangular shape is an idealized filter response. The slope is infinite. However, in actual circuits we find our transfer functions do not actually provide us with this ideal slope. 
 
+The steeper we can make these slopes the better our filter will tend to be. The slope of the frequency magnitude esponse outside the passband it often called the **gain roll-ff rate**. The **higher the roll-off rate the better**
 
+**Methodology for Filter Design**
 
+First and second-order filters are often cascaded (connected end-to-end) to form what we call a **composite filter**. This means we need to analyze the common first and second-ordr filters.
 
+**Passive filter** circuit (if properly designed) have the advantage of not requiring maintenance and are relatively cheap. However, when passive filters are cascaded, one filter circuit acts as a load to the previous filter. If the loading effect is dominant, the performance of the composite circuit will degenerate.
 
+On the other hand **active filter circuits** do not present any loading problems since Op-amps have very low output impedance and high input impedance. However, the downside here is that active filters require maintenance and are prone to parasitic effects.
 
+**Prototyping and Filter Design**
 
+Typically filters will be designed with units in mind that make them easy to work with. The problem is that not all applications will use these numbers. They need to be **scaled** to their applications.
+
+------------
+
+**See below for a more detailed explanation on cascading**
+
+![cascading filters](/assets/images/pee-2/cascading-filters.png)
+
+------------
+
+When we scale a single **active filter circuit** from one function to another. Usually we will want to scale the magitude and frequency up to certain values.
+
+The new scaled frequency and phase will be equal to the original frequency and magnitude multiplied by a constant. We will call
+
+- $$K_m$$ scaled magnitude constant
+- $$K_f$$ scaled frequency constant
+
+From this we can then determine how we should modify the filters components (capacitors, resistors, inductors) depending on the scaling we want
+
+To derive these new component values for the magnitude scaling we will use the following equations
+
+- $$R' = K_m\cdot R$$
+- $$j\omega L' = j\omega L \cdot K_m $$
+- $$\frac{1}{j\omega C'} = \frac{1}{j\omega \frac{C}{K_m}}$$
+
+Then for frequency scaling we get
+
+- $$R' = R$$
+- $$j\omega K_f\cdot L' = j\omega L $$
+- $$\frac{1}{j\omega K_f\cdot C'} = \frac{1}{j\omega C}$$
+
+From these we get our scaling formulae
+
+- $$R' = K_mR$$
+- $$L' = \frac{K_mL}{K_f}$$
+- $$C' = \frac{C}{K_mK_f}$$
+
+### Effects of Scaling on a Transfer Function
+
+> $$H(j\omega) = H'(jK_f\omega)$$
+
+> $$H'(j\omega) = H(\frac{j\omega}{K_f})$$
+
+> $$H'(s) = H(\frac{s}{k_f})$$
 
 
 
