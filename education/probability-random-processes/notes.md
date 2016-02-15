@@ -393,11 +393,15 @@ X is a Bernoulli (p) random variable if the PMF of X has the form
 
 > $$ P_X(x) = \begin{cases} 1-p , & x = 0 \\ p , & x = 1 \\ 0, & \text{otherwise} \end{cases} $$
 
+ - $$X =$$ The number of successes in a single trial.
+
 **Definition 3.5** Geometric (p) Random Variable
 
 X is a geometric (p) random variable if the PMF of X has the form
 
 > $$ P_X(x) = \begin{cases} p(1-p)^{x-1}, & x = 0 \\0, & \text{otherwise} \end{cases} $$
+
+- $$X =$$ Number of trials until (up to and including) the first success
 
 **Definition 3.6** Binomial (n, p) Random Variable
 
@@ -407,6 +411,7 @@ X is a binomial (n, p) random variable if the PMF of X has the form
 
 Where $$ 0 < p < 1 $$ and $$n$$ is an integer such that $$ n \geq 1 $$
 
+- $$X = $$ the number of successes in n trials
 
 **Definition 3.7** Pascal (k, p) Random Variable
 
@@ -416,6 +421,9 @@ X is a pascal (k, p) random variable if the PMF of X has the form:
 
 Where $$ 0 < p < 1 $$ and k is an integer such that $$k \geq 1$$
 
+- $$X = $$ the number of trials until the $$k^{th}$$ success
+
+If $$k = 1$$ then x is geometric.
 
 - Bernoulli (p) = number successes in 1 trial
 - Geometric (p) = number of trials until 1st success
@@ -424,16 +432,55 @@ Where $$ 0 < p < 1 $$ and k is an integer such that $$k \geq 1$$
 
 |Name of Random Variable| Description of variable | PMF Function |
 |-----------------------|-------------------------|--------------|
-|Bernoulli|number successes in 1 trial|$$ P_X(x) = \begin{cases} 1-p , & x = 0 \\ p , & x = 1 \\ 0, & \text{otherwise} \end{cases} $$|
-|Goemetric|number of trials until 1st success|$$ P_X(x) = \begin{cases} p(1-p)^{x-1}, & x = 0 \\0, & \text{otherwise} \end{cases} $$|
-|Binomial|number of successes in n trials|$$ P_X(x) = \begin{pmatrix} n \\ x \end{pmatrix} p^x(1-p)^{n-x} $$|
-|Pascal|number of trials until k successes|$$ P_X(x) = \begin{pmatrix} x-1 \\ k-1 \end{pmatrix} p^k(1-p)^{x-k} $$|
+|Bernoulli|number successes in 1 trial		|$$ P_X(x) = \begin{cases} 1-p , & x = 0 \\ p , & x = 1 \\ 0, & \text{otherwise} \end{cases} $$|
+|Goemetric|number of trials until 1st success|$$ P_X(x) = \begin{cases} p(1-p)^{x-1}, & x = 0 \\0, & \text{otherwise} \end{cases} $$		|
+|Binomial |number of successes in n trials	|$$ P_X(x) = \begin{pmatrix} n \\ x \end{pmatrix} p^x(1-p)^{n-x} $$						|
+|Pascal   |number of trials until k successes|$$ P_X(x) = \begin{pmatrix} x-1 \\ k-1 \end{pmatrix} p^k(1-p)^{x-k} $$			  		|
+
+**Definition 3.8** Discrete Uniform $$(k, l)$$ Random Variable
+
+X is a **discrete uniform** $$(k, l)$$ random variable if the PMF of X has the form:
+
+> $$ P_X(x) = \begin{cases} \frac{1}{l - k + 1},\  x=k, k+1, k+2\dots \\ 0, & \text{otherwise} \end{cases} $$
+
+- X is uniformly distributed between $$k$$ and $$l$$.
+
 
 **Definition 3.9** Poisson ($$\alpha$$) Random Variable
 
 X is a poisson ($$\alpha$$) random variable if the PMF of X has the form
 
-> $$P_X(x) = \begin{cases} \alpha^xe^{-\alpha}/x!, 3 \\0, & \text{otherwise} \end{cases} $$
+> $$P_X(x) = \begin{cases} \frac{\alpha^xe^{-\alpha}}{x!}, x=0,1,2\cdots \\0, & \text{otherwise} \end{cases} $$
+
+- Call the phenomena of interest an _arrival_.
+- Poisson model specifies an average rate.
+- $$\lambda$$ arrivals per second, over a time interval of $$T$$ seconds.
+- The number of arrivals $$X$$ has a Poisson PMF with $$\alpha = \lambda T$$
+
+### Section 3.4 - Cumulative Distribution Function (CDF)
+
+> Like the PMF, the CDF of a random variable X expresses the probability model of an experiment as a mathematical function. The function is the probability $$P[X \leq x]$$ for every number $$x$$.
+
+The **cumulative distribution function** (CDF) of a random variable, X, is 
+
+$$ F_X(x) = P[X \leq x] $$
+
+
+**Theorem 3.2**
+
+- $$F_X(\infty) = P[X \leq \infty] = 1$$ - _The probability which X is less than infinity_.
+- $$F_X(-\infty) = P[X \leq -\infty] = 0$$ - _The probability which X is less than infinity_.
+- For all $$x' \geq x, F_X(x') \geq F_X(x)$$
+- For $$x_i \in S_X$$ and $$\epsilon$$, and arbitrarily small positive number
+  - $$F_X(x_i) - F_X(x_i - \epsilon) = P_X(x_i) $$
+- $$F_X(x) = F_X(x_i)$$ for all x such that $$x_i \leq x < x_{i+1} $$
+
+**Theorem 3.3**
+
+For all $$b \geq a$$
+
+> $$ F_X(b) - F_X(a) = P[a < X \leq b] $$
+
 
 
 
