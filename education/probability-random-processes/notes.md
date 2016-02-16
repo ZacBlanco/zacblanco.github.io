@@ -263,9 +263,9 @@ The number of $$k$$-permutations of $$n$$ distinguishable objects is:
 > $$(n)_k = n(n-1)(n-2)(n-3)\dots(n-k+1)=\frac{n!}{(n-k)!} $$
 
 
-Something that might help to remember permutations is that a **permutation does not depend on the order in which the elements are in** whereas in contrast a combination depends on the order.
+Something that might help to remember permutations is that a **permutation depends on the order in which the elements are in** whereas a combination does not depend on the order.
 
-For example, think if we had 100 students who wanted to take a class. Imagine that the class could only take 50 students. This means that the number of _different_ **permutations** (arragements, groups) is equal to $$\frac{100!}{50!}$$
+For example, think if we had 100 students. Imagine that we want to put any 50 of those students into a line. This means that the number of _different_ **permutations** (arrangements) of that line is equal to $$\frac{100!}{(100-50)!}=\frac{100!}{50!}$$
 
 
 **Theorem 2.3**
@@ -274,7 +274,7 @@ The number of ways to choose k objects out of n distinguishable objects is:
 
 > $$\begin{pmatrix} n\\k \end{pmatrix} = \frac{(n)_k}{k!} = \frac{n!}{k!(n-k)!}$$
 
-Sometimes this is called a **combination** where the order in which items are picked matters, as opposed to the **permutation**.
+Sometimes this is called a **combination** where the order in which items are picked does not matter, as opposed to the **permutation**.
 
 
 **Definition 2.1**: $$n$$ choose $$k$$
@@ -384,7 +384,7 @@ For a discrete random variable $$X$$ with a PMF of $$P_X(x) and range $$S_X$$
 
 Example: _binomial(n, p)_ refers in general to the family of _binomial_ random variables
 
-_Binomial(7, 0.1) refers to the binomial random variable with parameters $$n=7$$ and $$p = 0.1$$
+_Binomial(7, 0.1)_ refers to the binomial random variable with parameters $$n=7$$ and $$p = 0.1$$
 
 
 **Definition 3.4**
