@@ -729,6 +729,59 @@ One of the general registers `$sp` (also known as `$29`) is used to address the 
 
 - **Remove Data from the Stack** ("pop")
   - `$sp = $sp + 4`
+  
+**So what does this mean for us**? How can we write a method which uses recursion?
+
+Or in other words **how do we code in assembly, a situation where **
+
+Basically what we need to do is write to (and pull from) the main memory using the **stack pointer** `$sp`
+
+We see when using `jal` and `j $ra` the PC (Program Counter) is stored to whichever address is currently present in the `$sp` register.
+
+But if we know that we need to call a recursive function we need to do three separate things:
+
+1. Store all of the register values that we need once we get out of the recursive call
+2. Make the resursive call
+3. Restore the stack pointer counter to its original position
+
+One thing that should be noted is that **the stack pointer starts at high memory addresses and progresses to lower ones**
+
+So if we want to save two different register values `$t0` and `$t1`, with our stack `$sp`, we would write the following
+
+	addi $sp, $sp, -12 # Make 3 spaces for our values
+	sw $ra, 8($sp) # Store return address sp - 4
+	sw $t0, 4($sp) # Store a variable at sp - 8
+	sw $t1, 0($sp) # Store a variable at sp - 12
+
+After looking at this code we can see that we first add `-12` to our `$sp`
+
+This creates space for $$\frac{12}{4} = 3$$ different register values.
+
+However the original stack pointer `$sp` should not be modified. This why we store our old `$ra` with the original stack pointer -4. `$sp + 12 - 8 = $ra`
+
+Then the same is done for `$t0` and `$t1`
+
+So then what do we do once we get out of the method call? We must return our stored values from the stack
+
+	lw $t1, 0($sp) # Put $sp - 12 back to $t1
+	lw $t0, 4($sp) # Put $sp - 8 back to $t0
+	lw $ra, 8($sp) # Assign return address original value
+	addi $sp, $sp, 12 # Return stack pointer to original location
+		
+So then if we wanted to generalize the process of performing a method call
+
+1. Allocate $$4\cdot(n+1)$$ new memory locationd to utilize on the stack pointer where $$n$$ is the number of register values that need to be stored. (Use the `addi` instruction)
+2. For each register value which must be stored, use the `sw` command to store each word at a unique `$sp` location which ranges from `$sp` - 4(n+1) to `$sp` - 4 (inclusive). Remember to store the `$ra` value!
+3. Then we can call the method using `jal`
+4. After returning from the method, restore the register values by using the `lw` instruction to restore the register values from memory.
+5. Continue method execution
+
+**Table of MIPS instructions**
+
+![](/assets/images/comp-arch/mips-instruction-table.png)
+
+
+
 
 
 
