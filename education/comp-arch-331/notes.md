@@ -781,6 +781,93 @@ So then if we wanted to generalize the process of performing a method call
 ![](/assets/images/comp-arch/mips-instruction-table.png)
 
 
+### Byte and Halfword Operations
+
+These instruction can be useful to load values for bitwise operations. In addition to the load byte `lb` command which will load a single byte from memory, there is also a `lh` command which stands for **Load Halfword** which will load only half of a byte.
+
+- Sign extend to 32 bits
+  - `lb`, `lh`
+- Zero extend to 32 bits
+  - `lbu, lhu`
+- Store just the rightmost byte or halfword
+  - `sb`, `sh`
+
+### MIPS Addressing Modes
+
+- **Register addressing** - operand is in a register
+- **Base (displacement) Addressing** - The operand is at the memory location whose address is the sum of a register and a 16-bit constant contained within the instruction
+- **Immediate Addressing** - The oeprand is a 16-bit constant contained within the instruction
+- **PC Relative Addressing** - Instruction address is the sum of the PC and a 16-bit constant contained within the instruction
+- **Pseudo-direct Addressing** - The instruction address is the 26-bit constant contained within the instruction concatenated with the upper 4 bits of the PC
+
+### Compilers
+
+A compiler transforms programs from a high level language (like C!) into an assembly language program.
+
+Advantages of high-level languages
+
+- fewer lines of code
+- Much much easier to understand and debug
+
+Many compilers today will optimize high-level code and produce efficient assembly code which is nearly as good as an assembly language expert
+
+### Assembler
+
+- Transforms symbolic assembler code in object (machine) code
+
+Advantages of assembly language
+
+- Programmer has much more control than higher level languages
+- Much easier than remember binary instruction codes
+- Can use labels for addresses and let the assembler do arithmetic
+- Can use pseudo instructions
+
+However, we must remember tht machine language is the underlying reality
+
+Also considering performance we should still count the instructions executed, not the size of the code.
+
+### Other tasks of the Assembler
+
+- Determines the binary addresses corresponding to all labels
+  - keeps track of the labels used in branches and data transfer instructions in a _symbol table_
+- Converts pseudo-instructions to legal assembly code.
+  - register `$at` is reserved for the assembler to do this.
+- Converts branches to far locations into a branch followed by a jump
+- Converts instructions with large immediates into a load upper immediate followed by an or immediate
+- Converts numbers specified in decimal and hexadecimal into their binary equivalents
+- Converts characters into their ASCII equivalents
+
+### Memory Layout
+
+![](/assets/images/comp-arch/memory-layout.png)
+
+### Producing an Object Module
+
+- An Assembler (or compiler) translate a program into machine instrucitons.
+- It provides information for building a complete program from the pieces.
+  - Header: described object module content
+  - Text segment: translated instructions
+  - Static data segment: data allocated for life of the program
+  - Relocation info: For contents that depend on absolute location of loaded program
+  - Symbol table: glocal definitions and external refs
+  - Debug info: for associating with source code
+  
+### Linker
+  
+- A linker takes all of the independently assembled code and stitches (links) them together
+  - It is much faster to patch code and recompile and reassemble the patched routine than it is to recompile and reassemble the entire program
+- The linker decides on the memory allocation pattern for the code and data modules of each segment
+  - Remember, segments are assembled in isolation, so each assumes the codes starting and data location are the same.
+- Absolute addresses must be relocated to reflect the new starting location of each code and data module
+- The linker uses the symbol table information to resolve remaining undefined labels.
+
+### Loader
+
+- The loader will load (copy) the executable code which is stored on the disk into memory at the starting address specified by the _operating system_
+- This initializes the machine registers and sets the stack pointer to the first free memory location
+- It will copy any parameters to the main routine and onto the stack
+- Finally it jumps to a start-up routine that copies the parameters into the argument registers and then calls the main routine of the program with `jal main`
+
 
 
 

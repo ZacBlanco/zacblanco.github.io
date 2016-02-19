@@ -482,12 +482,43 @@ For all $$b \geq a$$
 > $$ F_X(b) - F_X(a) = P[a < X \leq b] $$
 
 
+**Definition 3.13** Expected Value
+
+The expected value of $$X$$ is 
+
+$$ E[X]=\mu_X = \sum\limits_{x\in S_X}^\  xP_X(x)$$
+
+**Theorem 3.4**
+
+The Bernoilli $$p$$ random variable $$X$$ has the expected value $$E[X]=p$$
 
 
+**Theorem 3.5** 
+
+The geometric random variable $$X$$ has the expected value $$E[X]=\frac{1}{p}$$
+
+**Theorem 3.6**
+
+The Poisson ($$\alpha$$) random variable in definition 3.9 has the expected value $$E[X]=\alpha$$
 
 
+**Theorem 3.7**
 
+1\. For the binomial $$(n, p)$$ random variable $$X$$ of definition 3.6
 
+$$ E[X] = np $$
+
+2\. For the binomial $$(n, p)$$ random variable $$X$$ of definition 3.6
+
+$$ E[X] = \frac{k}{p} $$
+
+3\. For the binomial $$(n, p)$$ random variable $$X$$ of definition 3.6
+
+$$ E[X] = \frac{k+l}{2} $$
+
+**Theorem 3.8**
+
+Perform $$n$$ Bernoulli trials. In each trial let the probability of success be $$\frac{\alpha}{n}$$ where $$\alpha > 0$$ is a constant and $$n > \alpha$$. Let the random variable $$K_n$$ be the number of successes in $$n$$ trials. As $$n\rightarrow \infty P_{K_n}(k)$$ converges to the PMF of a Poisson $$(\alpha)$$ random variable
 
 
 
