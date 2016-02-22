@@ -366,7 +366,7 @@ $$
 **Theorem 3.1**
 
 
-For a discrete random variable $$X$$ with a PMF of $$P_X(x) and range $$S_X$$ 
+For a discrete random variable $$X$$ with a PMF of $$P_X(x)$$ and range $$S_X$$ 
 
 - For any $$x, P_X(x) \geq 0$$
 - $$\Sigma_{x\in S_X} P_X(x) = 1$$
@@ -490,7 +490,7 @@ $$ E[X]=\mu_X = \sum\limits_{x\in S_X}^\  xP_X(x)$$
 
 **Theorem 3.4**
 
-The Bernoilli $$p$$ random variable $$X$$ has the expected value $$E[X]=p$$
+The Bernoulli $$p$$ random variable $$X$$ has the expected value $$E[X]=p$$
 
 
 **Theorem 3.5** 
@@ -508,17 +508,111 @@ The Poisson ($$\alpha$$) random variable in definition 3.9 has the expected valu
 
 $$ E[X] = np $$
 
-2\. For the binomial $$(n, p)$$ random variable $$X$$ of definition 3.6
+2\. For the pascal $$(k, p)$$ random variable $$X$$ of definition 3.7
 
 $$ E[X] = \frac{k}{p} $$
 
-3\. For the binomial $$(n, p)$$ random variable $$X$$ of definition 3.6
+3\. For the discrete uniform $$(k, l)$$ random variable $$X$$ of definition 3.7
 
 $$ E[X] = \frac{k+l}{2} $$
 
 **Theorem 3.8**
 
 Perform $$n$$ Bernoulli trials. In each trial let the probability of success be $$\frac{\alpha}{n}$$ where $$\alpha > 0$$ is a constant and $$n > \alpha$$. Let the random variable $$K_n$$ be the number of successes in $$n$$ trials. As $$n\rightarrow \infty P_{K_n}(k)$$ converges to the PMF of a Poisson $$(\alpha)$$ random variable
+
+**Definition 3.11** Mode
+
+A mode of random variable X is a number $$x_{mod}$$ satisfying $$P_X(x_{mod}) \geq P_X(x)$$ for all x
+
+**Definition 3.12** Median
+
+A median $$x_{med}$$ of random variable X is a number that satisfies 
+
+1. $$P[X \leq x_{med}]\geq \frac{1}{2} $$
+2. $$P[X\geq x_{med}] \geq \frac{1}{2} $$
+
+
+### Functions of a Random Variable
+
+**Definition 3.14**
+
+Each sample value y of a derived random variable Y is a mathematical function $$g(x)$$ of a sample value x of another random variable X. We adopt the notation $$Y = g(X)$$ to describe the relationship of the two random variables.
+
+**Definition 3.9**
+
+For a discrete random variable X, the PMF of $$Y=g(X)$$ is
+
+> $$ P_Y(y)=\sum\limits_{X:g(x)=y}^\ P_X(x) $$
+
+### Expected Value of a Derived Random Variable
+
+**Theorem 3.10**
+
+Given a random variable X with the PMF P_X(x) and derived random variable $$Y=g(X)$$, the expected value of $$Y$$ is
+
+> $$ E[Y] = \mu_Y= \sum\limits_{x\in S_X}^\ g(x) P_X(x)$$
+
+
+**Theorem 3.11**
+
+For any random variable X, 
+
+> $$ E[X-\mu_X] = 0$$
+
+**Theorem 3.12**
+
+For any random variable X, 
+
+> $$ E[aX + b] = aE[X] + b $$
+
+### Variance and Standard Deviation
+
+**Definition 3.15** Variance
+
+The variance of a random variable X is:
+
+> $$ Var[X] = E[(X-\mu_X)^2] $$
+
+**Definition 3.16** Standard Deviation
+
+The standard deviation of a random variable X is:
+
+> $$ \sigma_X = \sqrt{Var[X]} $$
+
+**Theorem 3.13**
+
+In the absence of observations, the minimum mean square error estimate of random variable X is:
+
+> $$\hat{x} = E[X]$$
+
+
+**Theorem 3.14**
+
+> $$ Var[X] = E[X^2] - \mu_x^2 = E[X^2] - (E[X])^2 $$
+
+**Theorem 3.17**
+
+For the Random variable, X
+
+a. The nth moment is $$E[X^n]$$
+b. The nth central momment is $$E[(X-\mu_X)^n] $$
+
+**Theorem 3.15**
+
+> $$ Var[aX + b] = a^2 Var[X] $$
+
+
+**Theorem 3.16**
+
+![](/assets/images/probability/theorem-3-16.png)
+
+
+
+
+
+
+
+
 
 
 
