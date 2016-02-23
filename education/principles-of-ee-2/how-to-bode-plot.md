@@ -38,11 +38,13 @@ Now that we've covered the basics, let's get started!
 
 **Simplifying the Transfer Function**
 
-For this first example, we're going to use the 1st example function from above, $$ H(s) = \frac{1000s(10+s)}{20(20 + s)(5 + s)}$$.
+For this first example, we're going to use the 1st example function from above, $$ H(s) = \frac{10s(1000+s)}{20(20 + s)(5 + s)}$$.
 
 Typically you will want to get each of the terms into a form which looks something like $$ (1 + \frac{s}{b}) $$ where $$b$$ is a value based on whatever the term is. Let's start simplifying. Let's try simplifying the equation above.
 
-Let's first factor out a 10 from top term. $$ H(s) = \frac{1000s\frac{(10+s)}{10}}{20(20 + s)(5 + s)} = \frac{1000s(10)(1+\frac{s}{10})}{20(20 + s)(5 + s)}$$.
+Let's first factor out a 10 from top term
+
+$$ H(s) = \frac{10s\frac{(1000+s)}{1000}}{20(20 + s)(5 + s)} = \frac{1000s(10)(1+\frac{s}{10})}{20(20 + s)(5 + s)}$$.
 
 Now let's do the same for the bottom terms.
 
@@ -78,7 +80,9 @@ Now recall these properties of logarithms
 - $$ log(\frac{a}{b}) = log(a) - log(b)$$
 - $$ log(a^n) = n\cdot log(a) $$
 
-Now look back at our transfer function, $$ H(s) = \frac{5s(1+\frac{s}{1000})}{(1 + \frac{s}{20})(1 + \frac{s}{5})} $$. 
+Now look back at our transfer function
+
+$$ H(s) = \frac{5s(1+\frac{s}{1000})}{(1 + \frac{s}{20})(1 + \frac{s}{5})} $$. 
 
 Notice how all of our terms are either multiplied or divided by one another! This means we can use the property of logarithms to then break our function into different pieces.
 
