@@ -868,6 +868,40 @@ Also considering performance we should still count the instructions executed, no
 - It will copy any parameters to the main routine and onto the stack
 - Finally it jumps to a start-up routine that copies the parameters into the argument registers and then calls the main routine of the program with `jal main`
 
+------------------------------
+
+## Arithmetic With Computers
+
+The first thing that we need to understand is two's complement.
+
+It is a way of representing positive and negative binary numbers.
+
+Example: Imagine we have four bits `0000`. Say we want to represent the value
+`-5` using the two's complement.
+
+1. Represent `-5` in binary.
+  - $$2^0 + 2^2 = 0101$$
+2. Note `0101`, now invert every bit to its opposite value
+  - `0101` inverted `1010`.
+3. Add 1 to the inverted value
+  - `1010` + `0001` = `1011`
+  
+`1011` is the two's complement representation of the number -5
+
+And what about going backwards (negative to positive)?
+
+Simply subtract 1 from the value, then invert the bits. The exact opposite process from before.
+
+### Two's Complement Operations
+
+MIPS 16-bit arithmetic gets converted to 32 bit for arithmetic
+
+- Digits are **sign-extended** - We copy the most significant bit (the sign bit) into all empty bits
+
+- Sign extend vs Zero Extend (`lb` vs `lbu`)
+
+In binary if we wanted to add two single bits lets say `1` and `1`, then to do this we would need to
+
 
 
 
