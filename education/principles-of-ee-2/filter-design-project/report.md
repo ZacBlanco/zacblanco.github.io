@@ -269,9 +269,9 @@ First we should note that in our magnitude equation we see something such as $$\
 
 However now that we are select component values to match the cutoff frequencies we have to take into account that $$RC = \frac{1}{\omega} = \frac{1}{2\pi f}$$ where $$f$$ is the cutoff frequency. We need to include the $$2\pi$$ in order for our circuit to match correctly.
 
-So now 
+We will set our resistors for the filter portion of the circuit each equal to $$47k\Omega$$
 
-From our transfer function we see that $$sRC = \frac{s}{\omega}$$
+So now from our transfer function we see that $$sRC = \frac{s}{\omega}$$
 
 Given our cutoff frequencies 900 and 950 Hz we can see that $$\frac{1}{2\pi f} = RC$$
 
@@ -285,27 +285,23 @@ From the equations above we can then say that:
 $$C_2 = \frac{1}{2\pi\cdot 900R_3}$$
 $$C_1 = \frac{1}{2\pi\cdot 950R_6}$$
 
-So then we find that the exact values for $$C_1$$ and $$C_2$$ are $$3.537nF$$ and $$3.351nF$$ respectively
+So then we find that the exact values for $$C_1$$ and $$C_2$$ are $$3.763nF$$ and $$3.564nF$$ respectively
 
-However, because we must choose nominal values, we will set $$C_1 = 3.5nF$$. This is achieved by putting two $$1nF$$ and a $$1.5nF$$ capacitor all in parallel with one another to achieve $$3.5nF$$ capacitance.
+However, because we must choose nominal values, we will set $$C_1 = 3.9nF$$ because it is the closest nominal value
 
-Then, we can get $$21nF$$ by the following:
-
-1. Put a $$3.3nF$$ capacitor and a $$2.2nF$$ capacitor in series. Their equivalent capacitance is $$1.32nF$$
-2. In parallel with (1), put a two $$1nF$$ capacitors. This will achieve a capacitance of approximately $$1 + 1 + 1.32 = 3.32nF$$
-
+Then, we can get $$3.5nF$$ by putting a $$1.5nF$$ capacitor and two $$1nF$$ capacitors in parallel with one another
 
 See below for a complete summary of our circuit's values
 
-| Component | Value |
+| Component | Nominal Value |
 | $$R_1$$ | $$2.2k\Omega$$ |
 | $$R_2$$ | $$2.2k\Omega$$ |
-| $$R_3$$ | $$50k\Omega$$ |
+| $$R_3$$ | $$47k\Omega$$ |
 | $$R_4$$ | $$2.2k\Omega$$ |
 | $$R_5$$ | $$8.8k\Omega$$ |
-| $$R_6$$ | $$50k\Omega$$ |
-| $$C_1$$ | $$3.5nF$$ |
-| $$C_2$$ | $$3.32nF$$ |
+| $$R_6$$ | $$47k\Omega$$ |
+| $$C_1$$ | $$3.9nF$$ |
+| $$C_2$$ | $$3.5nF$$ |
 
 
 ### Magnitude and Frequency Response Characteristic
@@ -315,12 +311,12 @@ The plots in this section were derived from the Matlab code below:
 ~~~
 r1=2200;
 r2=2200;
-r3=50000; %5 10k resistors in series
+r3=47000;
 r4=2200;
 r5=8800;
-r6=50000; %5 10k resistors in series
-c1=3.5*10^-9; % From combination of nominal components- see report
-c2=3.32*10^-9; % From combination of nominal components- see report
+r6=47000; %5 10k resistors in series
+c1=3.9*10^-9; % From combination of nominal components- see report
+c2=3.5*10^-9; % From combination of nominal components- see report
 
 w1=(r3.*c1);
 w2=(r6.*c2);
@@ -343,7 +339,7 @@ opts.Ylim = [-40 40];
 bodemag(h, opts);
 ~~~
 
-![](/assets/images/filter-design/response-1.png)
+![](/assets/images/filter-design/response-2.png)
 
 ![](/assets/images/filter-design/response-mag.png)
 
@@ -386,19 +382,19 @@ bodemag(h, opts);
 ~~~
 
 
-![](/assets/images/filter-design/altered-bode.png)
+![](/assets/images/filter-design/altered-bode-2.png)
 
 We can see that even though the resistors had slightly changed, our response still fell within the problem's constraints.
 
 ### Conversion From a Low Pass to a High Pass Filter
 
-
+From the matlab code above we can see that the 3dB frequency is approximately 590Hz.
 
 Given our transfer function:
 
 > $$ H(s) = \frac{k_1k_2}{(1 + \frac{s}{\omega_{c1}})(1 + \frac{s}{\omega_{c2}})} $$
 
-If we want to turn this function into once which mimics a High-pass filter it is necessary to replace all values of $$s$$ with $$\frac{\omega_o^2}{s}$$
+If we want to turn this function into once which mimics a High-pass filter it is necessary to replace all values of $$s$$ with $$\frac{\omega_o^2}{s}$$ where $$\omega_o$$ is the 3dB cutoff of 590Hz.
 
 This would then give us:
 
@@ -410,10 +406,10 @@ $$  H(s) = \frac{s^2k_1k_2}{(s + \frac{\omega_o^2}{\omega_{c1}})(s + \frac{\omeg
 
 $$ H(s) = \frac{s^2k_1k_2}{(s + \frac{\omega_o^2}{\omega_{c1}})(s + \frac{\omega_o^2}{\omega_{c2}})} $$
 
-$$  $$
+$$   $$
 
 
-
+![](/assets/images/filter-design/high-pass-circuit.png)
 
 
 
