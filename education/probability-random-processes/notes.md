@@ -607,6 +607,145 @@ b. The nth central momment is $$E[(X-\mu_X)^n] $$
 ![](/assets/images/probability/theorem-3-16.png)
 
 
+## Chapter 4 - Continuous Random Variables
+
+Example:
+
+Imagine a circle with an **infinite amount of points around the circle**. If we were to pick any **one** point at random. What would the **probability of picking that point** be?
+
+So what if we ask, what is the probability we choose the point of $$x = 0.25$$, or $$P[X=0.25]$$.
+
+Well, it turns out, the answer, $$P[X=0.25] =  0$$. This will lead us into the first section
+
+### Section 4.1 - Continuous Sample Space
+
+In a **continous sample space**, there are an infinite number of points you could choose. But the probability of picking a single point is zero.
+
+### Section 4.2 - The Cumulative Distribution Function
+
+**Definition 4.1** - Cumulative Distribution Function (CDF)
+
+> $$ F_X(x) = P [ X \leq x] $$
+
+**Theorem 4.1**
+
+For any random variable X
+
+1. $$ F_X(-\infty) = 0 $$ -- $$P[X \leq -\infty] = 0$$
+2. $$ F_X(\infty) = 1 $$ -- $$P[X \leq \infty] = 0$$
+3. $$ P[x_1 \leq X \leq x_2] =  F_X(x_2) - F_X(x_1)$$ 
+
+**Definition 4.2** - Continous Random Variable
+
+> $$X$$ is a coninuous random variable if the CDF $$F_X(x)$$ is a continuous function
+
+### Section 4.3 - The Probability Density Function
+
+The probability density function (PDF) of a continuous random variable X is:
+
+> $$ f_X(x) = \frac{dF_X(x)}{dx} $$
+
+**Theorem 4.2**
+
+For a continuous random variable X with a PDF of $$f_X(x)$$
+
+1. $$ f_X(x) \geq 0$$ for all $$x$$
+2. $$ F_X(x) = \int\limits_{-\infty}^x f_X(u)du$$
+3. $$ \int\limits_{-\infty}^{\infty} f_X(x)dx = 1 $$
+
+**Theorem 4.3**
+
+> $$ P[x_1 < X \leq x_2] = \int\limits_{x_1}^{x_2} f_X(x)dx $$
+
+### Section 4.4 - Expected Values
+
+The expected value of a continuous random variable X is:
+
+> $$ E[X] = \int\limits_{-\infty}^{\infty} xf_X(x)dx $$
+
+**Theorem 4.4**
+
+The expected value of a function $$g(X)$$ of a random variable X is:
+
+> $$ E[g(x)] = \int\limits_{-\infty}^{\infty} g(x)f_X(x)dx $$
+
+**Theorem 4.5**
+
+For any random variable $$X$$
+
+- $$ E[X-\mu_X] = 0
+- $$ E[aX + b] = aE[X] + b = 0$$
+- $$ Var[X] = E[X^2] - \mu_X^2 $$
+- $$ Var[aX + b] = a^2Var[X] $$
+
+
+## Section 4.5 - Families of Continuous Random Variables
+
+**Definition 4.5** Uniform Random Variable
+
+X is a uniform (a, b) random variable if the PDF of X is 
+
+> $$ f_X(x) = \begin{case} \frac{1}{b-a} & a \leq x < b, \\ 0 & \text{otherwise} \end{cases} $$
+						
+Where the condition is that the parameter $$ b > a $$
+
+**Theorem 4.6** 
+
+If X is a uniform (a, b) random variable
+
+- The CDF of X is: $$ F_X(x) = \begin{cases} 0 & x \leq a \\ \frac{x-a}{b-a} & a < x \leq b \\ 1 & a > b \end{cases} $$
+- The expected value of X is $$ E[X] = \frac{b + a}{2} $$
+- The variance of X is $$ Var[X] = \frac{(b-a)^2}{12} $$
+
+**Theorem 4.7**
+
+Let X be a uniform $$(a, b)$$ random variable, where a and b are both integers. Let $$K = \lceil X\rceil $$. Then K is a discrete uniform $$(a+1, b)$$ random variable.
+
+Note that $$\lceil X \rceil$$ is the "ceiling" of the range of X, or the greatest value in the set
+
+**Definition 4.6** - Exponential Random Variable
+
+X is an exponential ($$\lambda$$) random variable if the PDF of X is:
+
+> $$ f_X(x) = \begin{cases} \lambda e^{-\lambda x} & x \geq 0 \\ 0 & \text{otherwise}  \end{cases} $$
+
+**Theorem 4.8**
+
+If X is an exponential ($$\lamda$$) random variable
+
+- The CDF of X is: $$ F_X(x) = \begin{cases} 1-e^{-\lambda x} & x \geq 0 \\ \0 & \text{otherwise} \end{cases} $$
+- The expected value of X is $$ E[X] = \frac{1}{\lambda} $$
+- The variance of X is $$ Var[X] = \frac{1}{\lambda^2} $$
+
+**Theorem 4.9**
+
+If X is an exponential ($$\lembda$$) random variable, then $$K = \lceil X \rceil $$ is a geometric (p) random variable with $$p = 1 - e^{-\lembda}$$
+
+**Definition 4.7** - Erland Random Variable
+
+X is an Erland ($$n, \lembda $$) random variable if the PDF of X is:
+
+> $$ f_X(x) = \begin{cases} \frac{\lambda^2 x^{n-1}e^{-\lambda x}}{(n-1)!} & x > 0 \\ 0 & \text{otherwise} \end{cases} $$
+
+where the paramter of $$\lambda > 0$$ and the parameter $$n \geq 1$$ is an integer.
+
+**Theorem 4.10**
+
+If X is an Erland ($$n, \lembda $$) random variable, then
+
+- $$ E[X] = \frac{n}{\lambda} $$
+- $$ Var[X] = \frac{n}{\lambda^2} $$
+
+
+**Theorem 4.11**
+
+Let $$K_{\alpha} denote a Poisson ($$\alpha$$) random variable. For any $$x > 0$$, the CDF of an Erland ($$n, \lambda$$) random variable X, satisfies
+
+> $$ F_X(x) = 1 - F_{K_{\lambda x}}(n-1) = \begin{cases} 1 - \sum\limits_{k=0}^{n-1} \frac {(\lambda x)^k e^{-\lambda x}}{k!} \end{cases} & x \geq 0 \\ 0 & \text{otherwise} $$
+
+
+
+
 
 
 
