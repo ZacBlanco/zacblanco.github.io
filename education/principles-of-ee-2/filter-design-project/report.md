@@ -308,13 +308,109 @@ See below for a complete summary of our circuit's values
 | $$C_2$$ | $$3.32nF$$ |
 
 
+### Magnitude and Frequency Response Characteristic
+
+The plots in this section were derived from the Matlab code below:
+
+~~~
+r1=2200;
+r2=2200;
+r3=50000; %5 10k resistors in series
+r4=2200;
+r5=8800;
+r6=50000; %5 10k resistors in series
+c1=3.5*10^-9; % From combination of nominal components- see report
+c2=3.32*10^-9; % From combination of nominal components- see report
+
+w1=(r3.*c1);
+w2=(r6.*c2);
+k1 = 1 + (r2./r1);
+k2 = 1 + (r5./r4);
+k=k2.*k1;
+
+% Generate the bode plots
+num = k;
+den = [w1.*w2 w1+w2 1];
+h=tf(num, den);
+opts = bodeoptions('cstprefs');
+opts.FreqUnits = 'Hz';
+figure(1);
+bodemag(h, opts);
+figure(2);
+bode(h, opts);
+figure(3);
+opts.Ylim = [-40 40];
+bodemag(h, opts);
+~~~
+
+![](/assets/images/filter-design/response-1.png)
+
+![](/assets/images/filter-design/response-mag.png)
+
+![](/assets/images/filter-design/labeled-response.png)
+
+
+### Varying Component Frequency Response
+
+We will use the same Matlab code from above, however we will pick two different component values to deviate by $$\pm 5%$$. Below is the Matlab code for the deviation. Note that we picked to deviate $$R_3$$ and $$R_5$$
+
+~~~
+r1=2200;
+r2=2200;
+r3=50000.*(1.05); %5 10k resistors in series
+r4=2200;
+r5=8800.*(0.95);
+r6=50000; %5 10k resistors in series
+c1=3.5*10^-9; % From combination of nominal components- see report
+c2=3.32*10^-9; % From combination of nominal components- see report
+
+w1=(r3.*c1);
+w2=(r6.*c2);
+k1 = 1 + (r2./r1);
+k2 = 1 + (r5./r4);
+k=k2.*k1;
+
+% Generate the bode plots
+num = k;
+den = [w1.*w2 w1+w2 1];
+h=tf(num, den);
+opts = bodeoptions('cstprefs');
+opts.FreqUnits = 'Hz';
+figure(1);
+bodemag(h, opts);
+figure(2);
+bode(h, opts);
+figure(3);
+opts.Ylim = [-40 40];
+bodemag(h, opts);
+~~~
+
+
+![](/assets/images/filter-design/altered-bode.png)
+
+We can see that even though the resistors had slightly changed, our response still fell within the problem's constraints.
+
+### Conversion From a Low Pass to a High Pass Filter
 
 
 
+Given our transfer function:
 
+> $$ H(s) = \frac{k_1k_2}{(1 + \frac{s}{\omega_{c1}})(1 + \frac{s}{\omega_{c2}})} $$
 
+If we want to turn this function into once which mimics a High-pass filter it is necessary to replace all values of $$s$$ with $$\frac{\omega_o^2}{s}$$
 
+This would then give us:
 
+$$ H(s) = \frac{k_1k_2}{(1 + \frac{\frac{\omega_o^2}{s}}{\omega_{c1}})(1 + \frac{\frac{\omega_o^2}{s}}{\omega_{c2}})} $$
+
+Simplifed:
+
+$$  H(s) = \frac{s^2k_1k_2}{(s + \frac{\omega_o^2}{\omega_{c1}})(s + \frac{\omega_o^2}{\omega_{c2}})} $$ 
+
+$$ H(s) = \frac{s^2k_1k_2}{(s + \frac{\omega_o^2}{\omega_{c1}})(s + \frac{\omega_o^2}{\omega_{c2}})} $$
+
+$$  $$
 
 
 
