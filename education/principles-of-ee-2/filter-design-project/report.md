@@ -314,7 +314,7 @@ r2=2200;
 r3=47000;
 r4=2200;
 r5=8800;
-r6=47000; %5 10k resistors in series
+r6=47000;
 c1=3.9*10^-9; % From combination of nominal components- see report
 c2=3.5*10^-9; % From combination of nominal components- see report
 
@@ -348,17 +348,17 @@ bodemag(h, opts);
 
 ### Varying Component Frequency Response
 
-We will use the same Matlab code from above, however we will pick two different component values to deviate by $$\pm 5%$$. Below is the Matlab code for the deviation. Note that we picked to deviate $$R_3$$ and $$R_5$$
+We will use the same Matlab code from above, however we will pick two different component values to deviate by $$\pm 5\%$$. Below is the Matlab code for the deviation. Note that we picked to deviate $$R_3$$ and $$R_5$$
 
 ~~~
 r1=2200;
 r2=2200;
-r3=50000.*(1.05); %5 10k resistors in series
+r3=47000.*(1.05);
 r4=2200;
 r5=8800.*(0.95);
-r6=50000; %5 10k resistors in series
-c1=3.5*10^-9; % From combination of nominal components- see report
-c2=3.32*10^-9; % From combination of nominal components- see report
+r6=47000;
+c1=3.9*10^-9; % From combination of nominal components- see report
+c2=3.5*10^-9; % From combination of nominal components- see report
 
 w1=(r3.*c1);
 w2=(r6.*c2);
@@ -406,24 +406,95 @@ $$  H(s) = \frac{s^2k_1k_2}{(s + \frac{\omega_o^2}{\omega_{c1}})(s + \frac{\omeg
 
 $$ H(s) = \frac{s^2k_1k_2}{(s + \frac{\omega_o^2}{\omega_{c1}})(s + \frac{\omega_o^2}{\omega_{c2}})} $$
 
-$$   $$
-
+$$ H(s) = \frac{s^2k_1k_2}{s^2 + s\omega_o^2( \frac{1}{\omega_{c1}} + \frac{1}{\omega_{c2}}) + \frac{\omega_o^4}{\omega_{c1}\omega_{c2}} } $$
 
 ![](/assets/images/filter-design/high-pass-circuit.png)
 
+The Matlab code below will generate the charts which follow for the above high pass circuit with that transfer function
+
+~~~
+r1=2200;
+r2=2200;
+r3=47000;
+r4=2200;
+r5=8800;
+r6=47000;
+c1=3.9*10^-9; % From combination of nominal components- see report
+c2=3.5*10^-9; % From combination of nominal components- see report
+
+w1=(r3.*c1);
+w2=(r6.*c2);
+w0=(590*2*pi); % 3dB frequency
+k1 = 1 + (r2./r1);
+k2 = 1 + (r5./r4);
+k=k2.*k1;
+
+% Generate the bode plots
+num = [k 0 0];
+den = [1 (w0^2.*(w1+w2)) (w0^4.*(w1.*w2))];
+h=tf(num, den);
+opts = bodeoptions('cstprefs');
+opts.FreqUnits = 'Hz';
+figure(1);
+bodemag(h, opts);
+~~~
+
+![](/assets/images/filter-design/high-pass-mag.png)
+
+![](/assets/images/filter-design/high-pass-bode.png)
 
 
+### Frequency Scaling
+
+In order to scale the cutoff frequency on this circuit we're going to need a scaling coefficient $$K_f=10$$. $$K_m$$ in this case is equal to 1.
 
 
+So if we scale all of the resistors and capacitors using these two equations:
 
+- $$ R' = K_mR $$
+- $$ C' = \frac{C}{K_mK_f} $$
 
+So using the above equations we can derive the following table
 
+| Component | Value | Scaled Value
+| $$R_1$$ | $$2.2k\Omega$$ | $$2.2k\Omega$$ |
+| $$R_2$$ | $$2.2k\Omega$$ |$$2.2k\Omega$$|
+| $$R_3$$ | $$47k\Omega$$  | $$47k\Omega$$|
+| $$R_4$$ | $$2.2k\Omega$$ |$$2.2k\Omega$$|
+| $$R_5$$ | $$8.8k\Omega$$ |$$8.8k\Omega$$|
+| $$R_6$$ | $$47k\Omega$$  |$$47k\Omega$$|
+| $$C_1$$ | $$3.9nF$$ | $$.39nF$$ |
+| $$C_2$$ | $$3.5nF$$ | $$.35nF$$ |
 
+So then given this table with these values we can use the following Matlab code to get a bode plot  with the scaled circuit
 
+~~~
+r1=2200;
+r2=2200;
+r3=47000;
+r4=2200;
+r5=8800;
+r6=47000;
+c1=(3.9*10^-9)./10; % From combination of nominal components- see report
+c2=(3.5*10^-9)./10; % From combination of nominal components- see report
 
+w1=(r3.*c1);
+w2=(r6.*c2);
+k1 = 1 + (r2./r1);
+k2 = 1 + (r5./r4);
+k=k2.*k1;
 
+% Generate the bode plots
+num = k;
+den = [w1.*w2 w1+w2 1];
+h=tf(num, den);
+opts = bodeoptions('cstprefs');
+opts.FreqUnits = 'Hz';
+figure(1);
+bodemag(h, opts);
+~~~
 
-
+![](/assets/images/filter-design/bode-mag-scaled.png)
 
 
 
