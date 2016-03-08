@@ -719,11 +719,11 @@ If X is an exponential ($$\lamda$$) random variable
 
 **Theorem 4.9**
 
-If X is an exponential ($$\lembda$$) random variable, then $$K = \lceil X \rceil $$ is a geometric (p) random variable with $$p = 1 - e^{-\lembda}$$
+If X is an exponential ($$\lambda$$) random variable, then $$K = \lceil X \rceil $$ is a geometric (p) random variable with $$p = 1 - e^{-\lambda}$$
 
 **Definition 4.7** - Erland Random Variable
 
-X is an Erland ($$n, \lembda $$) random variable if the PDF of X is:
+X is an Erland ($$n, \lambda $$) random variable if the PDF of X is:
 
 > $$ f_X(x) = \begin{cases} \frac{\lambda^2 x^{n-1}e^{-\lambda x}}{(n-1)!} & x > 0 \\ 0 & \text{otherwise} \end{cases} $$
 
@@ -731,7 +731,7 @@ where the paramter of $$\lambda > 0$$ and the parameter $$n \geq 1$$ is an integ
 
 **Theorem 4.10**
 
-If X is an Erland ($$n, \lembda $$) random variable, then
+If X is an Erland ($$n, \lambda $$) random variable, then
 
 - $$ E[X] = \frac{n}{\lambda} $$
 - $$ Var[X] = \frac{n}{\lambda^2} $$
@@ -739,25 +739,60 @@ If X is an Erland ($$n, \lembda $$) random variable, then
 
 **Theorem 4.11**
 
-Let $$K_{\alpha} denote a Poisson ($$\alpha$$) random variable. For any $$x > 0$$, the CDF of an Erland ($$n, \lambda$$) random variable X, satisfies
+Let $$K_{\alpha}$$ denote a Poisson ($$\alpha$$) random variable. For any $$x > 0$$, the CDF of an Erland ($$n, \lambda$$) random variable X, satisfies
 
-> $$ F_X(x) = 1 - F_{K_{\lambda x}}(n-1) = \begin{cases} 1 - \sum\limits_{k=0}^{n-1} \frac {(\lambda x)^k e^{-\lambda x}}{k!} \end{cases} & x \geq 0 \\ 0 & \text{otherwise} $$
-
-
+> $$ F_X(x) = 1 - F_{K_{\lambda x}}(n-1) = \begin{cases} 1 - \sum\limits_{k=0}^{n-1} \frac {(\lambda x)^k e^{-\lambda x}}{k!} & x \geq 0 \\ 0 & \text{otherwise} \end{cases} $$
 
 
+## Section 4.6 - Gaussian Random Variables
+
+**Definition 4.8** - Gaussian Random Variable
+
+$$X$$ is a Gaussian $$(\mu, \sigma)$$ random variable if the PDF of $$X$$ is:
+
+> $$f_X(x) = \frac{1}{\sqrt{2\pi\sigma^2}}e^{-(x-\mu)^2/2\sigma^2} $$
+
+The parameter $$\mu$$ can be any real number and the parameter $$\sigma > 0$$
+
+**Theorem 4.12**
+
+If X is a Gaussian $$(\mu, \sigma)$$ random variable:
+
+> $$ E[X] = \mu$$ and $$Var[X] = \sigma^2$$
+
+**Theorem 4.13**
+
+If X is a Gaussian $$(\mu, \sigma)$$ random variable, $$Y=aX + b$$ is Gaussian $$(a\mu + b, a\sigma)$$
+
+**Definition 4.9** - Standard Normal Random Variable
+
+The standard normal random variable Z is the Gaussian (0, 1) random variable
 
 
+**Definition 4.10** - Standard Normal CDF
+
+The CDF of the standard normal random variable Z is:
+
+> $$ \Phi (z) = \frac{1}{\sqrt{2\pi}} \int\limits_{-\infty}^z e^{-u^2/2}du $$
+
+**Theorem 4.14** - If X is a Gaussian $$(\mu, \sigma)$$ random variable, then the CDF of X is:
+
+> $$ F_X(x) = \Phi (\frac{x-\mu}{\sigma}) $$
+
+And the probability that X is in the interval of (a, b] (includes b, excludes a):
+
+> $$ P[a < X \leq b] = \Phi (\frac{b-\mu}{\sigma}) - \Phi (\frac{a - \mu}{\sigma}) $$
+
+**Theorem 4.15**
+
+> $$ \Phi(-z) = 1 - \Phi(z) $$
 
 
+**Definition 4.11** - Standard Normal Complementary CDF
 
+The standard normal complementary CDF is:
 
-
-
-
-
-
-
+> $$ Q(z) = P[Z > z] = \frac{1}{\sqrt{2\pi}} \int\limits_z^\infty e^{-e^2/2}du = 1 - \Phi (z) $$
 
 
 
