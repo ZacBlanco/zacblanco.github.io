@@ -628,6 +628,20 @@ b. The nth central momment is $$E[(X-\mu_X)^n] $$
 | Pascal | $$\frac{k(1-p)}{p^2}$$ |
 | Discrete Uniform | $$\frac{(l-k)(l-k+2)}{12}$$ |
 
+ 
+ #### Full Table of Discrete Random Variables
+ 
+ 
+ |Name of Random Variable| Description of variable | PMF Function | Expected Value- $$E[X]$$ | Variance - $$Var[X]$$| 
+|-----------------------|-------------------------|--------------|
+|Bernoulli|number successes in 1 trial		|$$ P_X(x) = \begin{cases} 1-p , & x = 0 \\ p , & x = 1 \\ 0, & \text{otherwise} \end{cases} $$| $$p$$ | $$p(1-p)$$ |
+|Goemetric|number of trials until 1st success|$$ P_X(x) = \begin{cases} p(1-p)^{x-1}, & x = 0 \\0, & \text{otherwise} \end{cases} $$ |  $$\frac{1}{p}$$ |  $$\frac{1-p}{p^2}$$ |
+|Binomial |number of successes in n trials	|$$ P_X(x) = \begin{pmatrix} n \\ x \end{pmatrix} p^x(1-p)^{n-x} $$ |  $$np$$ |  $$np(1-p)$$ |
+|Pascal   |number of trials until k successes|$$ P_X(x) = \begin{pmatrix} x-1 \\ k-1 \end{pmatrix} p^k(1-p)^{x-k} $$ | $$\frac{k}{p}$$ |  $$\frac{k(1-p)}{p^2}$$ |
+| Poisson | Probability of x arrivals in T seconds | $$ P_X(x) = \begin{cases} \frac{\alpha^xe^{-\alpha}}{x!} , & x = 0, 1, 2\dots \\ 0 , \text{otherwise} \\ \end{cases} $$ | $$\alpha$$ | $$\frac{k(1-p)}{p^2}$$ |
+|Discrete Uniform | Probability of any value between k and l | $$ P_X(x) = \begin{cases} \frac{1}{l - k + 1},\  x=k, k+1, k+2\dots \\ 0, \text{otherwise} \end{cases} $$ | $$\frac{k + l}{2}$$ | $$\frac{(l-k)(l-k+2)}{12}$$ |
+
+
 ## Chapter 4 - Continuous Random Variables
 
 Example:
