@@ -200,7 +200,9 @@ After more trial and error I have also discovered other pairs of frequencies whi
 
 Given these six trials we can find the one which gives us the most amount of room for error when designing the circuit.
 
-We will attempt to find the maximum of the function $$ G(\omega_{c1}, \omega_{c2}) = (M(500)-17)^2 + (-15-M(7500))^2 $$ for each trial. We will pick the one with the largest value, but must also fit the constraints given by the problem.
+We will attempt to find the maximum of the function $$ G(\omega_{c1}, \omega_{c2}) = (M(500)-17)^2 + (-15-M(7500))^2 $$ for each trial. This function, $$G(\omega_{c1}, \omega_{c2})$$ gives us a value which maximizes the distance our magnitude cutoff at 500Hz and 7.5kHz. The higher this value is menas more ideal the two cutoff frequencies are with respect to our magnitude transfer function. However it doesn't take into account whether a value is above of below the required value so we still need to check whether the frequencies keep the magnitude in the correct location.
+
+We will pick the one with the largest value of $$ G(\omega_{c1}, \omega_{c2})$$, but must also fit the constraints given by the problem.
 
 Finding the maximum of the fun
 
@@ -341,7 +343,7 @@ bodemag(h, opts);
 
 ![](/assets/images/filter-design/response-2.png)
 
-![](/assets/images/filter-design/response-mag.png)
+![](raw.githubusercontent.com/zacblanco/zacblanco.github.io/master/assets/images/filter-design/response-mag.png)
 
 ![](/assets/images/filter-design/labeled-response.png)
 
@@ -496,7 +498,25 @@ bodemag(h, opts);
 
 ![](/assets/images/filter-design/bode-mag-scaled.png)
 
+## Conclusion 
 
+_Note that this is prior to testing the circuit in the laboratory_
+
+Working on this project gave me a different perspective on engineering. So far in class we have only analyzed and derived the response of circuits. Working backwards is actually quite interesting. It forced me to understand the concepts and the math behind each to be able to devise the correct circuit.
+
+From designing exactly how the magnitude characteristic needed to be, all the way down to the circuit, I had to analyze exactly what I was doing at every single step. I needed to understand why I made the decisions for cutoffs and gain. And from each of those I had to work backwards into designing the circuit. It felt very satisfying when finally being able to pick the components in the circuit because I knew picking those components would lead to a circuit which had the exact characteristics I was looking for.
+
+I think this project was a good change from what we have been doing in our classes and provided valuable experience in what an actual electrical engineer might be required to do on a typical project.
+
+Looking back on the circuit I like to think I made a good decision in the type of low pass filter for my project because the design I chose separated resistors in the gain from the resistor and capacitor which controlled the frequency. This allowed me greater control over the circuit response than if the resistor and capacitor both affected frequency or gain.
+
+However I did have issues in converting from radians per second to cycles per second (Hz) in a few cases which threw off my circuit's response when testing values and running simulations in pspice simulations. However I believe that after slight difficulty I have corrected myself and the circuit behaves as expected.
+
+
+### References
+
+- Circuit Schematics Designed using [PartSim](http://partsim.com) - `http://partsim.com`
+- Ideas for low pass filter design from [Electronics-Tutorials](http://www.electronics-tutorials.ws/filter/filter_5.html) - `http://www.electronics-tutorials.ws/filter/filter_5.html`
 
 
 
