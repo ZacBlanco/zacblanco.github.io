@@ -516,6 +516,17 @@ $$ E[X] = \frac{k}{p} $$
 
 $$ E[X] = \frac{k+l}{2} $$
 
+#### Expected Value Table
+
+| Function Type | Expected Value $$E[X]$$ |
+| Bernoulli | $$p$$ |
+| Geometric | $$\frac{1}{p}$$ |
+| Poisson | $$\alpha$$ |
+| Binomial | $$np$$ |
+| Pascal | $$\frac{k}{p}$$ |
+| Discrete Uniform | $$\frac{k + l}{2}$$ |
+
+
 **Theorem 3.8**
 
 Perform $$n$$ Bernoulli trials. In each trial let the probability of success be $$\frac{\alpha}{n}$$ where $$\alpha > 0$$ is a constant and $$n > \alpha$$. Let the random variable $$K_n$$ be the number of successes in $$n$$ trials. As $$n\rightarrow \infty P_{K_n}(k)$$ converges to the PMF of a Poisson $$(\alpha)$$ random variable
@@ -548,7 +559,7 @@ For a discrete random variable X, the PMF of $$Y=g(X)$$ is
 
 **Theorem 3.10**
 
-Given a random variable X with the PMF P_X(x) and derived random variable $$Y=g(X)$$, the expected value of $$Y$$ is
+Given a random variable X with the PMF $$P_X(x)$$ and derived random variable $$Y=g(X)$$, the expected value of $$Y$$ is
 
 > $$ E[Y] = \mu_Y= \sum\limits_{x\in S_X}^\ g(x) P_X(x)$$
 
@@ -606,6 +617,16 @@ b. The nth central momment is $$E[(X-\mu_X)^n] $$
 
 ![](/assets/images/probability/theorem-3-16.png)
 
+
+#### Variance Table
+
+| Function Type | Variance $$Var[X]$$ |
+| Bernoulli | $$p(1-p)$$ |
+| Geometric | $$\frac{1-p}{p^2}$$ |
+| Poisson | $$\alpha$$ |
+| Binomial | $$np(1-p)$$ |
+| Pascal | $$\frac{k(1-p)}{p^2}$$ |
+| Discrete Uniform | $$\frac{(l-k)(l-k+2)}{12}$$ |
 
 ## Chapter 4 - Continuous Random Variables
 
