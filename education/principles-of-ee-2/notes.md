@@ -225,6 +225,68 @@ From these we get our scaling formulae
 > $$H'(s) = H(\frac{s}{k_f})$$
 
 
+## Stady State Response of a Circuit
+
+**Voltage over an Inductor**
+
+> $$ V = L\frac{di}{dt} $$
+
+**Current Through an Inductor**
+
+If we use some differential equations to solve for the current through an inductor we get
+
+
+> $$ i(t) = I_0e^{-(R/L)t}$$ where $$t \geq 0$$
+
+**Current over a Capacitor**
+
+> $$ I = C\frac{dv}{dt} $$
+
+**Voltage over a Capacitor**
+
+If we use some differential equations to solve for the voltage over a capacitor we get
+
+> $$ v(t) = V_0e^{-(t/\tau)} $$ where $$\tau = RC$$ and $$t \geq 0$$
+
+Now we need to use the above information to study the **Step Response** of a circuit
+
+Step Response:
+
+> The response of a circuit to the sudden application of a constant voltage or current source is referred to as the step response of the circuit.
+
+**Step Response of an RL Circuit**
+
+We find that in a basic series RL circuit the current through the circuit is:
+
+> $$ i(t) = \frac{V_s}{R} + (I_0 - \frac{V_s}{R})e^{-(R/L)t} $$
+
+**Step Response of an RC Circuit**
+
+For a basic series RC circuit, the step response is equal to
+
+> $$ V_c = I_s(R) + (V_0 - I_sR)e^{-t/RC} $$
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
