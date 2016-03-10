@@ -100,15 +100,16 @@ Below is a table which highlights these equivalencies. Note that _T_ and _F_ rep
 | $$ \neg(\neg p) $$ | $$p$$ |
 | $$ p \lor (q \lor r) $$ | $$ (p \lor q) \lor r $$ |
 | $$ p \implies q $$ | $$ \neg q \lor p $$ |
-| $$ \neg q \implies \neg q $$ | $$ q \lor \neg p $$ |
-| $$ q \lor p $$ | $$ q \lor p $$ |
+| $$ \neg( p \implies q) $$ | $$ p \land \neg q $$ |
+| $$ p \implies q $$ | $$ \neg q \implies \neg p $$ |
+| $$ q \lor p $$ | $$ p \lor q $$ |
 
 
 ### DeMorgan's Laws
 
 > $$ \neg(p \land q) = \neg p \lor \neg q $$
 
-> $$ \neg p(\lor q) = \neg p \land \neg q $$
+> $$ \neg (p \lor q) = \neg p \land \neg q $$
 
 
 **Propositional Satisfiability**
@@ -145,7 +146,7 @@ The statements that describe valid input are known as **preconditions**. The con
 
 **Quantification** is a way to create a proposition from a propositional function. Quantification expresses the extent to which a predicate is true over a range of elements.
 
-In english, the words _all, some, many, none,_, and _few_ are used in quantifications.
+In english, the words _all, some, many, none,_ and _few_ are used in quantifications.
 
 There are two types of quantifications which we will cover
 
@@ -218,14 +219,14 @@ Equivalent Representation:
 
 Example:
 
-> $$\forall x \exists y (x + y = 0)
+> $$\forall x \exists y (x + y = 0) $$
 
 
 The english equivalent of this statement is: "For every x there is a value of y in our domain where (x + y) is equal to 0.
 
 Another, more complex example. Translating to English:
 
-> $$\forall x \forall y ((x > 0) \lor (y < 0) \implies (xy < 0))
+> $$\forall x \forall y ((x > 0) \lor (y < 0) \implies (xy < 0)) $$
 
 Translated:
 
