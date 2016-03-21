@@ -831,6 +831,120 @@ The standard normal complementary CDF is:
 > $$ Q(z) = P[Z > z] = \frac{1}{\sqrt{2\pi}} \int\limits_z^\infty e^{-e^2/2}du = 1 - \Phi (z) $$
 
 
+## Section 4.7 - Delta Functions, Mixed Random Variables
+
+**Definition 4.12** - Unit Step Function
+
+The unit step function is:
+
+> $$ u(x) = \begin{cases} 0, x < 0 \\ 1,  x \geq 0 \end{cases} $$
+
+**Definition 4.12** - Unit Impulse (Delta) Function
+
+Let
+
+> $$ d_\epsilon (x) = \begin{cases} 1/\epsilon, & -\epsilon/2 \leq x \leq \epsilon/2 \\ 0 , & \text{otherwise} \end{cases} $$
+
+Then the unit umpulse function is 
+
+> $$ \delta (x) = \lim\limits_{\epsilon\rightarrow 0} d_\epsilon(x) $$
+
+Now as $$\epsilon$$ approaches the delta function $$\delta (x)$$ for each $$\epsilon$$ the area under the curve of the $$d_{\epsilon} (x)$$ equals 1
+
+![](/assets/images/probability/epsilon-delta.png)
+
+
+**Theorem 4.16**
+
+For any continuous function g(x)
+
+> $$ \int\limits_{-\infty}^{\infty} g(x)\delta (x-x_0)dc = g(x_0)$$
+
+**Theorem 4.17**
+
+> $$\int\limits_{-\infty}^{x} \delta(v) dv = u(x) $$
+
+## Chapter 5 - Multiviews
+
+### Pairs of Random Variables
+
+We should consider experiments that produce a collection of random variables $$ X_1, X_2, \dots, X_n$$.
+
+A pair of random variables $$X$$ and $$Y$$ is the same as the two dimensional vector, $$\pmb{X} = [X, Y]'$$ this way. Since the components of this vector are both random variables we call $$\pmb{X}$$ a random vector.
+
+**Definition 5.1** - Joint Cumulative Distribution Function (CDF)
+
+The joint cumulative distribution function of random variables $$X$$ and $$Y$$ is
+
+> $$ F_{X,Y}(x, y) = P[X \leq x, Y \leq y] $$
+
+So if you can imagine a two dimensional graph that the CDF represents the probability of being within a rectangular region which the point that is picked is $$\leq$$ x and y
+
+**Theorem 5.1**
+
+For any pair of random variables $$X, Y$$
+
+- $$ 0 \leq F_{X,Y} \leq 1$$
+- $$ F_{X,Y}(\infty, \infty) = 1 $$
+- $$ F_{X}(x) = F_{X,Y}(x, \infty) $$
+- $$ F_{Y}(y) = F_{X,Y}(\infty, y) $$
+- $$ F_{X,Y}(x, -\infty) = 0 $$
+- $$ F_{X,Y}(-\infty, y) = 0 $$
+- If $$ x \leq x_1 \text{ and } y \leq y_1$$ then
+  - $$ F_{X,Y}(x, y) \leq F_{X,Y}(x_1, y_1) $$
+
+**Theorem 5.2**
+
+> $$ P[x_1 \leq X \leq x_2, y_1 \leq Y \leq y_2] = F_{X,Y}(x_2, y_2) - F_{X,Y}(x_2, y_1) - F_{X,Y}(x_1, y_2) + F_{X,Y}(x_1, y_1) $$
+
+### Section 5.2 - Joint Probability Mass Function (PMF)
+
+**Definition 5.2** - Joint PMF
+
+The joint PMF of discrete random variables $$X$$ and $$Y$$ is 
+
+> $$ P_{X,Y}(x, y) = P[X=x, Y = y] $$
+
+**Theorem 5.3**
+For discrete random variables $$X$$ and $$Y$$ and any set $$B$$ in the $$X, Y$$ plane, the probability of the event $$\{(X, Y) \in B\}$$ is 
+
+> $$ P[B] = \sum\limits_{(x, y) \in B} P_{X, Y}(x, y) $$
+
+### Section 5.3 - Marginal PMF
+
+**Theorem 5.4**
+
+For Discrete random variables X and Y with joint PMF $$P_{X, Y}(x, y)$$ 
+
+1. $$ P_X(x) = \sum\limits_{y\in S_Y} P_{X, Y}(x, y) $$
+2. $$ P_Y(y) = \sum\limits_{x\in S_x} P_{X, Y}(x, y) $$
+
+### Section 5.4 Joint Probability Density Function
+
+**Definition 5.3** - Joint PDF
+
+The joint PDF of the continuous random variables $$X$$ and $$Y$$ is a function $$f_{X, Y}(x, y) $$ with the property
+
+> $$ F_{X, Y}(x, y) = \int\limits_{-\infty}^x\int\limits_{-\infty}^y f_{X, Y}(u, v)du\cdot dv $$
+
+**Theorem 5.5** 
+
+> $$ f_{X, Y}(x, y) = \frac{\partial^2F_{X, Y}(x, y)}{\partial x \partial y} $$
+
+**Theorem 5.6**
+
+A joint PDF $$f_{X, Y}(x, y)$$ has the following properties corresponding to the first and second axioms of probability
+
+1. $$f_{X, Y}(x, y) \geq 0 \text{ for all } (x, y)$$
+2. $$\int\limits_{-\infty}^\infty\int\limits_{-\infty}^\infty f_{X, Y}(x, y) dx\cdot dy = 1 $$ 
+
+**Theorem 5.7**
+
+The probability of the continuous random variables (X, Y) are in A is:
+
+> $$ P[A] = \iint_A f_{X, Y}(x, y)dx\cdot dy $$
+
+
 
 
 
