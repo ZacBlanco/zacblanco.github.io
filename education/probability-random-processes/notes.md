@@ -721,7 +721,7 @@ For any random variable $$X$$
 
 X is a uniform (a, b) random variable if the PDF of X is 
 
-> $$ f_X(x) = \begin{case} \frac{1}{b-a} & a \leq x < b, \\ 0 & \text{otherwise} \end{cases} $$
+> $$ f_X(x) = \begin{cases} \frac{1}{b-a} & a \leq x < b, \\ 0 & \text{otherwise} \end{cases} $$
 						
 Where the condition is that the parameter $$ b > a $$
 
@@ -944,21 +944,119 @@ The probability of the continuous random variables (X, Y) are in A is:
 
 > $$ P[A] = \iint_A f_{X, Y}(x, y)dx\cdot dy $$
 
+### Section 5.5 - Marginal PDF
+
+**Theorem 5.8**
+
+If $$X$$ and $$Y$$ are random variables with joint PDF $$f_{X,Y}(x, y)
+
+1. $$ f_X(x) = \int\limits_{-\infty}^\infty f_{X,Y}(x, y)dy $$
+2. $$ f_Y(y) = \int\limits_{-\infty}^\infty f_{X,Y}(x, y)dx $$
 
 
+### Section 5.6 - Independent Random Variables
 
+**Definition 5.4**  - Independent Random Variables
 
+Random variable $$X$$ and $$Y$$ are indepdentent if and only if the following are true:
 
+For discrete random variables:
 
+> $$ P_{X,Y}(x, y) = P_X(x)P_Y(y)$$
 
+For continuous random variables:
 
+> $$ f_{X,Y}(x, y) = f_X(x)f_Y(y)$$
 
+### Section 5.7 - Expected Value of a Functio of Two Random Variables
 
+**Theorem 5.9** 
 
+For random variables $$X$$ and $$Y$$ the expected value of $$W = g(X, Y)$$ is:
 
+For discrete random variables:
 
+> $$E[W] = \sum\limits_{x\in S_X} \sum\limits_{y\in S_Y} g(x, y)P_{X, Y}(x, y)$$
 
+For continous random variables:
 
+> $$ E[W] = \int\limits_{-\infty}^\infty \int\limits_{-\infty}^\infty g(x, y) f_{X, Y}(x, y)dx\cdot dy$$
+
+**Theorem 5.10**
+
+> $$E[a_1g_1(X, Y) + \dots + a_ng_n(X, Y)] = a_1E[g_1(X, Y)] + \dots + a_nE[g_n(X, Y)]$$
+
+**Theorem 5.11**
+
+For any two random variables X and Y
+
+> $$E[X + Y] = E[X] + E[Y] $$
+
+**Theorem 5.12** 
+
+The variance of the sum of two random variables is:
+
+> $$ Var[X + Y] = Var[X] + Var[Y] + 2E[(X-\mu_X)(Y-\mu_Y)] $$
+
+**Definition 5.5** - Covariance
+
+The _covariance_ of two random variables $$X$$ and $$Y$$ is:
+
+> $$ Cov[X, Y] = E[(X-\mu_X)(Y-\mu_Y)] $$
+
+**Definition 5.6** - Correlation Coefficient
+
+The correlation coefficient of two random variables X and Y is:
+
+> $$ \rho_{X, Y} = \frac{Cov[X, Y]}{\sqrt{Var[X]Var[Y]}} = \frac{Cov[X,Y]}{\sigma_x\sigma_y} $$
+ 
+**Theorem 5.13**
+ 
+If $$\hat{X} = aX + b$$ and $$\hat{Y} = cY + d$$, then 
+ 
+1. $$\rho_{\hat{X}, \hat{Y}} = \rho_{X, Y}$$
+2. $$Cov[\hat{X}, \hat{Y}] = ac\cdot Cov[X, Y]$$
+ 
+**Theorem 5.14**
+ 
+> $$ -1 < \rho_{X, Y} \leq 1 $$
+ 
+**Theorem 5.15**
+ 
+If X and Y are random variables such that $$Y=aX + b$$ then:
+
+> $$ \rho_{X, Y} = \begin{cases} -1,  & a < 0 \\ 0,  & a = 0 \\ 1,  & a > 0 \\ \end{cases} $$
+
+**Definition 5.7** - Correleation
+
+The correlation of two variable $$X$$ and $$Y$$ is 
+
+> $$ r_{X, Y} = E[XY] $$
+
+**Theorem 5.16**
+
+- $$ Cov[X, Y] = r_{X, Y} - \mu_X\mu_Y$$.
+
+- $$ Var[X + Y] = Var[X] + Var[Y] + 2Cov[X, Y]$$.
+
+- If $$X = Y$$, $$Cov[X, Y] = Var[X] = Var[Y]$$ and $$r_{X, Y} = E[X^2] = E[Y^2] $$
+
+**Definition 5.8** - Orthogonal Random Variables
+
+Random variables X and Y are orthogonal if $$r_{X, Y} = 0$$
+
+**Definition 5.9** - Uncorrelated Random Variables
+
+Random variables $$X$$ and $$Y$$ are uncorrelated if $$Cov[X, Y] = 0$$
+
+**Theorem 5.17**
+
+For independent random variables X and Y
+
+1. $$E[g(X)h(Y)] = E[g(X)]E[h(Y)]$$
+2. $$r_{X, Y} = E[XY] = E[X]E[Y] $$
+3. $$Cov[X, Y] = \rho_{X, Y} = 0 $$
+4. $$Var[X + Y] = Var[X] + Var[Y]$$
 
 
 
