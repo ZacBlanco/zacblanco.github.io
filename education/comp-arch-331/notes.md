@@ -900,9 +900,12 @@ MIPS 16-bit arithmetic gets converted to 32 bit for arithmetic
 
 - Sign extend vs Zero Extend (`lb` vs `lbu`)
 
-In binary if we wanted to add two single bits lets say `1` and `1`, then to do this we would need to
 
+### Dealing with Overflow
 
+Some languages (e.g. C) ignore overflow errors.
+
+Some other languages (Ada, or Fortran) will raise an exception
 
 
 

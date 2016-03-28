@@ -709,7 +709,7 @@ The expected value of a function $$g(X)$$ of a random variable X is:
 
 For any random variable $$X$$
 
-- $$ E[X-\mu_X] = 0
+- $$ E[X-\mu_X] = 0 $$
 - $$ E[aX + b] = aE[X] + b = 0$$
 - $$ Var[X] = E[X^2] - \mu_X^2 $$
 - $$ Var[aX + b] = a^2Var[X] $$
@@ -747,9 +747,9 @@ X is an exponential ($$\lambda$$) random variable if the PDF of X is:
 
 **Theorem 4.8**
 
-If X is an exponential ($$\lamda$$) random variable
+If X is an exponential ($$\lambda$$) random variable
 
-- The CDF of X is: $$ F_X(x) = \begin{cases} 1-e^{-\lambda x} & x \geq 0 \\ \0 & \text{otherwise} \end{cases} $$
+- The CDF of X is: $$ F_X(x) = \begin{cases} 1-e^{-\lambda x} & x \geq 0 \\ 0 & \text{otherwise} \end{cases} $$
 - The expected value of X is $$ E[X] = \frac{1}{\lambda} $$
 - The variance of X is $$ Var[X] = \frac{1}{\lambda^2} $$
 
@@ -757,9 +757,9 @@ If X is an exponential ($$\lamda$$) random variable
 
 If X is an exponential ($$\lambda$$) random variable, then $$K = \lceil X \rceil $$ is a geometric (p) random variable with $$p = 1 - e^{-\lambda}$$
 
-**Definition 4.7** - Erland Random Variable
+**Definition 4.7** - Erlang Random Variable
 
-X is an Erland ($$n, \lambda $$) random variable if the PDF of X is:
+X is an Erlang ($$n, \lambda $$) random variable if the PDF of X is:
 
 > $$ f_X(x) = \begin{cases} \frac{\lambda^2 x^{n-1}e^{-\lambda x}}{(n-1)!} & x > 0 \\ 0 & \text{otherwise} \end{cases} $$
 
@@ -767,7 +767,7 @@ where the paramter of $$\lambda > 0$$ and the parameter $$n \geq 1$$ is an integ
 
 **Theorem 4.10**
 
-If X is an Erland ($$n, \lambda $$) random variable, then
+If X is an Erlang ($$n, \lambda $$) random variable, then
 
 - $$ E[X] = \frac{n}{\lambda} $$
 - $$ Var[X] = \frac{n}{\lambda^2} $$
@@ -775,7 +775,7 @@ If X is an Erland ($$n, \lambda $$) random variable, then
 
 **Theorem 4.11**
 
-Let $$K_{\alpha}$$ denote a Poisson ($$\alpha$$) random variable. For any $$x > 0$$, the CDF of an Erland ($$n, \lambda$$) random variable X, satisfies
+Let $$K_{\alpha}$$ denote a Poisson ($$\alpha$$) random variable. For any $$x > 0$$, the CDF of an Erlang ($$n, \lambda$$) random variable X, satisfies
 
 > $$ F_X(x) = 1 - F_{K_{\lambda x}}(n-1) = \begin{cases} 1 - \sum\limits_{k=0}^{n-1} \frac {(\lambda x)^k e^{-\lambda x}}{k!} & x \geq 0 \\ 0 & \text{otherwise} \end{cases} $$
 
@@ -1057,6 +1057,64 @@ For independent random variables X and Y
 2. $$r_{X, Y} = E[XY] = E[X]E[Y] $$
 3. $$Cov[X, Y] = \rho_{X, Y} = 0 $$
 4. $$Var[X + Y] = Var[X] + Var[Y]$$
+
+### Section 5.9 - Bivariate Gaussian Random Variables
+
+**Definition 5.10** - Bivariate Gaussian Random Variables
+
+Random variables $$X$$ and $$Y$$ have bivariate Gaussian PDF with the parameters $$\mu_X$$, $$\mu_Y$$, $$\sigma_X > 0$$, $$\sigma_Y > 0 $$, and that $$\rho_{X, Y}$$ satisfying $$-1 < \rho_{X, Y} < 1$$ if
+
+> $$f_{X, Y}(x, y) = \frac{ exp[ - \frac{ (\frac{x - \mu_X}{\sigma_X})^2 - \frac{2\rho_{X, Y}(x-\mu_X)(y-\mu_Y)}{\sigma_X\sigma_Y} + (\frac{y-\mu_Y}{\sigma_Y})^2 }{ 2(1-\rho_{X, Y}^2 ) } ] }{ 2\pi\sigma_X\sigma_Y\sqrt{1-\rho_{X, Y}^2} } $$
+
+**Theorem 5.18**
+
+If X and Y are bivariate Gaussian random variables in Definition 5.10, X is the Gaussian $$(\mu_X, \sigma_X)$$ and the random variable Y is the Gaussian $$(\mu_Y, \sigma_Y)$$ random variable:
+
+- $$ f_X(x) = \frac{1}{\sigma_X\sqrt{2\pi}}e^{-(x-\mu_X)^2/2\sigma_X^2} $$
+
+- $$ f_Y(y) = \frac{1}{\sigma_Y\sqrt{2\pi}}e^{-(y-\mu_Y)^2/2\sigma_Y^2} $$
+
+**Theorem 5.19**
+
+Bivariate Gaussian random variables X and Y in Definition 5.10 have the correlational coefficient $$\rho_{X, Y}$$
+
+**Theorem 5.20**
+
+Bivariate Gaussian random variables X and Y are uncorrelated if and only if they are independent
+
+**Theorem 5.21**
+
+If X and Y are bivariate Gaussian random variables with PDF given by definition 5.10 and $$W_1$$ and $$W_2$$ are given by the linearly indepedent equations
+
+1. $$W_1 = a_1X + b_1Y$$
+2. $$W_2 = a_2X + b_2Y$$
+
+Then, $$W_1$$ and $$W_2$$ are bivariate Gaussian random variables such that 
+
+- $$E[W_i] = a_i\mu_X + b_i\mu_Y$$ where $$i=1, 2$$
+- $$ Var[W_i] = a_i^2\sigma_X^2 + b_i\sigma_Y^2 + 2a_ib_i\rho_{X, Y}\sigma_X\sigma_Y$$  where $$i=1, 2$$
+- $$Cov[W_1, W_2] = a_1a_2\sigma_X^2 + b_1b_2\sigma_Y^2 + (a_1b_2 + a_2b_1)\rho_{X, Y}\sigma_X\sigma_Y $$
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
