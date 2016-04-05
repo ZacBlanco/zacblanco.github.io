@@ -948,7 +948,7 @@ The probability of the continuous random variables (X, Y) are in A is:
 
 **Theorem 5.8**
 
-If $$X$$ and $$Y$$ are random variables with joint PDF $$f_{X,Y}(x, y)
+If $$X$$ and $$Y$$ are random variables with joint PDF $$f_{X,Y}(x, y)$$
 
 1. $$ f_X(x) = \int\limits_{-\infty}^\infty f_{X,Y}(x, y)dy $$
 2. $$ f_Y(y) = \int\limits_{-\infty}^\infty f_{X,Y}(x, y)dx $$
@@ -1094,6 +1094,114 @@ Then, $$W_1$$ and $$W_2$$ are bivariate Gaussian random variables such that
 - $$E[W_i] = a_i\mu_X + b_i\mu_Y$$ where $$i=1, 2$$
 - $$ Var[W_i] = a_i^2\sigma_X^2 + b_i\sigma_Y^2 + 2a_ib_i\rho_{X, Y}\sigma_X\sigma_Y$$  where $$i=1, 2$$
 - $$Cov[W_1, W_2] = a_1a_2\sigma_X^2 + b_1b_2\sigma_Y^2 + (a_1b_2 + a_2b_1)\rho_{X, Y}\sigma_X\sigma_Y $$
+
+### Section 5.10 - Multivariate Probability Models
+
+**Definition 5.11** - Multivariate Joint CDF
+
+The joint CDF of $$X_1, \dots ,X_n$$ is:
+
+> $$F_{X_1, \dots , X_n}(x_1, \dots , x_n) = P[X_1 \leq x_1, \dots ,X_n \leq x_n] $$
+
+
+**Definition 5.12** - Multivariate Joint PMF
+
+The joint PMF of the _discrete random variables_ $$X_1, \dots ,X_n$$ is:
+
+> $$P_{X_1, \dots , X_n}(x_1, \dots , x_n) = P[X_1 = x_1, \dots ,X_n = x_n] $$
+
+**Definition 5.13** - Multivariate Joint PDF
+
+The joint PDF of the continuous random variables of $$X_1, \dots, X_n$$ is:
+
+> $$ f_{X_1, \dots , X_n}(x_1, \dots , x_n) = \frac{\partial^nF_{X_1, \dots ,X_n}(x_1, \dots ,x_n)}{\partial x_1\dots \partial x_n}$$
+
+**Theorem 5.22**
+
+if $$X_1,\dots ,X_n$$ are discrete random variables that have a joint PMF $$P_{X_1, \dots , X_n}(x_1, \dots , x_n)$$
+
+1. $$P_{X_1, \dots , X_n}(x_1, \dots , x_n) \geq 0$$
+2. $$\sum\limits_{x_1\in S_{X_1}} \dots \sum\limits_{x_n\in S_{X_n}} P_{X_1, \dots , X_n}(x_1, \dots , x_n) = 1 $$
+
+**Theorem 5.23**
+
+if $$X_1,\dots ,X_n$$ are continuous random variables that have a joint PDF $$f_{X_1, \dots , X_n}(x_1, \dots , x_n)$$
+
+1. $$f_{X_1, \dots , X_n}(x_1, \dots , x_n) \geq 0$$
+2. $$ F_{X_1, \dots , X_n}(x_1, \dots , x_n) = \int\limits_{-\infty}^{x_1} \dots \int\limits_{-\infty}^{x_n} f_{X_1, \dots , X_n}(u_1, \dots , u_n)du_1\dots du_n $$
+3. $$ \int\limits_{-\infty}^{\infty} \dots \int\limits_{-\infty}^{\infty} f_{X_1, \dots , X_n}(x_1, \dots , x_n)dx_1\dots dx_n = 1$$
+
+**Theorem 5.24**
+
+The probability of an event A expressed in terms of the random variables $$X_1, \dots , X_n$$ is:
+
+Discrete:
+
+> $$ P[A] = \sum\limits_{(x_1\dots x_n)\in A} P_{X_1,\dots ,X_n}(x_1,\dots ,x_n)$$
+
+Continuous:
+
+> $$P[A] = \int\dots\int_A f_{X_1, \dots , X_n}(x_1, \dots , x_n)dx_1\dots dx_n $$
+
+**Theorem 5.25**
+
+For a joint PMF $$P_{X, Y, Z}(x, y, z)$$ of discrete random variables $$W, X, Y, Z$$ some marginal PMFs are:
+
+- $$P_{X, Y, Z}(x, y, z) = \sum\limits_{w\in S_w} P_{W, X, Y, Z}(w, x, y, z) $$
+- $$P_{W,Z}(w, z) = \sum\limits_{x\in S_x} \sum\limits_{y\in S_y} P_{W, X, Y, Z}(w, x, y, z) $$
+
+**Theorem 5.26** 
+
+For a joint PDF $$f_{X, Y, Z}(x, y, z)$$ of discrete random variables $$W, X, Y, Z$$ some marginal PDFs are:
+
+- $$f_{W, X, Y}(w, x, y) = \int\limits_{-\infty}^\infty f_{W, X, Y, Z}(w, x, y, z)dz$$
+- $$f_X(x) = \int\limits_{-\infty}^\infty\int\limits_{-\infty}^\infty\int\limits_{-\infty}^\infty f_{W, X, Y, Z}(w, x, y, z)dw\cdot dy\cdot dz$$
+
+**Definition 5.14** - N Independent Random Variables
+
+Random variables $$X_1,\dots , X_n$$ are independent if for all $$x_1, \dots , x_n$$
+
+Discrete:
+
+> $$ P_{X_1,\dots ,X_n}(x_1,\dots ,x_n) = P_{X_1}(x_1)P_{X_2}(x_2)\dots P_{X_n}(x_n) $$
+
+Continuous
+
+> $$ f_{X_1,\dots ,X_n}(x_1,\dots ,x_n) = f_{X_1}(x_1)f_{X_2}(x_2)\dots f_{X_n}(x_n)$$
+
+**Definition 5.15** - Independent and Identically Distributed (iid)
+
+$$X_1,\dots , X_n$$ are independent and identically distributed if:
+
+Discrete:
+
+> $$ P_{X_1,\dots ,X_n}(x_1,\dots ,x_n) = P_{X}(x_1)P_{X}(x_2)\dots P_{X}(x_n) $$
+
+Continuous
+
+> $$ f_{X_1,\dots ,X_n}(x_1,\dots ,x_n) = f_{X}(x_1)f_{X}(x_2)\dots f_{X}(x_n)$$
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
