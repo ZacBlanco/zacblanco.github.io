@@ -396,12 +396,258 @@ If A is an invertible $$n\times n$$ matrix, then for every $$b$$ in $$R^n$$ $$Ax
 
 1. If A is invertible, then $$A^{-1}$$ is invertible and $$(A^{-1})^{-1}=A$$
 2. If A and B are invertible, then AB is invertible and $$(AB)^{-1}=A^{-1}B^{-1}$$
-3. If A is invertible, then $$A^T$$ is invertible and (A^T)^{-1} = (A^{-1})^T$$
+3. If A is invertible, then $$A^T$$ is invertible and $$(A^T)^{-1} = (A^{-1})^T$$
 
 
 Let $$A_1, A_2,\dots, A_k$$ be $$n\times n$$ invertible matrices. Then the product $$A_1A_2\dots A_k$$ is invertible and 
 
 > $$(A_1A_2\dots A_k)^{-1} = (A_k)^{-1}(A_{k-1})^{-1}(A_1)^{-1}$$
+
+## Chapter 3 - Determinants of a Matrix
+
+Given the matrix $$A = \begin{bmatrix}
+a & b \\
+c & d \\
+\end{bmatrix}$$ and the inverse of A, $$A^{-1}=C=\begin{bmatrix} d & -b \\ -c & a \\ \end{bmatrix}$$.
+
+Now if we multiply these two together we get $$AC = (ad-bc)\cdot\begin{bmatrix} 1 & 0 \\ 0 & 1 \\ \end{bmatrix}$$
+
+Thus if $$(ad-bc)\neq 0$$ then we know that it is possible $$C=A^{-1}$$
+
+So then the matrix which is $$\frac{1}{ad-bc}\begin{bmatrix} d & -b \\ -c & a \\ \end{bmatrix} = A^{-1}$$
+
+So then if $$(ad-bc)\neq 0$$ we then know it is possible for matrix $$A$$ to have an inverse. The quanitity $$(ad-bc)$$ is called the **determinant**.
+
+**So then what about an $$n\times n$$ matrix?**
+
+First we need to define **cofactor expansion** which is the the basic method which can be used to find the determinant of a larger matrix.
+
+Given $$ A = \begin{bmatrix} 1 & 2 & 3 \\ 4 & 5 & 6 \\ 7 & 8 & 9 \\ \end{bmatrix}$$
+
+We can label the rows and columns with alternating pluses and minuses. So if we replace the first row and column with pluses and minuses we get 
+
+$$ \begin{bmatrix} + & - & + \\ - & 5 & 6 \\ + & 8 & 9 \\ \end{bmatrix}$$
+
+So to find the determinant via **cofactor expansion** we must use the first row of the matrix and the alternating pluses and minuses to find the determinant.
+
+We can define the determinant of the $$3\times 3$$ matrix as
+
+$$det(A) = (+)a_{11}det(A_{11}) + (-)(a_{12}det(A_{12})) + (+)(a_{13}det(A_{13})) $$
+
+We can define the matrices $$A_{11}$$, $$A_{12}$$, etc.. as the $$(n-1)\times (n-1)$$ matrix which appears when we remove the i-th row and j-th column
+
+So the determinant in this case is actually recursively defined. It is actually composed of even more operations
+
+We find the determinant of A is
+
+$$det(A) = (+1)a_{11}det(\begin{bmatrix} 5 & 6 \\ 8 & 9 \\ \end{bmatrix}) + (-1)(a_{12}det(\begin{bmatrix} 4 & 6 \\ 7 & 9 \\ \end{bmatrix})) + (+1)(a_{13}det(\begin{bmatrix} 4 & 5 \\ 7 & 8 \\ \end{bmatrix})) $$
+
+We can see that once we reduce the matrix to a $$ 2\times 2$$ matrix we will eventually get the scalar value.
+
+Obviously this cofactor expansion is very tedious even for a $$3\times 3$$ so we will explore an even easier way to calculate a larger determinant.
+
+So what is an easier method for this? We can simply find the **upper triangular** or **lower triangular** matrix from the original using **elementary row operations**
+
+Take the following matrix:
+
+$$ A = \begin{bmatrix} 1 & 2 & 3 & 6  \\ 
+					4 & 2 & 9 & 5 \\ 
+					4 & 2 & 9 & 6 \\
+					4 & 2 & 3 & 8 \\
+					\end{bmatrix} $$
+					
+Say we want to find the determinant of this matrix, we could use cofactor expansion to find it, but that would take us a _long_ amount of time.
+
+We're going to use the following elementary row operations
+
+- $$ (-4)R_1 + R_2 $$
+- $$ (-4)R_1 + R_3 $$
+- $$ (-4)R_1 + R_4 $$
+
+Which then gives the matrix
+
+$$\begin{bmatrix}		1 & 2 & 3 & 6  \\ 
+					0 & -6 & -3 & -19 \\ 
+					0 & -6 & -3 & -18 \\
+					0 & -6 & -9 & -16 \\
+					\end{bmatrix} $$
+					
+Then we can use these row operations to reduce further
+
+- $$ (-1)R_2 + R_3 $$
+- $$ (-1)R_2 + R_4 $$
+
+$$ 	\begin{bmatrix} 	1 & 2 & 3 & 6  \\ 
+					0 & -6 & -3 & -19 \\ 
+					0 & 0 & 0 & 1 \\
+					0 & 0 & -6 & 3 \\
+					\end{bmatrix} $$
+
+Then we can swap the 3rd and 4th rows of the matrix to make it the upper triangular form.
+
+
+$$ 	\begin{bmatrix} 	1 & 2 & 3 & 6  \\ 
+					0 & -6 & -3 & -19 \\ 
+					0 & 0 & -6 & 3 \\
+					0 & 0 & 0 & 1 \\
+					\end{bmatrix} $$
+
+
+
+So now we have the upper triangular matrix. We can simply multiply all of the diagonal entries of the matrix together to find the determinant
+
+So $$det(A) = (-1)\cdot 1 \cdot -6 \cdot -6 \cdot 1 = -36$$
+
+So our determinant is $$-36$$
+
+**Wait wait wait, hold up! there's an extra $$-1$$ in the front of that product!**
+
+Correct! we had to change the sign of the value we found because in one of our elementary row operations, we switched the two rows, instead of just adding. When calculating the determinant you have to multiply the product of all the diagonal entried by $$(-1)^{\text{# of times rows switched}}$$
+
+So in this case we multiplied the determinant by $$(-1)^1$$ which makes the determinant $$-36$$ which is the correct answer.
+
+### Geometric Applications of The Determinant
+
+
+**Area of a Parallelogram**
+
+Given two vectors $$v$$ and $$u$$ in $$\!R^2$$ which create a parallelogram, the area of the parallelogram is the absolute value of the determinant of $$[ u \ v ]$$
+
+So given a two vectors $$ u = [ 1, 2]^T$$ and $$v = [ -2, 3]$$ the area created by the parallelogram defined by these vectors is equal to 
+
+$$ det(\begin{bmatrix} 1 & 2 \\ -2 & 3 \\ \end{bmatrix}) = (1(3) - (2)(-2)) = 7$$
+
+**Volume of a Parallelepiped**
+
+Given three vectors $$u, v, w$$ which create a parallelepiped we can find the volume of such a figure by taking the absolute value of the determinant of the matrix created by the three vectors which is $$det([u\ v\ w])$$
+
+Example:
+
+Given $$u = [3, 1, 2]$$, $$v = [1, 2, 3]$$ and $$w = [3, 3, 3]$$
+
+Then the matrix becomes
+
+$$\begin{bmatrix} 3 & 1 & 2 \\
+			 1 & 2 & 3 \\
+			 3 & 3 & 3 \\ \end{bmatrix}$$
+
+So reducing with row operations we get
+
+$$\begin{bmatrix} 3 & 1 & 2 \\
+			 0 & 5/3 & 7/3 \\
+			 0 & 2 & 1 \\ \end{bmatrix}$$
+
+and then
+
+$$\begin{bmatrix} 3 & 1 & 2 \\
+			 0 & 5/3 & 7/3 \\
+			 0 & 0 & -9/5 \\ \end{bmatrix}$$
+			 
+So then if we calculate the determinant we get $$-9$$, and the volume is the absolute value of the determinant, so the volume of the figure is $$9$$
+
+**Rules of Calculating the determinant of a Matrix**
+
+Let A be an $$n\times n$$ matrix
+
+1. if B is a matrix obtained by interchanging two rows of A, then $$det(B) = -det(A)$$
+2. If B is a matrix obtained by multiplying each entry of some row of A by a scalar k, then $$det(B) = k\cdot det(A)$$
+3. If B is a matrix obtained by adding a multiple of some row of A to a different row, then $$det(B) = det(A) $$
+4. For any $$n\times n$$ matrix $$E$$ then $$det(EA) = det(E)det(A)$$
+
+Below are a few properties of the determinant:
+
+- A is an invertible matrix is $$det(A) \neq 0$$
+- $$det(AB) = det(A)det(B)$$
+- $$det(A^T) = det(A)$$
+- If A is an invertible matrix, then $$det(A^{-1}) = \frac{1}{det(A)}$$
+
+
+## Chapter 4 - Subspaces and Their Properties
+
+Suppose we have an $$n\times m$$ sized matrix, A which has solutions $$u, v$$ to $$Ax=0$$
+
+Then we can say that 
+
+> $$A(u+v) = Au + Av = 0 + 0 = 0$$
+
+### Subspaces
+
+**Definition**: A set of vectors in $$\!R^n$$ is called a **subspace** of $$\!R^n$$ if it has the following three properties
+
+1. The zero vector belongs to W
+2. Whenever any two vectors $$u$$ and $$v$$ beloing to W, then $$u + v$$ must also belong to W
+3. Whenever $$u$$ belongs to W and c is a scalar, then $$cu$$ belongs to W
+
+**Subspaces Associated with Matrices**
+
+There are many different types of subspaces associated with a matrix.
+
+**Null Space**
+
+The **null space** of a matrix is the solution set of $$Ax = 0$$. This subspace is denoted by $$Null(A)$$
+
+from an $$m\times n$$ matrix A, the null space of A is the set
+
+> $$Null(A) = \{ v \in \!R^n : Av = 0\} $$
+
+**Column Space**
+
+The **column space** of a matrix A is the span of its columns. It is denoted by $$Col(A)$$
+
+For example, given the matrix $$A = \begin{bmatrix} 1 & -5 & 3 \\ 2 & -9 & -6 \\ \end{bmatrix}$$
+
+Then the $$Col(A) = Span\bigg\{ \begin{bmatrix} 1 \\ 2 \\ \end{bmatrix}, \begin{bmatrix} -5 \\ -9 \\ \end{bmatrix}, \begin{bmatrix} 3 \\ -6 \\ \end{bmatrix} \bigg\} $$
+
+**Row Space**
+
+he **row space** of a matrix is defined to be the span of its rows. The row space of a matrix, A, is denoted by $$Row(A)$$ So then given the matrix 
+
+ $$A = \begin{bmatrix} 1 & -5 & 3 \\ 2 & -9 & -6 \\ 1 & 2 & 3 \\ \end{bmatrix}$$
+
+The row space is then 
+
+$$Row(A) = Span\bigg\{ \begin{bmatrix} 1 \\ -5 \\ 3 \\ \end{bmatrix}, \begin{bmatrix} 2 \\ -9 \\ -6 \\ \end{bmatrix}, \begin{bmatrix} 1 \\ 2 \\ 3 \\ \end{bmatrix} \bigg\} $$
+
+### Basis and Dimension
+
+Let $$V$$ be a nonzero subspace of $$\!R^n$$. Then a **basis** for $$V$$ is a linearly independent generating set for $$V$$.
+
+Or in other words, none of the vectors in the set are allowed to be a linear combination of one another.
+
+To find the basis for $$Col(A)$$, we reduce the matrix A into its reduced echelon form. The columns which have pivots are the columns from the original matrix which we then put into the basis (or minimal generating set) for $$Col(A)$$.
+
+This method can then be generalized for any set of vectors, $$W$$ which span a set where we can find the basis.
+
+Let S be a finite subset of $$\!R^n$$. Then we have the following properties.
+
+- If S is a generating set for $$\!R^n$$ then S contains at least $$n$$ vectors
+- If S is linearly independent then S contains at most n vectors
+- If S is a basis for ##\!R^n$$, then S contains exactly n vectors.
+
+A basis is a linearly independent subset of a subspace that is as large as possible
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

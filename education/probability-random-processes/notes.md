@@ -968,7 +968,7 @@ For continuous random variables:
 
 > $$ f_{X,Y}(x, y) = f_X(x)f_Y(y)$$
 
-### Section 5.7 - Expected Value of a Functio of Two Random Variables
+### Section 5.7 - Expected Value of a Function of Two Random Variables
 
 **Theorem 5.9** 
 
