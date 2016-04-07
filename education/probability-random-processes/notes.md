@@ -30,7 +30,19 @@ $$
 
 These notes are for the version of the class which is taught by professor Yates in the spring of 2016.
 
-## Lecture 1 - January 21st 2016
+
+## Outline
+
+- [Chapter 1 - Set Theory](#chapter-1)
+- [Chapter 2 - Tree Diagrams and Sequential Experiments](#chapter-2)
+- [Chapter 3 - Discrete Random Variables](#chapter-3)
+- [Chapter 4 - Continuous Random Variables](#chapter-4)
+- [Chapter 5 - Multiviews and Pairs of Random Variables](#chapter-5)
+- [Chapter 6](#chapter-6)
+
+<a name="chapter-1"> </a>
+
+## Chapter 1 - January 21st 2016
 
 We're going to start first with **Set Theory**
 
@@ -222,7 +234,7 @@ This definition is the same as above. All collections of events must be mutually
 The probability of intersections of these events must be equal to the product of their individual probabilities.
 
 
-## Lecture 4 - February 1st, 2016
+<a name="chapter-2"> </a>
 
 ## Chapter 2 - Tree Diagrams
 
@@ -311,6 +323,9 @@ For $$n$$ repetitions of a ubexperiment with sample space $$S = \{s_0,\dots,s_{m
 The probability of $$n_0$$ failures an $$n_1$$ successes in $$n=n_0+n_1$$ independent trials is:
 
 > $$ P[E_{n_0}, n_1] = \begin{pmatrix} n \\ n_1 \end{pmatrix} = (1-p)^{n-n_1}p^{n_1} = \begin{pmatrix} n \\ n_0 \end{pmatrix} (1-p)^{n_0}p^{n-n_0} $$
+
+
+<a name="chapter-3"> </a>
 
 ## Chapter 3 - Discrete Random Variables
 
@@ -642,6 +657,7 @@ b. The nth central momment is $$E[(X-\mu_X)^n] $$
 | Poisson | Probability of x arrivals in T seconds | $$ P_X(x) = \begin{cases} \frac{\alpha^xe^{-\alpha}}{x!}, x = 0, 1, 2\dots \\ 0,\text{otherwise} \\ \end{cases} $$ | $$\alpha$$ | $$\frac{k(1-p)}{p^2}$$ |
 |Discrete Uniform | Probability of any value between k and l | $$ P_X(x) = \begin{cases} \frac{1}{l - k + 1},\  x=k, k+1, k+2\dots \\ 0, \text{otherwise} \end{cases} $$ | $$\frac{k + l}{2}$$ | $$\frac{(l-k)(l-k+2)}{12}$$ |
 
+<a name="chapter-4"> </a>
 
 ## Chapter 4 - Continuous Random Variables
 
@@ -863,6 +879,8 @@ For any continuous function g(x)
 **Theorem 4.17**
 
 > $$\int\limits_{-\infty}^{x} \delta(v) dv = u(x) $$
+
+<a name="chapter-5"></a>
 
 ## Chapter 5 - Multiviews
 
