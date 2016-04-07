@@ -622,20 +622,131 @@ Let S be a finite subset of $$\!R^n$$. Then we have the following properties.
 
 - If S is a generating set for $$\!R^n$$ then S contains at least $$n$$ vectors
 - If S is linearly independent then S contains at most n vectors
-- If S is a basis for ##\!R^n$$, then S contains exactly n vectors.
+- If S is a basis for $$\!R^n$$, then S contains exactly n vectors.
 
 A basis is a linearly independent subset of a subspace that is as large as possible
 
+Another way to describe a basis is that it is a minimal set of generators for a specific space, whether is be a matrix, $$A$$, or $$\!R^n$$
+
+## Chapter 5 - Eigenvalues, Eigenvectors, and Diagonalization
+
+This section explores different representations of matrices which are **diagonalizable**. We first need to explore **eigenvalues** and **eigenvectors** before we can understand how to diagonalize a matrix.
+
+**Definition**: Let T be a linear operator on $$\!R^n$$. A nonzero vector, v, in $$\!R^n$$ is called an **eigenvector** of T is $$T(v)$$ is a multiple of $$v$$. That is, $$Tv = \lambda v$$ for some scalar $$\lambda$$. The scalar value $$\lambda$$ is valled the eigenvalue of $$T$$ which corresponds to $$v$$
+
+In other words, v is an **eigenvector** if it satisfies the equation $$Av=\lambda v$$. Where $$\lambda$$ is a scalar value called an **eigenvalue** of the matrix $$A$$ which corresponds to $$v$$
+
+**How to determine if a vector is an eigenvector of a matrix**
+
+Given $$v = \begin{bmatrix} 1 \\ -1 \\ 1 \\ \end{bmatrix}$$ and $$A = \begin{bmatrix} 5 & 2 & 1 \\ -2 & 1 & -1 \\ 2 & 2 & 4 \\ \end{bmatrix}$$
+
+How do we tell if $$v$$ is an eigenvector of A?
+
+We can simply do the multiplication $$Av$$ first, to find the resultant vector 
+
+$$ Av = \begin{bmatrix} 4 \\ -4 \\ 4 \\ \end{bmatrix}$$ 
+
+We can see from this result that we can factor out a 4 from the resultant matrix
+
+That is $$Av = \begin{bmatrix} 4 \\ -4 \\ 4 \\ \end{bmatrix} = 4\begin{bmatrix} 1 \\ -1 \\ 1 \\ \end{bmatrix}$$
+
+We see the remaining matrix is actually $$v$$, so then we determine that $$v$$ **is indeed an eigenvector**. Also note that this eigenvector corresponds to the **eigenvalue**, 4
+
+**Finding the Eigenvectors of a Matrix**
+
+We can find the eigenvalues for a given matrix by the following:
+
+1. $$Av = \lambda v$$
+2. $$Av - \lambda v = 0$$
+3. $$Av - \lambda I_nv = 0$$
+4. $$(A - \lambda I_n)v = 0$$
+
+> $$ (A - \lambda I_n)v = 0$$
+
+From (4) we can find the eigenvectors of a matrix by simply solving that equation for any eigenvalue, $$\lambda$$, and all of the solutions from that equation will be the result of that solution
+
+**Finding the EigenValues of a Matrix**
+
+So then how can we just find the eigenvalues of a matrix?
+
+We can find the **characteristic equation** of the matrix to get the eigenvalues which correspond to it. The equation for the matrix is simply the solutions for $$t$$ of:
+
+> $$det(A - tI_n) = 0$$
+
+Sometimes the **characteristic equation** is also referred to as the **characteristic polynomial**
+
+For example, let's find the eigenvalues of $$A = \begin{bmatrix} -4 & -3 \\ 3 & 6 \\ \end{bmatrix}$$
+
+Given the equation $$det(A - tI_n) = 0$$
+
+$$det(\begin{bmatrix} -4 & -3 \\ 3 & 6 \\ \end{bmatrix} - t\begin{bmatrix} 1 & 0 \\ 0 & 1 \\ \end{bmatrix}) = 0$$
+
+$$det(\begin{bmatrix} -4 & -3 \\ 3 & 6 \\ \end{bmatrix} - \begin{bmatrix} t & 0 \\ 0 & t \\ \end{bmatrix}) = 0$$
+
+$$det(\begin{bmatrix} -4 - t & -3 \\ 3 & 6 - t \\ \end{bmatrix}) = 0$$
+
+Now we learned how to find the determinant of this matrix before. It is equal to
+
+$$(-4-t)(6-t) - (-3)(3)$$
+
+So then the equation becomes 
+
+$$(-4-t)(6-t) + 9 = 0$$
+
+$$t^2 -2t -24 + 9 = 0$$
+
+$$t^2 -2t -15 = 0$$
+
+$$(t+3)(t-5) = 0$$
+
+This then gives us the solution of $$t = \{-3, 5\}$$
+
+Thus our eigenvalues $$\lambda = \{-3, 5\}$$
 
 
+Here's another quick definition
+
+> Let $$\lambda$$ be an eigenvalue of a matrix, A. The dimension of the eigenspace of A corresponding to $$\lambda$$ is less than or equal to the multiplicity of $$\lambda$$
 
 
+### Diagonalization of Matrices
 
+Now that we've learned how to find **eigenvectors** and **eigenvalues** we can now determine whether or not the matrices are diagonalizable. 
 
+Diagonalization means turning a matrix, A, into the form of 
 
+> $$A = PDP^{-1}$$.
 
+This has many unique applications and can make certain operations very easy
 
+First review that for a matrix, such as $$I_n$$ which has all diagonal entries it is very easy to calculate the matrix to any power.
 
+Given a matrix $$ A = \begin{bmatrix} 2 & 0 & 0 \\  0 & 3 & 0 \\ 0 & 0 & 4 \\ \end{bmatrix}$$
+
+Now recall
+
+$$A^5 =  \begin{bmatrix} 2 & 0 & 0 \\  0 & 3 & 0 \\ 0 & 0 & 4 \\ \end{bmatrix}^5 =  \begin{bmatrix} 2^5 & 0 & 0 \\  0 & 3^5 & 0 \\ 0 & 0 & 4^5 \\ \end{bmatrix}$$
+
+Obviously this is very easy to calculate.
+
+But what if our matrix isn't diagonal like that?
+
+Well if we can transfer it to the from of $$A = PDP^{-1}$$ it actually is possible (if the matrix is determined as diagonalizable)
+
+Because if $$A = PDP^{-1}$$
+
+Then $$A^{100} = (PDP^{-1})(PDP^{-1})(PDP^{-1})\dots = PD^{100}P^{-1}$$
+
+> **Definition**: An $$n\times n$$ matrix is diagonalizble if and only if there is a basis for $$\!R^n$$ consisting of eigenvectors of A. Furthurmore, $$A = PDP^{-1}$$ where $$D$$ is a diagonal matrix and P is an invertible matrix, if and only if the columns of P are a basis for $$\!R^n$$ consisting of eigenvectors of A and the diagonal entries of D are the eigenvalues of the respective columns of P
+
+**Theorem**, Every $$n\times n$$ matrix having $$n$$ distinct eigenvalues is diagonalizable
+
+**Testing to see if a matrix is Diagonalizable**
+
+For an $$n\times n$$ matrix A:
+
+- There must be at least $$n$$ distinct **eigenvalues**
+- For each **eigenvalue**, $$\lambda$$ of A, the dimension of the corresponding eigenspace which is equal to $$n-rank(A-\lambda I_n)$$ is equal to the multiplicity of $$\lambda$$
 
 
 
