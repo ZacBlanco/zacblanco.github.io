@@ -1199,7 +1199,6 @@ Continuous
 
 > $$ f_{X_1,\dots ,X_n}(x_1,\dots ,x_n) = f_{X}(x_1)f_{X}(x_2)\dots f_{X}(x_n)$$
 
-hello hi 
 
 
 
