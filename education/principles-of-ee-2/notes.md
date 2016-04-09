@@ -225,7 +225,7 @@ From these we get our scaling formulae
 > $$H'(s) = H(\frac{s}{k_f})$$
 
 
-## Stady State Response of a Circuit
+### Steady State Response of a Circuit
 
 **Voltage over an Inductor**
 
@@ -267,26 +267,88 @@ For a basic series RC circuit, the step response is equal to
 > $$ V_c = I_s(R) + (V_0 - I_sR)e^{-t/RC} $$
 
 
+## Intro to Laplace Transforms
+
+A Laplace transform for a function $$f(t)$$ is denoted as:
+
+> $$F(s) = \mathscr{L}\{f(t)\}$$
+
+Where the laplace transform $$L\{f(t)\}$$is defined as:
+
+> $$F(s) = \mathscr{L}\{f(t)\} = \int\limits_0^{\infty} f(t) e^{-st} dt$$
+
+This is called a **unilateral** or **one-sided** laplace transform which extends from 0 to infinity. We will only be dealing with this type of transform.
 
 
+### The Delta (Impulse) Function
+
+A delta function is characterized as a function which at any point in time, $$t$$, that the amplitude is $$\infty$$, but the duration of the pulse at that point is equal to 0.
+
+Mathematically the impulse function is defined as:
+
+> $$ \int\limits_{-\infty}^{\infty} K\delta (t) dt = K $$
+
+where $$\delta(t) = 0 \text{ for all } t \neq 0$$
+
+In the real world, these electric circuits these types of electric signals don't actually exist, but they come very close, and this mathematical model is useful.
+
+We should note that
+
+> $$ \mathscr{L}\{\delta (t)\} = \int\limits_0^\infty \delta (t) e^{-st} dt = 1 $$
 
 
+### Table of Useful Laplace Transforms
 
 
+|Name| $$f(t)$$ | $$\mathscr{L}\{f(t)\} = F(s) $$ |
+|Impulse|$$\delta(t)$$ | $$ 1 $$ | 
+|Straight Line| $$1$$ | $$\frac{1}{s} $$ |
+|Constant| $$k$$ | $$\frac{k}{s} $$ |
+|Ramp| $$t$$ | $$\frac{1}{s^2}$$ |
+|Exponential| $$e^{-at}$$| $$\frac{1}{s + a} $$|
+|Sine| $$sin(\omega t)$$ | $$\frac{\omega}{s^2 + \omega^2} $$ |
+|Cosine| $$cos(\omega t)$$ | $$\frac{s}{s^2 + \omega^2}$$|
+|Damped Ramp|$$te^{-at}$$|$$\frac{1}{(s+a)^2}$$|
+|Damped Sine|$$e^{-at}sin(\omega t)$$|$$\frac{\omega}{(s+a)^2 + \omega^2}$$|
+|Damped Cosine|$$e^{-at}cos(\omega t)$$|$$\frac{s + a}{(s+a)^2 + \omega^2}$$|
+
+### Operations on the Laplace Function
 
 
+**Addition**
+
+Given
+
+- $$\mathscr{L}\{f_1(t)\} = F_1(s)$$
+- $$\mathscr{L}\{f_2(t)\} = F_2(s)$$
+- $$\mathscr{L}\{f_3(t)\} = F_3(s)$$
+
+Then 
+
+> $$\mathscr{L}\{f_1(t) + f_2(t) - f_3(t)\} = F_1(s) + F_2(s) - F_3(s)$$
+
+**Differentiation**
+
+Given a function $$f(t)$$ where $$\mathscr{L}\{f(t)\} = F(s)$$, then:
+
+> $$ \mathscr{L}\{\frac{df(t)}{dt}\} = sF(s) - F(0) $$
+
+Certain operations in the time domain correspond to multiplications, additions, and divisions in the Laplace domain
+
+Given $$\mathscr{L}\{f(t)\} = F(s) $$
+
+Then 
+
+> $$\mathscr{L}\{\int\limits_0^t f(t)\} = \frac{F(s)}{s} $$
+
+In other words, integration in the time domain of a function corresponds by simply dividing by $$s$$ in the Laplace transform of the function
 
 
+Given $$\mathscr{L}\{f(t)\} = F(s) $$
 
+Then 
 
-
-
-
-
-
-
-
-
+> $$\mathscr{L}\{ e^{-at}f(t)\} = F(s + a) $$
 
 
 
