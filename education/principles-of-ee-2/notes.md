@@ -350,6 +350,76 @@ Then
 
 > $$\mathscr{L}\{ e^{-at}f(t)\} = F(s + a) $$
 
+### Inverse Transforms in the Laplace Domain
+
+It is common to evaluate the functions for voltage or current of a into a form like:
+
+> $$ F(s) = \frac{N(s)}{D(s)} =\frac{a_ns^n + a_{n-1}s^{n-1} + \dots + a_1s + a_0}{b_ms^m + b_{m-1}s^{m-1} + \dots + b_1s + b_0}$$
+
+In this case, if the **degree of the polynomial of the denominator is greater**, than the numerator we consider it to be called a **proper rational function** if $$ m > n$$. Otherwise if $$ m \leq n $$ then it is an **improper rational function**
+
+You need to know how to solve partial fractions. Use the links below in case you need a refresher
+
+- [Click Here for a Google Search on Solving Partial Fractions](https://www.google.com/search?q=partial+fractions)
+- [Partial Fractions on Khan Academy](https://www.khanacademy.org/math/precalculus/partial-fraction-expans/partial-fraction/v/partial-fraction-expansion-1)
+- [Partial Fractions on Paul's Notes](http://tutorial.math.lamar.edu/Classes/CalcII/PartialFractions.aspx)
+
+Now for an example on how an inverse transform from the Laplace domain. Imagine we're given the function:
+
+> $$ F(s) = \frac{96(s+5)(s+12)}{s(s+8)(s+6)} $$
+
+Because the denominator is in the form $$s(s+8)(s+6)$$ we can split this us using partial fractions to be
+
+> $$ F(s) = \frac{K_1}{s} + \frac{K_2}{s+8} + \frac{K_3}{s+6} $$
+
+Now to solve using partial fractions we need to find $$K_1, K_2, K_3$$. First we'll find $$K_1$$. To solve for $$K_1$$ we will multiply everything by $$s$$ and then solve for $$s=0$$
+
+$$s = 0$$
+
+- $$ \frac{96(s+5)(s+12)}{(s+8)(s+6)} = K_1 + \frac{sK_2}{s+8} + \frac{sK_3}{s+6} $$
+- $$ \frac{96(0+5)(0+12)}{(0+8)(0+6)} = K_1 + \frac{(0)K_2}{s+8} + \frac{(0)K_3}{s+6} $$
+
+This gives $$K_1 = 120$$
+
+We follow the same procedure for $$K_2$$ and $$K_3$$ except that we will set $$s$$ equal to -8 and -6 respectively. This helps to cancel out the values from the other $$K$$ values.
+
+We get from that that $$K_2 = 48$$ and $$K_3 = -72$$
+
+So finally (after a bit of algebra) we can say
+
+> $$ F(s) = \frac{120}{s} + \frac{48}{s+6} - \frac{72}{s+8} $$
+
+Then we need to perform the inverse Laplace on this to find the original function
+
+> $$ \mathscr{L}^{-1}\bigg\{ \frac{96(s+5)(s+12)}{(s+8)(s+6)} \bigg\} = \mathscr{L}^{-1}\bigg\{ \frac{120}{s} + \frac{48}{s+6} - \frac{72}{s+8} \bigg\} $$
+
+> $$ \mathscr{L}^{-1}\bigg\{ \frac{120}{s} + \frac{48}{s+6} - \frac{72}{s+8} \bigg\} = u(t)(120 + 48e^{-6t} - 72e^{-8t}) $$
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
