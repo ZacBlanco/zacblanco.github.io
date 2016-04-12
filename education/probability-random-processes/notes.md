@@ -1,7 +1,6 @@
 ---
 layout: page
 title: Probability & Random Processes
-permalink: /education/probability-random-processes/
 keywords: rutgers, university, electrical, computer, engineering, ece, 14:332:226, ECE226
 permalink: /education/probability-random-processes/notes/
 mathjax: true
@@ -745,7 +744,7 @@ Where the condition is that the parameter $$ b > a $$
 
 If X is a uniform (a, b) random variable
 
-- The CDF of X is: $$ F_X(x) = \begin{cases} 0 & x \leq a \\ \frac{x-a}{b-a} & a < x \leq b \\ 1 & a > b \end{cases} $$
+- The CDF of X is: $$ F_X(x) = \begin{cases} 0 & x \leq a \\ \frac{x-a}{b-a} & a < x \leq b \\ 1 & x > b \end{cases} $$
 - The expected value of X is $$ E[X] = \frac{b + a}{2} $$
 - The variance of X is $$ Var[X] = \frac{(b-a)^2}{12} $$
 
