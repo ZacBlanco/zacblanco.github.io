@@ -38,7 +38,7 @@ These notes are for the version of the class which is taught by professor Yates 
 - [Chapter 3 - Discrete Random Variables](#chapter-3)
 - [Chapter 4 - Continuous Random Variables](#chapter-4)
 - [Chapter 5 - Multiviews and Pairs of Random Variables](#chapter-5)
-- [Chapter 6](#chapter-6)
+- [Chapter 6 - Viewgraphs](#chapter-6)
 
 <a name="chapter-1"> </a>
 
@@ -1199,11 +1199,47 @@ Continuous
 
 > $$ f_{X_1,\dots ,X_n}(x_1,\dots ,x_n) = f_{X}(x_1)f_{X}(x_2)\dots f_{X}(x_n)$$
 
+<a name="chapter-6"></a>
+
+## Chapter 6 - Viewgraphs
+
+### Section 6.1 - PMF of a Function of Two Discrete Random Variables
+
+**Theorem 6.1**
+
+For discrete random variables X and Y, the derived random variable $$W = g(X, Y)$$ has the PMF
+
+> $$ P_W(w) = \sum\limits_{(x, y):g(x, y) = w} P_{X, Y}(x, y) $$
+
+### Section 6.2 - Functions Yielding Continuous Random Variables
+
+**Theorem 6.2**
+
+If $$W = aX$$ where $$a > 0$$ then $$W$$ has a CDF and PDF of:
+
+| CDF | PDF |
+| $$F_W(w) = F_X(w/a) $$ | $$f_W(w)=\frac{1}{a}f_X(w/a) $$ |
 
 
+**Theorem 6.3**
 
+Given that $$W = aX$$ where $$a > 0$$
 
+- If $$X$$ is uniform $$(b, c)$$ then $$W$$ is uniform $$(ab, ac)$$
+- If $$X$$ is exponential $$(\lambda)$$ then $$W$$ is uniform $$(\lambda /a)$$
+- If $$X$$ is Erlang $$(n, \lambda)$$ then $$W$$ is uniform $$(n, \lambda /a)$$
+- If $$X$$ is Gaussian $$(\mu, \sigma)$$ then $$W$$ is uniform $$(a\mu, a\sigma)$$
 
+**Theorem 6.4**
+
+Given that $$W = X + b$$
+
+| CDF | PDF |
+| $$F_W(w) = F_X(w-b)$$ | $$f_W(w) = f_X(w-b)$$ | 
+
+**Theorem 6.5**
+
+Let $$U$$ be a uniform $$(0, 1)$$ random variable and let $$F(x)$$ denote a cumulative distribution function with an inverse $$F^{-1}(u)$$ defined for $$0 < u < 1 $$ the random variable $$X = F^{-1}(U)$$ has CDF $$F_X(x) = F(x)$$
 
 
 
