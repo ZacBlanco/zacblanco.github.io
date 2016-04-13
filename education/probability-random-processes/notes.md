@@ -1225,9 +1225,9 @@ If $$W = aX$$ where $$a > 0$$ then $$W$$ has a CDF and PDF of:
 Given that $$W = aX$$ where $$a > 0$$
 
 - If $$X$$ is uniform $$(b, c)$$ then $$W$$ is uniform $$(ab, ac)$$
-- If $$X$$ is exponential $$(\lambda)$$ then $$W$$ is uniform $$(\lambda /a)$$
-- If $$X$$ is Erlang $$(n, \lambda)$$ then $$W$$ is uniform $$(n, \lambda /a)$$
-- If $$X$$ is Gaussian $$(\mu, \sigma)$$ then $$W$$ is uniform $$(a\mu, a\sigma)$$
+- If $$X$$ is exponential $$(\lambda)$$ then $$W$$ is exponential $$(\lambda /a)$$
+- If $$X$$ is Erlang $$(n, \lambda)$$ then $$W$$ is Erland $$(n, \lambda /a)$$
+- If $$X$$ is Gaussian $$(\mu, \sigma)$$ then $$W$$ is Gaussian $$(a\mu, a\sigma)$$
 
 **Theorem 6.4**
 
