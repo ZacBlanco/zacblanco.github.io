@@ -725,7 +725,7 @@ The expected value of a function $$g(X)$$ of a random variable X is:
 For any random variable $$X$$
 
 - $$ E[X-\mu_X] = 0 $$
-- $$ E[aX + b] = aE[X] + b = 0$$
+- $$ E[aX + b] = aE[X] + b$$
 - $$ Var[X] = E[X^2] - \mu_X^2 $$
 - $$ Var[aX + b] = a^2Var[X] $$
 
@@ -1226,7 +1226,7 @@ Given that $$W = aX$$ where $$a > 0$$
 
 - If $$X$$ is uniform $$(b, c)$$ then $$W$$ is uniform $$(ab, ac)$$
 - If $$X$$ is exponential $$(\lambda)$$ then $$W$$ is exponential $$(\lambda /a)$$
-- If $$X$$ is Erlang $$(n, \lambda)$$ then $$W$$ is Erland $$(n, \lambda /a)$$
+- If $$X$$ is Erlang $$(n, \lambda)$$ then $$W$$ is Erlang $$(n, \lambda /a)$$
 - If $$X$$ is Gaussian $$(\mu, \sigma)$$ then $$W$$ is Gaussian $$(a\mu, a\sigma)$$
 
 **Theorem 6.4**
