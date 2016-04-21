@@ -38,6 +38,7 @@ These notes are for the version of the class which is taught by professor Yates 
 - [Chapter 4 - Continuous Random Variables](#chapter-4)
 - [Chapter 5 - Multiviews and Pairs of Random Variables](#chapter-5)
 - [Chapter 6 - Viewgraphs](#chapter-6)
+- [Chapter 7 - Viewgraphs](#chapter-7)
 
 <a name="chapter-1"> </a>
 
@@ -157,14 +158,14 @@ Definition, **Conditional Probability**: The probability of the event A given th
 
  > $$ P[A|B] = \frac{P[AB]}{P[B]} = \frac{P[A\cap B]}{P[B]}$$
  
- The vertical bar, "\|" stands for the word "given".
+ The vertical bar, "\vert " stands for the word "given".
  
  What this equation does is "scale up" the probability of all events inside the event B. This effectively makes B the "new" sample space because all events that occur after B is given must be contained within B
 
 
 **Theorem 1.7**
 
- A conditional probability measure $$P[A\|B]$$ has the following properties that correspond to the axioms of probability.
+ A conditional probability measure $$P[A\vert B]$$ has the following properties that correspond to the axioms of probability.
  
  1. $$P[A|B] \geq 0$$
  2. $$P[B|B] = 1 $$
@@ -653,7 +654,7 @@ b. The nth central momment is $$E[(X-\mu_X)^n] $$
 |Goemetric|number of trials until 1st success|$$ P_X(x) = \begin{cases} p(1-p)^{x-1}, & x = 0 \\0, & \text{otherwise} \end{cases} $$ |  $$\frac{1}{p}$$ |  $$\frac{1-p}{p^2}$$ |
 |Binomial |number of successes in n trials	|$$ P_X(x) = \begin{pmatrix} n \\ x \end{pmatrix} p^x(1-p)^{n-x} $$ |  $$np$$ |  $$np(1-p)$$ |
 |Pascal   |number of trials until k successes|$$ P_X(x) = \begin{pmatrix} x-1 \\ k-1 \end{pmatrix} p^k(1-p)^{x-k} $$ | $$\frac{k}{p}$$ |  $$\frac{k(1-p)}{p^2}$$ |
-| Poisson | Probability of x arrivals in T seconds | $$ P_X(x) = \begin{cases} \frac{\alpha^xe^{-\alpha}}{x!}, x = 0, 1, 2\dots \\ 0,\text{otherwise} \\ \end{cases} $$ | $$\alpha$$ | $$\frac{k(1-p)}{p^2}$$ |
+| Poisson | Probability of x arrivals in T seconds | $$ P_X(x) = \begin{cases} \frac{\alpha^xe^{-\alpha}}{x!}, x = 0, 1, 2\dots \\ 0,\text{otherwise} \\ \end{cases} $$ | $$\alpha$$ | $$\alpha$$ |
 |Discrete Uniform | Probability of any value between k and l | $$ P_X(x) = \begin{cases} \frac{1}{l - k + 1},\  x=k, k+1, k+2\dots \\ 0, \text{otherwise} \end{cases} $$ | $$\frac{k + l}{2}$$ | $$\frac{(l-k)(l-k+2)}{12}$$ |
 
 <a name="chapter-4"> </a>
@@ -1241,17 +1242,188 @@ Given that $$W = X + b$$
 Let $$U$$ be a uniform $$(0, 1)$$ random variable and let $$F(x)$$ denote a cumulative distribution function with an inverse $$F^{-1}(u)$$ defined for $$0 < u < 1 $$ the random variable $$X = F^{-1}(U)$$ has CDF $$F_X(x) = F(x)$$
 
 
+### Section 6.4 - Continuous Function of Two Continuous Random Variables
+
+**Theorem 6.6**
+
+For continuous random variables $$X$$ and $$Y$$, the CDF of $$W = g(X, Y)$$ is 
+
+> $$F_W(w) = P[W \leq w] = \iint_{g(x, y) \leq w} f_{X, Y}(x, y) dxdy $$
+
+**Theorem 6.7**
+
+For continuous random variables $$X$$ and $$Y$$, the CDF of $$W = max(X, Y)$$ is:
+
+> $$ F_W(w) = F_{X, Y}(w, w, ) = \int\limits_{-\infty}^w \int\limits_{-\infty}^w f_{X, Y}(x, y) dx dy $$
+
+<a name="chapter-7"></a>
+
+## Chapter 7 - Viewgraphs
+
+### Section 7.1 - Conditioning a Random Variable by an Event
+
+**Definition 7.1** - Conditional CDF
+
+Given the event $$B$$ with $$P[B] > 0$$ the conditional cumulative distribution function of X is
+
+> $$ F_{X|B}(x) = P[X \leq x | B]$$
+
+**Definition 7.2** - Conditional PMF Given an Event
 
 
+Given the event B with $$P[B] > 0$$, the conditional probability mass function of X is:
+
+> $$ F_{X|B}(x) = P[X = x | B]$$
+
+**Definition 7.3** - Conditional PDF Given an Event
+
+> $$ f_{X|B}(x) = \frac{dF_{X|B}(x)}{dx}$$
+
+**Theorem 7.1**
+
+For a random variable X and an event $$B \in S_X$$ with $$P[B] > 0$$, the conditional PDF of $$X$$ given $$B$$ is:
+
+**Discrete**
+
+> $$ P_{X|B}(x) = \begin{cases} \frac{P_X(x)}{P[B]} & x\in B \\ 0 & \text{otherwise} \\ \end{cases} $$
+
+**Continuous**
+
+> $$ f_{X|B}(x) = \begin{cases} \frac{f_X(x)}{P[B]} & x\in B \\ 0 & \text{otherwise} \\ \end{cases} $$
 
 
+**Theorem 7.2** 
+
+For random variable $$X$$ resulting from an experiment with partition
+
+$$ B_1,\dots,B_m $$
+ 
+**Discrete**: $$P_X(x) = \sum\limits_{i=1}^m P_{X\vert B_i}(x)P[B_i] $$  
+**Continuous**: $$f_X(x) = \sum\limits_{i=1}^m f_{X\vert B_i}(x)P[B_i] $$
+ 
+### Section 7.2 - Conditional Expected Value Given an Event
+ 
+**Theorem 7.3**
+ 
+|**Discrete X** | **Continuous X** |
+| for any $$x\in B, P_{X\vert B}(x) \geq 0$$ | for any $$x\in B, P_{X\vert B}(x) \geq 0$$|
+| $$\sum\limits_{x\in B} P_{X\vert B}(x) = 1$$ | $$\int_B f_{X\vert B}(x)dx=1$$|
+| The conditional probability that X is in C: $$P[C\vert B] = \sum_{x\in C} P_{X\vert B} (x)$$ | The conditional probability that X is in the set C is: $$P[C\vert B] = \int_C f_{X\vert B} (x) dx$$ |
+
+**Definition 7.4** - Conditional Expected Value
+
+**Discrete**: $$E[X\vert B] = \sum\limits_{x\in B} x P_{X\vert B}(x)$$  
+**Continuous**: $$E[X\vert B] = \int\limits_{-\infty}^\infty x f_{X\vert B}(x)dx$$
+
+**Theorem 7.4**
+
+For a random variable $$X$$ resulting from an experiment with partitions  $$B_1,\dots,B_m$$
+
+> $$E[X] = \sum\limits_{i=1}^m E[X|B_i] \cdot P[B_i] $$
+
+**Theorem 7.5**
+
+The conditional expected value of $$Y=g(X)$$ given the condition, $$B$$ is:
+
+**Discrete**: $$E[Y\vert B] = E[g(X)\vert  B] = \sum\limits_{X\in B} g(x)P_{X\vert B} (x)$$  
+**Continuous**: $$E[Y\vert B] = E[g(X)\vert  B] = \int\limits_{-\infty}^\infty g(x)f_{X\vert B} (x)$$
 
 
+### Section 7.3 - Condition Two Random Variables by an Event
+
+**Definition 7.6** - For discrete random variables $$X$$ and $$Y$$, and event, $$B$$ with $$P[B] > 0$$, the conditional joint PMF of $$X$$ and $$Y$$ given $$B$$ is:
+
+> $$P_{X,Y\vert  B}(x, y) = P[X=x, Y=y\vert  B] $$
+
+**Theorem 7.6** 
+
+For any event $$B$$,  a region of the $$X, Y$$ plane with $$P[B] > 0$$
+
+> $$ P_{X,Y \vert  B} (x, y) = \begin{cases} \frac{P_{X, Y}(x, y)}{P[B]} & (x, y) \in B \\ 0 & \text{otherwise} \\ \end{cases} $$
 
 
+**Definition 7.7** - Conditional Joint PDF
+
+Given an event $$B$$ with $$P[B] > 0$$, the conditional joint probability density function of $$X$$ and $$Y$$ is:
+
+> $$f_{X,Y\vert  B}(x, y) = \begin{cases} \frac{f_{X, Y}(x, y)}{P[B]} & (x, y) \in B \\ 0 & \text{otherwise} \\ \end{cases} $$
+
+**Theorem 7.7** - Conditional Expected Value
+
+For random variables $$X$$ and $$Y$$ and an event $$B$$ of nonzero probability, the conditional expected value of $$W = g(X, Y) $$ given $$B$$ is:
+
+**Discerete**: $$E[W\vert  B] = \sum\limits_{x \in S_X} \sum\limits_{y \in S_Y} g(x, y) P_{X, Y \vert  B} (x, y)$$  
+**Continuous**: $$E[W\vert  B] = \int\limits_{-\infty}^\infty \int\limits_{-\infty}^\infty g(x, y) f_{X, Y \vert  B} (x, y)$$
 
 
+### Section 7.4 - Condition by a Random Variable
 
+
+**Definition 7.8** - Conditional PMF
+
+For any event $$Y = y$$ such that $$P_{Y}(y) > 0$$, the conditional PMF od $$X$$ given $$Y=y$$
+
+> $$ P_{X\vert Y}(x\vert y)  = P[X=x \vert Y=y]$$
+
+**Theorem 7.8** 
+
+For discrete random variables $$X$$ and $$Y$$ with joint PMF $$P_{X, Y}(x, y)$$, and $$x$$ and $$y$$ such that $$P_{X}(x) > 0$$ and $$P_Y(y) > 0$$
+
+- $$ P_{X\vert Y}(x\vert y) = \frac{P_{X, Y}(x, y)}{P_Y(y)} $$
+- $$ P_{Y\vert X}(y\vert x) = \frac{P_{X, Y}(x, y)}{P_X(x)} $$
+
+**Definition 7.9** - Conditional PDF
+
+For y such that $$f_Y(y) > 0$$, the conditional PDF of $$X$$ given $${Y = y}$$ is:
+
+> $$f_{X\vert Y}(x\vert y) = \frac{f_{X, Y}(x, y)}{f_Y(y)} $$
+
+**Theorem 7.9**
+
+For discrete random variables $$X$$ and $$Y$$ with joint PMF $$P_{X, Y}(x,y)$$ and $$x$$ and $$y$$ such that $$P_X(x) > 0 $$ and $$P_Y(y) > 0 $$:
+
+> $$ P_{X, Y}(x, y) = P_{Y\vert X}(y\vert x)P_X(x) = P_{X\vert Y}(x\vert y)P_Y(y) $$
+
+**Theorem 7.10**
+
+For continuous random variables $$X$$ and $$Y$$ with joint PDF $$f_{X, Y}(x,y)$$ and $$x$$ and $$y$$ such that $$f_X(x) > 0 $$ and $$f_Y(y) > 0 $$:
+
+> $$ f_{X, Y}(x, y) = f_{Y\vert X}(y\vert x)f_X(x) = f_{X\vert Y}(x\vert y)f_Y(y) $$
+
+**Theorem 7.11**
+
+If X and Y are independent:
+
+**Discrete**: $$P_{X\vert Y}(x, y) = P_X(x)$$, and $$P_{Y\vert X}(y\vert x) = P_Y(y) $$  
+**Continuous**: $$f_{X\vert Y}(x, y) = f_X(x)$$, and $$f_{Y\vert X}(y\vert x) = f_Y(y) $$
+
+### Section 7.5 - Conditional Expected Value Given a Random Variable
+
+**Definition 7.10** - Conditional Expected Value of a Function
+
+For any $$y \in S_Y$$, the conditional expected value of $$g(X, Y)$$ given $$Y = y$$ is:
+
+**Discrete**: $$E[g(X, Y)\vert Y = y] = \sum\limits_{x\in S_X} g(x, y) P_{X\vert Y}(x\vert y) $$  
+**Continuous**: $$E[g(X, Y)\vert Y = y] = \sum\limits_{-\infty}^\infty g(x, y) f_{X\vert Y}(x\vert y) $$
+
+**Theorem 7.12** 
+
+For independent random variables $$X$$ and $$Y$$
+
+-  $$E[X\vert Y=y] = E[X]$$ for all $$y\in S_Y$$
+- $$ E[Y\vert X = x] = E[Y]$$ for all $$x\in S_X$$
+
+**Definition 7.11** - Conditional Expected Value Function
+
+The conditional expected value $$E[X\vert Y]$$ is a function of random variable Y such that if $$Y = y$$, then $$E[X\vert Y] = E[X\vert Y = y]$$
+
+**Theorem 7.13** - Iterated Expectation
+
+> $$ E[E[X\vert Y]] = E[X] $$
+
+**Theorem 7.14** 
+
+> $$ E[E[g(X)\vert Y]] = E[g(X)] $$
 
 
 
