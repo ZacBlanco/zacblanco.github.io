@@ -920,7 +920,11 @@ Some other languages (Ada, or Fortran) will raise an exception
 
 ![Instruction Control Signals](/assets/images/comp-arch/instruction-control-signals.png)
 
-
+| ALUOp | Action needed by ALU |
+| 00 | Addition (for load and store) |
+| 01 | Subtraction (for beq) |
+| 10 | Determined by funct field (R-type instruction) |
+| 11 | Not used |
 
 
 
