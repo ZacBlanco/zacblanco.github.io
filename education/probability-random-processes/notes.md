@@ -39,6 +39,7 @@ These notes are for the version of the class which is taught by professor Yates 
 - [Chapter 5 - Multiviews and Pairs of Random Variables](#chapter-5)
 - [Chapter 6 - Viewgraphs](#chapter-6)
 - [Chapter 7 - Viewgraphs](#chapter-7)
+- [Chapter 9 - Viewgraphs](#chapter-9)
 
 <a name="chapter-1"> </a>
 
@@ -1425,8 +1426,99 @@ The conditional expected value $$E[X\vert Y]$$ is a function of random variable 
 
 > $$ E[E[g(X)\vert Y]] = E[g(X)] $$
 
+**Theorem 7.15**
 
+If $$X$$ and $$Y$$ are the bivariate Gaussian random variables in Definition 5.10, the conditional PDF of $$Y$$ given $$X$$ is: 
 
+> $$f_{Y\vert X} (y \vert x) = \frac{1}{\widetilde{\sigma_Y}\sqrt{2\pi}}e^{-(y-\widetilde{\mu}_Y(x))^2/2\widetilde{\sigma}_Y^2} $$
+
+where, given $$X=x$$, the conditional expected value and variance of $$Y$ are:
+
+ > $$E[Y\vert X = x] = \widetilde{\mu}_Y(x) = \mu_Y + \rho_{X,Y}\frac{\sigma_Y}{\sigma_X}(x-\mu_X)$$
+ 
+ > $$Var[Y\vert X = x] = \widetilde{\sigma}_Y^2 = \sigma_Y^2(1-\rho_{X, Y}^2)$$
+
+**Theorem 7.16**
+
+If $$X$$ and $$Y$$ are the bivariate Gaussian random variables in Definition 5.10, the conditional PDF of $$X$$ given $$Y$$ is: 
+
+> $$f_{X\vert Y} (x\vert y) = \frac{1}{\widetilde{\sigma_X}\sqrt{2\pi}}e^{-(x-\widetilde{\mu}_x(y))^2/2\widetilde{\sigma}_X^2} $$
+
+where, given $$Y=y$$, the conditional expected value and variance of $$Y$ are:
+
+> $$E[X\vert Y = y] = \widetilde{\mu}_X(y) = \mu_X + \rho_{X,Y}\frac{\sigma_X}{\sigma_Y}(y-\mu_Y)$$
+ 
+> $$Var[X\vert Y = Y] = \widetilde{\sigma}_X^2 = \sigma_X^2(1-\rho_{X, Y}^2)$$
+ 
+<a name="chapter-9"> </a>
+ 
+## Chapter 9 - Viewgraphs?
+ 
+### Section 9.1 - Expected Values of Sums
+
+**Theorem 9.1**
+
+For any set of random variables $$X_1, \dots, X_n$$, the sum $$W_n = X_1 + \dots + X_n$$ has the expected value:
+
+> $$ E[W_n] = E[X_1] + E[X_2] + \dots + E[X_n] $$
+
+**Theorem 9.2**
+
+The variance of $$W_n = X_1 + \dots + X_n$$ is:
+
+> $$Var[W_n] = \sum\limits_{i=1}^n Var[X_i] + 2\sum\limits_{i=1}^{n-1}\sum\limits_{j=i+1}^{n} Cov[X_i, X_j]$$
+
+<!--![Theorem 9.2](/assets/images/probability/theorem-9-2.png)-->
+
+**Theorem 9.3**
+
+When $$ X_1 + \dots + X_n$$ are uncorrelated:
+
+> $$ Var[W_n] = Var[X_1] + \dots + Var[X_n] $$
+
+### Section 9.2 - Moment Generating Functions
+
+**Definition 9.1 - Moment Generating Function (MGF)**
+
+For a random variable $$X$$, the moment generating function (MGF) of $$X$$ is:
+
+> $$\phi_X(s) = E[e^{sX}] $$
+
+**Theorem 9.4**
+
+A random variable $$X$$ with MGF $$\phi_X(s) has n-th moment:
+
+> $$E[X^n] = \frac{d^n\phi_X(s)}{ds^n} \text{at } s=0 $$
+
+**Theorem 9.5**
+
+The MGF of $$Y = aX + b$$ is $$\phi_Y(s) = e^{sb}\phi_X(as)$$ 
+
+### Section 9.3 - MGF of the Sum of Independent Random Variables
+
+**Theorem 9.6**
+
+For a set of _independent random variables_ $$X_1, \dots, X_n$$, the moment generating function of $$W = X_1 + \dots + X_n $$ is:
+
+> $$\phi_W(s) = \phi_{X_1}(s)\phi_{X_2}(s) \dots \phi_{X_n}(s) $$
+
+When $$X_1, \dots, X_n$$ are **iid**, then each with MGF $$\phi_{X_i}(s) = \phi_X(s) $$
+
+> $$ \phi_W(s) = [\phi_X(s)]^n $$
+
+**Theorem 9.7**
+
+If $$K_1, \dots,  K_n$$ are independent Poisson random variables, $$W = K_1,\dots, K_n$$ is a Poisson random variable
+
+**Theorem 9.8**
+
+The sum of $$n$$ independent Gaussian random variables $$W = X_1 + \dots + X_n$$ is a Gaussian random variable
+
+**Theorem 9.9**
+
+If $$X_1, \dots, X_n$$ are **iid** exponential ($$\lambda$$) random variables, then $$W = X_1 + \dots + X_n$$ has the Erlang PDF:
+
+> $$ f_W(w) = \begin{cases} \frac{\lambda^nw^{n-1}e^{-\lambda w}}{(n-1)!} & w \geq 0, \\ 0 & \text{otherwise} \\ \end{cases} $$
 
 
 
