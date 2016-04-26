@@ -908,6 +908,17 @@ Some languages (e.g. C) ignore overflow errors.
 Some other languages (Ada, or Fortran) will raise an exception
 
 
+## Datapath and Control Line Signals
+
+![ALU Control lines](/assets/images/comp-arch/alu-control-lines.png)
+
+![ALU Instruction Codes](/assets/images/comp-arch/alu-instruction-codes.png)
+
+![ALU Op Codes](/assets/images/comp-arch/alu-op-codes.png)
+
+![Control Signal Descriptions](/assets/images/comp-arch/control-signal-descriptions.png)
+
+![Instruction Control Signals](/assets/images/comp-arch/instruction-control-signals.png)
 
 
 
