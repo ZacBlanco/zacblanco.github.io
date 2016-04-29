@@ -907,6 +907,10 @@ Some languages (e.g. C) ignore overflow errors.
 
 Some other languages (Ada, or Fortran) will raise an exception
 
+## MIPS Datapath
+
+![MIPS Datapath](/assets/images/comp-arch/mips-datapath.png)
+
 
 ## Datapath and Control Line Signals
 
@@ -926,8 +930,9 @@ Some other languages (Ada, or Fortran) will raise an exception
 | 10 | Determined by funct field (R-type instruction) |
 | 11 | Not used |
 
+## Pipelined MIPS Datapath
 
-
+![MIPS Datapath](/assets/images/comp-arch/pipelined-processor.png)
 
 
 
