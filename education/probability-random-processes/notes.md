@@ -40,6 +40,7 @@ These notes are for the version of the class which is taught by professor Yates 
 - [Chapter 6 - Viewgraphs](#chapter-6)
 - [Chapter 7 - Viewgraphs](#chapter-7)
 - [Chapter 9 - Viewgraphs](#chapter-9)
+- [Chapter 10](#chapter-10)
 
 <a name="chapter-1"> </a>
 
@@ -1520,12 +1521,64 @@ If $$X_1, \dots, X_n$$ are **iid** exponential ($$\lambda$$) random variables, t
 
 > $$ f_W(w) = \begin{cases} \frac{\lambda^nw^{n-1}e^{-\lambda w}}{(n-1)!} & w \geq 0, \\ 0 & \text{otherwise} \\ \end{cases} $$
 
+**Theorem 9.12** - Central Limit Theorem
+
+Given $$X_1, X_2, \dots, $$ a sequence of iid random variables with expected value $$\mu_X$$ and variance $$\sigma_X^2$$, the CDF of $$Z_n = (\sum\limits_{i=1}^n X_i n\mu_X)/\sqrt{n\sigma_X^2} $$
+
+> $$\lim_{n\rightarrow\infty} F_{Z_n}(z) = \phi (z) $$
 
 
+**Definition 9.2** - Central Limit Theorem Approximation
 
+Let $$W_n = X_1 + \dots + X_n$$ be the sum of $$n$$ **iid** random variables, each with $$E[X] = \mu_X$$ and $$Var[X] = \sigma_X^2$$. The central limit theorem approximation of the CDF of $$W_n$$ is:
 
+> $$F_{W_n} (w) \approx \phi(\frac{w - n\mu_X}{\sqrt{n\sigma_X^2}}) $$
 
+<a name="chapter-10" ></a>
 
+## Chapter 10
+
+**Definition 10.1** - Sample Mean
+
+For **iid** random variables $$X_1,\dots,X_n$$ with PDF $$f_X(x)$$, the sample mean of $$X$$ is the random variable:
+
+> $$ M_n(X) = \frac{X_1 + \dots + X_n}{n} $$
+
+**Theorem 10.1**
+
+The sample mean $$M_n(X)$$ has the expected value and variance
+
+Mean:
+
+> $$ E[M_n(X)] = E[X] $$
+
+Variance:
+
+> $$ Var[M_n(X)] = \frac{Var[X]}{n} $$
+
+A note on the sample variance: the the above theorem actually states that the sample mean $$M_n(X)$$ converges to the expected value $$E[X]$$ as the number of sample, $$n$$ approaches $$\infty$$
+
+### Section 10.3 - The Laws of Large Numbers
+
+**Theorem 10.5** - Weak Law of Large Numbers (Finite Samples)
+
+For any constant $$c > 0$$
+
+> $$P[\vert M_n(X) - \mu_X\vert \geq c] \leq \frac{Var[X]}{nc^2} $$
+> $$P[\vert M_n(X) - \mu_X\vert < c] \geq 1- \frac{Var[X]}{nc^2} $$
+
+**Theorem 10.6** The Weak Law of Large Numbers (Inifinite Samples)
+
+If $$X$$ has finite variance, then, for any constant $$c > 0$$
+
+> $$\lim_{n\rightarrow\infty} P[\vert M_n(X) - \mu_X \vert \geq c] = 0 $$
+> $$\lim_{n\rightarrow\infty} P[\vert M_n(X) - \mu_X \vert < c] = 1 $$
+
+**Theorem 10.7**
+
+as $$n\rightarrow\infty$$, the relative prequency $$\hat{P}_n(A)$$ converges to $$P[A]$$ for any constant $$c > 0$$
+
+> $$ \lim_{n\rightarrow\infty} P[\vert\hat{P}_n (A) - P[A]\vert \geq c ] = 0$$
 
 
 
