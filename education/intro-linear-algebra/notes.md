@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Intro to Linear Algebra
-keywords: engineering, rutgers, spring 2016, computer, undergraduate, math, science, 01:198:250, rutgers university, linear, algebra, introduction, notes
+keywords: engineering, rutgers, spring 2016, undergraduate, math, science, 01:640:250, rutgers university, linear, algebra, introduction, notes, review, guide
 permalink: /education/intro-linear-algebra/notes/
 mathjax: true
 author: Zac Blanco
