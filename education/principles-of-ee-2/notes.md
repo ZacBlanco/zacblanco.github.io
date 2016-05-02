@@ -9,14 +9,12 @@ author: Zac Blanco
 
 These notes are for the version of the course taught in the spring of 2016 by professor Pedapulla Sannuti
 
-- [Homework Instructions](../HW-instructions.pdf)
 - [Syllabus Spring 2016](../Syllabus-222-S2016.pdf)
 
 
 ## Lecture 1 - January 19th 2016
 
-- See the [notes for lecture 1 here](../Review-of-basics-of-EEI.pdf)
-- [Homework 1 (Due Jan 26th)](../HW-due-Jan-26.pdf)
+- [Review of Principles of EE 1](../Review-of-basics-of-EEI.pdf)
 
 
 We introduce a new notation we'll call the "Laplace Domain". It is similar to the phasor domain from PEE 1. It's very simple.
@@ -396,13 +394,141 @@ Then we need to perform the inverse Laplace on this to find the original functio
 > $$ \mathscr{L}^{-1}\bigg\{ \frac{120}{s} + \frac{48}{s+6} - \frac{72}{s+8} \bigg\} = u(t)(120 + 48e^{-6t} - 72e^{-8t}) $$
 
 
+## Two-Port Circuits
+
+In this section we're going to explore two port circuits and how we can use them to build circuits.
+
+First we must consider that a two-port ciruit has **4 terminals**. Each terminal has a current running through. Those **current running through the terminals** of the inputs and outputs **must be equal.**
+
+<img src="/assets/images/pee-2/two-port-circuit.png" style="width:50%; margin:auto"/>
+
+Note the currents, $$i_1, i_2, i_1', i_2'$$. Given the constraint that the input and output current must be equal, we get the relationship:
+
+> $$ i_1 = i_1' $$
+
+> $$ i_2 = i_2' $$
+
+These two-port circuits are typically analyzed in the $$s$$ domain, or frequency domain. Because of this, and the fact that there are actually only two different current values, we simplify the circuit model to the following:
+
+<img src="/assets/images/pee-2/s-two-port.png" style="width:50%; margin:auto"/>
+
+Now because we are now using the $$s$$ domain we can defined a set of equations which show the relationships between the inputs and outputs.
+
+Of the four variables which define this two-port model, we can only define any set of equations for two of variables at a time.
+
+If we wated to combine all of these variables there are six possible ways (or sets) of equations.
+
+| Parameter Names | Equation |
+|Impedance| $$ V_1 = z_{11}I_1 + z_{12}I_2 $$ |
+|Impedance|$$ V_2 = z_{21}I_1 + z_{22}I_2 $$ |
+|Admittance|$$ I_1 = y_{11}V_1 + y_{12}V_2 $$|
+|Admittance|$$ I_2 = y_{21}V_1 + y_{22}V_2 $$ |
+|Transmission|$$ V_1 = a_{11}V_2 - a_{12}I_2 $$ |
+|Transmission|$$ I_1 = a_{21}V_2 - a_{22}I_2 $$ |
+|Inverse Transmission|$$ V_2 = b_{11}V_1 - b_{12}I_1 $$ |
+|Inverse Transmission|$$ I_2 = b_{21}V_1 - b_{22}I_1 $$ |
+|Hybrid|$$ V_1 = h_{11}I_1 + h_{12}V_2 $$ |
+|Hybrid|$$ I_2 = h_{21}I_1 + h_{22}V_2 $$ |
+|Inverse Hybrid|$$ V_1 = g_{11}V_1 + g_{12}I_2 $$ |
+|Inverse Hybrid|$$ I_2 = g_{21}V_1 + g_{22}I_2 $$ |
+
+Notice how for each set of equations there are four different constants. These constants for the entire two port circuit are all called the **parameters** of the circuit.
+
+**So then how do we solve for these parameters?**
+ 
+That's a complicated question, but we'll start off easy. First take the first set of equations with the $$z$$ parameters. In order to solve for these parameters we can evaluate for each $$z$$ if we set the $$I_1$$ or $$I_2$$ variable to 0.
+
+If we set the those current to 0 and solve for each of the parameters this will give us the solution to the circuit.
+
+If we wanted to define these different parameters: 
+
+- $$z_{11}$$ is the impednance when going into port 1 with port 2 as open (incomplete circuit, no current)
+- $$z_{12}$$ is called the **transfer impedance**. It is a ratio of the port 1 voltage to port 2 current when port 1 is open (no current into port 1)
+- $$z_{21}$$ is another **transfer impedance**. It is the ratio of port 2 voltage to the port 1 current when port 2 is open.
+- $$z_{22}$$ is the impedance seen loking into port 2 when port 1 is open.
+
+This means that any of these parameters can be calculated by simply opening one of the ports and measuring the ratio of Voltage to current of the other port, and then the transfer impedance by calculating the open port voltage by the closed port current.
+
+Note that each of the $$z$$ parameters defined an impedance. Not all of the parameters from each of the equations define impedances. Some define **admittances** which has a unit of $$\frac{1}{\Omega}$$. There are also parameters which don't define and impedance or an admittance. They are simply a ratio of two voltages or currents.
+
+A full set for all parameters is below.
+
+<img style="width:50%; margin:auto" src="/assets/images/pee-2/two-port-parameters.png"/>
+
+The process of solving these circuits is simple. You just need to set the different input variables to 0 (current, voltage), then solve for the circuit to determine the parameter values.
+
+The hardest part is just remembering which parameters belong to which equations.
+
+## Balanced Three-Phase Circuits
+
+These three phase circuits are required in typical power transfer systems because the power companies need to ensure that the RMS voltage on the line does not change no matter what the impedance load is on the circuit.
+
+Three phase circuits help us accomplish this.
+
+Typically a three-phase system will carry thee different sinusoidal electrical signals. We name the different lines (or signals), **a**, **b**, and **c**.
+
+Each of the lines carries the exact same RMS voltage, however the phase of each line is **120 degrees** offset from one another.
+
+We also consider the signal of line **a** to have a phase of **zero degrees**. This means that the b and c-lines will have phases of +120 degrees or -120 degrees.
+
+A **positive phase sequence** means that the c-line **leads** by 120 degrees over the a-line, and the b-lines **lags** by 120 degrees from the a-line.
+
+A **negative phase sequence** means that the b-line **leads** by 120 degrees over the a-line, and the c-line **lags** by 120 degrees from the a-line.
 
 
+An important property of these three-phase systems is that because they are offset from one another, if we add the sum total of their signals together, it should always be zero.
 
+**Three-Phase Sources**
 
+A three phase system will have three different (yet nearly identical) voltage sources. Typically they are arranged in a Wye (Y) or a Delta ($$\Delta$$) pattern.
 
+<img style="width:75%; margin:auto" src="/assets/images/pee-2/basic-three-phase.png"/>
 
+The impedances and resistances from each source are due to the internal resistance of the source. We'll call the total of this impedance $$Z_g$$. Because the system is a balanced three-phase system, the individual sources all have impedances $$Z_{ga} = Z_{gb} = Z_{gc} $$
 
+There is also an impedance imposed by the line itself, $$Z_1$$, where each line has a line impedance $$Z_{1a} = Z_{1b} = Z_{1c}$$.
+
+And lastly the load impedances denotes as $$Z_A = Z_B = Z_C$$. Each line has a load impedance equal to the other load impedances.
+
+If we were to draw a circuit with this model is would look like: 
+
+<img style="width:80%; margin:auto" src="/assets/images/pee-2/three-phase-loaded-circuit.png"/>
+
+Note the **neutral** line with impedance $$Z_0$$. The nodes at which this line are connected both have a node-voltage of **zero**. This means that neither location has a potential higher than the other. Thus the current through that particular branch is 0.
+
+Another note, $$Z_\phi$$ is the sum total impedance of internal + line + load.
+
+**Line-to-Line vs Line-to-Neutral Voltages**
+
+To calculate the Line to line voltages we should first look at the relationship to the netrual line voltage.
+
+$$V_{AB} = V_{AN} - A_{BN} $$
+
+$$V_{BC} = V_{BN} - A_{CN} $$
+
+$$V_{CA} = V_{CN} - A_{AN} $$
+
+If we assume that there is then a **positive phase sequence**, then the voltages of each are equal to:
+
+$$ V_{AN} = V_\phi\angle 0^\circ $$
+
+$$ V_{BN} = V_\phi\angle -120^\circ $$
+
+$$ V_{CN} = V_\phi\angle +120^\circ $$
+
+Using this information we can calculate the line to line voltages.
+
+Example: 
+
+$$V_{AB} = V_{AN} - A_{BN} = V_\phi\angle 0^\circ - V_\phi\angle -120^\circ = \sqrt{3}V_\phi\angle 30^\circ $$  
+
+After the analysis of the other two lines we get:
+
+$$ V_{AB} = \sqrt{3}V_\phi\angle +30^\circ $$
+
+$$ V_{BC} = \sqrt{3}V_\phi\angle -90^\circ $$
+
+$$ V_{CA} = \sqrt{3}V_\phi\angle +150^\circ $$
 
 
 
