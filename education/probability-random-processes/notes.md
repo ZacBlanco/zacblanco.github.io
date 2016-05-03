@@ -148,11 +148,6 @@ For an experiment with sample space $$S = {s_1, \dots, s_n}$$ in which each outc
 
 > $$P[s_i] = \frac{1}{n}, 1\leq i\leq n$$
 
-
-
-## Lecture 2 - January 25th 2016
-
-
 **Section 1.4 - Conditional Probability**
 
 
@@ -160,7 +155,7 @@ Definition, **Conditional Probability**: The probability of the event A given th
 
  > $$ P[A|B] = \frac{P[AB]}{P[B]} = \frac{P[A\cap B]}{P[B]}$$
  
- The vertical bar, "\vert " stands for the word "given".
+ The vertical bar, "$$\vert $$" stands for the word "given".
  
  What this equation does is "scale up" the probability of all events inside the event B. This effectively makes B the "new" sample space because all events that occur after B is given must be contained within B
 
@@ -194,9 +189,6 @@ For any event A, and partition $${B_1, B_2, \dots , B_m}$$
 For a partition $${B_1, B_2, \dots, B_m}$$ with $$P[B_i] > 0$$ for all i, 
 
 > $$ P[A] = \sum\limits^m_{i=1} P[A|B_i] P[B_i]$$
-
- 
-## Lecture 3 - January 28th 2016
 
 **Theorem 1.11:** Bayes' Theorem
 
@@ -256,9 +248,9 @@ From this we can see that tree diagrams help us to calculate probabilities of se
 
 Many experiments will consist of what we call **subexperiments**. The procedure followed for each subexperiment may depend on the results of the previous subexperiments.
 
-In doing this we will assmble outcomes into different partitions, starting at the root of the tree. From there we branch (and label according probabilities) based on the probabilities of each outcome.
+In doing this we will assemble outcomes into different partitions, starting at the root of the tree. From there we branch (and label according probabilities) based on the probabilities of each outcome.
 
-###Section 2.2 - Counting Methods 
+### Section 2.2 - Counting Methods 
 
 > In all application of probability theory, it should be important to understand the sample space of an experiment.
 
@@ -308,13 +300,11 @@ for $$n$$ repetitions of a subexperiment with sample space $$S_{sub} = \lbrace s
 
 **Theorem 2.6**
 
-The number of observation equencies for n subexperiments with sample space $$S = \lbrace 0, 1 \rbrace$$ with 0 apprearing $$n_)$$ times and 1 appearing $$n_1=n-n_0$$ times is $$\begin{pmatrix} n \\ n_1 \end{pmatrix} $$
-
-## Lecture 5 - February 8th 2016
+The number of observation frequencies for n subexperiments with sample space $$S = \lbrace 0, 1 \rbrace$$ with 0 appearing $$n_)$$ times and 1 appearing $$n_1=n-n_0$$ times is $$\begin{pmatrix} n \\ n_1 \end{pmatrix} $$
 
 **Theorem 2.7**
 
-For $$n$$ repetitions of a ubexperiment with sample space $$S = \{s_0,\dots,s_{m-1}\}$$ the number of length $$n = n_0 + \dots + n_{m-1}$$ obervation sequencies with $$s_i$$ appearing $$n_i$$ times is
+For $$n$$ repetitions of a subexperiment with sample space $$S = \{s_0,\dots,s_{m-1}\}$$ the number of length $$n = n_0 + \dots + n_{m-1}$$ observation sequences with $$s_i$$ appearing $$n_i$$ times is
 
 > $$ \begin{pmatrix} n \\ n_0,\dots,n_{m-1} \end{pmatrix} = \frac{n!}{n_0!n_1!\dots n_{m-1}!} $$
 
@@ -322,7 +312,7 @@ For $$n$$ repetitions of a ubexperiment with sample space $$S = \{s_0,\dots,s_{m
 
 **Theorem 2.8**
 
-The probability of $$n_0$$ failures an $$n_1$$ successes in $$n=n_0+n_1$$ independent trials is:
+The probability of $$n_0$$ failures and $$n_1$$ successes in $$n=n_0+n_1$$ independent trials is:
 
 > $$ P[E_{n_0}, n_1] = \begin{pmatrix} n \\ n_1 \end{pmatrix} = (1-p)^{n-n_1}p^{n_1} = \begin{pmatrix} n \\ n_0 \end{pmatrix} (1-p)^{n_0}p^{n-n_0} $$
 
@@ -338,7 +328,7 @@ A probability model always begins with an experiments. And each of the random va
 There are **3 types of relationships**
 
 1. The random variable is the observation
-2. The random cariable is a function of the observation
+2. The random variable is a function of the observation
 3. The random variable is a function of another random variable.
 
 Throughout most of the book probability is examined in models that assign numbers to the outcomes of the sample space. 
@@ -362,17 +352,15 @@ A note on notation:
 
 - Sometimes we will write $$\{ X = x\} $$to emphasize that there is a set of sample points $$s \in S $$ for which $$X(s) = x$$.
 
-From these we can adopt the shorthand notation:
+We can then adopt the following shorthand notation:
 
 > $$\{X = x\} = \{s\in S \ \vert\  X(s) = x\} $$
 
-**Defintion 3.2**
+**Definition 3.2**
 
 $$X$$ is a **discrete random variable** if the range of $$X$$ is a _countable set_
 
-$$
-S_X = \{x_1,x_2,\dots\}
-$$
+$$ S_X = \{x_1,x_2,\dots\} $$
 
 **Definition 3.3**
 
@@ -380,22 +368,25 @@ $$
 
 > $$ P_X(x) = P[X=x] $$
 
-**Theorem 3.1**
+A way of putting this is that for a certain discrete random variable which is described by $$P_X$$, then saying $$P_X(x)$$ is the probability of the event in which that $$x$$ occurs, or in other words it is $$P[X=x]$$, where the big $$X$$ is the random variable and $$P$$ simply denotes that it is the PMF function.
 
+**Theorem 3.1**
 
 For a discrete random variable $$X$$ with a PMF of $$P_X(x)$$ and range $$S_X$$ 
 
-- For any $$x, P_X(x) \geq 0$$
-- $$\Sigma_{x\in S_X} P_X(x) = 1$$
-- For any event $$B\subset S_X$$, the probability that $$X$$ is in the set $$B$$ is 
+1. $$\text{For any } x, P_X(x) \geq 0$$
+2. $$\sum\limits_{x\in S_X} P_X(x) = 1$$
+3. For any event $$B\subset S_X$$, the probability that $$X$$ is in the set $$B$$ is 
   - $$P[B] = \sum\limits_{x\in B} P_X(x) $$
   
+To put this into words we can say that to calculate the probability of an event, $$B$$, then it is the sum total probability of all outcomes for $$P_X$$ which are contained within $$B$$
+
 ### Families of Random Variables
   
 - In practical applications, certain types of random variables appear over and over across many experiments.
 - In each of these families (types) the PMF of all the random variables will have the same mathematical form
 - Differ only in values of one or two parameters
-- Depending on family, each PMF will contain only 1-2 params
+- Depending on family, each PMF will contain only 1-2 parameters
 - If we assign numbers to the parameters we can obtain a specific variable.
 - Typical nomenclature for a family consists of the family name followed by one or two parameters in parentheses.
 
@@ -450,7 +441,7 @@ If $$k = 1$$ then x is geometric.
 |Name of Random Variable| Description of variable | PMF Function |
 |-----------------------|-------------------------|--------------|
 |Bernoulli|number successes in 1 trial		|$$ P_X(x) = \begin{cases} 1-p , & x = 0 \\ p , & x = 1 \\ 0, & \text{otherwise} \end{cases} $$|
-|Goemetric|number of trials until 1st success|$$ P_X(x) = \begin{cases} p(1-p)^{x-1}, & x = 0 \\0, & \text{otherwise} \end{cases} $$		|
+|Geometric|number of trials until 1st success|$$ P_X(x) = \begin{cases} p(1-p)^{x-1}, & x = 0 \\0, & \text{otherwise} \end{cases} $$		|
 |Binomial |number of successes in n trials	|$$ P_X(x) = \begin{pmatrix} n \\ x \end{pmatrix} p^x(1-p)^{n-x} $$						|
 |Pascal   |number of trials until k successes|$$ P_X(x) = \begin{pmatrix} x-1 \\ k-1 \end{pmatrix} p^k(1-p)^{x-k} $$			  		|
 
@@ -498,12 +489,15 @@ For all $$b \geq a$$
 
 > $$ F_X(b) - F_X(a) = P[a < X \leq b] $$
 
+In other words, to find the probability of an event between two values, you can simply subtract the values of the CDF at $$a$$ and $$b$$ because it is the sum total probabliity up to each of those points, subtracting them results in only the probability of values between $$a$$ and $$b$$.
 
 **Definition 3.13** Expected Value
 
 The expected value of $$X$$ is 
 
 $$ E[X]=\mu_X = \sum\limits_{x\in S_X}^\  xP_X(x)$$
+
+This is sometimes referred to as the _mean_ of a random variable or function
 
 **Theorem 3.4**
 
@@ -546,7 +540,7 @@ $$ E[X] = \frac{k+l}{2} $$
 
 **Theorem 3.8**
 
-Perform $$n$$ Bernoulli trials. In each trial let the probability of success be $$\frac{\alpha}{n}$$ where $$\alpha > 0$$ is a constant and $$n > \alpha$$. Let the random variable $$K_n$$ be the number of successes in $$n$$ trials. As $$n\rightarrow \infty P_{K_n}(k)$$ converges to the PMF of a Poisson $$(\alpha)$$ random variable
+Perform $$n$$ Bernoulli trials. In each trial let the probability of success be $$\frac{\alpha}{n}$$ where $$\alpha > 0$$ is a constant and $$n > \alpha$$. Let the random variable $$K_n$$ be the number of successes in $$n$$ trials. As $$n\rightarrow \infty$$ then $$ P_{K_n}(k)$$ converges to the PMF of a Poisson $$(\alpha)$$ random variable
 
 **Definition 3.11** Mode
 
@@ -554,7 +548,7 @@ A mode of random variable X is a number $$x_{mod}$$ satisfying $$P_X(x_{mod}) \g
 
 **Definition 3.12** Median
 
-A median $$x_{med}$$ of random variable X is a number that satisfies 
+A median $$x_{med}$$ of random variable X is a number that satisfies these properties
 
 1. $$P[X \leq x_{med}]\geq \frac{1}{2} $$
 2. $$P[X\geq x_{med}] \geq \frac{1}{2} $$
@@ -601,6 +595,8 @@ The variance of a random variable X is:
 
 > $$ Var[X] = E[(X-\mu_X)^2] $$
 
+You might have heard variance before as the square of standard deviation ($$\sigma$$). Thus follows the next definition.
+
 **Definition 3.16** Standard Deviation
 
 The standard deviation of a random variable X is:
@@ -623,7 +619,7 @@ In the absence of observations, the minimum mean square error estimate of random
 For the Random variable, X
 
 a. The nth moment is $$E[X^n]$$
-b. The nth central momment is $$E[(X-\mu_X)^n] $$
+b. The nth central moment is $$E[(X-\mu_X)^n] $$
 
 **Theorem 3.15**
 
@@ -673,13 +669,15 @@ Well, it turns out, the answer, $$P[X=0.25] =  0$$. This will lead us into the f
 
 ### Section 4.1 - Continuous Sample Space
 
-In a **continous sample space**, there are an infinite number of points you could choose. But the probability of picking a single point is zero.
+In a **continuous sample space**, there are an infinite number of points you could choose. But the probability of picking a single point is zero.
 
 ### Section 4.2 - The Cumulative Distribution Function
 
 **Definition 4.1** - Cumulative Distribution Function (CDF)
 
 > $$ F_X(x) = P [ X \leq x] $$
+
+Recall this from previous sections. It applies to continuous random variables as the probability of any single event is 0, but for all values up to and including a single value is how we calculate the probability of a continuous function.
 
 **Theorem 4.1**
 
@@ -689,9 +687,9 @@ For any random variable X
 2. $$ F_X(\infty) = 1 $$ -- $$P[X \leq \infty] = 0$$
 3. $$ P[x_1 \leq X \leq x_2] =  F_X(x_2) - F_X(x_1)$$ 
 
-**Definition 4.2** - Continous Random Variable
+**Definition 4.2** - Continuous Random Variable
 
-> $$X$$ is a coninuous random variable if the CDF $$F_X(x)$$ is a continuous function
+> $$X$$ is a continuous random variable if the CDF $$F_X(x)$$ is a continuous function
 
 ### Section 4.3 - The Probability Density Function
 
@@ -699,11 +697,13 @@ The probability density function (PDF) of a continuous random variable X is:
 
 > $$ f_X(x) = \frac{dF_X(x)}{dx} $$
 
+This function is simply defined as the derivative of the CDF function for a continuous random variable.
+
 **Theorem 4.2**
 
 For a continuous random variable X with a PDF of $$f_X(x)$$
 
-1. $$ f_X(x) \geq 0$$ for all $$x$$
+1. $$ f_X(x) \geq 0 \text{ for all } x$$
 2. $$ F_X(x) = \int\limits_{-\infty}^x f_X(u)du$$
 3. $$ \int\limits_{-\infty}^{\infty} f_X(x)dx = 1 $$
 
@@ -781,7 +781,7 @@ X is an Erlang ($$n, \lambda $$) random variable if the PDF of X is:
 
 > $$ f_X(x) = \begin{cases} \frac{\lambda^2 x^{n-1}e^{-\lambda x}}{(n-1)!} & x > 0 \\ 0 & \text{otherwise} \end{cases} $$
 
-where the paramter of $$\lambda > 0$$ and the parameter $$n \geq 1$$ is an integer.
+where the parameter of $$\lambda > 0$$ and the parameter $$n \geq 1$$ is an integer.
 
 **Theorem 4.10**
 
@@ -863,7 +863,7 @@ Let
 
 > $$ d_\epsilon (x) = \begin{cases} 1/\epsilon, & -\epsilon/2 \leq x \leq \epsilon/2 \\ 0 , & \text{otherwise} \end{cases} $$
 
-Then the unit umpulse function is 
+Then the unit impulse function is 
 
 > $$ \delta (x) = \lim\limits_{\epsilon\rightarrow 0} d_\epsilon(x) $$
 
@@ -978,7 +978,7 @@ If $$X$$ and $$Y$$ are random variables with joint PDF $$f_{X,Y}(x, y)$$
 
 **Definition 5.4**  - Independent Random Variables
 
-Random variable $$X$$ and $$Y$$ are indepdentent if and only if the following are true:
+Random variable $$X$$ and $$Y$$ are independent if and only if the following are true:
 
 For discrete random variables:
 
@@ -998,7 +998,7 @@ For discrete random variables:
 
 > $$E[W] = \sum\limits_{x\in S_X} \sum\limits_{y\in S_Y} g(x, y)P_{X, Y}(x, y)$$
 
-For continous random variables:
+For continuous random variables:
 
 > $$ E[W] = \int\limits_{-\infty}^\infty \int\limits_{-\infty}^\infty g(x, y) f_{X, Y}(x, y)dx\cdot dy$$
 
@@ -1047,7 +1047,7 @@ If X and Y are random variables such that $$Y=aX + b$$ then:
 
 > $$ \rho_{X, Y} = \begin{cases} -1,  & a < 0 \\ 0,  & a = 0 \\ 1,  & a > 0 \\ \end{cases} $$
 
-**Definition 5.7** - Correleation
+**Definition 5.7** - Correlation
 
 The correlation of two variable $$X$$ and $$Y$$ is 
 
@@ -1104,7 +1104,7 @@ Bivariate Gaussian random variables X and Y are uncorrelated if and only if they
 
 **Theorem 5.21**
 
-If X and Y are bivariate Gaussian random variables with PDF given by definition 5.10 and $$W_1$$ and $$W_2$$ are given by the linearly indepedent equations
+If X and Y are bivariate Gaussian random variables with PDF given by definition 5.10 and $$W_1$$ and $$W_2$$ are given by the linearly independent equations
 
 1. $$W_1 = a_1X + b_1Y$$
 2. $$W_2 = a_2X + b_2Y$$
@@ -1354,7 +1354,7 @@ Given an event $$B$$ with $$P[B] > 0$$, the conditional joint probability densit
 
 For random variables $$X$$ and $$Y$$ and an event $$B$$ of nonzero probability, the conditional expected value of $$W = g(X, Y) $$ given $$B$$ is:
 
-**Discerete**: $$E[W\vert  B] = \sum\limits_{x \in S_X} \sum\limits_{y \in S_Y} g(x, y) P_{X, Y \vert  B} (x, y)$$  
+**Discrete**: $$E[W\vert  B] = \sum\limits_{x \in S_X} \sum\limits_{y \in S_Y} g(x, y) P_{X, Y \vert  B} (x, y)$$  
 **Continuous**: $$E[W\vert  B] = \int\limits_{-\infty}^\infty \int\limits_{-\infty}^\infty g(x, y) f_{X, Y \vert  B} (x, y)$$
 
 
@@ -1363,7 +1363,7 @@ For random variables $$X$$ and $$Y$$ and an event $$B$$ of nonzero probability, 
 
 **Definition 7.8** - Conditional PMF
 
-For any event $$Y = y$$ such that $$P_{Y}(y) > 0$$, the conditional PMF od $$X$$ given $$Y=y$$
+For any event $$Y = y$$ such that $$P_{Y}(y) > 0$$, the conditional PMF of $$X$$ given $$Y=y$$
 
 > $$ P_{X\vert Y}(x\vert y)  = P[X=x \vert Y=y]$$
 
@@ -1567,7 +1567,7 @@ For any constant $$c > 0$$
 > $$P[\vert M_n(X) - \mu_X\vert \geq c] \leq \frac{Var[X]}{nc^2} $$
 > $$P[\vert M_n(X) - \mu_X\vert < c] \geq 1- \frac{Var[X]}{nc^2} $$
 
-**Theorem 10.6** The Weak Law of Large Numbers (Inifinite Samples)
+**Theorem 10.6** The Weak Law of Large Numbers (Infinite Samples)
 
 If $$X$$ has finite variance, then, for any constant $$c > 0$$
 
@@ -1576,7 +1576,7 @@ If $$X$$ has finite variance, then, for any constant $$c > 0$$
 
 **Theorem 10.7**
 
-as $$n\rightarrow\infty$$, the relative prequency $$\hat{P}_n(A)$$ converges to $$P[A]$$ for any constant $$c > 0$$
+as $$n\rightarrow\infty$$, the relative frequency $$\hat{P}_n(A)$$ converges to $$P[A]$$ for any constant $$c > 0$$
 
 > $$ \lim_{n\rightarrow\infty} P[\vert\hat{P}_n (A) - P[A]\vert \geq c ] = 0$$
 
