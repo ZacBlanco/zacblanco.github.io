@@ -820,12 +820,12 @@ If X is a Gaussian $$(\mu, \sigma)$$ random variable, $$Y=aX + b$$ is Gaussian $
 
 **Definition 4.9** - Standard Normal Random Variable
 
-The standard normal random variable Z is the Gaussian (0, 1) random variable
+The **standard normal** random variable $$Z$$ is the Gaussian (0, 1) random variable
 
 
 **Definition 4.10** - Standard Normal CDF
 
-The CDF of the standard normal random variable Z is:
+The CDF of the **standard normal** random variable Z is:
 
 > $$ \Phi (z) = \frac{1}{\sqrt{2\pi}} \int\limits_{-\infty}^z e^{-u^2/2}du $$
 
@@ -847,6 +847,8 @@ And the probability that X is in the interval of (a, b] (includes b, excludes a)
 The standard normal complementary CDF is:
 
 > $$ Q(z) = P[Z > z] = \frac{1}{\sqrt{2\pi}} \int\limits_z^\infty e^{-e^2/2}du = 1 - \Phi (z) $$
+
+Another way of looking at is is that $$Q(z) = \Phi (-z) = 1-\Phi (z) $$
 
 
 ### Section 4.7 - Delta Functions, Mixed Random Variables
@@ -884,7 +886,7 @@ For any continuous function g(x)
 
 <a name="chapter-5"></a>
 
-## Chapter 5 - Multiviews
+## Chapter 5 - Multiviews and Pairs of Random Variables
 
 ### Pairs of Random Variables
 
@@ -1049,7 +1051,7 @@ If X and Y are random variables such that $$Y=aX + b$$ then:
 
 **Definition 5.7** - Correlation
 
-The correlation of two variable $$X$$ and $$Y$$ is 
+The correlation of two variables $$X$$ and $$Y$$ is 
 
 > $$ r_{X, Y} = E[XY] $$
 
@@ -1308,9 +1310,9 @@ $$ B_1,\dots,B_m $$
 **Theorem 7.3**
  
 |**Discrete X** | **Continuous X** |
-| for any $$x\in B, P_{X\vert B}(x) \geq 0$$ | for any $$x\in B, P_{X\vert B}(x) \geq 0$$|
+| for any $$x\in B, P_{X\vert B}(x) \geq 0$$ | for any $$x\in B, f_{X\vert B}(x) \geq 0$$|
 | $$\sum\limits_{x\in B} P_{X\vert B}(x) = 1$$ | $$\int_B f_{X\vert B}(x)dx=1$$|
-| The conditional probability that X is in C: $$P[C\vert B] = \sum_{x\in C} P_{X\vert B} (x)$$ | The conditional probability that X is in the set C is: $$P[C\vert B] = \int_C f_{X\vert B} (x) dx$$ |
+| The conditional probability that X is in C: $$P[C\vert B] = \sum\limits_{x\in C} P_{X\vert B} (x)$$ | The conditional probability that X is in the set C is: $$P[C\vert B] = \int_C f_{X\vert B} (x) dx$$ |
 
 **Definition 7.4** - Conditional Expected Value
 
@@ -1433,7 +1435,7 @@ If $$X$$ and $$Y$$ are the bivariate Gaussian random variables in Definition 5.1
 
 > $$f_{Y\vert X} (y \vert x) = \frac{1}{\widetilde{\sigma_Y}\sqrt{2\pi}}e^{-(y-\widetilde{\mu}_Y(x))^2/2\widetilde{\sigma}_Y^2} $$
 
-where, given $$X=x$$, the conditional expected value and variance of $$Y$ are:
+where, given $$X=x$$, the conditional expected value and variance of $$Y$$ are:
 
  > $$E[Y\vert X = x] = \widetilde{\mu}_Y(x) = \mu_Y + \rho_{X,Y}\frac{\sigma_Y}{\sigma_X}(x-\mu_X)$$
  
@@ -1445,7 +1447,7 @@ If $$X$$ and $$Y$$ are the bivariate Gaussian random variables in Definition 5.1
 
 > $$f_{X\vert Y} (x\vert y) = \frac{1}{\widetilde{\sigma_X}\sqrt{2\pi}}e^{-(x-\widetilde{\mu}_x(y))^2/2\widetilde{\sigma}_X^2} $$
 
-where, given $$Y=y$$, the conditional expected value and variance of $$Y$ are:
+where, given $$Y=y$$, the conditional expected value and variance of $$Y$$ are:
 
 > $$E[X\vert Y = y] = \widetilde{\mu}_X(y) = \mu_X + \rho_{X,Y}\frac{\sigma_X}{\sigma_Y}(y-\mu_Y)$$
  
@@ -1487,7 +1489,7 @@ For a random variable $$X$$, the moment generating function (MGF) of $$X$$ is:
 
 **Theorem 9.4**
 
-A random variable $$X$$ with MGF $$\phi_X(s) has n-th moment:
+A random variable $$X$$ with MGF $$\phi_X(s)$$ has n-th moment:
 
 > $$E[X^n] = \frac{d^n\phi_X(s)}{ds^n} \text{at } s=0 $$
 
