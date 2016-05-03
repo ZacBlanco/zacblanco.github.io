@@ -37,10 +37,10 @@ These notes are for the version of the class which is taught by professor Yates 
 - [Chapter 3 - Discrete Random Variables](#chapter-3)
 - [Chapter 4 - Continuous Random Variables](#chapter-4)
 - [Chapter 5 - Multiviews and Pairs of Random Variables](#chapter-5)
-- [Chapter 6 - Viewgraphs](#chapter-6)
-- [Chapter 7 - Viewgraphs](#chapter-7)
-- [Chapter 9 - Viewgraphs](#chapter-9)
-- [Chapter 10](#chapter-10)
+- [Chapter 6 - Probability Models of Derived Random Variables](#chapter-6)
+- [Chapter 7 - Conditional Probability Models](#chapter-7)
+- [Chapter 9 - Sums of Random Variables](#chapter-9)
+- [Chapter 10 - The Sample Mean](#chapter-10)
 
 <a name="chapter-1"> </a>
 
@@ -489,7 +489,7 @@ For all $$b \geq a$$
 
 > $$ F_X(b) - F_X(a) = P[a < X \leq b] $$
 
-In other words, to find the probability of an event between two values, you can simply subtract the values of the CDF at $$a$$ and $$b$$ because it is the sum total probabliity up to each of those points, subtracting them results in only the probability of values between $$a$$ and $$b$$.
+In other words, to find the probability of an event between two values, you can simply subtract the values of the CDF at $$a$$ and $$b$$ because it is the sum total probability up to each of those points, subtracting them results in only the probability of values between $$a$$ and $$b$$.
 
 **Definition 3.13** Expected Value
 
@@ -649,7 +649,7 @@ b. The nth central moment is $$E[(X-\mu_X)^n] $$
 |Name of Random Variable| Description of variable | PMF Function | Expected Value- $$E[X]$$ | Variance - $$Var[X]$$| 
 |-----------------------|-------------------------|--------------|
 |Bernoulli|number successes in 1 trial		|$$ P_X(x) = \begin{cases} 1-p , & x = 0 \\ p , & x = 1 \\ 0, & \text{otherwise} \end{cases} $$| $$p$$ | $$p(1-p)$$ |
-|Goemetric|number of trials until 1st success|$$ P_X(x) = \begin{cases} p(1-p)^{x-1}, & x = 0 \\0, & \text{otherwise} \end{cases} $$ |  $$\frac{1}{p}$$ |  $$\frac{1-p}{p^2}$$ |
+|Geometric|number of trials until 1st success|$$ P_X(x) = \begin{cases} p(1-p)^{x-1}, & x = 0 \\0, & \text{otherwise} \end{cases} $$ |  $$\frac{1}{p}$$ |  $$\frac{1-p}{p^2}$$ |
 |Binomial |number of successes in n trials	|$$ P_X(x) = \begin{pmatrix} n \\ x \end{pmatrix} p^x(1-p)^{n-x} $$ |  $$np$$ |  $$np(1-p)$$ |
 |Pascal   |number of trials until k successes|$$ P_X(x) = \begin{pmatrix} x-1 \\ k-1 \end{pmatrix} p^k(1-p)^{x-k} $$ | $$\frac{k}{p}$$ |  $$\frac{k(1-p)}{p^2}$$ |
 | Poisson | Probability of x arrivals in T seconds | $$ P_X(x) = \begin{cases} \frac{\alpha^xe^{-\alpha}}{x!}, x = 0, 1, 2\dots \\ 0,\text{otherwise} \\ \end{cases} $$ | $$\alpha$$ | $$\alpha$$ |
@@ -733,7 +733,7 @@ For any random variable $$X$$
 - $$ Var[aX + b] = a^2Var[X] $$
 
 
-## Section 4.5 - Families of Continuous Random Variables
+### Section 4.5 - Families of Continuous Random Variables
 
 **Definition 4.5** Uniform Random Variable
 
@@ -798,7 +798,7 @@ Let $$K_{\alpha}$$ denote a Poisson ($$\alpha$$) random variable. For any $$x > 
 > $$ F_X(x) = 1 - F_{K_{\lambda x}}(n-1) = \begin{cases} 1 - \sum\limits_{k=0}^{n-1} \frac {(\lambda x)^k e^{-\lambda x}}{k!} & x \geq 0 \\ 0 & \text{otherwise} \end{cases} $$
 
 
-## Section 4.6 - Gaussian Random Variables
+### Section 4.6 - Gaussian Random Variables
 
 **Definition 4.8** - Gaussian Random Variable
 
@@ -849,7 +849,7 @@ The standard normal complementary CDF is:
 > $$ Q(z) = P[Z > z] = \frac{1}{\sqrt{2\pi}} \int\limits_z^\infty e^{-e^2/2}du = 1 - \Phi (z) $$
 
 
-## Section 4.7 - Delta Functions, Mixed Random Variables
+### Section 4.7 - Delta Functions, Mixed Random Variables
 
 **Definition 4.12** - Unit Step Function
 
@@ -1203,7 +1203,7 @@ Continuous
 
 <a name="chapter-6"></a>
 
-## Chapter 6 - Viewgraphs
+## Chapter 6 - Probability Models of Derived Random Variables
 
 ### Section 6.1 - PMF of a Function of Two Discrete Random Variables
 
@@ -1260,7 +1260,7 @@ For continuous random variables $$X$$ and $$Y$$, the CDF of $$W = max(X, Y)$$ is
 
 <a name="chapter-7"></a>
 
-## Chapter 7 - Viewgraphs
+## Chapter 7 - Conditional Probability Models
 
 ### Section 7.1 - Conditioning a Random Variable by an Event
 
@@ -1453,7 +1453,7 @@ where, given $$Y=y$$, the conditional expected value and variance of $$Y$ are:
  
 <a name="chapter-9"> </a>
  
-## Chapter 9 - Viewgraphs?
+## Chapter 9 - Sums of Random Variables
  
 ### Section 9.1 - Expected Values of Sums
 
@@ -1536,7 +1536,7 @@ Let $$W_n = X_1 + \dots + X_n$$ be the sum of $$n$$ **iid** random variables, ea
 
 <a name="chapter-10" ></a>
 
-## Chapter 10
+## Chapter 10 - The Sample Mean
 
 **Definition 10.1** - Sample Mean
 
