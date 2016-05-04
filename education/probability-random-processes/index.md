@@ -14,3 +14,4 @@ Links:
 
 - [**Course Notes**](notes/)
 - [**Exam 2 Review**](exam-2/)
+- [**Final Review Sheet**](final-review/)

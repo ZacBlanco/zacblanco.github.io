@@ -27,6 +27,7 @@ I'm going to use this page to help gather some of the most important information
 4. $$E[X-\mu_x]= 0$$
 5. $$ E[aX + b] = aE[X] + b = 0$$
 6. $$ Var[X] = E[X^2] - \mu_X^2 $$
+7. $$ Var[X] = E[(X-\mu_X)^2] $$
 7. $$ Var[aX + b] = a^2Var[X] $$
 8. $$E[X+Y] = E[X] + E[Y]$$
 9. $$Var[X+Y] = Var[X] + Var[Y] + 2Cov[X, Y]$$
