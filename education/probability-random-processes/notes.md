@@ -1573,8 +1573,8 @@ For any constant $$c > 0$$
 
 If $$X$$ has finite variance, then, for any constant $$c > 0$$
 
-> $$\lim_{n\rightarrow\infty} P[\vert M_n(X) - \mu_X \vert \geq c] = 0 $$
-> $$\lim_{n\rightarrow\infty} P[\vert M_n(X) - \mu_X \vert < c] = 1 $$
+> $$\lim\limits_{n\rightarrow\infty} P[\vert M_n(X) - \mu_X \vert \geq c] = 0 $$
+> $$\lim\limits_{n\rightarrow\infty} P[\vert M_n(X) - \mu_X \vert < c] = 1 $$
 
 **Theorem 10.7**
 
