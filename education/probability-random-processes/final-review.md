@@ -16,7 +16,7 @@ This page will just contain the most essential equations that pertain to topics 
 3. $$ P[\varnothing ] = 0 $$
 4. $$ P[A \cup B] = P[A] + P[B] - P[A \cap B] $$
 5. $$ P[A^c] = 1 - P[A] $$
-6. $$ P[A \vert B ] = \frac{P[A\vert B]}{P[B]} $$
+6. $$ P[A \vert B ] = \frac{P[AB]}{P[B]} $$
 7. $$ P[B\vert B] = 1 $$
 8. $$ \text{Bayes Theorem: } P[B\vert A] = \frac{P[A\vert B]P[B]}{P[A]} $$
 9. $$ \text{n choose k} = \begin{pmatrix} n\\k \end{pmatrix} = \frac{n!}{k!(n-k)!} $$
