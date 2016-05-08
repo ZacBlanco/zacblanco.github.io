@@ -874,13 +874,15 @@ Also considering performance we should still count the instructions executed, no
 
 The first thing that we need to understand is two's complement.
 
-It is a way of representing positive and negative binary numbers.
+It is a way of representing positive and negative binary numbers. When we don't think in two's complement we typically just think of a number as being the sum of the powers of two in each location where a `1` exists. However, with two's complement that representation changes.
+
+Take the following example of how to represent the number "-5" in binary with two's complement
 
 Example: Imagine we have four bits `0000`. Say we want to represent the value
 `-5` using the two's complement.
 
 1. Represent `-5` in binary.
-  - $$2^0 + 2^2 = 0101$$
+  - $$2^0 + 2^2 = 1 + 4 = 0101$$
 2. Note `0101`, now invert every bit to its opposite value
   - `0101` inverted `1010`.
 3. Add 1 to the inverted value
@@ -892,6 +894,24 @@ And what about going backwards (negative to positive)?
 
 Simply subtract 1 from the value, then invert the bits. The exact opposite process from before.
 
+So, to summarize:
+
+**To represent a negative number, $$-n$$ in two's complement**:
+
+1. First represent the number, $$n$$, in 'normal' binary.
+2. Invert all of the 1's and 0's (turn each 0 to a 1, and each one to a 0).
+3. Finally, add 1 to the inverted number.
+
+The resulting binary number is now equal to $$-n$$
+
+**To find the value of a two's complement number**
+
+1. Subtract 1 from the binary number
+2. Flip all of the ones and zeros
+
+The resulting binary number is the number $$n$$ which was represented as $$-n$$ in two's complement.
+
+
 ### Two's Complement Operations
 
 MIPS 16-bit arithmetic gets converted to 32 bit for arithmetic
@@ -899,6 +919,72 @@ MIPS 16-bit arithmetic gets converted to 32 bit for arithmetic
 - Digits are **sign-extended** - We copy the most significant bit (the sign bit) into all empty bits
 
 - Sign extend vs Zero Extend (`lb` vs `lbu`)
+
+In **sign extension** we simply take the rightmost bit of the binary number we're extending and continuously add that bit (1 or 0) to the left side of the number for however many bits are required.
+
+in **zero extension** we simply add the required number of 0 bits to the left hand side of the number.
+
+### Multiplication with Two's Complement - Booth's Algorithm
+
+Given any two numbers which are represented in binary with two's complement we can multiply them together using [Booth's algorithm (Wikipedia)](https://en.wikipedia.org/wiki/Booth%27s_multiplication_algorithm).
+
+The process for multiplying the two numbers are as follows:
+
+Given two numbers to multiply together, say $$m$$ and $$n$$:
+
+The number of bits in $$m$$ is $$x$$, the number of bits in $$n$$ is $$y$$. 
+
+The next three terms all have a number of bits equal to $$x + y + 1$$
+
+We can first define a binary number **A**. Fill the leftmost bits of **A** with the bits from the number $$m$$. The remaining $$y+1$$ bits should be filled with zeroes.
+
+Next, we should define the binary number **S** which is of size $$x + y + 1$$. You should fill in leftmost, $$x$$ number of bits with the value of $$-m$$. In other words: invert the value of $$m$$ and then put that binary representation into the leftmost bits of $$S$$. The rest should be zeroes
+
+Last, we should define the number **P*. **P** is of size $$x + y + 1$$ as well. However, we want to fill the most significant (leftmost) $$x$$ bits with zeroes. That is The leftmost bits of **P** should all be zero. The next $$y$$ bits should be the value of $$n$$. The rightmost bit should be a zero.
+
+Example:
+
+- $$m = 5 = 0101$$
+- $$n = 6 = 0110$$
+- $$-m = -5 = 1011$$
+
+- $$A = 0101\ 0000\ 0$$
+- $$S = 1011\ 0000\ 0$$
+- $$P = 0000\ 0110\ 0$$
+
+Now that we've defined **A**, **S**, and **P** we can move to the actual algorithm of defining the product of the two numbers. The algorithm is as follows:
+
+1. Observe the two **rightmost** bits of **P**. Do the following:
+  - If they are $$01$$, set $$P = P + A$$
+  - If they are $$10$$, set $$P = P + S$$
+  - If they are $$00$$, do nothing.
+  - If they are $$11$$, do nothing.
+2. Do a right bitshift operation on the value of **P**.
+  - Make sure that you sign extend when doing this bitshift.
+3. Repeat steps 1 and 2 until they have been done $$y$$ number of times. ($$y$$ is the number if bits it takes to represent $$n$$)
+4. The value of the product is the leftmost $$x + y$$ bits
+
+### Efficient Integer Division with Two's Complement Numbers
+
+First take two numbers, $$m$$ and $$n$$. We want to divide $$m$$ by the number $$n$$.
+
+Next, we need to set up the the quotient/remainder register. Take $$x$$ to be the number of bits in $$m$$. Zero extend $$m$$ so that it is of size $$2x$$ bits. This is now the quotient/remainder register.
+
+Remember the divisor is $$n$$.
+
+Now for the algorithm:
+
+1. Observe the value in the quotient/remainder register. Shift left by 1 bit. (Zero extend from the right hand side).
+2. Subtract the divisor $$n$$ from the left half (leftmost $$x$$ bits) of the quotient/remainder register. Remember subtracting is simply adding the negation of the number.
+3. Observe the leftmost bit of the quotient/remainder register.
+  - If the leftmost bit is 0, shift the quotient/remainder register left 1 bit, setting the new rightmost bit to 1.
+  - If the leftmost bit is 1, add the divisor back to the left half of the quotient/remainder register. The value in the left half should now be the same as before step 2. Finally shift the quotient/remainder register left, setting the new rightmost bit equal to 0.
+4. Repeat steps 2 and 3, up to $$x$$ number of times
+5. Shift the left half of quotient/remainder register right 1 bit.
+
+The division remainder now resides in the leftmost $$x$$ bits of the quotient/remainder register. The quotient now resides in the rightmost $$x$$ bits of the quotient/remainder register.
+
+
 
 
 ### Dealing with Overflow
