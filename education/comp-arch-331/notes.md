@@ -984,10 +984,78 @@ Now for the algorithm:
 
 The division remainder now resides in the leftmost $$x$$ bits of the quotient/remainder register. The quotient now resides in the rightmost $$x$$ bits of the quotient/remainder register.
 
+### Floating Point Representation of Numbers
 
+So we know how to represent positive and negative integers using binary, but what about decimal numbers?
 
+There's no real 'intuitive' way to represent a decimal number using only binary digits, so [IEEE](http://www.ieee.org) made a standard format called **IEEE-754** which specifies how to represent postive and negative decimal numbers using 32 binary digits.
 
-### Dealing with Overflow
+The way we represent a floating point number is with the following formula:
+
+> $$ (-1)^{\text{Sign}} \cdot (1 + \text{Fraction}) \cdot 2^{\text{Exponent} - 127} $$
+
+The question is: What do **Sign**, **Fraction**, and **Exponent** mean in this formula?
+
+Well, **IEEE-754** defines a way in which each bit of a 32 bit sequence defined a decimal (or floating point) number.
+
+An IEEE-754 number has the following format
+
+| Sign | Exponent | Fraction |
+|:----:|:--------:|:--------:|
+| 1 bit| 8 bits | 23 bits |
+
+As we can see if we add the bits for each space together we get $$1 + 8 + 23 = 32$$ bits to represent a floating point number.
+
+Okay, but how exactly do each of these sets of bits help to represent the **Sign**, **Fraction**, and **Exponent**?.
+
+------
+
+#### Sign Bit
+
+We can see from the above formula that we have $$(-1)^\text{Sign}$$. What this tells us is that if the **sign bit is 0**, then the number will **be positive** because $$(-1)^0 = 1$$.
+
+On the other hand if the **sign bit is 1** then we get $$(-1)^1 = -1$$ meaning that the number is going **to be negative**
+
+------
+
+#### Exponent
+
+The exponent is interesting. It allows us to represent very, very small numbers as well as large ones using only 8 binary digits.
+
+The exponent values of $$ 1111\ 1111$$ and $$ 0000\ 0000$$ are both reserved for special cases such as Zero, $$\infty$$, $$NaN$$, etc... They are not used to represent normal numbers.
+
+Because the exponent is made up of 8 bits that means we can express a maximum of $$2^8 = 256 $$ numbers (0 through 255). Judging from the formula this means that we can represent everywhere from $$2^{-126}$$ (because 0 is reserved, 1-127=-126) to $$ 2^{127} $$ (254 - 127=126, because 255 is reserved).
+
+------
+
+#### Fraction
+
+The fraction portion is quite possibly the trickiest of the three to understand. However if we break it down it won't seem as daunting.
+
+The fraction is represented by the rightmost 23 bits of the floating point number. Each place represents a (negative) power of two. Simply add the powers of two together wherever there is a "1" to calculate the fraction.
+
+Below is a table which outlines the values for the fraction 
+
+| 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8| 9 | 10 | 11 | etc.. | 
+| $$2^{-1}$$ | $$2^{-2}$$ | $$2^{-3}$$ | $$2^{-4}$$ | $$2^{-5}$$ | $$2^{-6}$$ | $$2^{-7}$$ | $$2^{-8}$$ | $$2^{-9}$$ | $$2^{-10}$$ | $$2^{-11}$$ | etc... |
+
+Remember that the leftmost fraction bit represents the $$2^{-1}$$ place, where the rightmost represents the $$2^{-23} space$$
+
+So if we were given a 23 bit number to represent a fraction, say: 
+
+$$ 1100\ 0000\ 0000\ 0000\ 0000\ 000 $$
+
+Then the value of the fraction would be:
+
+$$ 1\cdot 2^{-1} + 1\cdot 2^{-2} + 0\cdot 2^{-3} + 0\cdot 2^{-4} + \dots = 0.75$$
+
+------
+
+So in quick summary, The formula to represent a floating point number with **IEEE-754** standard is $$ (-1)^{\text{Sign}} \cdot (1 + \text{Fraction}) \cdot 2^{\text{Exponent} - 127} $$
+
+The **fraction** is a sum of negative powers of two, while the **exponent** field helps represent a power of 2 between $$-126$$ and $$+127$$. The sign bit simply tells us whether or not 
+
+### Dealing with Arithmetic Overflow
 
 Some languages (e.g. C) ignore overflow errors.
 
