@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Computer Architecture 
-keywords: engineering, rutgers, spring 2016, computer, undergraduate, MIPS, qtSpim, computer, organization, nagmeh, karimi, notes, succeed
+keywords: engineering, rutgers, spring 2016, computer, undergraduate, MIPS, qtSpim, computer, organization, nagmeh, karimi, notes, succeed, comparch
 permalink: /education/comp-arch-332/notes/
 mathjax: true
 author: Zac Blanco
