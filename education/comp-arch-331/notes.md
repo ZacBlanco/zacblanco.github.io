@@ -1199,7 +1199,130 @@ The logic for the ALU control is as follows:
 	| AND | $$ 100100 $$  | $$ 0000 $$ |
 	| OR | $$ 100101 $$  | $$ 0001 $$ |
 	| Set on Less Than | $$ 101010 $$  | $$ 0111 $$ |
+
+### Pipelining with MIPS
+
+The best way to increase performance is with pipelining. It allows multiply instructions to use the datapath at a single time and increases the instruction throughput.
+
+I'm not going to go over all the modifications, but a datapath which supports pipelining is displayed below:
+
+![MIPS Datapath](/assets/images/comp-arch/pipelined-processor.png)
+
+However with Pipelining this introduces something called **hazards**. Hazards are errors that can possibly occur if we don't take into account the effects of pipelining.
+
+Example: We load from memory into register R7. We then want to add 5 to R7. In the pipeline, R7 will be loaded at the same time we are adding to R7. But this means we would be adding to the wrong R7 value, so we need to add a **stall** into the pipeline.
+
+**Stalls** basically do what they sound like. They stop everything in the pipeline (for one cycle) in order to let the previous operation complete one more stage in order to update for the next instruciton.
+
+However, we can improve performance even more by introducing instruction forwarding. This reduces the amount of stalls necessary in the processor which makes the datapath even more efficient. We need something called a **forwarding unit** in order to do this. It sends the data back from certain instructions into the earlier stages to be used with newer instructions.
+
+![MIPS Datapath](/assets/images/comp-arch/forwarding-datapath.png)
+
+## Memory Heierarchy and the Cache
+
+So typically trying to retrieve data from the memory takes a long amount of time (Hundreds upon Hundreds of clock cycles). If we directly accessed the memory every time we wanted to load a value from the RAM it would cause programs to take a significantly longer amount of time to execute.
+
+So then how do we avoid accessing the memory every single time we execute a `lw` instruction? We use the **cache**!
+
+The **cache** is an intermediary between the main memory and the registers of the processor. Accessing data from the cache is much, much faster than main memory and help our programs run much quicker.
+
+The downside is that faster cache memory is much more expensive than typical DRAM. This is why on even modern processors there are extremely small amounts (compared to DRAM and Hard disk sizes).
+
+**Storing Data in the Cache**
+
+Because the cache is basically just a much faster, smaller version of main memory, we have to find a method which allows us to map and store different addresses from main memory into the cache.
+
+In this course we will study three main ways of mapping cache locations to main memory.
+
+- Direct Mapping
+- Set Associativity
+- Full Associativity
+
+A directly mapped cache simply uses the modulus operator on the number of blocks in memory, and then maps it to the cache.
+
+Direct Mapping Example:
+
+- Our memory has up to 10,000 byte locations. Our cache holds 20 blocks (numbered 0-19), storing 1 byte of data in each.
+  - To directly map a block we simply mod the block address with the number of cache blocks.
+  - i.e. we want to store memeory block 5454 into the cache, it goes into ($$5454 \% 20 = 14$$) cache block 14.
+
+So we also need to devise a way to tell us whether or not the data in the cache is the data we're looking for, or if the data in the block is even valid.
+
+We accomplish this using **tag** and **valid** bits.
+
+The **valid bit** tells us whether or not data is event present in the current cache block. 1 = data present, 0 = data not present.
+
+The tag bits are then a set of bits which help identify the the memory location for which the data corresponds to. However, we want to use as few bits as possible to do this. So, the _tag_ for each is actually only composed of the first $$n$$ bits of the memory address where
+  - $$n = \text{bits to address of main memory} - \text{bits to address cache blocks} \\ - \text{bits to address every byte in block} $$
+
+We call the data size for each row of the cache the **block size** or the size of the data each block of cache is able to hold.
+
+This **does not** account for the valid or tag bits though.
+
+We should also define **hit**, **miss**, **hit rate**, **miss rate**, and **miss penalty**
+
+- **Hit**: A _hit_ occurs when the data we are searching for appears in some part of the cache.
+- **Miss**: The opposite of a _hit_. When we are searching for data, but it doesn't appear in the cache so we must retrieve the data from main memory.
+- **Hit Rate**: The number of times we get a _hit_ divided by the total number of times we attempt to get data from the cache.
+- **Miss Rate**: The number of times we get a _miss_ divided by the total number of times we attempt to get data from the cache.
+- **Hit Time**: The time it takes to determine if the the search for data is a hit or miss + the time it takes to access the cache data.
+- **Miss Penalty**: The time it takes to retrieve from a lower level memory to access a certain piece of data and deliver it to the processor.
+
+Another thing to note is that:
+
+- $$\text{Hit Rate} = 1 - \text{Miss Rate} $$
+
+We can measure cache performance a few different ways:
+
+$$\frac{\text{Memory Accesses}}{\text{Program}} \times \text{Miss Rate} \times\text{Miss Penalty}$$
+
+$$\frac{\text{Instructions}}{\text{Program}} \times \frac{\text{Misses}}{\text{Instruction}} \times\text{Miss Penalty}$$
+
+There is another metric that is useful to calculate with the cache which is called AMAT, or, **A**verage **M**emory **A**ccess **T**ime.
+
+The formula for AMAT is:
+
+> $$ \text{AMAT} = \text{Hit Time} + \text{Miss Rate}\times\text{Miss Penalty} $$
+
+So on cache misses and hits we also must devise a strategy to determine how and when we update and interact with the cache and main memory.
+
+Strategies on **Cache Hits**:
+
+  - _Write through_: Writes to both the cache and memory
+  - _Write Back_: Write cache only, memory is updated only when the cache entry is removed
+
+Strategies on **Cache Misses**:
+
+  - _No Write Allocate_: Only write to the main memory
+  - _Write Allocate_: Fetch into cache
   
+The most common combinations are:
+
+  - Write through and no write allocate
+  - Write back with write allocate.
+  
+### Virtual Memory
+
+Virtual Memory is a concept very similar to the cache, except that typical DRAM is far too small to hold the information necessary to quickly fetch information for many of the programs. Each process running on an operating system will get assigned a range of DRAM addresses to use.
+
+- In other words, main memory (DRAM) acts as a cache for the secondary storage (Hard disk).
+- This portion is typically managed by the CPU hardware and the Operating System
+- Each program gets a space in the DRAM to store its data. It is protected from modification by any other programs.
+
+- A virtual memory block is called a **page**
+- A virtual memory translation _miss_ is called a **page fault**
+
+When a **page fault** occurs it is millions of clock cycles as a penalty. Typically treated as an exception in the software mechanisms.
+
+The software can help reduce page faults by cleverly deciding which pages to erase or replace in the DRAM.
+
+A **write-back** mechanism ensures that pages which were altered in RAM are saved to the disk before being discarded. A write-through mechanism is just not practical and takes far too long.
+
+The translation mechanism is provided by what we call a **page table**. 
+
+- Each program has it's own **page table** which contains the physical addresses of the pages and is indexed by the virtual page number.
+- Because each program/process has its own page table, _programs can have the same virtual address space_
+
 
 ## Reference
 
