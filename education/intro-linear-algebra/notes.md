@@ -40,7 +40,7 @@ There is a short notation for a matrix which looks like the following
 
 $$
 
-A = (aij)_{m\times n}
+A = (a_{ij})_{m\times n}
 
 $$
 
@@ -48,7 +48,7 @@ but what if we have the expression:
 
 $$
 
-A = (aij)_{m\times n} = B=(bij)_{m\times n}
+A = (a_{ij})_{m\times n} = B=(b_{ij})_{m\times n}
 
 $$
 
@@ -58,17 +58,17 @@ This means that the matrices are equal at values $$(i, j)$$ in each matrix
 
 **Addition**
 
-Given $$A=(aij)_{m\times n}$$ and that $$ B=(bij)_{m\times n}$$
+Given $$A=(a_{ij})_{m\times n}$$ and that $$ B=(b_{ij})_{m\times n}$$
 
 Then when adding two matrices, they must be the same size. As long as they are the same size. You simple add the elements which are in the same position of each matrix,to form the new value in that location in the resultant matrix
 
-So for addition in short notation$$ A + B = (aij + bij)_{m\times n} $$
+So for addition in short notation$$ A + B = (a_{ij} + b_{ij})_{m\times n} $$
 
 **Scalar Multiplication**
 
 In scalar multiplication of a matrix you simply just multiply a scalar quantity by every entry of a matrix. In short notation this would be:
 
-$$ r \cdot A = (r\cdot aij)_{m\times n} $$
+$$ r \cdot A = (r\cdot a_{ij})_{m\times n} $$
 
 Example:
 

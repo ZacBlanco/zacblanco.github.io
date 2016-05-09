@@ -7,9 +7,9 @@ mathjax: true
 author: Zac Blanco
 ---
 
-### Chapter 1 - Matrices, Vectors, and Systems of Linear Equations
+## Chapter 1 - Matrices, Vectors, and Systems of Linear Equations
 
-Given a set of equations in the form of $$a_11x_1 + a_12x_2 + \dots + a_1nx_n = b_1$$ for $$m$$ equations.
+Given a set of equations in the form of $$a_{11}x_1 + a_{12}x_2 + \dots + a_{1n}x_n = b_1$$ for $$m$$ equations.
 
 Now in a system there are three different possible outcomes for the solutions of the system $$Ax = b$$
 
@@ -39,7 +39,7 @@ The three types of operations are:
 2. Swapping two rows
 3. Multiplying a row by a constant
 
-### Cahpter 2 - Matrices
+## Chapter 2 - Matrices
 
 Topics:
 
@@ -53,9 +53,30 @@ Use the augmented matrix of A and the identity matrix, perform elementary row op
 
 And inverse matrix is a matrix such that all of the diagonal entries have a value of 1, and all other entries are 0. The transpose of this matrix is the same. $$I_n = I_n^T$$
 
-LU Decomposition
+### LU Decomposition
 
-### Chapter 3 Determinants
+LU Decomposition is a way to get the upper and lower triangles of a matrix.
+
+Obtaining the Upper triangle is simple via the elementary row operations. We simply reduce the matrix until we get to a row-echelon form. However it is important to **make note of the operations required** to get to the echelon form.
+
+Now, to get the lower (L) matrix first, start with an identity matrix.
+
+To get the lower triangle simply perform those same operations on the original matrix, but in the **opposite order** and **negating** the operation on the first row.
+
+Ex: 
+
+If we needed 2 operations
+
+1. $$-3r_1 + r_2 \rightarrow r_2$$
+2. $$r_2 + r_3 \rightarrow r_3$$
+
+Then the operations for the Lower (L) matrix are:
+
+1. $$-r_2 + r_3 \rightarrow r_3$$
+2. $$3r_1 + r_2 \rightarrow r_2$$
+
+
+## Chapter 3 Determinants
 
 Know how to calculate determinants. 
 
@@ -64,12 +85,19 @@ Know how to calculate determinants.
 
 Properties of Determinant
 
-
 - $$ det(A) \neq 0 \rightarrow \text{ A is invertible }$$
 - $$ det(A) = det(A^T) $$
 - $$ det(AB) = det(A)\cdot det(B) $$
 
-### Chapter 4 - Subspaces
+Given a 2x2 matrix with the values:
+
+$$A =  \begin{bmatrix} a & b \\ c & d \\ \end{bmatrix}$$
+
+The inverse of matrix $$A$$ given by $$A^{-1}$$ is:
+
+$$A^{-1} =  \frac{1}{det(A)} \begin{bmatrix} d & -b \\ -c & a \\ \end{bmatrix} $$
+
+## Chapter 4 - Subspaces
 
 An area less than $$R^n$$, such that it follows the rules that for any two vectors $$u$$ and $$v$$ and any scalar $$r$$
 
@@ -87,23 +115,25 @@ The vectors in a basis are all linearly independent.
 Other types of dimensions
 
 - $$ Col(A) = Span\{u_1, \dots , u_k\} $$
-- $$ Null(A) = \{x\in R^n\ & Ax = 0}
-- $$ dim(Col(A)) rank(A) $$
-- $$ dim(Null(A)) = n - rank(A) $$
+- $$ Null(A) = \{x\in R^n\ ;Ax = 0\} $$
+- $$ dim(Col(A)) = rank(A) $$
+- $$ dim(Null(A)) = n - rank(A) = \text{nullity} (A)$$
 - Orthogonal Complement of W
   - $$dim(W) + dim(W^\bot) = n $$
   
- ### Chapter 5 - Eigenvalues, Eigenvectors, Diagonalization
+## Chapter 5 - Eigenvalues, Eigenvectors, Diagonalization
  
- We can determine eigenvectors by the equation $$Av = \lambda v$$ where v is an eigenvector and $\lambda$$ is an eigen value of the eigenvector.
+We can determine eigenvectors by the equation $$Av = \lambda v$$ where v is an eigenvector and $$\lambda$$ is an eigen value of the eigenvector.
  
- Diagonalizable Matrices
+Diagonalizable Matrices
  
- 1. Solve $$A-\lambda I_n = 0$$
- 2. Solve $$(A-\lambda I_n)x = 0 $$
- 3. Get P and D; $$P = \[x_1 \dots x_k \]$$ and D is diagonal matrix of eigenvalues
+1. Solve $$A-\lambda I_n = 0$$
+2. Solve $$(A-\lambda I_n)x = 0 $$
+3. Get P and D; $$P = [ x_1 \dots x_k ]$$ and D is diagonal matrix of eigenvalues
  
- ### Chapter 6 - (Work in Progress)
+## Chapter 6 - (Work in Progress)
+
+
  
  
 
