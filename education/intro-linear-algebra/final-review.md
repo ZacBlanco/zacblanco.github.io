@@ -88,6 +88,11 @@ Properties of Determinant
 - $$ det(A) \neq 0 \rightarrow \text{ A is invertible }$$
 - $$ det(A) = det(A^T) $$
 - $$ det(AB) = det(A)\cdot det(B) $$
+- $$ \text{det}(A^{-1}) = \frac{1}{\text{det}(A)} $$
+
+Given an Upper (U) or Lower (L) triangular matrix, the determinant is simply 
+
+$$ \text{det}(A) = u_{11}u_{22}u_{33}\dots u_{nn} $$
 
 Given a 2x2 matrix with the values:
 
@@ -96,6 +101,26 @@ $$A =  \begin{bmatrix} a & b \\ c & d \\ \end{bmatrix}$$
 The inverse of matrix $$A$$ given by $$A^{-1}$$ is:
 
 $$A^{-1} =  \frac{1}{det(A)} \begin{bmatrix} d & -b \\ -c & a \\ \end{bmatrix} $$
+
+where $$\text{det}(A) = ad - bc $$
+
+### Geometric Applications of the Determinant
+
+Given 2 vectors, $$ u = \begin{bmatrix} u_1 \\ u_2 \\ \end{bmatrix} $$, $$ v = \begin{bmatrix} v_1 \\ v_2 \\ \end{bmatrix} $$ and $$A = [u\ v]$$
+
+The **area of a parallelogram** which is determined by $$u$$ and $$v$$ is given by **$$\vert\text{det}(A)\vert$$**
+
+Similarly, given 3 vectors: 
+
+$$ u = \begin{bmatrix} u_1 \\ u_2 \\ u_3 \\\end{bmatrix} $$
+
+$$ v = \begin{bmatrix} v_1 \\ v_2 \\ v_3 \\ \end{bmatrix} $$
+
+$$ w = \begin{bmatrix} w_1 \\ w_2 \\ w_3 \\ \end{bmatrix} $$
+
+The **volume of the parallelepiped** created by the 3 vectors $$u$$, $$v$$, and $$w$$ is equal to $$\vert\text{det}(A)\vert$$, where $$A = [u\ v\ w]$$
+
+
 
 ## Chapter 4 - Subspaces
 
@@ -121,6 +146,26 @@ Other types of dimensions
 - Orthogonal Complement of W
   - $$dim(W) + dim(W^\bot) = n $$
   
+A few extra definitions:
+
+- **Null Space** of A is the solution set of $$Ax = 0$$, denoted by $$\text{Null}(A) $$
+- **Column Space** of a matrix, A, is the _span_ of the columns of matrix A
+
+
+**Basis**
+
+A basis is the smallest set of generators for a certain type of set.
+
+Example:
+
+Given a $$2\times 9$$ sized matrix, it is more than likely a single column is a linear combination of the other columns. That is in other words, one of the columns of the matrix can be defined by the equation $$c_1u_1 + c_2u_2 + \dots + c_iu_i$$.
+
+A **basis** for the column space is the smallest number of columns which are linearly independent (none of the columns are linear combinations of one another).
+
+The **dimension** of a basis is simply the number of vectors which are included in the basis.
+
+
+
 ## Chapter 5 - Eigenvalues, Eigenvectors, Diagonalization
  
 We can determine eigenvectors by the equation $$Av = \lambda v$$ where v is an eigenvector and $$\lambda$$ is an eigen value of the eigenvector.
@@ -130,8 +175,15 @@ Diagonalizable Matrices
 1. Solve $$A-\lambda I_n = 0$$
 2. Solve $$(A-\lambda I_n)x = 0 $$
 3. Get P and D; $$P = [ x_1 \dots x_k ]$$ and D is diagonal matrix of eigenvalues
+
+### Solving Systems of Differential Equations
+
+1. Find the eigenvalues of the matrix which are the coefficients for the different $$y$$ functions
+2. Let P be a matrix whose columns consist of basis vectors for each eigenspace of A, and let D be the diagonal matrix whose diagonal entries are the eigenvalues of A corresponding to the respective columns of P.
+3. Solve the system $$z' = Dz$$
+4. The solution to the original system is $$y = Pz$$
  
-## Chapter 6 - (Work in Progress)
+## Chapter 6 - Orthogonality
 
 
  
