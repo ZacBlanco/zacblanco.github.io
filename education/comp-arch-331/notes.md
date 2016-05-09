@@ -1176,6 +1176,30 @@ Some observations about these two formats:
 - The address of the register to be written is in **two** places. Bits place `rt` from bits 16-20 in lw instructions and then`rd` in bits 11-15 for R-type instructions
   - This explains the RegDst instruction which tells us whether we read from 11-15 or 16-20
 
+**ALU Control Lines**
+
+In order to send the right codes to the ALU for the ALU operation the ALU Control must utilize `funct` bits from the r-type instructions. 
+
+The logic for the ALU control is as follows:
+
+1. If the ALUOp is 00 (load/store word), then the ALU function is ADD, and the ALU control is the ALUOp + `10` $$\rightarrow 0010$$
+2. If the ALUOp is $$01$$ then it is a branch equal intruction. The operation should be _subtract_. The ALU Control is the ALUOp concatenated with $$10\ \rightarrow 0110$$
+3. If the ALUOp is $$10$$ then we need to look at the `funct` field from the 0-5 bits of the instruction.
+  - The following table shows the `funct` fields for typical R-Type instructions
+  - | Operation | `funct` |
+  	| Add | $$ 100000 $$  |
+	| Subtract | $$ 100010 $$  |
+	| AND | $$ 100100 $$  |
+	| OR | $$ 100101 $$  |
+	| Set on Less Than | $$ 101010 $$  |
+  - Given each of the `funct` fields the ALU Control derives the following table of inputs for the ALU
+   - | Operation | `funct` | ALU Control Lines | 
+  	| Add | $$ 100000 $$  | $$ 0010 $$ |
+	| Subtract | $$ 100010 $$  | $$ 0110 $$ |
+	| AND | $$ 100100 $$  | $$ 0000 $$ |
+	| OR | $$ 100101 $$  | $$ 0001 $$ |
+	| Set on Less Than | $$ 101010 $$  | $$ 0111 $$ |
+  
 
 ## Reference
 
