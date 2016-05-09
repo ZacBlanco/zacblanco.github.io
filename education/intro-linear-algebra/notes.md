@@ -748,6 +748,41 @@ For an $$n\times n$$ matrix A:
 - There must be at least $$n$$ distinct **eigenvalues**
 - For each **eigenvalue**, $$\lambda$$ of A, the dimension of the corresponding eigenspace which is equal to $$n-rank(A-\lambda I_n)$$ is equal to the multiplicity of $$\lambda$$
 
+## Chapter 6 - Orthogonality
+
+The **norm** of a vector, $$v$$ is: 
+
+$$ \lVert v \rVert = \sqrt{v_1^2 + v_2^2 +\dots + v_n^2} $$
+
+A vector with a **norm** of 1 is called a **unit vector**
+
+The distance between two vectors is simply the norm of the difference of the two vectors.
+
+The distance between $$u$$ and $$v$$ is $$\lVert u - v \rVert $$
+
+We also define the **dot product** of any two n-length vectors to be:
+
+$$ u\cdot v = u_1v_1 + u_2v_2 + \dots + u_nv_n $$
+
+If the **dot product** is **zero**, then the vectors are said to be **orthogonal**
+
+You might have heard pythagorean theorem before, with respect to finding the sides of a triangle. Well, it turns out that the formula holds as well for any vectors of size $$n$$
+
+$$\lVert u + v \rVert^2 = \lVert u \rVert^2 + \lVert v \rVert^2 $$
+
+The **Cauchy-Schwarz Inequality**
+
+For any two vectors $$u$$ and $$v$$, it holds true that:
+
+$$\vert u\cdot v \vert \leq \lVert u \rVert \cdot \lVert v \rVert $$
+
+In other words, the absolute value of the dot product, must always be equal to or less than the norm of both vectors multiplied together.
+
+### Orthogonal Sets of Vectors
+
+Any set of non-zero vectors is always going to be linearly independent.
+
+
 
 
 
