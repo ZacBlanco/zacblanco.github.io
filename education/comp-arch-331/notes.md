@@ -7,6 +7,7 @@ mathjax: true
 author: Zac Blanco
 ---
 
+
 These are notes for the version of the class which is being taught by professor Naghmeh Karimi in the Spring of 2016.
 
 - Textbook: D.A. Patterson and J.L. Hennessy, Computer Organization and Design: The Hardware/Software Interface - 5th edition
@@ -940,7 +941,7 @@ We can first define a binary number **A**. Fill the leftmost bits of **A** with 
 
 Next, we should define the binary number **S** which is of size $$x + y + 1$$. You should fill in leftmost, $$x$$ number of bits with the value of $$-m$$. In other words: invert the value of $$m$$ and then put that binary representation into the leftmost bits of $$S$$. The rest should be zeroes
 
-Last, we should define the number **P*. **P** is of size $$x + y + 1$$ as well. However, we want to fill the most significant (leftmost) $$x$$ bits with zeroes. That is The leftmost bits of **P** should all be zero. The next $$y$$ bits should be the value of $$n$$. The rightmost bit should be a zero.
+Last, we should define the number **P**. **P** is of size $$x + y + 1$$ as well. However, we want to fill the most significant (leftmost) $$x$$ bits with zeroes. That is The leftmost bits of **P** should all be zero. The next $$y$$ bits should be the value of $$n$$. The rightmost bit should be a zero.
 
 Example:
 
@@ -1006,7 +1007,7 @@ An IEEE-754 number has the following format
 
 As we can see if we add the bits for each space together we get $$1 + 8 + 23 = 32$$ bits to represent a floating point number.
 
-Okay, but how exactly do each of these sets of bits help to represent the **Sign**, **Fraction**, and **Exponent**?.
+Okay, but how exactly do each of these sets of bits help to represent the **Sign**, **Fraction**, and **Exponent**?
 
 ------
 
@@ -1022,7 +1023,7 @@ On the other hand if the **sign bit is 1** then we get $$(-1)^1 = -1$$ meaning t
 
 The exponent is interesting. It allows us to represent very, very small numbers as well as large ones using only 8 binary digits.
 
-The exponent values of $$ 1111\ 1111$$ and $$ 0000\ 0000$$ are both reserved for special cases such as Zero, $$\infty$$, $$NaN$$, etc... They are not used to represent normal numbers.
+The exponent values of $$ 1111\ 1111$$ and $$ 0000\ 0000$$ are both reserved for special cases such as Zero, $$\infty$$, $$NaN$$, etc... They are not used to represent normal numbers. The number we subtract from the exponent (127) is called the **bias**
 
 Because the exponent is made up of 8 bits that means we can express a maximum of $$2^8 = 256 $$ numbers (0 through 255). Judging from the formula this means that we can represent everywhere from $$2^{-126}$$ (because 0 is reserved, 1-127=-126) to $$ 2^{127} $$ (254 - 127=126, because 255 is reserved).
 
@@ -1039,7 +1040,7 @@ Below is a table which outlines the values for the fraction
 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8| 9 | 10 | 11 | etc.. | 
 | $$2^{-1}$$ | $$2^{-2}$$ | $$2^{-3}$$ | $$2^{-4}$$ | $$2^{-5}$$ | $$2^{-6}$$ | $$2^{-7}$$ | $$2^{-8}$$ | $$2^{-9}$$ | $$2^{-10}$$ | $$2^{-11}$$ | etc... |
 
-Remember that the leftmost fraction bit represents the $$2^{-1}$$ place, where the rightmost represents the $$2^{-23} space$$
+Remember that the leftmost fraction bit represents the $$2^{-1}$$ place, where the rightmost represents the $$2^{-23}$$ place
 
 So if we were given a 23 bit number to represent a fraction, say: 
 
@@ -1051,22 +1052,139 @@ $$ 1\cdot 2^{-1} + 1\cdot 2^{-2} + 0\cdot 2^{-3} + 0\cdot 2^{-4} + \dots = 0.75$
 
 ------
 
-So in quick summary, The formula to represent a floating point number with **IEEE-754** standard is $$ (-1)^{\text{Sign}} \cdot (1 + \text{Fraction}) \cdot 2^{\text{Exponent} - 127} $$
+**Summary**
 
-The **fraction** is a sum of negative powers of two, while the **exponent** field helps represent a power of 2 between $$-126$$ and $$+127$$. The sign bit simply tells us whether or not 
+So in quick summary, The formula to represent a floating point number with **IEEE-754** standard is:
+
+$$ (-1)^{\text{Sign}} \cdot (1 + \text{Fraction}) \cdot 2^{\text{Exponent} - 127} $$
+
+The **fraction** is a sum of negative powers of two, while the **exponent** field helps represent a power of 2 between $$-126$$ and $$+127$$. The sign bit simply tells us whether or not the value is positive or negative.
 
 ### Dealing with Arithmetic Overflow
 
 Some languages (e.g. C) ignore overflow errors.
 
-Some other languages (Ada, or Fortran) will raise an exception
+Some other languages (Ada, or Fortran) will raise an exception.
 
-## MIPS Datapath
+MIPS handles overflow by attempting to raise an exception. MIPS needs special bits of code called exception handlers to do this.
+
+Using a full single-bit adder we can determine whether there is overflow by looking at the most significant adder (leftmost bit in MIPS).
+
+We must XOR the carry-in and carry-out signals. The result of the XOR will tell us whether there was overflow (1 = true, 0 = false).
+
+| Carry-In | Carry-Out | (Carry-In) XOR (Carry-Out) | Overflow |
+| 1 | 1 | 0 | No |
+| 1 | 0 | 1 | Yes |
+| 0 | 1 | 1 | Yes |
+| 0 | 0 | 0 | No |
+
+## The Processor
+
+A processor's clock determines when we can read and write signals. Typically a clock signal will look something like the following: 
+
+![](/assets/images/comp-arch/clock-signal.png)
+
+We can see from the image how cycle time is defined. If we wanted the clock rate (frequency) of the clock, then we simply divide 1 by the clock cycle time: $$\text{Frequency} = \frac{1}{\text{Cycle Time}} $$
+
+Elements will perform functions on each rising and falling edge of the clock. Performing operations on each rising and falling edge helps the processor perform more operations in a smaller amount of time.
+
+### The Datapath
+
+#### Instruction Fetch and The PC Register
+
+To execute instructions in a program there are a few different stages. The first is the **IF** or **Instruction Fetch** Stage. This stage retrieves the instructions from the instruction memory.
+
+To retrieve instructions from certain locations in memory we use a register called the **PC** or, Program Counter. This register always holds the byte-address location of the next instruction to be executed.
+
+After one instruction is executed, the PC is immediately incremented by 4, and then passed back for the next instruction (as long as there is no jump or branch statements).
+
+#### Instruction Decoding
+
+After the instruction is fetched from the instruction memory, it goes onto the next stage of the datapath which is **ID** or **Instruction Decode**. The decode stage helps to split up the instruction's data so that we can read the registers data and certain values are passed to the control unit.
+
+Different intstructions are formatted differently, so we should know the Different formats.
+
+For **R-Type** instructions, the format is the following
+
+| Bits | 31-26 | 25-21 | 20-16 | 15-11 | 10 - 6 | 5-0 |
+| Description | op | rs | rt | rd |shamt | funct | 
+
+Load/Store/Branch operations
+
+| Bits | 31-26 | 25-21 | 20-16 | 15-0 |
+| Description | op | rs | rt | address offset | 
+
+* The difference between the load/store and branch operations is that the address offset of a load/store is for a location in memory, while for the branch instruction it is an instruction memory location.
+
+There's actually something special going on when executing a branch statement. The new PC value is updated a bit differently than you might think.
+
+Given an unconditional jump instruction, there are 26 bits for the new PC address. To calculate this new PC value, we:
+
+1. Sign extend the address to 32 bits.
+2. Shift this value left two bits (putting $$00$$ in rightmost place)
+3. Concatenate this value to the 4 leftmost bits of the current PC.
+
+This will result in the new PC for the next instruction. However, note that we're only able to have a maximum jump of $$2^26$$
+
+### Full MIPS datapath
+
+![MIPS Datapath](/assets/images/comp-arch/mips-datapath-slides.png)
+
+Note the blue lines which go into some of the multiplexers and ALU in this datapath. They specify which data should be selected along certain portions of the datapath
+
+It's important to note though that no two instructions could "live" inside this datapath at once. We wouldn't be able to immediately fetch and decode an R-Type instruction after a load/store instruction is fetched/decoded executed, etc.. We would need to wait until the entire load store finished and data was written back into memory (or loaded into a register) before the next instruction could execute.
+
+This is actually very inefficient because this means parts of the datapath end up being unused during the entire process of running an instruction.
+
+Now let's take a look at the different control lines.
+
+There are actually 8 different control lines. They are:
+
+- RegDst
+  - Tells whether or not the destination register resides in bits 20:16 (control value 0) or bits 15:11 (control value 1).
+- Branch
+  - Tlles us whether or not an instruction is a branch instruction. AND'd with the zero flag from the ALU
+- MemRead
+  - Tells us whether we need to read from memory or not for the instruction. 1 = true, 0 = false.
+- MemtoReg
+  - Are we moving a piece of data from the memory into a register? 1 = true, 0 = false
+- ALUOp
+  - ALUOp is a 2  bit control which comes from the main control unit.  Load/store instructions result in 00. Branch equal instructions have an Opcode of 01. R-types have a code of 10. This code is passed into the ALU control input which uses the Funct field form R type instructions. More on this later.
+- MemWrite
+  - Do we need to write to memory? 1 = true, 0 = false
+- ALUSrc
+  - Does the 2nd operand come from an immediate value? Or is it a register value? 1 - immediate, 0 = register.
+- RegWrite
+  - Do we write to a register with this instruction? 1 = true, 0 = false
+
+Below is a quick table for the instruction bit layout
+
+R-Type
+
+| 31-26 | 25-21 | 20-16 | 15-11 | 10 - 6 | 5-0 |
+| op | rs | rt | rd |shamt | funct | 
+
+I-Type
+
+| 31-26 | 25-21 | 20-16 | 15-0 |
+| op | rs | rt | address offset | 
+
+Some observations about these two formats:
+
+- Op field is always bits 26-31
+- The registers we always read from are specified by `rs` and `rt` which are in bits 16-20 and 21-25.
+- The address of the register to be written is in **two** places. Bits place `rt` from bits 16-20 in lw instructions and then`rd` in bits 11-15 for R-type instructions
+  - This explains the RegDst instruction which tells us whether we read from 11-15 or 16-20
+
+
+## Reference
+
+### MIPS Datapath
 
 ![MIPS Datapath](/assets/images/comp-arch/mips-datapath.png)
 
 
-## Datapath and Control Line Signals
+### Datapath and Control Line Signals
 
 ![ALU Control lines](/assets/images/comp-arch/alu-control-lines.png)
 
@@ -1084,9 +1202,10 @@ Some other languages (Ada, or Fortran) will raise an exception
 | 10 | Determined by funct field (R-type instruction) |
 | 11 | Not used |
 
-## Pipelined MIPS Datapath
+### Pipelined MIPS Datapath
 
 ![MIPS Datapath](/assets/images/comp-arch/pipelined-processor.png)
+
 
 
 
