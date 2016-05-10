@@ -790,7 +790,7 @@ $$ v_1 = u_1 $$
 
 $$ v_2 = u_2 - \frac{u_2\cdot v_1}{\lVert v_1 \rVert^2}v_1 $$
 
-$$v v_3 = u_3 - \frac{u_3\cdot v_1}{\lVert v_1 \rVert^2}v_1 - \frac{u_3\cdot v_2}{\lVert v_2 \rVert^2}v_2 $$
+$$v_3 = u_3 - \frac{u_3\cdot v_1}{\lVert v_1 \rVert^2}v_1 - \frac{u_3\cdot v_2}{\lVert v_2 \rVert^2}v_2 $$
 
 $$\dots$$
 
@@ -798,12 +798,55 @@ The general formula for the k-th vector is:
 
 $$ v_k = u_k - \frac{u_k\cdot v_1}{\lVert v_1 \rVert^2}v_1 - \frac{u_k\cdot v_2}{\lVert v_2 \rVert^2}v_2 - \dots - \frac{u_k\cdot v_k}{\lVert v_k \rVert^2}v_k $$
 
+### Orthogonal Complements
 
+An **orthogonal complement** of set of vectors is a vector, $$v$$ in which for all $$u$$ in a set, $$u\cdot v = 0$$
 
+In other words, it is solution to $$Ax = 0$$, or the **null space** of the matrix obtained from all concatenating the column vectors together.
 
+> $$ W^\perp = (\text{Row}(A))^\perp = \text{Null}(A) $$
 
+Similarly, if we were wanted the orthogonal basis for the transpose of the set of vectors, $$A^T$$ Then it is simply:
 
+> $$ (\text{Col}(A))^\perp = (\text{Row}(A)^T)^\perp = \text{Null}(A^T)$$
 
+It is simply the Null space of the transpose of the matrix.
+
+A quick note: **The dimension of a subsapce $$W$$ and its orthogonal complement $$W^\perp$$ sum to equal $$n$$**.
+
+### Orthogonal Projection Matrix
+
+An orthogonal projection is denoted by $$P_W$$. The vectors of $$P_W$$ are the orthogonal projects onto the subspace $$W$$
+
+$$P_W$$ is defined as:
+
+> $$ P_W = C(C^TC)^{-1}C^T $$
+
+$$C$$ a matrix with a set of columns whose span is the subspace $$W$$
+
+Using $$P_W$$ you can also get the orthogonal projection $$w$$ of any vector $$v$$ onto the subspace $$W$$ by simple using the formula:
+
+$$ w = P_W u $$
+
+### Least squares Regression Line
+
+Given $$n$$ data points and variables, $$x$$, and $$y$$, we can find the coefficients for the least-squared regression line by the formula:
+
+> $$ \begin{bmatrix} a_0 \\ a_1 \\ a_2 \\ \end{bmatrix} = (C^TC)^{-1}C^Ty $$
+
+Where the matrix $$C = [v_1\ v_2\ v_3]$$ for quadratic lines and $$C = [v_1\ v_2]$$ for linear lines.
+
+The $$v$$ vectors are:
+
+$$v_1 = [1\ 1\ \dots 1]^T $$
+
+$$v_2 = [x_1\ x_2\ \dots x_n]^T $$
+
+$$v_3 = [x_1^2\ x_2^2\ \dots x_n^2]^T $$
+
+- $$a_0$$ always represents a constant
+- $$a_1$$ is the $$x$$ coefficient
+- $$a_2$$ is the $$x^2$$ coefficient
 
 
 
