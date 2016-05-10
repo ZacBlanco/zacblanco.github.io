@@ -275,6 +275,136 @@ Example: "The sum of two positive integers is always positive"
 
 Note that if we could also simply just change the domain to be all positive integers instead of specifying x and y being greater than 0.
 
+## Relations
+
+Given sets $$A$$ and $$B$$ each with a finite number of elements.
+
+A **binary relation** from A to B is _always_ a subset of $$A\times B$$.
+
+$$A\times B$$ is the set which contains all unique combinations of pairs of elements from $$A$$ and $$B$$
+
+An example of a relation:
+
+Given a set $$A$$ of all students in a school. and $$B$$ is the set of all courses offered. Then one example of a relation could be the binary relation of all students enrolled in Calculus 1
+
+$$ R = \{(\text{Bob}, \text{Calc 1}), (\text{Jen}, \text{Calc 1}), (\text{Sydney}, \text{Calc 1}) \}$$
+
+The above is an example relation, $$R$$ which represents the students currently enrolled in calculus 1.
+
+### Functions as Relations
+
+Recall that a function defined as $$f$$ on a set $$A$$ to a set $$B$$ assigns one element from $$B$$ to each element of $$A$$
+
+However, relations are less rigid than functions and they can define many more _relations_ on two sets than a function can.
+
+### Relations on a Set
+
+> A **relation on a set** , say $$A$$, is a relation from $$A$$ to $$A$$.
+
+In other words the relation on a set $$A$$ is a subset of $$A\times A$$
+
+### Properties of Relations on Sets
+
+
+**Reflexive Relations**
+
+> A relation, R, on a set $$A$$ is called **reflexive** if $$(a, a) \in R$$ for every element $$a \in A$$
+
+**Symmetric Relations**
+
+> A relation $$R$$ on a set $$A$$ is called **symmetric** if $$(b, a) \in R$$ whenever there is a pair $$(a, b)\in R$$ for all **a** and **b** in $$A$$
+
+**Antisymmetric Relation**
+
+> A relation is **antisymmetric** if for $$(a, b) \in R$$ where $$a\neq b$$ implies that $$(b, a) \not\in R$$
+
+
+Using quantifiers, the formal definitions:
+
+- **Symmetric** is: $$\forall a\forall b ((a, b) \in R \implies (b, a)\in R)$$
+- **Antisymmetric** is: $$\forall a\forall b ((a, b) \in R \land (b, a)\in R \implies (a = b))$$
+
+
+**Transitive Relations**
+
+> A relation $$R$$ on a set $$A$$ is called _transitive_ if whenever $$(a, b) \in R$$ and $$(b, c)\in R$$, then $$(a, c) \in R$$ for all $$a, b, c \in A$$
+
+### Combining Relations
+
+Because relations of two sets (A and B, or A, A) are simply subsets of the cross product of the two sets ($$A\times B$$ or $$A\times B$$). Any two relations can be combined to form another relation.
+
+**Composite Relations**
+
+> Let $$R$$ be a relation from a set $$A$$ to a set $$B$$ and $$S$$ is a relation from $$B$$ to a set $$C$$. The _composite_ of $$R$$ and $$S$$ is the relation consisting of ordered pairs $$(a, c)$$ where $$a\in A$$ and $$c\in C$$, and for which there exists an element $$b\in B$$ such that $$(a, b) \in R$$ and $$(b, c)\in S$$. We denote the composite of $$R$$ and $$S$$ by $$S \circ R$$
+
+Example: 
+
+If $$(1, 0) \in R$$ and $$(0, 5) \in S$$ then $$(1, 5) \in S \circ R$$
+
+**Powers With Relations**
+
+> Given $$R$$ is a relation on a set $$A$$. The powers of $$R^n$$, $$n = 1, 2, 3\dots$$ are defied recursively by $$R^1 = R$$ and that $$R^{n+1} = R^n \circ R$$
+
+**Transitivity Theorem**
+
+> The relation $$R$$ on a set $$A$$ is transitive if and only if $$R^n \subset R$$ for $$n = 1, 2, 3\dots$$ 
+
+### Representing Relations
+
+**Zero-One Matrices**
+
+One way to represent a relation is with an $$n\times n$$ matrix.
+
+The $$n\times n$$ matrix simply has the following properties for each $$i, j$$ entry $$m_{i,j}$$:
+
+$$ m_{ij} = \begin{cases} 1 \text{ if } (a_i, b_j) \in R \\ 0 \text{ if } (a_i, b_j) \not\in R \end{cases}$$
+
+
+**Directed Graphs (Digraphs)**
+
+A _directed graph_, or _digraph_ consists of a set of $$V$$ vertices together with a set $$E$$ of ordered pairs of elements of $$V$$ called _edges_. The vertex $$a$$ is called the _initial vertex_ of the edge $$(a, b)$$. The vertex $$b$$ is called the _terminal vertex_ of the edge.
+
+### Closures
+
+The **closure** of a relation $$R$$ with respect to a certain property, P, is the relation obtained by adding the minimum number of ordered pairs to R to obtain the property, P.
+
+In terms of a digraph representation of R:
+
+- To find a reflexive closure, add loops for $$(a, a) \in R$$
+- To find the symmetric closure, add arcs in the opposite direction
+- To find the transitive closure, if there is a path from a to b, add an arc from b to c.
+
+## Power Set
+
+The power set is an interesting concept. 
+
+The **power set** is a _set of all subsets_ from a specific set, say, $$A$$.
+
+The cardinality of the power set is $$2^n$$ where $$n$$ is the number of elements within the set.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
