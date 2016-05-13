@@ -25,7 +25,7 @@ $$
 
 $$
 
-We can see here that rows are numbered from 1 to $$m$$. and that we have rows from 1 to $$n$$.
+We can see here that rows are numbered from 1 to $$m$$. and that we have columns from 1 to $$n$$.
 
 Normally we say that a matric will be $$m\times n$$ in size where **m denotes rows** and **n denotes colummns**.
 
@@ -816,7 +816,7 @@ A quick note: **The dimension of a subsapce $$W$$ and its orthogonal complement 
 
 ### Orthogonal Projection Matrix
 
-An orthogonal projection is denoted by $$P_W$$. The vectors of $$P_W$$ are the orthogonal projects onto the subspace $$W$$
+An orthogonal projection matrix is denoted by $$P_W$$.
 
 $$P_W$$ is defined as:
 
@@ -832,7 +832,7 @@ $$ w = P_W u $$
 
 Given $$n$$ data points and variables, $$x$$, and $$y$$, we can find the coefficients for the least-squared regression line by the formula:
 
-> $$ \begin{bmatrix} a_0 \\ a_1 \\ a_2 \\ \end{bmatrix} = (C^TC)^{-1}C^Ty $$
+> $$ \begin{bmatrix} a_0 \\ a_1 \\ a_2 \\ \end{bmatrix} = (C^TC)^{-1}C^Ty \text{ or } \begin{bmatrix} a_0 \\ a_1 \\ \end{bmatrix} = (C^TC)^{-1}C^Ty$$
 
 Where the matrix $$C = [v_1\ v_2\ v_3]$$ for quadratic lines and $$C = [v_1\ v_2]$$ for linear lines.
 
