@@ -43,7 +43,7 @@ My GitHub username is "zacblanco". Thus, my repository name is "zacblanco.github
 
 To create the new repository head to your user account page on GitHub and click the **New** button under the repositories tab.
 
-![New Repo Button](/assets/images/full-website-guide/new-repo.png)
+![New Repo Button](/assets/images/full-website-guide/new-repo.PNG)
 
 <a name="jekyll-initialization"></a>
 
@@ -59,11 +59,11 @@ Make note of this location as you'll need it soon.
 
 Now open up the GitHub desktop client and clone your newly created repository
 
-![New Repo Button](/assets/images/full-website-guide/clone-repo.png)
+![New Repo Button](/assets/images/full-website-guide/clone-repo.PNG)
 
 After finishing the clone it should now appear in your desktop client.
 
-![repo-in-client](/assets/images/full-website-guide/repo-in-client.png)
+![repo-in-client](/assets/images/full-website-guide/repo-in-client.PNG)
 
 Once you see it in the sidebar, you'll need to open up a terminal or command prompt window (depending on whether you're using OS X/Linux or Windows).
 
@@ -81,7 +81,7 @@ Congrats! The site should now be initialized.
 
 Once you've intialized the site open up the GitHub desktop client. You should see a list of changes similar to the following:
 
-![repo-in-client](/assets/images/full-website-guide/commit-initialization.png)
+![repo-in-client](/assets/images/full-website-guide/commit-initialization.PNG)
 
 You should then do the following things:
 
@@ -142,7 +142,7 @@ Use your terminal and navigate into your **username.github.io** directory and ru
 Jekyll will now try to build your site and serve it locally. You can access it (only on your computer) with the address [http://127.0.0.1:4000](http://127.0.0.1:4000)
 
 
-![Site Customization Example](/assets/images/full-website-guide/example-customization.png)
+![Site Customization Example](/assets/images/full-website-guide/example-customization.PNG)
 
 The last thing you should do here is look in the `_posts` folder and delete the pre-generated posts that are in there. However, do make note of the metadata which is at the top of the file. You'll need something similar to it later.
 
