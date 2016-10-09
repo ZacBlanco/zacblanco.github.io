@@ -33,11 +33,11 @@ The courses below are organized by the order in which I took them at Rutgers Uni
   - [(01:198:205) - Discrete Mathematics](discrete-math/)
   - [(14:332:226) - Probability and Random Processes](probability-random-processes/)
   - [(01:640:250) - Intro to Linear Algebra](intro-linear-algebra/)
-  
+
 **Junior Year Courses**
 
 - Fall
-  - (14:332:231) - Digital Logic Design
-  - (14:332:345) - Linear Systems and Signals
+  - [(14:332:231) - Digital Logic Design](digital-logic-design/)
+  - [(14:332:345) - Linear Systems and Signals](linear-systems-signals/)
   - (14:332:361) - Electronic Devices
   - (01:198:214) - Systems Programming

@@ -1,6 +1,116 @@
+---
+layout: page
+title: Linear Systems and Signals Notes
+keywords: sophocles, linear, systems, signals, convolution, integral, calculus, electrical, engineering, rutgers, 332, ECE
+permalink: /education/linear-systems-signals/notes/
+mathjax: true
+---
+
 Notes for Linear Systems and Signals Fall 2016
 
 Professor: Sophocles Orfanidis
+
+## Chapter 2 Time Domain Analysis of Continuous-Time Systems
+
+A total system response is:
+
+> **Total Response** = zero-input response + zero-state response
+
+- **zero-input response**: $$ = x(t) = 0$$
+- **zero-state response**: is the system's response to any external input, say, $$x(t)$$ when the system is in a zero-state (absence of any other energies)
+
+Given an Nth order differential equation have the following
+
+**Zero-State Response of Differential Equation**
+
+> $$ Q(D)y(t) = P(D)x(t) $$
+
+**Zero-Input Response of Differential Equation**
+
+> $$ Q(D)y_0(t) = 0 $$
+
+From these two equation we can obtain the general solution to a differential equation as $$y_0(t) + y(t)$$
+
+#### Solving for the Zero-Input Response
+
+For a quick review of our differential equations we should remember that all terms within the zero-input response should be of the form: $$ce^{\lambda t}$$
+
+Recall that the **zero-input term** is equal to the following:
+
+> $$ Q(D)y_0(t) = 0 $$
+
+Note the term $$Q(D)$$. This is a polynomial which denotes the differentials in the equation and can help us evaluate which terms will be present in our zero-input response.
+
+Given a polynomial $$Q(D)$$ we can solve for $$Q(D) = 0$$ to find the roots of the polynomial to help find the zero-input response.
+
+We call $$Q(D)$$ the **characteristic polynomial**
+
+The **characteristic equation** is $$Q(D) = 0$$
+
+#### Non-Repeating Real Roots Polynomial
+
+In the case that the roots of polynomial $$Q(D)$$ are **real roots** we can use the following process to solve for the zero-input response.
+
+Assume the roots of polynomial $$Q(D)$$ with $$n$$ number of roots to have the roots $$ = \Lambda = \{\lambda_0, \lambda_1, \dots, \lambda_n \} $$
+
+1. Once we've found our roots $$\Lambda$$, then we can find the **characteristic terms** to be equal to $$\{ e^{\lambda_0t}, e^{\lambda_1t}, \dots, e^{\lambda_nt} \} $$
+2. This makes the **zero-input equation** $$y_0(t) = \sum\limits_{i=0}^n c_ie^{\lambda_i t}$$ 
+3. From this we need for solve for our constants $$c_0 \dots c_n$$. To do this we need to:
+  - Find the the 1 to nth derivative of the zero-input equation
+  - Find/Get the the zero-input response at $$t = 0^-$$ for the 0 to nth derivative equations.
+  - Solve the system of equations to get $$c_0 \dots c_n$$
+
+#### Repeating Real Roots Polynomial
+
+Given the steps found above for _Non-Repeating Real Roots Polynomial_ we can follow a similar procedure except that given we have, say, $$k$$ repeating roots of $$\lambda$$ in the polynomial, then the roots which correspond for $$[0, k]$$ are represented in the following way:
+
+**Characteristic Terms**: $$\{t^0e^{\lambda t}, t^1e^{\lambda t}, \dots, t^ke^{\lambda t} \}$$
+
+This makes the zero-input response equal to:
+
+> $$ y_0(t) = \sum\limits_{i=0}^k c_it^ie^{\lambda t} $$
+
+Using that information you can solve for the contants of the zero-input response by the same method as above for real-rooted polynomials.
+
+#### Complex Roots Polynomial
+
+Polynomials with complex ($$j$$) roots are slightly more complex.
+
+It is imperative to remember **Euler's Formula**
+
+> $$ e^{j\theta} = cos(\theta) + jsin(\theta) $$
+
+and 
+
+> $$ e^{-j\theta} = cos(\theta) - jsin(\theta) $$
+
+Given a polynomial with complex roots, due to the nature of the quadratic equation, $$ r = \frac{-b \pm \sqrt{b^2 - 4ac} }{2a} $$, any complex roots must appear in pairs, such that they are **complex conjugates**, say, $$(\alpha + j\beta)$$ and $$ (\alpha - j\beta) $$.
+
+If we treat these roots similar to the real-rooted polynomials then we would end up with an equation similar to the following:
+
+> $$ y_0(t) = c_1e^{(\alpha + j\beta)t} + c_2e^{(\alpha - j\beta)t} $$
+
+For a _real_ system, the response of $$y_0(t)$$ should be real as well. That is only the case such if $$c_1$$ and $$c_2$$ are conjugates.
+
+We should then set $$ c_1 = \frac{c}{2}e^{j\theta} $$ and $$c_2 = \frac{c}{2}e^{-j\theta} $$ where we introduce a new parameter, $$\theta$$
+
+This will then result in our zero-input response being
+
+$$ y_0(t) = \frac{c}{2}e^{j\theta}e^{(\alpha + j\beta)t} + \frac{c}{2}e^{-j\theta}e^{(\alpha - j\beta)t} $$
+
+This allows us to separate the roots into real and imaginary components.
+
+$$ = \frac{c}{2}e^{\alpha t}[e^{j\beta t + \theta} + e^{-j(\beta t + \theta)}] $$
+
+Then doing some algebra..:
+
+$$  = \frac{c}{2}e^{\alpha t} [cos(\beta t + \theta) + jsin(\beta t + \theta) + cos(\beta t + \theta) - jsin(\beta t + \theta)] $$
+
+$$  = \frac{c}{2}e^{\alpha t} [2cos(\beta t + \theta)] $$
+
+Which finally gives us a nice simplified zero-input equation where we can solve for the constants $$c$$ and $$theta$$:
+
+$$ y_0(t) = ce^{\alpha t}cos(\beta t + \theta) $$
 
 
 ### Chapter 2: Discretization Schemes and Convolution
@@ -42,7 +152,9 @@ Given:
 If we set
 
 $$ p = T, q = 0 \rightarrow $$ Backwards Euler
+
 $$ p = 0, q = T \rightarrow $$ Forwards Euler
+
 $$ p = q = \frac{1}{2}T \rightarrow $$ Trapezoid
 
 Given the system
@@ -56,7 +168,7 @@ $$ y' - B_0x' = -aY + B_1x $$
 
 This can then be expanded via our previous definitions
 
-$$ (y_n - B_0x_n) - y_{n-1} - B_0x_{n-1} = p(-ay_n + B_1x_n) = q(-aY_{n-1} + B_1x_{n-1})
+$$ (y_n - B_0x_n) - y_{n-1} - B_0x_{n-1} = p(-ay_n + B_1x_n) = q(-aY_{n-1} + B_1x_{n-1}) $$
 
 If we then play around some more we an obtain:
 
@@ -90,8 +202,17 @@ If we want to write all of our $$t$$'s in terms of $$t_n$$ we can simple multipl
 
 A linear time-invariant systems (LTI) satisfies the property that order in which an operation is performed (e.g time delay or transfer function) commute (the final value from the system is the same no matter the order).
 
-> The same linear combination of inputs should result in the same output.
+_The same linear combination of inputs should result in the same output_.
 
+A convolution is defined as:
+
+> $$ (f * g)(t) \equiv \int_{-\infty}^\infty f(\tau)g(t-\tau)d\tau $$
+
+> $$ y(t) = \int h(t')x(t-t')dt' $$
+
+For
+
+> $$ (a + c) \leq t \leq (b + d) $$
 
 
 
