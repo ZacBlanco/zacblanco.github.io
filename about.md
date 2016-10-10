@@ -6,9 +6,9 @@ permalink: /about/
 
 ![Image of Myself](../assets/images/homepage/profile-pic.jpg)
 
-My name is Zac (yes I spell it Z-A-C). I'm an aspiring software engineer. I'm currently a student studying electrical and computer engineering at Rutgers University, New Brunswick. I expect to graduate around May of 2018. I hope to eventually attend graduate school after I finish my undergraduate degree.
+I'm an aspiring software engineer who's currently a student studying electrical and computer engineering at Rutgers University, New Brunswick. I expect to graduate around May of 2018.
 
-My interests lie in big data, analytics, machine learning, artificial intelligence, and computer vision.
+My interests lie in big data, analytics, machine learning, artificial intelligence. I'm currently a research assistant as a part of the [Aresty Undegraduate Research Center](https://aresty.rutgers.edu/) where I'm studying the efficacy of the distributed machine learning algorithm termed [Cloud K-SVD](http://ieeexplore.ieee.org/document/7219480/)
 
 I'm also a firm believer in great education. I enjoy helping others learn! I am currently a [learning assistant at Rutgers University](https://rlc.rutgers.edu/student-info/group-and-individual-academic-support/learning-assistant-program). I help teach undergraduate students in introductory Physics courses.
 
@@ -16,7 +16,7 @@ Here's a list of languages and technologies I've worked with in the past:
 
 - Java
 - Python
-- Hadoop Components: Knox, Ambari, Zeppelin, Hive, HDFS, Ranger, NiFi, Solr
+- Hadoop Ecosystem Projects: Knox, Ambari, Zeppelin, Hive, HDFS, Ranger, NiFi
 - Apache Spark
 - C#
 - HTML
@@ -25,9 +25,9 @@ Here's a list of languages and technologies I've worked with in the past:
 - Node.js
 - Git + GitHub
 - Linux
+- C
 
-Contact Information:
+Other Contact Information:
 
 - [My LinkedIn Profile](https://www.linkedin.com/pub/zac-blanco/9a/2a6/8a9)
-- [Twitter](http://twitter.com/zacblanco)
 
