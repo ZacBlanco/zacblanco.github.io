@@ -125,7 +125,7 @@ In a CMOS transistor we have three different pins. The behavior of the pins depe
 
 #### Behavior of an NMOS (n-channel) Transistor
 
-![NMOS](/assets/images/dld/nmos1.png)
+![NMOS](/assets/images/dld/nmos1.PNG)
 
 From the diagram above note the three different pins and the direction of the source arrow.
 
@@ -137,7 +137,7 @@ In an NMOS transistor you should make note:
 
 #### Behavior of a PMOS (p-channel) Transistor
 
-![NMOS](/assets/images/dld/pmos1.png)
+![NMOS](/assets/images/dld/pmos1.PNG)
 
 A PMOS transistor is almost like a reverse or opposite to the NMOS.
 
@@ -151,9 +151,9 @@ Also note now that:
 
 ### NAND and NOR Gates with CMOS Transistors
 
-![NAND](/assets/images/dld/nand1.png)
+![NAND](/assets/images/dld/nand1.PNG)
 
-![NOR](/assets/images/dld/nor1.png)
+![NOR](/assets/images/dld/nor1.PNG)
 
 
 ### Boolean Algebra
