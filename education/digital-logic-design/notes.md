@@ -273,6 +273,12 @@ In binary when we go back from 11 to 00 we must change two digits as opposed to 
 | 8   | 1 | 0 | 0 | 0 |
 
 
+### Minimal Sum-of-Products with K-Maps
+
+Depending on the logical function sometimes we can create equivalent sum-of-product (or product of sum) expressions by grouping terms on a K-map. What this does is allow us to eliminate certain variables after identifying and grouping terms correctly.
+
+In order to 
+
 
 
 

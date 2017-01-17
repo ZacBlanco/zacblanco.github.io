@@ -113,6 +113,72 @@ Which finally gives us a nice simplified zero-input equation where we can solve 
 $$ y_0(t) = ce^{\alpha t}cos(\beta t + \theta) $$
 
 
+### The Unit Impulse Response
+
+Given our differential equation before
+
+> $$ Q(D)y(t) = P(D)x(t) $$
+
+We want to define a new quantity which we call the **unit impulse response**, $$h(t)$$.
+
+This quantity allows us to impart initial conditions on a system given the correct system parameters.
+
+Let's redefine $$Q(D)$$ and $$P(D)$$ by
+
+> $$ (D^N + a_1D^{N-1} + \dots + a_n)y(t) = (b_0D^N + b_1D^{N-1} + \dots + b_n)x(t) $$
+
+Where $$x(t) = \delta(t)$$, the **unit-impulse** function. We then define the **unit-impulse** to be
+
+> $$ h(t) = b_0\delta(t) + \text{characteristic modes} = b_0\delta(t) + (P(D) y_n(t))u(t)$$
+
+We should also note that **if the order of $$P(D)$$ is less than that of $$Q(D)$$ then $$b_0 = 0$$**
+
+### The Zero-State Response of a Systems
+
+To determine the zero state response of a system, excluding the systems initial conditions we can calculate such a response by the following, given:
+
+- $$x(t)$$, the input function
+- $$y(t)$$, the output response
+- $$h(t)$$, the impulse response
+
+Then we can say that 
+
+> $$ y(t) = x(t) * h(t) = \int\limits_{-\infty}^\infty x(\tau)h(t - \tau)d\tau $$
+
+
+This is called the **convolution** of two functions. For more information, refer to the convolution section below.
+
+### Classical Solutions to Differential Equations - Coefficient Matching
+
+Recall that the total response of a system can be characterized by either (We just reviewed the zero state+input method above)
+
+- Zero-State + Zero-Input
+- Homogeneous(Natural) Response + Forced Response
+
+In this section we'll review how to solve a system of equations based on the Homogeneous and forced response solutions using the method of coefficient matching. This method is typically the same method taught in introductory differential equations courses.
+
+
+In this method we're given a differential equation of the form $$ Q(D)y(t) = P(D)x(t) $$.
+
+The basic methodology for solving via the coefficient matching is as follows:
+
+1. Solve for the characteristic polynomial and use that to find the characteristic modes. From construct the natural response equation
+  - $$ y_n(t) = \sum\limits_{i=0}^N K_ie^{\lambda_i t} $$
+2. After obtaining the form of the natural response with arbitrary coefficients $$K_0, \dots, K_N$$ use the following table to determine the the _forced response_ equation
+
+| Input $$x(t)$$ | Forced Response |
+| $$k$$ | $$\beta_0$$ |
+| $$cos(\omega t + \theta)$$ | $$\beta cos(\omega t + \theta) $$|
+| $$(t^n + a_{n-1}t^{n-1} + \dots + a_0)e^{\zeta t} $$ | $$(\beta_nt^n + \beta_{n-1}t^{n-1} + \dots + \beta_0)e^{\zeta t} $$
+
+3\. Use the differentials from the characteristic polynomial  and differentiate the forced solution the required number of times to obtain a new set of equations with unkown coefficients which are added together on the left side of the equation.
+4\. Use the differentials for the input $$x(t)$$ to create a new equation. This equation should have terms which match up in degree with or function with terms from the forced response. This goes on the right side of the original equation.
+5\. Using all of the different degree terms from the polynomials, create a system of equations to solve for the unkown coefficients.
+6\. Finally after solving for the coefficients, we can add the new forced response to our natural response with our unkown coefficients $$K_0, \dots, K_N$$. Use the given intial conditions to find the unknown coefficients with the natural+forced response system.
+
+The resulting coefficient values will give the final solution which includes the natual + forced responses of the system which should be the same as the zero-state + zero-input response. 
+
+
 ### Chapter 2: Discretization Schemes and Convolution
 
 Given the simple differential equation: $$ y'(t) = f(t) $$
@@ -124,7 +190,6 @@ $$ y(t) = y(0) + \int_0^t f(t')dt' $$
 So how can we solve this for any $$ f(t) $$?
 
 One possible way to to refer to the definition of an integral - the area under a curve.
-
 
 With this in mind we can apply some approximation techniques that we may have learned back in our calculus courses to estimate the value of $$ \int_0^t f(t')dt' $$
 
@@ -213,6 +278,26 @@ A convolution is defined as:
 For
 
 > $$ (a + c) \leq t \leq (b + d) $$
+
+Convolutions are special in that they allow us to calculate the zero-state responses of a system. It is not always the simplest way, but it does provide one method of calculation.
+
+Convolution has a few key properties to keep in mind:
+
+- Commutative
+- Distributive
+- Associative
+- Shift
+  - Defined such that if $$y(t) = x(t) * h(t) $$ then $$ \rightarrow x(t-T) * h(t) = y(t-T) $$
+
+
+### Chapter 4: Solving Differential Equations - Laplace method
+
+There is yet another way to solve differential equations by using something called the **Lapalce Transform**
+
+The laplace is defined as 
+
+> $$ {\scr L}\{f(t)\} = \int\limits_{-\infty}^\infty f(t)e^{-st}dt $$
+
 
 
 

@@ -41,3 +41,5 @@ The courses below are organized by the order in which I took them at Rutgers Uni
   - [(14:332:345) - Linear Systems and Signals](linear-systems-signals/)
   - (14:332:361) - Electronic Devices
   - (01:198:214) - Systems Programming
+- Spring
+  - [(14:332:452) - Software Engineering](software-engineering/)
