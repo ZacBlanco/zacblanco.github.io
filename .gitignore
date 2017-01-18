@@ -3,3 +3,4 @@ _site/feed.xml
 .sass-cache
 
 _site/feed.xml
+.vscode/spellchecker.json

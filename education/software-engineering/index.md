@@ -8,7 +8,7 @@ description: A page full of notes and useful links for succeeding in Software En
 
 These notes are for a version of the class taught by professor Ivan Marsic in the spring of 2017.
 
-[You can find the course materials here]()
+[You can find the course materials here](http://ece.rutgers.edu/~marsic/Teaching/SE)
 
 ## Lecture 1 - 1/17/17 
 
