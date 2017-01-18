@@ -8,11 +8,12 @@ description: A page full of notes and useful links for succeeding in Intro to Co
 
 These notes are for a version of the class taught by Prof. Maria Striki in the Spring of 2017.
 
-The textbook for this course is: Silverschats, Galvin, and Gagne. Operating System Concepts. John Wiley & Sons
+The textbook for this course is: Silberschatz, Galvin, and Gagne. Operating System Concepts. John Wiley & Sons
 
 Reading assignments are based off of the 9th edition. Any of the 6th, 7th, or 8th edition should be okay.
 
 Grading:
+
 - Midterms: 24%
 - Final: 24%
 - Projects: 38%
@@ -27,6 +28,7 @@ Goals of this course:
 
 
 This course covers:
+
 - Processes and Threads
 - Synchronization
 - Processor Scheduling
@@ -37,6 +39,7 @@ This course covers:
 - Distributed Systems
 
 **Programming Assignments (tentative)**
+
 - Shell & System Calls (Linux Kernel)
 - Partial Threads package & multi-threaded server
 - File System (Linux Kernel)
@@ -47,12 +50,6 @@ What is an operating system?
 - A *resource manager* that allows programs/users to share the hardware resources: fair and efficient.
 - A set of utilities to simplify application development and execution.
 
-
-Major OS Components:
-- Filesystem
-- Kernel
-- Security
-- User Interface
 
 
 
