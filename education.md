@@ -39,8 +39,9 @@ The courses below are organized by the order in which I took them at Rutgers Uni
 - Fall
   - [(14:332:231) - Digital Logic Design](digital-logic-design/)
   - [(14:332:345) - Linear Systems and Signals](linear-systems-signals/)
-  - (14:332:361) - Electronic Devices
-  - (01:198:214) - Systems Programming
+  - (14:332:361) - Electronic Devices (Coming Soon)
+  - (01:198:214) - Systems Programming (Coming Soon)
 - Spring
   - [(14:332:452) - Software Engineering](software-engineering/)
   - [(14:332:434) - Intro to Computer Systems](computer-systems/)
+  - [(01:198:344) - Design and Analysis of Computer Algorithms](algo/)
