@@ -6,7 +6,8 @@ permalink: /education/
 ---
 
 -----
-### Spring 2017 Data Structures (CS112) Study Group
+
+**Spring 2017 Data Structures (CS112) Study Group**
 
 For the students in my 112 study group you can [find our group page here](/education/data-structures/study-group/)
 
