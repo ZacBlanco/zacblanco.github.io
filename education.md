@@ -15,7 +15,7 @@ For the students in my 112 study group you can [find our group page here](/educa
 
 Occasionally I'll create study guides or take notes on my computer. I like to post these online so others can use them too!
 
-I highly encourage contributions to this part of the site! Everything is written and [markdown](http://blanco.io/blog/markup-languages/markdown-is-awesome/) and [MathJax](https://www.mathjax.org/) is used for math formatting.
+I highly encourage contributions to this part of the site! Everything is written in [markdown](http://blanco.io/blog/markup-languages/markdown-is-awesome/) and [MathJax](https://www.mathjax.org/) is used for math formatting.
 
 
 At each link you should be able to find useful resources for each class and at least one set of notes.
