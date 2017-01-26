@@ -13,12 +13,7 @@ For the students in my 112 study group you can [find our group page here](/educa
 
 -----
 
-Occasionally I'll create study guides or take notes on my computer. I like to post these online so others can use them too!
-
-I highly encourage contributions to this part of the site! Everything is written in [markdown](http://blanco.io/blog/markup-languages/markdown-is-awesome/) and [MathJax](https://www.mathjax.org/) is used for math formatting.
-
-
-At each link you should be able to find useful resources for each class and at least one set of notes.
+At each link you should be able to find useful resources for each class and at least one set of notes.  I do my best to take notes during class. I am also very welcoming to contributions. Everything is written in [markdown](http://blanco.io/blog/markup-languages/markdown-is-awesome/). [MathJax](https://www.mathjax.org/) is used for math formatting.
 
 ## Courses at Rutgers University
 
@@ -52,3 +47,4 @@ At each link you should be able to find useful resources for each class and at l
   - [(14:332:452) - Software Engineering](software-engineering/)
   - [(14:332:434) - Intro to Computer Systems](computer-systems/)
   - [(01:198:344) - Design and Analysis of Computer Algorithms](algo/)
+  - (14:332:xxx) - Digital Electronics (Coming soon)
