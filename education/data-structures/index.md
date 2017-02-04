@@ -13,3 +13,5 @@ Notes come from the version of the class which was taught during the fall of 201
 Links:
 
 - [**Final Review Guide**](final-review/)
+- [**Study Group Notes**](study-group/)
+  - These are a set of notes that I created while leading my first semester long study group as a learning assistant for CS112.
