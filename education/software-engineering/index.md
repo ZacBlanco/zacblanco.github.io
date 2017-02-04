@@ -92,3 +92,149 @@ We assume that software helps the user achieve a business goal in the problem do
   - Automatically controlling behavior of a physical object (ex. thermostat)
   - Manually controlling behavior of a physical object (drone flying)
   - Observing the behavior of a physical object (traffic monitoring)
+
+
+### Lecture 4 - 1/27/2017
+
+**Requirements Engineering**
+
+
+The process of completing an engineering project should at a minimum always consists of:
+
+- Requirements gathering
+  - Helps the customer to define what is required, what is to be accomplished, how the system will fit into the needs of the business, and how the system will be used on a day-to-day basis
+- Requirements analysis
+  - Refining and modifying the gathered requirements.
+- Requirements specification
+  - Documenting the system requirements in a semi-formal or formal manner to ensure clarity, consistency, and completeness
+
+  Typically the customer will describe the requirements of what needs to be done. The software engineer will also help specify the requirements. The software engineer however also will write the specifications which overlap with the programming. The specifications of a project are more formal and possibly more technical set of details that help the programmer identify the tasks which needs to be completed.
+
+When writing requirements it is important to be specific and identify what exact requirements are going to be referenced throughout the document.
+
+One way to do this is to label each requirement with an identifier, the priority of each requirement, and a short description of the requirements in as exact language as possible.
+
+We should also think about _user stories_ when designing our requirements. This means focusing on the user of the system and how they will use the system.
+
+I.e. "_As a tenant, I can unlock the doors to enter my apartment._"
+
+This is similar to building system requirements, but focuses on the benefits that the user gains instead of on the features of the systems's solution to problems.
+
+- This is the preferred tool in agile methods.
+
+**Dynamic Prioritization of User Stories**
+
+Define a number of user stories, i.e. ST-1, ST-2, ST-3, ST-4....
+
+For each story assign an estimated number of days to complete and assign a number of points to each story to prioritize the feature development.
+
+### Lecture 5 - 1/31/2017
+
+**Hierarchical Organization of Software**
+
+It is like a tree (List top of tree to bottom)
+
+- Product Line
+- System/Product
+- Subsystem/Modules
+- Packages
+- Classes/Objects
+- Methods
+
+Software is not one long list of program statements but it has _structure_. The hierarchical organization above represents a taxonomy of structural parts to a software system.
+
+
+
+**Why Decompose?**
+
+- Tackle complexity by divide and conquer
+- See if some parts already exist or could be reused
+- Avoid reinventing the wheel
+- Support for flexibility and future evolution by decoupling unrelated parts. So each can evolve separately.
+- Create sustainable strategic advantage
+
+**Software Architecture** - A set of high-level decisions that determine th structure of the solution
+
+- Principal decisions made throughout the development and evolution of a software system.
+- Made early and affect large parts of the system ("design philosophy")
+  - Such decisions can be hard to modify later.
+- Decisions to use well-known solutions that are proven to work for similar problems.
+- Software architecture is not a _phase_ of software architecture.
+
+Given the size of a system, a decision is architectural if it can be made only by considering the present scope of the system
+
+- Could not be made from a narrowly-scoped, local perspective
+- Architecture should focus on high impact and high priority areas.
+
+
+**Concerns**
+
+- How to break up the system
+- Do we have all of the pieces
+- Do the pieces fit together?
+- Does the idea have conceptual integrity
+- Software architecture produces a set of well-known solutions that are proven to work for similar problems.
+
+**Architecture vs Design**
+
+- Architecture focuses on non-functional requirements and decomposition of functional requirements
+- Design focuses on implementing the functional requirements.
+
+**Architectural Decisions Often Involve Compromise**
+
+- The best design for a component considered in isolation may not be chosen when components are considered together or within a broader context.
+- Additional considerings include business priorities, available resources, core competences, target customers, competitors moves, technology trends, existing investments, backwards compatibility, etc..
+
+**Architectural Styles - Constituent Parts**
+
+- Components - processing elements that "do the work"
+- Connectors - enable communication among components
+- Interfaces - connection points on components and connectors
+- Configurations - Arrangements of components and connectors that form an architecture.
+
+
+**MVC** - **M**odel **V**iew **C**ontroller
+
+- Model: Holds all of the data, state, and application logic. it is oblivious to the view and controller. Provider API to retrieve state and send notifications of state changes to the observer
+- View: The visualizer portion. The way to display the state of the system
+- Controller - interpreter and processor of input redirecting to output.
+
+**Fitting the Parts Together**
+
+- Specifying semantics of components interfaces
+  - Serves as a contract between the component providers and clients.
+  - Interfaces must be fully documented, understandable, unambiguous, and precise.
+- Adding Semantics
+  - informal description
+  - Design models
+  - pre/post conditions
+
+### Lecture 6 - 2/3/2017
+
+**Use Cases**
+
+Used for functional requirements analysis and specification
+
+- A use case is a step-by-step description of how a user will use the system-to-be to accomplish the business goals
+  - Detailed use cases are usually written as usage scenarios or scripts. These show an envisioned sequence of actions and interactions between the external actors and the system-to-be.
+
+You can build use cases from the user stories that are written as a part of the system requirements.
+
+**Types of Actors**
+
+*Initiating Actor* - (Also called primary actor or simply "user"): Initiates the use case to achieve a goal.
+
+*Participating Actor* (also called secondary actor): Participates in the use case but does not initiate it.  
+- Subtypes of participating actors:
+  - Supporting actor: Helps the system-to-be complete the usecase
+  - Offstage actor: passively participates in the use case, i.e. neither initiates more helps complete the use case but may be notified for keeping records
+
+Some times it is useful to draw diagrams of use cases in order to visualize exactly how the system operates between a system of multiple users in order to visually represent and follow the set of logic and steps that are required of the system in a specific use case.
+
+You should be able to discern the basic function of a system from a single diagram which displays the different actions, usecases, and actions of the software system.
+
+
+
+
+
+

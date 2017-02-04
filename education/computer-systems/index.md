@@ -280,6 +280,279 @@ Ex. The machine could include the trap ID in the instruction itself.
 
 Most real CPUs have a convention for passing the trap code in a set of registers.
 
+### Lecture 4 - 1/26/2017
+
+**Switching from User to Kernel Mode**
+
+After a trap it is necessary for the OS to transfer control back from kernel to user mode.
+
+- How do we get back to user mode after trap instructions? (Like system calls)
+  - Naive approach: simply set the mode register to 1 then set PC - but then we get an exception before setting PC!
+  - Set the PC then the mode bit?
+    - Jump to "user-land" , still in kernel mode.
+
+Most machines have a "return from exception" instruction
+
+- A single hardware instruction:
+  - Swaps PC and PC'
+  - Sets the mode bit to user mode.
+- Traps and exceptions use the same mechanism (RTE, Return from Exception)
+
+**Interrupts**
+
+Interrupts are signals sent to the CPU by external devices - normally IO. They tell the CPU to stop its activities and execute appropriate part of the operating system
+
+The three main types are:
+
+- Hardware Interrupts
+- Software Interrupts
+- Traps
+
+Every OS or machine has a set of code (PC value) set where the code to handle the logic for exceptions/interrupts/traps
+
+**I/O**
+
+I/O or input output devices are hardware devices that the user can typically use to send signals into the system (to perform an action) or out of the system to perform actions such as notifying a user, or writing to a file.
+
+Keyboards, mice, and monitors are all examples of I/O devices.
+
+_A Simple IO Device_
+
+- Network card has 2 registers:
+  - A store into the "transmit register" - to send bytes
+  - A load from the "receive" register - to receive last byte
+
+How can the CPU access those registers?
+
+- It is mapped into memory space
+  - I.e. an access on memory cell 98 doesn't actually access memory but is accessing a register instead.
+  - This is called a **memory mapped register**
+
+*Why do we use memory-mapped registers?*
+
+- Stealing memory space for device registers has 2 functions
+  1. Allows protected access to only allow the OS to access
+      - User programs must trap into the OS to access IO devices
+  2. The OS can control devices and move data to/from devices using regular load and store instructions.
+
+Questions to ask:
+
+**Q**: When does the processor check whether an interrupt has occurred  
+**A**: Processor checks for hardware interrupts every cycle (on the fetch stage)
+
+- Why do we need to map registers on the NICs (Network Interface Cards) to the main memory.
+
+**Q** How does the OS know if a new byte has arrived? Or how does the OS know when the last byte has been transmitted?
+
+**A**: Status registers. A status register holds the state of the last IO operation. Our network card has 1 status register. 
+
+To transmit, the OS writes a byte into the TX register and sets bit 9 of the status register to 1. When the card successfully transmitted a byte it will set the bit 0 of the status register back to 0.
+
+**interrupt Driven IO** 
+
+- Polling (using a while loop) can waste many CPU cycles.
+  - On transmit, CPU slows to the speed of the device.
+  - Can't block on receive, so tie polling to clock, but wasted work if there's so RX data.
+
+*Solution*: Use interrupts!
+
+- When network has data to receive, signal an interrupt.
+- When the data is done transmitting, use another interrupt.
+
+**Why Poll at All**?
+
+- Interrupts have high overhead:
+  - Stop processor
+  - Figure out what caused interrupts
+  - Save user state
+  - Process request.
+
+The main thing we should worry about is the frequency at which IO is occurring vs the amount of overhead per interrupt.
+
+- More input = polling may be better
+- Less input = interrupts may be better
+
+**Direct Memory Access (DMA)**
+
+The problem with programmed IO: CPU must load and store all the data into device registers
+
+The data is usually in memory anyways. To address this we need more hardware which allows the device to read and write memory like the CPU.
+
+_Programmed IO vs DMA (PIO vs DMA)_
+
+Overhead for PIO is less than DMA  
+- PIO is a check against the status register, then send or receive
+- DMA must set up the base, count, etc..
+
+
+### Lecture 5 - 1/31/17
+
+**Clarifying Interrupts**
+
+- **Interrupt** - An event triggered by a piece of hardware or software that will cause the CPU to stop after the next instruction in order to run a specified set of code to handle said interrupt.
+
+We can break interrupts into three categories:
+
+- Hardware Interrupts
+  - I/O
+  - Network
+  - Failures
+- Traps (Software/syscalls)
+  - read/write
+- Exceptions (Software interrupts)
+  - Division by 0
+  - Wrong memory access
+
+**Practicality: How to Boot**:
+
+- How does a machine actually start the OS?
+
+Boot protocol:
+
+- CPU executes from a fixed address
+- Firmware loads the boot loader
+- Boot loader loads the OS
+
+The boot protocol:
+
+The CPU is hard-wired to begin executing from a known address in memory. 
+This execution in the CPU then loads the BIOS, sometimes referred to as the bootloader. The bootloader is typically stored in EEPROM, a form of electrically erasable ROM. From here it is able to then decide which location in memory (HDD/SSD) to boot from.
+
+**OS Human Computer Interaction**
+
+The common ways to interact with an OS is either at the command-line or with a visual GUI. Typically OSs are written in C or C++ because of the wide support for C and its history with writing operating systems.
+
+The linux operating system also provides a wide set of libraries which allow programmers and developers to use some of the same system calls that the kernel uses.
+
+**Microkernel System Structure**
+
+- Moves as much as possible from the kernel space into the user space
+- _mach_ is an example of a microkernel
+- Mac OS X kernel (Darwin) is partially based on *mach*
+- Benefits
+  - Easier to extend a microkernel
+  - Easier to port OS to new architectures
+  - More reliable (less code in kernel)
+
+**OS Modules**
+
+Most modern operating systems implement loadable kernel modules
+  
+  - This uses an object oriented approach
+  - Each core component is separate
+  - Talks to other processes.
+
+**Layered Systems**
+
+A layered system is asystem which is designed such that the lowest layer (layer 0) consists of the hardware. Layers are built on top of one another which use the libraries and calls used by the layers below and grows outwards toward the user interface.
+
+**Hybrid Systems**
+
+Most modern OSs are not purely modular by design. This is due to challenges faecs by performance security and usability needs. Many designers collaborate together on these systems which results in these hybrid OS architectures.
+
+**Runtime Storage Organization**
+
+- Both the text (program) and data will reside in memory
+
+Each variable must be assigned to a storage class. The hierarchy is described below.
+
+1. Code
+2. Global (static) variables
+3. Stack(Method variables and parameters allocated dynamically)
+4. Dynamically created objects (using the `new` keyword in OOP)
+
+### Lecture 6 - 2/02/2017
+
+**Operating Systems Structures**
+
+- OS provides an environment for execution of programs and services to programs and users
+- One set of services that provides functions to the user
+  - UI/GUI either a command line or graphical user interface
+  - Program execution - The system must be able to load a program into memory
+  - Resource allocation
+
+System calls are calls supplied by the OS to interact with the computer hardware. This includes (but is not limited to) file I/O or networking tasks.
+
+Three general methods used to pass parameters to OS system calls
+
+- Simplest: Pass in registers
+  - hardware limitation on parameters
+- Pass parameters via memory on the stack
+- Put into a specified block or chunk of memory reserved for syscall parameters.
+  - Limitation on # of parameters
+
+Difference between Program and Process
+
+- Program
+  - A set of instructions which may reside in memory or on disk
+- Process
+  - A program that has been initialized by the OS with globals, stack, and heap memory, a PC register value, and executing instructions.
+
+
+**Runetime Storage Organization**
+
+- Global variables allocated in globals area at compile time
+- Method variables allocated dynamically on the stack.
+- Dynamically created object - created dynamically and allocated from the heap
+  - objects live beyond method
+- Pointer to next instruction in the PC
+
+**Process Control Block**
+
+Each process has per-process state maintained by the OS
+
+- Identification: process, parent process, user, group, etc.
+- Execution contexts, registers, threads
+- Address space: virtual memory
+- I/O state: file handles, communication endpoints
+- For every process this information is maintained on a process control block.
+  - This is data in the OS memory space
+
+**Process Creation**
+
+Create processes from system calls
+
+- In unix we use `fork()`
+
+The process which creates the new process is called the parent and the new process is the child.
+- The child process is created as a copy of the parent process except for the identification and scheduling state.
+
+Parent and child processes run in two different memory address spaces
+- By default there is no memory sharing
+- Process creation is expensive because we need to copy all variables, globals, etc over to a new process space.
+
+In unix `exec()` is provided for the new process to run a different program other than a parent (this runs a different set of instructions which may be stored on disk)
+
+**Process Death**
+
+You can force a process to wait (stop executing instructions using `wait()` system call)
+
+In Unix you can wait for any process by passing its PID to `wait()`.
+
+- You can kill another process using the `kill()` system call
+  - This is done by a signal named SIGKILL in Unix
+
+**Signals**
+
+Signals are a type of software interrupt which is provided as OS system calls to programs in order to interrupt programs from running their instruction and run a different set of instructions to handle the signals.
+
+These signals can be used to kill a program, notify the program of message arrival, or of a certain type of event occurring.
+
+Programs can specify handler functions for certain types of signals. When the OS receives a signal intended for a certain process it will check if the process has a hanler function for the signal. If so it will interrupt the program and run the interrupt handler method instructions with the signal parameters.
+
+In this process the CPU has to switch the stack variables because switching to running the handler function requires a context switch into kernel mode to load the instructions, then back to kernel mode to notify the signal has been handled, then back to the user mode instructions.
+
+**Processes Summary**
+
+- Instantiation of a program
+
+OS process management:
+
+- Supports creation of processes and facilitates interprocess communication
+- Allocates resources to processes according to specific policies
+- Interleaves the execution of multiple processes to maximize system utilization
+
+
 
 
 

@@ -219,10 +219,133 @@ The Average time then becomes $$A(n) = \sum\limits_{t=1}^k t\cdot Pr(# of compar
 
 $$A(n) = \sum\limits_{t=1}^k t$$
 
-$$S_k = (2n+1) - 
+### Lecture 4 - 1/30/2017
+
+Given a list of $$n$$ elements, we want to determine whether a specific element is contained in a list of the elements. We define 
+
+- $$W(n)$$ - The worst case run time
+- $$A(n)$$ - The average case run time
+
+In binary search we fine that $$W(n) = \lfloor log(n) \rfloor + 1 $$.
+
+Representing the number of items as $$2^k - 1$$ giving $$W(n) = k$$
+
+To calculate the average case we get 
+
+> $$A(n) = \sum\limits_{t=1}^k t\cdot Pr(t) = \sum\limits_{t=1}^k t\frac{S_t}{2n + 1}$$
+
+where $$S_t$$ is the number of position where it takes $$t$$ comparisons.
+
+#### Divide and Conquer Algorithms
+
+Many algorithms are recursive in nature and call themselves one or more times. This is called using a "divide and conquer" approach because the algorithms solve small subproblems before coming back together to complete the entire problem.
+
+Steps
+
+1. Divide the problem into smaller subproblems
+2. Conquer: Solve the subproblems recursively. If the subproblem size is small we solve it with a straightforward approach.
+3. Combine solutions for subproblems into solutions for the original problem.
+
+One of the classic divide and conquer problems is **mergesort**.
+
+The key problem in mergesort is combining two sorted lists. The function might be defined as $$\text{merge}(A, p, q, r)$$ where
+
+- A is an array
+- p, q, and r are indices.
+
+Assume $$A[p] - A[r]$$ is sorted and $$A[q+1] to A[r]$$ is sorted
+
+The best approach will take no more than $$r - p$$ comparisons. This works by using two pointers and incrementing one of them on the list until we find a value which is larger than the other pointer. We switch pointer comparisons until we reach the end of one list. Then we append the rest of the other list.
+
+Example:
+
+    Given the list 
+    5  2  4  6  1  3  2  6
+
+    Show the mergesort steps
+
+    5  2  4  6 |  1  3  2  6
+    5  2 |  4  6 |  1  3 |  2  6
+    5 | 2 | 4 | 6 | 1 | 3 | 2 | 6
+
+    2  5 | 4  6 | 1  3 | 2  6
+    2  4  5  6 | 1  2  3  6
+    1  2  2  3  4  5  6  6
 
 
+The algorithm for mergesort can be written:
 
+    margesort(A, p, r):
+      if p < r
+        q <-- floor( (p + r) / 2)
+        mergesort(A, p, q)
+        mergesort(A, q+1, r)
+        mergesort(A, p, q, r)
+
+
+To analyze this type of algorithm we can relate the overall runtime to the runtime of the subproblems.
+
+For mergesort, given $$T(n) = $$ number of comparison to sort a list of $$n$$ numbers with mergesort
+
+$$ T(n) = \begin{cases} 0 & n = 1 \\ 2T(n/2) + n-1 & n > 1 \end{cases} $$
+
+This formula can be generalized to the form
+
+$$ T(n) = \begin{cases} \Theta (1), & n\leq n_0 \\ \alpha T(n/b) + D(n) + C(n) & n > n_0 \end{cases} $$
+
+Where
+
+- $$\alpha = $$ number of subproblems
+- $$\frac{n}{b} $$ = size of each subproblem
+- $$D(n) = $$ time to divide
+- $$C(n) = $$ time to combine
+
+
+If we apply the mergesort algorithm to this to analyze the runtime we can first state that $$T(n) = 2^k)$$
+
+$$T(n) = 2^k \\ = 2T(2^{k-1}) + 2^k - 1 \\ = 2^2T(2^{k-2}) + 2^k - 2 + 2^k - 1 \\ 2^2T(2^{k-2}) + 2^k - (1 + 2) \\ \dots \\ T(n) = 2^kT(1) + k2^k - (2^k - 1) \\ T(n) = k2^k - 2^k + 1 $$
+
+Where $$2^k = n \rightarrow k = log_2(n)$$
+
+If we plug in $$k = log(n)$$ into our final answer we find
+
+$$T(n) = nlog(n) - n + 1 = \Theta (n)$$
+
+In multiplying two numbers together we find that the way we normally do it on paper takes approximately $$O(n^2)$$ operations. Wheras the c algorithm implemented in computers are able to do it in approximately $$O(n^{1.59})$$
+
+
+### Lecture 5 - 2/1/2017
+
+*Review* 
+
+In divide and conquer algorithms we can represent the runtime as the following function
+
+> $$ T(n) = \begin{cases} \Theta(1), & n \leq n_0 \\ \alpha T(\frac{n}{b}) + D(n) + C(n), & \text{else} \end{cases} $$
+
+- $$\alpha$$: Number of subproblems
+- $$\frac{n}{b}$$: size of each subproblem
+- $$D(n)$$: Cost to divide
+- $$C(n)$$: Cost of combining
+
+Proving that the non-base case for $$T(n)$$ is $$O(nlog(n))$$
+
+$$T(n) \leq c\cdot n log_2(n) \\ T(2) = 2T(1) + 2 = 2 \\ c2log(2) = 2c, c \geq 1 \\ T(n) = 2T(n/2) + 2 \leq 2c\frac{n}{2} log(n/2) + n \\ cn(log(n) - log(2) + n = cn log(n) \\ -cn + n \leq c $$
+
+More proofs for solving recurrence relations
+
+$$T(n) = 2T(\lfloor \sqrt{n} \rfloor ) + log(n) \\ n = 2^m \\ T(2^m) = 2T(2^{m/2}) + m \\ S(m) = T(2^m) \\ S(m) = 2S(m/2) + m \\ S(m) = O(mlog(m)) \\ T(n) = O(log(n) \cdot log(log(n)))$$
+
+Using recurrence relations we can find the runtime of divide and conquer algorithms.
+
+**Master Theorem** - $$T(n) = \alpha T(\lceil \frac{n}{b} \rceil) + O(n^d)$$
+
+Where:
+
+$$\alpha > 0 \\ b > 1 \\ d \geq 0$$
+
+and 
+
+$$T(n) = \begin{cases} O(n^d), & d > lob_b(\alpha) \\ O(n^dlog(n)), & d = log_b(\alpha) \\ O(n^{log_b(\alpha)}), & d < log_b(\alpha) \end{cases}$$
 
 
 
