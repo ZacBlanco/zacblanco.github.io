@@ -18,6 +18,7 @@ You can contact me any time via email at `zac.blanco@rutgers.edu`. I will do my 
 
 - [Session 1 - Big-O and Linked Lists](#session-1)
 - [Session 2 - Linked Lists, Stacks, Queues, Generics and Exceptions](#session-2)
+- [Session 3 - Stacks, Queues, Bounded Queue, Recursion, Writing Code](#session-3)
 
 <div id="session-1"> </div>
 
@@ -510,6 +511,144 @@ try {
 //...
 }
 ```
+
+<div id="session-3"></div>
+
+### Session 3 - ArrayLists, Modulo Operator, Bounded Queue, Recursion, Writing Code
+
+**Stacks and Queues** - The methods for stacks and queues were covered above. Please see the notes there  
+
+### `ArrayLists`
+
+ArrayLists in Java act like a linked list object. They have the same methods that you might find in a linked list, but the underlying structure which all the methods are performed on is an array *instead* of linked list.
+
+The list then might be represented in the following way:
+
+    +----+----+----+----+----+----+
+    | 12 | 10 | 14 |    |    |    |
+    +----+----+----+----+----+----+
+                ^
+                REAR
+
+So instead of having nodes with pointers the rear of the list simply points to the last index where an item was added.
+
+When you add a new item you simply just put it into the index of the array. There's no need to deal with moving pointers around. 
+
+*What happens when the array is full?*
+
+So when the array begins to fill up with items we get to a point where all of indices are filled with new items. It is impossible to add a new item to an array when all indices are filled. In order to fix this we must change the size of the array. But we know that it's actually impossible to change the size of an array so we must do the following to add a new item to full ArrayList
+
+- Create a new array with a size larger than $$n$$. Say $$2n$$
+- Copy all elements of the original array to the new array.
+- Set the reference (pointer) of the old array equal to the new array.
+
+This process allows us to enlarge the size of the list but takes much more time than a normal add. It takes $$O(n)$$ every $$2^n$$ additiongs to the list.
+
+The benefits of using an array list mainly have to do with the $$O(1)$$ access time that allows for access of a specific index. However for other operations such as insert or delete we don't gain any performance benefits because we have to shift all of the elements over. Take for example the following
+
+
+    Delete
+    +----+----+----+----+----+----+
+    | 12 | 10 | 14 | 11 | 12 | 8  |
+    +----+----+----+----+----+----+
+                      ^
+                    DELETE
+    Empty Space
+    +----+----+----+----+----+----+
+    | 12 | 10 | 14 |    | 12 | 8  |
+    +----+----+----+----+----+----+
+                      ^
+                    DELETE
+    Left Shift
+    +----+----+----+----+----+----+
+    | 12 | 10 | 14 | 12 | 8  |    |
+    +----+----+----+----+----+----+
+                        <------
+                      SHIFT LEFT
+
+The same type of procedure would need to occur for an insertion as well. So even though to do get the performance benefit on accesses, other operations still take on order of $$O(n)$$ time.
+
+#### The Modulo Operator
+
+The modulus operator is an interesting one that is not often encountered in typical mathematical courses. In programming it is often represented as `%`. 
+
+The function of the modulus operator is to return the remainder of the first operator divided by the second operator. 
+
+Example:
+
+    5 % 2 ==> 1
+    4 % 3 ==> 1
+    9 % 6 ==> 3
+
+However while returning the remainder could be useful in some cases it might be important to note the properties of the modulus operator that make it like a cyclic counter. For example take the following series
+
+    0 % 5 ==> 0
+    1 % 5 ==> 1
+    2 % 5 ==> 2
+    3 % 5 ==> 3
+    4 % 5 ==> 4
+    5 % 5 ==> 0
+    6 % 5 ==> 1
+    7 % 5 ==> 2
+    8 % 5 ==> 3
+
+Notice how after reaching 5 that the values wrap around back to 0. This makes it useful for ensuring values to be placed within a certain range. It is also possible to use in the bounded queue which we will talk about in the next section.
+
+### Bounded Queues
+
+A bounded queue is simply a queue which has a limited amount of items which can be stored in a single time. This can be useful if the underlying list implementation is an array because then we limit the amount of memory that is taken up and we don't have to perform array reallocations and copies when adding new items because we will know the size of the queue beforehand.
+
+In terms of implementation the bounded queue can be implemented by using an ArrayList of by list Nodes with `next` pointers.
+
+### Recursion
+
+Recursion will be a very important concept when it comes to implementing certain structures that we will encounter later on in the course.
+
+The basic idea behind recursion is that we break a problem into smaller sub problems and find a way to solve the smaller sub problems and use those solutions in order to come to the solution of the main problem.
+
+When attempting to solve a problem recursively we always want to first try to identify the base cases for the problem, and then use the base cases to then find the general solution.
+
+One of the most basic examples of recursion is the Fibonacci series. The series is given by the formula:
+
+$$F_n = \begin{cases} 0, & n = 0 \\ 1, & n = 1 \\ F_{n-1} + F_{n-2}, & n > 1 \end{cases} $$
+
+We can see from the formula the base cases are when $$n = 0, 1$$ because they are defined as simply being equal to a value. Anything greater than that we need the previous two fibonacci numbers. We can treat the solution to finding these numbers as their own fibonacci number problem.
+
+This allows us to break down the problem and solve it with a relatively simple set of code:
+
+```java
+public int fib(int n) {
+  switch(n) {
+    case 0:
+      return 0;
+    case 1:
+      return 1;
+    default:
+      return fib(n-1) + fib(n-2);
+  }
+}
+```
+
+The most important part of a recursive algorithm is the use of the algorithm within itself to solve the solution. You should find that many recursive solutions will have small amount of code, but the underlying logic may be confusing or hard to understand (see the answer to the problem on recursively reversing the items in a linked list from problem set 3).
+
+### General Coding Tips for Assignments
+
+Lastly, I just wanted to go over some guidelines and tips which might be helpful for completing the programming assignments.
+
+**Tip 1**: When writing code you should always be mindful of the structures that you are using and why you are using them. Which is more efficient? Is one easier to implement than another? What is the time tradeoff to implementing one over another? Are there caveats to using one algorithm/structure over another.
+
+These are just some basic questions you should be thinking about when you approach the projects. They can help guide your thinking and problem solving.
+
+**Tip 2**: The general case is important, but the edge cases should never be forgotten.
+
+Understanding the general algorithm for a certain data structure is good. You should be able to implement it relatively easily. However when it comes to writing the code and the methods within your assignments you should always be sure that they cover not *just* the general cases but **all** cases. For linked lists this might mean empty lists, one item lists, etc. Make sure that all of the edge cases are covered. You'll lose a lot of points if they are not.
+
+**Tip 3**: Start EARLY.
+
+This one might be common sense but some people just like to torture themselves by submitting assignments just minuted before the deadline. Remember if you submit early you can always go back and correct any mistakes that you might come across in the time between your submission and deadline.
+
+I highly recommend at least starting the assignments as soon as they are released. Take about an hour a day per week and you should be able to finish them with plenty of time to spare with no stress. It also gives you lots of time to check for errors and test your code.
+
 
 
 
