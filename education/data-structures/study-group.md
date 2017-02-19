@@ -13,12 +13,14 @@ You can contact me any time via email at `zac.blanco@rutgers.edu`. I will do my 
 
 - [Problem Sets](https://www.cs.rutgers.edu/courses/112/classes/spring_2017_venugopal/probs/)
 - [Session Feedback Form](https://goo.gl/forms/dNokwIddk9YOgxZg2)
+- [Sesh Venugopal Youtube Lectures](https://www.youtube.com/channel/UC3QLHt6mHfmg4x_h2am7ecg/videos)
 
 ## Outline
 
 - [Session 1 - Big-O and Linked Lists](#session-1)
 - [Session 2 - Linked Lists, Stacks, Queues, Generics and Exceptions](#session-2)
 - [Session 3 - Stacks, Queues, Bounded Queue, Recursion, Writing Code](#session-3)
+- [Session 4 - Average Case Analysis of Sequential and Binary Search](#session-4)
 
 <div id="session-1"> </div>
 
@@ -648,6 +650,147 @@ Understanding the general algorithm for a certain data structure is good. You sh
 This one might be common sense but some people just like to torture themselves by submitting assignments just minuted before the deadline. Remember if you submit early you can always go back and correct any mistakes that you might come across in the time between your submission and deadline.
 
 I highly recommend at least starting the assignments as soon as they are released. Take about an hour a day per week and you should be able to finish them with plenty of time to spare with no stress. It also gives you lots of time to check for errors and test your code.
+
+<div id="session-4"></div>
+
+## Session 4 - Average Case Analysis of Sequential and Binary Search
+
+This week we discussed how to derive the average case runtime of a sequential and binary search algorithms.
+
+First off, we defined the average runtime of an algorithm to be defined by the following equation:
+
+$$ \sum\limits_{\text{case }\in\text{cases}} t(\text{case})\times P(\text{case})$$
+
+Basically what this tells us is the average runtime is affected by the number of different outcomes (or cases) of the algorithm and the probability of each one of those cases.
+
+If otherwise stated, it can be assumed that every algorithm outcome has equal probability. That is if there are $$n$$ possible outcomes, the probability of each outcome is simply $$\frac{1}{n}$$.
+
+After that it is simply a matter of determining the runtime for each case.
+
+If you sum up the products of those two over every possible case you can get the average runtime. For searching algorithms like sequential and binary search we must consider the time when the search results in a successful match, but also when the search fails.
+
+So let's first explore sequential search
+
+### Sequential Search Analysis
+
+Imagine given an array 
+
+       0    1    2    3
+    +----+----+----+----+
+    |    |    |    |    |
+    +----+----+----+----+
+
+First we define $$n$$ to be the number of elements in the array.
+
+If we assume an unordered array then sequential search has $$n + 1$$ possible ending locations. There are $$n$$ places to end the search successfully and $$1$$ to end the search on a failure.
+
+Let's first determine how many comparisons are required at any given array index location. If we assume the following method
+
+    public boolean search(int[] A, int target) {
+      for(int i = 0; i < A.length; i++) {
+        if(A[i] = target) { return true; }
+      }
+      return false;
+    }
+
+So if we don't count the for-loop comparisons 
+
+- The number of comparisons to end a search at index 0 is 1
+- at index 1, is 2
+- index 3 needs 4 comparisons.
+
+etc.. If you continue the pattern given any index $$i$$ of the array, the number of comparisons to end a successful search on the index is $$i+1$$.
+
+So if we are to generalize that we can say $$t(i) = i+1$$
+
+Then if we account for the probability of each case, we get that they are all of equal probability. So for $$n$$ different items, each possible ending location for the search has $$1/n$$ probability.
+
+If we use the formula from earlier
+
+$$ \sum\limits_{\text{case }\in\text{cases}} t(\text{case})\times P(\text{case})$$
+
+Then we can apply the formulas we found for the probability and time
+
+$$ \sum\limits_{i = 0}^{n-1} t(i)\frac{1}{n} = \sum\limits_{i = 0}^{n-1} \frac{i+1}{n} = \frac{1}{n}\sum\limits_{i = 0}^{n-1} i+1 $$
+
+If we evaluate the summation we get that 
+
+$$ \frac{1}{n}\sum\limits_{i = 0}^{n-1} i+1 = \frac{1}{n} (\cdot \frac{n}{2} \cdot (n + 1)) $$
+
+$$ \frac{1}{n} (\cdot \frac{n}{2} \cdot (n + 1)) = \frac{n}{2} + \frac{1}{2}$$
+
+Now if we look at the possible failure cases we get that there is really only one failure case which occurs regardless of the size of the array which occurs **at the very end of the array**. However the number of comparisons **does not change** from the number of comparisons required for a successful search at $$i = n-1$$ (the last index) because we are not counting the for loop comparison. The number of comparisons for a failed search is $$n$$
+
+So the number of failed cases is simply 1. The probability of that case occurring of all failures is also 1 (because it's the only possible failure):
+
+$$ \sum\limits_{i = 1}^{1} 1 \cdot (n) = n $$
+
+So then we get
+
+> Average runtime for success: $$ \frac{n}{2} $$, n possible cases
+
+> Average for failure: $$n$$, 1 possible case
+
+If we are to average these two numbers together we must do so with a weighted average because the actual number of cases where each occur is different.
+
+So then the total average runtime would be 
+
+$$\text{Avg. Runtime} =  \frac{\text{success runtime}\times\text{number of success cases} + \text{failure runtime}\times\text{fail cases}}{\text{total number of cases}} $$
+
+$$ \text{Avg. Runtime} =  \frac{\frac{n+1}{2}n + n\cdot 1}{n + 1} \\ = \frac{n^2 + 3n}{2n + 2} = \frac{n}{2} + 1 - \frac{2}{n+1}$$
+
+### Binary Search Analysis
+
+Now we're going to apply the same concept to binary search.
+
+Given an array with binary search we know the number of comparisons for a successful search is going to be based on the midpoint of the current subsection of the array and the number of previous comparisons. For each iteration of binary search we first check if the midpoint is our target, then, if not we check if the target is greater/less than.
+
+- This means that a successful search at the first midpoint is only 1 comparison
+- A successful comparison in the 2nd iteration would have already checked the midpoint of the first. Then it would have checked to see if the target was greater/less than. Then the 3rd comparison would check for equality.
+- So at the 2nd level we get 3 total comparisons
+- 4th level is 5, and so on.
+
+See the following for an example of the number of comparisons.
+
+
+    Index      0    1    2    3    4    5    6
+             +----+----+----+----+----+----+----+
+             |    |    |    |    |    |    |    |
+             +----+----+----+----+----+----+----+
+    # Comp.    5    3    5    1    5    3    5
+    Fail Pts ^    ^    ^    ^    ^    ^    ^    ^
+
+The way that binary search differs from sequential search is that there are many more failure points. Note that instead of simply failing the search at the end of the array, the search can fail at any point in the array in between two numbers or at the ends.
+
+We see from the diagram above that there are 8 failure points for 7 items. This means we have $$n$$ possible places to successfully end the search. Then there are $$n+1$$ places where the search could fail.
+
+So we can perform the analysis by first looking at each case (success and failure) separately.
+
+**Success**
+
+We note that there are $$n$$ possible ways to finish a search where we find an item. To find the maximum number of comparisons that would be required for any search it is simply $$2log_2(n + 1) - 1$$
+
+So if we take $$k$$ to be the number of levels of the search comparison tree that would result from this array we get something like $$n = 2^k - 1$$, giving $$k = log_2(n+1) $$
+
+**However** we want $$k$$ to be an integer which represents the number of levels in the tree so we will set $$k = \lfloor log_2(n+1) \rfloor$$ which means we always round down to the lowest integer (Sometimes known as truncating the decimal)
+
+But we know that at the last level, the tree may not have a full set of leaves. So when performing the summation we must split up the last level from the rest of the summation. And note that for any given level of the tree (start from $$i = 0$$) and treating the root as height = 0, then the equation to find the number of comparisons at any given height, $$i$$, is equal to $$2i + 1$$, and the number of nodes for a given height in the tree at any level (up to and including the $$k-1$$-st level) is equal to $$2^i$$ so then our $$\text{Time}\times\text{Probability}$$ at any level is $$(2i + 1)2^i$$
+
+$$\text{Avg. Success} = \frac{1}{n}\left(\sum\limits_{i=0}^{k-2} ((2i + 1)2^i) + ( n - (2^{k-1} - 1))(2(k)+1)\right)$$
+
+The term $$(n - (2^{k-1} - 1))(2(k)+1)$$ is for the number of leaves that are present in a given list that do not complete a full binary comparison tree level. This is found by taking $$n$$ (the number of total items) and subtracting the total number of other nodes.
+
+We then multiply by the number of comparisons for that level which is $$2k + 1$$. Put it all together and multiply by every cases' probability of $$\frac{1}{n}$$ and we get the average case. [See the Desmos link here for a graphical representation of this formula](https://www.desmos.com/calculator/xknf2ejg8x).
+
+I'm not going to simply the expression but I'll leave it as an exercise.
+
+Also you should attempt to do find the number of failures on your own. It makes for good practice. I suggest using drawings as they are quite helpful.
+
+
+
+
+
+
 
 
 
