@@ -727,11 +727,11 @@ $$ \sum\limits_{i = 1}^{1} 1 \cdot (n) = n $$
 
 So then we get
 
-> Average runtime for success: $$ \frac{n}{2} $$, n possible cases
+> Average runtime for success: $$ \frac{n+1}{2} $$, n possible cases
 
 > Average for failure: $$n$$, 1 possible case
 
-If we are to average these two numbers together we must do so with a weighted average because the actual number of cases where each occur is different.
+If we are to average these two numbers together we must do so with a weighted average because the actual number of cases where each occur is different. **We should note** that this combination assumes the probability of failing a search is the exact same probability as a successful search at any single location. We're just making that assumption for this particular analysis of sequential search. Other analyses may differ in their assumptions.
 
 So then the total average runtime would be 
 
