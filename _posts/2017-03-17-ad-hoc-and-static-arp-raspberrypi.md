@@ -4,7 +4,7 @@ title: Ad-Hoc Networks and Static ARP entries on Raspberry Pi's
 author: Zac Blanco
 keywords: research, consensus, ARP, static, ipv4, inet, linux, raspbian, ad-hoc, adhoc
 permalink: /blog/research/ad-hoc-arp-entries/
-date: 2016-3-17
+date: 2017-03-17
 ---
 
 Part of our research this year involves creating and using ad-hoc networks on a linux-based operating system (Raspbian based on Debian Jessie).
@@ -26,7 +26,7 @@ The issue seems to lie somewhere with ARP resolution. Basically the driver doesn
 
 The issue is resolved by adding a static ARP entries using the `arp` command. We can make these entries persist between reboots (but not changes in interface state changes).
 
-Every node in the network has the following interfaces file with a differnt static IP.
+Every node in the network has the following interfaces file with a different static IP.
 
 ```
 auto eth0
