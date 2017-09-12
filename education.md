@@ -7,13 +7,13 @@ permalink: /education/
 
 -----
 
-**Spring 2017 Data Structures (CS112) Study Group**
+**Fall 2017 Data Structures (CS112) Study Group**
 
-For the students in my 112 study group you can [find our group page here](/education/data-structures/study-group/)
+For the students in my 112 study groups you can [find the group page here](/education/data-structures/study-group/)
 
 -----
 
-At each link you should be able to find useful resources for each class and at least one set of notes.  I do my best to take notes during class. I am also very welcoming to contributions. Everything is written in [markdown](http://blanco.io/blog/markup-languages/markdown-is-awesome/). [MathJax](https://www.mathjax.org/) is used for math formatting.
+At each link you should be able to find useful resources for each class and at least one set of notes.  I do my best to take notes during class. I am very welcoming to any contributions. Everything is written in [markdown](http://blanco.io/blog/markup-languages/markdown-is-awesome/). [MathJax](https://www.mathjax.org/) is used for math formatting.
 
 ## Courses at Rutgers University
 

@@ -11,8 +11,8 @@ You can contact me any time via email at `zac.blanco@rutgers.edu`. I will do my 
 
 ## Useful Links
 
-- [Problem Sets](https://www.cs.rutgers.edu/courses/112/classes/spring_2017_venugopal/probs/)
-- [Session Feedback Form](https://goo.gl/forms/dNokwIddk9YOgxZg2)
+- [Problem Sets](https://www.cs.rutgers.edu/courses/112/classes/fall_2017_venugopal/probs/)
+- [Session Feedback Form](https://goo.gl/forms/H1kvwDq4hTJPxT4e2)
 - [Sesh Venugopal Youtube Lectures](https://www.youtube.com/channel/UC3QLHt6mHfmg4x_h2am7ecg/videos)
 
 ## Outline
@@ -786,7 +786,30 @@ I'm not going to simply the expression but I'll leave it as an exercise.
 
 Also you should attempt to do find the number of failures on your own. It makes for good practice. I suggest using drawings as they are quite helpful.
 
+<div id="session-5"></div>
 
+## Session 5 - Exam Review
+
+We just went over problems pertaining to linked lists, stacks, and queues.
+
+No notes this week.
+
+<div id="session-10"></div>
+
+## Session 6 - Exam 2 Review
+
+Sorry I haven't been able to post any notes until now. My exams got the best of me.
+
+The topics covered for exam 2 are: 
+
+- Binary Search Trees
+- Binary Trees, AVL Trees
+- Huffman Coding
+- Hash Tables
+
+**Binary Search Trees**
+
+Binary search trees are derived from arrays of numbers an represent the different paths that the binary search can taking when looking for a 
 
 
 
