@@ -7,7 +7,7 @@ mathjax: true
 description: Notes and review materials for my CS 112 study group in the Spring of 2017.
 ---
 
-You can contact me any time via email at `zac.blanco@rutgers.edu`. I will do my best to respond in a timely manner.
+You can contact me any time via email at `zac (dot) blanco (at) rutgers.edu`. I will do my best to respond in a timely manner.
 
 ## Useful Links
 
