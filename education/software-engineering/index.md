@@ -231,7 +231,155 @@ You can build use cases from the user stories that are written as a part of the 
 
 Some times it is useful to draw diagrams of use cases in order to visualize exactly how the system operates between a system of multiple users in order to visually represent and follow the set of logic and steps that are required of the system in a specific use case.
 
-You should be able to discern the basic function of a system from a single diagram which displays the different actions, usecases, and actions of the software system.
+You should be able to discern the basic function of a system from a single diagram which displays the different actions, use cases, and actions of the software system.
+
+
+### Lecture 7 - 2/7/2017
+
+**Domain Modeling**
+
+Topics:  
+- Identifying concepts
+- Concept Attributes
+- Concept Associations
+- Contract: Preconditions and postconditions
+
+
+*Why Domain Modeling?*
+
+We model domains in order to understand how the software system will work
+
+- Requirements analysis determined how users will interact with the system
+- Domain modeling determines how elements of the system interacts to produce external behaviors.
+
+*How?* - we do domain modeling based on sources
+
+- Knowledge of how the system is supposed to behave
+- Studying the work domain (or problem domain)
+- Knowledge base of software designs
+- Developer's past experience with software design.
+
+**Building Domain Model From Us Cases**
+
+1. Identify the boundary concepts.
+  - Software concepts that interact with our actors of the system
+2. Identify the internal concepts.
+
+### Lecture 8 - 2/10/2017
+
+**Object-Oriented Design**
+
+- Assigning Responsibilities to Objects
+- Design Principles
+- Business Policies
+- Class Diagrams
+
+We create system sequence diagrams to see how objects interact with one another within the software system.
+
+**Types of Object Responsibilities**
+
+- **Knowing Responsibilities**: Memorizing data or references such as data values, data collection, or references to other objects represented as a property
+- **Doing Responsibility**: Performing computations, such as data processing, control of physical devices, etc..; Represented by a method
+- **Communicating Responsibility**: Communicating with other objects, represented as message sending (method invocation)
+
+Given a use case you need to "connect the dots" between the objects in order to figure out how the system-to-be will function. Ask the questions
+
+- Who will handle this data?
+- Who performs any verification?
+- Who signals, when do they signal?
+
+*Characteristics of Good Design*
+
+- Short communication chains
+- Balanced workload
+- Low degree of connectivity or associations
+
+*Design Principles*
+
+- **Expert Doer Principle**: That who knows should do the task
+- **High cohesion principle**: Do not take on too many computation responsibilities
+- **Low Coupling Principle**: Do not take on too many communication responsibilities
+
+**Responsibility-Driven Design**
+
+1. Identify the responsibilities
+  - Domain modeling provides a starting point
+  - Some will be missed at first and identified in subsequent iterations
+2. For each responsibility identify the alternative assignments.
+  - If the choice appears to be unique then move to the next responsibility.
+3. Consider the merits and tradeoffs of each alternative by applying design principles.
+  - Select what you consider the "optimal" choice.
+4. Document the process by which you arrived to each responsibility assignment.
+
+
+### Lecture 9 - 2/17/17
+
+*Note*: Last lecture was cancelled.
+
+**Software Testing**
+
+- **Test Driven Development** (TDD): Write tests to drive the development of software artifacts.
+- A **test case** is a particular choice of input data to be used in a testing program.
+- A test is a finite collection of test cases
+
+Testing is Hard
+
+- No hard barrier on economic tradeoff between time spent writing tests vs time spent actually writing code
+- Find faults cheaply and quickly
+- In practice we have to run many unsuccessful test cases that do not expose any faults
+
+**Accepteance Tests**
+
+Example:
+
+- *Test Description (Expected Result)*
+- Test with valid key of a current tenant on his/her apartment (pass)
+- Test with the valid key of a current tenant on someone else's apartment (fail)
+- Test with an invalid key on any apartment (fail)
+
+**Test Coverage**:
+
+- **Test coverage** measures the degree to which the specification or code of a software program has been exercised by tests.
+- **Code Coverage**: Measures the degree to which the source code of a program has been tested
+  - *Criteria*
+  - Equivalence testing
+    - A black-box testing method that divides the space of all possible inputs into equivalence groups such that the program behaves the same on each group.
+  - Boundary testing
+    - A special case of equivalence testing that focuses on the boundary values of the input parameters. Based on the assumption that developers often overlook special cases at the boundary of equivalence classes
+  - Control-flow testing
+    - Statement coverage
+    - Edge coverage
+    - Condition Coverage
+    - Path coverage
+  - State-based testing
+    - Defines a set of abstract states that a software unit can take and tests the unit's behavior by comparing its actual states to the expected states. (Popular with object-oriented systems)
+    - *State* of an object defined as a constraint of the values of an object's attributes
+
+**Practical Aspects of Unit Testing**
+
+- Mock objects
+  - A test driver simulates parts of the system that invokes operations on the tested components.
+  - A test stub simulates the components that are called by the tested components
+
+*Cycle*: 
+
+1. Create the thing to be tested, the driver, and the stubs
+2. Have the driver invoke an operation on the fixture
+3. Evaluate that the actual state equals the expected state.
+
+**Junit and Other Frameworks**
+
+- Popular for testing
+- Use `assertX()` methods to verify conditions
+
+**Integration Testing**
+
+- Horizontal integration testing
+- Vertical integration testing
+
+
+
+
 
 
 

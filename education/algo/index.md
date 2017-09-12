@@ -172,15 +172,15 @@ Useful Summation Formulas
 
 > $$\sum\limits_{i=1}^n i^3 = \left(\frac{n(n+1)}{2}\right)^2 = \Theta (n^4)$$
 
-> $$\sum\limits_{i=1}^n x^i = \frac{x^{k+1} - 1}{x-1}$$
+> $$\sum\limits_{i=1}^n x^i = \frac{x^{k+1} - x}{x-1}$$
 
 What about the summation: $$ A(x) = \sum\limits_{i=1}^n i2^i$$ ??
 
 We can generalize and make it $$ A(x) = \sum\limits_{i=1}^n ix^i$$
 
-Say $$B(x) = \sum\limits_{i=1}^n x^i = \frac{x^{k+1} - 1}{x-1}$$
+Say $$B(x) = \sum\limits_{i=1}^n x^i = \frac{x^{i+1} - x}{x-1}$$
 
-Then $$B'(x) = \sum\limits_{i=1}^n ix^{i-1} = \frac{(k+1)x^{k}(x-1) - (x^{k+1} - 1)}{(x-1)^2}$$
+Then $$B'(x) = \sum\limits_{i=1}^n ix^{i-1} = \frac{(i+1)x^{i}(x-1) - (x^{i+1} - 1)}{(x-1)^2}$$
 
 From this we can simply see that $$xB'(x) = A(x)$$
 
@@ -215,7 +215,7 @@ The average time is then given by $$ \frac{\sum loc}{n + 2} $$
 
 In more mathematical terms there are $$n$$ locations plus $$n+1$$ gaps which gives us $$2n+1$$ locations.
 
-The Average time then becomes $$A(n) = \sum\limits_{t=1}^k t\cdot Pr(# of comparisons)
+The Average time then becomes $$A(n) = \sum\limits_{t=1}^k t\cdot Pr(# of comparisons) $$
 
 $$A(n) = \sum\limits_{t=1}^k t$$
 
@@ -346,6 +346,75 @@ $$\alpha > 0 \\ b > 1 \\ d \geq 0$$
 and 
 
 $$T(n) = \begin{cases} O(n^d), & d > lob_b(\alpha) \\ O(n^dlog(n)), & d = log_b(\alpha) \\ O(n^{log_b(\alpha)}), & d < log_b(\alpha) \end{cases}$$
+
+
+### Lecture 6 - 2/6/2017
+
+Quicksort
+
+1. Split and compare elements of the from from left to right with A[1] starting with A[2]
+2. If an element is greater than A[1] it stays in place
+    - Otherwise, swap with the first key which is either greater than or equal to it in the greater section
+3. Finally swap A[1] with the last of the smaller keys (n-1 comparisons)
+
+[For a much better explanation with visuals see this link](https://interactivepython.org/runestone/static/pythonds/SortSearch/TheQuickSort.html)
+
+In the worst possible case, quicksort is $$O(n^2)$$
+
+With randomized recursion where we choose a random pivot index from 1 to n, then $$T(n)$$ which is the average number of comparisons in randomized recursion.
+
+We get that $$A(n) = A(0) + A(n-1) + \dots + n-1$$
+**Theorem**: $$A(n) \leq cn\cdot log(n)
+
+$$A(n) = \sum\limits_{k=2}^{n-1} A(k) + n-1 $$
+
+### Lecture 7 - 2/8/2017
+
+*Sorry! No notes for today*
+
+### Lecture 8 - 2/13/2017
+
+Heaps
+
+A structure which satisfies the heap property:
+
+> $$k(x) \leq key(parent(x)) $$
+
+In human terms this means that given a key $$k(x)$$ that we can say that a structure satisfies the heap property if the parent element of $$x$$ is always greater than or equal to its children.
+
+This is different from a binary tree where we know the relationship between the left and right nodes must be that the left node is always less than the right. In a heap this isn't true. In a heap all we know is that the parent is always greater than the children.
+
+So when popping a new item from a heap we must ensure that the heap property is still satisfied. In order to do this we remove the item from the heap, then we fix the heap by sifting the new largest value of the roots children as the new root. Then look at that nodes children and bring the larger one up, and so on.
+
+The recurrence relation for heapsort is $$ T(n) \leq 2T(\frac{n}{2})+ c\cdot log(n)$$
+
+If we break this down by setting $$n=2^k$$ we can get $$T(2^k) \leq 2T(\frac{2^k}{2}) + n\cdot log(2^k) = T(2^k) \leq 2T(2^{k-1}) + c\cdot k$$
+
+Then breaking down the recurrence relation we
+
+$$T(2^k) \leq 2(2(T(2^{k-2)} + k-1) + k $$
+
+$$ T(2^k) \leq 2(2(2(T(2^{k-3}) + k-2) + k-1) + k$$
+
+By going until $$ k =0 $$ we get
+
+$$2^k +k + 2(k-1) + 2^2(k-2) + 2^3(k-3) + \dots = 2^k + \sum\limits_{i=0}^{k-1} 2^i(k-i)$$
+
+
+## Lecture 10 - 2/27/17 - Graphs
+
+Graphs are special constructs which include vertices and edges. We represent a graph $$G$$ by
+
+> $$ G(V, E) $$
+
+Where $$V$$ represents the set of all vertices in the graph. $$E$$ represents the edges in the graph. When drawing a graph, an edge is associated with two vertices and is typically represented by a line drawn between the two vertices which it connects.
+
+### BFS (Breadth-First Search)
+
+Breadth-first search means starting from a specific node and searching for a value within a graph by exploring all nodes within a similar distance of the first before moving outwards to search more distant nodes.
+
+
+
 
 
 

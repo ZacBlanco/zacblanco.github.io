@@ -553,6 +553,154 @@ OS process management:
 - Interleaves the execution of multiple processes to maximize system utilization
 
 
+### Lecture 7 - 2/7/2017
+
+Chapter 3 - Processes
+
+- A process can be thought of as a program in execution
+  - Analogous to an instance of an object vs a class in Java/C++
+
+Processes at a minimum contain a single thread which the main program code will run on. Many modern operating systems will allow a single program to run on many different threads under a single process. This information is all tracked by the operating system.
+
+With respect to processes, an operating system is responsible for:
+
+- creation and deletion
+- CPU scheduling of processes
+- Synchronization mechanisms
+- communication
+- deadlock handling
+
+**The Process Control Block**
+
+Every process is represented in the OS by the *process control block* (PCB) sometimes it is called a task control block.
+
+It includes the following pieces of information:
+
+- Process state: new, ready, running, waiting, halted (see notes below for more info)
+- Program counter: indicates the address of the next instruction to execute
+- CPU registers: Registers vary by architecture but may inculde GP registers, condition codes, accumulators.
+- CPU-scheduling information: Information which includes a process priority, pointers to scheduling queues, and other parameters.
+- Memory management info: Information such as base and limit registers, page tables, segment tables, etc.
+- Accounting information: Amount of CPU time used, time limits, account numbers, job & process numbers
+- I/O Status Info: list of IO devices allocated to a process, open files, etc..
+
+**Process Switching**
+
+The OS must schedule when processes get to execute on certain CPU cores. In a typical system you might have tens or hundreds of processes running at the same time. In order to be able to allow the system to run and respond with as little delay as possible, the OS must constantly switch executing many different processes.
+
+Given a process $$P_0$$ running on CPU core 0, the process to switch to another process $$P_1$$ is as follows:
+
+1. Save the state of $$P_0$$ to $$PCB_0$$ (PCB stands for Process-Control-Block)
+2. Load/Reload the state of $$P_1$$ from $$PCB_1$$.
+  - After some time we switch back
+3. Save state of $$P_1$$ into $$PCB_1$$
+4. Reload the state of $$P_0$$ from $$PCB_0$$
+
+Sometimes this is referred to as a **context switch**
+
+**Process States**
+
+A process can have multiple states:
+
+- **new** - The process is being created
+- **running** - Instructions are being executed
+- **waiting** - The process is waiting for some event to occur (I/O of completion of a signal)
+- **ready** - The process is waiting to be assigned to a processor
+- **terminated** - The process has finished execution
+
+
+A process is represented in Unix/Linux by a `struct` in C
+
+(The book calls it a `task_struct` )
+
+    struct task_struct {
+      long state; /* state of the process */
+      struct sched entity se; /* scheduling information */
+      struct task struct *parent; /* this process’s parent */
+      struct list head children; /* this process’s children */
+      struct files struct *files; /* list of open files */
+      struct mm struct *mm; /* address space of this process */
+    }
+
+**Process Scheduling**
+
+A process scheduler will assign available processes to individual CPU cores at a fast rate in order to keep the system executing instructions in order to stay responsive.
+
+When a processes is created it is put into the *job queue* which is a queue of all process currently running in the system. The processes which reside in main memory and are ready to execute are kept in the **ready queue**.
+
+There are other queues as well such as the **device queue**: The list of processes waiting for a particular I/O device.
+
+There are actually two schedulers which are typically used called the **long-term scheduler** and **short-term scheduler** or **job scheduler** and **CPU scheduler** respectively.
+
+The CPU scheduler will select available processes and place them on the CPU. The long term scheduler will load processes from a disk to main memory where they can then be added to the CPU scheduler.
+
+
+**Process Termination** 
+
+You can stop a process by using the `exit` command if on the main thread of a program. Otherwise you should use `kill` to stop a process with a given PID.
+
+see `man kill` and `man exit` on GNU/Linux systems for more detail.
+
+**Interprocess Communication**
+
+We can uses `pipes` to allow two processes to communicate between one another.
+
+Issues which we must think about with pipes:
+
+- Uni vs bi-directional communication
+  - For bi-directional, half or full duplex?
+- Do we need a parent-child relationship for communication?
+- Pipes used over a network?
+
+There are *ordinary pipes* which cannot be accessed from outside the process that created it. Typically, a parent process creates a pipe and uses it to communicate with a child process that it created.
+
+There are also *named pipes* which can be accessed without having a parent-child relationship.
+
+- Ordinary pipes are unidirectional. They follow a producer-consumer paradigm where one end of the pipe will send information. The other end of the pipe receives that information.
+
+
+### CPU Scheduling
+
+Processes are scheduled with combinations of CPU bursts and I/O bursts.
+
+IO bound programs are typically composed of many short CPU bursts due to the I/O waiting that needs to occur.
+
+4 possible conditions for a new process to be scheduled
+
+- Process switches from running to waiting (i.e. `waitpid` or `read` IO request)
+- Process switches from running to ready (ex. when process is interrupted)
+- Process switches from waiting to ready (upon completion of an IO request)
+- Process terminates
+
+In the 1st and 4th case a new process MUST be scheduled.
+
+**Dispatch latency** is the time is takes to switch processes. i.e. the time between ending one and starting another
+
+**Scheduling Algorithms**
+
+- FCFS (First-Come First-Serve)
+  - Can be implemented with a FIFO queue
+  - Average wait time can be quite long
+  
+- SJFS (Shortes Job First Scheduling)
+- 
+
+NP Complete Problems
+
+ CNF, 3-CNF, CLique, Knapsack, Vertex-Cover, Hamiltonian Cycle, Independent Sets
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
