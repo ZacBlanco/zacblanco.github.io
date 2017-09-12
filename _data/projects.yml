@@ -1,24 +1,30 @@
 ---
+
+-
+  name: ChefBoyRD
+  url: http://blanco.io/ChefBoyRD
+  description: Restaurant Automation - Rutgers ECE Software Engineering Project. Spring 2017.
+
+-
+  name: pymessage
+  url: https://github.com/zacblanco/pymessage
+  description: A lightweight messaging protocol built on top of sockets in order to easily develop networked python applications 
 -
  name: This Blog
  url: https://github.com/ZacBlanco/zacblanco.github.io
  description: Source for this site.
 -
  name: 2048
- url: http://zacblanco.github.io/ML2048/
+ url: http://zacblanco.github.io/2048/
  description: An attempt to clone the game 2048, plus an AI feature.
 
 - 
  name: Countdown
  url: http://zacblanco.github.io/countdown/
  description: An extremely simple countdown timer/html page that utilizes countdown.js
-
--
- name: Dstat
- url: https://github.com/ZacBlanco/DStat/
- description: A java library that can report statistics on a distribution of numbers.
   
 -
  name: Jiffy
  url: https://github.com/ZacBlanco/jiffy/
- description: A wrapper on the jetty web-server to make developing beautiful web applications easy.
+ description: A wrapper on the jetty web-server to make developing simple web apps easily in Java.
+

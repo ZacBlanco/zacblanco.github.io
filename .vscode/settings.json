@@ -1,0 +1,18 @@
+{
+    "spellchecker.language": "en_US",
+    "spellchecker.ignoreWordsList": [
+        "minterm",
+        "cdot",
+        "Karnaugh",
+        "rutgers",
+        "Wikipedia"
+    ],
+    "spellchecker.documentTypes": [
+        "markdown",
+        "latex",
+        "plaintext"
+    ],
+    "spellchecker.ignoreRegExp": [],
+    "spellchecker.ignoreFileExtensions": [],
+    "spellchecker.checkInterval": 5000
+}
