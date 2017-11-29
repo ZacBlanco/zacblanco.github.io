@@ -9,6 +9,10 @@ description: Notes and review materials for my CS 112 study group in the Spring 
 
 You can contact me any time via email at `zac (dot) blanco (at) rutgers.edu`. I will do my best to respond in a timely manner.
 
+These notes were written during the Spring of 2017. I do my best to update/improve them when I can. Want to add or contribute? Send me an email.
+
+**STUDY GROUP FALL 2017**: Solutions to the graph problems can be found in [this GitHub Gist](https://gist.github.com/ZacBlanco/7a343b4edda9cee03f8ff08b0dcc7bc3)
+
 ## Useful Links
 
 - [Problem Sets](https://www.cs.rutgers.edu/courses/112/classes/fall_2017_venugopal/probs/)
