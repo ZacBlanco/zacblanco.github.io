@@ -3,7 +3,13 @@ layout: default
 title: Home
 ---
 
-<div class="home-double">
+Hi, my name is Zac (if you didn't figure that out already). I studied Electrical and Computer Engineering at Rutgers University through the spring of 2018.
+
+I like writing [code](https://github.com/zacblanco) and doing research.
+
+You can find notes for some of the classes that I took [here](education/)
+
+<!-- <div class="home-double">
 	<div class="left-section">
 		<img class="home-image" src="/assets/images/homepage/ASF-logo-small.png">
 		<p>I'm currently a committer on the <a style="color:red" href="http://knox.apache.org"> Apache Knox Project</a>. I believe
@@ -17,15 +23,4 @@ title: Home
 			University, The State University of New Jersey, New Brunswick. Expected Graduation: 2018. </p>
 	</div>
 
-</div>
-
-<div class="home-double">
-
-	<div style="margin:auto">
-		<img class="home-image" src="assets/images/homepage/info-icon-small.png">
-		<p>
-			My current research is in the area of distributed machine learning. I am mainly focused on the efficacy of a dictionary learning algorithm termed <a href="http://ieeexplore.ieee.org/document/7219480/">Cloud K-SVD</a> which is being implemented and used in conjunction with a small cluster of Raspberry Pi computers.
-		</p>
-	</div>
-
-</div>
+</div> -->

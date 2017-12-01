@@ -41,10 +41,15 @@ At each link you should be able to find useful resources for each class and at l
 - Fall
   - [(14:332:231) - Digital Logic Design](digital-logic-design/)
   - [(14:332:345) - Linear Systems and Signals](linear-systems-signals/)
-  - (14:332:361) - Electronic Devices (Coming Soon)
-  - (01:198:214) - Systems Programming (Coming Soon)
+  <!-- - (14:332:361) - Electronic Devices (Coming Soon) -->
+  <!-- - (01:198:214) - Systems Programming (Coming Soon) -->
 - Spring
   - [(14:332:452) - Software Engineering](software-engineering/)
   - [(14:332:434) - Intro to Computer Systems](computer-systems/)
   - [(01:198:344) - Design and Analysis of Computer Algorithms](algo/)
-  - (14:332:xxx) - Digital Electronics (Coming soon)
+  <!-- - (14:332:xxx) - Digital Electronics (Coming soon) -->
+
+**Senior Year Courses**
+
+- Fall
+  - [(14:332:472) - Robotics and Computer Vision](rcv/)
