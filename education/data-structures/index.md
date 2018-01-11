@@ -8,7 +8,7 @@ description: A page full of notes and useful links for succeeding Data Structure
   
 Here you will find various links and notes related to Data Structures (CS112) at Rutgers University
 
-Notes come from the version of the class which was taught during the fall of 2015 by Sesh Venugopal.
+Final review notes come from the version of the class which was taught during the fall of 2015 by Sesh Venugopal.
 
 Links:
 
