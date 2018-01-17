@@ -1,0 +1,10 @@
+---
+
+- date: Jan 2018
+  desc: Implemented communication avoiding distributed optimization algorithms in Apache Spark. [GitHub](https://github.com/zacblanco/DistributedOptimization).
+
+- date: Jan 2018
+  desc: Joined the Paramathics research group for my final semester at Rutgers
+
+- date: Dec 2017
+  desc: Implemented a fast iterative version of singular value decomposition in Apache Spark for my Cloud Computing course. [Report](https://drive.google.com/file/d/1k0BUMaIRTYm6JN56yYr3SSRrdthQvHw6/view?usp=sharing).
