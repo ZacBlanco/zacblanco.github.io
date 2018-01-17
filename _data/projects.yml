@@ -31,4 +31,4 @@
 -
  name: Jiffy
  url: https://github.com/ZacBlanco/jiffy/
- description: A wrapper on the jetty web-server to make developing simple web apps easily in Java.
+ description: A wrapper on the jetty web-server to make developing simple web apps easy in Java.
