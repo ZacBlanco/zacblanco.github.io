@@ -2,7 +2,7 @@
 layout: page
 title: Algorithm Design and Analysis
 permalink: /education/algo/
-keywords: 01:196:344, rutgers, software, engineering, algorithms, design, analysis, big, O, notation, runtime
+keywords: 01:198:344, rutgers, software, engineering, algorithms, design, analysis, big, O, notation, runtime
 description: A page full of notes and useful links for succeeding in Algorithms Design & Analysis (Algo) at Rutgers University.
 mathjax: true
 ---
