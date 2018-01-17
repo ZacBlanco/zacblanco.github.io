@@ -53,7 +53,9 @@ At each link you should be able to find useful resources for each class and at l
 
 - Fall
   - [(14:332:472) - Robotics and Computer Vision](rcv/)
+  - [(14:332:431) - Digital System Design](digital-system-design/)
   - [(14:198:417) - Distributed Systems](distributed-systems/)
+  
 
 - Spring
   - [(01:198:440) - Intro to AI](ai/)
