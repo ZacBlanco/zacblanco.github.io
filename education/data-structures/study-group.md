@@ -11,11 +11,10 @@ You can contact me any time via email at `zac (dot) blanco (at) rutgers.edu`. I 
 
 These notes were written during the Spring of 2017. I do my best to update/improve them when I can. Want to add or contribute? Send me an email.
 
-**STUDY GROUP FALL 2017**: Solutions to the graph problems can be found in [this GitHub Gist](https://gist.github.com/ZacBlanco/7a343b4edda9cee03f8ff08b0dcc7bc3)
 
 ## Useful Links
 
-- [Problem Sets](https://www.cs.rutgers.edu/courses/112/classes/fall_2017_venugopal/probs/)
+- [Problem Sets](https://www.cs.rutgers.edu/courses/112/classes/spring_2018_venugopal/probs/)
 - [Session Feedback Form](https://goo.gl/forms/H1kvwDq4hTJPxT4e2)
 - [Sesh Venugopal Youtube Lectures](https://www.youtube.com/channel/UC3QLHt6mHfmg4x_h2am7ecg/videos)
 
@@ -602,7 +601,7 @@ Notice how after reaching 5 that the values wrap around back to 0. This makes it
 
 ### Bounded Queues
 
-A bounded queue is simply a queue which has a limited amount of items which can be stored in a single time. This can be useful if the underlying list implementation is an array because then we limit the amount of memory that is taken up and we don't have to perform array reallocations and copies when adding new items because we will know the size of the queue beforehand.
+A bounded queue is simply a queue which has a limited amount of items which can be stored in a single time. This can be useful if the underlying list implementation is an array because then we limit the amount of memory that is taken up. We also don't have to perform array reallocations and copies when adding new items because we will know the size of the queue beforehand.
 
 In terms of implementation the bounded queue can be implemented by using an ArrayList of by list Nodes with `next` pointers.
 
