@@ -48,7 +48,7 @@ Similarly we get an equation using $$y_i$$
 
 > $$ 0 = m_{21}X_i + m_{22}Y_i + m_{23}Z_i + m_{14} -y_i(m_{31}X_i + m_{32}Y_i + m_{33}Z_i + m_{34}) $$
 
-Then, for each point in the matrix we can get 2 rows in a $$2Nx12$$ column matrix where the 12 columns come from the 12 parameters of the M matrix.
+Then, for each point in the matrix we can get 2 rows in a 2Nx12 column matrix where the 12 columns come from the 12 parameters of the M matrix.
 
 Thus we should be be able to solve for the matrix with around 6 corresponding points where the matrix is determined. (Use SVD and take the last column of V to get a solution in the null space) 
 
