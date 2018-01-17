@@ -9,7 +9,7 @@ description: Notes and review materials for my CS 112 study group in the Spring 
 
 You can contact me any time via email at `zac (dot) blanco (at) rutgers.edu`. I will do my best to respond in a timely manner.
 
-These notes were written during the Spring of 2017. I do my best to update/improve them when I can. Want to add or contribute? Send me an email.
+These notes were written during the Spring of 2017. I do my best to update/improve them when I can. Want to add or contribute? Send me an email or [create an issue on GitHub](https://github.com/ZacBlanco/zacblanco.github.io/issues).
 
 
 ## Useful Links

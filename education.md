@@ -7,7 +7,7 @@ permalink: /education/
 
 -----
 
-**Fall 2017 Data Structures (CS112) Study Group**
+**Spring 2018 Data Structures (CS112) Study Group**
 
 For the students in my 112 study groups you can [find the group page here](/education/data-structures/study-group/)
 
@@ -43,6 +43,7 @@ At each link you should be able to find useful resources for each class and at l
   - [(14:332:345) - Linear Systems and Signals](linear-systems-signals/)
   <!-- - (14:332:361) - Electronic Devices (Coming Soon) -->
   <!-- - (01:198:214) - Systems Programming (Coming Soon) -->
+
 - Spring
   - [(14:332:452) - Software Engineering](software-engineering/)
   - [(14:332:434) - Intro to Computer Systems](computer-systems/)
