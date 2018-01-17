@@ -8,9 +8,9 @@ permalink: /about/
 
 I'm an aspiring software engineer who's currently a student studying electrical and computer engineering at Rutgers University, New Brunswick. I expect to graduate around May of 2018.
 
-My interests lie in big data, analytics, machine learning, artificial intelligence. I'm currently a research assistant as a part of the [Aresty Undegraduate Research Center](https://aresty.rutgers.edu/) where I'm studying the efficacy of the distributed machine learning algorithm termed [Cloud K-SVD](http://ieeexplore.ieee.org/document/7219480/)
+My interests lie in big data, distributed systems, machine learning, artificial intelligence. I'm currently working in the Paramathics group at Rutgers University with professor [Maryam Mehri Dehnavi](http://www.rci.rutgers.edu/~mm2366/). During the summer of 2018 I will work for a second time a 3-month stint at MIT Lincoln Laboratory.
 
-I'm also a firm believer in great education. I enjoy helping others learn! I am currently a [learning assistant at Rutgers University](https://rlc.rutgers.edu/student-info/group-and-individual-academic-support/learning-assistant-program). I help teach undergraduate students in introductory Physics courses.
+I'm a firm believer in great education. I enjoy helping others learn! I am currently a [learning assistant at Rutgers University](https://rlc.rutgers.edu/student-info/group-and-individual-academic-support/learning-assistant-program). I've helped lead recitations and study groups in physics (01:750:123 and 124) and data structures (01:198:112).
 
 Here's a list of languages and technologies I've worked with in the past:
 
