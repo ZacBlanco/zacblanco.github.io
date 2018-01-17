@@ -3,7 +3,7 @@
 -
  name: CA SFISTA and CA SPNM
  url: https://github.com/ZacBlanco/DistributedOptimization/
- description: Two communication-avoiding linear optimization solvers. [Paper](https://arxiv.org/pdf/1710.08883.pdf)
+ description: Two communication-avoiding LASSO solvers. [Paper](https://arxiv.org/pdf/1710.08883.pdf)
 
 -
   name: ChefBoyRD
