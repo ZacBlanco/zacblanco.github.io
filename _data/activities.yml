@@ -7,4 +7,4 @@
   desc: Joined the Paramathics research group for my final semester at Rutgers
 
 - date: Dec 2017
-  desc: Implemented a fast iterative version of singular value decomposition in Apache Spark for my Cloud Computing course. [Report](https://drive.google.com/file/d/1k0BUMaIRTYm6JN56yYr3SSRrdthQvHw6/view?usp=sharing).
+  desc: Implemented a fast iterative version of singular value decomposition in Apache Spark for my cloud computing course. [Code](https://github.com/zacblanco/fastSVD). [Report](https://drive.google.com/file/d/1k0BUMaIRTYm6JN56yYr3SSRrdthQvHw6/view?usp=sharing).
