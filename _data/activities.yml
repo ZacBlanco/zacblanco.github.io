@@ -1,4 +1,16 @@
 ---
+- date: August 2018
+  desc: I have decided to join the talented and extraordinarily passionate team at [Alluxio](https://alluxio.com) in San Mateo, California as a software engineer
+
+- date: May 2018
+  desc: Started work as an intern at [MIT Lincoln Laboratory](https://ll.mit.edu)
+
+- date: May 2018
+  desc: I have **two** papers which have been accepted for publication at [ICPP '18](http://oaciss.uoregon.edu/icpp18/index.php). They are titled _CSTF; Large-Scale Sparse Tensor Factorizaitons on Distributed Platforms_ and _Reducing Communication in Proximal Newton Methods for Sparse Least Squares Problems_
+
+- date: May 2018
+  desc: Graduated with a B.S. and Summa Cum Laude in electrical and computer engineering from Rutgers University.
+
 - date: Feb 2018
   desc: Attended [HackHers](https://hackhers.us) where our senior design team [flew a drone](https://www.youtube.com/watch?v=PaJlNlsmRRA) using an arduino board and some special hardware
 

@@ -29,6 +29,7 @@ At each link you should be able to find useful resources for each class and at l
   - [(01:750:227) - Analytical Physics 2A - Electromagnetism](analytical-physics-227/)
   - [(01:830:321) - Social Psychology](social-psychology/)
   - [(01:198:112) - Data Structures](data-structures/)
+
 - Spring
   - [(14:332:331) - Computer Architecture](comp-arch-332/)
   - [(14:332:222) - Principles of Electrical Engineering 2](principles-of-ee-2/)
