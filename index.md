@@ -3,14 +3,16 @@ layout: default
 title: Home
 ---
 
-Currently, I am a PhD student at UC San Diego working in
-[WukLab](https://wuklab.io)
+I am currently a [PhD student](/education/) at [UC San Diego](https://ucsd.edu)
+working with Dr. Yiying Zhang in [WukLab](https://wuklab.io). Previously, I
+worked as software engineer at [Alluxio Inc.](https://alluxio.io) and earned my
+undergraduate degree at [Rutgers University](/education/undergrad/). You can
+find my most of my research and projects on my
+[github](https://github.com/ZacBlanco). There are notes for the classes that I
+took during my undergrad [here](/education/undergrad/)
 
-Previously, I worked as software engineer at [Alluxio Inc.](https://alluxio.io) and a
-student at [Rutgers University](/education/undergrad/).
+#### Quick Links
 
-- You can find my most of my research and projects on my
-  [github](https://github.com/ZacBlanco).
-
-- There are notes for the classes that I took during my undergrad
-  [here](/education/undergrad/)
+- [Publications and Research](/education/)
+- [Undergraduate Class Notes](/education/undergraduate/)
+- [GitHub](https://github.com/ZacBlanco)

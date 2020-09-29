@@ -2,13 +2,12 @@
 title: Zac Blanco
 email: zacdblanco@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
- A personal site to outline my professional experience, as well as showcase my small part-time projects.
- I enjoy writing posts from time to time whenever I learn something new or feel like sharing things with
- the world.
+ A personal website to act as a portfolio for my academic and professional experience
 baseurl: "/" # the subpath of your site, e.g. /blog/
-url: "http://blanco.io" # the base hostname & protocol for your site
+url: "https://blanco.io" # the base hostname & protocol for your site
 twitter_username: ZacBlanco
 github_username:  ZacBlanco
+tagline: hello
 
 pages_list:    
   Blog: '/blog'
@@ -24,7 +23,7 @@ relative_permalinks: false
 # Setup
 author:
   name:           Zac Blanco
-  url:            "http://blanco.io"
+  url:            "https://blanco.io"
   email:          zacdblanco@gmail.com
 
 # Custom vars
