@@ -14,5 +14,5 @@ took during my undergrad [here](/education/undergrad/)
 #### Quick Links
 
 - [Publications and Research](/education/)
-- [Undergraduate Class Notes](/education/undergraduate/)
+- [Undergraduate Class Notes](/education/undergrad/)
 - [GitHub](https://github.com/ZacBlanco)
