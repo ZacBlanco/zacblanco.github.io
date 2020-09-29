@@ -5,59 +5,31 @@ keywords: rutgers, university, course, notes, electrical, engineering, physics, 
 permalink: /education/
 ---
 
------
 
-**Spring 2018 Data Structures (CS112) Study Group**
 
-For the students in my 112 study groups you can [find the group page here](/education/data-structures/study-group/)
+## Undergraduate
 
------
+- _[Undergraduate Notes](/education/undergrad/)_
 
-At each link you should be able to find useful resources for each class and at least one set of notes.  I do my best to take notes during class. I am very welcoming to any contributions. Everything is written in [markdown](http://blanco.io/blog/markup-languages/markdown-is-awesome/). [MathJax](https://www.mathjax.org/) is used for math formatting.
+## Graduate
 
-## Courses at Rutgers University
 
-**Freshman Year Courses**
+I'm currently a PhD student studying under [Dr. Yiying
+Zhang](https://cseweb.ucsd.edu/~yiying/) as a part of
+[WukLab](https://wuklab.io)
 
-- Spring
-  - [(01:750:124) - Analytical Physics 1B](analytical-physics-124/)
+## Courses
 
-**Sophomore Year Courses**
+### Fall 2020
 
-- Fall
-  - [(14:332:221) - Principles of Electrical Engineering 1](principles-of-ee-1/)
-  - [(01:750:227) - Analytical Physics 2A - Electromagnetism](analytical-physics-227/)
-  - [(01:830:321) - Social Psychology](social-psychology/)
-  - [(01:198:112) - Data Structures](data-structures/)
+- [CSE 221 - Operating Systems](/education/grad/cse221/)
+- CSE 232 - Principles of Database Systems
 
-- Spring
-  - [(14:332:331) - Computer Architecture](comp-arch-332/)
-  - [(14:332:222) - Principles of Electrical Engineering 2](principles-of-ee-2/)
-  - [(01:198:205) - Discrete Mathematics](discrete-math/)
-  - [(14:332:226) - Probability and Random Processes](probability-random-processes/)
-  - [(01:640:250) - Intro to Linear Algebra](intro-linear-algebra/)
+## Publications
 
-**Junior Year Courses**
+### 2018
 
-- Fall
-  - [(14:332:231) - Digital Logic Design](digital-logic-design/)
-  - [(14:332:345) - Linear Systems and Signals](linear-systems-signals/)
-  <!-- - (14:332:361) - Electronic Devices (Coming Soon) -->
-  <!-- - (01:198:214) - Systems Programming (Coming Soon) -->
+- Blanco, Zachary, Bangtian Liu, and Maryam Mehri Dehnavi. "CSTF: Large-scale sparse tensor factorizations on distributed platforms." _Proceedings of the 47th International Conference on Parallel Processing._ 2018. [paper](http://www.paramathic.com/wp-content/uploads/2019/09/Cloud.pdf)
 
-- Spring
-  - [(14:332:452) - Software Engineering](software-engineering/)
-  - [(14:332:434) - Intro to Computer Systems](computer-systems/)
-  - [(01:198:344) - Design and Analysis of Computer Algorithms](algo/)
-  <!-- - (14:332:xxx) - Digital Electronics (Coming soon) -->
+- Soori, Saeed, et al. "Reducing Communication in Proximal Newton Methods for Sparse Least Squares Problems." _Proceedings of the 47th International Conference on Parallel Processing._ 2018. [paper](http://www.paramathic.com/wp-content/uploads/2019/09/CA-FISTA.pdf)
 
-**Senior Year Courses**
-
-- Fall
-  - [(14:332:472) - Robotics and Computer Vision](rcv/)
-  - [(14:332:431) - Digital System Design](digital-system-design/)
-  - [(14:198:417) - Distributed Systems](distributed-systems/)
-  
-
-- Spring
-  - [(01:198:440) - Intro to AI](ai/)

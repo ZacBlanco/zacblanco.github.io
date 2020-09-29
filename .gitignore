@@ -5,3 +5,5 @@ _site/feed.xml
 _site/feed.xml
 .vscode/spellchecker.json
 .jekyll-metadata
+Gemfile.lock
+.vscode

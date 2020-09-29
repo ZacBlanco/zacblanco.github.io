@@ -1,6 +1,11 @@
 ---
 
 -
+ name: Alluxio 
+ url: https://github.com/Alluxio/alluxio
+ description: A distributed filesystem and data caching layer for unifying many disparate storage systems
+
+-
  name: CA SFISTA and CA SPNM
  url: https://github.com/ZacBlanco/DistributedOptimization/
  description: Two communication-avoiding LASSO solvers. [Paper](https://arxiv.org/pdf/1710.08883.pdf)
