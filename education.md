@@ -23,7 +23,7 @@ Zhang](https://cseweb.ucsd.edu/~yiying/) as a part of
 ### Fall 2020
 
 - [CSE 221 - Operating Systems](/education/grad/cse221/)
-- CSE 232 - Principles of Database Systems
+- [CSE 232 - Principles of Database Systems](/education/grad/cse232/)
 
 ## Publications
 
