@@ -5,18 +5,11 @@ keywords: rutgers, university, course, notes, electrical, engineering, physics, 
 permalink: /education/
 ---
 
-
-
-## Undergraduate
-
-- _[Undergraduate Notes](/education/undergrad/)_
-
 ## Graduate
-
 
 I'm currently a PhD student studying under [Dr. Yiying
 Zhang](https://cseweb.ucsd.edu/~yiying/) as a part of
-[WukLab](https://wuklab.io)
+[WukLab](https://wuklab.io).
 
 ## Courses
 
@@ -33,3 +26,6 @@ Zhang](https://cseweb.ucsd.edu/~yiying/) as a part of
 
 - Soori, Saeed, et al. "Reducing Communication in Proximal Newton Methods for Sparse Least Squares Problems." _Proceedings of the 47th International Conference on Parallel Processing._ 2018. [paper](http://www.paramathic.com/wp-content/uploads/2019/09/CA-FISTA.pdf)
 
+## Undergraduate
+
+- _[Undergraduate Notes](/education/undergrad/)_
