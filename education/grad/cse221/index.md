@@ -39,3 +39,8 @@ Objectives for the course
 
 - [Notes to Tenex](10-8/tenex/)
 - [Notes to Hydra](10-8/hydra/)
+ 
+## Lecture 4 - Protection and Protection in Multics
+
+- [Protection](10-13/protection.md)
+- [Protection](10-13/multics.md)
