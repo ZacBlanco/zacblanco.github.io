@@ -34,4 +34,8 @@ Objectives for the course
 
 - [Notes to THE](10-6/the-multiprogramming-system/)
 - [Notes to Nucleus](10-6/nucleus-multiprogramming-system/)
- 
+
+## Lecture 3 - TENEX and HYDRA
+
+- [Notes to Tenex](10-8/tenex/)
+- [Notes to Hydra](10-8/hydra/)
