@@ -4,7 +4,7 @@ title: CSE 221 - Operating Systems
 permalink: /education/grad/cse221/
 keywords: CSE, 221, UCSD, UC, San Diego, software, operating, system, linux, C, rust
 description: Notes for CSE 221 (Operating Systems) at UC San Diego
-mathjax: true 
+mathjax: true
 ---
 
 ## Lecture 1 - Intro
@@ -39,8 +39,8 @@ Objectives for the course
 
 - [Notes to Tenex](10-8/tenex/)
 - [Notes to Hydra](10-8/hydra/)
- 
+
 ## Lecture 4 - Protection and Protection in Multics
 
-- [Protection](10-13/protection.md)
-- [Protection](10-13/multics.md)
+- [Protection](10-13/protection/)
+- [Protection and Information Sharing in Multics](10-13/multics/)

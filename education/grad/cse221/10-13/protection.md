@@ -4,9 +4,10 @@ title: CSE 221 - Operating Systems - Notes on "Protection"
 permalink: /education/grad/cse221/10-13/protection/
 keywords: CSE, 221, UCSD, UC, San Diego, software, operating, system, linux, C, rust, memory, security, protection, mechanism, policy
 description: Notes for Protection
-mathjax: true 
+mathjax: true
 ---
 
+> Q: What are the concepts in HYDRA that correspond to Lampson's definitions of "Domain", "Object", and "Access Matrix"? What about Multics?
 
 - Security mechanisms are far and wide
     - user/kernel mode
