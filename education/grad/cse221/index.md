@@ -44,3 +44,7 @@ Objectives for the course
 
 - [Protection](10-13/protection/)
 - [Protection and Information Sharing in Multics](10-13/multics/)
+
+## Lecture 5 - UNIX and Plan 9
+- [The UNIX Time-Sharing System](10-15/unix/)
+- [Plan 9 From Bell Labs](10-15/plan-9/)
