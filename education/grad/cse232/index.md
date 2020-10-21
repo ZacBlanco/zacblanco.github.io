@@ -207,3 +207,97 @@ $$ h(k)[i] - 2^{i-1}$$
   - can handle growing files
   - less wasted space
   - no full reogranization
+
+## Lecture 5 - Indexing Pt. 3 - Hashing
+
+- Indexing vs hashing
+  - Hashing is a good to probe for a specific key
+  - Indexing (b+tree) is good for range searches
+- DBs tend to have tree-based indices because it makes it easy to implement
+  predicates with greater, less, leq (less than eq.), geq
+- Traditional DBs don't really let you define the types of indexes (b-tree/hash) in SQL
+  - Some systems allow configuration parameters to change implementation
+- Multi-key indices to speed up queries with conditions on multiple attributes
+  - Strategy for multi-condition queries with single index on each attribute
+    - use one index and get tuples to satisfy cond1
+      - iterate over list from above result to return correct set
+    - another strategy
+      - multi-index, find set of results satisfying both, then perform set
+        intersection logic to get result (AND) condition.
+  - Instead, structure keys as trees.
+    - At the top level, sort by first key
+      - all tuples underneath top-level attribute in a group, have same
+        attribute value for top-level key.
+
+
+### Bitmap Indices
+
+- Heavily used in OLAP (online analytics)
+- Assume that tuples are in some order that each index sees globally
+- e.g. each index attribute value has a bitmap (string of 1's and 0's)
+e.g. given a table
+
+| name | dep | year |
+| aaron | suits | 4 |
+| helen | pens | 3 |
+| jack| PCs | 4 |
+| yannis | pens | 1 |
+
+
+then our bitmaps indices would be
+
+| dept  | bitmap |
+| PCs | 0010 |
+| pens | 0101 |
+| suits | 1000 |
+
+| year  | bitmap |
+| 1 | 0001 |
+| 2 | 0000 |
+| 3 | 0100 |
+| 4 | 1010 |
+
+- unfortunate, bitmaps require a lot of space
+- increase in size w/ number of tuples
+- for 1B tuples, 1B / 8 bytes of space * number of values for the index
+- can try to compress bitmaps! (mostly 0's)
+- Compression
+  - naive solution for bitmap requires $$n*m$$ bits
+  - in reality, across the whole map there is only $$n$$ 1's
+  - compress bitmap to $$2nlog(m)$$
+    - $$n$$ is the number of tuples
+    - $$m$$ is the number of distinct values.
+  - e.g. 00011010 compresses to 301
+    - 3 0's until first 1
+    - 0 0's until 2nd 1
+    - 1 0 until 3rd 1
+  - further compress the encoding of the bitmap
+    - 301 binary representation (digit-wise)
+      - 11 (2 bits, 10 in binary)
+      - 0 (1 bits)
+      - 1 (1 bits)
+      - end length scheme with 0, fill # of bits before - 1 with 1's
+        - eg. encode `10010` -> _11110_**10010**
+      - 0's act as delimiters
+    - Represent this as
+      - _10_**11**_0_**0**_0_**1**
+
+Bitmap example 2:
+
+Pens bitmap: `01000001`
+Sequence: `[1, 5]`
+Encoding: _0_**1**_110_**101**
+
+- Handling Insertions and Deletions
+  - Assertions, assume happens in order (nothing to do)
+  - Deletions: do nothing, leave record and 0-out bitmap
+  - Insertions: if tuple _t_ with value _v_ is inserted, add one more
+    run in _v_'s sequence.
+
+#### Proving 2*nlog(m)
+
+- n * m bits
+- will find exactly $$n$$ runs. (Across all bitmaps)
+- why is the average run length $$2*log(m)$$?
+  - $$n$$ bits per bitmap - expect average $$ \frac{n}{m} $$
+  - n / (n / m) -> size of conceptual bitmap divided by the average run size -> $$m$$
