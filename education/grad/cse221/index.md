@@ -46,5 +46,16 @@ Objectives for the course
 - [Protection and Information Sharing in Multics](10-13/multics/)
 
 ## Lecture 5 - UNIX and Plan 9
+
 - [The UNIX Time-Sharing System](10-15/unix/)
-- [Plan 9 From Bell Labs](10-15/plan-9/)
+- [Plan 9 From Bell Labs](10-15/plan9/)
+
+## Lecture 6 - Medusa and Pilot
+
+- [Medusa: An Experiment in Distributed Operating Systems Structure](10-20/medusa/)
+- [Pilot: An Operating System for a Personal Computer](10-20/pilot/)
+
+## Lecture 7 - Monitors and Mesa
+
+- [Monitors: An OS Structuring Concept](10-22/monitors/)
+- [Experience with Processes and Monitors in Mesa](10-22/mesa/)
