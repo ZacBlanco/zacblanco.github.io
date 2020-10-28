@@ -9,6 +9,13 @@ mathjax: true
 
 > Q: Compare and contrast synchronization in Java with Hoare monitors and Mesa monitors.
 
+
+- Hoare monitors, the thread signalling yields to the the thread woken
+up by the signal
+- Mesa monitors, the signalling thread continues, then once it exits the
+woken up thread can continue
+
+
 - paper about
     - local concurrent programming
     - global resource sharing
@@ -166,3 +173,52 @@ appropriate code for monitor entry/exit
     - 4 ticks if no one is waiting
     - 9 ticks if someone is waiting
 
+
+## Lecture Notes
+
+- Language provides "implicit" lock associated with an object
+- e.g. `synchronized` keyword to prevent concurrent access to an object.
+- main point: describe experiences using monitors in a real OS and design
+changes that they made.
+
+- Changes to Hoare's monitors
+  - program structure
+  - dynamic process creation
+  - dynamic monitor creation
+  - nested wait
+  - exceptions
+  - scheduling
+  - I/O
+
+![](2020-10-22-09-47-16.png)
+
+| Properties | Hoare | Mesa | Java |
+|-|-|-|-|-|
+| monitor lock | all procedures | entry procedures | synchronized |
+| Condition vars (Y/N) | Y | Y | kind of (one cond. var per object) |
+| Wait (Y/N) | Y | Y | Y |
+| Signal (Y/N) | Y | notify/broadcast | notify/broadcast |
+| Granularity | module | monitor class + monitor record | monitor/instance sync. blocks |
+| Aborts | ? | Y | Y |
+| Nested Calls | Y | Y | Y |
+
+
+- Semantics of wait/notify in Hoare's and Mesa
+  - Hoare's
+    - Signal immediately transfers control to awakened process
+    - return from wait implies an invariant holds, so condition does not have to be checked
+      - e.g. if (not invariant) wait (c)
+  - Mesa
+    - notify places processes on the run queue, but does not switch control
+    - cannot make assumptions about state returning from wait
+    - must check invariant again
+    - e.g. while (not invariant) wait (c)
+
+- Hoare monitor recommended priorities inside of monitors
+- mesa priority inversion:
+  - because the OS handles scheduling, threads at whim of the OS scheduler on
+    the monitor.
+  - low priority processes need to leave process ASAP so the high priority
+    process can enter.
+      - Can quickly boost low priority process in the monitor at the OS-level to
+      get it to quickly be scheduled, and then finish

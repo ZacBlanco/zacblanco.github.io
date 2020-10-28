@@ -82,3 +82,13 @@ urgentcount--;
 - another extension: allow a method to return whether or not there are waiters.
 - designed to be a primitive OS construct
 - still a question on whether last instr. should be a `signal` or not.
+
+
+## Lecture Notes
+
+- Propose monitor as a way to structure the OS
+- what's included in monitor?
+  - set of methods and data
+  - lock to enter monitor
+  - queue to enter monitor
+  - condition variables to synchronize processes inside of the monitor
