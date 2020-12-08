@@ -1,7 +1,7 @@
 ---
 layout: page
 title: CSE 221 - Operating Systems - Notes on "The Sprite Network OS"
-permalink: /education/grad/cse221/10-27/distv/
+permalink: /education/grad/cse221/10-27/sprite/
 keywords: CSE, 221, UCSD, UC, San Diego, software, operating, system, linux, C, rust, memory, OS, distributed, sprite, network
 description: Notes for "The Sprite Network OS"
 mathjax: true
@@ -12,7 +12,7 @@ mathjax: true
 
 
 - Authored 1987
-- Sprite is an OS to designa high performance multiprocessor workstation
+- Sprite is an OS to design high performance multiprocessor workstation
   with hardware support for Lisp applications
 - three general trends by authors
     - networks
@@ -64,7 +64,7 @@ mathjax: true
 ## Prefix Tables
 
 - need to manage file namespace to simplify system admin
-- manage data in a way to proide high performance
+- manage data in a way to provide high performance
 - don't compromise simplicity of sharing files
 - imagine fs as a single tree, but there can be subtrees in different domains
     - domain represents another server
@@ -163,7 +163,7 @@ load
     - shared memory for processes
     - process migration
 
-- Two interesting asepcts
+- Two interesting aspects
      - support for multiprocessor
      - support for RPC's
         - RPCs are internal to the kernel, not exposed to application
@@ -192,5 +192,5 @@ load
         - arguments about large client and server caches
     - long history of thin clients
         - TTY, IBM terminal, X term, V Kernel, Sprite/Sun, Oracle ThinClient
-    - Why thin clients aren't used much today?
+    - Why are thin clients not used much today?
 

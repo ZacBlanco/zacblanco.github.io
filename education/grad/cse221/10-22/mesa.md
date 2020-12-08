@@ -216,8 +216,7 @@ changes that they made.
 
 - Hoare monitor recommended priorities inside of monitors
 - mesa priority inversion:
-  - because the OS handles scheduling, threads at whim of the OS scheduler on
-    the monitor.
+  - because the OS handles scheduling, threads at whim of the OS scheduler on the monitor.
   - low priority processes need to leave process ASAP so the high priority
     process can enter.
       - Can quickly boost low priority process in the monitor at the OS-level to
