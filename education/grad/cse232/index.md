@@ -603,8 +603,7 @@ for r in R1:
           - need to output all combinations of tuples
   - O(n+m)
 
-
-## Lecture 7 - Joins on
+## Lecture 7 - Joins with Indexes
 
 - Join with index (conceptual)
 - Hash join
@@ -1065,3 +1064,212 @@ What is P(S) for $$S=w_3(A)w_2(C)r_1(A)w_1(B)r_1(C)w_2(A)r_4(A)w_4(D)
   - transactions which read and write same object:
     - option 1: request exclusive lock
     - option 2: upgrade (need to read, but unsure about write)
+
+
+
+
+
+
+## Lecture 13 - Concurrency Control Cont'd
+
+- Concurrency Control judged on few aspects
+  - how performant
+  - allow as many transactions as possible to occur in parallel
+- Increment locks
+  - atomic increment action
+  - hardware ensures read and write executes atomically.
+
+| |Shared | Exclusive | Increment |
+|Shared | T | F | F |
+|Exclusive | F | F | F |
+|Increment | F | F | T |
+
+- common table schema in practice: `CREATE TABLE T(attr SERIAL PRIMARY KEY,..);`
+  - prevents needing to lock the counter on attr.
+
+- locking in practice
+  - don't trust transactions to request/release locks
+  - hold all locks until transaction commits
+- scheduler uses a lock table for which transactions for determining who
+  needs or wants locks.
+- lock table
+  - table of every possible object that can be locked
+    - null if unlocked, otherwise lock into for the object,
+  - locking work in most cases, but should we lock at large or fine
+    grain?
+    - large objects (e.g. relations)
+      - need new locks, low concurrency
+    - lock small objects (tuples, fields)
+      - more locks, more concurrency
+      - high overhead
+- Share intentions about which locks to get, but don't request them yet
+  - IS (Intend Shared)
+  - IX (Intend Exclusive)
+  - SIX (Shared Intend Exclusive)
+
+| Parent Lock (table) | Child Locked In (tuple) |
+|-----|-------|
+| IS | IS, S |
+| IX | IS, S, IX, X, SIX |
+| S | [S, IS] not necessary |
+| SIX | X, IX, [SIX] |
+| X | None |
+
+Rules:
+- follow multiple granularity comp functions
+- lock root of tree first, any mode
+- node Q can be locked by a transaction in S or IS only if the parent is
+  locked by IX or IS
+- Node Q can be locked by a transaction in  X, SIX, or IX only if the
+  parent is locked by IX or SIX
+- the transaction is a two phase locking process
+- transaction can unlock node Q only if none of Q's children are locked
+  by the transaction
+
+Handling Inserts and Deletes
+  - get exclusive lock on A before deleting
+  - At insertion of A on transaction, given exclusive lock to A on insertion
+  - Still have issue: *Phantoms*:
+    - can have serialized transactions without proper locks update same attr twice (e.g. unique instead)
+  - instead of locking on R, lock on an index of R
+    - generalize to tree-based concurrency control
+    - increase concurrency 0 don't need to lock whole table
+
+- generalized tree-based concurrency control
+  - all objects accessed through root
+  - follow pointers
+    - lock parent, then child, then grandchild, etc
+- rules: tree protocol
+  - first lock by a transaction may be on any item
+  - after that, Q may be locked by any transaction only if the parent of
+    Q was locked by the transaction
+  - items may be unlocked at any time
+  - after a transaction unlocks Q, it cannot relock Q.
+
+
+## Lecture 14 - More Concurrency Control and Transactions
+
+- Transactions have 3 phases
+  - read
+    - all DB values read
+    - writes to temp storage
+    - no locking
+  - validate
+    - check is schedule so far is serializable
+  - write
+    - if validate ok, write to DB
+- key idea --> make sure validation is atomic
+- if T1, T2, T3, etc.. is validation order, then resulting scheduling will be conflict equivalent to S = (T1)(T2)(T3)
+
+- to implement transaction validation - system has two sets
+  - FIN --> Transactions that have finished phase 3 (completed)
+  - VAL --> transactions that have successfully finished phase 2 (validation)
+
+- validation rules for Tj
+  - when Tj starts phase 1:
+    - ignore(Tj) <-- FIN
+  - at Tj validation:
+    - if check(Tj) then
+      - V <-- $$V \cup T_j$$
+      - do write phase
+      - FIN <-- FIN $$\cup T_j$$
+- implementation of `check(Tj)`
+```
+for Ti in VAL -IGNORE (Tj) DO
+  IF ( WS(Ti) intersectes RS(Tj) != empty set
+    OR Ti not in FIN ) THEN
+      RETURN false
+  RETURN true
+```
+- This method is called "optimistic concurrency control"
+  - assumes that conflicts are rare
+  - system resources plentiful
+  - have real-time constraints
+
+### Concurrency Control and Recovery
+
+- Two transactions, Ti and Tj write/read to same relation
+  - Tj writes first
+  - Ti reads after the write, and then commits.
+  - Tj then aborts at the end.
+- without proper validation, would need a cascading rollback because Ti would have read data that technically wouldn't have existed (the write from Tj)
+- a schedule is **recoverable** is each transaction commits only after
+  all transactions from which it read are committed
+- A schedule **avoids cascading rollback** if each transaction may only
+  read those values written by committed transactions
+-
+
+
+### Lecture 15 - Virtual and Materialized Views
+
+Virtual view
+
+```sql
+CREATE VIEW V as
+SELECT G, SUM(A) as S
+FROM R
+GROUP BY G
+```
+
+Materialized View
+
+```sql
+CREATE MATERIALIZED VIEW V as
+SELECT G, SUM(A) as S
+FROM R
+GROUP BY G
+```
+
+|| Virtual View | Materialized View |
+|-|-|-|
+| When updating R | Database does nothing | Ideally, DB refreshes V to reflect changes of R |
+| When querying V | optimize and run query that view represents | simply use the view as the base table |
+
+- essentially, its up to the DB implementation to update a materialized view when its underlying tables are queried. This is called **Incremental View Maintenance (IVM)**
+- views only represent algebraic expressions and are simply re-evaluated upon every query. Kind of like an alias.
+
+- At the end of a transaction which updates the relation R that a materialized view depends on, must be reflected in any materialized views which depend on the relation R.
+  - Two options
+    - delete and recompute view
+    - incrementally maintain view
+
+
+- Capturing IVM as a computation of the changes of views
+
+- neglect update commands
+  - think of update as a delete - insert
+- Capture transaction as two delta tables $$\Delta R^+$$ and $$\Delta R^-$$
+- compute tuples to be deleted from view as $$\Delta V^-$$ and $$\Delta V^+$$
+- delete $$\Delta V^-$$ from V, and insert $$\Delta V^+$$ into V
+
+- IVM - Eager version
+  - problem: find efficient view updates after every table update
+- IVM - deferred version
+  - allows choice of how long after transaction the DB updates a view
+- IVM - self-maintaining
+  - works for some views
+  - typically, view change will require the delta of the R, the old view, and the new relation state.
+  - self-maintaining views don't need the current state of the table to compute the new view.
+
+
+- Basic IVM Algorithm
+  - Rule for $$V = R\bowtie S$$
+    - $$\Delta V^+ = ((\Delta R^+\bowtie S) \cup (R \bowtie \Delta S^+)) - (\Delta R^+ \bowtie \Delta S^+)$$
+    - $$\Delta V^- = (()) - ()$$
+  - Rule for $$V = \sigma_c R$$
+    - $$\Delta V^+ = \sigma_c \Delta R^+$$
+  - Compose the above rules to do IVM for more complex view queries
+    - $$\Delta V^- = \sigma_c \Delta R^-$$
+    - e.g. $$V = T \bowtie \sigma_{A > 5}W$$
+    - dumb way - compute two separate views by decomposing the views, then combine the views (inefficient)
+    - for above example
+      - $$\Delta V^+ = ((\Delta T^+ \bowtie \sigma_{A>5} W) \cup (T \bowtie \sigma_{A>5}\Delta W^+)) - (\Delta T^+ \bowtie \sigma_{A>5}\Delta W^+)$$
+
+- IVM with caching
+  - associate intermediate views (caches) with subexpressions
+  - bottom up: from updating caches to reaching the materialized view
+  - caches will typically need indices
+  - caches may or may not pay off as they incur a maintenance cost.
+
+
+
