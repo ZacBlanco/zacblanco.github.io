@@ -602,3 +602,466 @@ for r in R1:
         sets of equivalent values
           - need to output all combinations of tuples
   - O(n+m)
+
+
+## Lecture 7 - Joins on
+
+- Join with index (conceptual)
+- Hash join
+  - hash function range $$0\rightarrow k$$
+  - buckets for R1 into G buckets
+  - buckets for R2 into H buckets
+  - Algorithm
+    - hash all R1 tuples into G buckets
+    - hash all R2 tuples into H buckets
+    - for i = 0 to k
+      - match tuples in $$G_i = H_i$$
+    - small joins on buckets
+  - in postgres, "hash join" oriented is actually kind of like an index join
+  with an ephemeral hash index
+
+### Disk Oriented Computation Model
+
+- $$M$$ main memory buffers
+  - each buffer is the size of a disk block
+- assume input of relation is read one block at a time
+- assume dominant factor is IO, and the number of blocks read directly
+  correlates to time
+    - assumption is fine for SSD
+    - For HDD consecutive is very different from random
+- assume output buffers are not part of M buffers mentioned above
+  - Pipelining allows the output buffers of an operator to be the input
+    to the next operation
+  - do not count the cost of writing output
+- Future cost notation
+  - $$B(R) = $$ number of blocks on disk that R occupies
+  - $$T(R) = $$ number of tuples in R
+  - $$V(R,[a_1, a_2,\dots,a_n]) = $$ number of distinct tuples in the
+    projection of R on $$a_1, a_2,\dots,a_n$$
+- One-pass main memory algorithms for unary operators
+  - Assumption: enough memory to keep entire relation in memory
+  - Projection
+    - scan R, apply operator to one tuple at a time
+    - incremental cost of "on the fly" operators - 0 (no _additional_
+      disk operators, aside from needing to read data at least once to
+      produce the result)
+  - Duplicate Elimination and Aggregation
+    - Create one entry for each group, compute aggregated group value
+      - hard to assume CPU cost is negligible here
+      - require "complex" data structures
+- One pass nested loop join
+  - cost is simply $$B(R) + B(S)$$ because you simply loop over all tuples of
+    each table once to join (since everything fits in memory)
+- Simple Sort-Mege Join
+  - Assume R natural join on S on attribute C
+  - Algorithm
+     - Read and sort R on C
+     - Read and sort S on C
+     - Merge using two pointer algorithm
+  - Cost assuming both tables not previous sorted and a 2-pass multiway merge
+    sort is used
+    - sort cost is $$4B(T)\rightarrow 4B(R) + 4B(S)$$ (sort is 2x read, 2x write)
+    - join cost is B(R) + B(S)
+    - total cost is $$5B(R) + 5B(S)$$
+  - Can we do better though?
+    - Save two disk IOs per block by combining second pass sorting with merge
+    - create sorted sublists of size M for R and S
+    - bring first block of each sublist into a buffer
+    - repeatedly find the leaste C value among the first tuples of each
+      sublists. Identify all tuples with a join value c, and join them
+        - when a buffer has no more tuples that has not already been considered,
+          load another block into this buffer.
+    - by joining on the final phase of merge sort, the cost is reduced
+      $$3B(R)+3B(S)$$
+- Hash Join Algorithms
+  - Assuming a natural join, use a hash function that is the same for both input
+    arguments, and only uses join attributes
+  - Algorithm:
+    - Phase 1: Hash each tuple of R into one of the $$M-1$$ buckets $$R_i$$ and
+      similarly for S
+    - Phase 2: For i=1..M-1
+      - load $$R_i$$ and $$S_i$$ in memory
+      - join and save result to disk.
+    - Cost: $$(2B(R) + 2B(S)) + (B(R) + B(S))$$
+- Index-Based Join: Simple Version
+  - Assume natural join of R and S where the index is on S
+  - Algorithm:
+    - read a block of R
+      - for each tuple in the block use the index of S to find the tuples of S
+        with value b
+  - Assuming R is not sorted and S is indexed and clustered on B
+    - Cost of $$B(R) + T(R)B(S)/V(S,B)$$
+  - If R is sorted, find all tuples of R with a given b value, then issue index
+    access
+
+
+## Lecture 8 - Estimating the Cost of a Query Plan
+
+Requires
+- Esimating the size of results
+- Estimating the number of IOs
+
+Estimating result size: need the following statistics
+  - T(R): the number of tuples in R
+  - S(R): number of bytes in each tuple of R
+  - B(R): number of blocks to hold all R tuples
+  - V(R, A): number of distinct values for attribute A in R
+
+Ex:
+
+Given $$W = R1\times R2$$
+- $$T(W) = T(R1) \times T(R2)$$
+- $$S(W) = S(R1) + S(R2)$$
+
+Size estimate for $$W = \sigma_{Z=val}(R)
+- S(W) = S(R)
+- T(W) = T(R) / V(R, Z)
+
+Calculating Results with Inequalities
+
+What about a query $$W = \sigma_{z \geq 15}R$$?
+
+- Keep statistics on the table, a histogram of frequencies over a number of buckets
+
+Size estimate of a join...
+
+- query: $$W = R1\bowtie R2$$
+- Let X = attributes of R1
+- ket Y = attributes of R2
+
+- Join can have $$[0, T(R1)T(R2)]$$ tuples.
+- If we have some more information it can be helpful
+  - Assume every value of A in R1 is in R2 (typically A is a foreign key of R1,
+    R2.A is a primary key)
+
+Computing T(W) when A of R1 is a foreign key of R2
+  - If R2.A is a primary key, it occurs only once, so then the T(W) = T(R1)
+
+- Ok, but what happens when A is not a primary key (unique), then we need to
+multiple T(R1) by the average number of matches in R2. Thus
+
+$$T(W) = \frac{T(R2)}{V(R2, A)}T(R1)$$
+
+- in the case of $$V(R1, A) \leq V(R2, A) \rightarrow T(W) = \frac{T(R2)T(R1)}{V(R2, A)}$$
+- in the case of $$V(R2, A) \leq V(R1, A) \rightarrow T(W) = \frac{T(R2)T(R1)}{V(R1, A)}$$
+
+- In general $$T(W) = \frac{T(R2)T(R1)}{max(V(R1, A), V(R2, A))}$$
+
+
+Case: A 3-way join for 3 tables which share the same attribute?
+
+Example:
+
+R1, R2, R3
+
+- T(R1) = 10000
+- T(R2) = 20000
+- T(R3) = 5000
+- V(R1, A) = 1000
+- V(R2, A) = 20000
+- V(R3, A) = 500
+
+Join: $$R1\bowtie R2\bowtie R3 \rightarrow (R1\bowtie R2) \bowtie R3$$
+
+- The intermediate result of $$R1\bowtie R2$$ has $$T(R1\bowtie R2) = 10000$$
+  - The intermediate of $$V(R1\bowtie R2, A) = $$1000, or 20,000?
+    - Preserve probability of the larger table?
+
+## Lecture 9 - Plan Enumeration
+
+- Smart exhaustive algorithm for generating query plans
+  - Textbook Section 16.6
+- INGRES Heuristic for enumeration
+
+
+Practice problems
+
+> Given the relations R(A, B, C) and S(C, D, E) give 6 valid logical query plans
+
+```sql
+SELECT B, C, D
+FROM R, A
+where R.C=S.C AND R.A=5;
+```
+
+
+> Given the relations R, S, and T, Give an algebraic expression that only contains the join operator
+
+```sql
+SELECT *
+FROM R, S, T
+where R.A=S.A AND S.B=T.B;
+```
+
+> Given the plans from the above problem, give plans for executing the query.
+
+- To generate a query plan, pick one of the types of algorithms for join operators
+  - e.g.
+    - Hash Join (HJ)
+    - Sort Sort Merge (SSM)
+    - **M (merge only if sorted)
+    - *SM (sort only one)
+    - S*M (sort only one)
+
+### Arranging the Join Order: Wong-Yussefi Algorithm
+
+- Challenges with large natural join expressions
+  - for simplicity, assume that in the query
+    - all joins natural (equality conditions)
+    - whenever two tables of the FROM clause have common attributes, we oin them
+    - consider right-index only
+      - assume that on join operator, the right-hand argument has an index key
+        that maps directly to the index of the left-hand operand.
+
+- Wong-Yussefi assumptions and objectives
+  - assumption 1 (weak): indexes on all join attributes (keys+foreign keys)
+  - assumption 2 (strong): at least one selection creates a small relation
+    - joins on small relations results in a small relation
+  - objective: create a sequence of index-based joins such that all intermediate
+    results are small.
+
+- Calculates cost via "hypergraph" data structure
+  - nodes are attributes
+  -  relations are hyperedges
+- pick small relation (and conditions) to start the plan.
+  - Remove the small relation (hypergraph reduction) and color as many small
+    relations that join with the removed "small" relation
+
+- What happens if there are multiple foreign keys? multiple selections?
+  - multiple options to follow in the hypergraph.
+    - generally, pick smallest items before joining on larger tables.
+- Algorithm has generally good ideas, but does not really survive because it
+  makes too many assumptions
+  - new approach, use dynamic programming to enumerate plans.
+
+## Lecture 10 - Failure Recovery
+
+- Integrity and correctness of data is of utmost importance
+- Integrity+consistency constraints
+  - some predicates DB must satisfy:
+    - x is key of R
+    - x --> Y holds in R
+    - domain(x) = {R, G, B}
+    - no employee should make more than twice the average salary
+  - these types of consistency are based on business logic constraints.
+  - DB builders are concerned with the view of data pre and post transaction are
+    consistent.
+- Transaction:  a collection of actions that preserve DB consistency
+- Working assumption for transactions:
+  - if T starts with a consistent state, and T executes until completion and
+    isolation, then T leaves a consistent state.
+- How to prevent and fix violations?
+  - failure recovery: fixing violations due to failures
+  - concurrency control: fixing violations due to concurrency and data sharing
+  - a mix: fixing violations that stem from interaction of failures with sharing
+- What is not considered in this class
+  - how to write correct transactions (buggy transactions can violate
+    constraints)
+  - how to write a correct dbms
+
+### Failure Model
+
+- Events
+  - desired
+  - undesired
+    - expected
+      - memory loss
+      - cpu halt, crash, reset
+    - unexpected (db crash)
+       - disk data lost, memory lost without CPU halt, skynet CPU decides to
+         wipe out programmers....
+
+### Storage Hierarchy
+
+- memory <--> disk
+- operations:
+  - input(x) block with X --> memory
+  - output(x) block with X --> disk
+  - read(x, t):  input (x) if necessary, t <-- value of X in block
+  - write(x, t): input(x) if necessary, value of X <-- t
+- key problem: unfinished transactions
+  - constraint: A=B
+  - $$T_1 \leftarrow A\times 2 \rightarrow B\leftarrow B\times 2$$
+- if db crashes before all updates a written, on recovery we could have
+  onconsistent state of disk.
+- need ability to execute "all or none" semantics
+  - undo logs of unfinished transactions
+
+- use a commit log to log all changes to DB
+  - complications
+    - log first written to mem, not written to disk on every action (too
+      expensive)
+- undo logging rules
+  - for every action, generate an undo log record (containing old value)
+  - before x is modified on disk, log records pertaining to x must be on disk
+    (Write-ahead-log, WAL)
+  - before commit is flushed to log, all writes of transaction must be
+    reflected on disk.
+
+- recovery rules: undo logging:
+  - let S = set of transactions that have a start log but no commit (or
+    maybe an abort log)
+  - for each transaction statement, in reverse order (latest to earliest)
+    - if $$T_i$$ in the set of transactions then (write(X, v), output(X))
+  - for each transaction, write a transaction abort to log.
+- What about failure during recovery?
+  - undo is idempotent, can replay again.
+
+- Redo logging
+  - do transactions, but don't output results until the transaction is
+    committed in the log.
+  - rules
+     - for every action, generate a redo log record
+     - before X is modified on disk, all log records for transaction
+       that modified X (including final commit) must be on disk
+     - flush log at commit.
+  - recovery rules
+    - Let S be a set of transactions with a commit entry in the log
+    - for each transaction statement in forward order (earliest to latest) do
+      - write(X, v)
+      - Output(X)
+  - recovery is slow
+- checkpoint to speed up
+  - periodically:
+    - do not accept new txns
+    - wait until all txns finish
+    - flush all log records
+    - flush all buffers
+    - write checkpoint record
+    - resume txns
+
+- key drawbacks
+  - undo logging:
+    - cannot bring backup DB copies up to date, real writes at end of txn needed
+  - redo logging:
+    - need to keep all modified block in memory until commit.
+
+## Lecture 11 - Transactions Cont'd
+
+- how to address issues from last lecture?
+  - undo/redo logging! (use both)
+- rules
+  - page X can be flushed before or after commit $$T_i$$
+  - log record can be flushed before corresponding updated page
+  - flush at commit (log only)
+- problem: at boot up, need to replay committed transactions
+  - can checkpoint so that the log doesn't grow too large
+  -  problem with naive checkpoint is that working to establish a
+     checkpoint needs database downtime.
+    - solve problem with non-quiescent checkpoint
+- non-quiescent checkpoint
+  - start checkpoint, but take note of active transactions.
+  - on DB recovery, undo transaction statements that began before or after
+    checkpoint, and didn't complete
+  - redo transaction blocks that were written after checkpoint start but where
+    transaction already began
+  - recovery process summary
+   - backwards pass (end of log to latest checkpoint start)
+      - construct set of S committed transactions
+      - undo actions of transactions not in S
+   - undo pending transactions
+    - follow undo chains for transactions in (active checkpoint list) - S
+   - forward pass (latest checkpoint start to end of log)
+    - redo actions of S transactions.
+- real-world actions
+  - execute real-world actions (e.g. subtracting from bank account balance)
+    after commit
+    - want actions to be idempotent
+- summary
+  - transaction processing for keeping DB consistent
+    - source of problem: DB/hardware failures
+      - use logging + redundancy
+    - next source of problems: concurrency and data sharing
+
+### Intro to Concurrency Control
+
+- DBs usually have many processes communicating with the DB with multiple Txns
+  in parallel.
+- concurrency control: how to best interleave reads and writes to maintain
+  consistency
+- want transaction schedules that are "good"
+  - equivalent to serial execution regardless of
+    - initial state
+    - transaction semantics
+  - only want to look at order of reads and writes.
+- create dependency graph based on reads and writes required by each transaction
+  - if no cycles in graph, then the schedule of operations is equivalent to a
+    serial schedule
+
+
+## Lecture 12 - Transaction Concurrency Control Cont'd
+
+- Transaction
+  - a sequence of $$r_i(x)$$ and $$w_i(x)$$ actions
+- Conflicting actions
+  - when $$i$$ is different for read or write actions on the same piece of data.
+  - When two write operations at different points operate on the same data.
+- Schedule
+  - represents chronological order in which actions are executed
+- Serial Schedule
+  - no interleaving of actions or transactions.
+
+- S1 and S2 are _conflict equivalent_ schedules if S1 can be transformed into S2
+  by a series of swaps on non-conflicting actions.
+- a schedule is _conflict serializable_ if it is conflict equivalent to a serial
+  schedule.
+- A precedence graph $$P(S)$$ where $$S$$ is a schedule
+  - nodes are transactions in S
+  - edges: $$T_i\rightarrow T_j$$ whenever
+    - $$p_i(A), q_j(A)$$ are actions in S
+    - $$p_i(A) <_s q_j(A)$$.
+    - at least one of $$p_i,q_i$$ is a write.
+
+
+Exercise:
+What is P(S) for $$S=w_3(A)w_2(C)r_1(A)w_1(B)r_1(C)w_2(A)r_4(A)w_4(D)
+- edges:
+  - T3->T1
+  - T3->T4
+  - T1->T2
+  - T2->T4
+  - T1->T2
+- conflict serializable if there is a cycle
+- Lemma: S1,S2 conflict equivalent if P(S1) = P(S2)
+- How to prove?
+  - assume they are not equivalent. List all edges. They are not equivalent if
+    edges are different.
+- if two graphs have equivalent precedence, doesn't necessarily imply conflict
+  equivalence
+- if P(S1) is acyclic (no cycles) --> S1 is conflict serializable
+  - proof: Assume S1 is conflict serializable
+    - therefore, another schedules $$S_s$$ is conflict equivalent to S1
+      - $$P(S_1) = P(S_s)$$.
+      - $$P(S_1)$$ is acyclic since $$P(S_s)$$ is acyclic
+  - assume P(S1) is acyclic
+    - transform S1 as follows
+      - Take T1 to be transaction with no incident (incoming) arcs
+      - move all T1 actions to the front.
+      - repeat again discarding node T1
+
+- how to enforce serializable schedules?
+  - option 1: run system, recording P(S). Check P(S) for cycles and declare if
+    execution was good, or abort transactions as soon as they generate a cycle.
+  - option 2: prevent P(S) cycles from occurring via a scheduler that receives
+    all transactions.
+      - requires a locking protocol to prevent bad concurrent transactions
+        - $$l_i(A)$$ - exclusive lock on A
+        - $$u_i(A)$$ - unlock A
+      - scheduler reads lock table.
+      - may only operate on items which have locks
+      - still doesn't fully solve the problem, because locks don't prevent cycles
+        - 2-phase locking for transactions required.
+        - basic rule: once first unlock occurs, cannot unlock again.
+- Assume deadlocked transactions are rolled back
+  - have no effect
+  - do not appear in schedule
+- beyond a 2PL protocol, it is about improving performance and allowing
+  concurrency -> other methods
+  - shared locks
+  - multiple granularity
+  - inserts, deletes, phantoms
+  - other types of concurrency control mechanisms
+- shared locks -- allowed on reads. multiple transactions can lock an item at the same time.
+  - transactions which read and write same object:
+    - option 1: request exclusive lock
+    - option 2: upgrade (need to read, but unsure about write)

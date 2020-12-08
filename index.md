@@ -4,7 +4,7 @@ title: Home
 ---
 
 I am currently a [PhD student](/education/) at [UC San Diego](https://ucsd.edu)
-working with Dr. Yiying Zhang in [WukLab](https://wuklab.io). Previously, I
+working with Prof. Yiying Zhang in [WukLab](https://wuklab.io). Previously, I
 worked as software engineer at [Alluxio Inc.](https://alluxio.io) and earned my
 undergraduate degree at [Rutgers University](/education/undergrad/). You can
 find my most of my research and projects on my

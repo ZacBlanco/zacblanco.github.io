@@ -7,7 +7,7 @@ permalink: /education/
 
 ## Graduate
 
-I'm currently a PhD student studying under [Dr. Yiying
+I'm currently a PhD student studying under [Prof. Yiying
 Zhang](https://cseweb.ucsd.edu/~yiying/) as a part of
 [WukLab](https://wuklab.io).
 
