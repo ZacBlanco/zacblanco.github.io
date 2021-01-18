@@ -1065,11 +1065,6 @@ What is P(S) for $$S=w_3(A)w_2(C)r_1(A)w_1(B)r_1(C)w_2(A)r_4(A)w_4(D)
     - option 1: request exclusive lock
     - option 2: upgrade (need to read, but unsure about write)
 
-
-
-
-
-
 ## Lecture 13 - Concurrency Control Cont'd
 
 - Concurrency Control judged on few aspects
@@ -1272,4 +1267,66 @@ GROUP BY G
   - caches may or may not pay off as they incur a maintenance cost.
 
 
+## Lecture 15 - Query Processing ...Again
 
+- wong-yussefi algorithm (INGRES)
+  - optimize queries with lots of joins.
+- smart exhaustive algorithm for plans
+  - textbook sec 16.6
+- INGRES is a heuristic for plan enumeration
+  - not typically in use for modern databases
+    - exponential algorithm ok in practice as long as the exponent is low
+
+
+- basic DP approach to enumerating plans
+  - for each sub expression $$op(e_1 e_2\dots e_n$$
+    - recursively compute the best plan and cost for each subexpression $$e_i$$
+    - for each physical operator $$op^p$$ of each operator ($$op$$)
+      - evaluate the cost of computing the operator abd bite best plan for each subexpression
+      - memo the best physical operator $$op^4$$
+
+Example
+
+Given a query
+
+```sql
+SELECT *
+FROM R, S, T, U
+WHERE R.A = S.A AND R.B = S.B and T.C=U.C
+```
+
+Algorithm would
+  - give all plans
+  - eliminate all plans with a cartesian product and with only joins
+  - physical plans emerge from the above logical plans
+  - join types:
+    - Hash Join
+    - Merge join
+    - SSM
+    - S_M
+    - _SM
+  - each logical plan will have a number of physical plans because each
+    operator can have different physical implementations which run at
+    different speeds due to table layouts (partitions, indices, storage,
+    etc)
+      - number of plans grow large due to max implementations
+      - memoizing can reduce need to re-calculate costs.
+- solving 3-way sub problems
+  - e.g. $$R\bowtie S \bowtie T$$
+    - split into single problems (e.g. parenthesis -->
+      $$(R\bowtie S) \bowtie T$$ or $$R \bowtie (S\bowtie T)$$)
+
+Local suboptimality of the basic approach, and the Selinger improvement
+
+- basic dynamic programming may lead to globally suboptimal solutions
+   - solution good for one operation, but not for the whole query
+- a suboptimal plan for $$e_1$$ may lead to the optimal plan for an entire op
+  $$op(e_1 e_2\dots e_n)$$
+  - consider $$e_1 \bowtie e_2 $$
+  - optimal computation of $$e_1$$ produces an unsorted result
+  - optimal merge is a sort-merge join on A
+  - could have paid off to consider the suboptimal computation of
+    $$e_1$$ that produces sorted results on A
+- Selinger improvement
+  - memo any plan that also produces an ordering of the results which may be of
+    use to ancestor operators.
