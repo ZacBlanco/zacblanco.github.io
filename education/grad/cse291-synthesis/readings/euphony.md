@@ -45,6 +45,7 @@ further improve the performance of their system.
 - heuristic is interesting, because it can have a great effect on the search time
   - tuning of heuristic could drastically improve the performance without much
     more effort
+
 ## Weaknesses
 
 - Isn't based on the original SyGuS problem - it requires a statistical program
@@ -84,7 +85,7 @@ Pr(S --> "." | Rep(x, "-", S)) = ...
 I've never learned about 3-grams before. But presuming the wikipedia page is
 accurate, then you might represent the 3-gram as the probability of a variable x being
 
-Pr(S --> "." | (Rep, "-", x))
+Pr(S --> "." | (Rep, "-", S))
 
 I think these other probabilistic models could at minimum be as accurate if they
 capture as much or more information than the PHOG. The PHOG attemtps to capture
