@@ -393,7 +393,7 @@ BGP Routing
     - B client tells tracker it too, has a copy
     - users BT client serves files to others
 - flat-name lookup problem - the true problem behind P2P
-    - one solution: semi-p2p where content is distributed, but index is in a DB 
+    - one solution: semi-p2p where content is distributed, but index is in a DB
         - e.g. Napster. Single DB for index, clients store data
         - O(N) state stored in single server
         - SPOF
@@ -549,4 +549,111 @@ BGP Routing
         - difficult to incorporate other information
     - application-specific peering (route video traffic one way, http another)
     - blocking DoS --> drop unwanted traffic upstream
-    - 
+
+## Lecture 20
+
+- before active networking..everything baked into the switch and logic
+  needs to be pre-programmed
+- active networks allow applications to decide how to route packets
+- if code is included in the packet, then metadata may not be necessary
+    - ip metadata somewhat redundant
+- to support in-packet instructions
+    - routers would need to have an available instruction set
+    - need safeguards
+    - router needs its own OS
+- research didn't "have a home" yet..kind of died
+- applications of active networking
+    - bigger issues (e.g. firewalls) is not well-suited for current
+    - distributed systems ... hard to manage without active networking
+        - application developers lose control
+- active networking, not a good home for global internet
+    - security issues
+    - management issues
+- who would benefit from tight network management?
+    - different types: small networks (e.g. doctor's office), government, ISPs,
+      datacenter/cloud providers. Which ones?
+    - government (classified / info compartmentalization)
+    - banks/finance companies
+
+
+## Lecture 21
+
+- ethane-- great experiment in actual deployment
+- switch had to be built from an FPGA
+
+## Lecture 22
+
+- congestion control overview
+    - challenge: efficiently share network resources?
+    - today: TCP
+    - Alternate solutions:
+        - fair queueing, RED, Vegas, packet fair, rate control, credits
+    - no one "true" solution to congestion control
+    - too much congestion ==> congestion collapse
+- depends on assumptions and goals:
+    - hosts, links
+    - fairness
+    - backcompat
+- ACK pacing in TCP
+    - ACKS open slots in congestion/advertised window
+        - bottlenecking link determines the rate than can be sent
+        - ACK indicates a packet has left the network
+- problems with ack pacing
+    - ack compression
+        - vriations in queueing delays on return path change spacing between acks
+        - worse with bursty cross traffic
+    - what happens after a timeout
+        - potentially no acks to time packet transmissions
+    - congestion avoidance
+        - slow start to last successful rate
+        - back to AIMD
+- TCP achieves fairness at the cost of efficiency
+- TCP friendliness
+    - problem: many different TCP implementations
+    - if implementations change rate differently depending on drops, more
+      aggressive implementations will take more bandwidth (i.e. intertwined
+      MIMD/AIMD)
+    - incentive to cause congestion collapse
+        - if you are more aggressive grabbing bandwidth, you can have more network
+        - ...kind of game theory-like
+
+## Lecture 23
+
+- more congestion control...
+- high bandwidth-delay product networks
+    - high latency links that can have a lot of packets in flight
+    - can have lots of delay, bandwidth, or both
+- examples of high BW-D product network
+    - satellite links: latency 100s of ms to 1s links
+- how does XCP deal with the staleness of congestion information in high BWDP
+  networks?
+    - XCP gives constant flow of congestion information to receivers
+    - senders get updates every 1 RTT
+
+
+## Lecture 24
+
+- congestion control....again!
+- trend in adding buffers (memory) into switches to buffer large traffic flows
+    - this is always good..right? wrong!
+    - hard to determine link bandwidth via loss-based congestion control unless
+      the queues are full
+    - senders can't mitigate or change rates until the buffers in the network
+      are full
+- implications of congestion control for large company: lots more money because
+  additional need to retransmit packets.
+- when sending faster than BW-D product...:
+    - at BWDP you are optimally using the network
+    - above BWDP -> start queueing
+- getting rid of queues could lead to easily measuring BWDP
+    - but, if you get rid of them, then we'll likely have much higher packet
+      loss rates when bursts do come
+- BBR is still loss-based congestion control, but doesn't require filling up
+  queues in the network to change transmission rates
+- can't simply measure bandwidth at the receiver side
+    - bbr measurement does not give the exact measurement of the link bandwidth
+    - measures bandwidth subtracted from what others are using at that time.
+- bbr doesn't consider fairness of other users of the links
+    - bbr at the same time as older versions of TCP, bbr will win over other
+      congestion control algorithms
+- 

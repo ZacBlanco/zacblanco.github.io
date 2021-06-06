@@ -121,7 +121,7 @@ N ::= find(L, N) |
       0
 ```
 
-- Grammar composed of 
+- Grammar composed of
     - terminals,
     - nonterminals
     - rules (productions)
@@ -330,7 +330,7 @@ def unroll(p) {
 - naive alternative to decision tree learning for synthesizing branch
   conditions?
   - learn atomic predicates that precisely classify points
-    - why worse? - 
+    - why worse? -
     - as bad as Esolver? - enumerate over many possible conditions not
       much better
   - next best is decision tree learning w/o heuristics
@@ -475,7 +475,7 @@ spec:
 - FTA is $$ A = {Q, F, Q_f, \delta} $$
     - states + alphabet, final states, transitions
 - FTA can have a lot of states, even with simple grammars
-    - idea: instead of one state/one value: 
+    - idea: instead of one state/one value:
 
 - Type transition net (TTN)
 - context: component-based synthesis
@@ -509,7 +509,7 @@ spec:
 - search techniques
     - CFG - enumerative, good for small programs
     - PCFG/PHOG - weighted enumerative search. Still quite large exploration
-    - local search - 
+    - local search -
 - naive local search
     - to find the best program
     - pick a starting point, mutate and check if new mutation is better than old.
@@ -526,7 +526,7 @@ spec:
     - limitations?
         - only applicable with a good cost function
         - counterexample: round to next power of two
-    
+
 - Intro to SAT and SMT solvers
     - synthesis is combinatorial search, so is SAT
     - SAT solvers are quite good
@@ -558,7 +558,7 @@ spec:
     - idea: encode synthesis problem as a SAT/SMT problem
     - program space can be encoded into parameters
     - two constraints by default: semantic correctness constraint + well-formed constraint
-    - phi(C, i, o) - behavior/function of program 
+    - phi(C, i, o) - behavior/function of program
 
 - how to define an encoding
     - define parameter space => C = {c1, c2, c3, ..., cn}
@@ -693,4 +693,125 @@ spec:
 - synquid questions
     - behavioral: refinement types?
 
+## Lecture 15
 
+- constraint-based synthesis
+    - loops are hard!
+        - loops create many paths, integers gives many inputs
+    - sketch handles loops by unrolling to a particular depth
+    - if we can't unroll enough, get an unsatisfiable program
+
+- Hoare logic: a logic for simple imperative programs
+    - particularly loop invariants
+
+The imp language:
+
+```
+e ::= n | x |
+      e + e | e - e | e * e |
+      e = e | e < e | e > e | !e | e && e
++ assignment/if/then/while logic
+```
+
+Hoare triples
+
+- judgments grouped as {P} c {Q}
+    - precondition P
+    - if execution of c
+    - postcondition Q
+- if P holds in initial state $$|sigma$$, and if the execution from c from $$\sigma$$ terminated in a state $$'\sigma$$, then Q holds in $$'\sigma$$
+    - "partial correctness" --> program may not terminate
+    - "full correctness" --> program terminates
+- need to be able to express values in final states are equivalent to values in beginning states
+    - solution: introduce logical variables which don't appear in the
+        actual program
+    - this can make expressions for pre/post conditions more expressive
+
+- "skip" --> {P} skip {P} --> state holds before and after
+- assignment semantics in hoare logic
+    - `{P[x --> e]} x := e {P}`
+    - `(P[x->e]\sigma)` --> P holds in state
+- semantics of compositions
+    - need to invent intermediate insertion
+- rule of consequence --> if you "need" less to prove in the beginning
+  but can "prove" more at the end, it is essentially just as strong as
+  the original preconditions
+
+## Lecture 16
+
+- synthesizing C code: verbose, unstructured, pointers (yuck)
+- hoare logic is not enough to prove heap manipulating programs in the case
+where two variables might point to the same location in memory
+
+- suslik approach:
+    - separation logic --> deductive synthesis --> provable program
+- suslik swap example:
+
+Precondition: `{x -> A * y -> B}`
+Postcondition: `{x -> B * y -> A}`
+- special part of separation logic: `*`
+    - items joined with operator must be in disjoint heap locations
+
+- judgement of a program:
+    - P --> Q | c
+    - A state satisfying P can be transformed into a state satisfying Q using a program c
+- use rules to deduce /simplify pre-postconditions until "skip" (do nothing)
+- proof search
+
+## Lecture 17
+
+- Nope paper contributions:
+    - first to prove unrealizability for infinite program spaces
+    - CEGIS for unrealizability
+    - sound for synthesis and unrealizability
+- NOPE limitations:
+    - can timeout/run forever
+    - situations where it can fail to terminate:
+        - program that works on finitely many examples (but not infinite)
+        - very large/difficult problem.
+    - in practice.. works on < 1/2 benchmarks
+    - limited to SyGuS
+
+
+## Lecture 18
+
+- Programming with humans
+    - snippy: projection boxes to show programming sate while writing
+      the program
+    - live programming is a good environment for synthesis
+        - inputs already exist (for simple programs)
+        - encourages "small-step" PBE (easier for synthesizer)
+    - snippy was more limited, but faster, lower cognitive burden, and synthesized
+    more compact solutions
+    - hoogle+
+        - synthesize from types, but difficult because they are ambiguous
+            - if output all programs with correct type, too many irrelevant programs
+        - which solution is the right one?
+            - use a test-based filtering
+        - help beginners with types
+    - RESL
+        - REPL but with synthesis
+            - syntactic specs + sketching + debugger
+            - give granular feedback about grammar to synthesizer
+
+
+## Lecture 19
+
+- synthesis with users cont'd
+- today: Rousillon, Wrex, Regae
+
+- Rousillon / Helena
+    - web scraping tool for social scientists
+    - problem with traditional scrapers: need to reverse-engineer web-page DOM
+    - types of web data:
+        - distributed: user must naviagete between many pages, click, use forms, etc
+        - hierarchical: tree-structured data
+- Wrex:
+    - goals: for data scientists, not a black box:
+    - users create a data frame and sample it
+    - Wrex has an interactive grid where users derive a new column and give
+      transformation examples
+    - give code window with synthesized code
+    - apply synthesized code to full data frame and plotting.
+
+- 
