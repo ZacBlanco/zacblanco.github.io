@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Filter Design Project
-permalink: /filter-design-project/
+permalink: /education/undergrad/prin-ee-2/filter-design-project/
 mathjax: true
 ---
 
@@ -41,7 +41,7 @@ We get the following facts from the problem:
 
 ### Attempt at First-Order Filter Feasibility
 
-If we try to find a first-order filter circuit then we need to have a gain, $$k$$ by which our transfer function will approximately begin at 20dB, and then by which will begin to roll off at approximately 500Hz. Whereby transfer function must lie within a $$\pm 3dB $$ range. 
+If we try to find a first-order filter circuit then we need to have a gain, $$k$$ by which our transfer function will approximately begin at 20dB, and then by which will begin to roll off at approximately 500Hz. Whereby transfer function must lie within a $$\pm 3dB $$ range.
 
 The filter must also attentuate for frequencies which are greater than 7.5kHz to values of $$-15dB$$ or less.
 
@@ -241,7 +241,7 @@ From this we also know that $$k_1k_2 = 10$$, so individually we will set the gai
 - $$k_1 = 2 = 1 + \frac{R_2}{R_1}$$
 - $$k_2 = 5 = 1 + \frac{R_5}{R_4}$$
 
-$$ \frac{R_2}{R_1} = 1$$, thus 
+$$ \frac{R_2}{R_1} = 1$$, thus
 
 > $$R_2 = R_1 $$
 
@@ -258,10 +258,10 @@ This gives us that $$R_5=4\cdot2.2k\Omega = 8.8k\Omega$$
 We can set $$R_5$$ to $$8.8k\Omega$$ by putting 4 separate $$2.2k\Omega$$ resistors in series. The rest of the resistors are set to nominal values.
 
 | Component | Value |
-| $$R_1$$ | $$2.2k\Omega$$ | 
-| $$R_2$$ | $$2.2k\Omega$$ | 
-| $$R_4$$ | $$2.2k\Omega$$ | 
-| $$R_5$$ | $$8.8k\Omega$$ | 
+| $$R_1$$ | $$2.2k\Omega$$ |
+| $$R_2$$ | $$2.2k\Omega$$ |
+| $$R_4$$ | $$2.2k\Omega$$ |
+| $$R_5$$ | $$8.8k\Omega$$ |
 
 Using these values we should get an exact gain of 10.
 
@@ -404,7 +404,7 @@ $$ H(s) = \frac{k_1k_2}{(1 + \frac{\frac{\omega_o^2}{s}}{\omega_{c1}})(1 + \frac
 
 Simplifed:
 
-$$  H(s) = \frac{s^2k_1k_2}{(s + \frac{\omega_o^2}{\omega_{c1}})(s + \frac{\omega_o^2}{\omega_{c2}})} $$ 
+$$  H(s) = \frac{s^2k_1k_2}{(s + \frac{\omega_o^2}{\omega_{c1}})(s + \frac{\omega_o^2}{\omega_{c2}})} $$
 
 $$ H(s) = \frac{s^2k_1k_2}{(s + \frac{\omega_o^2}{\omega_{c1}})(s + \frac{\omega_o^2}{\omega_{c2}})} $$
 
@@ -498,7 +498,7 @@ bodemag(h, opts);
 
 ![](/assets/images/filter-design/bode-mag-scaled.png)
 
-## Conclusion 
+## Conclusion
 
 _Note that this is prior to testing the circuit in the laboratory_
 
