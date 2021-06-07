@@ -1,7 +1,7 @@
 ---
 layout: page
 title: CSE 221 - Operating Systems - Notes on "Xen and the Art of Virtualization"
-permalink: /education/grad/cse221/11-5/vm370/
+permalink: /education/grad/cse221/11-5/xen/
 keywords: CSE, 221, UCSD, UC, San Diego, software, operating, system, linux, C, OS, xen
 description: Notes for "Xen and the Art of Virtualization"
 mathjax: true
