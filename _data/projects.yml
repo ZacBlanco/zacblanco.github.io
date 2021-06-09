@@ -1,39 +1,26 @@
 ---
 
 -
- name: Alluxio 
+ name: sstable
+ url: https://github.com/zacblanco/sstable
+ description: an implementation of Sorted String Tables in rust
+-
+ name: JVM GC Log Analyzer
+ url: https://github.com/zacblanco/jvm-gc-log-analyzer
+ description: quick and dirty CLI tool for analyzing JVM GC logs
+-
+ name: Alluxio
  url: https://github.com/Alluxio/alluxio
  description: A distributed filesystem and data caching layer for unifying many disparate storage systems
-
 -
  name: CA SFISTA and CA SPNM
  url: https://github.com/ZacBlanco/DistributedOptimization/
  description: Two communication-avoiding LASSO solvers. [Paper](https://arxiv.org/pdf/1710.08883.pdf)
-
--
-  name: ChefBoyRD
-  url: http://blanco.io/ChefBoyRD
-  description: Restaurant Automation - Rutgers ECE Software Engineering Project. Spring 2017.
-
 -
   name: pymessage
   url: https://github.com/zacblanco/pymessage
-  description: A lightweight messaging protocol built on top of sockets in order to easily develop networked python applications 
+  description: A lightweight messaging protocol built on top of sockets in order to easily develop networked python applications
 -
  name: This Blog
  url: https://github.com/ZacBlanco/zacblanco.github.io
  description: Source for this site.
--
- name: 2048
- url: http://zacblanco.github.io/2048/
- description: An attempt to clone the game 2048, plus an AI feature.
-
-- 
- name: Countdown
- url: http://zacblanco.github.io/countdown/
- description: An extremely simple countdown timer/html page that utilizes countdown.js
-  
--
- name: Jiffy
- url: https://github.com/ZacBlanco/jiffy/
- description: A wrapper on the jetty web-server to make developing simple web apps easy in Java.
