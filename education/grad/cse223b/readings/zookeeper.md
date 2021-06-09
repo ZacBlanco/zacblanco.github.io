@@ -1,3 +1,7 @@
+---
+layout: page
+---
+
 ## Introduction
 
 - coordinate processes of distributed applications
@@ -38,4 +42,4 @@
 - use a "fuzzy" snapshot which doesn't lock state while taking checkpoint
 - can do this because state changes are idempotent
 - timeouts to detect client failures
-- 
+-

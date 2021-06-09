@@ -5,7 +5,29 @@ permalink: /education/grad/cse223b/
 keywords: distributed, systems, CSE, 223B, UCSD, UC, San Diego, networking, tcp, udp, ip, software, operating, system, linux, C, rust
 description: Notes for CSE 223B (Distributed Systems) at UC San Diego
 mathjax: true
+notes:
+  bayou: Bayou
+  chord: Chord
+  dist-shared-mem: Distributed Shared Memory
+  farm: FaRM
+  fawn: FAWN
+  frangipani: Frangipani
+  harp: Harp
+  isis: ISIS
+  pbft: Practical Byzantine Fault Tolerance
+  treadmarks: TreadMarks
+  zookeeper: ZooKeeper
 ---
+
+
+
+## Paper Notes
+
+{%for pg in page.notes -%}
+- [{{ pg[1] }}](./readings/{{pg[0]}}.html)
+{% endfor %}
+
+
 
 ## Lecture 1
 
@@ -505,4 +527,4 @@ Phase 3 (learning phase)
   - if a new node joins, the node which garbage collected its log may
     not be able to catch up the new server if their last commited
     sequence number is not in their log
-  
+

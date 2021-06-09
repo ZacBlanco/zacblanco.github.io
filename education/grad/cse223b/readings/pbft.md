@@ -1,3 +1,7 @@
+---
+layout: page
+---
+
 ## Introduction
 
 - replication algorithm to tolerate byzantine faults

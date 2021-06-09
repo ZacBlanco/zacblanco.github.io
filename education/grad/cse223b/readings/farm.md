@@ -1,3 +1,7 @@
+---
+layout: page
+---
+
 ## Introduction
 
 - memory system to exploit RDMA
@@ -32,4 +36,4 @@
     - all primary+replica logs message before sending reply
     - coordinator sends **validate** message to primaries in read set to
       check if the latest version was read
-    - 
+    -

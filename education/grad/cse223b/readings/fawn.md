@@ -1,3 +1,7 @@
+---
+layout: page
+---
+
 ## Introduction
 
 - efficient, massive parallel access to data
@@ -26,4 +30,4 @@
  - consistent hashing to place put/get on particular nodes
 - cache all the things!
 - chain replication -- puts to head of chain, gets to the tail
-- 
+-

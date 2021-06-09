@@ -1,3 +1,7 @@
+---
+layout: page
+---
+
 ## Introduction
 
 - replicated, weakly consistent storage system
