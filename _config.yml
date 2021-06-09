@@ -9,27 +9,21 @@ twitter_username: ZacBlanco
 github_username:  ZacBlanco
 tagline: hello
 
-pages_list:    
+pages_list:
   Blog: '/blog'
   Education: '/education'
   Projects: '/projects'
   About: '/about'
-  
 
 # Permalinks
 permalink:           none
-relative_permalinks: false  
+relative_permalinks: false
 
 # Setup
 author:
   name:           Zac Blanco
   url:            "https://blanco.io"
   email:          zacdblanco@gmail.com
-
-# Custom vars
-#version:          1.0.0
-#github:
-#  repo:           https://github.com/poole/poole
 
 # Build settings
 markdown: kramdown
