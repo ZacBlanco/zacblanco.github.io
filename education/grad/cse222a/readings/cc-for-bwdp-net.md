@@ -1,3 +1,6 @@
+---
+layout: page
+---
 
 ## Congestion Control for High Bandwidth-Delay Product Networks
 
@@ -66,4 +69,4 @@ causes TCP to oscillate between bandwidth
 - security
     - all nodes need to comply with feedback in order to work properly...
     - policing agents?
-    - 
+    -

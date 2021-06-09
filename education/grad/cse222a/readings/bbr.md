@@ -1,3 +1,6 @@
+---
+layout: page
+---
 ## Introduction
 
 - slow internet problems is the result of congestion control
@@ -23,4 +26,4 @@
 - sometimes acks are grouped together, causing delays in updates to bottleneck
   bandwidth
   - set cwnd_gain to a alrger value (2) to account for additional RTT time.
-- 
+-

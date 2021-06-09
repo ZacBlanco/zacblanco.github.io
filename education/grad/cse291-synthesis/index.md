@@ -1,6 +1,27 @@
 ---
+layout: page
+title: CSE 291 - Program Synthesis
+keywords: CSE, 232, UCSD, UC, San Diego, software, PL, programming, language, sketch, synthesis, POPL
+description: Graduate Course on Program Synthesis by Nadia Polikarpova at UC San Diego
+mathjax: true
+notes:
+  augmented-examples: Augmented Examples
+  blinkfill: BlinkFill
+  brahma: Brahma
+  euphony: Euphony
+  eusolver: EUSolver
+  nope: Nope
+  sketch: Sketch
+  suslik: SusLik
+  synquid: Synquid
 ---
 
+
+## Paper Notes
+
+{%for pg in page.notes -%}
+- [{{ pg[1] }}](./readings/{{pg[0]}}.html)
+{% endfor %}
 
 ### Lecture 1 - Intro
 
@@ -814,4 +835,4 @@ Postcondition: `{x -> B * y -> A}`
     - give code window with synthesized code
     - apply synthesized code to full data frame and plotting.
 
-- 
+-

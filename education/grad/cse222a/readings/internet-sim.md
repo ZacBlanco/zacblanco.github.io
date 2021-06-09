@@ -1,3 +1,6 @@
+---
+layout: page
+---
 
 ## Introduction
 
@@ -27,7 +30,7 @@
     - topology is constantly changing
     - engineered by competing entities
     - properties of links are known, but the parameters span a large range
-        - modems w/ hundreds of bytes/s vs fiber links 
+        - modems w/ hundreds of bytes/s vs fiber links
     - routing changes regularly on the internet -- simulation probably needs to
       include "multi-pathing"
 - protocol differences

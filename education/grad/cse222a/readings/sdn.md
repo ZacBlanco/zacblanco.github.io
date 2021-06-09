@@ -1,3 +1,7 @@
+---
+layout: page
+---
+
 ### Software Defined Networking
 
 - Approach to building networks favoring programmability
@@ -5,7 +9,7 @@
 
 ### Software Stack
 
-- bare-metal switch running a  _switch OS_ 
+- bare-metal switch running a  _switch OS_
     - controlled by global "Network OS"
         - netOS hosts _control applications_
 - many open source components for each piece of the stack..
@@ -63,4 +67,3 @@
     - Dual-homing servers and routers
     - QinQ forwarding/termination
     - MPLS-based pseudo-wires
-     

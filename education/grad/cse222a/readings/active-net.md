@@ -1,3 +1,7 @@
+---
+layout: page
+---
+
 ## Introduction
 
 - Active networks allow users to inject customized programs into nodes.
@@ -101,4 +105,4 @@
 
 - researchers should attempt to deploy wide-area ActiveNet
     - overlay on traditional infrastructure
-- 
+-

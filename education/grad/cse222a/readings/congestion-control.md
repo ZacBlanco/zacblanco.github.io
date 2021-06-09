@@ -1,3 +1,7 @@
+---
+layout: page
+---
+
 ## Congestion Control
 
 - how to fairly allocate resources to competing users?
@@ -91,4 +95,4 @@
     - adjust congestion window at time intervals instead of only when acks
       arrive
     - uses a cubic function to adust the congestion window
-    - 
+    -

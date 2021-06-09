@@ -1,3 +1,7 @@
+---
+layout: page
+---
+
 ## Notes
 
 - Extend SyGuS grammar of possible programs with probabilistic model on likelihood of each program.

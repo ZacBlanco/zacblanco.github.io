@@ -1,3 +1,7 @@
+---
+layout: page
+---
+
 ## Introduction
 
 - program (e.g. `swap`) can be effectively captured by providing logical

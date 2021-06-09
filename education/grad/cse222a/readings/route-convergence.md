@@ -1,3 +1,6 @@
+---
+layout: page
+---
 
 ### Introduction
 
@@ -59,4 +62,3 @@
     - if the route does not container a backup link, use guidelines A/B
     - if the route contains a backup link, the local preference is the
       backup link preference.
-    

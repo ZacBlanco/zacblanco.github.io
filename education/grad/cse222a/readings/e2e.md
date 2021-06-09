@@ -1,8 +1,5 @@
 ---
 layout: page
-title: Notes on "End-to-End Arguments in System Design"
-keywords: CSE, 222A, UCSD, UC, San Diego, networks, argument, end, system, design
-mathjax: true
 ---
 
 ## Intro
@@ -54,7 +51,7 @@ mathjax: true
       requesting the next
 - Secure data transmission
     - authenticity of messages still needs to be checked, even if the data
-    coming over the wire is encrypted. 
+    coming over the wire is encrypted.
 - Duplicate message suppression
     - Applications may duplicate messages anyways during failure/retry scenarios, so why should the network protocol suppress them?
 - Guaranteeing FIFO Message Delivery

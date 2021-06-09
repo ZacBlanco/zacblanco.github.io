@@ -1,3 +1,7 @@
+---
+layout: page
+---
+
 ## Introduction
 
 - datacenter networking is changing computing and network engineering
@@ -77,12 +81,12 @@
         - web server: flows gradually up to about 10k ms, nothing really past 10k ms
         - cache: flows generally flat until 10k ms, the rest 100k ms
         - hadoop: intra-DC flows jump at ~500ms, then flat and peak at 10k ms.
-          inter-DC/intra-rack 70% < 10ms, intra-cluster 50% < 10k ms, rest < 100k ms 
+          inter-DC/intra-rack 70% < 10ms, intra-cluster 50% < 10k ms, rest < 100k ms
 - heavy hitters
     - persistence of flows making up 50% or more of traffic is low, accounting for no more than 15% of flows
     - considering rack-level flows heavy hitters become more persistent into the
       100ms range for web servers.
-    - 
+    -
 
 ## Switching
 
@@ -97,4 +101,4 @@
 - most flows traverse an uplink port - consider flow at rack level
 - cache: communicate 225-300 racks
 - web servers communicate with 10-125 racks
-- 
+-

@@ -1,3 +1,7 @@
+---
+layout: page
+---
+
 ## Pastry
 
 - big p2p lookup system
@@ -48,4 +52,4 @@
         - newLeafs(leafSet)
 
 - self-organization
-    - 
+    -

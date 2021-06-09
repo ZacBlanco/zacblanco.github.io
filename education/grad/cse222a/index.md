@@ -5,7 +5,36 @@ permalink: /education/grad/cse222a/
 keywords: CSE, 221, UCSD, UC, San Diego, networking, tcp, udp, ip, software, operating, system, linux, C, rust
 description: Notes for CSE 222A (Network Systems) at UC San Diego
 mathjax: true
+notes:
+    0wn-the-internet: 0wn The Internet
+    80211b: Architecture and Evaluation of an Unplanned 802.11b Mesh Network
+    active-net: Active Networking
+    aloha: Aloha Net
+    bbr: Congestion-Based Congestion Control
+    book-net-security: Network Security, Book Ch. 8.1, 8.5 (Network Security)
+    cc-for-bwdp-net: Congestion-Control for High Bandwidth-Delay Product Networks
+    dc-net-arch: Towards a Scalable Commodity Data Center Network Architecture
+    e2e: The End-to-End Principle
+    ethane: "Ethane: Taking Control of the Enterprise"
+    internet-routing: Book Chapters 3.4, and 4.1 (Internet Routing)
+    internet-sim: Difficulties in Simulating the Internet
+    ip: The Internet Protocol
+    overlay-networks: Book Chapter 8.5 (Overlay Networks)
+    pastry: "Pastry: Scalable, decentralized object location and routing for large-scale peer-to-peer systems"
+    rocketfuel: "Measuring ISP Topologies with Rocketfuel "
+    route-convergence: "Stable Internet Routing Without Global Coordination"
+    routing-in-the-wild: "End-to-end Routing Behavior in the Internet"
+    sdn: Book Chapter 3 (Software-Defined Networking)
+    social-network-dc: "Inside the Social Network’s (Datacenter) Network"
+    wireless-nets: Book Chapter 2.7 (Wireless Networks)
+    zmap: "Fast Internet-Wide Scanning and its Security Applications"
 ---
+
+## Paper Notes
+
+{%for pg in page.notes -%}
+- [{{ pg[1] }}](./readings/{{pg[0]}}.html)
+{% endfor %}
 
 
 ## Lecture 1 - Course Intro

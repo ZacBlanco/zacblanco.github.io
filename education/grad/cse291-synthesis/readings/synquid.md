@@ -1,3 +1,7 @@
+---
+layout: page
+---
+
 ## Introduction
 
 - synthesize recursive functions to satisfy a specification
@@ -42,7 +46,7 @@
   no type-checking rule applies
 - key insight - type information in top-down doesn't have to be thrown away, but
   can be used to make a stronger judgement about bottom-up inference
-- 
+-
 
 
 ## Questions
@@ -81,7 +85,7 @@ insertions.
 - restrict variable range to scalar quantities
 - requires complete specification of refinement types for program to be
   synthesized
-- couldn't understand how programs actually become synthesized based on type checking/abduction. 
+- couldn't understand how programs actually become synthesized based on type checking/abduction.
 
 
 - What does Synquid use as behavioral constraints? Structural constraint? Search strategy?
@@ -108,15 +112,15 @@ https://www.thesaurus.com/e/grammar/judgement-vs-judgment/
     - `inc ?? :: {Int | ν = 5}`, where `inc :: x:Int -> {Int | ν = x + 1}`
         - synquid could discard this term because it may not always produce a value
         which matches the constraint of v = x+1 since for the incomplete term, it specifies v = 5
-  
+
     - `duplicate ?? :: {List Int | len ν = 5}`, where `duplicate :: xs:List a -> {List a | len ν = 2*(len xs)}`
         - synquid could discard this term because the `len v = 5` is not true for a list
         of any size.
-  
+
     - `nats ?? :: List Pos`, where `nats :: n:Nat -> {List Nat| len ν = n}, Nat = {Int | ν >= 0}, Pos = {Int | ν > 0}`
         - synquid could not discard this term because `List Pos` is valid because Nat implies v >= 0, which includes all numbers which are valid as Pos (v > 0)
-        and so this incomplete term may not be discarded 
-    
+        and so this incomplete term may not be discarded
+
 
 
 - Compare Synquid's condition abduction mechanism to the one from EUSolver.

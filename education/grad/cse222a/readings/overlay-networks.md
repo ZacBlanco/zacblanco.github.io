@@ -1,3 +1,7 @@
+---
+layout: page
+---
+
 ## Overlay networks
 
 - _application processing_ vs _packet forwarding_
@@ -114,4 +118,4 @@
     - 2: request proxy
 - redirectors can hash URLs to make requests go to a particular server
   (e.g. serving from the in-memory cache)
-- 
+-

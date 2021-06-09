@@ -1,3 +1,7 @@
+---
+layout: page
+---
+
 ### Abstract/Intro
 
 - attackers gaining control of large numbers of internet hosts poses a threat
@@ -60,7 +64,7 @@ to the security of the internet
     - public surveys:
 - permutation scanning
     - all worms share common random permutation of IP address space
-    - scan from random index of ip space, iterate until 
+    - scan from random index of ip space, iterate until
 - topology aware worms
     - use information on infected machine to guide attack vectors
 - internet-scale hit list
@@ -79,4 +83,4 @@ to the security of the internet
     - establish mechanisms to propagate signatures
     - track use of different application in the internet to detect
       previously unknown applications to appear
-    - analyze threats of 
+    - analyze threats of

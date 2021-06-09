@@ -1,3 +1,7 @@
+---
+layout: page
+---
+
 ## Wireless Networks
 
 - number of different wireless specs
@@ -64,4 +68,4 @@
 - 2.45GHz band
 - single master with up to 7 slaves
 - ZigBee - 802.15.4, for extremely low power
-- 
+-

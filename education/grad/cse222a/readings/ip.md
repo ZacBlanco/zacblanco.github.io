@@ -1,8 +1,5 @@
 ---
 layout: page
-title: Notes on "A Protocol for Packet Network Intercommunication"
-keywords: CSE, 222A, UCSD, UC, San Diego, networks, packets, ip, reading, notes
-mathjax: true
 ---
 
 

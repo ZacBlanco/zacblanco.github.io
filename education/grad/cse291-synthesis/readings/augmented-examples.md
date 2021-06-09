@@ -1,3 +1,7 @@
+---
+layout: page
+---
+
 ## Introduction
 
 - two new techniques:

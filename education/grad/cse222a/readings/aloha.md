@@ -1,3 +1,6 @@
+---
+layout: page
+---
 
 
 - present, conbentional methods are with wired communications

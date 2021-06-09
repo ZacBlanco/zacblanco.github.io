@@ -1,3 +1,7 @@
+---
+layout: page
+---
+
 ## Introduction
 
 -  new network architecture for the enterprise
@@ -82,4 +86,4 @@
     - assumes transport port numbers corresponds with traffic type (e.g. 80/443 for http, 22 for ssh)
     - ethane switches rely on ethernet addresses to identify flows
         - spoofing a MAC can fool ethane into delivering packets to the wrong hosts
-    -  
+    -

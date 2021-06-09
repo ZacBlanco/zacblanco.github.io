@@ -1,3 +1,7 @@
+---
+layout: page
+---
+
 ## Introduction
 
 - expertise with clusters of commodity PCs have enabled harnessing and

@@ -1,3 +1,7 @@
+---
+layout: page
+---
+
 ## Abstract/Intro
 
 - internet scanning can expose vulnerabilities and track adoption of defense mechanisms
@@ -60,4 +64,4 @@
 
 ## good internet citizenship
 
-- 
+-

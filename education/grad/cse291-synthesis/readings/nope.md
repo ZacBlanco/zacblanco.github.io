@@ -1,3 +1,7 @@
+---
+layout: page
+---
+
 ## Introduction
 
 - deciding unrealizability of synthesis not solved

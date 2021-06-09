@@ -1,3 +1,6 @@
+---
+layout: page
+---
 
 ## Notes
 
@@ -35,7 +38,7 @@
     - find a small set of inputs that represents the entire domain of inputs
 - uses SAT for validation
 
-- 
+-
 
 ## Questions
 
@@ -91,7 +94,7 @@ programmers should be concerned with
 
 Sketch seems far more expressive because not only does it include loop (Brahma restricts itself to loop-free programs), but it contains many of the most common
 features of programming languages such as conditionals, vector indexing, statements
-and generators. A grammar for the Sketch language was provided in the paper, 
+and generators. A grammar for the Sketch language was provided in the paper,
 so it is similar in a sense to the SyGuS CFGs, but far more expressive than
 the previous synthesizers we've studied due to the addition of constructs like
 loops and conditionals.

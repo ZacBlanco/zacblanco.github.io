@@ -1,3 +1,7 @@
+---
+layout: page
+---
+
 ## Trust and Threats
 
 - security eventually fails -- assumption on **trust** of another

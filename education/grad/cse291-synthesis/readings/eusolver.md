@@ -1,3 +1,6 @@
+---
+layout: page
+---
 
 ### Summary
 
@@ -20,7 +23,7 @@
 - eusolver requires a "conditional expression grammar"
     - conditional expression grammar is a pair of grammars $$G_T, P_T$$
     - $$G_T$$ is the term grammar, $$G_P$$ is the predicate grammar
-    
+
 - Decision Trees
     - model conditional expressions
     - traditional DT maps **samples** to **labels**
@@ -55,7 +58,7 @@ expressions that cover the set of inputs.
 
 - Does a good job of introducing problem backgrounds and comparing to the
   "naive" way
-- based on performance in the SyGuS competition, clearly able to outperform many other solvers in terms of how many solutions 
+- based on performance in the SyGuS competition, clearly able to outperform many other solvers in terms of how many solutions
 
 ### Weaknesses
 

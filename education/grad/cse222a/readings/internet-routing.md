@@ -1,3 +1,6 @@
+---
+layout: page
+---
 
 
 ## How Internet Routing Works
@@ -116,8 +119,7 @@
 - common AS relationships
     - provider-customer
     - customer-provider (don't carry other provider's traffic)
-    - peer 
+    - peer
 - eBGP/iBGP for routers within AS to learn which external routers to send traffic to
     - iBGP for internal routers
     - eBGP for external
-    

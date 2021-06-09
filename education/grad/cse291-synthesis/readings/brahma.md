@@ -1,3 +1,7 @@
+---
+layout: page
+---
+
 ## Introduction
 
 - problem of synthesizing loop-free programs which implement a particular functionality given a set of library components
@@ -58,7 +62,7 @@ component-based synthesis problem.
 - even though bitvector manipulations may be of limited use, they do give
 a number of particular places it could be useful, particularly in finding
 potentially overflowing arithmetic operations and replacing it with bitvector
-manipulation which doesn't suffer from overflow problems 
+manipulation which doesn't suffer from overflow problems
 
 
 ### Weaknesses
@@ -104,7 +108,7 @@ Given the original constraint below:
 
 The ψwfp(L) does not have to change, since the well-formed programs specification should be the same is the same.
 
-This leaves the component of the specification: 
+This leaves the component of the specification:
 - (φlib(T) ∧ ψconn(~I,O,T,L) ⇒ φspec(~I,O))
 
 since φlib(T) represents the the specifications of the base components ψconn(~I,O,T,L) represents the interconnections between those particular components, we would need to reformulate

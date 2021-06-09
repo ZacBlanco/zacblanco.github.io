@@ -1,3 +1,7 @@
+---
+layout: page
+---
+
 ## Introduction
 
 - Flashfill already exists
@@ -40,7 +44,7 @@
     - indices represented with a labeling function
     - algorithm computes IDG for each example, then unions examples into a
       single graph containing the common sub expressions.
-- 
+-
 
 ## Questions
 
@@ -51,7 +55,7 @@ introduced in Microsoft Excel. The authors devise an interesting approach to
 compressing the total program space utilized during the learning phase. As the
 amount of input data grows, they are able to contain the graph size to a much
 smaller size. This helps them improve the speed of learning the synthesis program and enables an efficient graph search with dijkstra's to pick the most
-likely program candidate once the initial set of programs is generated. 
+likely program candidate once the initial set of programs is generated.
 
 ### Strengths
 
@@ -88,13 +92,13 @@ programs are generated from the `InputDataGraph` a most likely candidate is
 chosen by ranking the possible programs which reduces the number of examples
 required to synthesize a correct program.
 
-- 
+-
 
 
 ### Write a program in the BlinkFill DSL (L_s) that extracts conference acronyms and years; the program should satisfy the following examples:
-    
+
     > "Programming Language Design and Implementation (PLDI), 2019, Phoenix AZ" -> "PLDI 2019"
-    
+
     > "Principles of Programming Languages (POPL), 2020, New Orleans LA" -> "POPL 2020",
 
 
