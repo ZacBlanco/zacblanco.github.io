@@ -1,9 +1,9 @@
 ---
 
 -
- name: sstable
- url: https://github.com/zacblanco/sstable
- description: an implementation of Sorted String Tables in rust
+ name: props-rs
+ url: https://crates.io/crates/props-rs
+ description: A parser for the `.properties` file format written in Rust.
 -
  name: JVM GC Log Analyzer
  url: https://github.com/zacblanco/jvm-gc-log-analyzer
