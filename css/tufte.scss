@@ -38,7 +38,6 @@ html{
     font-size: 11px;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-
   }
 
 @media screen and (min-width: 800px){ html{ font-size: 12px;} }
@@ -63,6 +62,10 @@ a {
   text-decoration: none;
 }
 
+a:hover {
+  text-decoration: underline;
+}
+
 p > a, cite > a, span > a { @if $link-style == underline
     {
       color: $text-color;
@@ -79,7 +82,7 @@ p > a, cite > a, span > a { @if $link-style == underline
     @else
     {
       color: $contrast-color;
-      text-decoration: none;
+      // text-decoration: none;
     }
   }
 
@@ -128,10 +131,14 @@ p .subtitle { font-style: italic;
 
 p, ol, ul { font-size: 1.4rem; }
 
-p, li { line-height: 2rem;
+p { line-height: 2rem;
         margin-top: 1.4rem;
         padding-right: 2rem; //removed because,  why?
         vertical-align: baseline; }
+
+li {
+  margin-top: 0.5rem;
+}
 
 /* Chapter Epigraphs */
 div.epigraph { margin: 3.5636rem 0; }
@@ -238,10 +245,10 @@ article { position: relative;
 section { padding-top: 1rem;
           padding-bottom: 1rem; }
 
-ul,ol { width: 45%;
-     -webkit-padding-start: 5%;
-     -webkit-padding-end: 5%;
-     list-style-type: none; }
+
+ul, ol {
+  padding-left: 1.0em;
+}
 
 //li { padding: 0.5em 0; } //vertical padding on list items screws up vertical rhythym
 
@@ -315,6 +322,12 @@ div.table-wrapper, table { overflow-x: auto; } //changed all overflow values to 
 
 .marginnote code, .sidenote code { font-size: 1rem; } //more .code class removal
 
+div.highlight > pre.highlight {
+  background-color: $code-bg-color;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #eee;
+}
 pre { width: 52.5%; //, pre code, p pre code are both selectors in tufte.css - they have been removed here to fix alignment issues
            padding-left: 2.5%;
            overflow-x: auto; }
@@ -380,6 +393,10 @@ header > nav.group, body footer {
 nav.group a.active:before{ content:"\0003c\000a0";} // escaped unicode for the carats and then a space on active menu links
 nav.group a.active:after{ content:"\000a0\0003e" ;}
 
+.title-link {
+  padding-right: 5rem;
+}
+
 header > nav  a{
   font-size: 1.2rem;
   font-family: $sans-font;
@@ -388,7 +405,7 @@ header > nav  a{
   color: $contrast-color;
   padding-top: 1.5rem;
   text-decoration: none;
-  display: inline-block;
+  display: block;
   float: left;
   margin-top: 0;
   margin-bottom: 0;
@@ -396,12 +413,15 @@ header > nav  a{
   //margin-left: 1rem;
   vertical-align: baseline;
 }
-header > nav a img{
-  height: 5rem;
-  position: relative;
-  max-width: 100%;
-  top:-1.5rem;
-}
+
+// Uncomment this if I ever want an image on the nav
+// header > nav a img{
+//   height: 5rem;
+//   position: relative;
+//   max-width: 100%;
+//   top:-1.5rem;
+// }
+
 ul.footer-links, .credits{
   list-style: none;
   text-align: center;

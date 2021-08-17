@@ -1,7 +1,7 @@
 <!--- Header and nav template site-wide -->
 <header>
     <nav class="group">
-	<a href="{{site.baseurl}}/"><img class="badge" src="{{site.baseurl}}/assets/img/badge_1.png" alt="ZB"></a>
+	<a href="{{site.baseurl}}/" class="title-link">Zac Blanco</a>
 	{% for node in site.pages_list %}
 		<a href="/{{ node[1] | prepend: site.baseurl}}">{{node[0]}}</a>
 		<!-- <script>console.log('{{site.pages_list}}')</script> -->
