@@ -10,19 +10,11 @@ I'm a firm believer in the value of education. I also enjoy helping others learn
 
 Currently, I am a PhD student at [UC San Diego](https://ucsd.edu) where I perform research with [WukLab](https://wuklab.io)
 
-Here's a list of languages and technologies I've worked with in the past:
+Here's a short list of languages and technologies I've worked with in the past:
 
-- Java
-- Python
-- Apache projects: Knox, Ambari, Zeppelin, Hive, HDFS, Ranger, NiFi, Hadoop, Spark
-- C#
-- HTML
-- CSS
-- Javascript
-- Node.js
-- Git + GitHub
-- Linux
-- C/C++
+- Languages: Java, Scala, Python, C#, Typescript, C, C++, Rust, Go, Javascript, HTML, SQL, Bash
+- Frameworks: React, Django, Akka,
+- Software: Linux, Docker, eBPF, Presto, Alluxio, Apache Hive, HDFS, Ranger, NiFi, Hadoop, Spark
 
 Contact Information:
 

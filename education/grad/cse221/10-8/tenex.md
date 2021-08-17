@@ -27,7 +27,7 @@ Three broad goal categories
     - extended instructions
 - Good human engineering
     - command language interpreter
-    - terminal interface design to favilitate interaction
+    - terminal interface design to facilitate interaction
     - VM functions providing reasonable defaults
     - encourage cooperation among users
 - Implementable, maintainable, modifiable
