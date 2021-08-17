@@ -1,8 +1,13 @@
 /**
  * Syntax highlighting styles
  */
+$spacing-unit:     30px;
+%vertical-rhythm {
+    margin-bottom: $spacing-unit / 2;
+}
+
 .highlight {
-    background: #fff;
+    background: #fffff8;
     @extend %vertical-rhythm;
 
     .c     { color: #998; font-style: italic } // Comment

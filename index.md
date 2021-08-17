@@ -11,7 +11,7 @@ find my most of my research and projects on my
 [github](https://github.com/ZacBlanco). There are notes for the classes that I
 took during my undergrad [here](/education/undergrad/)
 
-#### Quick Links
+### Quick Links
 
 - [Publications and Research](/education/)
 - [Undergraduate Class Notes](/education/undergrad/)
