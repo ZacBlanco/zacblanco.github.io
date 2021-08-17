@@ -13,7 +13,7 @@ Currently, I am a PhD student at [UC San Diego](https://ucsd.edu) where I perfor
 Here's a short list of languages and technologies I've worked with in the past:
 
 - Languages: Java, Scala, Python, C#, Typescript, C, C++, Rust, Go, Javascript, HTML, SQL, Bash
-- Frameworks: React, Django, Akka,
+- Frameworks: React, Django, Akka
 - Software: Linux, Docker, eBPF, Presto, Alluxio, Apache Hive, HDFS, Ranger, NiFi, Hadoop, Spark
 
 Contact Information:
