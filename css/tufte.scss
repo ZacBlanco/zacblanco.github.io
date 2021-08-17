@@ -103,21 +103,21 @@ h1 { font-weight: 400;
      margin-top: 1.568rem;
      margin-bottom: 1.568rem;
      font-size: 2.5rem;
-     line-height: 0.784; }
+     line-height: 1.0; }
 
 h2 { font-style: italic;
      font-weight: 400;
      margin-top: 1.866666666666667rem;
      margin-bottom: 0;
      font-size: 2.1rem;
-     line-height: 0.933333333333333; }
+     line-height: 1.0888888888; }
 
 h3 { font-style: italic;
      font-weight: 400;
      font-size: 1.8rem;
      margin-top: 2.1777777777777778rem;
      margin-bottom: 0;
-     line-height: 1.08888888888889; }
+     line-height: 1.166666666666; }
 
 // ET says a need for more than 3 levels of headings is the sign of a diseased mind
 
@@ -328,8 +328,8 @@ div.highlight > pre.highlight {
   border-style: solid;
   border-color: #eee;
 }
-pre { width: 52.5%; //, pre code, p pre code are both selectors in tufte.css - they have been removed here to fix alignment issues
-           padding-left: 2.5%;
+pre { width: 89%; //, pre code, p pre code are both selectors in tufte.css - they have been removed here to fix alignment issues
+           padding-left: 1%;
            overflow-x: auto; }
 
 .fullwidth, li.listing div{ max-width: 90%; }
