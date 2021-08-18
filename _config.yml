@@ -5,11 +5,7 @@ author:
   url:            "https://blanco.io"
   email:          zacdblanco@gmail.com
 
-# Build settings
-markdown: kramdown
-
 title: Zac Blanco
-# subtitle: Content-centric blogging
 author: zac blanco
 baseurl: ""
 simple_search: http://google.com/search
