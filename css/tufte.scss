@@ -86,10 +86,10 @@ p > a, cite > a, span > a { @if $link-style == underline
     }
   }
 
-body { width: 87.5%;
+body { width: 92.5%;
        margin-left: auto;
        margin-right: auto;
-       padding-left: 12.5%;
+       padding-left: 7.5%;
        font-family: $body-font;
        background-color: $bg-color;
        color: $text-color;
@@ -162,7 +162,9 @@ div.epigraph > blockquote > footer > cite { font-style: italic; }
 
 blockquote p, blockquote footer{  width: 45%;
                                   padding-left: 2.5%;
-                                  padding-right: 2.5%;}
+                                  padding-right: 2.5%;
+                                  color: lighten($text-color, 30%);
+                                }
 
 blockquote footer {  font-size: 1.1rem;
                 line-height: 1.78181818;
@@ -248,11 +250,16 @@ section { padding-top: 1rem;
 
 ul, ol {
   padding-left: 1.0em;
+  width: $tufte-width;
+}
+
+li ol, li ul {
+  width: 90%;
 }
 
 //li { padding: 0.5em 0; } //vertical padding on list items screws up vertical rhythym
 
-figure, figure img.maincolumn { max-width: 55%;
+figure, figure img.maincolumn { max-width: $tufte-width;
          -webkit-margin-start: 0;
          -webkit-margin-end: 0;
          margin-bottom: 3em; }
@@ -305,7 +312,7 @@ blockquote .sidenote, blockquote .marginnote { margin-right: -79% }
                    color: $contrast-color;
                    top: 0rem; } //removed superscripting for numerical reference in sidenote
 
-p, footer, div.table-wrapper,  .MJXc-display { width: 55%; }
+article > p, footer, div.table-wrapper,  .MJXc-display { width: $tufte-width }
 
 div.table-wrapper, table { overflow-x: auto; } //changed all overflow values to 'auto' so scroll bars appear only as needed
 
@@ -328,7 +335,7 @@ div.highlight > pre.highlight {
   border-style: solid;
   border-color: #eee;
 }
-pre { width: 89%; //, pre code, p pre code are both selectors in tufte.css - they have been removed here to fix alignment issues
+pre { width: $tufte-width; //, pre code, p pre code are both selectors in tufte.css - they have been removed here to fix alignment issues
            padding-left: 1%;
            overflow-x: auto; }
 
@@ -454,8 +461,8 @@ body.full-width, .content-listing, ul.content-listing li.listing{ width: 90%;
        padding: 0% 5%;
 
 }
-.full-width article p{
-  width: 90%;
+.full-width article p {
+  width: 70%;
 }
 
 
