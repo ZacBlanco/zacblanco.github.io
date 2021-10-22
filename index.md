@@ -7,10 +7,10 @@ I am currently a [PhD student](/education/) at [UC San Diego](https://ucsd.edu)
 working with Prof. Yiying Zhang in [WukLab](https://wuklab.io). Previously, I
 worked as software engineer at [Alluxio](https://alluxio.io) and earned my
 undergraduate degree at [Rutgers University](/education/undergrad/). You can
-find my most of my research and projects on my
-[github](https://github.com/ZacBlanco).
+find information about my most of my research [here](/education/) and the code
+to my projects [here](https://github.com/ZacBlanco).
 
 ### Quick Links
 
 - [Publications and Research](/education/)
-- [Undergraduate Class Notes](/education/undergrad/)
+- [Contact Information](/about/)
