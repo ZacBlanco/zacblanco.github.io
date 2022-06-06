@@ -8,7 +8,7 @@ mathjax: true
 notes:
   bayou: Bayou
   chord: Chord
-  dist-shared-mem: Distributed Shared Memory
+  ivy: Distributed Shared Memory
   farm: FaRM
   fawn: FAWN
   frangipani: Frangipani
