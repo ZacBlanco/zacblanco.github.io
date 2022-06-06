@@ -15,8 +15,8 @@ learn! I spent 3 years at Rutgers University as a [learning
 assistant](https://rlc.rutgers.edu/services/learning-assistant-program) where I
 helped lead recitations and study groups in physics (01:750:123 and 124) and
 data structures (01:198:112) and even [received an
-award](http://studentawards.rutgers.edu/2018/05/01/zachary-blanco/) for my
-work.
+award](http://studentawards.rutgers.edu/2018/05/01/zachary-blanco/) for my work.
+I have also received the UCSD CSE doctoral award for excellence in teaching.
 
 Currently, I am a PhD student at [UC San Diego](https://ucsd.edu) where I
 perform research with [WukLab](https://wuklab.io). Please reach out if you would
