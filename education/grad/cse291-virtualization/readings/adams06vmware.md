@@ -1,6 +1,5 @@
 ---
-title: A Comparison of Software and Hardware Techniques for x86
-Virtualization
+title: A Comparison of Software and Hardware Techniques for x86 Virtualization
 type: page
 conf: asplos
 year: 2006
