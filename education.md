@@ -6,11 +6,12 @@ permalink: /education/
 ---
 
 
-I am currently a PhD student studying under [Prof. Yiying
-Zhang](https://cseweb.ucsd.edu/~yiying/) as a part of
-[WukLab](https://wuklab.io). My research interests span disaggregated computing,
-cloud, and serverless systems. Generally, I want to empower everyday developers
-to harness the cloud infrastructure with as little overhead as possible.
+I was a PhD student advised by [Prof. Yiying
+Zhang](https://cseweb.ucsd.edu/~yiying/) at UC San Diego before deciding to
+leave with my MSc in Computer Science. My research interests span disaggregated
+computing, cloud, and serverless systems. Generally, I want to empower everyday
+developers to harness the cloud infrastructure with as little overhead as
+possible.
 
 ## Publications
 
