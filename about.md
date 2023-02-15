@@ -18,12 +18,8 @@ data structures (01:198:112) and even [received an
 award](http://studentawards.rutgers.edu/2018/05/01/zachary-blanco/) for my work.
 I have also received the UCSD CSE doctoral award for excellence in teaching.
 
-Currently, I am a PhD student at [UC San Diego](https://ucsd.edu) where I
-perform research with [WukLab](https://wuklab.io). Please reach out if you would
-like to discuss any of my research.
-
 ### Contact Information:
 
-- email (base64 encoded): `emJsYW5jbyAoYXQpIHVjc2QgKGRvdCkgZWR1`
+- email (base64 encoded): `emFjZGJsYW5jb0BnbWFpbC5jb20K`
 - [LinkedIn Profile](https://www.linkedin.com/pub/zac-blanco/9a/2a6/8a9)
 
