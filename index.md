@@ -14,7 +14,7 @@ interested in discussing, please reach out [via email or LinkedIn.](/about/)
 Previously I earned my MSc at [UC San Diego](https://ucsd.edu) and undergraduate
 degree in Electrical Engineering at [Rutgers University](/education/undergrad/).
 You can find information about my most of my  work [here](/education/). My
-personal and professional projects are ghere
+personal and professional projects are [here](https://github.com/ZacBlanco)
 
 ### Quick Links
 
