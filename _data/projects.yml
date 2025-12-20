@@ -1,5 +1,15 @@
 ---
-
+- name: Bolt
+  url: https://github.com/bytedance/bolt
+  description: |
+    A vectorized database execution engine designed to work with popular open
+    source SQL engines such as Spark, Presto, and ClickHouse.
+- name: PrestoDB
+  url: https://prestodb.io/
+  description: |
+    A distributed SQL query engine
+    for big data. I've contributed and maintained significant portions of
+    the query optimizer and Apache Iceberg connector.
 -
  name: props-rs
  url: https://crates.io/crates/props-rs
