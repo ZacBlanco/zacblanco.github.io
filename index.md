@@ -3,8 +3,12 @@ layout: default
 title: Home
 ---
 
-I am currently employed by IBM where I help maintain
-[PrestoDB](https://github.com/prestodb/presto)
+I am currently employed by TikTok where I help maintain our data platform's
+vectorized query execution library, [Bolt](https://github.com/bytedance/bolt).
+Bolt can be used as an engine to speed up query execution in a wide variety of
+open source database systems such as [Spark](https://spark.apache.org/),
+[Presto](https://prestodb.io/), or [ClickHouse](https://clickhouse.com/).
+
 
 I have been working as an engineer on open source projects the big data and
 analytics ecosystem for the past decade. I have lots of thoughts about where
