@@ -10,15 +10,17 @@ open source database systems such as [Spark](https://spark.apache.org/),
 [Presto](https://prestodb.io/), or [ClickHouse](https://clickhouse.com/).
 
 
-I have been working as an engineer on open source projects the big data and
+I have been working as an engineer on open source project in the big data and
 analytics ecosystem for the past decade. I have lots of thoughts about where
-we're headed as an industry and how performance can be improved. If you're
-interested in discussing, please reach out [via email or LinkedIn.](/about/)
+we're headed as an industry and how to achieve and measure performance across a
+wide variety of workloads. If you're interested in discussing, please reach out
+[via email or LinkedIn.](/about/)
 
 Previously I earned my MSc at [UC San Diego](https://ucsd.edu) and undergraduate
 degree in Electrical Engineering at [Rutgers University](/education/undergrad/).
 You can find information about my most of my  work [here](/education/). My
-personal and professional projects are [here](https://github.com/ZacBlanco)
+personal and professional projects can be found
+[here](https://github.com/ZacBlanco)
 
 ### Quick Links
 
