@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>Wedding Wordle</title>
     <style>
       :root {
@@ -33,6 +33,7 @@
         display: grid;
         place-items: center;
         padding: 24px 16px;
+        touch-action: manipulation;
       }
 
       main {
@@ -126,12 +127,12 @@
 
       .keyboard {
         display: grid;
-        gap: 8px;
+        gap: 6px;
       }
 
       .keyboard-row {
         display: grid;
-        gap: 6px;
+        gap: 4px;
         justify-content: center;
       }
 
@@ -160,7 +161,7 @@
         justify-content: center;
         text-align: center;
         cursor: pointer;
-        padding: 0 8px;
+        padding: 0 6px;
       }
 
       .key.wide {
@@ -217,11 +218,11 @@
         .key {
           min-height: 42px;
           font-size: 0.92rem;
-          padding: 0 4px;
+          padding: 0 3px;
         }
 
         .key.wide {
-          font-size: 0.62rem;
+          font-size: 0.56rem;
         }
       }
     </style>
@@ -247,7 +248,7 @@
         var KEYBOARD_LAYOUT = [
           ["Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P"],
           ["A", "S", "D", "F", "G", "H", "J", "K", "L"],
-          ["BACK", "Z", "X", "C", "V", "B", "N", "M", "ENTER"]
+          ["ENTER", "Z", "X", "C", "V", "B", "N", "M", "BACK"]
         ];
 
         var state = null;
