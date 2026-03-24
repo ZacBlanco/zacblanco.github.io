@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Wedding Wordle</title>
+    <style>
+      :root {
+        --bg: #f6f0e8;
+        --panel: rgba(255, 252, 247, 0.88);
+        --text: #2c241d;
+        --muted: #73665a;
+        --empty: #ded3c2;
+        --miss: #8b8175;
+        --present: #d3a447;
+        --hit: #5b7f5f;
+        --accent: #a55f44;
+        --key-text: #fffdf9;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        font-family: "Gill Sans", "Avenir Next", sans-serif;
+        color: var(--text);
+        background:
+          radial-gradient(circle at top, rgba(255, 255, 255, 0.55), transparent 34%),
+          linear-gradient(160deg, #f8f2eb 0%, #eedfcb 52%, #d9c0a4 100%);
+        display: grid;
+        place-items: center;
+        padding: 24px 16px;
+      }
+
+      main {
+        width: min(100%, 540px);
+        background: var(--panel);
+        border: 1px solid rgba(95, 74, 54, 0.16);
+        border-radius: 24px;
+        box-shadow: 0 16px 48px rgba(84, 58, 28, 0.15);
+        padding: 28px 18px 24px;
+        backdrop-filter: blur(10px);
+      }
+
+      h1 {
+        margin: 0;
+        text-align: center;
+        font-family: Georgia, serif;
+        font-size: clamp(2rem, 7vw, 2.8rem);
+        font-weight: 700;
+        letter-spacing: 0.04em;
+      }
+
+      p {
+        margin: 0;
+      }
+
+      .subtitle,
+      .status,
+      .note {
+        text-align: center;
+        color: var(--muted);
+      }
+
+      .subtitle {
+        margin-top: 8px;
+        font-size: 0.98rem;
+      }
+
+      .status {
+        min-height: 1.4em;
+        margin-top: 14px;
+        font-weight: 600;
+      }
+
+      .board {
+        display: grid;
+        gap: 8px;
+        margin: 22px auto 20px;
+        width: min(100%, 320px);
+      }
+
+      .row {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 8px;
+      }
+
+      .tile {
+        aspect-ratio: 1 / 1;
+        border-radius: 12px;
+        border: 2px solid rgba(80, 62, 47, 0.08);
+        background: rgba(255, 255, 255, 0.58);
+        display: grid;
+        place-items: center;
+        font-size: 1.55rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        transition: transform 120ms ease, background 120ms ease, border-color 120ms ease;
+      }
+
+      .tile.filled {
+        border-color: rgba(80, 62, 47, 0.24);
+      }
+
+      .tile.hit {
+        background: var(--hit);
+        border-color: var(--hit);
+        color: #fff;
+      }
+
+      .tile.present {
+        background: var(--present);
+        border-color: var(--present);
+        color: #fff;
+      }
+
+      .tile.miss {
+        background: var(--miss);
+        border-color: var(--miss);
+        color: #fff;
+      }
+
+      .keyboard {
+        display: grid;
+        gap: 8px;
+      }
+
+      .keyboard-row {
+        display: grid;
+        gap: 6px;
+        justify-content: center;
+      }
+
+      .keyboard-row[data-size="10"] {
+        grid-template-columns: repeat(10, minmax(0, 1fr));
+      }
+
+      .keyboard-row[data-size="9"] {
+        grid-template-columns: repeat(9, minmax(0, 1fr));
+      }
+
+      .keyboard-row[data-size="7"] {
+        grid-template-columns: 1.8fr repeat(7, minmax(0, 1fr)) 1.8fr;
+      }
+
+      .key {
+        min-height: 48px;
+        border: 0;
+        border-radius: 10px;
+        background: var(--empty);
+        color: var(--text);
+        font: inherit;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        cursor: pointer;
+        padding: 0 8px;
+      }
+
+      .key.wide {
+        font-size: 0.72rem;
+        letter-spacing: 0.02em;
+      }
+
+      .key.hit {
+        background: var(--hit);
+        color: var(--key-text);
+      }
+
+      .key.present {
+        background: var(--present);
+        color: var(--key-text);
+      }
+
+      .key.miss {
+        background: var(--miss);
+        color: var(--key-text);
+      }
+
+      .actions {
+        display: flex;
+        justify-content: center;
+        margin-top: 18px;
+      }
+
+      .ghost-button {
+        border: 1px solid rgba(92, 65, 43, 0.2);
+        border-radius: 999px;
+        background: transparent;
+        color: var(--accent);
+        font: inherit;
+        font-weight: 700;
+        padding: 10px 16px;
+        cursor: pointer;
+      }
+
+      .note {
+        margin-top: 14px;
+        font-size: 0.9rem;
+      }
+
+      @media (max-width: 420px) {
+        main {
+          padding: 22px 12px 20px;
+        }
+
+        .tile {
+          font-size: 1.35rem;
+        }
+
+        .key {
+          min-height: 42px;
+          font-size: 0.92rem;
+          padding: 0 4px;
+        }
+
+        .key.wide {
+          font-size: 0.62rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Joey & Zac's Wedding Wordle</h1>
+      <p id="status" class="status">Loading words...</p>
+      <div id="board" class="board" aria-label="Wordle board"></div>
+      <div id="keyboard" class="keyboard" aria-label="On-screen keyboard"></div>
+      <div class="actions">
+        <button id="new-word" class="ghost-button" type="button">Skip To Another Word</button>
+      </div>
+    </main>
+
+    <script>
+      (function () {
+        var WORD_LENGTH = 5;
+        var MAX_GUESSES = 6;
+        var STORAGE_KEY = "wedding-wordle-state-v1";
+        var GUESSES_PATH = "wordle-guesses.json";
+        var ANSWERS_PATH = "wordle.json";
+        var KEYBOARD_LAYOUT = [
+          ["Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P"],
+          ["A", "S", "D", "F", "G", "H", "J", "K", "L"],
+          ["BACK", "Z", "X", "C", "V", "B", "N", "M", "ENTER"]
+        ];
+
+        var state = null;
+        var words = [];
+        var guessSet = new Set();
+        var boardEl = document.getElementById("board");
+        var keyboardEl = document.getElementById("keyboard");
+        var statusEl = document.getElementById("status");
+        var newWordButton = document.getElementById("new-word");
+
+        function createEmptyState(allWords) {
+          return {
+            words: allWords,
+            seenWords: [],
+            currentAnswer: "",
+            guesses: [],
+            currentGuess: "",
+            status: "idle"
+          };
+        }
+
+        function loadStoredState(allWords) {
+          try {
+            var parsed = JSON.parse(window.localStorage.getItem(STORAGE_KEY) || "null");
+            if (!parsed || typeof parsed !== "object") {
+              return createEmptyState(allWords);
+            }
+
+            var cleaned = {
+              words: allWords,
+              seenWords: Array.isArray(parsed.seenWords) ? parsed.seenWords.filter(function (word) {
+                return allWords.indexOf(word) !== -1;
+              }) : [],
+              currentAnswer: typeof parsed.currentAnswer === "string" ? parsed.currentAnswer : "",
+              guesses: Array.isArray(parsed.guesses) ? parsed.guesses.filter(function (guess) {
+                return typeof guess === "string" && guess.length === WORD_LENGTH;
+              }).map(function (guess) {
+                return guess.toUpperCase();
+              }).slice(0, MAX_GUESSES) : [],
+              currentGuess: typeof parsed.currentGuess === "string" && parsed.currentGuess.length <= WORD_LENGTH ? parsed.currentGuess.toUpperCase() : "",
+              status: parsed.status === "won" || parsed.status === "lost" ? parsed.status : "idle"
+            };
+
+            if (!cleaned.currentGuess && Array.isArray(parsed.guesses)) {
+              var partialGuess = parsed.guesses.find(function (guess) {
+                return typeof guess === "string" && guess.length > 0 && guess.length < WORD_LENGTH;
+              });
+              if (partialGuess) {
+                cleaned.currentGuess = partialGuess.toUpperCase();
+              }
+            }
+
+            if (allWords.indexOf(cleaned.currentAnswer) === -1) {
+              cleaned.currentAnswer = "";
+              cleaned.guesses = [];
+              cleaned.currentGuess = "";
+              cleaned.status = "idle";
+            }
+
+            if (cleaned.status !== "idle" && cleaned.currentAnswer && cleaned.seenWords.indexOf(cleaned.currentAnswer) === -1) {
+              cleaned.seenWords.push(cleaned.currentAnswer);
+              cleaned.currentGuess = "";
+            }
+
+            return cleaned;
+          } catch (error) {
+            return createEmptyState(allWords);
+          }
+        }
+
+        function saveState() {
+          window.localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+        }
+
+        function randomChoice(list) {
+          return list[Math.floor(Math.random() * list.length)];
+        }
+
+        function startNewGame(force) {
+          var unfinished = state.currentAnswer && state.status === "idle";
+          if (!force && unfinished) {
+            return false;
+          }
+
+          if (state.currentAnswer && state.status === "idle" && state.seenWords.indexOf(state.currentAnswer) === -1) {
+            state.seenWords.push(state.currentAnswer);
+          }
+
+          var unseenWords = words.filter(function (word) {
+            return state.seenWords.indexOf(word) === -1;
+          });
+
+          if (!unseenWords.length) {
+            state.seenWords = [];
+            unseenWords = words.slice();
+          }
+
+          state.currentAnswer = randomChoice(unseenWords);
+          state.guesses = [];
+          state.currentGuess = "";
+          state.status = "idle";
+          if (state.seenWords.indexOf(state.currentAnswer) !== -1) {
+            state.seenWords = state.seenWords.filter(function (word) {
+              return word !== state.currentAnswer;
+            });
+          }
+          saveState();
+          return true;
+        }
+
+        function ensureGameReady() {
+          if (state.currentAnswer && state.status === "idle") {
+            return;
+          }
+
+          if (!state.currentAnswer || state.status !== "idle") {
+            startNewGame(true);
+          }
+        }
+
+        function getActiveGuess() {
+          if (state.status !== "idle") {
+            return "";
+          }
+          return state.currentGuess || "";
+        }
+
+        function setActiveGuess(nextGuess) {
+          state.currentGuess = nextGuess;
+          saveState();
+        }
+
+        function getGuessEvaluation(guess, answer) {
+          var result = new Array(WORD_LENGTH).fill("miss");
+          var answerLetters = answer.toUpperCase().split("");
+          var guessLetters = guess.toUpperCase().split("");
+          var i;
+
+          for (i = 0; i < WORD_LENGTH; i += 1) {
+            if (guessLetters[i] === answerLetters[i]) {
+              result[i] = "hit";
+              answerLetters[i] = null;
+              guessLetters[i] = null;
+            }
+          }
+
+          for (i = 0; i < WORD_LENGTH; i += 1) {
+            if (!guessLetters[i]) {
+              continue;
+            }
+            var matchIndex = answerLetters.indexOf(guessLetters[i]);
+            if (matchIndex !== -1) {
+              result[i] = "present";
+              answerLetters[matchIndex] = null;
+            }
+          }
+
+          return result;
+        }
+
+        function getKeyStatuses() {
+          var priority = { miss: 1, present: 2, hit: 3 };
+          var statuses = {};
+
+          state.guesses.forEach(function (guess) {
+            if (guess.length !== WORD_LENGTH) {
+              return;
+            }
+            var evaluation = getGuessEvaluation(guess, state.currentAnswer);
+            guess.split("").forEach(function (letter, index) {
+              var nextStatus = evaluation[index];
+              if (!statuses[letter] || priority[nextStatus] > priority[statuses[letter]]) {
+                statuses[letter] = nextStatus;
+              }
+            });
+          });
+
+          return statuses;
+        }
+
+        function renderBoard() {
+          boardEl.innerHTML = "";
+          for (var rowIndex = 0; rowIndex < MAX_GUESSES; rowIndex += 1) {
+            var rowEl = document.createElement("div");
+            rowEl.className = "row";
+            var guess = state.guesses[rowIndex] || "";
+            if (!guess && rowIndex === state.guesses.length && state.status === "idle") {
+              guess = state.currentGuess || "";
+            }
+            var isSubmittedGuess = rowIndex < state.guesses.length;
+            var evaluation = isSubmittedGuess ? getGuessEvaluation(guess, state.currentAnswer) : [];
+
+            for (var colIndex = 0; colIndex < WORD_LENGTH; colIndex += 1) {
+              var tileEl = document.createElement("div");
+              var letter = guess[colIndex] || "";
+              tileEl.className = "tile";
+              if (letter) {
+                tileEl.classList.add("filled");
+              }
+              if (evaluation[colIndex]) {
+                tileEl.classList.add(evaluation[colIndex]);
+              }
+              tileEl.textContent = letter;
+              rowEl.appendChild(tileEl);
+            }
+            boardEl.appendChild(rowEl);
+          }
+        }
+
+        function renderKeyboard() {
+          var keyStatuses = getKeyStatuses();
+          keyboardEl.innerHTML = "";
+
+          KEYBOARD_LAYOUT.forEach(function (row) {
+            var rowEl = document.createElement("div");
+            rowEl.className = "keyboard-row";
+            rowEl.dataset.size = String(row.length);
+
+            row.forEach(function (key) {
+              var button = document.createElement("button");
+              button.type = "button";
+              button.className = "key";
+              button.textContent = key === "BACK" ? "BACK" : key;
+              button.dataset.key = key;
+              if (key === "ENTER" || key === "BACK") {
+                button.classList.add("wide");
+              }
+              if (keyStatuses[key]) {
+                button.classList.add(keyStatuses[key]);
+              }
+              rowEl.appendChild(button);
+            });
+
+            keyboardEl.appendChild(rowEl);
+          });
+        }
+
+        function updateStatus(message) {
+          statusEl.textContent = message;
+        }
+
+        function syncUi(message) {
+          renderBoard();
+          renderKeyboard();
+
+          if (message) {
+            updateStatus(message);
+            return;
+          }
+
+          if (state.status === "won") {
+            updateStatus("Solved. Refresh for the next word, or use the button below.");
+          } else if (state.status === "lost") {
+            updateStatus("Out of guesses. The word was " + state.currentAnswer.toUpperCase() + ".");
+          } else {
+            updateStatus("Guess " + (Math.min(state.guesses.length + 1, MAX_GUESSES)) + " of " + MAX_GUESSES + ".");
+          }
+        }
+
+        function finishRound(status) {
+          state.status = status;
+          state.currentGuess = "";
+          if (state.currentAnswer && state.seenWords.indexOf(state.currentAnswer) === -1) {
+            state.seenWords.push(state.currentAnswer);
+          }
+          saveState();
+        }
+
+        function submitGuess() {
+          var guess = getActiveGuess();
+          if (guess.length !== WORD_LENGTH) {
+            syncUi("Enter a five-letter word.");
+            return;
+          }
+
+          if (!guessSet.has(guess.toLowerCase())) {
+            syncUi("That guess is not in the dictionary.");
+            return;
+          }
+
+          state.guesses.push(guess.toUpperCase());
+          state.currentGuess = "";
+
+          if (guess.toLowerCase() === state.currentAnswer) {
+            finishRound("won");
+            syncUi();
+            return;
+          }
+
+          if (state.guesses.filter(function (savedGuess) {
+            return savedGuess.length === WORD_LENGTH;
+          }).length >= MAX_GUESSES) {
+            finishRound("lost");
+            syncUi();
+            return;
+          }
+
+          saveState();
+          syncUi();
+        }
+
+        function addLetter(letter) {
+          if (state.status !== "idle") {
+            syncUi("Start a new word to keep playing.");
+            return;
+          }
+
+          if (state.guesses.length >= MAX_GUESSES) {
+            return;
+          }
+
+          var guess = getActiveGuess();
+          if (guess.length >= WORD_LENGTH) {
+            return;
+          }
+          setActiveGuess((guess + letter).toUpperCase());
+          syncUi();
+        }
+
+        function removeLetter() {
+          if (state.status !== "idle") {
+            return;
+          }
+          var guess = getActiveGuess();
+          if (!guess.length) {
+            return;
+          }
+          setActiveGuess(guess.slice(0, -1));
+          syncUi();
+        }
+
+        function handleKeyInput(key) {
+          if (!state || !state.currentAnswer) {
+            return;
+          }
+
+          if (state.status !== "idle") {
+            if (key === "ENTER") {
+              startNewGame(true);
+              syncUi("Loaded a new word.");
+            }
+            return;
+          }
+
+          if (key === "ENTER") {
+            submitGuess();
+            return;
+          }
+
+          if (key === "BACK" || key === "BACKSPACE") {
+            removeLetter();
+            return;
+          }
+
+          if (/^[A-Z]$/.test(key)) {
+            addLetter(key);
+          }
+        }
+
+        function bindEvents() {
+          document.addEventListener("keydown", function (event) {
+            if (event.ctrlKey || event.metaKey || event.altKey) {
+              return;
+            }
+
+            var key = event.key.toUpperCase();
+            if (key === "BACKSPACE") {
+              event.preventDefault();
+              handleKeyInput("BACKSPACE");
+              return;
+            }
+            if (key === "ENTER" || /^[A-Z]$/.test(key)) {
+              event.preventDefault();
+              handleKeyInput(key);
+            }
+          });
+
+          keyboardEl.addEventListener("click", function (event) {
+            var button = event.target.closest("button[data-key]");
+            if (!button) {
+              return;
+            }
+            handleKeyInput(button.dataset.key);
+          });
+
+          newWordButton.addEventListener("click", function () {
+            startNewGame(true);
+            syncUi("Loaded a new word.");
+          });
+        }
+
+        function normalizeWords(rawWords) {
+          return rawWords.filter(function (word) {
+            return typeof word === "string" && /^[a-z]{5}$/i.test(word);
+          }).map(function (word) {
+            return word.toLowerCase();
+          });
+        }
+
+        Promise.all([
+          fetch(ANSWERS_PATH, { cache: "no-store" }).then(function (response) {
+            if (!response.ok) {
+              throw new Error("Failed to load answer list.");
+            }
+            return response.json();
+          }),
+          fetch(GUESSES_PATH, { cache: "no-store" }).then(function (response) {
+            if (!response.ok) {
+              throw new Error("Failed to load guess dictionary.");
+            }
+            return response.json();
+          })
+        ])
+          .then(function (results) {
+            var rawAnswers = results[0];
+            var rawGuesses = results[1];
+
+            words = normalizeWords(rawAnswers);
+            var guesses = normalizeWords(rawGuesses);
+
+            if (words.length < 1) {
+              throw new Error("No valid five-letter words found in wordle.json.");
+            }
+
+            guessSet = new Set(guesses.concat(words));
+            state = loadStoredState(words);
+            ensureGameReady();
+            bindEvents();
+            syncUi();
+          })
+          .catch(function (error) {
+            updateStatus(error.message);
+          });
+      }());
+    </script>
+  </body>
+</html>
